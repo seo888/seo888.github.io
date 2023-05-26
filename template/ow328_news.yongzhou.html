@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <link href="http://www.yongzhou.gov.cn/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/_/static/ow328_news.yongzhou/static/css/global_v17.css">
+    <link rel="stylesheet" href="/_/static/ow328_news.yongzhou/static/css/yznews.css" type="text/css">
+    <link rel="stylesheet" href="/_/static/ow328_news.yongzhou/static/css/orbit.css">
+    <script src="/_/static/ow328_news.yongzhou/static/js/jquery-1.7.2.min.js"></script>
+    <script language="JavaScript" src="/_/static/ow328_news.yongzhou/static/js/header.js"></script>
+    <script language="JavaScript" src="/_/static/ow328_news.yongzhou/static/js/textgd2.js"></script>
+    <script src="/_/static/ow328_news.yongzhou/static/js/global.js" type="text/javascript" ></script>
+    <script>
+    var content_materials = [];
+console.log(content_materials)
+    </script>
+	
+      <script>
+        
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {     //移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+        if (browser.versions.mobile) {//判断是否是移动设备打开
+            var href = window.location.href.split('/');
+            var test = href[2];
+            if(test=='city.yongzhou.gov.cn'){
+               test = test.replace(test, 'wap.yongzhou.gov.cn/city');
+            }else if(test=='news.yongzhou.gov.cn'){
+                test = test.replace(test, 'wap.yongzhou.gov.cn/news');
+            }else if(test=='zt.yongzhou.gov.cn'){
+                test = test.replace(test, 'wap.yongzhou.gov.cn/zt');
+            }else if(test=='edu.yongzhou.gov.cn'){
+                test = test.replace(test, 'wap.yongzhou.gov.cn/edu');
+            }else if(test=='photo.yongzhou.gov.cn'){
+                test = test.replace(test, 'wap.yongzhou.gov.cn/photo');
+            }else if(test=='culture.yongzhou.gov.cn'){
+                test = test.replace(test, 'wap.yongzhou.gov.cn/culture');
+            }else if(test=='theory.yongzhou.gov.cn'){
+                test = test.replace(test, 'wap.yongzhou.gov.cn/theory');
+            }else{
+                test = test.replace(test, 'wap.yongzhou.gov.cn');
+            }
+            
+            href[2] = test;
+            window.location.href = href.join('/');
+        
+        }
+
+    </script>
+    
+</head>
+
+<body>
+   
+    <div class="header">
+        <div class="se_top1">
+            <div class="se_txp">
+                 <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">永网首页</a><span class="line12">|</span>
+                                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">永州新闻</a><span class="line12">|</span>
+                                                  <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">教育新闻</a><span class="line12">|</span>
+                 
+                   
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">视频新闻</a><span class="line12">|</span>
+                    
+                     
+                 <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">遇见</a><span class="line12">|</span>
+                                
+                     
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">永网关注</a><span class="line12">|</span>
+                  
+                
+                   
+                
+                        
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文化永州</a><span class="line12">|</span>
+                    
+                
+                   
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">永网专题</a><span class="line12">|</span>
+                     
+                
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">问政永州</a><span class="line12">|</span>
+                     
+                 <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">公示公告</a><span class="line12">|</span>
+                            </div>
+        </div>
+    </div>
+    <div class="clear h10"></div>
+    <div class="se_adlg">
+        <div class="se_logo m370" style="width: 460px;text-align: center">
+            <a class="" href="/{随机字符}/{随机数字}_{随机数字}.html">
+                <img src="/_/static/ow328_news.yongzhou/static/picture/logo.png" id="pic">
+            </a>
+
+        </div>
+        <div class="se_sous m370 left">
+            <p style="text-align: center;">
+                                <a class="mylogo" href="/{随机字符}/{随机数字}_{随机数字}.html">
+                    <img src="/_/static/ow328_news.yongzhou/static/picture/shiwei.png">
+                    <span>市委</span>
+                </a>
+                                                <a class="mylogo" href="/{随机字符}/{随机数字}_{随机数字}.html">
+                    <img src="/_/static/ow328_news.yongzhou/static/picture/renda.png">
+                    <span>人大</span>
+                </a>
+                                                <a class="mylogo" href="/{随机字符}/{随机数字}_{随机数字}.html">
+                    <img src="/_/static/ow328_news.yongzhou/static/picture/zhengfu.png">
+                    <span>政府</span>
+                </a>
+                                                <a class="mylogo" href="/{随机字符}/{随机数字}_{随机数字}.html">
+                    <img src="/_/static/ow328_news.yongzhou/static/picture/zhengxie.png">
+                    <span>政协</span>
+                </a>
+                            </p>
+            <div class="search se_d1">
+                <form method="get" target="_blank" action="http://www.yongzhou.gov.cn/textsearch/">
+                    <input type="text" name="search_text" value="" placeholder="搜索从这里开始...">
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--清除样式隔离-->
+    <div class="clear h10"></div>
+
+    
+    <!--头部区域end-->
+     <!--头部区域end-->
+    <input class="column_id" type="hidden" value="117">
+    <script>
+        var city_id=$(".column_id").val();     
+        var city_arr=["永州新闻","湖南新闻","国内新闻","国际新闻","县区新闻"];
+		  if(city_id=="117"){
+          var one=city_arr[0];
+          
+          $("#pic").attr("src","/themes/default/images/yz-logo.jpg");
+        }else if(city_id=="118"){
+          var two=city_arr[1];
+          
+          $("#pic").attr("src","/themes/default/images/hn-logo.jpg");
+        }else if(city_id=="119"){
+            var three=city_arr[2];
+          
+          $("#pic").attr("src","/themes/default/images/gn-logo.jpg");
+          
+        }
+       // else if("189">city_id  && city_id>"172" && city_id<>"174" ){
+       //   var three=city_arr[4];
+       //   
+       //   $("#pic").attr("src","http://city.yongzhou.gov.cn/themes/default/images/qx-logo.jpg");
+       // }
+       else{
+          //var seven=city_arr[3];
+          //$("#pic").attr("src","/themes/default/images/logo.png");
+        }
+          
+      
+    </script>    <!-- 头部 -->
+      
+     <div class="ad_1 topad2">
+       <script language="javascript" src="/_/static/ow328_news.yongzhou/static/js/1.B0_2.js"></script>
+	  </div>
+    <!--主体区域st-->
+    <div class="se_main">
+        <div class="new-detailtit">
+            <div class="title_nav" style="color: chocolate;font-size: 14px;">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a>
+                <!---->
+                <!---->
+                &gt; <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1} </a>
+                <!---->
+                <!---->
+                <!---->
+                &gt; <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">正文 </a>
+                <!---->
+                <!---->
+            </div>
+            <div class="title">
+                {关键词1}{随机后缀}{新闻网标题}            </div>
+            <div class="fenxian right">
+                <div class="bshare-custom icon-medium-plus">
+                    <a title="分享到QQ空间" class="bshare-qzone"></a>
+                    <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                    <a title="分享到人人网" class="bshare-renren"></a>
+                    <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+                    <a title="分享到网易微博" class="bshare-neteasemb"></a>
+                    <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div>
+                <script type="text/javascript" src="/_/static/ow328_news.yongzhou/static/js/buttonLite.js">
+                </script>
+                <script type="text/javascript" src="/_/static/ow328_news.yongzhou/static/js/bshareC0.js"></script>
+            </div>
+            <div class="author">
+                                                <!---->
+                <span id="source">[来源：<i clsss="s_txt">{关键词1}</i>]</span>&nbsp;&nbsp;
+                <!---->
+                <!---->
+                <span id="author">[作者：<i class="a_txt">{人物名称}</i>]</span> &nbsp;&nbsp;
+                <!---->
+                <!---->
+                <span id="bianji">[编辑：<i class="e_txt">{人物名称} 二审：{人物名称} </i>]</span> &nbsp;&nbsp;
+                <!---->
+                <!---->
+                <span id="time">时间：<i class="t_txt">{年月日}</i></span>
+                <!---->
+                            </div>
+        </div>
+
+        <!--主体st-->
+
+        <div class="se_box_news">
+            <div class="mbox770">
+                <div class="news_detail_ad">
+                </div>
+                <!--清除样式隔离-->
+                <div class="content">
+                    <p style="writing-mode: horizontal-tb; text-orientation: mixed;"><span class="m2o-tip-space" style="position: absolute; margin: 0px; padding: 0px; width: 1px; height: 1px; visibility: hidden; writing-mode: horizontal-tb; text-orientation: mixed;"></span></p><p style="text-indent: 0em; text-align: center; writing-mode: horizontal-tb; text-orientation: mixed;">{新闻网内容}</span></p>                    <!---->
+                </div>
+                <div class="news_detail_ad">
+                    <script language="javascript" src="http://www.yongzhou.gov.cn/js/1.019.js?v=1566259620">
+                    </script>
+                </div>
+                <!--清除样式隔离-->
+                <div class="clear h20"></div>
+                <!--清除样式隔离-->
+                <div class="se_box_tit">
+                    <h2>相关新闻</h2>
+                </div>
+                
+                
+                                
+                <!---->
+                
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <img src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                <span class="">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p">
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                                
+                <!---->
+                
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <img src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                <span class="">{关键词1}{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p">
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                                
+                <!---->
+                
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <img src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                <span class="">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p">
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                                
+                <!---->
+                
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <img src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                <span class="">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p">
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                                
+                <!---->
+                
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <img src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                <span class="">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p">
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                                
+                <!---->
+                
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <img src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                <span class="">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p">
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                                
+            </div>
+
+            <!--列表 详情页右侧-->
+            <!--内容页和列表页等 的右边列表-->
+            <div class="mboxr390 right">
+                <div class="list_right_ad">
+                    <script language="javascript" src="http://www.yongzhou.gov.cn/js/1.014.js?v=1566259620">
+                    </script>
+                </div>
+                <!-- 最新更新 -->
+                <div class="se_box_tit">
+    <h2>最新更新</h2>
+</div>
+<div class="se_box_li2 left">
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+        <!---->
+    <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+    </p>
+    <!---->
+    </div>                <!-- end 最新更新 -->
+                <!--清除样式隔离-->
+                <div class="clear h20"></div>
+   
+
+       
+                <div class="se_box_tit">
+                    <h2>视频新闻</h2>
+                </div>
+                <div class="ywsbox ">
+                    <div class="ywysli">
+                        <ul>
+                                                        <!---->
+                            <li>
+                                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;" src="{随机图片}">
+                                    </div>
+                                    <p>{标题}</p>
+                                </a>
+                            </li>
+                                                        <!---->
+                            <li>
+                                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;" src="{随机图片}">
+                                    </div>
+                                    <p>{标题}</p>
+                                </a>
+                            </li>
+                                                        <!---->
+                           <li>
+                                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;" src="{随机图片}">
+                                    </div>
+                                    <p>{标题}</p>
+                                </a>
+                            </li>
+                                                        <!---->
+                            <li>
+                                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;" src="{随机图片}">
+                                    </div>
+                                    <p>{标题}</p>
+                                </a>
+                            </li>
+                                                    </ul>
+                    </div>
+
+                </div>
+                <!--清除样式隔离-->
+                <div class="clear h20"></div>
+                <!--清除样式隔离-->
+                <div class="list_right_ad">
+                     <div class="list_right_ad">
+                       <script src="http://www.yongzhou.gov.cn/js/1.015.js?v=1566259621"></script>
+                     </div>
+                </div>
+                <!--专题 beg-->
+                <div>
+                    <div class="se_box_tit">
+                        <h2>永网专题</h2>
+                    </div>
+                    <div class="se_box_li2 left">
+                                                <p>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"> {标题}</a>
+                        </p>
+                                                <p>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"> {标题}{关键词1}</a>
+                        </p>
+                                                <p>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"> {标题}</a>
+                        </p>
+                                                <p>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"> {标题}</a>
+                        </p>
+                                                <p>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"> {标题}</a>
+                        </p>
+                                                <p>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"> {标题}</a>
+                        </p>
+                                            </div>
+                </div>
+                <!--专题 end-->
+            </div>
+        </div>
+    </div>
+    <input class="a_title" type="hidden" value="{标题}">
+    <input class="a_cid" type="hidden" value="235919">
+    <!--主体区域end-->
+  
+    <script src="/_/static/ow328_news.yongzhou/static/js/spm.js"></script>
+    
+
+    <!--清除样式隔离-->
+    <div class="clear h20"></div>
+    <!--清除样式隔离-->
+  <center>
+    <style type="text/css">
+        .footer_new{text-align: center;width:100%;font: 12px/3 "SimSun";color: #4d4d4d;}
+        .footer_new a{color: #333;font-size: 14px;}
+        </style>
+        <div class="clear"></div>
+        <hr width="99%" color="#0F78B9" style="margin-top:10px; margin-bottom:10px;">
+        <div class="footer_new">
+        <p class="info"><a href="/{随机字符}/{随机数字}_{随机数字}.html">网站首页</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">关于我们</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">团队介绍</a> | <a 
+        href="/{随机字符}/{随机数字}_{随机数字}.html">联系我们</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">版权声明</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">广告招商</a> | 
+        <a href="http://{当前域名}/sitemap.xml">网站地图</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">返回顶部</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">切换至手机版</a><br /></p>
+        本网所刊登的各种新闻、信息及专栏资料均由{关键词1}版权所有，未经书面授权禁止传播、更改或建立镜像！<br />
+        Copyright &copy; {年} {域名库} All Rights Reserved&nbsp;指导：{网站名称}  承办：{网站名称}<br />
+        <span style="color: #ff0000">新投稿邮箱：</span><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span style="color: #ff0000">{随机字符}@126.com</span></a> &nbsp;</a>电话/FAX：0746-{随机7数字}&nbsp;
+        新闻报料：0746-{随机8数字} 广告招商：199{随机8数字}<br />
+        常年法律顾问{关键词1}事务所&nbsp;咨询：0746-{随机7数字}&nbsp;互联网新闻信息服务许可证：431{随机8数字} &nbsp;<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" >湘ICP备{随机8数字}号-1</a><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" style="color: green;"> &nbsp;湘公网安备案证书第431103{随机8数字}号</a>
+        </div>
+    </center>
+    
+    <input type="hidden" class="click_id" value="235919">
+    <input type="hidden" class="click_content_fromid" value="237286">
+    <input type="hidden" class="click_bundle_id" value="article">
+    <input type="hidden" class="click_title" value="{标题}">
+    <input type="hidden" class="click_content_url" value="">
+    <input type="hidden" class="click_column_id" value="117">
+    <input type="hidden" class="click_column_name" value="{关键词1}">
+    <input type="hidden" class="click_publish_time" value="1682239756">
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+</body>
+
+</html>

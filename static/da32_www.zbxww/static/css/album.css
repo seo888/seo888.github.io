@@ -1,0 +1,118 @@
+
+/* CSS Document */
+
+/*焦点图代码 */
+.fi04{width:550px; height:380px;}
+.fi04 img{display:block; height:360px;width:550px;}
+.fi04_1{width:550px; margin:0 auto}
+.fi04_1 .fi_ct{cursor:pointer;width:550px; background:#000; overflow:hidden; margin:0 0 12px; position:relative;}
+.fi04_1 .fi_ovl{position:absolute;bottom:0;left:0px;width:550px;height:60px;background:#000}
+.fi04_1 .fi_tt{position:absolute; bottom:29px;font-family:SimHei,MsYahei;font-size:18px;color:#fff;text-align:left;padding:0 20px 0 35px; height:20px;}
+.fi04_1 .fi_desc{position:absolute;top:333px;font-family:"宋体";font-size:12px;color:#fff;text-align:left;padding:0 10px 0 35px; white-space:nowrap; overflow:hidden; width:480px;word-break:break-all; text-overflow:ellipsis; height:20px; line-height:20px;}
+.fi04_1 .fi_tab{width:552px; position:relative; margin:0 auto; z-index:10;}
+.fi04 .fi_tab dl{ margin:0; padding:0;}
+.fi04_1 .fi_tab dd{width:138px; float:left; text-align:center; display:inline; margin:0; padding:0;}
+.fi04_1 .fi_tab dd img{cursor:pointer; width:130px; height:85px; margin:2px auto;}
+.fi04_1 .fi_pointer{cursor:pointer;width:138px; height:103px; background:url(../image/channel.png) no-repeat -110px -130px; position:absolute; top:-10px; z-index:-1;}
+
+/***** 焦点图（新） *****/
+#flashbox{width:550px; height:360px;border:none;}
+.smallslider{position:relative;padding:0;margin:0;overflow:hidden;}
+.smallslider ul{list-style-type:none;padding:0;margin:0;position: absolute;width:auto;height:auto;}
+.smallslider li{margin:0;padding:0;}
+.smallslider li a{margin:0;padding:0;}
+.smallslider li a img{width:550px; height:360px;border:0;padding:0;margin:0;vertical-align:top;}
+.smallslider h3{position:absolute;font-weight:bold;font-size:14px;margin:0;padding:0 0 0 16px;height:37px;line-height:37px;z-index:102; width:98%;color:#CCC;}
+.smallslider h3 a{padding:0;margin:0;text-indent:0;}
+.smallslider h3 a:link,.smallslider  h3 a:visited{text-decoration:none;color:#FFFFFF;font-size:18px;font-family:SimHei, MsYahei;}
+.smallslider h3 a:hover{text-decoration:underline;}
+.smallslider li.current-li{}
+.smallslider-btns{position:absolute;z-index:103;}
+.smallslider-btns span{background-color:#880004; border:#880004 1px solid; color:#fff;cursor:pointer;float:left;font-size:12px;height:16px;line-height:16px;text-align:center; width:18px;}
+.smallslider-btns span.current-btn{background-color:#fff; border:1px solid #fff; color:#000;}
+.smallslider-lay{position:absolute;background:black;height:37px;width:100%; z-index:101;}
+#debug{width:200px;height:200px;border:1px solid;background:#CCC;position:fixed;left:10px;bottom:20px; }
+
+/*滚动图片 */
+.scrolllist{width:920px;margin:15px auto 0;overflow:hidden;z-index:-1;}
+.scrolllist h2{height:34px;line-height:34px;color:#515151;float:left;font-size:14px;padding-left:13px;}
+.scrolllist h2 a{color:#515151;}
+.scrolllist .cont{width:915px;overflow:hidden;}
+.scrolllist #pre_bulls{float:left;text-indent:-9999px;margin:18px 15px 0 5px;cursor:pointer;display:inline;width:20px;height:52px;}
+.scrolllist #next_bulls{float:right;text-indent:-9999px;cursor:pointer;display:inline;width:20px;height:52px;}
+.scrolllist .pics{width:850px;float:left;overflow:hidden;position:relative;z-index:1;}
+.photolist{overflow:visible;width:10000px;position:relative;}
+.scrolllist ul li{width:132px;float:left;padding-right:12px;padding-right:11px\0;_padding-right:10px; display:inline;}
+.scrolllist ul li div{width:132px;margin:0 2px 0 0;position:relative;}
+.scrolllist ul li div img{width:130px;height:85px;display:block;}
+.scrolllist ul li h3{width:111px;padding:4px 0 0 12px;font-size:12px;font-weight:normal; height:25px;line-height:25px;overflow:hidden;text-align:center;}
+/*滚动图片 */
+
+#eFramePic{clear:both;position:relative;zoom:1; }
+#efpClew{position:absolute;z-index:10;left:0;top:0;width:150px;height:0;}
+#efpClewClose{position:absolute;top:4px;right:5px;cursor:pointer;width:5px;height:5px;overflow:hidden;z-index:2;}
+
+#efpBigPic{text-align:center;zoom:1;position:relative;width:950px;}
+#efpLeftArea{width:50%;height:100%;position:absolute;left:0;top:0;z-index:9;background:#fff;opacity:0;filter:Alpha(Opacity=0);}
+#efpRightArea{width:50%;height:100%;position:absolute;right:0;top:0;z-index:9;background:#fff;opacity:0;filter:Alpha(Opacity=0);}
+.arrLeft{cursor:url(http://www.zbxww.org/www.sinaimg.cn/edu/images/slidenews/arr_left.cur.html),auto;}
+.arrRight{cursor:url(http://www.zbxww.org/www.sinaimg.cn/edu/images/slidenews/arr_right.cur.html),auto;}
+
+#d_BigPic{width:950px;overflow-x:hidden;min-height:300px;_height:300px;background:url(http://www.zbxww.org/images/css/images/loading.gif) no-repeat center center;}
+#d_BigPic img{filter:blendTrans(Duration=0.4); width:expression(this.width > 860? 860: true); max-width:860px; height:auto; overflow:hidden;}
+.loading{background:url(http://www.zbxww.org/images/css/images/loading.gif) no-repeat center center;}
+#d_picTime{font-size:12px;color:#999;text-align:center;line-height:24px;padding:5px 0;font-family:Verdana, Geneva, sans-serif;display:none;}
+
+#efpPicList{height:138px;overflow:hidden;margin-top:-10px;}
+#efpPicList a:hover { color:#820C0C;}
+#efpPreGroup{float:left;margin:12px 20px 0px 31px; display:inline;}
+#efpPrePic{padding:0 0 0 5px;width:100px;height:72px;}
+#efpPrePic td{width:98px;height:70px;text-align:center;}
+#efpPreTxt { width:91px;text-align:center; margin:5px 10px 0;}
+#efpPrePic.selected{}
+#efpNextGroup{float:left;margin:12px 0 0 20px; display:inline;}
+#efpNextPic{padding:0 0 0 5px;width:99px;height:72px;}
+#efpNextPic td{width:98px;height:70px; text-align:center;}
+#efpNextTxt {width:91px;text-align:center;margin:5px 10px 0;}
+#efpNextPic.selected{}
+
+#efpListLeftArr{width:18px;height:52px;margin:36px 0 0 0;float:left;}
+#efpListRightArr{width:18px;height:52px;margin-top:36px; float:left;}
+#efpPicListCont{width:588px;height:117px;float:left;overflow:hidden;}
+#efpPicListCont table{margin:0 auto;}
+/*#efpPicListCont .pic,#efpPicListCont .picOn{width:109px;float:left;text-align:center;padding:20px 4px 0 5px;}*/
+#efpPicListCont .pic,#efpPicListCont .picOn{width:108px;float:left;text-align:center;padding:13px 4px 0 5px;overflow:hidden;}
+/*#efpPicListCont .picCont{width:109px;height:100px;}*/
+#efpPicListCont .picCont{width:107px;height:100px;border:1px solid #ccc;overflow:hidden;}
+#efpPicListCont .picOn .picCont {border:2px solid #ffb96c;}
+/*.picOn img, .pic img{width:100px;height:68px;border:1px solid #ccc;}*/
+.picOn img, .pic img{max-width:100px;max-height:68px;_width:expression(this.width > 100 && this.width > this.height ? "100px": "");_height:expression(this.height > 68 ? "68px": "");}
+/*.picOn img{border:1px solid #ffb96c;}*/
+
+/* endSelect */
+#endSelect{top:245px;left:359px;position:absolute;width:230px;height:71px;border:1px solid #8a8a8a;display:none;z-index:20;}
+#endSelect .bg{height:100%;width:100%;background:#000;filter:Alpha(Opacity=50);opacity:0.5;}
+#endSelect .E_Cont{position:absolute;top:10px;left:26px;color:#fff;font-size:14px;}
+#endSelect .E_Cont p{padding:4px 0;zoom:1;overflow:hidden; color:#fff;}
+#rePlayBut{float:left;width:69px;height:23px;color:#fff;}
+#nextPicsBut{float:left;width:107px;height:23px;color:#fff;margin-left:10px;}
+#endSelect #endSelClose{position:absolute;right:5px;cursor:pointer;width:15px;height:15px;overflow:hidden;z-index:2;color:#fff;}
+#ePicList{zoom:1;overflow:hidden;margin-left:-10px;display:none;clear:both;}
+
+/***** 顶/踩 *****/
+.popDing { font:600 30px/34px '黑体'; color:#c00; position:absolute; display:none; text-decoration:none; top:-20px; left:10px; }
+
+/*****  *****/
+#efpBigPic,#d_BigPic{z-index:0;}
+.jBottom{background:#efefef;width:860px;margin:-60px auto 0;height:60px;display:none;position:relative;z-index:0;}
+.jBottomCon{width:860px;margin:-60px auto 0;display:none;position:relative;z-index:1;}
+.jClose{position:absolute;right:0;top:-23px;z-index:999;cursor:pointer;}
+table.jBottomTable{width:800px;height:60px;border-collapse:collapse;}
+table.jBottomTable td{text-align:left; vertical-align:middle;padding:0 10px;border-right:1px solid #ccc;}
+table.jBottomTable td.bnone{border:none; width:80px;}
+table.jBottomTable input.text,table.jBottomCon input.lit{height:20px;line-height:20px;border:1px solid #ccc;width:100px;}
+table.jBottomTable input.lit{width:40px;}
+table.jBottomTable input{vertical-align:middle; border:none;}
+table.jBottomTable .btn{width:70px;height:30px; display:block;text-indent:-9999px;border:none;background:url(http://www.zbxww.org/images/css/images/ad/btn.png) no-repeat;}
+table.jBottomTable select{width:100px;}
+.jBottomPic img { width:expression(this.width > 860? 860: true); max-width:860px; height:auto;}

@@ -1,0 +1,2 @@
+
+document.write("<a href=\"//convert.office68.com/xz-57593/\" class=\"btn btn-green and-show\" onclick=\"count_down(57593,\'mxzq\')\"><i class=\"iicon\"></i>安卓版下载</a><span class=\"tip and-show\"></span><a class=\"btn btn-disabled ios-show\"  href=\"javascript:void(0);\" >暂无苹果版</a><span class=\"tip ios-show\">安卓版无法在苹果手机上运行</span>")

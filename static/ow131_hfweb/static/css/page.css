@@ -1,0 +1,621 @@
+
+
+/* page 框架 */
+#content {
+    width: 1000px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    padding-top: 15px
+}
+
+.mainContent {
+    float: right;
+    _display: inline;
+    width: 735px;
+}
+
+.mainContent .mBd {
+    border: 1px solid #e7e7e7;
+    padding-bottom: 10px;
+}
+
+.side {
+    float: left;
+    _display: inline;
+    width: 250px
+}
+
+/* noSideContent */
+.noSideContent .mainContent {
+    width: 1000px !important
+}
+
+/* path */
+.path {
+    height: 38px;
+    width: 964px;
+    margin: 0 auto 15px;
+    background: url(../image/path.gif) 0px 0px no-repeat;
+    padding-left: 36px;
+    line-height: 36px;
+    color: #666;
+}
+
+.path a,
+.path span {
+    color: #666;
+    padding: 0 5px;
+}
+
+.path a:hover {
+    text-decoration: none;
+    color: #c00
+}
+
+.path em {
+    color: #004276
+}
+
+/* sideMenu */
+.sideMenu {
+    width: 250px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.sideMenu .hd {
+    height: 30px;
+    background: url(../image/sideMenuHd.gif) 0px 0px no-repeat;
+}
+
+.sideMenu .hd h3 {
+    display: none;
+}
+
+.sideMenu .bd {
+    padding: 15px;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    overflow: hidden;
+}
+
+.sideMenu .bd ul {
+    width: 228px;
+    overflow: hidden;
+}
+
+.sideMenu .bd ul li {
+    height: 34px;
+    line-height: 34px;
+    margin-bottom: 15px;
+    width: 102px;
+    float: left;
+    _display: inline;
+    margin-right: 10px;
+}
+
+.sideMenu .bd ul li.last {
+    margin-bottom: 0px;
+}
+
+.sideMenu .bd ul li a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 14px;
+    color: #004276;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+}
+
+.sideMenu .bd ul li.on a {
+    border: 1px solid #3c5a68;
+    background: url(../image/sideMenuOn.gif) 0px 0px no-repeat;
+    color: #fff;
+}
+
+.sideMenu .bd ul li a:hover {
+    text-decoration: none;
+    border: 1px solid #3c5a68;
+    background: url(../image/sideMenuOn.gif) 0px 0px no-repeat;
+    color: #fff
+}
+
+/* 侧栏 - 热门排行 */
+#sideRMPH {
+    margin-bottom: 10px;
+}
+
+#sideRMPH ul {
+    overflow: hidden;
+    background: url(../image/num.gif) 0px 7px no-repeat;
+    height: 360px;
+}
+
+#sideRMPH ul li {
+    height: 26px;
+    line-height: 26px;
+    overflow: hidden;
+    padding: 5px 0px 5px 30px;
+}
+
+#sideRMPH ul li a {
+    font-size: 14px;
+    color: #004276
+}
+
+#sideRMPH ul li a:hover {
+    color: #c00;
+}
+
+/* 侧栏 - 推荐阅读 */
+#sideTZYD {}
+
+/* 文章-父列表页 */
+#pageFocusNews {
+    margin-bottom: 10px;
+}
+
+#pagePicScroll {
+    width: 735px;
+    height: 162px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    background: #fbfbfb;
+}
+
+#pagePicScroll .hd {
+    width: 37px;
+    height: 162px;
+    float: left;
+    _display: inline;
+    background: url(../image/pagePicScroll.gif) 0px 0px no-repeat;
+}
+
+#pagePicScroll .bd {
+    width: 680px;
+    float: right;
+    _display: inline;
+    padding-right: 2px;
+    padding-top: 13px;
+}
+
+#pagePicScroll .bd .tempWrap {
+    width: 666px !important;
+}
+
+#pageBoxLoop {
+    overflow: hidden;
+    width: 735px;
+    margin: 0 auto -10px;
+}
+
+#pageBoxLoop .boxLoop {
+    width: 360px;
+    height: 270px;
+    _display: inline;
+    margin-bottom: 10px;
+}
+
+#pageBoxLoop .boxLoop .infoListC li {
+    border: none;
+}
+
+#pageBoxLoop2 {
+    overflow: hidden;
+    width: 735px;
+    margin: 0 auto -10px;
+}
+
+#pageBoxLoop2 .boxLoop {
+    width: 735px;
+    height: 210px;
+    _display: inline;
+    margin-bottom: 10px;
+}
+
+#pageBoxLoop2 .boxLoop ul {
+    overflow: hidden;
+}
+
+#pageBoxLoop2 .boxLoop .infoListC li {
+    border: none;
+    width: 318px;
+    float: left;
+    _display: inline;
+    margin-right: 15px;
+}
+
+
+/* 文章 - 子列表页（图片判断） */
+.pageTPList {
+    overflow: hidden;
+}
+
+.pageTPList li {
+    padding: 15px;
+    border-bottom: 1px dashed #e7e7e7;
+    overflow: hidden;
+}
+
+.pageTPList li .con {}
+
+.pageTPList li .con .title {
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}
+
+.pageTPList li .con .title a {
+    font-size: 16px;
+    color: #004276;
+}
+
+.pageTPList li .con .title a:hover {
+    color: #c00 !important;
+}
+
+.pageTPList li .con .title .date {
+    font-size: 12px;
+    font-family: SimSun, Arial;
+    color: #888888;
+    float: right;
+    _display: inline;
+}
+
+.pageTPList li .con .intro {
+    line-height: 24px;
+    color: #525252
+}
+
+.pageTPList li .con .intro .more {
+    color: #f60
+}
+
+.pageTPList li.hasPic .pic {
+    width: 107px;
+    height: 80px;
+    float: left;
+    _display: inline;
+    overflow: hidden;
+}
+
+.pageTPList li.hasPic .pic img {
+    width: 107px;
+    height: 80px;
+}
+
+.pageTPList li.hasPic .con {
+    width: 580px;
+    float: right;
+    _display: inline;
+}
+
+.pageTPList li.on {
+    background: #fcfcfc;
+}
+
+/* 文章 - 子列表页（标题列表） */
+.newsList {
+    text-align: left;
+    padding: 20px 15px 10px;
+}
+
+.newsList li {
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    padding-left: 22px;
+    background: url(../image/icons-2.gif) 8px -31px no-repeat;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #e7e7e7;
+}
+
+.newsList li .date {
+    float: right;
+    color: #999;
+}
+
+.newsList li .node {
+    color: #004276;
+    margin-right: 3px;
+}
+
+.newsList li a {
+    font-size: 14px;
+}
+
+.newsList li.split {
+    background: none;
+    background: url(https://imgfile.estv.com.cn/www.hfweb.cn/qy2019pc/home2/images/share/dotted.gif) repeat-x center;
+}
+
+/* 文章 - 内容页 */
+.articleCon {
+    padding: 20px 30px;
+}
+
+.articleCon .title {
+    font-size: 30px;
+    line-height: 160%;
+    color: #416170;
+    text-align: center;
+    font-family: SimSun, Arial;
+    font-weight: 200;
+}
+
+.articleCon .subTitle {
+    font-size: 18px;
+    line-height: 160%;
+    color: #555;
+    text-align: center;
+    font-family: SimSun, Arial;
+    font-weight: 200;
+}
+
+.articleCon #total {
+    display: none;
+}
+
+.articleCon .property {
+    line-height: 28px;
+    padding: 2px 10px;
+    margin: 10px 0;
+    text-align: center;
+    color: #416170;
+    border: 1px solid #e3e8ea;
+    background: #fafafa;
+}
+
+.articleCon .property span {
+    padding: 0 5px;
+}
+
+.articleCon .property a {
+    color: #416170
+}
+
+.articleCon .property a:hover {
+    color: #c00
+}
+
+.articleCon .userControl {
+    line-height: 22px;
+    padding: 2px 10px;
+    text-align: right;
+    color: #333;
+    border-bottom: 1px dotted #e7e7e7;
+    overflow: hidden;
+}
+
+.articleCon .conTxt {
+    color: #333;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 5px 0 30px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.articleCon .conTxt #fontzoom {
+    font-size: 16px
+}
+
+.articleCon .conTxt .minIntro {
+    padding: 20px 0;
+    font-size: 18px;
+    line-height: 200%;
+    text-align: center;
+}
+
+.articleCon .conTxt p {
+    text-indent: 2em;
+    margin: 0px;
+    padding: 0px;
+}
+
+.articleCon .conTxt .pageClose {
+    text-align: center;
+    padding: 10px 0px;
+    line-height: 30px;
+    height: 30px;
+    font-size: 16px;
+}
+
+.articleCon .conTxt .pageClose img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.articleCon .page {
+    padding: 0 10px 0 0;
+}
+
+.articleCon .others {
+    padding-top: 22px;
+    font-size: 14px;
+}
+
+.articleCon .others .prev,
+.articleCon .others .next {
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    background: url(https://imgfile.estv.com.cn/www.hfweb.cn/qy2019pc/home2/images/icons.png) no-repeat 0 -494px;
+}
+
+.articleCon .others .next {
+    background: url(https://imgfile.estv.com.cn/www.hfweb.cn/qy2019pc/home2/images/icons.png) no-repeat 0 -532px;
+}
+
+.articleCon .funs {
+    position: relative;
+}
+
+.articleCon .funs .bdsharebuttonbox {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.articleCon .newsEntry {
+    padding-right: 10px
+}
+
+.articleCon .newsEdit {
+    padding-right: 20px
+}
+
+.aboutRead {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.aboutRead .hd {
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.aboutRead .hd h3 {
+    float: left;
+    _display: inline;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    font-family: SimSun, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.aboutRead .bd {
+    padding: 8px;
+}
+
+.aboutRead .bd .infoList li .dateRight {
+    font-size: 14px;
+    color: #c0c0c0;
+    margin-left: 5px;
+}
+
+.articleCon .pic-header {
+    display: none;
+}
+
+
+
+/* 图片 - 子列表页 */
+.pagePicList {
+    padding: 15px 0 0 14px;
+    overflow: hidden;
+    width: 720px;
+    margin-bottom: -15px;
+}
+
+.pagePicList li {
+    width: 165px;
+    height: 158px;
+    margin: 0 15px 25px 0px;
+    float: left;
+    _display: inline;
+}
+
+.pagePicList li .pic,
+.pagePicList li .pic img {
+    width: 165px;
+    height: 120px;
+    overflow: hidden;
+    border: none;
+    background: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.pagePicList li .title {
+    height: 48px;
+    line-height: 24px;
+    padding-top: 5px;
+}
+
+.pagePicList li .title a {
+    display: block;
+    width: 163px;
+    line-height: 24px;
+    text-align: center;
+    color: #405f6d;
+}
+
+.pagePicList li .title a:hover {
+    color: #c00
+}
+
+/* 图片 - 内容页 */
+.mPagePic {
+    padding: 20px;
+}
+
+
+/* 友情链接列表页 -----------------------------------------*/
+.friendLinkList {
+    overflow: hidden;
+    zoom: 1;
+    padding: 20px 0 0 20px;
+}
+
+.friendLinkList li {
+    width: 180px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px 0 10px;
+    background: url("https://imgfile.estv.com.cn/www.hfweb.cn/qy2019pc/home2/images/share/shareA.gif") 0 -114px no-repeat;
+    float: left;
+}
+
+
+.Showms .MS dd .red {
+    color: #c00;
+    font-weight: bold;
+}
+
+/*-- 
+颜色代码
+#004276 蓝色字体
+#004276 蓝色字体（链接字体）
+#720505 红色边框
+#e7e7e7 灰色边框
+#911c22 红色字体
+--*/
+
+.pages {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
+    clear: both;
+}
+
+.pages .pg1,
+.pages .pg2 {
+    display: inline-block;
+    border: 1px solid #c5c5c5;
+    padding: 0 6px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.pages .pg1:hover {
+    border: 1px solid #405f6d;
+    text-decoration: none;
+    color: #405f6d;
+}
+
+.pages .pg2 {
+    background: #405f6d;
+    border: 1px solid #405f6d;
+    color: #fff !important;
+    font-weight: bold;
+    padding: 0 6px;
+}

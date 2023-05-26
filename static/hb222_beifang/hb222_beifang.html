@@ -1,0 +1,730 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/{随机字符}/{随机字符}/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/{随机字符}/{随机字符}/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+<link href="/static/hb222_beifang/static/css/commen.css" rel="stylesheet" type="text/css">
+<link href="/static/hb222_beifang/static/css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/static/hb222_beifang/static/css/wx.css">
+<link rel="stylesheet" type="text/css" href="/static/hb222_beifang/static/css/lanrenzhijia.css" media="screen">
+
+<script type="text/javascript">
+    function mobile_device_detect(url) {
+        var thisOS = navigator.platform;
+        var os = new Array("iPhone", "android", "Nokia", "SymbianOS", "Symbian", "Windows Phone", "Phone", "Linux armv71", "MAUI", "UNTRUSTED/1.0", "Windows CE", "BlackBerry", "IEMobile");
+        for (var i = 0; i < os.length; i++) {
+            if (thisOS.match(os[i])) {
+                window.location = url;
+            }
+
+        }
+        //因为相当部分的手机系统不知道信息,这里是做临时性特殊辨认
+        if (navigator.platform.indexOf('iPad') != -1) {
+            window.location = url;
+        }
+        //做这一部分是因为Android手机的内核也是Linux
+        //但是navigator.platform显示信息不尽相同情况繁多,因此从浏览器下手，即用navigator.appVersion信息做判断
+        var check = navigator.appVersion;
+        if (check.match(/linux/i)) {
+            //X11是UC浏览器的平台 ，如果有其他特殊浏览器也可以附加上条件
+            if (check.match(/mobile/i) || check.match(/X11/i)) {
+                window.location = url;
+            }
+        }
+        //类in_array函数
+        Array.prototype.in_array = function (e) {
+            for (i = 0; i < this.length; i++) {
+                if (this[i] == e)
+                    return true;
+            }
+            return false;
+        }
+    }
+    mobile_device_detect("http://m.ibeifang.com.cn");
+</script>
+<script type="text/javascript" src="/static/hb222_beifang/static/js/jquery-1.8.3.min1.js"></script>
+<script type="text/javascript" src="/static/hb222_beifang/static/js/lanrenzhijia.js"></script>
+
+</head>
+
+<body>
+<div class="toptiao" id="partone">
+    <div class="juzhong">
+        <div class="topleft fl">您好，欢迎来到{关键词1}！</div>
+        <div class="topright fr">
+            <ul class="clearfix">
+                <li class="fbt" style="width:150px">
+                    <img src="/static/hb222_beifang/static/picture/youxiang.png">
+                    <a href="/{随机字符}/{随机字符}.html" class="fbta">登陆企业邮局</a>
+                </li><li class="fbt" style="width:100px">
+                    <img src="/static/hb222_beifang/static/picture/fhsy.png">
+                    <a href="/{随机字符}/{随机字符}.html" class="fbta">返回首页</a>
+                </li>
+                <li class="fbt" style="width:100px">
+                    <img src="/static/hb222_beifang/static/picture/jrsc.png">
+                    <a href="/{随机字符}/{随机字符}.html" onmousedown="addlove(this, 'http://www.ibeifang.com.cn','i北方网')" class="fbta">加入收藏</a>
+                </li>
+                <script type="text/javascript">
+                    // 设置为主页
+                    function SetHome(obj,vrl){
+                        try{
+                            obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+                        }
+                        catch(e){
+                            if(window.netscape) {
+                                try {
+                                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                                }
+                                catch (e) {
+                                    alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                                }
+                                var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                                prefs.setCharPref('browser.startup.homepage',vrl);
+                            }else{
+                                alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。");
+                            }
+                        }
+                    }
+
+                    var addlove = function (obj, url, title) {
+                        var e = window.event || arguments.callee.caller.arguments[0];
+                        var B = {
+                            IE: /MSIE/.test(window.navigator.userAgent) && !window.opera
+                            , FF: /Firefox/.test(window.navigator.userAgent)
+                            , OP: !!window.opera
+                        };
+                        obj.onmousedown = null;
+                        if (B.IE) {
+                            obj.attachEvent("onmouseup", function () {
+                                try {
+                                    window.external.AddFavorite(url, title);
+                                    window.event.returnValue = false;
+                                } catch (exp) { }
+                            });
+                        } else {
+                            if (B.FF || obj.nodeName.toLowerCase() == "a") {
+                                obj.setAttribute("rel", "sidebar"), obj.title = title, obj.href = url;
+                            } else if (B.OP) {
+                                var a = document.createElement("a");
+                                a.rel = "sidebar", a.title = title, a.href = url;
+                                obj.parentNode.insertBefore(a, obj);
+                                a.appendChild(obj);
+                                a = null;
+                            }
+                        }
+                    };
+                </script>
+
+                <li class="fbt">
+                    <img src="/static/hb222_beifang/static/picture/wzdt.png">
+                    <a href="/{随机字符}/{随机字符}.html" class="fbta">手机站</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="juzhong gao">
+    <a href="/{随机字符}/{随机字符}.html" class="logo" title="{随机关键词}" target="_blank">
+        <img src="/static/hb222_beifang/static/picture/logo.png" alt="{随机关键词}">
+    </a>
+    <script language="javascript">
+        function showtime()
+        {
+            var today,hour,second,minute,year,month,date;
+            var strDate ;
+            today=new Date();
+            var n_day = today.getDay();
+            switch (n_day)
+            {
+                case 0:{
+                    strDate = "星期日"
+                }break;
+                case 1:{
+                    strDate = "星期一"
+                }break;
+                case 2:{
+                    strDate ="星期二"
+                }break;
+                case 3:{
+                    strDate = "星期三"
+                }break;
+                case 4:{
+                    strDate = "星期四"
+                }break;
+                case 5:{
+                    strDate = "星期五"
+                }break;
+                case 6:{
+                    strDate = "星期六"
+                }break;
+                case 7:{
+                    strDate = "星期日"
+                }break;
+            }
+            year = today.getFullYear();
+            month = today.getMonth()+1;
+            date = today.getDate();
+            hour = today.getHours();
+            if(hour<=parseInt(9))
+            {
+                hour="0"+hour
+            }
+            minute =today.getMinutes();
+            if(minute<=parseInt(9))
+            {
+                minute="0"+minute
+            }
+            second = today.getSeconds();
+            if(second<=parseInt(9))
+            {
+                second="0"+second
+            }
+            document.getElementById('time').innerHTML = year + "年" + month + "月" + date + "日" + "&nbsp;&nbsp;"+ strDate +" " + hour + ":" + minute + ":" + second; //显示时间
+            setTimeout("showtime();", 1000); //设定函数自动执行时间为 1000 ms(1 s)
+        }
+    </script>
+    <div class="tianqi" style="margin-top: -10px">
+        <iframe allowtransparency="true" frameborder="0" width="242" height="34" scrolling="no" src="index1.html"></iframe>
+        <span id="time" style="color:#000000;height:34px;line-height:34px;display:inline-block;float:right;padding-right:90px;font-family:" 黑体""="">####.##.##</span>
+        <script>showtime()</script>
+    </div>
+    <div>
+       
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        </div>
+        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+    <div class="modiv">
+        <div class="tel">
+            <img src="/static/hb222_beifang/static/picture/fwrx.png">
+        </div>
+        <div class="search">
+            <img src="/static/hb222_beifang/static/picture/fdj.jpg" class="fdj">
+            <form action="./?m=search" method="post">
+                <input type="text" name="keyword" class="sr" placeholder="请输入关键词" style="line-height:30px">
+                <input type="submit" class="znjs" value="站内搜索">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+    <div id="nav-menu">
+        <ul class="menu">
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>政法在线</span>
+                </a>
+                <ul class="children">
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>公安在线</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>检察手记</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>法院前沿</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>司法论坛</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>深度</span>
+                </a>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>文化品鉴</span>
+                </a>
+                <ul class="children">
+				            <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>诗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>画</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>财经</span>
+                </a>
+                <ul class="children">
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>银　　行</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>保　　险</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>华夏银行</span>
+                        </a>
+                    </li>
+					<li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>光大银行</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>调查</span>
+                </a>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>克癌论坛</span>
+                </a>
+                <ul class="children">
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>名医资讯</span>
+                        </a>
+                    </li>
+                    <li><a href="/{随机字符}/{随机字符}.html">
+                            <span>养　　生</span>
+                        </a>
+                    </li>
+					 <li>
+                        <a href="/{随机字符}/{随机字符}.html">
+                            <span>刘同庆专栏</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>汽车</span>
+                </a>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>龙头企业</span>
+                </a>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>人物</span>
+                </a>
+            </li>
+            <li class="stmenu">
+                <a href="/{随机字符}/{随机字符}.html" class="xialaguang">
+                    <span>岁月</span>
+                </a>
+            </li>
+        </ul>
+        <script type="text/javascript">
+            $('#nav-menu .menu > li').hover(function(){
+                $(this).find('.children').animate({ opacity:'show', height:'show' },200);
+                $(this).find('.xialaguang').addClass('navhover');
+            }, function() {
+                $('.children').stop(true,true).hide();
+                $('.xialaguang').removeClass('navhover');
+            });
+        </script>
+
+    </div>
+</div><!--内页广告-->
+<div class="nygg">
+	<div class="juzhong">
+			 		  
+		  
+		  
+		  
+        <div class="weizhi">当前位置：<a href="/{随机字符}/{随机字符}.html">首页</a>>其他项目>{关键词1}        </div>
+    </div>
+</div>
+
+<!--新闻列表-->
+<div class="juzhong xwdlb clearfix">
+	<div class="leftlb fl">
+        
+
+<div class="juzhong xwdlb clearfix">
+	<div class="leftlb fl">
+		<div class="xinwenxq clearfix">
+			<div class="yihuy">
+				<h1 class="nydbt" style="text-align: center">{关键词1}{随机后缀}{新闻网标题}</h1>
+				<div class="lyu" style="text-align: center">
+					来源：{域名库}&nbsp;
+					发布时间：{年月日}&nbsp;
+					浏览：{随机5数字}&nbsp;
+					字体【<a class="lyxg" href="javascript:fontZoom(18)">大</a> <a class="lyxg" href="javascript:fontZoom(16)">中</a> <a class="lyxg" href="javascript:fontZoom(14)">小</a>】<a class="lyxg" href="javascript:window.close()">【关闭】</a>
+				</div>
+				<script>
+					function fontZoom(size){
+						document.getElementById("fontZoom").style.fontSize=size+'px';
+					}
+				</script>
+			</div>
+			<div class="xqqyu" id="fontZoom" style="min-height: 400px">
+			
+				　<div style="text-align:center;">
+
+</div>
+<div style="text-align:center;">
+	
+</div>
+<div>
+    {新闻网内容}
+</div>
+<div style="text-align:right;text-indent:2em;">
+	{年月日}    
+</div>
+<div style="text-align:justify;text-indent:2em;">
+	（此件公开发布）
+</div><br>
+				<span style="float:right;margin-right:100px;">责任编辑:{人物名称}</span><br>
+				<div class="bdsharebuttonbox" style="float:right;">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        </div>
+        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+
+			
+		</div>
+		<div>
+			<a href="/{随机字符}/{随机字符}.html"></a>
+		</div>
+	</div>
+		</div>
+<div class="wntj">
+	<h2 class="wntjbt">为您推荐</h2>
+	<div class="fslb">
+		<ul class="clearfix">
+<li class="tjbt fl">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{随机关键词}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fr">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{关键词1}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fl">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fr">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fl">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{关键词1}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fr">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fl">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fr">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{关键词1}</h3>
+    </a>
+</li>
+
+
+<li class="tjbt fl">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{标题} </h3>
+    </a>
+</li>
+
+
+<li class="tjbt fr">
+
+    <span class="tjrq">{年月日}</span>
+    <a href="/{随机字符}/{随机字符}.html" class="tjxg" target="_blank">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+		</ul>
+	</div>
+</div>
+
+    </div>
+    <div class="rightlb fr">
+    	
+
+        
+        <div class="resou">
+        	<h2 class="resoubt" style="margin-top:30px">热搜新闻</h2>
+            <ul class="rslist">
+                <li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{关键词1}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{随机关键词}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+<li class="rsbg">
+    <a href="/{随机字符}/{随机字符}.html" target="_blank" class="resouxg">
+        <h3>{标题}</h3>
+    </a>
+</li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="bot">
+    <a href="/{随机字符}/{随机字符}.html">关于我们</a> |
+    <a href="/{随机字符}/{随机字符}.html">联系我们</a> |
+    <a href="/{随机字符}/{随机字符}.html">广告报价</a> |
+    <a href="/{随机字符}/{随机字符}.html" onclick="SetHome(this,window.location)">设为首页</a> |
+	<a href="/{随机字符}/{随机字符}.html" onmousedown="addlove(this, 'http://www.ibeifang.com.cn','i北方网')">加入收藏</a>
+    <script type="text/javascript">
+        // 设置为主页
+        function SetHome(obj,vrl){
+            try{
+                obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+            }
+            catch(e){
+                if(window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                    }
+                    catch (e) {
+                        alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage',vrl);
+                }else{
+                    alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。");
+                }
+            }
+        }
+
+        var addlove = function (obj, url, title) {
+            var e = window.event || arguments.callee.caller.arguments[0];
+            var B = {
+                IE: /MSIE/.test(window.navigator.userAgent) && !window.opera
+                , FF: /Firefox/.test(window.navigator.userAgent)
+                , OP: !!window.opera
+            };
+            obj.onmousedown = null;
+            if (B.IE) {
+                obj.attachEvent("onmouseup", function () {
+                    try {
+                        window.external.AddFavorite(url, title);
+                        window.event.returnValue = false;
+                    } catch (exp) { }
+                });
+            } else {
+                if (B.FF || obj.nodeName.toLowerCase() == "a") {
+                    obj.setAttribute("rel", "sidebar"), obj.title = title, obj.href = url;
+                } else if (B.OP) {
+                    var a = document.createElement("a");
+                    a.rel = "sidebar", a.title = title, a.href = url;
+                    obj.parentNode.insertBefore(a, obj);
+                    a.appendChild(obj);
+                    a = null;
+                }
+            }
+        };
+    </script>
+
+   
+</div>
+<div class="lastdiv">
+&nbsp;Copyright &copy; {年} {域名库} All Rights Reserved.　<a title="{标题}" href="/{随机字符}/{随机字符}.html" target="_blank">技术支持：{网站名称}</a>　
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261139371'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1261139371%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6d5c7154c0eb6825e4a3bd67ab1eedd1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<br>
+商务合作：{随机3数字}-{随机7数字}　<a href="/{随机字符}/{随机字符}.html" target="_blank">蒙ICP备{随机8数字}号-1</a>&nbsp;&nbsp; 网址：{域名库}　投稿邮箱：<a href="mailto:szj@ibeifang.com.cn">szj@ibeifang.com.cn</a><br>
+版权声明：<span style="white-space:normal;">&nbsp;</span><span style="white-space:normal;">{关键词1}</span>版权所有，未经授权， 请勿转载或建立镜像，违者依法必究。 &nbsp; 违法和不良信息 暴恐音视频举报 电话：{随机3数字}-{随机7数字}<br></div>
+
+
+
+
+<!--微信-->
+
+
+<!--右侧悬浮-->
+<div class="side">
+    <ul>
+        <li><a href="/{随机字符}/{随机字符}.html" target="_blank"><div class="sidebox"><img src="/static/hb222_beifang/static/picture/hong.png">返回首页</div></a></li>
+
+        <li><a href="/{随机字符}/{随机字符}.html"><div class="sidebox"><img src="/static/hb222_beifang/static/picture/qqhm.png">QQ客服</div></a></li>
+        <li><a href="/{随机字符}/{随机字符}.html"><div class="sidebox"><img src="/static/hb222_beifang/static/picture/dhh.png">联系我们</div></a></li>
+        <li style="border:none;"><a href="javascript:goTop();" class="sidetop"><img src="/static/hb222_beifang/static/picture/fhh.png"></a></li>
+    </ul>
+</div>
+<script>
+    $(function(){
+        $(".side ul li").hover(function(){
+            $(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#dc0a2c"})
+        },function(){
+            $(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#0686c3"})
+        });
+    });
+    //回到顶部函数
+    function goTop(){
+        $('html,body').animate({'scrollTop':0},300);
+    }
+</script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>
+</html>
+
+<!--Power BY Niuyuan QQ774958240-->

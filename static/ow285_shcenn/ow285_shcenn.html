@@ -1,0 +1,323 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="/_/static/ow285_shcenn/static/css/add.css" type="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{自定义标题}</title>
+	<meta name="keywords" content="{关键词1}" />
+	<meta name="description" content="{自定义描述}">
+	<link rel="stylesheet" href="/_/static/ow285_shcenn/static/css/home.css" type="text/css">
+	
+</head>
+
+<body>
+	<script language="javascript">
+		function ShowLayer() {
+			document.all.topad.style.display = "block";
+		}
+		function CloseLayer() {
+			document.all.topad.style.display = "none";
+		}
+		ShowLayer();
+		setTimeout("CloseLayer()", 11000);//这里是广告显示的时间
+	</script>
+
+	<div class="top_n1">
+		<div class="top_n1_nr">
+			<div class="top_n1_nr_sj">
+				现在是：
+				<span id="www_zzjs_net"></span>
+				<script type="text/javascript">
+					function showLocale(objD) {
+						var str, colorhead, colorfoot;
+						var yy = objD.getYear();
+						if (yy < 1900) yy = yy + 1900;
+						var MM = objD.getMonth() + 1;
+						if (MM < 10) MM = '0' + MM;
+						var dd = objD.getDate();
+						if (dd < 10) dd = '0' + dd;
+						var hh = objD.getHours();
+						if (hh < 10) hh = '0' + hh;
+						var mm = objD.getMinutes();
+
+						if (mm < 10) mm = '0' + mm;
+						var ss = objD.getSeconds();
+						if (ss < 10) ss = '0' + ss;
+						var ww = objD.getDay();
+						if (ww == 0) colorhead = "<font color=\"#3A3A3A\">";
+						if (ww > 0 && ww < 6) colorhead = "<font color=\"#3A3A3A\">";
+						if (ww == 6) colorhead = "<font color=\"#3A3A3A\">";
+
+
+
+
+						if (ww == 0) ww = "星期日";
+						if (ww == 1) ww = "星期一";
+						if (ww == 2) ww = "星期二";
+						if (ww == 3) ww = "星期三";
+						if (ww == 4) ww = "星期四";
+						if (ww == 5) ww = "星期五";
+
+						if (ww == 6) ww = "星期六";
+						colorfoot = "</font>"
+						str = colorhead + yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss + "  " + ww + colorfoot;
+						return (str);
+					}
+					function tick() {
+						var today;
+						today = new Date();
+						document.getElementById("www_zzjs_net").innerHTML = showLocale(today);
+						window.setTimeout("tick()", 1000);
+					}
+					tick();
+				</script>
+			</div>
+			<div class="top_n1_nr_sj">广告热线： &nbsp;|&nbsp; <a
+					onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('');" href="/{随机字符}/{随机数字}_{随机数字}.html">设为首页</a> |
+				加入收藏</div>
+			<div class="top_n1_nr_denglu">
+				<div class="top_n1_nr_denglu_80">登陆用户名：</div>
+				<form action="" method="post">
+					<div class="top_n1_nr_denglu_80">
+						<input name="U_name" type="text" class="bk top_n1_nr_denglu_input" id="U_name">
+					</div>
+					<div class="top_n1_nr_denglu_40">密码：</div>
+					<div class="top_n1_nr_denglu_80">
+						<input name="U_pwd" type="password" class="bk top_n1_nr_denglu_input" id="U_pwd">
+					</div>
+					<div class="top_n1_nr_denglu_40">
+						<input name="Submit" type="submit" class="top_n1_anniu" value="  ">
+					</div>
+				</form>
+				<div class="top_n1_nr_denglu_80" align="center"><a>浏览</a> | <a>注册</a> </div>
+			</div>
+
+		</div>
+	</div>
+	<div class="top_n2">
+		<div class="top_logo"><img src="/_/static/ow285_shcenn/static/picture/logo.jpg"></div>
+
+
+		<div class="top_nr2_nr">
+			<div class="top_nr2_nr_1">
+				<div class="top_nr2_nr_an">
+					<div class="top_nr2_nr_an_ico"></div>
+
+					<div class="top_nr2_nr_an_nr"><a>手机报</a></div>
+				</div>
+				<div class="top_nr2_nr_an">
+					<div class="top_nr2_nr_an_ico2"></div>
+					<div class="top_nr2_nr_an_nr"><a>数字报</a></div>
+				</div>
+
+				<div class="top_nr2_nr_an">
+					<div class="top_nr2_nr_an_ico3"></div>
+					<div class="top_nr2_nr_an_nr"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">网上投稿</a></div>
+				</div>
+			</div>
+			<div class="top_nr2_nr2">
+				<form action="" method="post">
+					<div class="top_nr2_nr2_input">
+						<input name="keyword" type="text" class="top_nr2_nr2_input1 bk" id="keyword">
+					</div>
+
+					<div class="top_nr2_nr2_anniu">
+						<input name="imageField2" type="submit" class="top_nr2_nr2_anniu2 bk" value="  ">
+						<input name="DrpListBottom" value="0" type="hidden">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="top_logo2"></div>
+
+	</div>
+
+	<!--导航-->
+	<div class="top_dh1">
+		<ul class="dh_nr">
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">资讯</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">汽车</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">娱乐</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">教育</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">家居</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">财经</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">企业</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">游戏</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">时尚</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">商讯</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">消费</a></li>
+			<li class="dh_nr_nr5"><a href="/{随机字符}/{随机数字}_{随机数字}.html">微商</a></li>
+		</ul>
+	</div>
+	<div class="page_nr">
+		<!--左边开始-->
+		<div class="page_left">
+			<!--左边广告开始-->
+			<!--新闻内容-->
+			<div>
+				<div class="page_lj">
+					您现在的位置<a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a> > <a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a> > >正文内容
+				</div>
+
+				<div class="page_news_nr">
+					<div class="page_bt">
+						<h1 id="">{关键词1}{随机后缀}{新闻网标题}</h1>
+					</div>
+					<div class="page_fbt"></div>
+					<div class="page_wzxx">
+						<span> 来源：{关键词1}</span>
+						<span> 发布时间：{当前时间}</span>
+						<span id="view-times">阅读：{随机数字}</span>
+						<br>
+					</div>
+					<div class="page_wznr">
+						<div class="page_wznr_2" id="autopic">
+							<p style="text-indent: 2em;">{新闻网内容}</p>
+						</div>
+					</div>
+					<div align="center" class="showpage"><span id="pe100_page_contentpage" class="pagecss"></span></div>
+
+					<!--相关新闻-->
+					<div class="xiangguan">
+						<ul>
+							<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}{标题}</a></li>
+							<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+							<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+							<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+							<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="page_pl">
+				<div id="commentform"></div>
+			</div>
+		</div>
+		<!--左边结束-->
+		<div class="page_right">
+
+			<div class="page_right_n1">
+				<div class="page_right_n1_bt">
+					<div class="page_right_n1_bt_nr">图文阅读</div>
+				</div>
+				<div class="page_right_n2_nr">
+					<li>
+						<div class="page_tp"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img
+									src="{随机图片}" alt="" width="140"
+									height="112" border="0"></a></div>
+						<div class="page_tpbt"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a><br></div>
+					</li>
+					<li>
+						<div class="page_tp"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img
+									src="{随机图片}" alt="" width="140"
+									height="112" border="0"></a></div>
+						<div class="page_tpbt"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{随机关键词}</a><br></div>
+					</li>
+					<li>
+						<div class="page_tp"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img
+									src="{随机图片}" alt="" width="140"
+									height="112" border="0"></a></div>
+						<div class="page_tpbt"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{随机关键词题}</a><br></div>
+					</li>
+					<li>
+						<div class="page_tp"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img
+									src="{随机图片}" alt="" width="140"
+									height="112" border="0"></a></div>
+						<div class="page_tpbt"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{随机关键词}</a><br></div>
+					</li>
+				</div>
+			</div>
+
+			<div class="page_right_n1">
+				<div class="page_right_n1_bt">
+					<div class="page_right_n1_bt_nr">阅读排行榜</div>
+				</div>
+				<div>
+					<ul class="page_right_n1_nr1">
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{关键词1}{标题}</font>
+							</a></li>
+						<li>
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{标题}</font>
+							</a></li>
+						<li>
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{标题}</font>
+							</a></li>
+						<li>
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{标题}</font>
+							</a></li>
+						<li>
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{标题}</font>
+							</a></li>
+						<li>
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{标题}</font>
+							</a></li>
+						<li>
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{标题}</font>
+							</a></li>
+						<li>
+						<li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+								<font style="color:无;">{标题}</font>
+							</a></li>
+						<li></li>
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="end"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">网站简介</a>　-　<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a>　-　<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+			target="_blank">营销服务</a>　-　<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">XML地图</a>　-　<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+			target="_blank">版权声明</a> - <a href="http://{当前域名}/sitemap.xml" target="_blank">网站地图</a><a href="/{随机字符}/{随机数字}_{随机数字}.html"
+			target="_blank">TXT</a><br>
+		Copyright.{年}&nbsp;<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+			target="_blank">{网站名称}</a>&nbsp;版权所有&nbsp;本网拒绝一切非法行为&nbsp;欢迎监督举报&nbsp;如有错误信息&nbsp;欢迎纠正<br><img
+			src="/_/static/ow285_shcenn/static/picture/di1.png"> <img src="/_/static/ow285_shcenn/static/picture/di2.png"> <img src="/_/static/ow285_shcenn/static/picture/di5.png"> <img
+			src="/_/static/ow285_shcenn/static/picture/di3.png"> <img src="/_/static/ow285_shcenn/static/picture/di4.png">
+	
+	</div>
+	<script type="text/javascript">
+		function ImgZoom(Id) {
+			var w = Id.width;
+			var m = 550;
+			if (w < m) {
+				return;
+			}
+			else {
+				var h = Id.height;
+				Id.height = parseInt(h * m / w);
+				Id.width = m;
+			}
+		}
+		void function () {
+			var Imgs = document.getElementById("autopic").getElementsByTagName("img");
+			for (i = 0; i < Imgs.length; i++) {
+				ImgZoom(Imgs[i]);
+			}
+		}();  
+	</script>
+	<script src="/_/static/ow285_shcenn/static/js/jquery.min.js"></script>
+	<script type="text/javascript">
+		"16654" && setTimeout(function () {
+			$.getJSON(["/ajax/viewArticle?s=", +new Date(), "&id=", "16654"].join(''), function (ret) { $('#view-times').html("阅读：" + ret.data); });
+		}, 0);
+	</script>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+</body>
+
+</html>

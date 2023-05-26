@@ -1,0 +1,267 @@
+*{padding:0;margin:0;}
+body, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, a, code, em, img, q, small, strong, dd, dl, dt, li, ol, ul, fieldset, form, label, table, tbody, tr, th, td, input, div,textarea{font-family:SimSun,"宋体";font-weight: inherit;color:#000;}
+li{list-style:none;}
+body,html{background:#fff;
+   width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.dlist_ztdx a{font-size: 12px;}
+img{border: none;}
+a{text-decoration: none;color:#333;text-decoration: none;font-size:14px;}
+a:hover{cursor:pointer;text-decoration: none;}
+ .clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+        content: "";
+        display: block;
+        height: 0;
+        clear:both;
+        visibility: hidden;
+}
+
+.tab_x_n{visibility: hidden;position: absolute;z-index: -1;}
+.tab_x_y{visibility: visible;z-index: 1;}
+.ywdt .tab_y a{color: #a80506;}
+
+.mbxNav_bg{background-color:#fff;}
+.mbxNav{    display: block;
+    background: url(../image/2021072115221260071.jpg) 20px center #fff no-repeat;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 0 0 60px;
+    margin: 10px auto;
+    width:1200px;
+}
+.mbxNav a{font-size: 14px;color: #919191;}
+.mbxNav a:hover{color: #a80506;}
+.news_c li p a{font-size: 14px;display: inline-block;  /**width: 78%;  overflow: hidden;  text-overflow: ellipsis; white-space: nowrap;**/ } 
+.index_zuls li a{display: inline-block;  width: 78%;  overflow: hidden;  text-overflow: ellipsis; white-space: nowrap;}
+/*Header*/
+.pc_nav{display:block;}
+.phone_nav{display:none;}
+.gov_header,.gov_header_ph{
+    overflow: hidden;
+    width: 100%;
+    background: url(../image/2021080910472591035.png) no-repeat;
+    background-position: top center;
+}
+.gov_header_main{
+    width:1030px;
+    height:252px;
+    margin: 0 auto;
+    padding-top:202px;
+    box-sizing:border-box;
+}
+.gov_navu_box{
+    line-height:50px;
+}
+.gov_navu_main ul{
+    margin-left: 8px;
+}
+.gov_navu_main li{
+    float: left;
+    margin-right: 23px;
+}
+.gov_navu_main li span {
+    font-size: 16px;
+    color: #000;
+    display: block;
+}
+.gov_navu_main li a:after {
+    content: '|';
+    padding-left: 23px;
+}
+.gov_navu_main li:last-child a:after {
+    content: '';
+}
+.gov_searchbox{
+    position:relative;
+    display:block;
+    float:right;
+    height:32px;
+    width:284px;
+    margin-top:9px;
+    border-radius: 8px;
+    background:#fff;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+.gov_inputbtn{
+    width:100%;
+    height:100%;
+    border:none;
+    padding:0 36px 0 10px;
+    font-size: 14px;
+    background:#fff;
+    box-sizing: border-box;
+}
+.gov_searchbtn{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: none;
+    background:#fff url(../image/2021091311223865422.png) no-repeat;
+    display: block;
+}
+.gov_navu_main li a.ph_navLink{
+         display:none;
+ }
+.gov_navu_two, .ph_head{
+   display: none;
+    transition: all 0.3s;
+}
+/*END Header*/
+
+
+
+/*移动端适配*/
+@media screen and (max-width:640px) {
+.pc_nav{display:none;}
+.phone_nav{display:block;    position: relative;}
+.tab_x_n{width:90%;}
+/**头部导航**/
+.gov_navu_main li a.pc_navLink{
+    display:none;
+ }
+ .gov_navu_main li a.ph_navLink{
+    display: block;
+    padding-left: 15px;
+ }
+  #ln_common{
+      z-index: 99999;
+  }
+  .headerCon{
+      position:absolute;
+      top:-45px;
+      left:0;
+      width:100%;
+      height:auto;
+      z-index: 99999;
+  }
+  .ph_head{
+      display:block;
+      width:100%;
+      height:45px;
+      line-height:45px;
+      background: #af0a00;
+      padding-left:15px;
+      box-sizing:border-box;
+  }
+  .ph_head span,  .ph_head a{
+      display:inline-block;
+      color:#fff;font-family: SimSun,"宋体";
+  }
+  .ph_icon{
+      float:right;
+      width:52px;
+      height:45px;
+      background:  url(../image/2021081616165431796.png) no-repeat center center;
+      background-size:22px;
+  }
+  .gov_header_main{
+      width:100%;
+      height:auto;
+      padding-top:0;
+      transition: all 0.3s;
+      display:none;
+  }
+  .hideNav{
+      position: fixed;
+      width:100%;
+      height:100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,.4);
+      z-index: 1;
+      display:none;
+  }
+  .gov_file,.hideImg,.index_leftbottom,#pdq1,#pdq2{
+      display:none;
+  }
+  .gov_header{
+      background: none;
+      height: auto;
+  }
+  .gov_header_ph{
+     background-size:100%;
+      min-height: 65px;
+      margin-top:45px;
+   }
+  .gov_navu_box,.gov_navu_main{
+      line-height: 45px;
+      overflow:hidden;
+      background: #efefef;
+  }
+ .gov_navu_main{
+      max-height: 320px;
+      overflow-y: auto;
+ }
+ .gov_navu_box{
+      width:100%;
+      padding-top: 60px;
+ }
+ .gov_searchbox{
+      position: absolute;
+      top: 50px;
+      left: 15px;
+      width: 90%;
+ }
+  .gov_navu_main li{
+      width:100%;
+      float:none;
+  }
+  .gov_navu_main ul{
+      margin: 0;
+  }
+  .gov_navu_main li a:after{
+      content: "";
+  }
+  .gov_navu_main li span.hasChild:after{
+     content: "+";
+     float:right;
+     font-size: 20px;
+  }
+  .gov_navu_main li span.isOpen{
+    border-bottom: 1px dashed #af0a00;
+}
+  .gov_navu_main li span.isOpen:after{
+     content: "-";
+     font-weight: bold;
+     padding-right: 3px;
+  }
+  .gov_navu_main li span{
+      font-size: 14px;
+      padding: 0 15px;
+      border-top: 1px dashed #af0a00;
+      box-sizing:border-box;
+  }
+  .gov_navu_two li a{
+      padding-left: 30px;
+  }
+  .gov_navu_three li a{
+      padding-left: 45px;
+  }
+  .gov_top{
+      display: none;
+   }
+}
+
+
+.mod_list li p a {
+     font-size: 14px;
+    display: inline-block;
+    width: 78%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ln_mod .mod_list li p{width:83% !important;}
+.ln_mod .mod_list li p span{color:#000;}
+div .mod_list li p img{display:inline-block;margin-bottom:10px;}
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: SimSun,"宋体";
+}

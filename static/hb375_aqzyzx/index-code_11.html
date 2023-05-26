@@ -1,0 +1,87 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>长沙天气预报代码调用</title>
+    <link href="static/css/mobile.css" rel="stylesheet" type="text/css">
+    <link href="static/css/new_zishiying.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" mce_src="DD_belatedPNG.js" src="//static.tianqistatic.com/static/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix(".pngtqico");</script>
+    <![endif]-->
+    <style>
+        a{ font-size:12px;}
+        .col_kx { OVERFLOW: hidden; WIDTH:500px }
+    </style>
+    <script type="text/javascript">
+        var color = bgcolor = bdcolor = site = "";
+        var num = 2;
+        $(document).ready(function(){
+            if (typeof(bgcolor) != 'undefined' && bgcolor != '') {
+                $("#header_demo").css('background-color', bgcolor);
+                $("#header_demo1").css('background-color', bgcolor);
+                $("#header_demo2").css('background-color', bgcolor);
+            }
+            if (typeof(bdcolor) != 'undefined' && bdcolor != '') {
+                $("#header_demo").css('border', '1px solid ' + bdcolor);
+                $("#header_demo1").css('border', '1px solid ' + bdcolor);
+                $("#header_demo2").css('border', '1px solid ' + bdcolor);
+            }
+            if (typeof(color) != 'undefined' && color != '') {
+                $("#header_demo a").css('color', color);
+                $("#header_demo1 a").css('color', color);
+                $("#header_demo2 a").css('color', color);
+            }
+        });
+    </script>
+</head>
+<body marginwidth="0" marginheight="0" style="background-color:transparent;overflow:hidden;display:flex;align-items: center;">
+<div id="header_demo" class="col_kx">
+    <table border="0" cellspacing="0" cellpadding="0"><tr>
+            <td id="header_demo1" nowrap="">
+                <div class="code1">
+                    <a style="font-size: px;" target="_blank" href="http://changsha.tianqi.com/changsha/?tq" title="点击查看长沙未来七天天气预报 ">
+                        <strong>今天：</strong>长沙 多云 <span style="color:#f00">20</span>～<span style="color:#4899be">25</span> 2级                        <strong>明天：</strong>长沙 小雨到中雨 <span style="color:#f00">23℃</span>～<span style="color:#4899be">31℃</span> 南风                         <strong>后天：</strong>长沙 小雨到中雨 <span style="color:#f00">21℃</span>～<span style="color:#4899be">30℃</span> 南风 </a></div>
+            </td>
+            <td id="header_demo2" nowrap=""></td>
+        </tr></table>
+</div>
+<script src="static/js/scroll2.js" type="text/javascript"></script>
+<div style="display: none;">
+
+</div><div style="display: none;">
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?86f43783acc56b0c8abb5bb039edc763";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277635480&web_id=1277635480"></script>
+</div>
+<script>
+        var site = ''==0?'16':'';
+        var fontSize = document.querySelectorAll('.code1');
+        var nodeList
+        (function(){
+            site = 15
+            if(hasMobile()){
+            site = (site/4.5) + 'vw'
+            for(var i = 0;i<fontSize.length;i++){
+                fontSize[i].children[0].style.fontSize = site
+                    // fontSize[i].style.fontSize = site
+                }
+            }else{
+            }
+        })()
+        function hasMobile() {
+  let isMobile = false
+  if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+    isMobile = true
+  }
+  return isMobile
+}
+</script>
+</body></html><style>.province{display:flex;}.province select{width:100px;height:30px;border:1px solid #e6e6e6}.province button{background:#5a98de;color:white;text-align:center;width:40px;height:30px;line-height:30px;border:none;outline:none}</style>  <div class="province" style="display:none"><div id="province"></div><button>确定</button></div><script type="text/javascript" src="static/js/jquery.provincesCity.js"></script><script type="text/javascript" src="static/js/provincesData.js"></script><script>var province=document.querySelector('#province');var province1=document.querySelector('.province');var selects=document.querySelectorAll('.selectDom');var button=province1.querySelector('button');(function(){if(hasMobile()){for(var k=0;k<selects.length;k++){selects[k].style.width='30vw';selects[k].style.height='6vh';selects[k].style.fontSize='3vw'}button.style.width='10vw';button.style.height='inherit';button.style.fontSize='3.5vw'}else{return}})();function hasMobile(){let isMobile=false;if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)){isMobile=true}return isMobile}</script><script type="text/javascript">num=0;temp=0;document.domain = "tianqi.com";document.cookie="PATHURL=c=code&id=11;domain=.tianqi.com";</script>

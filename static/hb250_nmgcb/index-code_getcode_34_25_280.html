@@ -1,0 +1,143 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>香港天气预报代码调用</title>
+    <!--[if IE 6]>
+    <script type="text/javascript" mce_src="DD_belatedPNG.js" src="//static.tianqistatic.com/static/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix(".pngtqico");</script>
+    <![endif]-->
+    <script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+    <link href="static/css/new_zishiying.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        var color = bgcolor = bdcolor = site = icon = "";
+        var num = 0;
+         var pngtqico = document.querySelector('.pngtqico')
+        $(document).ready(function(){
+            init();
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $(".pngtqico").each(function(i){
+                    if (this.src.indexOf('tianqibig')>1){
+                        this.src = this.src.replace("tianqibig", icon);
+                    }else {
+                        this.src = this.src.replace("/tianqi/", '/'+icon+'/');
+                    }
+
+                });
+            }else {
+                icon = 'tqicon1';
+            }
+            if (typeof(bgcolor) != 'undefined' && bgcolor != '') {
+                $("#mobile280").css('background-color', bgcolor);
+            }
+            if (typeof(bdcolor) != 'undefined' && bdcolor != '') {
+                $("#mobile280").css('border', '1px solid ' + bdcolor);
+            }
+            if (typeof(color) != 'undefined' && color != '') {
+                $("#mobile280").css('color', color);
+                $("#mobile280 a").css('color', color);
+                $("#mobile280 .f1").css('color', color);
+                $("#mobile280 .wtpic font").attr("color","");
+            }
+            if (typeof(temp) != 'undefined' && temp == 0) {
+                $("div.wt2").remove();
+            }
+            if (typeof(textalign) != 'undefined' && textalign == 1) {
+                $("#mobile280").addClass('flex')
+            }
+        });
+        
+        function init(){
+            if(num==0) num=5;
+            for (var i=5; i > num; i--) {
+                $("#day_"+i).remove();
+            }
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $("img.pngtqico").each(function(i){
+                    this.src = this.src.replace("tianqibig", icon);
+                });
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        body{margin:0;padding:0;font-size:12px; font-family:"微软雅黑"}
+        body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, pre, fieldset, textarea, th, td{ margin: 0;padding: 0;}
+        em{font-size: 12px;font-weight: normal;font-style: normal;}
+        ul{list-style-type:none;margin:0;padding:0;}
+        li{list-style-type:none;margin:0;padding:0;}
+        img{border:0;}
+        a:link,a:visited,a:hover,a:active{color:#333;text-decoration:none;}
+        a:hover{color:#333;text-decoration:none;}
+        .box{ float:left; width: max-content;  overflow:hidden;display:flex;align-items:center}
+        .box strong{float:left; font-size:12px; padding:0 6px 0 0;}
+        .box .wtpic{height:22px;width:22px;float:left; padding:0 6px 0 0;}
+        .box .wtline{float:left; margin-top:0; padding:0;}
+        .box .st{float:left; padding:0 6px;}
+        .box .kqzl{float:left; margin-top:0; padding:0 6px 0 0;}
+        .box .zl_txt{float:left;  padding:0 6px; background:#9ED15B; color:#fff;}
+        .gk_box .wtpic{float:left;width:100%;}
+        a:link {text-decoration: none;}
+        a:visited {text-decoration: none;}
+        a:hover {text-decoration: none;}
+        a:active {text-decoration: none;}
+        #mobile280{display:block}
+        .flex{display:flex!important}
+    </style>
+</head>
+<body marginwidth="0" marginheight="0" style="background-color:transparent;overflow:hidden">
+<div id="mobile280" class="flex_center">
+    <div class="box" style="font-size: 12px;">
+        <a target="_blank" href="javascript:;" title="查看未来香港七天天气预报">
+            <strong style="font-size: 12px;">香港</strong></a>
+        <a style="display:flex; align-items: center;" target="_blank" href="javascript:;"><span class="wtpic"><img class='pngtqico' align='absmiddle' src='static/picture/b1.png' style='border:0;width:46px;height:46px'></span>
+            <span class="wtline">17～22</span>
+            <span class="st">|</span><span class="kqzl">空气质量：</span><span class="zl_txt" style="background:#79b800">
+                优</span></a></div>
+</div>
+<div style="display: none;">
+
+</div><div style="display: none;">
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?86f43783acc56b0c8abb5bb039edc763";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277635480&web_id=1277635480"></script>
+</div>
+<script>
+        var site = ''==0?'16':'';
+        var pngtqico = document.querySelector('.pngtqico');
+        var wtpic = document.querySelector('.wtpic');  
+        var fontSize = document.querySelector('.box');
+        var strong = document.querySelector('strong');
+        (function(){
+            if(hasMobile()){
+                site = 15
+                wtpic.style.width = 2.0*(site/4.5) + 'vw'
+                wtpic.style.height = 2.0*(site/4.5) + 'vw'
+                pngtqico.style.width = 2.0* (site/4.5) + 'vw'
+                pngtqico.style.height = 2.0* (site/4.5) + 'vw'
+                site = (site/4.5) + 'vw'
+                fontSize.style.fontSize = site
+                strong.style.fontSize = site
+            }else{
+                wtpic.style.width = 2*site
+                wtpic.style.height = 2*site
+                pngtqico.style.width = 2* site
+                pngtqico.style.height = 2* site
+            }
+        })()
+    function hasMobile() {
+  let isMobile = false
+  if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+    isMobile = true
+  }
+  return isMobile
+}
+</script>
+  
+</body></html><style>.province{display:flex;}.province select{width:100px;height:30px;border:1px solid #e6e6e6}.province button{background:#5a98de;color:white;text-align:center;width:40px;height:30px;line-height:30px;border:none;outline:none}</style>  <div class="province" style="display:none"><div id="province"></div><button>确定</button></div><script type="text/javascript" src="static/js/jquery.provincesCity.js"></script><script type="text/javascript" src="static/js/provincesData.js"></script><script>var province=document.querySelector('#province');var province1=document.querySelector('.province');var selects=document.querySelectorAll('.selectDom');var button=province1.querySelector('button');(function(){if(hasMobile()){for(var k=0;k<selects.length;k++){selects[k].style.width='30vw';selects[k].style.height='6vh';selects[k].style.fontSize='3vw'}button.style.width='10vw';button.style.height='inherit';button.style.fontSize='3.5vw'}else{return}})();function hasMobile(){let isMobile=false;if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)){isMobile=true}return isMobile}</script><script type="text/javascript">num=0;temp=0;document.domain = "tianqi.com";document.cookie="PATHURL=c=code&a=getcode&id=34&h=25&w=280;domain=.tianqi.com";</script>

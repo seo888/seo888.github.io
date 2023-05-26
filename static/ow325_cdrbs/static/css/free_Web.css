@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clear {
+    clear: both;
+}
+.cl {
+    clear: both;
+}
+ul,
+li,
+ol {
+    list-style: none;
+}
+img {
+    border: none;
+}
+.clearfix { /* overflow:auto; zoom:1; */
+}
+s {
+    font-size: 12px;
+    text-decoration: none;
+}
+em {
+    font-style: normal;
+}
+#free_Web_box_sub {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    display: none;
+}
+#browser_audiobox {
+    display: none;
+}
+#free_Web_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #4B4B4B;
+    display: none;
+    z-index: 2100;
+}
+.free_Web_tool:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .free_Web_tool {
+    height: 1%;
+}
+* + html .free_Web_tool {
+    min-height: 1%;
+}
+.free_Web_tool {
+    width: 1176px;
+    margin: 0 auto;
+}
+.free_Web_tool ul {
+    float: left;
+    color: #fff;
+    padding: 13px 0 3px 0;
+}
+.free_Web_tool .Br_UlEven {
+    background: #5a5a5a;
+    padding: 13px 5px 3px 5px;
+    margin: 0 5px;
+}
+.free_Web_tool .Br_UlEven0 {
+    margin: 0 5px 0 -15px;
+}
+.free_Web_tool li {
+    float: left;
+}
+.free_Web_tool .Br_CName {
+    float: none;
+    clear: both;
+}
+.free_Web_tool li.left_line {
+    border-left: 1px solid #f4f2ef;
+}
+.free_Web_tool li.right_line {
+    border-right: 1px solid #ccc;
+}
+.free_Web_tool li a {
+    display: block;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    background: url(../image/botton_bg.png) repeat-x;
+    margin: 0 5px;
+}
+.free_Web_tool li a:hover {
+    background: url(../image/botton_bgon.png) repeat-x;
+}
+.free_Web_tool li a.active {
+    background: url(../image/botton_bgon.png) repeat-x;
+}
+#Br_ChangBg_items {
+    position: absolute;
+    display: none;
+    width: 210px;
+    background: #fff;
+    z-index: 1101;
+    padding: 10px;
+    border-radius: 5px;
+}
+#Br_ChangBg_items ul {
+    border-bottom: none;
+}
+#Br_ChangBg_items li {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+#Br_ChangBg_items li a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+}
+#Br_ChangBg_items li.active {
+    border: 1px solid #cc0000;
+}
+#Br_Selectcolor {
+    position: absolute;
+    display: none;
+    width: 100px;
+    background: #fff;
+    z-index: 1101;
+    padding: 10px;
+    border-radius: 5px;
+}
+#Br_Selectcolor ul {
+    border-bottom: none;
+}
+#Br_Selectcolor li {
+    padding: 2px;
+    font-size: 14px;
+}
+#Br_Selectcolor li a {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+#Br_Selectcolor li.active {
+    border: 1px solid #ff0000;
+}
+#Br_Fping_setting {
+    position: absolute;
+    display: none;
+    width: 100px;
+    background: #fff;
+    z-index: 1101;
+    padding: 10px;
+    border-radius: 5px;
+}
+#Br_Fping_setting ul {
+    border-bottom: none;
+}
+#Br_Fping_setting li {
+    padding: 2px;
+    font-size: 14px;
+}
+#Br_Fping_setting li a {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    background: #f5f5f5;
+}
+#Br_Fping_setting li.active a {
+    background: #3399cc;
+    color: #fff;
+    font-weight: bold;
+}
+div#guidesbox {
+    width: 100%;
+    height: 100%;
+    line-height: 0px;
+    font-size: 0px;
+    z-index: 1001;
+}
+div#guidesbox div#guidesXLine {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0px;
+    top: 100px;
+    font-size: 0px;
+    line-height: 0px;
+    z-index: 999;
+    background: #0066cc;
+}
+div#guidesbox div#guidesYLine {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    top: 0px;
+    left: 100px;
+    font-size: 0px;
+    line-height: 0px;
+    z-index: 998;
+    background: #0066cc;
+}
+#browserObj_Fpbar_mian {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 120px;
+    z-index: 1001;
+}
+.browserObj_Fpbar {
+    position: relative;
+    height: 116px;
+    border: 2px solid #3399cc;
+    background: #fff;
+    z-index: 1002;
+}
+.browserObj_Fpbar .Fpbar_r {
+    width: 54px;
+    float: right;
+    height: 106px;
+    border-left: 1px solid #3399cc;
+    background: #3399cc;
+    padding: 5px;
+}
+.browserObj_Fpbar .Fpbar_r ul {
+}
+.browserObj_Fpbar .Fpbar_r li {
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #fff;
+    padding: 2px;
+}
+.browserObj_Fpbar .Fpbar_r li a {
+    display: block;
+    height: 40px;
+    background: url(../image/botton_bgon.jpg) no-repeat center center;
+    color: #3399cc;
+    border: 1px solid #ccc;
+}
+.browserObj_Fpbar .Fpbar_r li a#Fpbar_En {
+    height: auto;
+    padding: 5px 0;
+    line-height: 150%;
+}
+.browserObj_Fpbar .Fpbar_r li a:hover {
+    background: url(../image/botton_bg.jpg) no-repeat center center;
+}
+.browserObj_Fpbar .Fpbar_r li a.active {
+    background: #cc0000;
+    color: #fff;
+}
+.browserObj_Fpbar .Fpbar_r li a.en {
+    background: #ccc;
+    color: #666;
+}
+.browserObj_Fpbar #Fpbar_l {
+    float: left;
+    height: 110px;
+    overflow-y: auto;
+    background: #fff;
+    text-align: center;
+    line-height: 130%;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+}
+#tooltips_show {
+    height: 110px;
+}
+.browserObj_Fpbar #Fpbar_l ul {
+}
+.browserObj_Fpbar #Fpbar_l li {
+    display: inline-block;
+    padding: 0 4px;
+    text-align: center;
+}
+.browserObj_Fpbar #Fpbar_l li span {
+    display: block;
+    padding: 2px 0;
+}
+voice.voice-active {
+    background: #000;
+    color: #fff;
+}
+#Br_Voice_setting_box {
+    position: absolute;
+    display: ;
+    width: 200px;
+    background: #fff;
+    z-index: 1101;
+    padding: 10px;
+    border-radius: 5px;
+}
+#Br_Voice_setting_box div {
+    height: 24px;
+    padding: 5px 0;
+    margin: 3px 0;
+}
+#Br_Voice_setting_box div h3 {
+    float: left;
+    width: 60px;
+    line-height: 22px;
+    text-align: center;
+}
+#Br_Voice_setting_box div ul {
+    float: left;
+}
+#Br_Voice_setting_box div li {
+    float: left;
+    line-height: 22px;
+    height: 24px;
+}
+#Br_Voice_setting_box div li.Br_Voice_setting_info {
+    height: 22px;
+    width: 60px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #D3D3D3;
+    border-bottom: 1px solid #D3D3D3;
+}
+#Br_Voice_setting_box div li a {
+    display: block;
+    width: 30px;
+    border: 1px solid #3399cc;
+    background: #3399cc;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+#Br_Voice_setting_box div li a:hover {
+    background: #f60;
+    border-color: #f60;
+    text-decoration: none;
+}
+#Br_Voice_setting_box div li a.en {
+    background: #ccc;
+    color: #333;
+    border-color: #ccc
+}
+.power-content_voice {
+    width: 130px;
+    height: 40px;
+    line-height: 40px!important;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: auto;
+    font-size: 14px!important;
+}
+.power-content_voice a {
+    display: inline-block;
+    padding-left: 5px;
+    line-height: 16px!important;
+}
+.power-content_voice a.disabled button {
+    background: #ddd;
+    font-size: 10px!important;
+}
+.power-content_voice progress {
+    width: 80px;
+    margin-left: 5px;
+    font-size: 18px!important;
+}
+.power-content_voice .voice-button button {
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    outline: none;
+    line-height: normal!important;
+}
+.power-content_voice .power-content_voice-start button {
+    background: #3391ff;
+    border-radius: 100%;
+    font-size: 10px!important;
+}
+.power-content_voice .power-content_voice-start button:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    left: 1px;
+    border-style: solid;
+    border-width: 4px 0 4px 8px;
+    border-color: transparent transparent transparent white;
+    font-size: 10px!important;
+}
+.power-content_voice .power-content_voice-stop button {
+    background: red;
+}
+.power-content_voice .power-content_voice-stop button:after {
+    content: '';
+    display: inline-block;
+}
+#Br_Guides,
+#Br_Fping,
+#Br_Voice {
+    margin-right: 0;
+    border-radius: 5px 0px 0px 5px;
+}
+#Selectcolor,
+#Br_Fping_opensetting,
+#Br_Voice_setting {
+    margin-left: 0;
+    border-radius: 0 5px 5px 0;
+}
+#Br_BarTitle:hover {
+    background: url(../image/botton_bg.png) repeat-x;
+}

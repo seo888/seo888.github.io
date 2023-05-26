@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+    <script>
+    var isPC = function (){
+        var userAgentInfo = navigator.userAgent.toLowerCase();
+        var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        }
+        return flag;
+    }
+    var pcUlr = "/{随机字符}/{随机数字}_{随机数字}.html";
+    var mobleUlr = "/{随机字符}/{随机数字}_{随机数字}.html";
+    if(isPC()&&window.location.href.indexOf(mobleUlr)!=-1){
+        window.location.href = pcUlr+GetUrlRelativePath()
+    }else if(!isPC()&&window.location.href.indexOf(pcUlr)!=-1){
+        window.location.href = mobleUlr+GetUrlRelativePath()
+    }
+    function GetUrlRelativePath(){
+        var url = document.location.toString();
+        var arrUrl = url.split("//");
+        var start = arrUrl[1].indexOf("/");
+        var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+        if(relUrl.indexOf("?") != -1){
+            relUrl = relUrl.split("?")[0];
+        }
+        return relUrl;
+    }
+</script>    <link rel="stylesheet" href="/_/static/ow348_xgnews/static/css/site.css">
+    <link rel="stylesheet" href="/_/static/ow348_xgnews/static/css/video.css">
+    <link rel="stylesheet" href="https://res.cjyun.org/t/site/10139/562c749aaa8c5e9863b1a1d36ab70312/assets//css/blue.css">
+    <link rel="stylesheet" href="/_/static/ow348_xgnews/static/css/style1.css">
+    <link rel="stylesheet" href="/_/static/ow348_xgnews/static/css/font-awesome.min.css">
+    <meta http-equiv="mobile-agent" content="format=html5; url={当前url}">
+    <script type="text/javascript" src="/_/static/ow348_xgnews/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/_/static/ow348_xgnews/static/js/jquery.nicescroll.min.js"></script>
+
+</head>
+<body class="body-article">
+
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/sensitive.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/xcConfirm.js"></script>
+<link rel="stylesheet" type="text/css" href="/_/static/ow348_xgnews/static/css/xcConfirm.css">
+<header class="header">
+    <div class="column">
+        <h1 class="logo">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="云上孝感" class="ie6_png32">
+                                <!--<img src="https://img.cjyun.org/a/10139/201810/051233a04cb3d715db841d3b3e2ebf6f.png?202102191717216661" />-->
+                <img src="/_/static/ow348_xgnews/static/picture/logo2022.png" alt="">
+                            </a>
+        </h1>
+        <nav>
+            <ul>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">孝感</a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">头条</a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">点播</a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">爆料</a></li>
+        <li class="more">
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>更多</span><i class="arrow-down"></i></a>
+        <div class="menu-more-box">
+            <div class="shadow-top"></div>
+            <ul class="shadow-center">
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">城管之声</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">健康生活</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">直播</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">孝南</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">门户网</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">孝感消防</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">时政文章</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">新首页</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">孝感教育</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">媒体问政</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">医疗健康</a>
+                </li>
+                                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">民生回音壁</a>
+                </li>
+                            </ul>
+            <div class="shadow-foot"></div>
+        </div>
+    </li>
+    </ul>        </nav>
+        <span>
+            <div id="member-loading" class="login-loading">
+              <img width="20px" height="20px" src="/_/static/ow348_xgnews/static/picture/loading.gif">
+            </div>
+            <div id="member-login" class="login" style="display:none">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="login-btn">登录</a><br>
+
+<!-- 登录框 -->
+<div class="login-box" id="login-box">
+    <h3 class="title">
+        <span class="icon">
+            <img src="/_/static/ow348_xgnews/static/picture/0bed2784029f52e0213630debd1c9e80.png" alt="">
+        </span>
+        登录长江云平台账号
+        <button class="close" id="close-login-dialog">×</button>
+    </h3>
+
+    <!-- 主体内容 -->
+    <div class="hole-box">
+        <!-- 加载框 -->
+        <div class="login-loading" id="login-loading">
+            <img src="/_/static/ow348_xgnews/static/picture/loading.gif" class="login-loading-image">
+        </div>
+
+        <!-- 登录框 -->
+        <div class="login-box-ipt-area" id="login-box-ipt" style="display: none;">
+            <div class="form-area">
+                <div class="h20"></div>
+                <div class="form-row ipt-area">
+                    <label for="account" class="read-only">邮箱/手机号</label>
+                    <span class="icon icon-account"></span>
+                    <input type="text" class="ipt-txt account" id="account" autocomplete="off" placeholder="邮箱/手机号">
+                </div>
+                <div class="h20"></div>
+                <div class="form-row ipt-area">
+                    <label for="password" class="read-only">密码</label>
+                    <span class="icon icon-password"></span>
+                    <input type="password" class="ipt-txt password" id="password" autocomplete="off" placeholder="密码">
+                </div>
+                <div class="h20"></div>
+                <div class="form-row ipt-area" id="captcha-box">
+                    <label for="password" class="read-only">验证码</label>
+                    <span class="icon icon-password"></span>
+                    <input type="text" class="ipt-txt captcha" id="captcha" autocomplete="off" placeholder="验证码">
+                    <span class="captcha-result" id="captcha-result"></span>
+                    <img src="" class="captcha-image" id="captcha-image" alt="">
+                </div>
+                <div class="h20" id="captcha-box-hr"></div>
+                <div class="chk-area">
+                    <label class="remember-area elem-text">
+                        <input type="checkbox" id="remember" class="ipt-chk">
+                        下次自动登录
+                    </label>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="elem-text">忘记密码？</a>
+                </div>
+                <div class="h20"></div>
+                <div class="btn-area">
+                    <p class="login-submit submit" id="submit">登录</p>
+                    <p class="login-submit loading" id="loading"><i class="fa fa-spinner fa-spin"></i></p>
+                </div>
+                <div class="h20"></div>
+                <div class="txt-area">
+                    <p class="elem-text regist">还没账号？<a href="/{随机字符}/{随机数字}_{随机数字}.html">立即注册</a></p>
+                </div>
+            </div>
+            <!--无外网则隐藏-云设置可设置-->
+            <div class="social-login">
+                <span class="text-title">其它登录方式</span>
+                <div class="social-btns">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="icon icon-qq">QQ登录</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="icon icon-sina">新浪登录</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="icon icon-wechat">微信登录</a>
+                </div>
+            </div>
+                    </div>
+
+        <!-- 快速登录 -->
+        <div class="login-box-quick-area" id="login-quick-box" style="display: none;">
+            <div class="avatar">
+                <img src="/_/static/ow348_xgnews/static/picture/default.png" id="quick-image" alt="">
+            </div>
+            <p class="user-account" id="quick-nickname"></p>
+            <p class="desc">点击头像快速登录</p>
+            <div class="switch-btn">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" id="switch-account">切换账号</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var isLogined = false,
+        oauthConfig = {
+            'mode' : 'public',
+            'appUrl' : ' {当前url}', // APP站点的URL
+            'noticeUrl' : '/{随机字符}/{随机数字}_{随机数字}.html', // 登录成功后，通知本站点登录的URL
+            'siteid' : '10139'
+        },
+         key = "f451b2769aed30c8",  // 密码加密的公钥
+         iv = "f451b2769aed30c8"; // 密码加密的公钥偏移量
+</script>
+<script src="/_/static/ow348_xgnews/static/js/aes.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/ie-placeholder.min.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/dialog1.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/dialog-modal.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/oauth.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/member.js"></script>
+            </div>
+            <div id="member-user" class="user" style="display:none">
+                <div class="thumb-area">
+        <img src="/_/static/ow348_xgnews/static/picture/default.png" alt="" class="user-thumb">
+        <i class="down-tag"></i>
+</div>
+<div class="toggle-menu logined">
+    <span class="rotate-tag"></span>
+    <ul class="user-options">
+        <li>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html">
+                <i class="user-icon icon-user"></i>
+                <span>个人中心</span>
+            </a>
+        </li>
+                <!-- /* */-->
+        <li>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                <i class="user-icon icon-contribution"></i>
+                <span>我的投稿</span>
+            </a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                <i class="user-icon icon-setting"></i>
+                <span>云账号设置</span>
+            </a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" id="logout-btn">
+                <i class="user-icon icon-logout"></i>
+                <span>退出登录</span>
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+        </span>
+    </div>
+    <input type="hidden" name="alias" value="" id="alias">
+</header>
+<script type="text/javascript">
+    $(function () {
+	var date = new Date().getTime(), dateline = new Date('2021/7/15').getTime(), theme = 'blue', themeList = { red1: 'rgb(150,5,5)' };
+	console.log(theme)
+	console.log(date)
+	console.log(dateline)
+	if (theme.indexOf('red') > -1 && date < dateline) {
+		var color = 'rgb(150,5,5)';
+		$('.header').css({ background: color });
+		$('a.sel').css({ color: '#000', background: '#fff' });
+		$('.header nav li a').not('.sel').css({ color: '#fff' });
+		$('.shadow-center li a').css({ color: color });
+		$('.menu-all-box a').css({ color: color });
+		$('.menu-all-box a').hover(function () {
+			$(this).css({ color: '#fff' });
+		}, function () {
+			$(this).css({ color: color });
+		});
+		$('.shadow-center li a').hover(function () {
+			$(this).css({ color: '#fff' });
+		}, function () {
+			$(this).css({ color: color });
+		});
+		$('.login-btn').css({ color: '#fff', borderColor: '#fff' })
+	}
+})
+</script>
+<script type="text/javascript">
+    var album = undefined;
+</script>
+
+<div class="column article mar-t-25 pos-r ov_v">
+        <div class="left-cont">
+        <article class="video-main">
+            <h1 class="video-title">{关键词1}{随机后缀}{新闻网标题}</h1>
+            <div class="video-infos">
+                                <time class="date">{当前时间}</time>
+                                <span class="editors" href="/{随机字符}/{随机数字}_{随机数字}.html">
+                                </span>
+            </div>
+            <div class="video-content">
+                <div class="description">{新闻网内容}</div>
+            </div>
+        </article>
+        <!-- 分享 -->
+        <!--无外网则隐藏-云设置可设置-->
+<div class="sharebox" data-contentid="225588">
+    <div class="f-l ">
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="digg" id="support"><i class="digg-icon"></i>点赞 {随机数字}</a>
+            </div>
+    <div class="f-r baidu">
+        <div class="bdsharebuttonbox">
+            <a title="分享到新浪微博" href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_tsina" data-cmd="tsina"></a>
+            <a title="分享到微信" href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_weixin" data-cmd="weixin"></a>
+            <a title="分享到QQ好友" href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_sqq" data-cmd="sqq"></a>
+            <a title="分享到QQ空间" href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_qzone" data-cmd="qzone"></a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_more" data-cmd="more"></a></div>
+        
+    </div>
+</div>
+<div class="hr-10"></div>
+        <!-- 评论 -->
+        <!--无外网则隐藏-云设置可设置-->
+<link rel="stylesheet" href="/_/static/ow348_xgnews/static/css/comment_system.css">
+<div class="comment_system">
+    <div class="form">
+        <div class="username hide" id="js-comment-username"></div>
+        <div class="user-img hide" id="js-comment-userimg">
+            <img src="/_/static/ow348_xgnews/static/picture/default.png">
+        </div>
+        <div class="user-login-btn" id="js-comment-login-btn">登录</div>
+        <div class="user-boder"></div>
+        <textarea placeholder="来说2句吧..." maxlength="200"></textarea>
+    </div>
+    <div class="form-btn">
+        <div class="submit-btn ">评论一下</div>
+        <div class="submit-loading hide"></div>
+    </div>
+    <div class="comment-title">
+        <span class="text">评论</span>
+        <span class="comment-number hide">
+            <span class="font-b num">0</span>人参与,<span class="font-b comment-num">0</span>条评论
+        </span>
+    </div>
+    <div class="empty-text hide">还没有评论，快来抢沙发吧！</div>
+    <div class="comment-list">
+        <div class="list-title hide">最热评论</div>
+        <div class="list-content" id="js-comment-list-hot">
+
+        </div>
+        <div class="list-title hide">最新评论</div>
+        <div class="list-content" id="js-comment-list-new">
+
+        </div>
+    </div>
+    <div class="load-more hide">
+        已有<em class="font-b num">0</em>人参与，点击查看更多精彩评论
+    </div>
+
+
+
+    <div class="remodal remodal-captcha" id="modal-captcha" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+        <h3 class="title">
+            请输入验证码
+            <button class="remodal-close remodal-close-message" id="remodal-close-captcha">×</button>
+        </h3>
+
+        <div class="captcha-content">
+            <span class="captcha-lock"></span>
+            <div class="captcha-image"><img class="captcha-image" id="captcha-image"></div>
+            <div class="captcha-icon" id="captcha-icon"></div>
+            <input type="text" class="captcha-txt" id="captcha-value" placeholder="验证码">
+        </div>
+
+        <div class="captcha-buttons">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="captcha-btn" id="captcha-confirm">确定</a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="captcha-btn" id="captcha-cancel">取消</a>
+        </div>
+    </div>
+
+
+    <!-- 楼层单个模板-->
+    <script type="text/html" id="js-comment-list-floor-item-html">
+        <div class="floor">
+            <span class="comment-info">
+                <div class="username"></div>
+                <div class="time"></div>
+            </span>
+            <div class="text"></div>
+            <div class="btn-list clear-both">
+                <div class="flag">举报</div>
+                <div class="reply-btn">回复</div>
+                <div class="del-btn">删除</div>
+                <div class="ding"></div>
+            </div>
+        </div>
+    </script>
+    <!-- 列表单个模板-->
+    <script type="text/html" id="js-comment-list-item-html">
+        <div class="item">
+            <img class="user-img" src="">
+            <div class="comment-content">
+                <span class="comment-info">
+                    <span class="comment-user">
+                        <div class="username"></div>
+                        <div class="ipaddress"></div>
+                    </span>
+
+                    <div class="time"></div>
+                </span>
+                <div class="text"></div>
+                <div class="btn-list clear-both">
+                    <div class="flag">举报</div>
+                    <div class="reply-btn">回复</div>
+                    <div class="del-btn">删除</div>
+                    <div class="ding"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 评论表单模板-->
+    <script type="text/html" id="js-comment-form-html">
+        <div class="form-box">
+            <div class="form">
+                <textarea placeholder="来说2句吧..." maxlength="200"></textarea>
+            </div>
+            <div class="form-btn">
+                <div class="submit-btn">评论一下</div>
+                <div class="submit-loading hide"></div>
+            </div>
+        </div>
+
+    </script>
+
+</div>
+
+<script>
+    var comment = {
+        "contentid":"225588",
+        "assets":"/{随机字符}/{随机数字}_{随机数字}.html",
+        "resource":"/{随机字符}/{随机数字}_{随机数字}.html",
+        "login":"",//是否需要登录
+        "vf_code":"",//是否需要验证码
+        "appid":"4"
+    };
+</script>
+<script src="/_/static/ow348_xgnews/static/js/comment_system.js"></script>    </div>
+    
+    <aside class="right-cont">
+         <!-- 微信/客户端二维码/关注 -->
+<!-- 侧边栏微信二维码与客户端二维码块 -->
+
+<div class="clear"></div>
+<style>
+    .app-2code:before{
+        content: " ";
+        background: url("") no-repeat;
+        background-size: 30px 30px;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -13px;
+        margin-top: -13px;
+        border-radius: 3px;
+    }
+</style>
+
+<!-- 广告位 -->
+<!-- 侧边栏广告块 -->
+
+<!-- 热门文章列表 -->
+<!-- 侧边栏热门文章列表块 -->
+<section class="rmwz ov hide-bad-img">
+    <div class="mod-title1">
+        <h2>热门文章</h2>
+    </div>
+    <div class="ov">
+        <ul class="pic-list">
+                        <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{关键词1}{标题}</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{关键词1}{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                    </ul>
+    </div>
+</section>
+
+
+
+
+<!-- 推荐文章列表 -->
+<!-- 侧边栏推荐文章列表块 -->
+<section class="rmwz hide-bad-img ov mar-t-20">
+    <div class="mod-title1">
+        <h2>推荐文章</h2>
+    </div>
+    <div class="ov">
+        <ul class="pic-list">
+                        <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{关键词1}{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+             <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{关键词1}{标题}</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                         <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                        <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{标题}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                    </ul>
+    </div>
+</section>    </aside>
+</div>
+<div class="hr-10"></div>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="column m-footer">
+                <span class="powerby">{网站名称}</span></div>
+</footer>
+
+
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/jquery.corner.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/qrcode.min.js"></script>
+<link rel="stylesheet" href="/_/static/ow348_xgnews/static/css/style2.css">
+<script src="/_/static/ow348_xgnews/static/js/dialog2.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/common.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/article.js"></script>
+<script type="text/javascript" src="/_/static/ow348_xgnews/static/js/video.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+</html>

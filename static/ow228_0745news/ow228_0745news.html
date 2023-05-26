@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="zh-CN"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+	<link rel="stylesheet" type="text/css" href="/_/static/ow228_0745news/static/css/cmstop-common.css">
+	<link rel="stylesheet" type="text/css" href="/_/static/ow228_0745news/static/css/cmstop-article.css">
+	<link rel="stylesheet" type="text/css" href="/_/static/ow228_0745news/static/css/cmstop-comment-mode.css">
+	<link rel="stylesheet" type="text/css" href="/_/static/ow228_0745news/static/css/cmstop-right-common.css">
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/config.js"></script>
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/cbplayer.js"></script>
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/jquery.js"></script>
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/cmstop-common.js"></script>
+    <script src="/_/static/ow228_0745news/static/js/spm.js"></script>
+	<script type="text/javascript">
+		var contentid = '1294049';// 文章ID
+		var title = "\u8bb8\u5fe0\u5efa\u9ece\u6625\u79cb\u8d70\u8bbf\u6170\u95ee\u9a7b\u6000\u67d0\u90e8\u961f\u5b98\u5175 \u5de9\u56fa\u53d1\u5c55\u65b0\u65f6\u4ee3\u519b\u653f\u519b\u6c11\u56e2\u7ed3";//文章标题
+		var topicid = '';// 评论主题
+		var context = '';//全文内容缓存
+		var content = '';//第一页内容缓存
+		var _IMG_URL = '{当前url}';
+		<!-- 
+	
+		-->
+		var browser = {
+		versions: function() {
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return { //移动终端浏览器版本信息
+		trident: u.indexOf('Trident') > -1, //IE内核
+		presto: u.indexOf('Presto') > -1, //opera内核
+		webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+		gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+		mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+		ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+		android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+		iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+		iPad: u.indexOf('iPad') > -1, //是否iPad
+		webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+		};
+		} (),
+		language: (navigator.browserLanguage || navigator.language).toLowerCase()
+		};
+		if (browser.versions.mobile) {
+		window.location.href = "http://app.0745news.cn/?app=article&controller=article&action=show&contentid="+contentid;
+		}
+	</script>
+    	<script>
+		  if (window.spm) {
+		    // 初始化配置
+		spm.config({
+			     siteId:"zm1217-001", // 此处填写该网站对应的网站标识（即SPM a段） 例如'zmXXXX-001'
+			     additionalInfo: {
+			     targetID: contentid, // 此处填写稿件ID
+			     organization:"zm1217", // 此处填写机构ID
+			     // 上报进入事件 此处增加事件
+			     category: 'event',
+			     action: 'comeIn'
+			  }
+			})
+		  }
+		  window.onbeforeunload = function () {
+		    // 上报离开事件
+		    spm.push({ category: 'event', action: 'leave' });
+		  };
+</script>
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/cmstop-imagezoom.js"></script>
+    <script type="text/javascript" src="/_/static/ow228_0745news/static/js/fet.js"></script>
+<script type="text/javascript" src="/_/static/ow228_0745news/static/js/repos.js"></script>
+<script type="text/javascript">fet.setAlias({IMG_URL: "http://img.0745news.cn/"})</script>
+    </head>
+<body>
+	<!-- 头部 -->
+	<header class="head-repeat-x">
+	
+			  <!-- 顶部条 -->
+                <div class="header-topbar">
+                        <!-- 带分享的顶部 -->
+                                <div class="search">
+                <form id="head_search" name="head_search" action="http://app.0745news.cn/" method="GET">
+                        <input type="hidden" name="app" value="search">
+                        <input type="hidden" name="controller" value="index">
+                        <input type="hidden" name="action" value="search">
+                        <input type="hidden" id="type" name="type" value="all">
+                        <input type="text" value="" class="text" id="head_wd" name="wd" placeholder="请输入关键字" x-webkit-speech="">
+                        <input type="submit" class="btn-submit" value="">
+                </form>
+        </div>
+        <script type="text/javascript">
+                $(function(){
+                        $("#head_wd").bind('focus', function(){
+                                if($(this).val() == '请输入关键字')
+                                $(this).val('');
+                        });
+
+                        $("#head_wd").bind('blur', function(){
+                                if($(this).val() == '')
+                                $(this).val('请输入关键字');
+                        });
+                });
+        </script>
+
+                        <!-- end带分享的顶部 -->
+                        <!-- 带链接的顶部 -->
+                        <ul class="head-top-nav">
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="首页" class="b" target="_self">首页</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="新闻" target="_self">新闻</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="图片" target="_self">图片</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="视频" target="_self">视频</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="访谈" target="_self">访谈</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="专题" target="_self">专题</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="专栏" target="_self">专栏</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="报纸" target="_self">报纸</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="杂志" target="_self">杂志</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="滚动" target="_self">滚动</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="排行" target="_self">排行</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="标签" target="_self">标签</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="心情" target="_self">心情</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="Digg" target="_self">Digg</a></li>
+</ul>
+                        <!-- end带链接的顶部 -->
+                </div>
+		<div class="top-block"></div>
+		<!-- end顶部背景条 -->	</header>
+	<!-- @end头部 -->
+	<section class="column article">
+		<div class="crumb">
+		
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html">{网站名称}</a>
+						<em>&gt;</em> <a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a>
+						<em>&gt;</em> <a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a>
+						<em>&gt;</em> <span>正文</span>
+		</div>
+		<!-- 主内容区域 -->
+		<section class="column-main">
+			<!-- 文章区域 -->
+			<article class="article-main">
+				<div class="inner">
+					<h1 class="article-title">{关键词1}{随机后缀}{新闻网标题}</h1>
+										<!-- 文章相关信息 -->
+					<div class="article-infos">
+						<span class="date">{当前时间}</span>
+												<span class="source">
+						<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a>						</span>
+                                                <span class="editors">作者：{人物名称}</span>
+                                                <div id="scan-handset" class="scan-handset"><a href="javascript:void(0)" class="scan-icon">扫描到手持设备</a></div>
+                        <div id="scan-layer" class="scan-layer">
+                            <div data-dropdialog="arrow" class="dropdialog-arrow"></div>
+                        </div>
+                        <div class="fontsize">
+                            <span class="f-l">字号：</span>
+                            <span class="small" title="切换到小字号" onclick="changeFont(this);return false;"></span>
+                            <span class="big bactive" onclick="changeFont(this);return false;" title="切换到大字号"></span>
+					    </div>
+						<!-- sactive 当前小字号，bactive当前大字号 -->
+					</div><!-- @end文章相关信息 -->
+					                                                                                <!-- 文章内容 -->
+					<div class="article-content fontSizeSmall BSHARE_POP">
+                        <p style="line-height: 2;"><span style="font-size: 18px;">{新闻网内容}</span></p>
+<p style="line-height: 2;"><span style="font-size: 18px;">（全媒体记者 {人物名称}）</span></p>	
+                                        <span class="editors">责任编辑：{人物名称}</span>
+                                       
+					
+										<!-- 相关阅读 -->
+					<div class="mod-list rel-news topblank">
+						<div class="hd ov">
+							<strong class="rel-title">相关阅读</strong>
+															<div class="keywords"><strong>关键词：</strong>
+									
+																		<a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{关键词1}" target="_blank">{关键词1}</a>
+																		<a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{随机关键词}" target="_blank">{随机关键词}</a>
+																		<a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{随机关键词}" target="_blank">{随机关键词}</a>
+									</div>
+													</div>
+						<div class="bd">
+							<ul class="list list-point">
+									                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{关键词1}{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 		                         <li class="item"><span class="ico"></span><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="title" target="_blank">{标题}</a><span class="date">{年月日}</span></li>
+								 							</ul>
+						</div>	
+					</div><!-- @end 相关阅读 -->
+									</div>
+		                        <div class="editor">
+                	
+                </div>
+                				<!-- 底部分享，复制 -->
+				<div class="copy-share">
+					<div class="copy">
+						<a href="/{随机字符}/{随机数字}_{随机数字}.html" id="zeroclipboard" class="c-ico" onclick="copyToClipboard(window.location.href);return false" data-clipboard-text="">复制网址</a>
+						<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="t-ico" target="_blank">打印</a>
+						<a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="addfavorite();return false;" class="s-ico">收藏</a>
+					</div>
+					<div class="share">
+						
+						<!-- Baidu Button BEGIN -->
+<div class="bdsharebuttonbox"><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_more" data-cmd="more">分享到：</a><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_weixin" data-cmd="weixin"></a><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_qzone" data-cmd="qzone"></a><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_tsina" data-cmd="tsina"></a><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_tqq" data-cmd="tqq"></a><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_renren" data-cmd="renren"></a></div>
+<!-- Baidu Button END -->
+					</div>
+					<a class="agree" id="supports" href="javascript:digg.set(1294049,'supports')">0</a>
+				</div>
+			</article><!-- @end文章区域 -->
+			<div class="basehr"></div>
+            		</section>
+		<!-- 右侧区域 -->
+		<aside class="column-aside">
+			<!-- 今日推荐 -->
+			<div class="mod-list">
+				<div class="inner">
+					<div class="m-head title-head">
+						<em class="ico"></em>
+						<div class="title"><a title="" class="words">今日推荐</a></div>
+					</div>
+					<div class="m-main">
+					
+					<ul class="list">
+					  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{关键词1}{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+  <li class="item">
+    <em class="ico"></em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a>
+  </li>
+
+					</ul>
+					</div>
+				</div>
+			</div><!-- @end 今日推荐 -->
+			<div class="basehr"></div>
+			<!-- @end 广告位300x240 -->		
+			<!-- 新闻排行 -->
+                <div class="news-rank-box">
+                    <div class="m-head dotted-head">
+    <ul class="tab-head" id="tabmenu">
+        <li><a rel="tab" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="">浏览</a></li><!-- 当前样式为class="tabactive" -->
+        <li><a rel="tab" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="">评论</a></li>
+    </ul>
+    <em class="ico"></em>
+    <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="" class="words">新闻排行</a></div>
+</div>
+<div class="m-main" id="tabcontent">
+    <div title="tab">
+        <ul class="list">
+                        <li class="item"><em class="ico n1">1</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{关键词1}{标题}</a></li>
+                        <li class="item"><em class="ico n2">2</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico n3">3</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">4</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">5</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">6</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">7</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">8</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">9</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">10</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{关键词1}{标题}</a></li>
+                    </ul>
+    </div>
+    <div title="tab">
+        <ul class="list">
+                        <li class="item"><em class="ico n1">1</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{关键词1}{标题}</a></li>
+                        <li class="item"><em class="ico n2">2</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico n3">3</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">4</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">5</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">6</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">7</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">8</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                        <li class="item"><em class="ico">9</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{关键词1}{标题}</a></li>
+                        <li class="item"><em class="ico">10</em><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="title">{标题}</a></li>
+                    </ul>
+    </div>
+</div>
+                </div><!-- @end 新闻排行 -->
+
+                <!-- 推荐图片 -->
+                <div class="pic-recommend">
+                    <div class="m-head dotted-head">
+    <em class="ico"></em>
+    <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="" class="words">推荐图片</a></div>
+</div>
+<ul class="m-main ov">
+        <li class="v-pic">
+        <div class="thumb">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="90"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+        <li class="v-pic">
+        <div class="thumb">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="90"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+        <li class="v-pic">
+        <div class="thumb">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="90"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+        <li class="v-pic">
+        <div class="thumb">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="90"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+    </ul>
+                </div><!-- @end 推荐图片 -->
+
+                <!-- 推荐视频 -->
+                <div class="pic-recommend">
+                    <div class="m-head dotted-head">
+    <em class="ico"></em>
+    <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="" class="words">推荐视频</a></div>
+</div>
+<ul class="m-main ov">
+        <li class="v-pic">
+        <div class="thumb">
+            <div class="opa"></div>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="ico"></a>
+                        <span class="info"></span>
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="77"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+        <li class="v-pic">
+        <div class="thumb">
+            <div class="opa"></div>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="ico"></a>
+                        <span class="info"></span>
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="77"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+        <li class="v-pic">
+        <div class="thumb">
+            <div class="opa"></div>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="ico"></a>
+                        <span class="info"></span>
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="77"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+        <li class="v-pic">
+        <div class="thumb">
+            <div class="opa"></div>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="ico"></a>
+                        <span class="info"></span>
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="" width="120" height="77"></a>
+        </div>
+        <div class="title"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></div>
+    </li>
+    </ul>
+                </div><!-- @end 推荐视频 -->
+		</aside>
+	</section>
+
+	
+	<!-- footer -->
+<footer class="foot">
+    <div class="foot-links">
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="关于我们" target="_blank">关于我们</a>
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="联系我们" target="_blank">联系我们</a>
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="加入我们" target="_blank">加入我们</a>
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="版权声明" target="_blank">版权声明</a>
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="手机访问" target="_blank">手机访问</a>
+        <!--<a href="http://www.0745news.cn/about/mobile.shtml" title="手机访问" target="_blank">手机访问</a>-->
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="网站地图" target="_blank">网站地图</a>
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="RSS" target="_blank">RSS</a>
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="举报反馈" target="_blank">举报反馈</a>
+        <span href="/{随机字符}/{随机数字}_{随机数字}.html" title="我要投稿">| </span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="我要投稿" target="_blank">我要投稿</a>
+         
+    </div>
+  <p>Copyright© {年} <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{网站名称}</a>  .All Rights Reserved <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"></p>
+  <p style=" line-height:30px;"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">湘ICP备{随机8数字}号-1</a>互联网新闻信息服务许可证号:湘{随机8数字}<script src='http://s82.cnzz.com/stat.php?id=302479&web_id=302479&show=pic' language='JavaScript' ></script><br></p>  
+  <p>主管单位：中共怀化市委宣传部&nbsp;&nbsp;&nbsp;&nbsp;主办单位：怀化日报社</p>
+  <p>邮件：<a href="mailto:admin@0745news.cn" target="_blank">admin@0{随机8数字}.cn</a> 电话：0745-{随机7数字} 订报：0745-{随机7数字} 法律顾问：{关键词1}事务所</p>
+  
+<!-- end footer -->
+	<!-- 脚本区域 -->
+	
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/ZeroClipboard.js"></script>
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/digg.js"></script>
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/article-show.js"></script>	
+	<script type="text/javascript" src="/_/static/ow228_0745news/static/js/mood-show.js"></script>
+	<script>
+	$(function() {
+		$('.article-content a').each(function(i,a){
+			var $a = $(a);
+			if(!$a.attr('target')) 
+			{
+				$a.attr('target','_blank');
+			}
+		});
+		$('#zeroclipboard').attr('data-clipboard-text', location.href);
+$("#cmstop_video__object").width(450); $("#cmstop_video__object").height(350);
+$("#cmstop_video__embed").width(450); $("#cmstop_video__embed").height(350);
+//$("#cmstop_video__object").removeAttr("width"); $("#cmstop_video__object").removeAttr("height");
+//$("#cmstop_video__object").css({"width":"450px;","height":"350px;"});
+//$("#cmstop_video__embed").removeAttr("width"); $("#cmstop_video__embed").removeAttr("height");
+//$("#cmstop_video__embed").css({"width":"450px;","height":"350px;"});
+	});
+	</script>
+	    <!--<script type="text/javascript">
+        // bShare划词分享
+        if(typeof(bShare) == 'undefined'){
+            document.write('<script type="text/javascript" src="http://static.bshare.cn/b/buttonLite.js#uuid=&style=-1"><\/script><script type="text/javascript" src="http://static.bshare.cn/b/addons/bshareDrag.js?bp=qqmb,sinaminiblog,qzone,kaixin001,bsharesync&text=分享到"><\/script><script type="text/javascript">$(".BSHARE_POP img").addClass("BSHARE_IMAGE");<\/script><script type="text/javascript" src="http://static.bshare.cn/b/addons/bshareMM.js#shareClass=BSHARE_IMAGE"><\/script>');
+        }else{
+            document.write('<script type="text/javascript" src="http://static.bshare.cn/b/addons/bshareDrag.js?bp=qqmb,sinaminiblog,qzone,kaixin001,bsharesync&text=分享到"><\/script><script type="text/javascript">$(".BSHARE_POP img").addClass("BSHARE_IMAGE");<\/script><script type="text/javascript" src="http://static.bshare.cn/b/addons/bshareMM.js#shareClass=BSHARE_IMAGE"><\/script>');
+        }
+	</script> -->
+</footer>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+<script src="/_/static/ow228_0745news/static/js/spm.js"></script>
+<script type="text/javascript" src="/_/static/ow228_0745news/static/js/spm1.js"></script>
+</html>

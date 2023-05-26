@@ -1,0 +1,812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<script>
+	var _hmt = _hmt || [];
+	(function () {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?b3bb66284d3d39eb68af82075309f71e";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+
+
+
+
+	<!-- 埋点开始 -->
+	<script src="/_/static/ow57_handannews/static/js/spm.js"></script>
+	<script>
+		if (window.spm) {
+			// 初始化配置
+			spm.config({
+				siteId: "zm1081-001",  // 此处填写该网站对应的网站标识（即SPM a段） 例如'zmXXXX-001'
+				additionalInfo: {
+					targetID: 20095748, // 此处填写稿件ID
+					organization: 'zm1081', // 此处填写机构ID
+					// 上报进入事件
+					category: 'event',
+					action: 'comeIn'
+				}
+			});
+		}
+		window.onbeforeunload = function () {
+			// 上报离开事件
+			spm.push({ category: 'event', action: 'leave' });
+		};
+	</script>
+	<!-- 埋点结束 -->
+
+
+
+</head>
+<link href="/_/static/ow57_handannews/static/css/style.css" rel="stylesheet" type="text/css">
+<link href="/_/static/ow57_handannews/static/css/content.css" rel="stylesheet" type="text/css">
+
+<script src="/_/static/ow57_handannews/static/js/jquery-1.8.3.min.js"></script>
+<script src="/_/static/ow57_handannews/static/js/jquery.yx_rotaion.js"></script>
+
+
+<body>
+
+
+	<!--横幅banner开始-->
+
+	<!--横幅banner结束-->
+
+	<!--头部开始-->
+
+	<div class="header">
+
+		<div class="toparea boxcenter w1200" style="height:100px;">
+
+			<!--logo-->
+			<div class="zj_fl" style="margin-top:15px;">
+				<a href="#"><img src="/_/static/ow57_handannews/static/picture/logo_new.png" style="height:71px;"></a>
+			</div>
+
+			<!--brand-->
+			<div class="zj_fr brand">
+				<a href="{泛站内链}" target="_blank"><img src="/_/static/ow57_handannews/static/picture/shangbao.png"></a>
+			</div>
+			<div class="zj_fr brand">
+				<a href="{泛站内链}" target="_blank"><img src="/_/static/ow57_handannews/static/picture/wanbao.png"></a>
+			</div>
+			<div class="zj_fr brand">
+				<a href="{泛站内链}" target="_blank"><img src="/_/static/ow57_handannews/static/picture/ribao.png"></a>
+			</div>
+
+
+
+		</div>
+
+
+		<div class="zj_cl zero"></div>
+
+
+		<div class="navarea">
+			<div class="boxcenter w1200">
+
+				<ul>
+					<script>
+						function myfun() {
+
+							document.getElementById("60").className = "navarea_p";
+
+						}
+						window.onload = myfun;
+					</script>
+
+					<li style="margin-left:0px;"><span><a href="{泛站内链}">网站首页</a></span></li>
+
+					<li id="76"><a href="{泛站内链}">热点</a></li>
+
+
+					<li id="75"><a href="{泛站内链}">邯郸</a></li>
+
+
+					<li id="2"><a href="{泛站内链}">政务</a></li>
+
+
+					<li id="81"><a href="{泛站内链}">视频</a></li>
+
+
+					<li id="83"><a href="{泛站内链}">国际</a></li>
+
+
+					<li><a href="{泛站内链}">国内</a></li>
+
+
+					<li id="48"><a href="{泛站内链}">社会</a></li>
+
+
+					<li id="49"><a href="{泛站内链}">评论</a></li>
+
+
+					<li id="50"><a href="{泛站内链}">爆料</a></li>
+
+
+
+					<li id="98"><a href="{泛站内链}">专题</a></li>
+
+
+
+					<li id="89"><a href="{泛站内链}">商讯</a></li>
+
+					<li style="cursor:pointer;" id="epaper"><a href="#">数字报</a></li>
+
+				</ul>
+
+
+			</div>
+		</div>
+
+
+	</div>
+
+	<!--头部结束-->
+
+
+
+	<!--报纸部分-->
+
+	<div class="w1200 boxcenter epapers">
+
+		<div class="pageCon" style="height: 0px;">
+			<div class="h20"></div>
+			<script>
+				$(function () {
+					$(window).load(function () {
+						var $gal = $("#propertyThumbnails"),
+							galW = $gal.outerWidth(true),
+							galSW = $gal[0].scrollWidth,
+							wDiff = (galSW / galW) - 1,
+							// widths difference ratio
+							mPadd = 60,  // Mousemove Padding
+							damp = 20,  // Mousemove response softness
+							mX = 0,   // Real mouse position
+							mX2 = 0,   // Modified mouse position
+							posX = 0,
+							mmAA = galW - (mPadd * 2), // The mousemove available area
+							mmAAr = (galW / mmAA);
+						// get available mousemove fidderence ratio
+
+						$gal.mousemove(function (e) {
+							mX = e.pageX - $(this).parent().offset().left - this.offsetLeft;
+							mX2 = Math.min(Math.max(0, mX - mPadd), mmAA) * mmAAr;
+						});
+
+						setInterval(function () {
+							posX += (mX2 - posX) / damp;
+							// zeno's paradox equation "catching delay"    
+							$gal.scrollLeft(posX * wDiff);
+						}, 10);
+
+					});
+					$("#epaper").click(function () {
+						if ($(".pageCon").height() == 264) {
+							$(".pageCon").height(0);
+							$(".kong_box").height(222);
+						} else {
+							$(".pageCon").height(264);
+							$(".kong_box").height(21);
+						}
+
+					});
+				});
+
+				function addFavorite() {
+					var url = window.location;
+					var title = document.title;
+					var ua = navigator.userAgent.toLowerCase();
+					if (ua.indexOf("msie 8") > -1) {
+						external.AddToFavoritesBar(url, title, '');//IE8
+					} else {
+						try {
+							window.external.addFavorite(url, title);
+						} catch (e) {
+							try {
+								window.sidebar.addPanel(title, url, "");//firefox
+							} catch (e) {
+								alert("加入收藏失败，请使用Ctrl+D进行添加");
+							}
+						}
+					}
+				}
+
+			</script>
+			<div class="h20"></div>
+		</div>
+
+	</div>
+
+	<!--报纸部分 end-->
+
+
+
+	<!--内容页开始-->
+	<div class="main-content w1200 boxcenter mt20">
+
+
+
+		<h1 class="main-title">{新闻网标题}</h1>
+
+
+		<script>
+
+
+			//侧栏跟随
+			$(function () {
+
+				var oDiv = document.getElementById("top_bar");
+				var H = 0,
+					iE6;
+				var Y = oDiv;
+				while (Y) {
+					H += Y.offsetTop;
+					Y = Y.offsetParent
+				};
+				iE6 = window.ActiveXObject && !window.XMLHttpRequest;
+				if (!iE6) {
+					window.onscroll = function () {
+						var s = document.body.scrollTop || document.documentElement.scrollTop;
+						if (s > H) {
+							oDiv.className = "top-bar ani div2";
+							if (iE6) {
+								oDiv.style.top = (s - H) + "px";
+							}
+						} else {
+							oDiv.className = "top-bar ani";
+						}
+					};
+				}
+
+			});
+
+			//文字放大缩小
+
+			function fangda() {
+				var oDiv = document.getElementById("article_content");
+				var sDiv = document.getElementById("fangdas");
+				var vDiv = document.getElementById("suoxiaos");
+
+				if (vDiv.className == 'disable') {
+					oDiv.className = "article-content clearfix article-18";
+					sDiv.className = "";
+					vDiv.className = "";
+				} else {
+					oDiv.className = "article-content clearfix article-20";
+					sDiv.className = "disable";
+					vDiv.className = "";
+				}
+
+			};
+
+			function suoxiao() {
+				var oDiv = document.getElementById("article_content");
+				var sDiv = document.getElementById("fangdas");
+				var vDiv = document.getElementById("suoxiaos");
+
+				if (sDiv.className == 'disable') {
+					oDiv.className = "article-content clearfix article-18";
+					sDiv.className = "";
+					vDiv.className = "";
+				} else {
+					oDiv.className = "article-content clearfix article-16";
+					sDiv.className = "";
+					vDiv.className = "disable";
+				}
+
+			};
+		</script>
+
+		<div class="top-bar-wrap" id="top_bar_wrap">
+			<div class="top-bar ani" id="top_bar" data-isfix="0">
+				<div class="top-bar-inner clearfix">
+
+					<div class="second-title">{新闻网标题}</div>
+
+
+					<div class="date-source" data-sudaclick="blk_time_source">
+
+						<span class="date">{当前时间}</span>
+
+
+
+						<a href="" target="_blank" class="source ent-source" data-sudaclick="content_media_p"
+							rel="nofollow">{网站名称}</a>
+
+
+
+						<span class="date " style="margin-left: 12px;">编辑： {人物名称}</span>
+
+
+
+
+
+					</div>
+					<div class="page-tools" data-sudaclick="blk_share">
+						<span class="tool-icon tool-des-fs first">
+							<a ani-click="scaleDes" ani-hover="bounceFromTop" node-type="decrease-fs"
+								href="{泛站内链}" onclick="suoxiao()" title="减小字号"
+								data-sudaclick="content_smallerfont_i" id="suoxiaos">缩小字体</a>
+						</span>
+						<span class="tool-icon tool-ins-fs">
+							<a ani-click="scaleIns" ani-hover="bounceFromTop" node-type="increase-fs"
+								href="{泛站内链}" onclick="fangda()" title="放大字体"
+								data-sudaclick="content_biggerfont_i" id="fangdas">放大字体</a>
+						</span>
+						<span class="tool-icon tool-fav">
+							<a ani-hover="bounceFromTop" node-type="add-fav" href="javascript:addFavorite()"
+								title="收藏本页" data-sudaclick="content_fav_p">收藏</a>
+						</span>
+						<span class="tool-icon tool-wb">
+							<a ani-hover="bounceFromTop" node-type="share-wb" href="#" data-share="weibo" title="分享到微博"
+								data-sudaclick="content_weiboshare_i" target="_blank">微博</a>
+						</span>
+						<span class="tool-icon tool-wx">
+							<a ani-hover="bounceFromTop" node-type="share-wx" href="#" data-share="weixin" title="分享到微信"
+								data-sudaclick="share_wechat">微信</a>
+						</span>
+						<span class="tool-icon tool-share">
+							<a ani-hover="bounceFromTop" node-type="share-more" data-action="dropdown"
+								data-target="share_more" href="{泛站内链}" title="更多分享" data-sudaclick="share"
+								class="">分享</a>
+						</span>
+
+						<div class="share-more-list" style="display: none;" id="share_more">
+							<span class="tool-icon tool-share-qq">
+								<a href="{泛站内链}" data-share="qq" title="分享到QQ" data-sudaclick="share_qq"
+									target="_blank">腾讯QQ</a>
+							</span>
+							<span class="tool-icon tool-share-qqzone">
+								<a href="{泛站内链}" data-share="qzone" title="分享到QQ空间" data-sudaclick="share_qzone"
+									target="_blank">QQ空间</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="article-content clearfix article-18" id="article_content">
+			<div class="article-content-left">
+				<!-- 正文 start -->
+				<div class="article" id="artibody" data-sudaclick="blk_content">
+
+
+					<!--enpcontent-->
+					<p>{新闻网内容}</p>
+					<p style="text-indent: 2em;"><br style="text-indent: 2em; text-align: left;"></p>
+					<!--/enpcontent--><!--enpproperty <articleid>20095748</articleid><date>2023-03-17 10:09:30:520</date><author></author><title>我国出台15方面政策举措推动边（跨）境经济合作区高质量发展</title><keyword></keyword><subtitle></subtitle><introtitle></introtitle><siteid>1</siteid><nodeid>60</nodeid><nodename>焦点头条</nodename><nodesearchname>焦点头条</nodesearchname><picurl></picurl><picbig></picbig><picmiddle></picmiddle><picsmall></picsmall><url>https://www.handannews.com.cn/news/content/2023-03/17/content_20095748.html</url><urlpad>http://wap.handannews.com.cn/news/content/2023-03/17/content_20095748.html</urlpad><sourcename>新华网</sourcename><abstract>记者16日从商务部获悉，商务部等17部门近日印发通知，着力推动边（跨）境经济合作区高质量发展，优化顶层设计，促进改革系统集成、协同高效，明确了5类15方面政策举措。</abstract><channel>1</channel><journalist></journalist><type>0</type><countPic>0</countPic><liability></liability>/enpproperty-->
+
+
+				</div>
+
+				<!-- 正文 end -->
+
+
+				<!--横幅banner-->
+
+
+				<!--横幅banner-->
+
+				<div class="article-relzt"></div>
+
+			</div>
+
+
+			<div class="article-content-right">
+
+
+				<!--横幅banner-->
+
+
+				<div>
+					<a href="#"><img src="{随机图片}" alt=""
+							style="width:100%"></a>
+				</div>
+				<div class="clear"></div>
+
+
+				<!--横幅banner-->
+
+				<!--横幅banner-->
+
+
+				<!--横幅banner-->
+
+				<!-- 推荐阅读 start-->
+				<div class="blk01 clearfix wrap_55a07552_9f6c_12b3_4f25_921db3cc5584" data-sudaclick="right_recommend_p"
+					id="j_wrap_55a07552_9f6c_12b3_4f25_921db3cc5584">
+					<div class="tit">
+						<h3>推荐阅读</h3>
+					</div>
+					<ul class="wrap-pictxt clearfix" node-type="list" id="list_55a07552_9f6c_12b3_4f25_921db3cc5584">
+
+						<li>
+							<div class="pic">
+								<a href="{泛站内链}" target="_blank">
+									<img class="imgS" src="{随机图片}">
+								</a>
+							</div>
+							<div class="txt"> <a href="{泛站内链}" target="_blank">{关键词1}{标题}</a>
+							</div>
+							<div class="extra">{年月日}</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="{泛站内链}" target="_blank">
+									<img class="imgS" src="{随机图片}">
+								</a>
+							</div>
+							<div class="txt"> <a href="{泛站内链}" target="_blank">{标题}</a>
+							</div>
+							<div class="extra">{年月日}</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="{泛站内链}" target="_blank">
+									<img class="imgS" src="{随机图片}">
+								</a>
+							</div>
+							<div class="txt"> <a href="{泛站内链}" target="_blank">{标题}</a>
+							</div>
+							<div class="extra">{年月日}</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="{泛站内链}" target="_blank">
+									<img class="imgS" src="{随机图片}">
+								</a>
+							</div>
+							<div class="txt"> <a href="{泛站内链}" target="_blank">{标题}</a>
+							</div>
+							<div class="extra">{年月日}</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="{泛站内链}" target="_blank">
+									<img class="imgS" src="{随机图片}">
+								</a>
+							</div>
+							<div class="txt"> <a href="{泛站内链}" target="_blank">{标题}</a>
+							</div>
+							<div class="extra">{年月日}</div>
+						</li>
+						<li>
+							<div class="pic">
+								<a href="{泛站内链}" target="_blank">
+									<img class="imgS" src="{随机图片}">
+								</a>
+							</div>
+							<div class="txt"> <a href="{泛站内链}" target="_blank">{标题}</a>
+							</div>
+							<div class="extra">{年月日}</div>
+						</li>
+
+
+
+
+
+
+					</ul>
+				</div>
+				<!-- 推荐阅读 end-->
+
+				<!-- 新闻排行榜 start 5个-->
+
+				<div>
+					<div class="blk04 clearfix wrap_8018e0e5_aec8_75bb_49ec_6f13f0593654"
+						data-sudaclick="right_topnews_p" id="j_wrap_8018e0e5_aec8_75bb_49ec_6f13f0593654">
+						<div class="tit">
+							<h3>相关阅读</h3>
+						</div>
+						<ul class="module-rankList" node-type="list" id="list_8018e0e5_aec8_75bb_49ec_6f13f0593654">
+
+
+
+
+						</ul>
+					</div>
+				</div>
+				<!-- 新闻排行榜 end -->
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<style>
+		/*css 动画*/
+		.imgS:hover {
+			-webkit-transition: -webkit-transform 0.3s ease;
+			-moz-transition: -moz-transform 0.3s ease;
+			-ms-transition: -ms-transform 0.3s ease;
+			transform: scale(1.1, 1.1);
+			-ms-transform: scale(1.1, 1.1);
+			-webkit-transform: scale(1.1, 1.1);
+		}
+
+		.ani {
+			animation-duration: 0.5s;
+			animation-fill-mode: both;
+		}
+
+		.infinite {
+			animation-iteration-count: infinite !important
+		}
+
+		.scaleIns {
+			animation-name: scaleIns
+		}
+
+		@keyframes scaleIns {
+			0% {
+				transform: scale(1);
+				opacity: 0;
+			}
+
+			50% {
+				transform: scale(1.2);
+				opacity: 1;
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		.scaleDes {
+			animation-name: scaleDes
+		}
+
+		@keyframes scaleDes {
+			0% {
+				transform: scale(1);
+				opacity: 0;
+			}
+
+			50% {
+				transform: scale(0.8);
+				opacity: 1;
+			}
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		.bounceFromTop {
+			animation-name: bounceFromTop
+		}
+
+		@keyframes bounceFromTop {
+
+			0%,
+			25%,
+			55%,
+			85%,
+			100% {
+				animation-timing-function: ease-out;
+				transform: translate3d(0, 0, 0);
+			}
+
+			41%,
+			44% {
+				animation-timing-function: ease-in;
+				transform: translate3d(0, -8px, 0) scale3d(1, 1.2, 1);
+			}
+
+			70% {
+				animation-timing-function: ease-in;
+				transform: translate3d(0, -2px, 0);
+			}
+
+			90% {
+				transform: translate3d(0, -1px, 0)
+			}
+		}
+
+		.flipY {
+			animation-name: flipY;
+		}
+
+		@keyframes flipY {
+			from {
+				transform: perspective(600px) rotateY(-180deg);
+				opacity: 0;
+			}
+
+			to {
+				transform: perspective(600px) rotateY(-360deg)
+			}
+		}
+
+		.fadeInTop {
+			animation-name: fadeInTop
+		}
+
+		@keyframes fadeInTop {
+			from {
+				opacity: 0;
+				transform: translateY(-100%);
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		.fadeInBottom {
+			animation-name: fadeInBottom
+		}
+
+		@keyframes fadeInBottom {
+			from {
+				opacity: 0;
+				transform: translateY(100%);
+			}
+
+			to {
+				opacity: 1
+			}
+		}
+
+		.fadeOutTop {
+			animation-name: fadeOutTop
+		}
+
+		@keyframes fadeOutTop {
+			from {
+				opacity: 1
+			}
+
+			to {
+				opacity: 0;
+				transform: translateY(-100%);
+			}
+		}
+
+		.fadeOutBottom {
+			animation-name: fadeOutBottom
+		}
+
+		@keyframes fadeOutBottom {
+			from {
+				opacity: 1
+			}
+
+			to {
+				opacity: 0;
+				transform: translateY(100%);
+			}
+		}
+
+		/*loading logo*/
+		.loadinglogo {
+			animation: loadinglogo infinite 1.5s ease-in-out
+		}
+
+		@keyframes loadinglogo {
+			50% {
+				transform: translateY(15px)
+			}
+		}
+
+		.loading-logo {
+			background-image: url(https://n.sinaimg.cn/finance/page/ent///www.handannews.com.cn/public/images/sinaLogo1x.png);
+			background-image: -webkit-image-set(url(https://n.sinaimg.cn/finance/page/ent///www.handannews.com.cn/public/images/sinaLogo1x.png) 1x, url(//n.sinaimg.cn/finance/page/ent///www.handannews.com.cn/public/images/sinaLogo2x.png) 2x);
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			width: 80px;
+			margin-top: 30px;
+			padding-top: 36px;
+			font-size: 14px;
+			color: #333;
+			background-position: center 0;
+			text-align: center;
+		}
+
+		@keyframes pulse {
+			from {
+				transform: scale3d(1, 1, 1);
+				opacity: 0.3;
+			}
+
+			50% {
+				transform: scale3d(1.3, 1.3, 1.3);
+				opacity: 1;
+			}
+
+			to {
+				transform: scale3d(1, 1, 1);
+				opacity: 0.3;
+			}
+		}
+
+		.pulse {
+			animation-name: pulse;
+			animation-duration: 1.2s;
+		}
+
+		/*css 动画 end */
+	</style>
+
+
+
+	<!--新媒体矩阵-->
+
+	<div class="clear"></div>
+
+	
+
+	<div class="clear"></div>
+
+	<div class="line mt40"></div>
+
+	<!--友情链接-->
+	<div class="headMain mt30 pb50 mb30">
+		<div class="urlTit">友情链接</div>
+		<div class="urlList">
+			<a href="{泛站内链}" target="_blank">{关键词1}</a>
+			<a href="{泛站内链}" target="_blank">{随机关键词}</a>
+			<a href="{泛站内链}" target="_blank">{随机关键词}</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<!--footer-->
+	<div class="q-ft">
+		<div class="q-box">
+			<div class="q-link">
+				<span>冀ICP备13019254号-1</span>
+				<span>冀新网备：132006011</span>
+				<span style="width: 270px;">互联网新闻信息服务许可证编号：13120170013</span>
+			</div>
+		</div>
+	</div>
+
+		<div class="q-box">
+			<strong>© {网站名称}版权所有 本站点信息未经允许不得复制或镜像</strong>
+			<a target="_blank" href="#">关于我们</a>
+			<a target="_blank" href="#">版权声明</a>
+			<a target="_blank" href="#">服务项目</a>
+			<a target="_blank" href="#">广告业务</a>
+			<a target="_blank" href="#">网上投稿</a>
+			<a target="_blank" href="#">新闻热线</a>
+		</div>
+	</div>
+
+	<div id="commonFooter">
+		<p class="flogo">
+			<a href="#" target="_blank" rel="nofollow"><img src="/_/static/ow57_handannews/static/picture/handannews_logo.png" border="0"
+					style="height:55px;"></a>
+			<a href="#" target="_blank" rel="nofollow"><img src="/_/static/ow57_handannews/static/picture/blue.png" border="0"
+					style="height:55px;"></a>
+			<a href="#" target="_blank" rel="nofollow"><img src="/_/static/ow57_handannews/static/picture/gangting48.jpg" border="0"></a>
+		</p>
+	</div>
+
+
+	<script type="text/javascript" src="/_/static/ow57_handannews/static/js/WebClick.js"></script>
+	<input type="hidden" id="DocIDforCount" name="DocIDforCount" value="20095748">
+
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+
+</body>
+
+</html>

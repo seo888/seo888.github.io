@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>荣耀运动健康-荣耀运动下载安装-荣耀运动健康下载-6T下载站</title> 
+  <meta name="description" content="荣耀运动健康App是一款记录和分析运动健康数据、连接和管理荣耀运动健康设备、为用户提供丰富的内容服务的互联网软件平台。软件可以帮助用户手机连接智能设备，实现数据展示，参数设置等等功能服务，需要的朋友欢迎前来下载使用。"> 
+  <meta name="keywords" content="荣耀运动健康,荣耀运动下载安装,荣耀运动健康下载"> 
+  <link rel="stylesheet" href="/static/ow11_m.66ttt/css/ResetPublic.css"> 
+  <link rel="stylesheet" href="/static/ow11_m.66ttt/css/gameInner.css"> 
+  <script src="/static/ow11_m.66ttt/js/jquery-1.11.3.min.js"></script> 
+  <script src="/static/ow11_m.66ttt/js/delayLoading.min.js" type="text/javascript"></script> 
+  <script src="/static/ow11_m.66ttt/js/common.js" type="text/javascript"></script> 
+ </head> 
+ <body> 
+  <section class="header_66ttt"> 
+   <div class="search"> 
+    <div class="select fl"> 
+     <span class="current" data-id="1">网站名称</span> 
+     <ul class="items"> 
+      <li data-id="1">手游</li> 
+      <li data-id="2">应用</li> 
+      <li data-id="4">资讯</li> 
+     </ul> 
+    </div> 
+    <input class="fl" id="ky" type="text" placeholder="请输入关键字"> 
+    <button class="fl" onclick="search();"></button> 
+   </div> 
+   <div class="menu_icon"> 
+    <b></b> 
+    <b></b> 
+    <b></b> 
+   </div> 
+  </section> 
+  <script type="text/javascript">
+
+function search(){
+  var ky = $("#ky").val();
+  var type = $(".search .select").find('.current').attr('data-id');
+  ky = ky.replace(/\s/g,"");
+  if(ky==''){
+    $("#ky").attr("placeholder", "请输入搜索关键词");
+    return false;
+  }
+  window.open("/search/?type="+type+"&ky="+ky);  
+}
+
+// 搜索下拉
+$('.search .select').click(function(e) {
+  e.stopImmediatePropagation();
+  $(this).find('.items').css({'display': 'block'});
+  const target = e.target;
+  if($(target)[0].nodeName === 'LI') {
+    const text = $(target).text();
+    const did = $(target).attr('data-id');
+    $(this).find('.current').text(text);
+    $(this).find('.current').attr('data-id',did);
+    $(this).find('.items').css({'display': 'none'});
+  }
+})
+$(document).click(function(){
+  $('.search .select .items').css({'display': 'none'});
+})
+
+</script> 
+  <section class="header_nav"> 
+   <nav> 
+    <a href="{自定义}">首页</a> 
+    <a href="{自定义}">手游</a> 
+    <a class="active" href="{自定义}">应用</a> 
+    <a href="{自定义}">资讯</a> 
+    <a href="{自定义}">专题</a> 
+    <a href="{自定义}">排行榜</a> 
+   </nav> 
+  </section> 
+  <section class="break_nav text_flow"> 
+   <a href="{自定义}">{网站名称}</a> 
+   <span>&gt;</span> 
+   <a href="{自定义}">应用</a> 
+   <span>&gt;</span> 
+   <span>{关键词1}</span> 
+  </section> 
+  <section class="gameInner_load"> 
+   <div class="detail"> 
+    <div class="icon">
+     <img src="{随机图片}" alt="{关键词1}">
+    </div> 
+    <div class="right"> 
+     <div class="name text_flow">
+      {关键词1}
+     </div> 
+     <ul class="tags"> 
+      <li class="more_type"> <span>类别：</span> <a href="{自定义}" class="type">{随机括号词}</a> <a href="{自定义}" class="type">{随机括号词}</a> </li> 
+      <li><span>大小：</span><span class="type">{随机数字}</span></li> 
+      <li><span>版本：</span><span class="type" style="width: 60px;overflow: hidden;">{随机版本}</span></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <a href="{自定义}" class="load" style="opacity: 0.5">立即下载</a> 
+   <button class="load-fk">下载地址失效？点击反馈吧！</button> 
+  </section> 
+  <section class="gameInner_images"> 
+   <div class="main_title"> 
+    <div class="ordinary_title"> 
+     <span class="active">应用截图</span> 
+    </div> 
+   </div> 
+   <div class="img_box"> 
+    <ul class="wrapper"> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li>
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+     <li><img src="{随机图片}" alt="{随机关键词}"></li> 
+    </ul> 
+   </div> 
+  </section> 
+  <section class="gameInner_describe"> 
+   <div class="main_title"> 
+    <div class="ordinary_title"> 
+     <span class="active">应用描述</span> 
+    </div> 
+   </div> 
+   <div class="content_close_open"> 
+    <p>{新闻网标题}</p>
+    <p><br></p>
+    <p>{新闻网内容}</p>
+   </div> 
+   <div class="open_more">
+    <span>展开更多</span>
+   </div> 
+  </section> 
+  <section class="about_app"> 
+   <div class="main_title"> 
+    <div class="ordinary_title relate"> 
+     <span id="app_relate" class="active">相关应用</span> 
+     <span id="app_guess" class="guess_you_like">猜你喜欢</span> 
+    </div> 
+   </div> 
+   <div class="guess_you_like_cent"> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+    <a href="{自定义}" class="item"> 
+     <div class="game"> 
+      <img src="{随机图片}" alt="{随机关键词}"> 
+     </div> <span class="text_flow">{随机关键词}</span> </a> 
+   </div> 
+  </section> 
+  <section class="about_info"> 
+   <div class="main_title"> 
+    <div class="ordinary_title"> 
+     <span class="active">相关资讯</span> 
+    </div> 
+   </div> 
+   <ul class="list"> 
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+    <li> <a class="text_flow" href="{自定义}">{标题}</a> <span>{年月日}</span> </li>  
+   </ul> 
+  </section> 
+  <section class="footer"> 
+   <div>
+     © {年} {网站名称}
+   </div> 
+   <div>
+    闽ICP备19024010号-1
+   </div> 
+  </section> 
+  <!-- 弹出菜单 --> 
+  <section class="dialog_menu"> 
+   <nav class="menu_nav"> 
+    <a href="{自定义}"> <span>首页</span> </a> 
+    <a href="{自定义}"> <span>新游</span> </a> 
+    <a href="{自定义}"> <span>专题大全</span> </a> 
+    <a href="{自定义}"> <span>资讯</span> </a> 
+    <a href="{自定义}"> <span>排行榜</span> </a> 
+   </nav> 
+   <div class="menu_classify"> 
+    <div class="generalname"> 
+     <span>热门游戏分类</span> 
+    </div> 
+    <div class="detailname"> 
+     <a href="{自定义}">动作</a> 
+     <a href="{自定义}">角色扮演</a> 
+     <a href="{自定义}">经营</a> 
+     <a href="{自定义}">休闲</a> 
+     <a href="{自定义}">策略</a> 
+     <a href="{自定义}">模拟</a> 
+     <a href="{自定义}">生存</a> 
+     <a href="{自定义}">竞技</a> 
+     <a href="{自定义}">武侠</a> 
+     <a href="{自定义}">卡牌</a> 
+     <a href="{自定义}">冒险</a> 
+     <a href="{自定义}">回合制</a> 
+    </div> 
+   </div> 
+   <div class="menu_classify"> 
+    <div class="generalname"> 
+     <span>热门应用分类</span> 
+    </div> 
+    <div class="detailname"> 
+     <a href="{自定义}">拍摄</a> 
+     <a href="{自定义}">教育</a> 
+     <a href="{自定义}">生活</a> 
+     <a href="{自定义}">购物</a> 
+     <a href="{自定义}">商务</a> 
+     <a href="{自定义}">财务</a> 
+     <a href="{自定义}">美食</a> 
+     <a href="{自定义}">新闻</a> 
+     <a href="{自定义}">旅游</a> 
+     <a href="{自定义}">天气</a> 
+     <a href="{自定义}">儿童</a> 
+     <a href="{自定义}">其他</a> 
+    </div> 
+   </div> 
+   <div class="menu_close menu_icon"> 
+    <button type="button">关闭菜单</button> 
+   </div> 
+  </section> 
+  <script type="text/javascript">
+    // 菜单显示js(公共的)
+    $('.menu_icon').click(function() {
+      $('.menu_icon').toggleClass('show_menu')
+      $('.dialog_menu').toggleClass('open_menu')
+    })
+</script> 
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e83d15aa97075cddc36d463dbb816505";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  <script>
+var id = 12404;
+var title = '{关键词1}';
+// 反馈
+$('.load-fk').click(function() {
+  $(this).attr('disabled', true).text('反馈成功，下载源即将更新！')
+})
+// 展开更多
+$('.open_more').click(function() {
+  $(this).toggleClass('put')
+  $('.content_close_open').toggleClass('autoHeight')
+})
+// 猜你喜欢
+$('.ordinary_title.relate span').click(function() {
+  $(this).addClass('active').siblings().removeClass('active')
+  var s = $(this).attr('id').split('_')[1];
+  let html = ``
+  html += ``
+  $.ajax({
+    url: '/api/api.php',
+    type: "GET",
+    data: {type:'app',s:s,action:'app_inner',id:window.id},
+    async: false,
+    dataType: "json",
+    success: function(data) {
+      var jsonLength = 0;
+        for(var item in data){
+            jsonLength++;
+        }
+      for(var i = 0; i < jsonLength; i++) {
+          html+=`<a href="{自定义}" class="item">
+                  <div class="game">
+                    <img src="${data[i].titlepic}" alt="${data[i].title}">
+                  </div>
+                  <span class="text_flow">${data[i].title}</span>
+                </a>`
+      }
+    }
+  })
+  $('.guess_you_like_cent').html(html)
+})
+</script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>  
+ </body>
+</html>

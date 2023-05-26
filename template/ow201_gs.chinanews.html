@@ -1,0 +1,678 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <title>{自定义标题}</title>
+  <meta name="keywords" content="{关键词1}" />
+  <meta name="description" content="{自定义描述}">
+  <!--[2,1,359005] published at 2023-04-10 11:53:23 from #10 by 杜萍-->
+  <link rel="stylesheet" type="text/css" href="/_/static/ow201_gs.chinanews/static/css/share_style0_16.css">
+
+  <link rel="stylesheet" type="text/css" href="/_/static/ow201_gs.chinanews/static/css/common.css">
+
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <script type="text/javascript" src="/_/static/ow201_gs.chinanews/static/js/jquery.1.11.3.js"></script>
+  <script>
+    var phoneWidth = parseInt(window.screen.width);
+    var designWidth = 540;
+    var phoneScale = phoneWidth / designWidth;
+    var ua = navigator.userAgent;
+    if (/Android (d+.d+)/.test(ua)) {
+      var version = parseFloat(RegExp.$1);
+      if (version > 2.3) {
+        document.write('<meta name="viewport" content="width=' + designWidth + ', minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+      } else {
+        document.write('<meta name="viewport" content="width=' + designWidth + ', target-densitydpi=device-dpi">');
+      }
+    } else {
+      document.write('<meta name="viewport" content="width=' + designWidth + ', user-scalable=no, target-densitydpi=device-dpi">');
+    }
+  </script>
+  <style>
+    .recom {
+      width: 100%;
+    }
+
+    .recom li {
+      float: left;
+      width: 31%;
+      margin: 0px 1%;
+    }
+
+    .recom li img {
+      width: 100%;
+      height: 110px;
+      border-radius: 5px;
+    }
+
+    .recom-title {
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: bold;
+      color: rgb(2, 86, 152);
+      font-family: 微软雅黑;
+      height: 40px;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(12, 119, 201);
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    .recom-item-title {
+      font-size: 14px;
+      color: rgb(29, 29, 29);
+    }
+
+    .recom-item-title a {
+      font-size: 14px;
+      color: rgb(2, 86, 152);
+    }
+
+    .wapheader {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+
+      .symin,
+      .guang,
+      .daohang,
+      .zm,
+      .position,
+      .dt-r,
+      .dt-lyfxz,
+      .dt-lyfx,
+      .foot-nav {
+        display: none;
+      }
+
+      .daohang,
+      .Dtl,
+      .tybt,
+      .guang {
+        width: 100%
+      }
+
+      .daohang {
+        font-size: 18px;
+      }
+
+      .dt-l {
+        width: 92%;
+        margin: 0px 4%;
+      }
+
+      .dt-ly {
+        font-size: 20px;
+        float: none;
+        text-align: center;
+        color: #444;
+        padding-bottom: 25px;
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+      }
+
+      .dt-lysj {
+        float: none;
+        width: 100%;
+      }
+
+      .dt-lyly {
+        float: none;
+        width: 100%;
+      }
+
+      .dt-bt {
+        font-size: 32px;
+        margin-top: 10px;
+        line-height: 48px;
+        padding-bottom: 10px;
+      }
+
+      .Dtl .dt-l .dt-zw p {
+        font-size: 24px;
+        line-height: 42px;
+      }
+
+      .wapheader {
+        display: block;
+        width: 100%;
+        line-height: 60px;
+        font-size: 28px;
+        color: #fff;
+        text-align: center;
+        background-color: #0c77c9;
+      }
+
+      .wapheader a {
+        font-size: 28px;
+        font-family: 微软雅黑;
+        line-height: 55px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      video {
+        width: 100%
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!--top bgin 开始-->
+  <div style="background-color:#d7d7d7">
+    <script type="text/javascript">
+      document.getElementById('zhezhao').style.display = "none";
+      function dianwo() {
+        document.getElementById('zhezhao').style.display = "";
+      }
+      function hidder() {
+        document.getElementById('zhezhao').style.display = "none";
+      }
+    </script>
+    <div class="symin">
+      <div class="tp">
+        <ul>
+          <li>
+            <div class="sy"><a onclick="alert('gschinanews@163.com')">投稿邮箱</a></div>
+          </li>
+
+          <li>
+            <div class="cb">新闻采编：0931-{随机7数字}</div>
+          </li>
+          <li>
+            <div class="hz">传播合作：189{随机8数字}</div>
+          </li>
+        </ul>
+      </div>
+      <div class="tpr">
+        <ul>
+          <li>
+            <div class="wx" onclick="dianwo()">微信</div>
+            <div class="zhezhao" id='zhezhao' style="display:none;">
+              <div class="tankuang">
+                <div id="header">
+                  <div id="header-right" onclick="hidder()">x</div>
+                  <div class="erweima">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="wb"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">微博</a></div>
+          </li>
+          <li>
+            <div class="kh"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">客户端</a></div>
+          </li>
+          <li>
+            <div class="yd"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">移动端</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--top end-->
+  <!--中新网群 开始-->
+  <div class="zm">
+    <div class="zxwq">
+      <div class="fs"> <a href="/{随机字符}/{随机数字}_{随机数字}.html"><strong>中新网首页</strong></a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">安徽</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">北京</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">重庆</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">福建</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">甘肃</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">贵州</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">广东</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">广西</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">海南</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">河北</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">河南</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">湖北</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">湖南</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">黑龙江</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">江苏</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">江西</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">吉林</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">辽宁</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">内蒙古</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">宁夏</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">青海</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">山东</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">山西</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">陕西</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">上海</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">四川</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">天津</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">新疆</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">兵团</a><span class="sx">|</span><a
+          href="/{随机字符}/{随机数字}_{随机数字}.html">云南</a><span class="sx">|</span><a href="/{随机字符}/{随机数字}_{随机数字}.html">浙江</a>
+      </div>
+    </div>
+  </div>
+  <!--中新网群 结束-->
+  <!--sousuo开始-->
+
+  <div class="guang" style="height:60px;">
+    <div style="width:300px; float:left; padding-left:10px;"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img
+          src="/_/static/ow201_gs.chinanews/static/picture/U186P967T13D417F368DT20221029184011.png" alt="中新网·甘肃新闻"></a></div>
+    <div class="fl" id="time">
+      <div style="width:155px;"><span>
+          <script type="text/javascript">
+            function startTime() {
+              var today = new Date();//定义一个时间对象
+              var y = today.getFullYear();//年
+              var mon = checkTime(today.getMonth() + 1);//月
+              var d = checkTime(today.getDate());//日
+              var weekday = ' 星期' + '日一二三四五六'.charAt(today.getDay());//星期
+              document.getElementById('time').innerHTML = y + "年" + mon + "月" + d + "日" + weekday;//在层time中显示
+            }
+            function checkTime(i) {
+              if (i < 10)
+                i = "0" + i
+              return i
+            }
+            startTime();
+            setInterval(startTime, 1000);
+          </script>
+        </span></div>
+    </div>
+    <div class="fl" id="weather">
+      <iframe allowtransparency="true" frameborder="0" width="200" height="36" scrolling="no" src="/_/static/ow201_gs.chinanews/index.html"></iframe>
+    </div>
+
+
+
+    <!--搜索-->
+    <script type="text/javascript">
+      function submitFun() {
+        var hotword = document.getElementsByName('q')[0].value;
+        if (document.getElementsByName('s0')[0].value == 'cns') {
+          <!--window.open("http://sou.news.chinanews.com/index.php?c=search&m=search_news&domain=hubei&sort=time&keyword="+encodeURIComponent(hotword));-->
+          window.open("http://search.news.chinanews.com/search.do?q=" + encodeURIComponent(hotword) + "&dbtype=gs");
+        } else if (document.getElementsByName('s0')[0].value == 'baidu') {
+          window.open("http://www.baidu.com/s?ie=utf-8&bs=%E4%B8+%9B%BD&sr=&z=&cl=3&f=8&wd=" + encodeURIComponent(hotword) + "&ct=0");
+        }
+      }
+    </script>
+
+    <div class="fr" id="search">
+      <input type="text" value="请输入关键字" onclick="this.value='',this.style.color='#000'" name="q" id="q"
+        class="search_input fl" onkeydown="if(event.keyCode==13) return submitFun()"
+        onfocus="if(this.value=='请输入关键字'){this.value='';}" onblur="if(this.value==''){this.value='请输入关键字';}"
+        style="color: #999999;">
+
+      <div class="search_listbox fl">
+        <div style="_position:relative;padding:0px;margin:0px;" onmouseout="search_select(1)"
+          onmouseover="search_select(0)" class="dii7" id="id7">
+          <div class="select_border">
+            <div class="select_container">
+              <select id="s0" name="s0" class="selectnews">
+                <option value="cns">中 新</option>
+                <option value="baidu">百 度</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="search_a fr" onclick="return submitFun()">搜 索</a>
+
+      <div class="clear"></div>
+    </div>
+  </div>
+  <!--sousuo 结束-->
+  <div class="daohang">
+    <div align="center"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">中新观陇</a>丨<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">视频号</a>丨<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        target="_blank">每周一词</a>丨<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">陇原通联</a>丨<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">滚动新闻</a>丨<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        target="_blank">中新专题</a>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">医者说</a>·<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">名师面对面</a></div>
+  </div>
+  <div class="wapheader"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">中新网甘肃新闻</a>&#8226; <a>正文</a></div>
+  <div>
+    <div class="Dtl">
+      <div class="dt-l">
+        <div class="position"><strong> 当前位置:</strong>&#160;<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">主页</a>
+          &gt;
+          &gt; 正文内容</div>
+
+
+        <div class="dt-bt">{关键词1}{随机后缀}{新闻网标题} </div>
+
+        <div class="dt-ly">
+          <div class="dt-lysj">发布时间：<span>{当前时间}</span>&#160;&#160;</div>
+
+          <div class="dt-lyly"><span>来源：</span><span>{关键词1}</span></div>
+
+          <div class="dt-lyfxz">分享到:</div>
+          <div class="dt-lyfx bdsharebuttonbox">
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+            <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+            <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+          </div>
+          <script>
+            window._bd_share_config = {
+              "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "16"
+              },
+              "share": {}
+            };
+            with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com//static/ow201_gs.chinanews/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+          </script>
+
+        </div>
+        <div class="dt-zw">
+
+
+
+          <div>
+
+            <p>　　{新闻网内容}</p>
+          </div>
+
+          <div class="dt-zwbj" style="font-size:14px">【编辑：{人物名称}】</div>
+        </div>
+        <div class="recom">
+          <div class="recom-title">编辑推荐</div>
+          <ul>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">
+                <img src="{随机图片}" alt="">
+                <div class="recom-item-title">{标题}</div>
+              </a>
+            </li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">
+                <img src="{随机图片}" alt="">
+                <div class="recom-item-title">{标题}</div>
+              </a>
+            </li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">
+                <img src="{随机图片}" alt="">
+                <div class="recom-item-title">{标题}</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dt-r">
+        <div style="margin-left:30px;">
+          <div class="dt-rbt">中新观陇·我们的视角</div>
+          <div class="dt-rlb">
+            <ul>
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></li>
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+
+
+              <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--bt 结束-->
+
+
+  <!--bt 开始-->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+  <div class="foot-nav">
+    <div><b>政府厅局：</b><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">甘肃省人民政府</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">兰州市人民政府</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">教育厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        target="_blank" rel="nofollow">科技厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"
+        rel="nofollow">住建厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">民政厅</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">自然资源厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        target="_blank" rel="nofollow">水利厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"
+        rel="nofollow">农业农村厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">商务厅</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">卫生健康委</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        target="_blank" rel="nofollow">财政厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"
+        rel="nofollow">文旅厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">人社厅</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">应急厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        target="_blank" rel="nofollow">司法厅</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"
+        rel="nofollow">交通运输厅</a></div>
+
+    <div><b>新闻媒体：</b>
+      <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">{随机关键词}</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        target="_blank" rel="nofollow">{随机关键词}</a>
+      |<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">{随机关键词}</a> |<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">{随机关键词}</a>
+      |<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">{随机关键词}</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">{随机关键词}</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">{随机关键词}</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" rel="nofollow">{随机关键词}</a>
+    </div>
+
+    <div><b>中新社分社：</b>
+      <a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">安徽</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">北京</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">重庆</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">福建</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">甘肃</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">贵州</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">广东</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">广西</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">海南</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">河北</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">河南</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">湖北</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">湖南</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">江苏</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">江西</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">吉林</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">辽宁</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">山东</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">山西</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">陕西</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">上海</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">四川</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">香港</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">新疆</a>|<a
+        href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">兵团</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+        rel="nofollow">云南</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="nofollow">浙江</a>
+
+
+      <div class="tybt">
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">关于我们</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html"
+          target="_blank">About us</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a> | <a href="#"
+          target="_blank">广告服务</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">法律声明</a> | <a href="#"
+          target="_blank">招聘信息</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">留言反馈</a>
+      </div>
+      <div class="div1000_4">
+        <p>本网站所刊载信息不代表{网站名称}和{关键词1}观点，刊用本网站稿件，务经书面授权。</p>
+        <p>未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。</p>
+        <p>[网上传播视听节目许可证({随机7数字})][<a href="/{随机字符}/{随机数字}_{随机数字}.html">京ICP证{随机6数字}号</a>][京公网安备：1101{随机8数字}][<a
+            href="/{随机字符}/{随机数字}_{随机数字}.html">京ICP备：{随机8数字}号-1</a>] </p>
+      </div>
+    </div>
+    <!--bt 结束-->
+    <p></p>
+  </div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div> 
+</body>
+
+</html>
+
+
+<script src="/_/static/ow201_gs.chinanews/static/js/jweixin-1.6.0.js"></script>
+<script src="/_/static/ow201_gs.chinanews/static/js/wxshare.js"></script>
+<script>
+  $(function () {
+    var useragent = navigator.userAgent;
+    if (useragent.indexOf('MicroMessenger') > -1) {
+      var share_title = '兰州市各口岸全面公示进出口通关流程及作业时限 ';
+      var share_desc = $(".wz").text().replace(/<[^>]+>|&[^>]+;|\n/g, "").trim().substring(0, 30);
+      share_desc = share_desc == '' ? share_title : share_desc;
+      var share_url = window.location.href.split('#')[0];
+      var imgObj = $(".listbox").find('img');
+      var share_img = "http://i2.chinanews.com/thumbnailzhi44.png";
+      var localPathArr = share_url.split("/");
+      localPathArr.pop();
+      if (imgObj.length > 0) {
+        share_img = /https|http/g.test(imgObj.eq(0).attr("src")) ? imgObj.eq(0).attr("src") : localPathArr.join("/") + "/" + imgObj.eq(0).attr("src");
+      }
+      /*var did = share_url.split("/").pop().split(".")[0];
+      if(did=='313335' || did=='313309' || did=='313341'){
+        alert(imgObj.eq(0).attr("src"));
+      }*/
+      wxshare(share_title, share_desc, share_img, share_url, "gs", false, false); //哪家公众号;微信接口中是不是debug;是否使用测试lc接口
+    }
+  })
+</script>
+
+<!--216x144_U957P2T1D359005F8DT20230410112353.jpg  -->

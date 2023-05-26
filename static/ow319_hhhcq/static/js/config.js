@@ -1,0 +1,2 @@
+var VIDEOFILEID = (window.location.href.indexOf("onlyred") > 0 ? "1400080256" : "1400085894");
+var APIURL = (window.location.href.indexOf("onlyred") > 0 ? "http://172.16.0.180:8080" : "//front-web.rednet.cn");

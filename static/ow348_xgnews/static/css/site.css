@@ -1,0 +1,1678 @@
+/*********** CSS Reset **********/
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+/*html {font-size: 100%;overflow-y: scroll;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}*/
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, a, pre, form, fieldset, legend, caption, table, th, td, input, textarea, nav, menu, hgroup, header, section, aside, footer, em, var, strong {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Open Sans",Arial,"Hiragino Sans GB","STHeiti","WenQuanYi Micro Hei","Microsoft YaHei UI", 微软雅黑,SimSun,sans-serif;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+img {
+    vertical-align: top;
+    border: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+address, caption, cite, code, dfn, ins, em, th, var {
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+a, .cor-067 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.cor-067 a, .pic-summary a:hover {
+    color: #0672c5;
+}
+
+input {
+    outline: none
+}
+
+/*shortcut*/
+.column {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.ov {
+    overflow: hidden;
+}
+
+.ov_v {
+    overflow: visible;
+}
+
+.ti0 {
+    text-indent: 0;
+}
+
+.ti2 {
+    text-indent: 2em;
+}
+
+.t-c {
+    text-align: center;
+}
+
+.yh {
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+.fz-16 {
+    font-size: 16px;
+}
+
+.fz-20 {
+    font-size: 20px;
+}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+.pos-r {
+    position: relative;
+}
+
+.mar-t-5 {
+    margin-top: 5px;
+}
+
+.mar-t-20 {
+    margin-top: 20px;
+}
+
+.mar-b-20 {
+    margin-bottom: 20px;
+}
+
+.mar-t-25 {
+    margin-top: 25px;
+}
+
+.mar-r-36 {
+    margin-right: 36px;
+}
+
+.hr-10 {
+    height: 10px;
+    overflow: hidden;
+    clear: both;
+}
+
+.clear {
+    clear: both;
+    overflow: hidden;
+}
+
+/*头部*/
+.header {
+    width: 100%;
+    height: 85px;
+    background: url(../image/repeat-x.jpg) 0 0 repeat-x;
+}
+
+.logo {
+    float: left;
+    overflow: hidden;
+    margin: 22px 50px 0 0;
+    display: inline;
+}
+
+.logo a {
+    width: 190px;
+    height: 44px;
+    overflow: hidden;
+    display: block;
+    background: 0 0 no-repeat;
+}
+
+.logo a > img {
+    max-height: 100%;
+    *height: 100%;
+}
+
+.header nav {
+    float: left;
+    overflow: hidden;
+    margin-top: 30px;
+    max-width: 660px;
+    white-space: nowrap;
+}
+
+.header nav li {
+    float: left;
+    overflow: hidden;
+    margin-right: 25px;
+    display: inline;
+    height: 32px;
+}
+
+.header nav li em {
+    float: left;
+    overflow: hidden;
+    background-image: url(../image/ico.jpg);
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    display: inline;
+}
+
+.header nav .yjdt em {
+    width: 22px;
+    height: 16px;
+    background-position: 0 0;
+    margin-top: 12px;
+}
+
+.header nav .yy em {
+    width: 27px;
+    height: 23px;
+    background-position: -30px 0;
+    margin-top: 9px;
+}
+
+.header nav .js em {
+    width: 22px;
+    height: 21px;
+    background-position: -60px 0;
+    margin-top: 10px;
+}
+
+.header nav li a {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    float: left;
+    min-width: 64px;
+    _width: 64px;
+    height: 32px;
+    max-width: 76px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header nav li a:hover, .header nav li a.sel {
+    color: #fff;
+    background-color: #379EF1;
+}
+
+.header nav .all a, .header nav .more a {
+    position: relative;
+    padding-right: 10px;
+}
+
+.header nav .all a span, .header nav .more a span {
+    max-width: 76px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 9px;
+}
+
+.header nav .menu-all-box {
+    position: absolute;
+    top: 70px;
+    box-sizing: border-box;
+    margin: auto;
+    z-index: 100;
+    display: none;
+    max-width: 720px;
+    border: 1px solid #eee;
+    *border: 3px solid #eee;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.header nav .menu-all-box th {
+    vertical-align: top;
+}
+
+.header nav .menu-all-box .menu-all-item {
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    margin: 0 0 8px 10px;
+    padding-bottom: 4px;
+}
+
+.header nav .menu-all-box dd:last-child .menu-all-item {
+    border-bottom: none;
+}
+
+.header nav .menu-all-box:before {
+    content: '';
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    z-index: 103;
+    background-color: #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: -6px;
+    right: 28px;
+    margin-left: -6px;
+}
+
+.header nav .menu-all-box:after {
+    content: '';
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    left: 0;
+    top: 0;
+    z-index: 104;
+    background-color: #fff;
+}
+
+.header nav .menu-all-box dl {
+    background: #FFF;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: 500px;
+    overflow-y: auto;
+    z-index: 200;
+    position: relative;
+    padding: 16px 0 0 18px;
+    top: 0;
+    left: 0;
+}
+
+.header nav .menu-all-box a {
+    padding: 0 3px;
+    float: none;
+    line-height: 100%;
+    display: block;
+}
+
+.header nav .menu-all-box a:hover,
+.header nav .menu-all-box a.sel {
+    color: #fff;
+}
+
+.header nav .menu-all-box dt {
+    line-height: 24px;
+}
+
+.header nav .menu-all-box dt > a {
+    color: #379EF1;
+    text-align: left;
+    line-height: 32px;
+    font-size: 16px;
+    display: inline-block;
+    min-width: 0;
+    max-width: none;
+    padding: 0 6px;
+}
+
+.header nav .menu-all-box h4 {
+    margin: 6px 16px 6px 0;
+    border-left: 2px solid #379EF1;
+    float: left;
+    white-space: nowrap;
+}
+
+.header nav .menu-all-box h4 > a {
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 12px;
+    min-width: 0;
+}
+
+.header nav .menu-all-box ul {
+    /*height: 24px;*/
+    float: left;
+    margin: 6px 0;
+}
+
+.header nav .menu-all-box li {
+    height: 100%;
+    line-height: 100%;
+    text-align: left;
+    margin-right: 6px;
+    min-width: 60px;
+    margin-right: 0;
+}
+
+.header nav .menu-all-box li > a {
+    font-size: 12px;
+    color: #666;
+    padding: 3px;
+    display: inline-block;
+    height: 24px;
+    line-height: 18px;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: none;
+}
+
+.header nav .menu-more-box {
+    position: absolute;
+    width: 130px;
+    top: 70px;
+    box-sizing: border-box;
+    z-index: 100;
+    display: none;
+}
+
+.header nav .menu-more-box .shadow-top {
+    width: 140px;
+    height: 18px;
+    background: url(../image/top.png) no-repeat;
+    display: block;
+}
+
+.header nav .menu-more-box .shadow-center {
+    width: 140px;
+    background: url(../image/center.png) repeat-y;
+    display: block;
+}
+
+.header nav .menu-more-box .shadow-foot {
+    width: 140px;
+    height: 12px;
+    background: url(../image/foot.png) no-repeat;
+    display: block;
+}
+
+.header nav .menu-more-box ul {
+
+}
+
+.header nav .menu-more-box li,
+.header nav .menu-more-box li > a {
+    float: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.header nav .menu-more-box li {
+    margin: 0 14px;
+    padding: 4px 0;
+    text-indent: 4px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.header nav .arrow-down {
+    width: 9px;
+    height: 6px;
+    background-image: url(../image/arrow-down.png);
+    display: inline-block;
+    position: absolute;
+    top: 14px;
+    right: 6px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+.header nav a.sel .arrow-down, .header nav a:hover .arrow-down {
+    background-position: -9px 0;
+}
+
+.header .search-box {
+    float: right;
+    overflow: hidden;
+    width: 180px;
+    height: 36px;
+    background: #fff;
+    margin-top: 30px;
+    border: 1px solid #CCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    -webkit-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 0 5px 0 10px;
+}
+
+.header .search-box .btn {
+    float: right;
+    overflow: hidden;
+    width: 15px;
+    height: 14px;
+    background: url(../image/glyphicons-halflings.png) -6px 0 no-repeat;
+    margin: 11px 3px 0 12px;
+    display: inline;
+    cursor: pointer;
+    border: none;
+}
+
+.header .search-box .txt-focus {
+    background: none;
+    border: none;
+    float: left;
+    overflow: hidden;
+    font-size: 16px;
+    color: #999;
+    line-height: 20px;
+    height: 20px;
+    width: 150px;
+    margin-top: 8px;
+}
+
+/*页脚*/
+.footer {
+    width: 100%;
+    background: #383a40;
+    overflow: hidden;
+    color: #97999f;
+    line-height: 24px;
+    padding: 25px 0 25px;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #97999f;
+}
+
+.footer a:hover, .footer .f-r a:hover {
+    color: #fff;
+}
+
+.logo-2 a {
+    width: 190px;
+    height: 44px;
+    overflow: hidden;
+    display: block;
+    background: url(../image/logo-gray.png) 0 0 no-repeat;
+    text-indent: -9999px;
+    margin-bottom: 5px;
+}
+
+.footer .f-r {
+    color: #818389;
+    overflow: hidden;
+    width: 365px;
+}
+
+.footer .powerby {
+    float: right;
+}
+
+/*左侧*/
+.left-cont {
+    float: left;
+    overflow: visible;
+    width: 640px;
+    padding-right: 20px;
+}
+
+.left-cont .pic-summary .img {
+    float: left;
+    margin-right: 25px;
+}
+
+/*图文列表*/
+.pic-list li {
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.pic-list .none {
+    border-bottom: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*暂无数据的样式*/
+.pic-list .title {
+    overflow: hidden; /*height: 50px;line-height: 50px;margin-bottom: 10px;*/
+}
+
+.pic-list .title h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1em;
+    font-size: 18px;
+    line-height: 18px;
+    height: 20px;
+    text-rendering: optimizelegibility;
+    margin-bottom: 7px;
+    word-wrap: normal;
+    /*for IE */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.pic-list .title h3 a {
+    font-size: 18px;
+    color: #333;
+}
+
+.pic-list .title h3 a:hover {
+    color: #197ecd;
+}
+
+.pic-list .source {
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 24px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.pic-list .source a, .pic-list .source time {
+    color: #999;
+    margin-right: 5px;
+}
+
+.pic-summary {
+    overflow: hidden;
+}
+
+.pic-summary .img {
+    float: left;
+    margin-right: 15px;
+}
+
+.pic-summary .summary {
+    line-height: 21px;
+    overflow: hidden;
+    color: #777;
+    font-size: 14px;
+    height: 80px;
+}
+
+.tags-box {
+    line-height: 14;
+    overflow: hidden;
+}
+
+.tags-box .keywords {
+    overflow: hidden;
+    float: left;
+    width: 200px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.tags-box .keywords a {
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline;
+    color: #86a6bf;
+    font-size: 12px;
+}
+
+.tags-box .comment-box {
+    float: right;
+    overflow: hidden;
+    height: 14px;
+    display: none;
+}
+
+.comment-box em {
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    background: url(../image/ico.png) -20px -30px no-repeat;
+    margin: 1px 5px 0 0;
+    display: inline;
+    _margin-top: 14px;
+}
+
+.comment-box a {
+    color: #999;
+    font-size: 12px;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 14px;
+}
+
+.tags-box .share-cont {
+    float: right;
+    margin: 7px 5px 0 0;
+    display: inline;
+}
+
+.pic-summary .comment-box em {
+    float: left;
+}
+
+/*图集列表*/
+.picture-pic-summary {
+    overflow: hidden
+}
+
+.picture-pic-summary h3 {
+    float: left
+}
+
+.picture-pic-summary .source {
+    float: right
+}
+
+.picture-pic-summary .comment-box em {
+    float: left
+}
+
+.picture-pic-summary img {
+    margin-right: 10px;
+}
+
+.picture-pic-summary .thumblist a:last-child img {
+    margin: 0
+}
+
+.picture-pic-summary .thumblist {
+    margin: 10px 0 15px 0;
+}
+
+/*右侧*/
+.right-cont {
+    float: right;
+    overflow: hidden;
+    width: 280px;
+}
+
+/*标题*/
+.mod-title1 {
+    height: 35px;
+    overflow: hidden;
+    background: #525358;
+    padding: 0 10px;
+    margin-top: 15px;
+}
+
+.mod-title1 h2 {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    line-height: 35px;
+    _line-height: 32px;
+    float: left;
+}
+
+.mod-title1 a {
+    float: right;
+    overflow: hidden;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 30px;
+    _line-height: 32px;
+}
+
+/*文字列表*/
+.lh-36 li {
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+}
+
+.lh-30 li {
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+.txt-list em {
+    float: left;
+    width: 3px;
+    height: 3px;
+    overflow: hidden;
+    margin-right: 10px;
+    background: #ccc;
+}
+
+.lh-36 em {
+    margin-top: 17px;
+}
+
+.lh-30 em {
+    margin-top: 14px;
+}
+
+.cor-067 em {
+    background: #0672c5;
+}
+
+/*热门文章*/
+.rmwz li {
+    padding: 5px 0;
+}
+
+.rmwz .pic-summary {
+    height: 78px;
+}
+
+.rmwz .img {
+    margin-top: 10px;
+    _margin-top: 6px;
+}
+
+.rmwz .summary {
+    height: 48px;
+    line-height: 24px;
+    margin-top: 6px;
+}
+
+.rmwz .view-box {
+    height: 24px;
+    overflow: hidden;
+}
+
+.view-box em {
+    width: 15px;
+    height: 10px;
+    overflow: hidden;
+    float: left;
+    background: url(../image/ico.png) -40px -30px no-repeat;
+    margin: 6px 5px 0 0;
+    display: inline;
+}
+
+/*热门标签*/
+.rmbq li {
+    margin: 0 10px;
+    float: left;
+    width: 73px;
+    display: inline;
+}
+
+.wxh {
+    width: 160px;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    right: -160px;
+    background: #f9f9f9;
+    display: none;
+}
+
+.wxh .tit {
+    font-size: 14px;
+    color: #333;
+    height: 24px;
+    line-height: 24px;
+    color: #0672c5;
+    padding: 10px 0 0 10px;
+}
+
+.wxh .wxh-p {
+    font-size: 13px;
+    padding: 0 0 5px 10px;
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+}
+
+.wxh img {
+    margin: 0 auto;
+    display: block;
+}
+
+.wxh ul {
+    width: 100%;
+    overflow: hidden;
+    height: 52px;
+}
+
+.wxh li {
+    float: left;
+    overflow: hidden;
+    margin: 10px 0 10px 17px;
+    display: inline;
+}
+
+.wxh li img {
+    display: inline;
+}
+
+.hytg {
+    background: #eee;
+    overflow: hidden;
+    font-size: 16px;
+    padding: 10px 0 15px 10px;
+    font-size: 14px;
+    display: none;
+}
+
+.hytg h3 {
+    height: 20px;
+    line-height: 20px;
+}
+
+.hytg h3 span {
+    float: left;
+    overflow: hidden;
+}
+
+.hytg em {
+    width: 19px;
+    height: 15px;
+    float: left;
+    overflow: hidden;
+    background: url(../image/ico.png) -60px -30px no-repeat;
+    margin: 4px 10px 0 0;
+    display: inline;
+}
+
+.hytg a {
+    color: #197ecd;
+    font-size: 13px;
+}
+
+/*返顶效果*/
+.backToTop {
+    bottom: 0px !important;
+    bottom: auto;
+    position: fixed;
+    _position: absolute;
+    width: 43px;
+    height: 43px;
+    background: url(../image/ico.png) no-repeat 0 -50px;
+    cursor: pointer;
+    z-index: 1990;
+    bottom: 0;
+    display: none;
+}
+
+/*窄屏——微信区块*/
+.zp-wxh {
+    width: 280px;
+    overflow: hidden;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.zp-wxh-r {
+    float: left;
+    margin-left: 135px;
+    display: inline;
+}
+
+.zp-wxh-r .tit {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #0672c5;
+}
+
+.zp-wxh-r .wxh-p {
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+    color: #333;
+}
+
+.zp-wxh-r li {
+    float: left;
+    overflow: hidden;
+    margin: 10px 20px 10px 0;
+    display: inline;
+}
+
+.zp-wxh-r {
+    overflow: hidden;
+    font-size: 16px;
+    margin: 10px 0 0 15px;
+    float: left;
+    display: inline;
+}
+
+.hytg-r {
+    background: #eee;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin-top: 20px;
+    display: none;
+}
+
+.hytg-r span {
+    float: left;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.hytg-r em {
+    width: 19px;
+    height: 15px;
+    float: left;
+    overflow: hidden;
+    background: url(../image/ico.png) -60px -30px no-repeat;
+    margin: 13px 0 0 10px;
+    display: inline;
+}
+
+.hytg-r a {
+    color: #197ecd;
+    font-weight: bold;
+}
+
+.zp-wxh-t {
+    width: 291px;
+    overflow: hidden;
+}
+
+/*weixin*/
+.weixin .top {
+    height: 52px;
+}
+
+.weixin .tit {
+    display: inline-block;
+    height: 100%;
+    line-height: 45px;
+    float: left;
+    font-size: 16px;
+}
+
+.weixin .ico-list {
+    display: inline-block;
+    width: 74px;
+    float: left;
+    font-size: 0;
+    margin-top: 9px;
+}
+
+.weixin .ico-list li {
+    display: inline-block;
+    float: right;
+    margin-left: 10px;
+}
+
+.weixin .qrcode {
+    text-align: right;
+    font-size: 0;
+}
+
+.weixin .qrcode > div {
+    display: inline-block;
+}
+
+.weixin .qrcode p {
+    height: 40px;
+    line-height: 40px;
+    margin-top: -20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.weixin .qrcode > div.left {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.weixin .qrcode img {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.weixin .qrcode-outter {
+    border: 1px solid #CCC;
+    margin-bottom: 20px;
+}
+
+.weixin .qrcode-outter > div {
+    margin: 6px;
+    width: 108px;
+    height: 108px;
+}
+
+.weixin .qrcode-outter img {
+    border: none;
+}
+
+/* login */
+div.login {
+    float: right;
+    max-width: 130px;
+    margin-top: 28px;
+    position: relative;
+	height:50px;
+}
+div.login-loading{
+    float: right;
+    font-size:0;
+    margin: 37px 20px 0 0;
+}
+
+div.toggle-menu.unlogin {
+    display: none;
+}
+
+div.login a.login-btn{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 2px 15px;
+    border: 1px solid #379EF1;
+    color: #379EF1;
+    border-radius: 13px;
+    outline: none;
+}
+
+div.login-box {
+    display: none;
+    width: 370px;
+    height: 480px;
+    overflow: hidden;
+    background: #ffffff;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+div.login-box h3.title {
+    width: 270px;
+    padding: 0 50px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333333;
+    font-family: 'Microsoft yahei', '微软雅黑', Tahoma, Verdana, Arial, sans-serif;
+    border-bottom: 1px solid #E4E4E4;
+    position: relative;
+    overflow: hidden;
+}
+
+div.login-box h3.title span.icon {
+    float: left;
+    display: block;
+    width: 40px;
+    margin-right: 10px;
+    background: #ffffff;
+}
+
+div.login-box h3.title span.icon img {
+    width: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+
+}
+
+div.login-box h3.title button.close {
+    display: block;
+    overflow: visible;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+    color: #95979c;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    position: absolute;
+    font-size: 21px;
+    line-height: 35px;
+    margin: -17px 15px 0 0;
+    top: 50%;
+    right: 0;
+}
+
+div.login-box h3.title button.close:hover, div.login-box h3.title button.close:focus {
+    color: #2b2e38;
+}
+
+/* 主体框 */
+div.login-box div.hole-box {
+    width: 370px;
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 加载框 */
+div.login-box div.login-loading {
+    position: absolute;
+    width: 370px;
+    height: 410px;
+    left: 0;
+    top: 0;
+}
+
+div.login-box div.login-loading img.login-loading-image {
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -16px;
+    margin-left: -16px;
+}
+
+/* 登录框 */
+div.login-box div.login-box-ipt-area {
+    position: absolute;
+    width: 370px;
+    height: 410px;
+    left: 370px;
+    top: 0;
+    overflow: hidden;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=00);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+div.login-box div.login-box-ipt-area div.form-area {
+    height: 320px;
+    margin: 20px 50px 0px;
+}
+
+div.login-box div.login-box-ipt-area div.form-area .h30 {
+    height: 30px;
+    overflow: hidden;
+}
+
+div.login-box div.login-box-ipt-area div.form-area .h20 {
+    height: 20px;
+    overflow: hidden;
+}
+
+div.login-box div.login-box-ipt-area div.form-area .h10 {
+    overflow: hidden;
+    height: 10px;
+}
+
+div.login-box .read-only {
+    display: none;
+}
+
+div.login-box div.form-area div.ipt-area {
+    border: 1px solid #E4E4E4;
+    position: relative;
+    line-height: 40px;
+    height: 42px;
+    overflow: hidden;
+}
+
+div.login-box div.form-area div.ipt-area .ipt-txt {
+    width: 220px;
+    padding-top: 2px;
+    height: 38px;
+    margin-left: 40px;
+    border: none;
+    background: transparent;
+    color: #666;
+    font-size: 14px;
+    line-height: 40px;
+    font-family: 'Microsoft yahei', '微软雅黑', Tahoma, Verdana, Arial, sans-serif;
+}
+
+div.login-box div.form-area #captcha-box,
+div.login-box div.form-area #captcha-box-hr {
+    display: none;
+}
+
+div.login-box div.form-area div.ipt-area .captcha {
+    width: 90px;
+}
+
+div.login-box div.form-area div.ipt-area span.captcha-result {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 140px;
+    top: 11px;
+}
+
+div.login-box div.form-area div.ipt-area span.success {
+    background-image: url('../image/member-icons2.png');
+    background-repeat: no-repeat;
+    background-position: 0 -20px;
+}
+
+div.login-box div.form-area div.ipt-area span.failed {
+    background-image: url('../image/member-icons2.png');
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
+}
+
+div.login-box div.form-area div.ipt-area img.captcha-image {
+    position: absolute;
+    cursor: pointer;
+    top: -1px;
+    right: -1px;
+}
+
+div.login-box div.form-area .chk-area {
+    height: 20px;
+    overflow: hidden;
+}
+
+div.login-box div.form-area div.chk-area label.remember-area {
+    display: table;
+    vertical-align: top;
+    float: left;
+}
+
+div.login-box div.form-area div.chk-area label.remember-area input.ipt-chk {
+    margin-top: -1px;
+    vertical-align: middle;
+}
+
+div.login-box div.form-area div.btn-area {
+    height: 40px;
+    overflow: hidden;
+}
+
+div.login-box div.form-area div.btn-area p.login-submit {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Microsoft yahei', '微软雅黑', Tahoma, Verdana, Arial, sans-serif;
+}
+
+div.login-box div.form-area div.btn-area p.submit {
+    background-color: #0099E4;
+}
+
+div.login-box div.form-area div.btn-area p.loading {
+    display: none;
+    cursor: default;
+    background: #57BCED url('../image/loading1.gif') center center no-repeat;
+}
+
+/*
+div.login-box div.form-area div.btn-area p.loading i { font-size: 20px; }
+*/
+div.login-box div.form-area div.btn-area p.submit:hover {
+    background-color: #3788E4;
+}
+
+div.login-box div.form-area div.txt-area {
+    height: 20px;
+}
+
+div.login-box div.form-area div.txt-area p {
+    text-align: right;
+    color: #0099E4;
+}
+
+div.login-box div.form-area div.txt-area p a {
+    color: #0099E4;
+}
+
+div.login-box div.form-area div.txt-area p a:hover {
+    text-decoration: underline;
+}
+
+div.login-box div.form-area .elem-text {
+    font-size: 12px;
+    line-height: 20px;
+    color: #CCCCCC;
+    font-family: 'Microsoft yahei', '微软雅黑', Tahoma, Verdana, Arial, sans-serif;
+}
+
+div.login-box div.form-area a.elem-text:hover {
+    text-decoration: underline;
+}
+
+div.login-box div.form-area .chk-area a {
+    float: right;
+    color: #0099e4;
+}
+
+div.login-box div.form-area div.ipt-area span.icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    background-image: url("../image/member-icons2.png");
+    background-repeat: no-repeat;
+}
+
+div.login-box div.form-area div.ipt-area span.icon-account {
+    background-position: -100px 0;
+}
+
+div.login-box div.form-area div.ipt-area span.icon-password {
+    background-position: -100px -21px;
+}
+
+/* social login */
+div.login-box div.social-login {
+    border-top: 1px solid #E4E4E4;
+    height: 50px;
+    position: relative;
+}
+
+div.login-box div.social-login span.text-title {
+    position: absolute;
+    top: -10px;
+    height: 20px;
+    display: block;
+    line-height: 20px;
+    width: 100px;
+    overflow: hidden;
+    text-align: center;
+    left: 50%;
+    margin-left: -50px;
+    background: #ffffff;
+    color: #CCCCCC;
+}
+
+div.login-box div.social-login div.social-btns {
+    margin-top: 15px;
+    text-align: center;
+}
+
+div.login-box div.social-login div.social-btns a.icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 15px;
+    outline: none;
+    background-image: url("../image/member-icons2.png");
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+div.login-box div.social-login div.social-btns a.icon-qq {
+    background-position: -50px 0;
+}
+
+div.login-box div.social-login div.social-btns a.icon-sina {
+    background-position: -50px -40px;
+}
+
+div.login-box div.social-login div.social-btns a.icon-wechat {
+    background-position: -50px -80px;
+}
+
+/* 快速登录 */
+div.login-box div.login-box-quick-area {
+    width: 370px;
+    height: 410px;
+    position: absolute;
+    left: 370px;
+    top: 0;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+div.login-box div.login-box-quick-area .avatar {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+div.login-box div.login-box-quick-area .avatar img {
+    width: 90px;
+    height: 90px;
+    border: 5px solid #E4E4E4;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+div.login-box div.login-box-quick-area p.user-account {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+}
+
+div.login-box div.login-box-quick-area p.desc {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    color: #CCCCCC;
+    font-size: 12px;
+}
+
+div.login-box div.login-box-quick-area div.switch-btn {
+    margin-top: 80px;
+    height: 30px;
+    text-align: center;
+}
+
+div.login-box div.login-box-quick-area div.switch-btn a {
+    color: #0099e4;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+div.login-box div.login-box-quick-area div.switch-btn a:hover {
+    text-decoration: underline;
+}
+
+/* user */
+div.toggle-menu span.rotate-tag {
+    display: block;
+    width: 100%;
+    height: 15px;
+    background: #FFFFFF;
+    index: 10px;
+    position: relative;
+}
+
+div.user {
+    float: right;
+    width: 46px;
+    height: 30px;
+    margin-top: 32px;
+    position: relative;
+}
+
+div.user .thumb-area {
+    width: 46px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+div.user .thumb-area > img.user-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+div.user .thumb-area > i.down-tag {
+    line-height: 30px;
+    margin-left: 3px;
+    color: #666666;
+    display: inline-block;
+    width: 11px;
+    height: 30px;
+    background: #000;
+    float: right;
+    background: url("../image/years-arrow.png") left center no-repeat;
+}
+
+div.toggle-menu.logined {
+    width: 90px;
+    position: absolute;
+    right: -5px;
+    top: 45px;
+    padding: 0 5px 5px 5px;
+    border: 1px solid #ededed;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    z-index: 1000;
+    display: none;
+}
+
+div.toggle-menu.logined:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -7px;
+    right: 27px;
+    background: #FFFFFF;
+    index: 1px;
+    -webkit-box-shadow: 0 0 8px rgba(60, 60, 60, 0.4);
+    -webkit-box-shadow: 0 0 8px rgba(60, 60, 60, 0.4);
+    -moz-box-shadow: 0 0 8px rgba(60, 60, 60, 0.4);
+    box-shadow: 0 0 8px rgba(60, 60, 60, 0.4);
+}
+
+div.toggle-menu.logined ul.user-options {
+    overflow: hidden;
+}
+
+div.toggle-menu.logined ul.user-options li {
+    height: 28px;
+    margin-bottom: 2px;
+    overflow: hidden;
+}
+
+div.toggle-menu.logined ul.user-options li a {
+    display: block;
+}
+
+div.toggle-menu.logined ul.user-options li i {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-right: 2px;
+    background-image: url("../image/member-icons2.png");
+    background-repeat: no-repeat;
+}
+div.toggle-menu.logined ul.user-options li i.icon-ctmedia{
+	background-position: -100px -80px;
+}
+
+div.toggle-menu.logined ul.user-options li i.icon-user {
+    background-position: -100px 0px;
+}
+
+div.toggle-menu.logined ul.user-options li i.icon-setting {
+    background-position: -100px -61px;
+}
+
+div.toggle-menu.logined ul.user-options li i.icon-contribution{
+    background-position: -100px -101px;
+}
+
+div.toggle-menu.logined ul.user-options li i.icon-logout {
+    background-position: -100px -41px;
+}
+
+div.toggle-menu.logined ul.user-options li span {
+    display: block;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    color: #999;
+	max-width: 66px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div.toggle-menu.logined ul.user-options li a:hover span {
+    color: #333;
+}
+.footer .m-footer span.copyright{
+    border-right: 1px solid #97999f;
+    padding-right: 15px;
+    margin-right: 15px;
+}

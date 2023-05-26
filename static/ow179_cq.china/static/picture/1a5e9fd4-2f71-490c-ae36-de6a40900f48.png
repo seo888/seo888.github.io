@@ -1,0 +1,66 @@
+<BASE HREF="http://www.china.com.cn/">
+<HTML><HEAD><TITLE>地址不存在</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8" />
+<style type="text/css">
+<!--
+.STYLE2 {
+	font-size: 36px;
+	font-weight: bold;
+}
+.STYLE3 {
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 18px;
+}
+.STYLE7 {font-size: 12px}
+.STYLE8 {font-size: 14px}
+-->
+</style>
+
+<script>
+function numView(url){
+	var numSpan=document.getElementById("numspan");
+	var i=3;
+	var interval=window.setInterval(
+		function(){
+				(i>=1)?numSpan.innerHTML=i=i-1
+							:window.clearInterval(interval,goIndex(url))
+		}, 
+	1000);
+}
+function goIndex(url){
+	this.location.href=url;
+}
+</script>
+
+<script>
+window.onload=function(){
+		numView("http://www.china.com.cn");
+	}
+</script>
+
+</HEAD>
+<BODY><br><br><br><br><br><br>
+	  <table width="800" height="200" border="1" align="center" cellpadding="0" cellspacing="0">
+
+        <tr valign="top">
+          <td align="center" valign="middle"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center" valign="top"><span class="STYLE2"><br>您访问的页面无法找到</span>
+                <p><span class="numColor STYLE3" id="numspan">3</span> <span class="STYLE8">秒后将自动跳转到中国网首页</span></p>
+              <p class="STYLE8">请检查您输入的地址是否正确</p></td>
+
+              <td width="30%" align="left" valign="middle"><img src="http://images.china.cn/images1/ch/china/logo.gif" /></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="800" height="180" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="center" valign="middle">
+              <p><span class="STYLE7"><a href="http://www.china.com.cn/chinese/ch-mail/3.htmfuwu/guanyuwomen.htm" target="_blank">关于我们</a> | 法律顾问：<a href="http://www.yuecheng.com/" target="_blank">北京岳成律师事务所</a> | <a href="http://www.china.com.cn/chinese/ch-mail/3.htmchinese/ch-mail/5.htm" target="_blank">刊登广告</a> | <a href="http://www.china.com.cn/chinese/ch-mail/3.htmch-070316zp/index.htm" target="_blank">诚聘英才</a> | <a href="http://www.china.com.cn/fuwu/lianxifangshi.htm" target="_blank">联系方式</a> | <a href="http://www.china.com.cn/fuwu/sitemap.htm" target="_blank">本站地图</a> | 对外服务：<a href="http://www.china.com.cn/chinese/ch-mail/1.htm" target="_blank">访谈</a> <a href="http://www.china.com.cn/chinese/ch-mail/2.htm" target="_blank">直播</a> <a href="http://www.china.com.cn/chinese/ch-mail/5.htm" target="_blank">广告</a> <a href="http://www.china.com.cn/chinese/ch-mail/4.htm" target="_blank">展会</a> <a href="http://www.china.com.cn/chinese/ch-mail/3.htm" target="_blank">无线</a></span></p>
+
+          <address class="STYLE8">版权所有 中国互联网新闻中心 电子邮件: <a href="mailto:webmaster@china.org.cn">webmaster@china.org.cn</a> 电话: 86-10-88828000 <a href="http://www.miibeian.gov.cn/">京ICP证 040089号</a> 网络传播视听节目许可证号:0105123</address>          </td>
+        </tr>
+</table>
+</BODY></HTML>

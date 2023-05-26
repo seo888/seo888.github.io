@@ -1,0 +1,1 @@
+var IMG_URL="http://img.mnw.cn/",UPLOAD_URL="http://upload.mnw.cn/",APP_URL="http://app.mnw.cn/",WWW_URL="http://www.mnw.cn/",SPACE_URL="http://space.mnw.cn/",COOKIE_PRE="mnw_",COOKIE_DOMAIN=".mnw.cn",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";document.write("<script src='http://img.mnw.cn/js/jiantofan.js'><\/script>");

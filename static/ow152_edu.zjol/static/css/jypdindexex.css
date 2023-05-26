@@ -1,0 +1,251 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	blr: expression(this.onFocus=this.blur());
+}
+img {
+	border: 0;
+}
+.cf:after{
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.cf{
+	*zoom:1;
+}
+/********************topBar Begin********************/
+#pubTopBarBox{
+	width: 100%;
+	height: 40px;
+	font: 12px "Microsoft YaHei";
+	background: #f3f3f3;
+}
+.pubTopBar{
+	width: 980px;
+	height: 40px;
+	margin: 0 auto;
+}
+.pubTopBar a {
+	color: #333;
+	white-space:nowrap;
+	text-decoration: none;
+	blr: expression(this.onFocus=this.blur());
+}
+.pubTopBar a:hover{
+	color: #ff7d00;
+}
+/*topBar左侧 begin*/
+.pubTopBarL{
+	float: left;
+	width:500px;
+}
+.pubTopBarL a{
+	display: block;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.pubTopBarL a.topBarLogo{
+	width: 20px;
+	height: 28px;
+	line-height:28px;
+	text-indent: -9999px;
+	background: url(http://edu.zjol.com.cn/images/jypdpublic_v1.png) 0 0px no-repeat;
+	margin-right: 0;
+}
+.pubTopBarL a.tbHidden{
+	display: none;
+}
+/*topBar左侧 end*/
+/*topBar右侧 begin*/
+.pubTopBarR{
+	float: right;
+	display:block;
+	width:300px;
+}
+.pubTopBarR li{
+	display: block;
+	float: right;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.pubTopBarR li.topBarRqz{
+	width: 13px;
+}
+.topBarRqz a {
+	display: block;
+	width: 13px;
+	height: 13px;
+	background: url(http://edu.zjol.com.cn/images/jypdpublic_v1.png) 0 -133px no-repeat;
+	text-indent: -9999px;
+	margin-top:14px;
+}
+.topBarRqz a:hover {
+	background-position: -13px -133px;
+}
+.pubTopBarR li.topBarRgh{
+	width: 14px;
+}
+.topBarRgh a {
+	display: block;
+	width: 14px;
+	height: 12px;
+	background: url(http://edu.zjol.com.cn/images/jypdpublic_v1.png) 0 -94px no-repeat;
+	text-indent: -9999px;
+	margin-top:14px;
+}
+.topBarRgh a:hover {
+	background-position: -14px -94px;
+}
+.pubTopBarR li.topBarRzh{
+	width: 16px;
+}
+.topBarRzh a {
+	display: block;
+	width: 16px;
+	height: 12px;
+	background: url(http://edu.zjol.com.cn/images/jypdpublic_v1.png) 0 -54px no-repeat;
+	text-indent: -9999px;
+	margin-top:15px;
+}
+.topBarRzh a:hover {
+	background-position: -16px -54px;
+}
+/*topBar右侧 end*/
+/*topBar固定在顶部 begin (如果要让topBar一直固定在页面顶部，请在相应的位置增加下面3个样式)*/
+.pubTopBarFix{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	_position: absolute;
+	_top: expression(eval(document.documentElement.scrollTop));
+	background: #f3f3f3;
+	z-index: 9999;
+}
+.clear{
+	height:0; line-height:0; font-size:0; clear:both;
+}
+.fixpt40{
+	padding-top:40px;
+}
+/*topBar固定在顶部 end*/
+/********************topBar End********************/
+/********************nav Begin*********************/
+#pubNav{
+	width: 980px;	
+	font-family: "Microsoft YaHei","微软雅黑";
+	font-size:12px;
+	padding-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:20px;
+}
+#pubNav ul li{
+	float: left;
+	height: 22px;
+	line-height: 22px;
+	vertical-align:middle;
+	margin-right: 20px;
+}
+#pubNav ul li a{
+	font-family: "Microsoft YaHei","微软雅黑";
+	font-size:12px;
+	color:#333;
+	text-decoration: none;
+	blr: expression(this.onFocus=this.blur());
+	white-space:nowrap;
+}
+#pubNav ul li a:hover{
+	color:#ff7d00;
+}
+#pubNav ul li a.navbd{
+	font-weight:bold;
+}
+#pubNav ul li.linomr{
+	margin-right:0;
+}
+.pubNavUl1,.pubNavUl2,.pubNavUl3{
+	float: left;
+	display: block;	
+	margin:0;
+	padding:0;
+}
+.pubNavUl1{
+	width: 213px;	
+}
+.pubNavUl2{
+	width: 203px;
+}
+.pubNavUl3{
+	width: 158px;
+}
+.navUl1line{
+	background: url(http://edu.zjol.com.cn/images/jypdpublic_v1.png) 168px -161px no-repeat;
+}
+.navUl2line{
+	background: url(http://edu.zjol.com.cn/images/jypdpublic_v1.png) 157px -161px no-repeat;
+}
+/********************nav End***********************/
+/********************pubFooter Begin***************/
+#dDfooter {
+	width: 980px;
+	font-family: "Microsoft YaHei","微软雅黑";
+	font-size:12px;
+	margin: 0 auto;
+	margin-top: 30px;
+	color: #666;
+	text-align:center;
+}
+#dDfooter a {
+	color: #666;
+	font-size:12px;
+	text-decoration: none;
+    blr: expression(this.onFocus=this.blur());
+}
+#dDfooter a:hover{
+	color: #ff7d00;	
+}
+#dDfooter span {
+	text-align: center;
+	line-height:30px;
+	height:30px;
+	vertical-align:middle;
+	color: #666;
+	font-size:12px;
+	display:block;
+}
+.dDfootUl {
+	width:425px;
+	height:26px;
+}
+.dDfootLi {
+	float: left;
+	border-right: 1px solid #666;
+	height:14px;
+	width:70px;
+	overflow:hidden;
+	text-align:center;
+	line-height:14px;
+}
+.dDfootLi a{
+	padding-bottom:4px;
+	display:inline-block;
+}
+.dDfootLiBor {
+	border:none;
+}
+/********************pubFooter End*****************/

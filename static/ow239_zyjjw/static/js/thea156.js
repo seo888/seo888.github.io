@@ -1,0 +1,1 @@
+document.write("<a href=\"https://www.zyjjw.cn/news/fashion/2021-06-11/683119.html\" target=_blank rel=\"external nofollow\"><img style=margin-top:5px src=\"https://www.zyjjw.cn/d/file/p/2021-06-15/271b79b632f753fe95473813bc6f93fe.jpg\" border=0 width=280 ></a>")

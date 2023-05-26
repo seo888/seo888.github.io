@@ -1,0 +1,505 @@
+/**
+ * BxSlider v4.1.2 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2014
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto 60px;
+	padding: 0;
+	*zoom: 1;
+}
+
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border:  5px solid #fff;
+	left: -5px;
+	background: #fff;
+	height: 190px;
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(../image/bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	text-align: center;
+	font-size: .85em;
+	font-family: Arial;
+	font-weight: bold;
+	color: #666;
+	padding-top: 20px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: #666;
+	text-indent: -9999px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+	outline: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+.bx-wrapper .bx-prev {
+	left: 10px;
+	background: url(http://xn.wenming.cn/images/controls.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background: url(http://xn.wenming.cn/images/controls.png) no-repeat -43px -32px;
+}
+
+.bx-wrapper .bx-prev:hover {
+	background-position: 0 0;
+}
+
+.bx-wrapper .bx-next:hover {
+	background-position: -43px 0;
+}
+
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	outline: 0;
+	width: 28px;
+	height: 28px;
+	text-indent: -9999px;
+	z-index: 998;
+}
+.bx-wrapper .bx-controls-direction a:hover{
+	background-position: 0 -28px;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+	text-align: center;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+	display: block;
+	text-indent: -9999px;
+	width: 10px;
+	height: 11px;
+	outline: 0;
+	background: url(http://xn.wenming.cn/images/controls.png) -86px -11px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+	background-position: -86px 0;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+	display: block;
+	text-indent: -9999px;
+	width: 9px;
+	height: 11px;
+	outline: 0;
+	background: url(http://xn.wenming.cn/images/controls.png) -86px -44px no-repeat;
+	margin: 0 3px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+	background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+	text-align: left;
+	width: 80%;
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+	right: 0;
+	width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: #666\9;
+	background: rgba(80, 80, 80, 0.75);
+	width: 100%;
+}
+
+.bx-wrapper .bx-caption span {
+	color: #fff;
+	font-family: Arial;
+	display: block;
+	font-size: .85em;
+	padding: 10px;
+}
+
+/*dischange*/
+*{
+	font-family: Microsoft YaHei, sans-serif;
+}
+body {
+    margin: 0;
+    font-family: "Microsoft YaHei" ! important;
+    background: #FFFFFF
+}
+
+a, a:hover {
+    text-decoration: none !important;
+}
+
+a:active {
+    text-decoration: none !important;
+}
+
+a:visited {
+    text-decoration: none !important;
+}
+
+a:focus {
+    text-decoration: none !important;
+}
+
+.f-cb:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+
+div, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.clearFix:after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.displayNone {
+    display: none
+}
+
+.partSlide {
+    width: 100%;
+    background: #fff;
+}
+
+.partSlide .container {
+    /*width: 1100px;*/
+    margin: auto;
+    background: #fff;
+}
+
+.partSlide .container .navBtnbox {
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    padding-right: 70px;
+    background: url(http://xn.wenming.cn/images/zwfw_ztzzqbm.jpg);
+}
+
+.partSlide .container .navBtnbox a {
+    display: block;
+    float: left;
+    padding: 12px 38px;
+    min-width: 70px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    cursor: pointer;
+    line-height: 16px;
+}
+
+.partSlide .container .navBtnbox .more {
+    width: 35px;
+    height: 20px;
+    background: url(http://xn.wenming.cn/images/changgeIcon01.png) no-repeat 10px 6px;
+    position: absolute;
+    right: 25px;
+    top: 13px;
+    cursor: pointer;
+}
+
+.partSlide .container .navBtnbox .bit {
+    background: url(http://xn.wenming.cn/images/changgeIcon02.png) no-repeat 10px 6px !important;
+}
+
+.partSlide .container .slidePlace {
+    width: 100%;
+    height: 408px;
+    background: #f5f5f5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.partSlide .container .addline {
+    height: 21px;
+    width: 100%;
+    /*background: url("lineicon02.png") repeat-x 0px 17px;*/
+}
+
+.partSlide .container .slidePlace ul {
+    padding: 0;
+}
+
+.partSlide .container .slidePlace ul li {
+    min-width: 255px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.partSlide .container .slidePlace ul li a {
+    font-size: 16px;
+    padding: 2px 4px;
+    /*color: #333;*/
+    cursor: pointer;
+}
+
+.partSlide .container .appMatters {
+    width: 100%;
+    height: 280px;
+    background: #fff;
+    position: relative;
+    /*background: url("lineicon03.png") repeat-x 0px 450px;*/
+}
+
+.partSlide .container .appMatters .divied {
+    /*width: 1056px;*/
+    padding: 30px 0px 22px 0px;
+    float: left;
+}
+
+.partSlide .container .appMatters .divied .titleH h1 {
+    font-size: 19px;
+    font-weight: bold;
+    color: #c40311;
+    padding-bottom: 10px;
+    float: left;
+    border-bottom: 2px solid #c40311
+}
+
+.partSlide .container .appMatters .divied .titleH {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.partSlide .container .appMatters .divied ul li {
+    position: relative;
+    /*margin-top: 14px;*/
+    /*padding-bottom: 10px;*/
+	width: 518px;
+	float: left;
+}
+
+.partSlide .container .appMatters .divied ul li .img {
+    float: left;
+    display: block;
+    width: 52px;
+    height: 52px;
+    margin-left: 35px;
+    position: relative;
+    background: url(http://xn.wenming.cn/images/66_03.png) no-repeat;
+    background-size: cover;
+}
+
+.partSlide .container .appMatters .divied ul li .each {
+    float: left;
+    height: 52px;
+    margin-left: 15px;
+}
+
+.partSlide .container .appMatters .divied ul li .each .eachAH {
+    font-size: 16px;
+    color: #333;
+    padding-bottom: 6px;
+}
+
+.partSlide .container .appMatters .divied ul li .each p {
+    float: left;
+    margin-top: 5px;
+    border-radius: 4px;
+   /* border: 1px solid #999999;*/
+    color: #999999;
+    /*padding: 2px 10px;*/
+    font-size: 14px;
+    cursor: default;
+}
+
+.diviedCon {
+    height: 230px;
+    overflow-y: scroll;
+}
+
+.partSlide .container .appMatters .divied ul li .span {
+    display: block;
+    min-width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    background: #c40311;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 2px;
+    padding: 0 1px;
+}
+
+.partSlide .container .appMatters .divied .btnns {
+    margin: auto;
+    height: 20px;
+    width: 130px;
+    margin-top: 8px;
+}
+
+.partSlide .container .appMatters .divied .btnns a {
+    width: 60px;
+    display: block;
+    float: left;
+    height: 20px;
+    cursor: pointer;
+}
+
+.partSlide .container .appMatters .divied .btnns .down {
+    background: #f5f5f5 url("http://xn.wenming.cn/images/changgeIcon02.png") no-repeat 22px 6px;
+}
+
+.partSlide .container .appMatters .divied .btnns .up {
+    background: #f5f5f5 url("http://xn.wenming.cn/images/changgeIcon01.png") no-repeat 22px 6px;
+    margin-left: 10px;
+}
+
+.partSlide .container .appMatters .divied .malef {
+    margin-left: 40px !important;
+}
+
+.img_pos {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 36px;
+}
+.slidePlace ul  li a:hover,.slidePlace ul  li a.bh,.partSlide .container .navBtnbox a.bh,.partSlide .container .navBtnbox a:hover{
+    background: rgb(125,173,92);
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B27dad5c,endColorstr=#B27dad5c);*/    
+    /*IE8支持*/
+    color: #fff;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.diviedCon::-webkit-scrollbar {
+    width: 7px;
+    height: 10px;
+}
+
+.diviedCon::-webkit-scrollbar-track,::-webkit-scrollbar-corner {
+    background: #ccc;
+}
+
+.diviedCon::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #7dad5c;
+}
+
+.diviedCon::-webkit-scrollbar-thumb:window-inactive {
+    background: #CCC;
+}
+
+
+.diviedCon::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    /*-webkit-box-shadow: inset 0 0 5px #green;*/
+}

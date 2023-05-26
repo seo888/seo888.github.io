@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <link href="/static/al1m_cnsuv/static/css/css.css" rel="stylesheet" type="text/css">
+   <title>{描述}{关键词1}{辅助描述}{随机版本}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{标题}{标题}{句子}《{关键词1}》{句子}" />
+    <link rel="canonical" href="">
+    <link rel="icon" type="image/x-icon" href="http://static.cnsuv.com/dist/images/index/favicon_cn.ico">
+        <script type="text/javascript">var _speedMark = new Date();</script>
+</head>
+<body>
+<div class="mod-container">
+<div class="mod-bar">
+<a data-url="/" href="javascript:history.go(-1)" class="b-back"><i class="icon"></i>返回</a>
+<a target="_blank" href="{自定义}" class="b-home"><i class="icon"></i>首页</a>
+        <span class="title">文章</span>
+                <a href="{自定义}" class="b-search J_searchBox"><i class="icon"></i>搜索</a>
+                <a class="b-nav J_nav" href="{自定义}"><i class="icon"></i>菜单</a>
+                
+</div>
+<script type="text/html" id="J_dhnav_tmpl">
+    <div class="dhnav-box">
+        <div class="dhnav-top J_dhnav-top clearfix">
+            <dl class="clearfix">
+                <%if(data.isLogin == 1){%>
+                <dd>
+                    <a target="_blank" href="/my/">
+                        <img src="<%=data.head%>">
+                    </a>
+                </dd>
+                <dt><a target="_blank" href="/my/"><%=data.username%></a></dt>
+                <%} else{%>
+                <dd>
+                    <a target="_blank" href="/my/login.html?backurl=<%=data.loginUrl%>">
+                        <img src="<%=data.head%>">
+                    </a>
+                </dd>
+                <dt><a target="_blank" href="/my/login.html?backurl=<%=data.loginUrl%>">点击登录</a></dt>
+                <%}%>
+            </dl>
+        </div>
+        <div class="mod-searchnav J_searchBox">
+            <div class="searchnav-text">搜全站 品牌/车系/经销商</div>
+            <span><i class="navicon"></i></span>
+        </div>
+        <div class="dhnav-nav clearfix">
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>首页</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>找车</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>文章</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>报价</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>降价</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>经销商</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>团购</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>问答</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>排行榜</p></a>
+            <a target="_blank" href="{自定义}"><i class="navicon"></i><p>汽车销量</p></a>
+        </div>
+        <div class="dhnav-history"></div>
+        <div class="icon close"></div>
+    </div>
+</script>
+<script type="text/html" id="J_history_tmpl">
+    <div class="title">您最近的足迹</div>
+    <div class="history-box clearfix">
+        <%for(i = 0; i < data.list.length; i++){%>
+        <a target="_blank" href="//m.cnsuv.com/car/<%=data.list[i].spelling%>/"><%=data.list[i].title%></a>
+        <%}%>
+    </div>
+</script>
+<div class="mod-detail">
+<div class="detail-title">
+            <h1>{新闻网标题}</h1>
+            <p>
+                <span>{网站名称}</span>
+<span>{人物名称}</span>                <span>{当前时间}</span>
+            </p>
+        </div>
+        <div class="detail-box g-mt20">
+<div class="detail-text" data-sname="">{新闻网内容}<br></p></div>
+        </div>
+</div>
+<div class="mod-dealer g-mt20">
+<div class="title clearfix">
+<h3>长沙经销商<em></em>家</h3>
+<a href="{自定义}" class="g-fr city J_province" data-id="2" data-pid="6"><i class="icon"></i><em>长沙</em></a>
+</div>
+<div class="dealer-box">
+<ul>
+</ul>
+<div class="bottom"><a target="_blank" href="{自定义}">点击查看更多<i class="icon"></i></a></div>
+</div>
+</div>
+<script type="text/html" id="J_dealer_tmpl">
+<%for(i = 0; i < data.list.length; i++){%>
+<li>
+<h3>
+<a target="_blank" href="/dealer/<%=data.list[i].uid%>/"><%if(data.list[i].Nature == 1){%><em>4S</em>-<%}%><%=data.list[i].shortname%></a>
+<%if(data.list[i].free == 0){%>
+<i class="icon"></i>
+<%if(data.list[i].salesRrea){%>
+<span><%=data.list[i].salesRrea%></span>
+<%}%>
+<%}%>
+</h3>
+<div class="box">
+<span>主营：</span>
+<p><%for(j = 0; j < data.list[i].factory.length; j++){%><%=data.list[i].factory[j].title%>&nbsp;<%}%></p>
+</div>
+<div class="box"><span>地址：</span><p><%=data.list[i].address%><a target="_blank" href="/dealer/<%=data.list[i].uid%>/map.html">[地图]</a></p></div>
+<div class="btn clearfix">
+<a target="_blank" href="tel:<%=data.list[i].salesphone%>"><i class="icon"></i>电话联系</a>
+<a href="{自定义}" class="last J_inquiryBtn" data-userid="<%=data.list[i].uid%>" data-sid="" data-sname=""><i class="icon"></i>获取底价</a>
+</div>
+</li>
+<%}%>
+</script>
+<div class="mod-comment g-mt20 mod-title">
+<div class="title clearfix">
+<h3>网页互动</h3>
+<span>共<em>0</em>条评论</span>
+</div>
+<div class="comment-list J_commentList" data-total="0">
+<div class="nodata">
+                <div class="pic">
+                    <img src="/static/al1m_cnsuv/static/picture/nodatatw.png" width="100%">
+                </div>
+                <p>本文暂无评论，快点抢沙发吧！</p>
+            </div>
+            </div>
+</div>
+    <div class="mod-crumb">
+        <div class="crumb-title">
+            <a target="_blank" href="{自定义}">首页</a> &gt;
+            <a target="_blank" href="{自定义}">国内新车</a> &gt;
+<span>{新闻网标题}</span>
+        </div>
+    </div>
+
+<div class="mod-fastbar" id="J_fastbar">
+    <div class="mod-share g-hide ">
+        <div class="share-box bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1637320608537">
+            <ul class="gb_resItms">
+                <li class="J_rcode_btn" data-src="//s.img16888.com/dist/images/carbad/share.png" data-ios="//s.img16888.com/dist/images/wap/news/iphone.png" data-android="//s.img16888.com/dist/images/wap/news/az.png"><a class="py"><i></i><p>朋友圈</p></a></li>
+                <li class="J_rcode_btn" data-src="//s.img16888.com/dist/images/carbad/share.png" data-ios="//s.img16888.com/dist/images/wap/news/iphone.png" data-android="//s.img16888.com/dist/images/wap/news/az.png"><a class="wx"><i></i><p>微信好友</p></a></li>
+                <li><a class="sl bds_tsina" href="{自定义}" data-cmd="tsina"><i></i><p>新浪微博</p></a></li>
+                <li><a class="qq bds_qzone" href="{自定义}" data-cmd="qzone"><i></i><p>QQ空间</p></a></li>
+            </ul>
+        </div>
+        <div class="cancel">
+            <a href="{自定义}" class="J_cancelBtn">取消</a>
+        </div>
+    </div>
+<div class="mod-commentfixed clearfix">
+<div class="text J_commentLayerBtn" data-sourcetype="1">我得来说说</div>
+<div class="btn">
+<a target="_blank" href="{自定义}" class="comment"><i class="icon"></i></a>
+<a href="{自定义}" class="fabulous J_fabulousBtn" data-type="1" data-num="0" data-id="18980961"><i class="icon"></i></a>
+<a href="{自定义}" class="share J_shareBtn"><i class="icon"></i></a>
+</div>
+</div>
+</div>
+    <div class="mod-footer">
+    <div class="footer-box" style="display: none;"><a target="_blank" href="{自定义}" onclick="window.location.href='/'" class="first">网站首页</a><a target="_blank" href="{自定义}" onclick="window.location.href='/sitemap/'" class="first">网站导航</a><a target="_blank" href="{自定义}" onclick="window.location.href='/contact/'">联系我们</a><a target="_blank" href="{自定义}" onclick="window.location.href='/about/'" class="last">关于我们</a></div>
+
+    <p onclick="window.location.href='/about/'">©2023{网站名称}<br>客服电话：0755-26919159</p>
+</div>
+    
+
+</div>
+
+<script type="text/html" id="J_commentList_tmpl">
+    <% var detailId = '58762';%>
+    <%for (var i = 0; i < data.list.length; i ++){%>
+    <div class="clearfix dl" id="pl<%=data.list[i].id%>">
+        <div class="dt">
+            <div class="pic J_showInfoBtn">
+                <a target="_blank" href="/wenda/user/home.html?uid=<%=data.list[i].userId%>">
+                    <%if(data.list[i].face == ""){%>
+                    <img src="//s.img16888.com/dist/images/wenda/tx.png" width="40" height="40" />
+                    <%} else {%>
+                    <img src="<%=data.list[i].face%>" width="40" height="40" />
+                    <%}%>
+                </a>
+            </div>
+        </div>
+        <div class="dd">
+
+            <div class="dd-box">
+                <div class="name">
+                    <a target="_blank" href="/wenda/user/home.html?uid=<%=data.list[i].userId%>"><%=data.list[i].username%></a>
+                    <%if(data.list[i].tUserName){%> 回复 
+                    <a target="_blank" href="/wenda/user/home.html?uid=<%=data.list[i].ToUserId%>"><%=data.list[i].tUserName%></a>
+                    <%}%>
+                    <span><%=data.list[i].inDate%></span>
+                </div>
+                <p><%==data.list[i].content%></p>
+                <div class="bottom uid<%=data.list[i].userId%>" data-id="<%=data.list[i].id%>"  data-type="<%if(data.type >= 3){%>2<%} else {%><%=data.type%><%}%>">
+                    <a href="{自定义}" class="fabulous J_fabulousBtn<%if(data.list[i].isSupports > 0){%> selected<%}%>" data-id="<%=data.list[i].id%>" data-num="<%=data.list[i].supports%>">
+                        <%if(data.list[i].supports > 0){%>
+                        <i class="wendaicon"></i><%=data.list[i].supports%>
+                        <%} else {%>
+                        <i class="wendaicon"></i>赞
+                        <%}%>
+                    </a>
+                    <%if((data.type+1) >= 3){%>
+                    <a href="{自定义}" class="reply J_commentLayerBtn" data-id="<%=data.list[i].answersId%>" data-uid="<%=data.list[i].userId%>" data-replyname="<%=data.list[i].username%>" data-sourcetype="3"><i class="wendaicon"></i>回复</a>
+                    <%} else {%>
+                    <a href="{自定义}" class="reply J_commentLayerBtn" data-id="<%=data.list[i].answersId%>" data-uid="<%=data.list[i].userId%>" data-replyname="<%=data.list[i].username%>" data-sourcetype="<%=data.type+1%>"><i class="wendaicon"></i>回复</a>
+                    <%}%>
+                    
+                    <%if(data.list[i].userId == data.uid){%>
+                    <a href="{自定义}" class="delete J_deleteBtn g-hide"><i class="wendaicon"></i>删除</a>
+                    <%}%>
+                </div>
+            </div>
+
+            <%if(data.type == 1){%>
+            <div class="dd-list"></div>
+            <%}%>
+        </div>
+    </div>
+    <%}%>
+</script>
+<script type="text/html" id="J_commentText_tmpl">
+    <div class="mod-commentBox">
+        <div class="commentBox-text">
+            <%if(replyName == ""){%>
+            <textarea class="text content" placeholder="写下您的评论"></textarea>
+            <%} else {%>
+            <textarea class="text content" placeholder="回复<%=replyName%>"></textarea>
+            <%}%>
+        </div>
+        <div class="user clearfix">
+            <div class="img-url">
+                <img src="<%=head%>" class="img" width="100%" />
+            </div>
+            <div class="name-url"><%=unescape(username)%></div>
+            <%if(replyName == ""){%>
+            <a href="{自定义}" class="btn">提交评论</a>
+            <%} else {%>
+            <a href="{自定义}" class="btn J_commentLayerBtn">回复</a>
+            <%}%>
+            <a href="{自定义}" class="expression J_expressionBtn"><i class="wendaicon"></i></a>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="J_expression_tmpl">
+    <div class="mod-expression" style="top: <%=height%>px">
+    <ul>
+        <li title="[微笑]"><img src="{随机图片}"></li>
+        <li title="[嘻嘻]"><img src="{随机图片}"></li>
+        <li title="[哈哈]"><img src="{随机图片}"></li>
+        <li title="[可爱]"><img src="{随机图片}"></li>
+        <li title="[可怜]"><img src="{随机图片}"></li>
+        <li title="[挖鼻]"><img src="{随机图片}"></li>
+        <li title="[吃惊]"><img src="{随机图片}"></li>
+        <li title="[害羞]"><img src="{随机图片}"></li>
+        <li title="[挤眼]"><img src="{随机图片}"></li>
+        <li title="[闭嘴]"><img src="{随机图片}"></li>
+        <li title="[鄙视]"><img src="{随机图片}"></li>
+        <li title="[爱你]"><img src="{随机图片}"></li>
+        <li title="[泪]"><img src="{随机图片}"></li>
+        <li title="[偷笑]"><img src="{随机图片}"></li>
+        <li title="[亲亲]"><img src="{随机图片}"></li>
+        <li title="[生病]"><img src="{随机图片}"></li>
+        <li title="[太开心]"><img src="{随机图片}"></li>
+        <li title="[白眼]"><img src="{随机图片}"></li>
+        <li title="[右哼哼]"><img src="{随机图片}"></li>
+        <li title="[左哼哼]"><img src="{随机图片}"></li>
+        <li title="[嘘]"><img src="{随机图片}"></li>
+        <li title="[衰]"><img src="{随机图片}"></li>
+        <li title="[委屈]"><img src="{随机图片}"></li>
+        <li title="[吐]"><img src="{随机图片}"></li>
+        <li title="[哈欠]"><img src="{随机图片}"></li>
+        <li title="[抱抱]"><img src="{随机图片}"></li>
+        <li title="[怒]"><img src="{随机图片}"></li>
+        <li title="[疑问]"><img src="{随机图片}"></li>
+        <li title="[馋嘴]"><img src="{随机图片}"></li>
+        <li title="[拜拜]"><img src="{随机图片}"></li>
+        <li title="[思考]"><img src="{随机图片}"></li>
+        <li title="[汗]"><img src="{随机图片}"></li>
+        <li title="[困]"><img src="{随机图片}"></li>
+        <li title="[睡]"><img src="{随机图片}"></li>
+        <li title="[钱]"><img src="{随机图片}"></li>
+        <li title="[失望]"><img src="{随机图片}"></li>
+        <li title="[酷]"><img src="{随机图片}"></li>
+        <li title="[色]"><img src="{随机图片}"></li>
+        <li title="[哼]"><img src="{随机图片}"></li>
+        <li title="[鼓掌]"><img src="{随机图片}"></li>
+        <li title="[晕]"><img src="{随机图片}"></li>
+        <li title="[悲伤]"><img src="{随机图片}"></li>
+        <li title="[抓狂]"><img src="{随机图片}"></li>
+        <li title="[黑线]"><img src="{随机图片}"></li>
+        <li title="[阴险]"><img src="{随机图片}"></li>
+        <li title="[怒骂]"><img src="{随机图片}"></li>
+        <li title="[互粉]"><img src="{随机图片}"></li>
+        <li title="[祈祷]"><img src="{随机图片}"></li>
+        <li title="[捂脸]"><img src="{随机图片}"></li>
+        <li title="[泣不成声]"><img src="{随机图片}"></li>
+        <li title="[心]"><img src="{随机图片}"></li>
+        <li title="[伤心]"><img src="{随机图片}"></li>
+        <li title="[猪头]"><img src="{随机图片}"></li>
+        <li title="[熊猫]"><img src="{随机图片}"></li>
+        <li title="[兔子]"><img src="{随机图片}"></li>
+        <li title="[ok]"><img src="{随机图片}"></li>
+        <li title="[耶]"><img src="{随机图片}"></li>
+        <li title="[good]"><img src="{随机图片}"></li>
+        <li title="[NO]"><img src="{随机图片}"></li>
+        <li title="[赞]"><img src="{随机图片}"></li>
+        <li title="[来]"><img src="{随机图片}"></li>
+        <li title="[弱]"><img src="{随机图片}"></li>
+        <li title="[草泥马]"><img src="{随机图片}"></li>
+        <li title="[神马]"><img src="{随机图片}"></li>
+        <li title="[囧]"><img src="{随机图片}"></li>
+        <li title="[浮云]"><img src="{随机图片}"></li>
+        <li title="[给力]"><img src="{随机图片}"></li>
+        <li title="[围观]"><img src="{随机图片}"></li>
+        <li title="[威武]"><img src="{随机图片}"></li>
+        <li title="[奥特曼]"><img src="{随机图片}"></li>
+        <li title="[礼物]"><img src="{随机图片}"></li>
+        <li title="[钟]"><img src="{随机图片}"></li>
+        <li title="[话筒]"><img src="{随机图片}"></li>
+        <li title="[蜡烛]"><img src="{随机图片}"></li>
+        <li title="[蛋糕]"><img src="{随机图片}"></li>
+    </ul>
+    </div>
+</script>
+
+<script type="text/html" id="J_templProvince">
+    <div class="province-box">
+        <dl>
+            <%for(i = 0; i < data.length; i++){%>
+            <dt><%=data[i].alpha%></dt>
+            <%for(j = 0; j < data[i].list.length; j++){%>
+            <dd>
+                <a href="{自定义}" data-id="<%=data[i].list[j].region_id%>"><%=data[i].list[j].region_name%><i class="icon"></i></a>
+            </dd>
+            <%}%>
+            <%}%>
+        </dl>
+        <i class="icon close"></i>
+    </div>
+</script>
+<script type="text/html" id="J_templCity">
+    <div class="city-box">
+        <dl>
+            <dt><a href="{自定义}" data-pid="<%=data.region_id%>"><i class="icon"></i><%=data.region_name%></a></dt>
+            <%for(i = 0; i < data.citys.length; i++){%>
+            <dd>
+                <a href="{自定义}" data-regionname="<%=data.region_name%>" data-id="<%=data.citys[i].area_id%>" data-cityname="<%=data.citys[i].a_areaname%>" data-cityid="<%=data.citys[i].cityId%>" data-pinyin="<%=data.citys[i].area_dir%>"><%=data.citys[i].a_areaname%></a>
+            </dd>
+            <%}%>
+        </dl>
+            </div>
+</script>
+<script type="text/html" id="J_inquiry_tmpl">
+    <div class="enroll-slide">
+        <div class="mod-bar">
+            <a href="{自定义}" class="back"><i class="icon"></i>返回</a>
+            <%if(data.type == 0){%>
+            <span class="crumb-title">团购报名</span>
+            <%} else if(data.type == 2){%>
+            <span class="crumb-title">预约试驾</span>
+            <%} else {%>
+            <span class="crumb-title">询底价</span>
+            <%}%>
+        </div>
+        <div class="mod-enroll">
+            <div class="enroll-box">
+                <form id="J_formEnroll" name="formEnroll" method="post" action="/api/p.php?extra=apply">
+                <input type="hidden" name="chan" value="">
+                <input type="hidden" name="pageId" value="">
+                <input type="hidden" name="incidentId" value="">
+                <input type="hidden" name="pi" value="">
+                <%if(data.bid){%>
+                <input type="hidden" name="brandId" value="<%=data.bid%>">
+                <%}%>
+                <input type="hidden" name="orderType" value="<%=data.type%>">
+                <input type="hidden" name="siteId" value="306">
+                <%if(data.aid){%>
+                <input type="hidden" name="aid" value="<%=data.aid%>">
+                <%}%>
+                    <input type="hidden" name="dealerId" value="<%=data.uid%>">
+                    <div class="box-c">
+                        <ul>
+                            <li>
+                                <div class="i-select i-style J_c_series">
+                                	<%if(data.sname && data.sid){%>
+                                	<%if(data.uid){%>
+                                    <a href="{自定义}" data-uid="<%=data.uid%>" data-sid="<%=data.sid%>"<%if(!data.bid && !data.uid){%> class="disabled"<%}%>>
+                                    <%} else {%>
+                                    <a href="{自定义}" data-bid="<%=data.bid%>" data-sid="<%=data.sid%>"<%if(!data.bid && !data.uid){%> class="disabled"<%}%>>
+                                   	<%}%>
+                                        <span><%=data.sname%></span>
+                                        <input type="hidden" name="styleId" value="<%=data.sid%>">
+                                    <%} else {%>
+                                    <%if(data.uid){%>
+                                    <a href="{自定义}" data-uid="<%=data.uid%>"<%if(!data.bid && !data.uid){%> class="disabled"<%}%>>
+                                    <%} else {%>
+                                    <a href="{自定义}" data-bid="<%=data.bid%>"<%if(!data.bid && !data.uid){%> class="disabled"<%}%>>
+                                    <%}%>
+                                        <span>请选择车系</span>
+                                        <input type="hidden" name="styleId">
+                                    <%}%>
+                                        <i class="icon"></i>
+                                    </a>
+                                    <div class="drop_down_list" style="display:none"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="i-select i-series J_c_style">
+                                	<%if(data.cname && data.cid){%>
+                                    <a href="{自定义}"data-sid="<%=data.sid%>" data-cid="<%=data.cid%>">
+                                        <span><%=data.cname%></span>
+                                        <input type="hidden" name="modelId" value="<%=data.cid%>">
+                                   	<%} else {%>
+                                    <a href="{自定义}"<%if(data.sname && data.sid){%> data-sid="<%=data.sid%>"<%} else {%> class="disabled"<%}%>>
+                                        <span>选择车款(可不选)</span>
+                                        <input type="hidden" name="modelId">
+                                   	<%}%>
+                                        <i class="icon"></i>
+                                    </a>
+                                    <div class="drop_down_list" style="display:none"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <input type="text" name="userName" placeholder="您的称呼：如张先生(女士)" class="text">
+                            </li>
+                            <li>
+                                <input type="tel" name="mobile" placeholder="请填写11位数的手机号码" maxlength="11" class="text">
+                            </li>
+                            <li>
+                                <textarea name="remark" placeholder="如有特别要求，可在此填写！"></textarea>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-box">
+                    	<%if(data.type == 0){%>
+                        <input type="submit" class="btn" value="提交报名">
+                        <p>您的信息仅供{网站名称}团购报名使用，请放心报名！</p>
+                        <%} else if(data.type == 2){%>
+                        <input type="submit" class="btn" value="提交预约">
+                        <p>提示：我们承诺对您的信息保密，不对外公开</p>
+                        <%} else {%>
+                        <input type="submit" class="btn" value="免费获取最低价">
+                        <p>提示：我们承诺对您的信息保密，不对外公开</p>
+                        <%}%>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="J_templScreenstyle">
+    <div class="screenstyle-box">
+        <%if(data.info != undefined && data.info.length != 0){%>
+        <div class="screenstyle-title clearfix" data-brandId="<%=data.info.brandId%>">
+            <div class="pic">
+                <img src="//carimg.cnsuv.com/carlogo/<%=data.info.brandId%>.gif" width="100%">
+            </div>
+            <span><%=data.info.brandName%></span>
+        </div>
+        <%}%>
+        <div class="screenstyle-text">
+            <dl>
+                <%if(data.success){%>
+                <%for(i = 0; i < data.list.length; i++){%>
+                <dt data-fid="<%=data.list[i].cat_id%>"><%=data.list[i].title%></dt>
+                    <%if(data.list[i].list != undefined){%>
+                        <%data.list[i].list = data.list[i].list;%>
+                    <%} else{%>
+                        <%data.list[i].list = data.list[i].styleList;%>
+                    <%}%>
+
+                    <%for(j = 0; j < data.list[i].list.length; j++){%>
+                    <%if(j == data.list[i].list.length-1){%>
+                        <dd class="last">
+                    <%} else{%>
+                        <dd>
+                    <%}%>
+                            <a target="_blank" href="{自定义}" class="clearfix" data-name="<%=data.list[i].list[j].title%>"<%if(data.info != undefined){%> data-brandId="<%=data.info.brandId%>"<%}%> data-id="<%=data.list[i].list[j].cat_id%>" data-fid="<%=data.list[i].cat_id%>">
+                                <div class="pic">
+                                <%if(data.list[i].list[j].img == null){%>
+                                    <img src="//s.img16888.com/dist/images/buy3/defaultCar.jpg" width="100%">
+                                <%} else{%>
+                                    <img src="//carimg.cnsuv.com/<%=data.list[i].list[j].img%>" width="100%">
+                                <%}%>
+                                </div>
+                                <div class="text">
+                                    <h4><%=data.list[i].list[j].title%></h4>
+                                    <%if(data.list[i].list[j].minPrice > 0 && data.list[i].list[j].maxPrice > 0){%>
+                                    <p><em><%=data.list[i].list[j].minPrice%>-<%=data.list[i].list[j].maxPrice%>万</em></p>
+                                    <%} else if(data.list[i].list[j].minPrice > 0){%>
+                                    <p><em><%=data.list[i].list[j].minPrice%>万</em></p>
+                                    <%} else if(data.list[i].list[j].maxPrice > 0){%>
+                                    <p><em><%=data.list[i].list[j].maxPrice%>万</em></p>
+                                    <%} else{%>
+                                    <p><em>暂无</em></p>
+                                    <%}%>
+                                </div>
+                            </a>
+                        </dd>
+                    <%}%>
+                <%}%>
+                <%} else{%>
+                    <dd style="width:100%; height:100px; line-height:100px;font-size:14px;color:#666;text-align:center; padding: 0px; border: 0px;">暂无车系</dd>
+                <%}%>
+            </dl>
+            <div class="scroll" style="height: 100%;position: absolute; z-index: 100; width: 7px; bottom: 0px; top: 0px; right: 1px; pointer-events: none; transition-property: opacity; transition-duration: 350ms; overflow: hidden; opacity: 0;">
+                <div style="position: absolute; z-index: 100; background: padding-box padding-box rgba(0, 0, 0, 0.498039); border: 1px solid rgba(255, 255, 255, 0.901961); box-sizing: border-box; width: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, 0px) translateZ(0px); height: 0px;"></div>
+             </div>
+        </div>
+        <div class="icon close"></div>
+    </div>
+</script>
+<script type="text/html" id="J_car_tmpl">
+    <div class="screencar-box" id="J_screenCar">
+        <div class="screencar-title">
+            <a href="{自定义}" class="on"><span>在售</span></a>
+            
+            <%if(data.stopSalesDecade.length > 0){%>
+            <a href="{自定义}"><span>停产</span></a>
+            <%}%>
+        </div>
+        <div class="screencar-list">
+            <div class="screencar-text J_screencarText" style="display: block;">
+                <dl>
+                    <%if(data.success){%>
+                    <%for(i = 0; i < data.data.length; i++){%>
+                    <dt><%=data.data[i].engine%></dt>
+                        <%for(j = 0; j < data.data[i].list.length; j++){%>
+                        <%if(data.data[i].list[j].car_name1 != undefined){%>
+                            <%data.data[i].list[j].car_name = data.data[i].list[j].car_name1%>
+                        <%}%>
+                        <%if(j == data.data[i].list.length-1){%>
+                        <dd class="laist" data-id="<%=data.data[i].list[j].car_id%>" data-name="<%=data.data[i].list[j].car_name%>">
+                        <%} else{%>
+                        <dd data-id="<%=data.data[i].list[j].car_id%>" data-name="<%=data.data[i].list[j].car_name%>"> 
+                        <%}%>
+                            <a href="{自定义}" data-id="<%=data.data[i].list[j].car_id%>" data-name="<%=data.data[i].list[j].car_name%>">
+                                <h3><%=data.data[i].list[j].car_name%></h3>
+                                <p>官方价：
+                                    <em>
+                                        <%if(data.data[i].list[j].price > 0){%>
+                                        <%=data.data[i].list[j].price%>万
+                                        <%} else if(data.data[i].list[j].market_price > 0){%>
+                                        <%=data.data[i].list[j].market_price%>万
+                                        <%} else{%>
+                                        暂无
+                                        <%}%>
+                                    </em>
+                                </p>
+                            </a>
+                        </dd>
+                        <%}%>
+                    <%}%>
+                    <%} else{%>
+                    <dd style="width:100%; height:100px; line-height:100px;font-size:14px;color:#666;text-align:center; padding: 0px; border: 0px;">暂无车款</dd>
+                    <%}%>
+                </dl>
+                <div class="scroll" style="height: 100%;position: absolute; z-index: 100; width: 7px; bottom: 0px; top: 0px; right: 1px; pointer-events: none; transition-property: opacity; transition-duration: 350ms; overflow: hidden; opacity: 0;">
+                    <div style="position: absolute; z-index: 100; background: padding-box padding-box rgba(0, 0, 0, 0.498039); border: 1px solid rgba(255, 255, 255, 0.901961); box-sizing: border-box; width: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, 0px) translateZ(0px); height: 0px;"></div>
+                 </div>
+            </div>
+            <div class="screencar-text">
+                <div class="screen J_screencarBtn">
+                    <a href="{自定义}" class="btn">
+                        <span>选择年代款</span><i class="icon"></i>
+                    </a>
+                    <div class="screen-box g-hide">
+                        <ul class="clearfix">
+                            <%for(e = 0; e < data.stopSalesDecade.length; e++){%>
+                            <li><a href="{自定义}" data-year="<%=data.stopSalesDecade[e]%>"><%=data.stopSalesDecade[e]%>款</a></li>
+                            <%}%>
+                        </ul>
+                    </div>
+                </div>
+                <div class="salesdl J_sales"></div>
+            </div>
+        </div>
+        <i class="icon close"></i>
+    </div>
+</script>
+
+<script type="text/html" id="J_templSales">
+    <dl>
+        <%if(data.success){%>
+        <%for(i = 0; i < data.data.length; i++){%>
+        <dt><%=data.data[i].engine%></dt>
+            <%for(j = 0; j < data.data[i].list.length; j++){%>
+            <%if(data.data[i].list[j].car_name1 != undefined){%>
+                <%data.data[i].list[j].car_name = data.data[i].list[j].car_name1%>
+            <%}%>
+            <%if(j == data.data[i].list.length-1){%>
+            <dd class="laist" data-id="<%=data.data[i].list[j].car_id%>" data-name="<%=data.data[i].list[j].car_name%>">
+            <%} else{%>
+            <dd data-id="<%=data.data[i].list[j].car_id%>" data-name="<%=data.data[i].list[j].car_name%>"> 
+            <%}%>
+                <a href="{自定义}" data-id="<%=data.data[i].list[j].car_id%>" data-name="<%=data.data[i].list[j].car_name%>">
+                    <h3><%=data.data[i].list[j].car_name%></h3>
+                    <p>官方价：
+                        <em>
+                            <%if(data.data[i].list[j].price > 0){%>
+                            <%=data.data[i].list[j].price%>万
+                            <%} else if(data.data[i].list[j].market_price > 0){%>
+                            <%=data.data[i].list[j].market_price%>万
+                            <%} else{%>
+                            暂无
+                            <%}%>
+                        </em>
+                    </p>
+                </a>
+            </dd>
+            <%}%>
+        <%}%>
+        <%} else{%>
+        <dd style="width:100%; height:100px; line-height:100px;font-size:14px;color:#666;text-align:center; padding: 0px; border: 0px;">暂无车款</dd>
+        <%}%>
+    </dl>
+    <div class="scroll" style="height: 100%;position: absolute; z-index: 100; width: 7px; bottom: 0px; top: 0px; right: 1px; pointer-events: none; transition-property: opacity; transition-duration: 350ms; overflow: hidden; opacity: 0;">
+        <div style="position: absolute; z-index: 100; background: padding-box padding-box rgba(0, 0, 0, 0.498039); border: 1px solid rgba(255, 255, 255, 0.901961); box-sizing: border-box; width: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, 0px) translateZ(0px); height: 0px;"></div>
+     </div>
+</script>
+<script type="text/html" id="J_templSearch">
+    <div class="mod-search">
+    	<i class="icon close"></i>
+    	<form action="" method="get" id="J_topSearchForm">
+        <div class="search-box clearfix">
+            <div class="search-text g-fl">
+                <input type="text" id="headq" autocomplete="off" placeholder="请输入车型或品牌" />
+            </div>
+            <div class="search-btn g-fr">
+                <input type="submit" value="搜索" class="indexicon" />
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="mod-searchHistory mod-title">
+        <%if(data.list.length >　0){%>
+        <div class="title clearfix eliminate-box">
+            <h3>浏览历史</h3>
+            <a href="{自定义}" class="J_eliminate eliminate"><i class="icon"></i>清除</a>
+        </div>
+        <div class="searchHistory-box eliminate-box">
+            <ul class="clearfix">
+                <%for(var i = 0; i < data.list.length; i++){%>
+                <li><a target="_blank" href="/<%=data.list[i].styleId%>/"><%=data.list[i].styleName%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <%}%>
+        <%if(data.hotStyle.length >　0){%>
+        <div class="title clearfix">
+            <h3>热门车型</h3>
+            <a target="_blank" href="/style/0-0-0-0-0-0-0-0-0-0-0-0-0-0-0" class="more g-fr">全部车型<i class="icon"></i></a>
+        </div>
+        <div class="searchHistory-box">
+            <ul class="clearfix">
+                <%for(var i = 0; i < data.hotStyle.length; i++){%>
+                <li><a target="_blank" href="/car/<%=data.hotStyle[i].spelling%>/"><%=data.hotStyle[i].styleName%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <%}%>
+    </div>
+    <div class="search-choice g-hide" id="search_inputlist">
+        <ul></ul>
+    </div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</script>
+<script type="text/javascript" src="/static/al1m_cnsuv/static/js/js.js"></script>
+<script type="text/javascript" src="/static/al1m_cnsuv/static/js/js1.js"></script>
+<!--{网站名称}-->
+<script type="text/javascript">
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1281192231'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/stat.php%3Fid%3D1281192231' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var __newsId = "18980961";
+var __sid = "";
+    seajs.use('wap_news_detail', function(c) {
+        c.init()
+    });
+</script>
+</body>
+</html><!--203.105-->

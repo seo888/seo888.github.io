@@ -1,0 +1,204 @@
+.container_box{
+    display: none;
+    opacity: 0;
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0;
+   left:0;
+   z-index:10001;
+}
+.bg {
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: #000;
+    opacity: .5;
+}
+.container_box .content{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 500px;
+    width: 400px;
+    background: #fff;
+    overflow: hidden;
+    margin: -250px 0 0 -200px;
+    box-shadow: 1px 2px 6px 2px #ccc;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.content .title, .content_login .title,.content_change_psd .title{
+    padding: 10px 0;
+    font-size: 20px;
+}
+.content .input {
+    width: 100%;
+    padding: 10px 0;
+}
+.content .input .phone, .content .input .password, .content .input .doupassword, .content .input .username{
+    box-sizing: border-box;
+    padding: 10px;
+    width:100%;
+    height:40px;
+    font-size: 16px;
+    border: 1px solid darkblue;
+}
+.content .validate {
+    box-sizing: border-box;
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.validate .validate_input {
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 70%;
+    margin-right: 2%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid darkblue;
+}
+.validate .message_validate {
+    float: right;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 26%;
+    margin-left: 2%;
+    text-align: center;
+    background: #3858CD;
+    color: #fff;
+    cursor: pointer;
+}
+.content .agreement {
+    padding: 10px 0;
+    font-size: 14px;
+    vertical-align: middle;
+}
+.checkbox {
+    vertical-align: middle;
+}
+.character {
+    vertical-align: middle;
+}
+.submit,.login,.content_change_psd_submit {
+    margin: 20px 0;
+    width:100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #3858CD;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 登录 */
+.content_login {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 350px;
+    width: 400px;
+    background: #fff;
+    overflow: hidden;
+    margin: -175px 0 0 -200px;
+    box-shadow: 1px 2px 6px 2px #ccc;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.content_login .input {
+    width: 100%;
+    padding: 15px 0;
+}
+.content_login .input .login_phone, .content_login .input .login_password {
+    box-sizing: border-box;
+    padding: 10px;
+    width:100%;
+    height:40px;
+    font-size: 16px;
+    border: 1px solid darkblue;
+}
+.content_login .login_footer {
+    text-align: right;
+}
+.content_login .login_footer span {
+    padding: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+/* 忘记密码 */
+.content_change_psd {
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 350px;
+    width: 400px;
+    background: #fff;
+    overflow: hidden;
+    margin: -175px 0 0 -200px;
+    box-shadow: 1px 2px 6px 2px #ccc;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.content_change_psd .input {
+    width: 100%;
+    padding: 15px 0;
+}
+.content_change_psd .input .content_change_psd_phone,.content_change_psd .input .content_change_psd_password {
+    box-sizing: border-box;
+    padding: 10px;
+    width:100%;
+    height:40px;
+    font-size: 16px;
+    border: 1px solid darkblue;
+}
+.content_change_psd .content_change_psd_validate {
+    box-sizing: border-box;
+    padding: 10px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.content_change_psd_validate .content_change_psd_input {
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 70%;
+    margin-right: 2%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid darkblue;
+}
+.content_change_psd_validate .content_change_psd_message {
+    float: right;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 26%;
+    margin-left: 2%;
+    text-align: center;
+    background: #3858CD;
+    color: #fff;
+    cursor: pointer;
+}
+.contnet_close,.content_login_close,.content_change_psd_close {
+    position: absolute;
+    top:15px;
+    right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+

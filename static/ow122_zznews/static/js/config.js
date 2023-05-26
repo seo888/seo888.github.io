@@ -1,0 +1,1 @@
+var IMG_URL="https://img.zznews.gov.cn/",UPLOAD_URL="https://upload.zznews.gov.cn/",APP_URL="https://app.zznews.gov.cn/",WWW_URL="https://www.zznews.gov.cn/",SPACE_URL="https://space.zznews.gov.cn/",COOKIE_PRE="cmstop_",COOKIE_DOMAIN=".zznews.gov.cn",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";

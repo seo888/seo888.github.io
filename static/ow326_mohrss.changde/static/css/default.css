@@ -1,0 +1,230 @@
+
+
+/* CSS Document */
+
+/*CSS reset*/
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textatea, p, blockquote
+th, td, input { margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+body { font-size: 12px; font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; width: 100%; background: #fff; }
+newsle { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+ol, ul, li { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+addr, acronym { border: 0; }
+a { color: #333; text-decoration: none }
+a:hover { text-decoration: none; color: #3587d1; }
+.fl { float: left; }
+.fr { float: right; }
+.bg1 { background: #f1f1f1; }
+.clear { clear: both; }
+strong { font-weight: bold; }
+.disable { display: none; }
+.wrap { min-width: 1000px; }
+#header { margin: 0px; padding: 0px; width: 100%; background: url(../image/head_bg.jpg) no-repeat center 30px #043e87; }
+.head_top { width: 100%; margin: 0px; height: 32px; line-height: 32px; }
+.head_top .userPanel { float: right; *display: inline; cursor: pointer; }
+.head_top a { padding: 0 10px; font-size: 12px; }
+.head_top ul { width: 1000px; margin: 0px auto; }
+.head_top span { font-size: 10px; color: #888; }
+.head_top a { color: #fff; }
+.head_logo { height: 79px; display: block; width: 1000px; margin: 0px auto; padding: 40px 0px 30px 0px; position: relative; }
+.siteSearch { width: 285px; float: right; height: 32px; margin: 0px auto; line-height: 32px; color: #333; padding-top: 26px; }
+.keyWord { width: 240px; border: #ccc 1px solid; border-right: 0px; height: 29px; line-height: 29px; padding-left: 10px; font-size: 12px; color: #666; float: left }
+.siteSearch a, .siteSearch .btn { width: 33px; height: 29px; display: block; float: right; background: url(../image/search.jpg) no-repeat; text-indent: -9999px; border: 0px; color: #fff; font-size: 14px; line-height: 29px; text-align: center; }
+.siteSearch a:hover, .siteSearch .btn:hover { background-position: -33px 0; }
+.head_link { position: absolute; top: 1px; right: 0px; }
+.topNav { height: 35px; line-height: 35px; background: #00479d; }
+.mainNav { width: 999px; margin: 0px auto; font-size: 16px; }
+.mainNav li { float: left; }
+.mainNav li a { display: block; text-align: center; width: 124px; height: 35px; line-height: 35px; color: #fff; font-weight: bold; }
+.mainNav li a:hover, .mainNav li.on1 a { background: #4283c5; }
+.footer { width: 100%; line-height: 22px; color: #fff; background: #043e87; padding: 10px 0; }
+.footer .sw { position: relative; }
+.copyright { padding: 10px 0 10px 112px; font-size: 12px; line-height: 2em; }
+.sw, #content { width: 1000px; margin: 0 auto; overflow: hidden; }
+#content { padding-top: 10px; }
+.jiucuo, .jiguan { position: absolute; }
+.jiucuo { left: 800px; top: 14px; }
+.jiguan { left: 0px; top: 10px; }
+.footer ul li.foot_link { background: #a29e9f; margin-bottom: 10px; }
+.footer ul li.foot_link a { color: #fff; }
+.footer ul li.foot_link a:hover { text-decoration: underline }
+.footer ul li.foot_link span { font-size: 11px; margin: 0px 15px; color: #ccc }
+.footer ul li.foot_other { width: 1000px; margin: 0px auto; background: url(https://mohrss.changde.gov.cn/Content/mohrss/Base/img/foot_icon.png) no-repeat 150px center; }
+.footer a { color: #fff; }
+
+/*轮播广告*/
+.focusAdzz { position: relative; z-index: 1; margin: 0px auto; height: 120px; width: 1000px; margin-bottom: 20px; }
+.focusAdzz .bd img { display: block; width: 100%; height: 120px; }
+.focusAdzz .bd .con { display: none; }
+.focusAdzz .hd { position: absolute; z-index: 1; right: 12px; bottom: 12px; }
+.focusAdzz .hd li { width: 8px; height: 8px; float: left; margin-left: 5px; line-height: 8px; overflow: hidden; background-color: #fff; }
+.focusAdzz .hd li span { display: none; }
+.focusAdzz .hd li.on { background-color: #ffcc33; }
+
+/*首页样式*/
+.index_ad { margin-bottom: 10px; }
+.index_ad li { float: left; margin-right: 5px; }
+.index_ad li.last { margin-right: 0; }
+.index_ad li .tit { display: none; }
+.index_ad ul { overflow: hidden; }
+.index_page { overflow: hidden; padding: 0px 0px 15px 0px; }
+
+/* 焦点图 */
+#focusNews { width: 582px; height: 333px; float: left; }
+#focusNews .bd .pic img { width: 582px; height: 333px; }
+#focusNews .hd { right: 10px; bottom: 10px; height: 14px; line-height: 14px; width: 120px; margin: 0 auto; text-align: right; }
+#focusNews .hd ul { float: none; display: inline-block; margin: 0 auto; text-align: center; }
+#focusNews .hd ul li { width: 10px; height: 10px; line-height: 10px; border-radius: 10px; margin: 0 2px; background: #909090; float: left; text-indent: -999em; }
+#focusNews .hd ul li.on { background: #fc114a; }
+#focusNews .bd .con { position: absolute; width: 100%; z-index: 1; bottom: 0; height: 36px; line-height: 36px; text-align: left; }
+#focusNews .bd .con .title { bottom: 0px; left: 0; width: 100%; height: 40px; line-height: 40px; overflow: hidden; }
+#focusNews .bd .con .title a { color: #fff; font-size: 14px; }
+#focusNews .bd .con .titleBg { height: 40px; }
+.index_page .ad .hd, .index_page .ad .title { display: none; }
+.ctrl-panel { position: absolute; right: 10px; top: 285px; z-index: 1000; }
+.m-page { display: block; width: 14px; height: 14px; background: #909090; float: left; display: inline; margin-left: 2px; line-height: 14px; color: #fff; font-size: 11px; text-align: center; }
+.m-page:hover { text-decoration: none; color: #fff; }
+.focus { background: #ff7e00; }
+.scroll-wrap { OVERFLOW: hidden; WIDTH: 600px; POSITION: relative; HEIGHT: 310px }
+.scroll_box_content { POSITION: absolute }
+.content_list { FLOAT: left; WIDTH: 600px; HEIGHT: 310px; cursor: pointer; position: relative; }
+.content_list img { WIDTH: 600px; HEIGHT: 310px; }
+.content_list span { width: 588px; padding: 10px 15px; color: #fff; font-size: 14px; background: url(https://mohrss.changde.gov.cn/Content/mohrss/Base/img/pic_icon.png) repeat; position: absolute; bottom: 0px; left: 0px; display: block; font-weight: bold; }
+
+/* news选项卡 */
+.index_news { width: 410px; height: 333px; background: #f7f7f7; overflow: hidden; position: relative; }
+.index_news .topicList .title a { color: #c8000f; }
+.index_news .topicList  .t .intro { color: #626262; margin-bottom: 5px; }
+.index_news .infoList li { background: url(../image/index_list_icon.png) no-repeat 8px center; padding-left: 20px; font-size: 14px; border-bottom: 1px #b2b2b2 dashed; line-height: 28px; height: 28px; }
+.news .hd { overflow: hidden; height: 38px; line-height: 38px; background: #efefef; }
+.news .hd li { float: left; margin-right: 5px; width: auto; font-size: 16px; color: #043e87; cursor: pointer; text-align: center; }
+.news .hd ul { float: left; }
+.news .hd li a { color: #043e87; display: block; height: 40px; line-height: 40px; width: 100px; font-size: 16px; float: left; cursor: pointer; text-align: center; }
+.news .hd .more, .sbox .hd .more { float: right; font-size: 12px; background: url(../image/more.jpg) no-repeat right center; padding-right: 10px; margin-right: 10px; }
+.news .hd li.on a, .news .hd li a:hover { color: #fff; font-weight: bold; background: #e01e1c; }
+.news .infoList li a { color: #333; font-size: 14px; }
+.news .infoList li .date { color: #ccc; padding-right: 13px; }
+.index_page_main { padding: 10px; width: 980px; background: #fff; margin: 0px auto 10px auto; }
+.index_left { width: 270px; }
+.index_m, .index_right { width: 330px; }
+.index_m { margin-left: 25px; float: left; }
+.index_right { float: right; }
+.index_lm_name { background: url(https://mohrss.changde.gov.cn/Content/mohrss/Base/img/index_lm_bg.jpg) repeat-x; position: relative; font-size: 16px; height: 42px; line-height: 40px; margin-bottom: 15px; }
+.index_lm_name span.name { color: #cc2a1e; font-weight: bold; height: 40px; line-height: 40px; border-bottom: #cc2a1e 2px solid; display: block; width: 75px; text-align: center; }
+.index_lm_name .more { position: absolute; right: 0px; top: 0px; font-size: 12px; font-weight: normal; }
+.index_tab .hd { height: 30px; margin-bottom: 5px; }
+.index_tab .hd li { float: left; margin-right: 5px; }
+.index_tab .hd li a { display: block; width: auto; height: 30px; line-height: 30px; font-size: 12px; color: #333; cursor: pointer; text-align: center; padding: 0px 10px; }
+.index_tab .hd li a:hover { color: #fff; font-weight: bold; display: block; background: #ff5215; }
+.index_tab .hd li.on a { color: #fff; font-weight: bold; height: 30px; line-height: 30px; padding: 0px 10px; display: block; background: #ff5215; }
+#sideMenu { min-height: 500px; }
+#xxgk { width: 206px; float: left; }
+#fgwj, #bmdt { width: 380px; }
+#fgwj { float: left; margin-left: 15px; }
+#bmdt { float: right; }
+.public { padding-left: 10px; }
+.public li { height: 32px; line-height: 32px; }
+.public li a { color: #053661; font-size: 14px; padding-left: 37px; display: block; }
+.public li a:hover { color: #d00003; }
+.public li.btn1 a, .public li.btn3 a { background: url(../image/xxgkzn.jpg) no-repeat left center; }
+.public li.btn2 a { background: url(../image/zfxxgk.jpg) no-repeat left center; }
+.public li.btn4 a { background: url(../image/xxgknb.jpg) no-repeat left center; }
+.public li.btn5 a { background: url(../image/xxgkzd.jpg) no-repeat left center; }
+.gkmu { overflow: hidden; padding-left: 10px; }
+.gkmu li { width: 85px; height: 40px; background: #619bd4; float: left; margin: 10px 10px 0 0; text-align: center; }
+.gkmu li:hover { background: #e01e1c; }
+.gkmu li a { color: #fff; display: block; line-height: 30px; padding: 0.5em 1.5em; }
+.sbox { border: 1px #ddd solid; height: 310px; }
+.sbox .hd { background: #f7f7f7; font-size: 14px; height: 36px; line-height: 36px; margin-bottom: 5px; border-bottom: 1px #ddd solid; }
+.sbox .hd h3, .sbox .hd li { width: 110px; text-align: center; float: left; line-height: 36px; }
+.sbox .hd ul { float: left; }
+.sbox .hd li a { color: #043e87; display: block; height: 37px; line-height: 37px; width: 100px; font-size: 16px; float: left; cursor: pointer; text-align: center; }
+.sbox .hd li.on a { color: #b11e01; height: 34px; line-height: 34px; display: block; text-align: center; background: #fff; width: 100px; border-bottom: #043e87 2px solid; border-left: #ddd 1px solid; border-right: #ddd 1px solid; }
+.sbox .infoList li { height: 30px; line-height: 30px; font-size: 14px; }
+.sbox .infoList li .date { float: right; font-size: 12px; color: #999; }
+#ztzl { overflow: hidden; padding: 15px 0; height: 87px; position: relative; border: 1px #ddd solid; margin-bottom: 15px; }
+#ztzl li { float: left; margin: 0 10px; }
+#ztzl li .tit { display: none; }
+#ztzl li img { width: 207px; height: 85px; display: block; border: #dddddd 1px solid; }
+#ztzl li a:hover img { width: 207px; height: 83px; display: block; border: #3f93d9 2px solid; }
+#ztzl .prev, #ztzl .next { width: 16px; height: 87px; position: absolute; cursor: pointer; overflow: hidden; z-index: 2 }
+#ztzl .prev { background: url(../image/index_prev.jpg) no-repeat left center; left: 8px; }
+#ztzl .prev:hover { background: url(../image/index_prev.jpg) no-repeat -16px center; }
+#ztzl .next { background: url(../image/index_next.jpg) no-repeat left center; right: 8px; }
+#ztzl .next:hover { background: url(../image/index_next.jpg) no-repeat -16px center; }
+#ztzl .tempWrap { width: 920px !important; margin: 0 auto; }
+.btnlist li { float: left; height: 115px; }
+.btnlist li a { display: block; font-size: 14px; height: 80px; line-height: 32px; float: left; padding: 5px 10px; margin: 5px; text-align: center; width: 152px; }
+#hdlink, #zwfw { height: 130px; }
+#zwfw { float: left; width: 776px; }
+#hdlink {/* float: right; */width: 998px; }
+.index_icon { padding: 3px 10px; }
+.index_icon li { width: 300px; float: left; padding-right: 20px; }
+.index_icon li a { border: 1px solid #eee; display: block; font-size: 14px; height: 50px; line-height: 43px; margin: 5px 0; padding: 0px 60px; }
+.index_icon li a:hover { background: #3587d1; color: #fff; }
+.index_icon li a img { margin-right: 15px; vertical-align: bottom; }
+.index_link { height: 47px; background: #e9f1f7; }
+.index_link ul { width: 890px; margin: 0px auto; line-height: 47px; background: url(../image/index_link_bg.jpg) no-repeat; padding-left: 150px; text-align: left; font-size: 14px; overflow: hidden; }
+.index_link li { float: left; }
+.index_link select { border: 1px solid #d9d9d9; color: #053661; font-size: 12px; height: 28px; line-height: 28px; margin: 0 10px; padding-left: 15px; width: 180px; }
+.sbox .infoList { padding: 10px; }
+.sbox .infoList li { line-height: 28px; position: relative; padding-left: 14px; font-size: 14px; background: url(../image/index_list_icon.png) no-repeat 2px center; }
+.ewm { position: fixed; right: 50px; bottom: 66px; }
+.floatPosition a.close { text-align: center; }
+.ad { height: 120px; margin-bottom: 10px; }
+.ad .hd, .ad .con { display: none; }
+
+/*页面正文内容-二维码样式*/
+.qrCodeBox { text-align: center; margin: 20px auto; }
+.qrCodeBox .pic { display: inline-block; *display: inline; margin: 0 auto; text-align: center; }
+.qrCodeBox .tit { margin-top: 10px; height: 20px; line-height: 20px; font-size: 12px; color: #999; }
+
+/* 信件列表 */
+.letterList { width: 100%; }
+.letterList th, .letterList td { text-align: center; font-size: 14px; vertical-align: middle; line-height: 28px; padding: 6px 0px }
+.letterList th, .letterList .even { background: #f5f5f5; }
+.letterList th { color: #0068B7; height: 40px; padding: 0px; }
+.letterList th.title { text-align: left; padding-left: 38px; }
+.letterList .num { display: none; }
+.letterList td.title { text-align: left; padding-left: 5px; }
+.letterList .ico { width: 30px; text-align: center; vertical-align: middle; padding: 0px }
+.letterList .ico img { vertical-align: middle; }
+.letterList .dep { width: 90px; }
+.letterList .state { width: 60px; }
+.letterList .state .s0 { color: #333; }
+.letterList .state .s1 { color: #f70; }
+.letterList .state .s2 { color: #f00; }
+.letterList .state .s3 { color: #390; }
+.letterList .state .s4 { color: #333; text-decoration: line-through; }
+.letterList .date { border-right: none; width: 90px; }
+
+/* linksBox */
+.linksBox { background: #fff; }
+.linksBox .hd { height: 40px; line-height: 40px; border-bottom: 1px solid #eee; position: relative }
+.linksBox .more { position: absolute; right: 10px; color: #999; font-size: 12px; }
+.linksBox .hd ul { overflow: hidden; }
+.linksBox .hd li { float: left; padding: 0 20px; font-size: 16px; }
+.linksBox .hd a { color: #333;/*! font-size: 16px; */ }
+.linksBox .hd a:hover { text-decoration: none }
+.linksBox .hd .on { border-bottom: 2px solid #007FE2 }
+.linksBox .hd .on a, .linksBox .hd h3 a { color: #007FE2 }
+.linksBox .hd h3 { display: inline-block; zoom: 1; *display: inline; padding: 0 10px; border-bottom: 2px solid #007FE2; font-size: 18px; }
+.linksBox .infoList { overflow: hidden; /*! padding:10px 10px 20px 20px; */ }
+.linksBox .infoList li { float: left; width: 250px; margin-top: 10px; margin-bottom: 10px; overflow: hidden; }
+
+/* detailTable */
+.detailTable { margin-bottom: 10px; background: #fff; width: 100% }
+.detailTable, .detailTable tr, .detailTable tr td { border: 1px solid #e6e6e6; border-collapse: collapse }
+.detailTable thead tr { border-color: #0068B7; }
+.detailTable thead th { background: #0068B7; height: 40px; line-height: 40px; color: #fff; font-size: 16px; text-align: center; border-color: #0068B7; }
+.detailTable tbody td { padding: 10px 15px; }
+.detailTable tbody td.tdName { font-weight: bold; background: #f7f7f7; text-align: center; width: 20%; font-size: 14px; }
+.detailTable .trTitle .tdCon { font-weight: bold; }
+.detailTable .preDiv { width: 670px; overflow: auto; }
+.detailTable .preDiv pre { font-size: 14px; font-family: "Microsoft YaHei", SimSun, Arial, Helvetica, Tahoma, sans-serif; white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word; }
+
+/* default.css */

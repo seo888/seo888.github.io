@@ -1,0 +1,1 @@
+  document.write("<p>’„ICP±∏2023000972∫≈</p>")

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- 以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{自定义标题}</title>
+	<meta name="keywords" content="{关键词1}" />
+	<meta name="description" content="{自定义描述}">
+    <link rel="stylesheet" type="text/css" href="/static/ow211_hh/static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/static/ow211_hh/static/css/hh.css">
+    <link rel="stylesheet" type="text/css" href="/static/ow211_hh/static/css/vh-style.css">
+    <link rel="stylesheet" type="text/css" href="/static/ow211_hh/static/css/hw-style.css">
+    <link rel="stylesheet" type="text/css" href="/static/ow211_hh/static/css/xhy-style.css">
+
+
+
+</head>
+
+					
+
+<style type="text/css">
+	.audio-box-size-im audio{ width:100%  }
+	.vh-go-top{display: none !important}
+</style>
+
+<body>
+   <!-- 中间部分 -->
+    <div class="centerWidth">
+        <!-- logo search -->
+
+		<div class="vh-logo-search clearfix">
+			<a class="logo" href="/{随机字符}/{随机数字}_{随机数字}.html">
+				<img src="/static/ow211_hh/static/picture/vh-logo2020.png">
+			</a>
+			
+			<div class="vh-search-list rt">
+				<!--<div class="vh-select-list lf">
+					<p class="tag">标题</p>
+					<ul class="list">
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">选中1</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">选中2</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">选中3</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">选中4</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">选中5</a></li>
+					</ul>
+				</div>-->
+				<div class="vh-select-word lf">
+<input class="word" type="text" id="textfield" maxlength="" style="border-left: 1px solid #dfdfdf;" onkeydown="if(event.keyCode==13){submitsearch();}" onfocus="if(this.value=='请输入关键词'){this.value='';}" onblur="if(this.value==''){this.value='请输入关键词';}" placeholder="请输入关键词">
+<input class="sear-btn" type="button" onclick="submitsearch()" value="搜索">
+				</div>
+                <script type="text/javascript">
+		// $(function() {
+		// 		//重置检索词
+		// 		$(".nnp-reset-btn").click(function() {
+		// 			$('#textfield').val('');
+		// 		});
+		// 	});
+
+	//检索
+	function submitsearch(){
+
+		var result =document.getElementById("textfield").value; //获取检索词
+                console.log(result);
+window.location.href = "http://www.hh.cn/gy/js/index.html?channelid=232715&searchword=" + encodeURI(result)
+		//判断检索词
+		var reg = /[`~!@#$%^&*_+<>{}\/'[\]]/im;
+		if (reg.test(result)) {
+			alert('您输入的信息包含非法字符!');
+			return false;
+		}
+		if (result == "请输入关键字" || result == "" || result == null) {
+			alert("请输入检索条件!");
+			return false;
+		} else {
+			result = result.replace("-", "\-");
+			result = result.replace("(", "\(");
+			result = result.replace(")", "\)");
+		}
+
+		//跳转搜索页面
+		}
+				</script>
+			</div>
+		</div>
+<style>
+.vh-logo-search {
+    height: 60px;
+    width: 100%;
+}
+.vh-logo-search a.logo {
+    float: left;
+    width: 130px;
+    height: 50px;
+    margin-top: 5px;
+}
+.vh-search-list {
+    height: 19px;
+    width: 350px;
+    margin-top: 15px;
+}
+.vh-logo-search .zq-btn {
+    margin: 16px 0 0 17px;
+}
+
+.vh-logo-search .zq-btn {
+    width: auto;
+padding-right: 8px;
+}
+</style>
+        <!-- nav -->
+        <div class="vh-nav-list indexnav clearfix">
+	        <a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>首页</span></a>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>新闻</span></a>
+
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>评论</span></a>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>视频</span></a>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>专题</span></a>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>文化</span></a>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>直播</span></a>
+
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>图库</span></a>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>看红河</span></a>
+
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>经开区</span></a>
+
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>红河消防</span></a>
+        </div>
+        <!-- content -->
+        <div class="vh-main">
+            <!-- 定位 -->
+            <div class="vh-bread-list mt10 clearfix">
+                <a class="tit">当前所在位置：</a><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{网站名称}" class="item CurrChnlCls">{网站名称}</a><span>&gt;</span><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="首页" class="item CurrChnlCls">首页</a><span>&gt;</span><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="云南新闻" class="item CurrChnlCls">{关键词1}</a>
+            </div>
+            <div class="xhy-content  clearfix">
+                <div class="xhy-content-left" style='min-height: 820px;'>
+                    <div>
+                        <h2 class="xhy-content-title">{关键词1}{随机后缀}{新闻网标题}</h2>
+<h2 style="font-size: 20px;color: #6465a0;text-align: center;margin-top: 12px;"></h2>
+                        <p class="xhy-editormessage">
+                            <span>作者：</span><span>{人物名称}</span>
+                            <span>来源：</span>
+							<span>
+															
+									
+								{关键词1} 
+																	
+									 
+								
+                            </span>
+                            <span>时间：</span><span>{当前时间}</span>
+                        </p>
+                        <div class="xhy-splitline3"></div>
+                        <div style="margin-top:20px">
+							<div class="xhy-text">
+								
+								
+								
+								
+								
+
+								<p style="text-indent: 2em; text-align: left;">{新闻网内容}</p>
+				
+															
+																	
+									
+									（责任编辑：{人物名称}  审核：{人物名称}）
+									 
+								
+							
+							</div>
+                        </div>
+                      
+						
+						
+						
+			
+					</div>
+                       
+                </div>
+                <div class="xhy-content-right" style="    height: auto;">
+                    <div class="xhy-content-up">
+                        <div class="xhy-incontent">
+                            <h2 class="xhy-content-h2"><a href="/{随机字符}/{随机数字}_{随机数字}.html">州内热点</a></h2>
+                            <div class="xhy-splitline2"></div>
+                            <div class="xhy-textbox1">
+                                
+                            	<p>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                                        <span class="xhy-characters">{关键词1}{标题}</span>
+                                    </a>
+                                </p>
+                                
+                            	<p>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                                        <span class="xhy-characters">{标题}</span>
+                                    </a>
+                                </p>
+                                
+                            	<p>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                                        <span class="xhy-characters">{标题}</span>
+                                    </a>
+                                </p>
+                                
+                            	<p>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                                        <span class="xhy-characters">{标题}</span>
+                                    </a>
+                                </p>
+                                
+                            	<p>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                                        <span class="xhy-characters">{标题}</span>
+                                    </a>
+                                </p>
+                                
+                            	<p>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                                        <span class="xhy-characters">{标题}</span>
+                                    </a>
+                                </p>
+                                
+                            	<p>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                                        <span class="xhy-characters">{标题}</span>
+                                    </a>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xhy-content-dowm">
+                        <div class="index-newsbox lf">
+                            <div class="index-newsbox-t clearfix xhy-space">
+                                <a class="tit cur xhy-textstyle" href="">热点资讯</a>
+                                <div class="index-newsbox-pg index-pg-tit index-pg-tit1 mt10 rt">
+                                    <span class="prev xhy-pre"></span>
+                                    <span class="next xhy-next"></span>
+                                </div>
+                            </div>
+<div class="index-newsbox-c index-pg-tab index-pg-tab1">
+				
+								<div class="index-newsbox-pic index-pg-item index-pg-item1 clearfix">
+									
+									<a class="a1" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+									
+									<a class="a2" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+									
+									<a class="a3" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+									<a class="a3" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+								</div>
+							
+								<div class="index-newsbox-pic index-pg-item index-pg-item1 clearfix">
+									
+									<a class="a1" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+									
+									<a class="a2" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+									
+									<a class="a3" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+									<a class="a3" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" width="280px" height="180px"><p>{标题}</p></a>
+									
+								</div>
+							
+			
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="centerWidth">
+		<div class="vh-friend-link clearfix" style="background-color: #ffffff;">
+			<div class="vh-link-tit">
+				<p class="tit lf">友情链接</p>
+				<p class="clearfix list lf">
+					<a class="cur">州内网站</a>
+					<a>省内网站</a>
+					<a>国内网站</a>
+				</p>
+			</div>
+			<div class="vh-friend-group">
+				<div class="vh-friend-item mt20 clearfix">
+					
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+				</div>
+				<div class="vh-friend-item mt20 clearfix" style="display: none;">
+					
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+				</div>
+
+				<div class="vh-friend-item mt20 clearfix" style="display: none;">
+					
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+                	                     <a href="/{随机字符}/{随机数字}_{随机数字}.html">{随机关键词}</a>
+                                        
+				</div>
+			</div>
+		</div>
+	</div><div class="vh-footer-box mt30">
+		<div class="centerWidth clearfix">
+			<a class="logo lf"><img src="/static/ow211_hh/static/picture/vh-footerlogo2020.png"></a>
+			<p class="lf link" style=" width: 273px;">
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">新闻</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">专题</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">州情</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">文化</a>				
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">评论</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">图库</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">公告</a>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html">视频</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">红云</a>
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">供电</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">报纸</a>
+			</p>
+			<div class="img rt" style="height: 200px;">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/static/ow211_hh/static/picture/vh-footer-img01.jpg"></a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/static/ow211_hh/static/picture/vh-footer-img02.jpg"></a>
+<!--<a href="http://t.knet.cn/"><img src="http://www.hh.cn/images/vh-footer-img03.jpg" /></a>-->
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/static/ow211_hh/static/picture/vh-footer-img04.jpg"></a>
+
+<a><img src="/static/ow211_hh/static/picture/vh-footer-img10.jpg"></a>
+<a><img src="/static/ow211_hh/static/picture/投稿邮箱.jpg"></a>
+
+
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" style="text-align: center;"><img width="65" height="80" src="/static/ow211_hh/static/picture/vh-footer-img05.jpg"></a>
+<!-- <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img width="65" height="80" src="http://www.hh.cn/images/vh-footer-img06.jpg" /></a> -->
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+
+	<div class="vh-footer-detail">
+		<div class="centerWidth">
+			<p><a>{网站名称}委宣传部主管</a>　<a ignoreapd="true" href="/static/ow211_hh/static/file/互联网新闻信息服务许可-1.jpg" target="_blank">互联网新闻信息服务许可证：531{随机8数字}</a>　<a>网络视听许可证{随机7数字}号</a>　<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">滇ICP备{随机8数字}号</a></p>
+			<p><a>{网站名称}版权所有</a>　网上有害信息举报电话、涉未成年人专用举报电话：0873-{随机8数字}　涉未成年人专用举报邮箱：{随机字符}@163.com
+
+
+
+
+
+
+
+			</p>
+
+
+		</div>
+	</div>
+	<!-- go top -->
+	<div class="vh-go-top">回到顶部</div>
+<div class="dqwz" style="display:none"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="首页" class="CurrChnlCls">首页</a>&nbsp;&gt;&nbsp;<a href="/{随机字符}/{随机数字}_{随机数字}.html" title="新闻" class="CurrChnlCls">新闻</a>&nbsp;&gt;&nbsp;<a href="/{随机字符}/{随机数字}_{随机数字}.html" title="云南新闻" class="CurrChnlCls">云南新闻</a></div>
+
+
+
+
+
+<style>
+.xhy-text img{
+width:80%
+}
+.pagesize span{
+	color: #fff;
+    background: #1b87db;
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    margin-left: 5px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: "Arial";
+    text-align: center;
+}
+.pagesize a{
+display: inline-block;
+    width: 60px;
+    height: 40px;
+    margin-left: 5px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #595959;
+    background: #f5f5f5;
+    text-align: center;
+}
+.pagesize a:hover{
+    color: #fff;
+    background: #1b87db;
+}
+</style>
+ 
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+
+
+
+
+</body>
+</html>

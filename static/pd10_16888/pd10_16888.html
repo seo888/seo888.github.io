@@ -1,0 +1,593 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+  <meta name="renderer" content="webkit"> 
+  <meta http-equiv="Cache-Control" content="no-transform"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"> 
+  <meta name="format-detection" content="telephone=no"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui"> 
+  <link href="/static/pd10_16888/css/detail.css" rel="stylesheet" type="text/css"> 
+  <title>{描述}{关键词1}{辅助描述}{随机版本}</title>
+  <meta name="keywords" content="{关键词1}" />
+  <meta name="description" content="{标题}{标题}{句子}《{关键词1}》{句子}" />
+  <link rel="canonical" href="/static/pd10_16888/css/15181131.html"> 
+  <link rel="icon" type="image/x-icon" href="/static/pd10_16888/css/favicon.ico"> 
+  <script type="text/javascript">var _speedMark = new Date();</script> 
+ </head> 
+ <body> 
+  <div class="mod-container"> 
+   <div class="mod-bar"> 
+    <a data-url="/" href="javascript:history.go(-1)" class="b-back">返回</a> 
+    <a href="{当前url}" class="b-home">首页</a> 
+    <span class="title">{关键词1}</span> 
+    <a href="javascript:;" class="b-search J_searchBox">搜索</a> 
+    <a class="b-nav J_nav" href="javascript:;">菜单</a> 
+   </div> 
+   <script type="text/html" id="J_dhnav_tmpl">
+<div class="dhnav-box">
+<i></i>
+<div class="dhnav-top J_dhnav-top clearfix">
+<div class="g-fl">
+<a href="http:/{随机短字符}/{随机数字}/"><img class="bg-text" src="//s.img16888.com/dist/images/wap/index/v2/navbgtext.png"></a>
+</div>
+<dl class="clearfix">
+<%if(data.isLogin != ''){%>
+<dt><a href="/{随机短字符}/{随机数字}/account/index"><%=data.isLogin.nickname%></a></dt>
+<dd>
+<a href="/{随机短字符}/{随机数字}/account/index">
+<img src="<%=data.isLogin.head%>">
+</a>
+</dd>
+<%} else{%>
+<dt><a href="/{随机短字符}/{随机数字}/wap.php?mod=account&extra=login&backurl=<%=data.loginUrl%>">点击登录</a></dt>
+<dd>
+<a href="/{随机短字符}/{随机数字}/wap.php?mod=account&extra=login&backurl=<%=data.loginUrl%>">
+<img src="//s.img16888.com/dist/images/wap/index/v2/author.png">
+</a>
+</dd>
+<%}%>
+</dl>
+</div>
+<div class="dhnav-list">
+<div class="dhnav-scroll" style='overflow-x: hidden;'>
+<div class="dhnav-style clearfix" style='width:103%'>
+<a href="https:/{随机短字符}/{随机数字}/news/pcid-11">{关键词1}</a>
+<a href="https:/{随机短字符}/{随机数字}/news/cid-49">{随机关键词}</a>
+<a href="https:/{随机短字符}/{随机数字}/127821">{关键词1}</a>
+</div>
+<div class="dhnav-nav g-mt10">
+<ul class="clearfix">
+<li>
+<a href="https:/{随机短字符}/{随机数字}/">首页</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/news/">新闻</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/news/pingce/">评测</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/news/hangqing/">行情</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/auto/searchBrand">选车</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/video">视频</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/pic/">图库</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/news/yongche/">用车</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/price/">报价</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/tg/">团购</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/">特卖</a>
+</li>
+<li>
+<a href="https:/{随机短字符}/{随机数字}/dealer/<%=data.dealerUrl%>">经销商</a>
+</li>
+<li class="last">
+<a href="https:/{随机短字符}/{随机数字}/xl/">销量</a>
+</li>
+<li class="last">
+<a href="//m.tousu.16888.com/">投诉</a>
+</li>
+<li class="last">
+<a href="https:/{随机短字符}/{随机数字}/auto/hitRank">排行榜</a>
+</li>
+</ul>
+</div>
+<div class="dhnav-browse g-mt10 J_browse">
+<div class="browse-title">
+<a href="javascript:;" class="on"><span>浏览的车</span></a>
+<a href="javascript:;"><span>文章浏览</span></a>
+</div>
+<div class="browse-list">
+<div class="browse-box browse-style">
+                        <%if(data.historyStyle.length >　0){%>
+<ul class="clearfix">
+<%for(var i = 0; i < data.historyStyle.length; i++){%>
+<li>
+                                <a href="/<%=data.historyStyle[i].styleId%>/"><span><%=data.historyStyle[i].styleName%></span>
+                                <p>
+                                <%for(var j = 0; j < data.historyStyle[i].carType.length; j++){%>
+                                	<%=data.historyStyle[i].carType[j]%>&nbsp;
+                                <%}%>
+                                </p>
+                                </a>
+                            </li>
+                        <%}%>
+</ul>
+<%} else{%>
+                        <div style="width:100%; height:100px; line-height:100px;font-size:14px;color:#666;text-align:center; padding: 0px; border: 0px;">该暂无数据</div>
+                        <%}%>
+</div>
+<div class="browse-box browse-news g-hide">
+<%if(data.historyNews.length >　0){%>
+<ul>
+<%for(var i = 0; i < data.historyNews.length; i++){%>
+<li>
+<a href="<%=data.historyNews[i].simpleurl%>"><span>.</span><%=data.historyNews[i].newstitle%></a>
+</li>
+<%}%>
+</ul>
+<%} else{%>
+                        <div style="width:100%; height:100px; line-height:100px;font-size:14px;color:#666;text-align:center; padding: 0px; border: 0px;">该暂无数据</div>
+                        <%}%>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="indexicon close"></div>
+</div>
+</script> 
+<div class="mod-crumb"> 
+    <div class="crumb-title"> 
+     <a href="/">首页</a> &gt; 
+     <a href="https:/{随机短字符}/{随机数字}/news/pcid-11">汽车新闻</a> &gt; 
+     <a href="https:/{随机短字符}/{随机数字}/news/cid-49">国内新车</a> &gt; 正文 
+    </div> 
+   </div> 
+   <div class="mod-newsdetail"> 
+    <div class="newsdetail-title"> 
+     <h1>{新闻网标题}</h1> 
+     <p> <span>{关键词1}</span> <span>{人物名称}</span> <span>{当前时间}</span> </p> 
+    </div> 
+    <div class="newsdetail-box g-mt10"> 
+     <div class="newsdetail-text"> 
+      <p>{新闻网内容}</p> 
+     </div> 
+     <div class="mod-relationcar clearfix"> 
+      <a href="https:/{随机短字符}/{随机数字}/news/pcid-11">{关键词1}</a> 
+      <a href="https:/{随机短字符}/{随机数字}/news/cid-49">{随机关键词}</a> 
+      <a href="https:/{随机短字符}/{随机数字}/127821">{关键词1}</a> 
+     </div> 
+     <div class="mod-share bdsharebuttonbox"> 
+      <div class="share-box"> 
+       <span> <span>分享到</span> </span> 
+       <ul class="gb_resItms"> 
+        <li class="J_rcode_btn" data-src="//s.img16888.com/dist/images/carbad/share.png" data-ios="//s.img16888.com/dist/images/wap/news/iphone.png" data-android="//s.img16888.com/dist/images/wap/news/az.png"><a class="py"><i></i><p>朋友圈</p></a></li> 
+        <li class="J_rcode_btn" data-src="//s.img16888.com/dist/images/carbad/share.png" data-ios="//s.img16888.com/dist/images/wap/news/iphone.png" data-android="//s.img16888.com/dist/images/wap/news/az.png"><a class="wx"><i></i><p>微信好友</p></a></li> 
+        <li><a class="sl bds_tsina" href="javascript:;" data-cmd="tsina"><i></i><p>新浪微博</p></a></li> 
+        <li><a class="qq bds_qzone" href="javascript:;" data-cmd="qzone"><i></i><p>QQ空间</p></a></li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="ad g-mt10 J_detailAd"></div> 
+     <div class="mod-relevant g-mt10"> 
+      <div class="title"> 
+       <h3>延伸阅读</h3> 
+      </div> 
+      <div class="relevant-box"> 
+       <ul class="clearfix"> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15181131.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15181004.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15178745.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15177613.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15176405.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0906/15180664.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0906/15161003.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0906/15160870.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}eg" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0906/15160608.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0906/15159944.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0906/15159763.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0906/15159611.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0724/14823962.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+        <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0904/15139307.html"> 
+          <div class="pic"> 
+           <img src="{随机图片}" width="100%"> 
+          </div> <p>{标题}</p> </a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+     <div class="mod-comment J_commentNews g-mt10"> 
+      <div class="title"> 
+       <h3>网友评论</h3> 
+      </div> 
+      <div class="comment-box"> 
+       <div class="comment-review"> 
+        <textarea class="" rows="5" placeholder="我也来说两句！"></textarea> 
+        <div class="user clearfix"> 
+         <span class="img-url"></span> 
+         <span class="name-url">登录</span> 
+         <span class="login-url"></span> 
+         <a class="speech-review J_speech-review">发表</a> 
+         <span class="indexicon expression J_expressionBtn"></span> 
+        </div> 
+       </div> 
+      </div> 
+      <div class="comment-list"> 
+       
+       </div> 
+      </div> 
+     </div> 
+     <script type="text/html" id="J_comment_tmpl">
+    <%for(var i = 0; i < data.list.length; i++){%>
+        <li>
+            <div class="item clearfix">
+                <div class="pic">
+                    <a href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].user_id%>"><img src="<%=data.list[i].head%>" width="100%"></a>
+                </div>
+                <div class="text">
+                    <h4>
+                        <%if(data.list[i].sName != ''){%>
+                        <a href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].user_id%>"><%=data.list[i].username%><%=data.list[i].sName%></a>
+                        <%} else if(data.list[i].sIp != ''){%>
+                        <a href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].user_id%>"><%=data.list[i].username%><%=data.list[i].sIp%></a>
+                        <%} else{%>
+                        <a href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].user_id%>"><%=data.list[i].username%></a>
+                        <%}%>
+                    </h4>
+                    <p><%==data.list[i].contents%></p>
+                    <%if(data.list[i].reCommentid != undefined){%>
+                    <div class="mod-return">
+                        <div class="return-title clearfix">
+                            <div class="pic">
+                                <a class="adds" href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].reUserId%>"><img src="<%=data.list[i].reHead%>" width="100%"></a>
+                            </div>
+                            <h5>
+                                <%if(data.list[i].reName != ''){%>
+                                <a class="adds" href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].reUserId%>"><%=data.list[i].reUsername%><%=data.list[i].reName%></a>
+                                <%} else if(data.list[i].reIp != ''){%>
+                                <a class="adds" href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].reUserId%>"><%=data.list[i].reUsername%><%=data.list[i].reIp%></a>
+                                <%} else{%>
+                                <a class="adds" href="/{随机短字符}/{随机数字}/account/personalHome/uid-<%=data.list[i].reUserId%>"><%=data.list[i].reUsername%></a>
+                                <%}%>
+                            </h5>
+                        </div>
+                        <p><%==data.list[i].sContent%></p>
+                    </div>
+                    <%}%>
+                    <div class="bottom clearfix">
+                        <span><%=data.list[i].time%></span>
+                        <a href="javascript:;" class="J_replyOpen"><i class="indexicon"></i>回复</a>
+                        <a href="javascript:;" class="J_spot<%if(data.list[i].isLikes == 1){%> selected<%}%>" data-commentid="<%=data.list[i].commentid%>"><i class="indexicon"></i>赞(<em><%=data.list[i].support%></em>)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box g-hide">
+                <div class="comment-review">
+                    <textarea class="" rows="5" ;="" placeholder="我也来说两句！"></textarea>
+                    <div class="user clearfix">
+                        <span class="img-url"></span>
+                        <span class="name-url">登录中...</span>
+                        <%if (data.weixin == 0) {%>
+                        <span class="login-url"><a class="btn-logins J_btn-logins" href="javascript:void(0);">切换帐号</a></span>
+                        <%}%>
+                        <a class="speech-review J_reviewBtn" data-commentid="<%=data.list[i].commentid%>">回复</a>
+                        <span class="indexicon expression J_expressionBtn"></span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    <%}%>
+</script> 
+     <script type="text/html" id="J_face_tmpl">
+    <ul class="mod-face">
+        <li title="[微笑]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/0.gif"></li>
+        <li title="[嘻嘻]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/1.gif"></li>
+        <li title="[哈哈]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/2.gif"></li>
+        <li title="[可爱]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/3.gif"></li>
+        <li title="[可怜]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/4.gif"></li>
+        <li title="[挖鼻]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/5.gif"></li>
+        <li title="[吃惊]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/6.gif"></li>
+        <li title="[害羞]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/7.gif"></li>
+        <li title="[挤眼]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/8.gif"></li>
+        <li title="[闭嘴]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/9.gif"></li>
+        <li title="[鄙视]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/10.gif"></li>
+        <li title="[爱你]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/11.gif"></li>
+        <li title="[泪]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/12.gif"></li>
+        <li title="[偷笑]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/13.gif"></li>
+        <li title="[亲亲]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/14.gif"></li>
+        <li title="[生病]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/15.gif"></li>
+        <li title="[太开心]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/16.gif"></li>
+        <li title="[白眼]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/17.gif"></li>
+        <li title="[右哼哼]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/18.gif"></li>
+        <li title="[左哼哼]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/19.gif"></li>
+        <li title="[嘘]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/20.gif"></li>
+        <li title="[衰]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/21.gif"></li>
+        <li title="[委屈]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/22.gif"></li>
+        <li title="[吐]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/23.gif"></li>
+        <li title="[哈欠]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/24.gif"></li>
+        <li title="[抱抱]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/25.gif"></li>
+        <li title="[怒]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/26.gif"></li>
+        <li title="[疑问]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/27.gif"></li>
+        <li title="[馋嘴]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/28.gif"></li>
+        <li title="[拜拜]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/29.gif"></li>
+        <li title="[思考]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/30.gif"></li>
+        <li title="[汗]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/31.gif"></li>
+        <li title="[困]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/32.gif"></li>
+        <li title="[睡]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/33.gif"></li>
+        <li title="[钱]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/34.gif"></li>
+        <li title="[失望]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/35.gif"></li>
+        <li title="[酷]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/36.gif"></li>
+        <li title="[色]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/37.gif"></li>
+        <li title="[哼]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/38.gif"></li>
+        <li title="[鼓掌]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/39.gif"></li>
+        <li title="[晕]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/40.gif"></li>
+        <li title="[悲伤]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/41.gif"></li>
+        <li title="[抓狂]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/42.gif"></li>
+        <li title="[黑线]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/43.gif"></li>
+        <li title="[阴险]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/44.gif"></li>
+        <li title="[怒骂]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/45.gif"></li>
+        <li title="[互粉]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/46.gif"></li>
+        <li title="[心]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/47.gif"></li>
+        <li title="[伤心]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/48.gif"></li>
+        <li title="[猪头]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/49.gif"></li>
+        <li title="[熊猫]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/50.gif"></li>
+        <li title="[兔子]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/51.gif"></li>
+        <li title="[ok]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/52.gif"></li>
+        <li title="[耶]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/53.gif"></li>
+        <li title="[good]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/54.gif"></li>
+        <li title="[NO]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/55.gif"></li>
+        <li title="[赞]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/56.gif"></li>
+        <li title="[来]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/57.gif"></li>
+        <li title="[弱]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/58.gif"></li>
+        <li title="[草泥马]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/59.gif"></li>
+        <li title="[神马]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/60.gif"></li>
+        <li title="[囧]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/61.gif"></li>
+        <li title="[浮云]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/62.gif"></li>
+        <li title="[给力]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/63.gif"></li>
+        <li title="[围观]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/64.gif"></li>
+        <li title="[威武]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/65.gif"></li>
+        <li title="[奥特曼]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/66.gif"></li>
+        <li title="[礼物]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/67.gif"></li>
+        <li title="[钟]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/68.gif"></li>
+        <li title="[话筒]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/69.gif"></li>
+        <li title="[蜡烛]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/70.gif"></li>
+        <li title="[蛋糕]"><img src="//s.img16888.com/dist/images/wap/index/v2/face/71.gif"></li>
+    </ul>
+</script> 
+        
+     <div class="mod-hotnews g-mt10"> 
+        
+      <div class="title"> 
+       <h3>热门推荐</h3> 
+      </div> 
+      <div class="second-box"> 
+       <div class="second-cn"> 
+        <div class="relevant-box"> 
+            <ul class="clearfix"> 
+             <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15181131.html"> 
+               <div class="pic"> 
+                <img src="{随机图片}" width="100%"> 
+               </div> <p>{标题}</p> </a> </li> 
+             <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15181004.html"> 
+               <div class="pic"> 
+                <img src="{随机图片}" width="100%"> 
+               </div> <p>{标题}</p> </a> </li> 
+             <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15178745.html"> 
+               <div class="pic"> 
+                <img src="{随机图片}" width="100%"> 
+               </div> <p>{标题}</p> </a> </li> 
+             <li> <a href="http:/{随机短字符}/{随机数字}/news/2019/0909/15177613.html"> 
+               <div class="pic"> 
+                <img src="{随机图片}" width="100%"> 
+               </div> <p>{标题}</p> </a> </li> 
+              
+            </ul> 
+           </div>  
+        <a href="/news/" class="mores">返回首页查看更多精彩内容<i class="indexicon"></i></a> 
+       </div> 
+      </div> 
+     </div> 
+     <script type="text/html" id="J_hotnews_tmpl">
+    <%for (i = 0; i < data.list.length; i ++){%>
+        <li>
+            <a href="<%=data.list[i].simpleurl%>" class="clearfix">
+                <div class="pic g-fl">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" _src="<%=data.list[i].img%>_150c113.jpg" onerror="this.src='//i.img16888.com/default120.jpg'" width="100%">
+                </div>
+                <div class="text">
+                    <h3><%=data.list[i].shortTitle%></h3>
+                    <p class="clearfix"><span class="g-fl"><%=data.list[i].inDate%></span><span class="g-fr last"><i class="indexicon"></i><%=data.list[i].commentNum%></span></p>
+                </div>
+            </a>
+        </li>
+    <%}%>
+</script> 
+    </div> 
+   </div> 
+   <div class="mod-search"> 
+    <div class="search-box clearfix J_searchBox"> 
+     <div class="search-text g-fl"> 
+      <input type="text" placeholder="{标题}" disabled> 
+     </div> 
+     <div class="search-btn g-fr"> 
+      <input type="submit" value="搜索" class="indexicon"> 
+     </div> 
+    </div> 
+   </div> 
+   <script type="text/html" id="J_templSearch">
+    <div class="mod-search">
+    	<i class="indexicon close"></i>
+    	<form action="" method="get" id="J_topSearchForm">
+        <div class="search-box clearfix">
+            <div class="search-text g-fl">
+                <input type="text" id="headq" autocomplete="off" placeholder="请输入车型或品牌" />
+            </div>
+            <div class="search-btn g-fr">
+                <input type="submit" value="搜索" class="indexicon" />
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="mod-searchHistory mod-title">
+        <%if(data.historyStyle.length >　0){%>
+        <div class="title clearfix eliminate-box">
+            <h3>浏览历史</h3>
+            <a href="javascript:;" class="J_eliminate eliminate"><i class="indexicon"></i>清除</a>
+        </div>
+        <div class="searchHistory-box eliminate-box">
+            <ul class="clearfix">
+                <%for(var i = 0; i < data.historyStyle.length; i++){%>
+                <li><a href="/<%=data.historyStyle[i].styleId%>/"><%=data.historyStyle[i].styleName%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <%}%>
+        <%if(data.hotStyle.length >　0){%>
+        <div class="title clearfix">
+            <h3>热门车型</h3>
+            <a href="/auto/searchStyle/0-0-0-0-0-0-0-0-0-0-0-0-0-0-0" class="more">全部车型<i class="indexicon"></i></a>
+        </div>
+        <div class="searchHistory-box">
+            <ul class="clearfix">
+                <%for(var i = 0; i < data.hotStyle.length; i++){%>
+                <li><a href="/<%=data.hotStyle[i].styleId%>/"><%=data.hotStyle[i].styleName%></a></li>
+                <%}%>
+            </ul>
+        </div>
+        <%}%>
+    </div>
+    <div class="search-choice g-hide" id="search_inputlist">
+        <ul></ul>
+    </div>
+</script> 
+   
+   <div class="mod-footer"> 
+    <div class="footer-box" style="display: none;">
+     <a href="/" onclick="window.location.href='/'" class="first">网站首页</a>
+     <a href="/sitemap/" onclick="window.location.href='/sitemap/'" class="first">网站导航</a>
+     <a href="/contact/" onclick="window.location.href='/contact/'">联系我们</a>
+     <a href="/about/" onclick="window.location.href='/about/'" class="last">关于我们</a>
+    </div> 
+    <p>©{年} 网站名称<br>客服电话：0755-{随机8数字}</p> 
+   </div> 
+   <div class="mod-commentfixed"> 
+    <div class="mod-share g-hide "> 
+     <div class="share-box bdsharebuttonbox"> 
+      <ul class="gb_resItms"> 
+       <li class="J_rcode_btn" data-src="//s.img16888.com/dist/images/carbad/share.png" data-ios="//s.img16888.com/dist/images/wap/news/iphone.png" data-android="//s.img16888.com/dist/images/wap/news/az.png"><a class="py"><i></i><p>朋友圈</p></a></li> 
+       <li class="J_rcode_btn" data-src="//s.img16888.com/dist/images/carbad/share.png" data-ios="//s.img16888.com/dist/images/wap/news/iphone.png" data-android="//s.img16888.com/dist/images/wap/news/az.png"><a class="wx"><i></i><p>微信好友</p></a></li> 
+       <li><a class="sl bds_tsina" href="javascript:;" data-cmd="tsina"><i></i><p>新浪微博</p></a></li> 
+       <li><a class="qq bds_qzone" href="javascript:;" data-cmd="qzone"><i></i><p>QQ空间</p></a></li> 
+      </ul> 
+     </div> 
+     <div class="cancel"> 
+      <a href="javascript:;" class="J_cancelBtn">取消</a> 
+     </div> 
+    </div> 
+     
+    </div> 
+    <div class="comment-box g-hide"> 
+     <div class="commentfixed-title">
+      <span>评论</span>
+      <button class="layermend"></button>
+     </div> 
+     <div class="comment-review"> 
+      <textarea class="" rows="5" placeholder="我也来说两句！"></textarea> 
+      <div class="user clearfix"> 
+       <span class="img-url"></span> 
+       <span class="name-url">登录中...</span> 
+       <span class="login-url"></span> 
+       <a class="speech-review J_speech-review">发表</a> 
+       <span class="indexicon expression J_expressionBtn"></span> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="/static/pd10_16888/js/jweixin-1.0.0.js"></script> 
+  <script type="text/javascript" src="/?"></script> 
+  <script type="text/javascript" src="/static/pd10_16888/js/hash.js,mconfig.js"></script> 
+  <script type="text/javascript">
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script> 
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1255897428'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.php%3Fid%3D1255897428' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+  <script type="text/javascript">
+        var currentNewsid = '15181131';
+    var __contentDivClass = 'newsdetail-text';
+    var _urlXl = '';
+            seajs.use('wap_news_v2_detailNew', function(c) {
+            c.init();
+            
+        });
+    
+</script>  
+ </body>
+</html>

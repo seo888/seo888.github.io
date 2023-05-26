@@ -1,0 +1,1 @@
+var IMG_URL="http://img.taihainet.com/",UPLOAD_URL="http://upload.taihainet.com/",APP_URL="http://app.taihainet.com/",WWW_URL="http://www.taihainet.com/",SPACE_URL="http://space.taihainet.com/",COOKIE_PRE="YWNmOG_",COOKIE_DOMAIN=".taihainet.com",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";

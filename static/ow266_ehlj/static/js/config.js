@@ -1,0 +1,1 @@
+var DTPath = "http://www.ehlj.cn/";var DTMob = "http://www.ehlj.cn/mobile/";var SKPath = "http://www.ehlj.cn/skin/default/";var MEPath = "http://www.ehlj.cn/member/";var DTEditor = "kindeditor";var CKDomain = "";var CKPath = "/";var CKPrex = "czm_";

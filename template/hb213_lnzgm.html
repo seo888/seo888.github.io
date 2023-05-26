@@ -1,0 +1,691 @@
+<!doctype html>
+
+<head>
+
+<meta name="publisher" content="Tibet.cn">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+
+<meta name="filetype" content="0"> 
+
+<meta name="publishedtype" content="1"> 
+
+<meta name="pagetype" content="2"> 
+
+<meta name="catalogs" content="s_56"> 
+
+<link rel="shortcut icon" href="/{随机字符}/{随机字符}/news/guoji/2020/0924/favicon.ico" type="image/x-icon">
+
+<link href="/_/static/hb213_lnzgm/static/css/base.css" rel="stylesheet" type="text/css">
+
+<link href="/_/static/hb213_lnzgm/static/css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="/_/static/hb213_lnzgm/static/js/terminator2.2.min.js"></script>
+
+<script type="text/javascript" src="/_/static/hb213_lnzgm/static/js/jquery-1.8.3.min.js"></script>
+
+<script type="text/javascript" src="/_/static/hb213_lnzgm/static/js/koala.min.1.5.js"></script>
+
+<script src="/_/static/hb213_lnzgm/static/js/common.js"></script>
+
+<script src="/_/static/hb213_lnzgm/static/js/unslider.min.js"></script>
+
+<script type="text/javascript" src="/_/static/hb213_lnzgm/static/js/bravoPlayer.js"></script>
+
+</head>
+
+<body>
+
+
+
+<!--头部开始-->
+
+<script type="text/javascript" src="/_/static/hb213_lnzgm/static/js/chinese.js"></script>
+
+<script type="text/javascript">
+
+	 window.onload=function(){
+
+	 	getDateStr();
+
+        getZlStr();
+
+	 }
+
+</script>
+
+
+
+<script type="text/javascript">
+
+ function getDateStr(){
+
+	    var weekString="日一二三四五六";
+
+	  	var time=new Date();
+
+	  	var year=time.getYear();
+
+	  	if(year<1900){year+=1900; }
+
+	  	var month=time.getMonth();
+
+	  	var date=time.getDate();
+
+                month=month+1;
+
+	  	month<10?month='0'+month:month;
+
+	  	date<10?date='0'+date:date;
+
+	  	
+
+	  	var DateString=year+"年"+month+"月"+date+"日"+"&nbsp;&nbsp;&nbsp;星期"+weekString.charAt(time.getDay()); 
+
+	  	document.getElementById("dateSpan").innerHTML=DateString;
+
+	     //document.write(DateString);
+
+	     setTimeout("getDateStr();",24*60*60*1000);
+
+}
+
+</script>
+
+
+
+<a href="#" id="back-to-top" class="toTop"></a>
+
+<div class="header">
+
+<div class="top">
+    	<div class="wrap">
+    	<div class="left langs">
+        	<a href="{泛站内链}" id="zh_click_s">中文版</a><a href="{泛站内链}" id="zh_click_t">中文繁体</a>
+            
+            
+        </div>
+        <div class="right">
+
+        	<span class="ico1" onclick="SetHome(this,'http://www.lnzgm.com/');"></span>
+
+            <span class="ico2" onclick="AddFavorite('辽宁之窗-中国辽宁新闻门户','http://www.lnzgm.com/')"></span>
+
+            <a href="{泛站内链}" target="_blank" class="zs">站内搜索</a>
+
+        </div>
+
+        </div>
+
+    </div>
+
+    <div class="mid wrap">
+
+    
+
+        <div class="mid_search">
+
+            <div class="search">
+
+                <form action="http://www.lnzgm.com/index.php" method="get" target="_blank">
+
+                           <input type="hidden" name="m" value="search">
+
+				<input type="hidden" name="c" value="index">
+
+				<input type="hidden" name="a" value="init">
+
+				<input type="hidden" name="typeid" value="" id="typeid">
+
+				<input type="hidden" name="siteid" value="1" id="siteid">
+
+                              <input type="text" class="txt" placeholder="请输入关键词" name="q" id="q">
+
+                <input type="button" class="btn" onclick="document.searchform.submit();" name="searchsubmit">				
+
+		</form>
+
+            </div>
+
+            <div class="date">
+
+<span id="dateSpan" style="float:left;line-height:30px;margin-right:28px;">
+
+            
+
+<!-- 阳历 -->
+
+
+
+</span>
+
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+    <div class="nav">
+
+    <div class="wrap">
+<a href='{泛站内链}'>首页</a>
+
+				
+    	<a href='{泛站内链}' target="_blank">新闻</a>
+
+
+    	<a href='{泛站内链}' target="_blank">财经</a>
+
+
+    	<a href='{泛站内链}' target="_blank">娱乐</a>
+
+
+    	<a href='{泛站内链}' target="_blank">文化</a>
+
+
+    	<a href='{泛站内链}' target="_blank">旅游</a>
+
+
+    	<a href='{泛站内链}' target="_blank">教育</a>
+
+
+    	<a href='{泛站内链}' target="_blank">生活</a>
+
+
+    	<a href='{泛站内链}' target="_blank">体育</a>
+
+
+    	<a href='{泛站内链}' target="_blank">科技</a>
+
+
+    	<a href='{泛站内链}' target="_blank">图库</a>
+
+
+    	<a href='{泛站内链}' target="_blank">法治</a>
+
+
+    	<a href='{泛站内链}' target="_blank">汽车</a>
+
+
+    	<a href='{泛站内链}' target="_blank">生态</a>
+
+
+    	<a href='{泛站内链}' target="_blank">文史</a>
+
+
+    	<a href='{泛站内链}' target="_blank">健康</a>
+
+
+				   
+    </div>
+
+    </div>
+
+</div>
+
+<!--头部结束--><div class="wrap">
+
+<div class="cur">
+
+    	<a href="{泛站内链}" target="_blank" class="CurrChnlCls">首页</a>&nbsp;&gt;&nbsp;<a href="{泛站内链}">新闻</a> > <a href="{泛站内链}">{关键词1}</a> > 
+    </div>
+
+<div class="content">
+
+    	<div class="title_box">
+
+            <h2>{关键词1}{随机后缀}{新闻网标题}</h2>
+
+            <div class="info">
+
+        <span>{当前时间}</span><span>编辑：{人物名称}</span></div>
+
+            <div class="share">
+
+            	
+
+                <div class="bshare-custom icon-medium-plus"><div class="bsPromo bsPromo2"></div><a title="分享到" href="{泛站内链}" id="bshare-shareto" class="bshare-more" style="font-size:12px;color:#606060">分享到</a><a title="分享到微信" class="bshare-weixin" href="{泛站内链};"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到QQ空间" class="bshare-qzone" href="{泛站内链};"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div><script type="text/javascript" src="/_/static/hb213_lnzgm/static/js/buttonLite.js"></script><script type="text/javascript" src="/_/static/hb213_lnzgm/static/js/bshareC0.js"></script>
+
+            </div>
+
+        </div>
+
+        <div class="left">
+
+        	<div class="text botborder" id="text">
+
+
+				<span style="color: rgb(102, 102, 102); font-family: &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Open Sans&quot;, &quot;Hiragino Sans GB&quot;, Arial, Verdana, Tahoma, sans-serif; font-size: 16px;">{句子}</span>
+<p style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Open Sans&quot;, &quot;Hiragino Sans GB&quot;, Arial, Verdana, Tahoma, sans-serif; vertical-align: baseline; color: rgb(102, 102, 102);">　　</p>
+<center style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Open Sans&quot;, &quot;Hiragino Sans GB&quot;, Arial, Verdana, Tahoma, sans-serif; vertical-align: baseline; color: rgb(102, 102, 102);">
+	<img alt="{标题}" src="{随机图片}" style="margin: 0px; padding: 0px; border: 0px; font: inherit; vertical-align: baseline; max-width: 100%; height: 399px; width: 599px;"></center>
+<p style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 16px; line-height: inherit; font-family: &quot;Microsoft YaHei&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Open Sans&quot;, &quot;Hiragino Sans GB&quot;, Arial, Verdana, Tahoma, sans-serif; vertical-align: baseline; color: rgb(102, 102, 102);">&nbsp;</p>
+<p>{新闻网内容}</p>
+
+
+				
+                
+
+			
+                       <div class="editor">（责编： {人物名称}）</div>
+
+<div class="clear"></div>
+
+<div id="SGOContentPage" class="SiteGeneralContentPage" style="margin-top:15px;">
+
+
+                  </div>
+
+                  
+
+                      <div class="content_banquan">
+
+                        <p><span class="strong">版权声明：</span>凡注明“来源：“{关键词1}”的所有作品，版权归{网站名称}-{关键词1}所有。任何媒体转载、摘编、引用，须注明来源{网站名称}-{关键词1}门户和署著作者名，否则将追究相关法律责任。</p>
+
+                      </div>
+
+            </div>
+
+            <div class="listnews">
+
+            	<div class="title1"><h3><a href="{泛站内链}">相关阅读</a></h3></div>
+
+                <ul>
+
+
+              
+          
+                </ul>
+
+            </div>
+
+</div>
+
+		<!--右侧开始-->
+
+<div class="right">
+
+        	<div class="rdzt" style="margin-top:20px;">
+
+                	<div class="title1"><h3><a href="{泛站内链}" target="_blank">财经推荐</a><div class="right_bg"></div></h3></div>
+
+                        <div class="rd_banner">
+
+						
+
+						<a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt=""></a>
+
+						
+
+                    	
+
+                        <div class="rd_slide banner has-dots" id="b01" style="width: 280px; padding-top: 0px; height: 0px; overflow: hidden;">
+
+                        <ul style="width: 0%; position: relative; overflow: hidden; left: 0%; ">
+
+                        
+
+                        <li><a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt=""></a></li>
+
+                        
+
+                        <li><a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt=""></a></li>
+
+                        
+
+                        </ul>
+
+                        
+
+                        <ol class="dots"></ol></div>
+
+                        <script>
+
+                        $(document).ready(function(e) {
+
+                            $('#b01').unslider({
+
+                                dots: true
+
+                            });
+
+                        });
+
+                        </script>  
+
+
+
+						<div class="list_zt">			
+
+                        <ul>
+
+
+						
+
+						<li><span class="dot"></span><a href="" target="_blank">{标题}</a></li>
+
+						
+
+						<li><span class="dot"></span><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+
+						
+
+						<li><span class="dot"></span><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+						
+
+						<li><span class="dot"></span><a href="{泛站内链}" target="_blank">{关键词1}</a></li>
+
+						
+
+						<li><span class="dot"></span><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+
+
+                        </ul>
+
+                        
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                
+
+                <div class="cx_banner botborder noborder" style="padding-bottom:32px;margin-top:20px;">
+
+                	<a href="{泛站内链}" target="_blank" style="margin-bottom:0"><img src="{随机图片}"></a>
+
+                </div>
+
+                 <div class="block_r botborder noborder">
+
+            	<div class="title1"><h3><a href="{泛站内链}" target="_blank">旅游</a></h3></div>
+
+
+
+                                                <div class="pic_box"><div class="pic"><a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt="{标题}"></a></div><div class="bg"></div><span><a href="{泛站内链}" target="_blank">中国高速公路跨内陆湖</a></span></div>
+
+
+                                     
+
+
+
+<div class="txt">
+
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{关键词1}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+
+
+							
+
+
+
+  </div>                
+
+  				</div>      
+
+                <div class="block_r botborder noborder">
+
+            	<div class="title1"><h3><a href="{泛站内链}" target="_blank">教育</a></h3></div>
+
+
+
+                                                <div class="pic_box"><div class="pic"><a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt="{标题}"></a></div><div class="bg"></div><span><a href="{泛站内链}" target="_blank">中国科研人员发现新型</a></span></div>
+
+
+                                     
+
+
+
+<div class="txt">
+
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{关键词1}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+
+
+							
+
+
+
+  </div>                
+
+  				</div>  
+
+                <div class="block_r botborder noborder">
+
+            	<div class="title1"><h3><a href="{泛站内链}" target="_blank">文史</a></h3></div>
+
+
+
+                                                <div class="pic_box"><div class="pic"><a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt="{标题} "></a></div><div class="bg"></div><span><a href="{泛站内链}" target="_blank">使双刀的京剧演员郭凡</a></span></div>
+
+
+                                     
+
+
+
+<div class="txt">
+
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{标题}</a>
+
+                    		
+
+                        	<a href="{泛站内链}" target="_blank">{关键词1}</a>
+
+
+
+							
+
+
+
+  </div>                
+
+  				</div>
+
+<div class="block_r noborder">
+
+            		<div class="title1"><h3><a href="{泛站内链}" target="_blank">最新资讯</a></h3></div>
+
+                	<!--  滚动新闻开始 -->
+
+                    <div id="mooc"> 
+
+                    <!--  中间 -->
+
+                    <div id="moocBox" style="height:160px;">
+
+                        <ul id="con1" class="txt">
+
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{关键词1}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{关键词1}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+                           
+
+                            <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+
+
+  
+
+                        </ul>
+
+                        <ul id="con2" class="txt">
+
+                        </ul>
+
+                    </div>
+
+                    <!--  中间结束 --> 
+
+                    </div>
+
+                    <!--  滚动新闻结束 --> 
+
+                    
+
+                    <script type="text/javascript">
+
+                     var area = document.getElementById('moocBox');
+
+                     var con1 = document.getElementById('con1');
+
+                     var con2 = document.getElementById('con2');
+
+                     var speed = 50;
+
+                     area.scrollTop = 0;
+
+                     con2.innerHTML = con1.innerHTML;
+
+                     function scrollUp(){
+
+                         if(area.scrollTop >= con1.scrollHeight) {
+
+                             area.scrollTop = 0;
+
+                             }else{
+
+                               area.scrollTop ++; console.log(area.scrollTop);
+
+                             } 
+
+                    }
+
+                    var myScroll = setInterval("scrollUp()",speed);
+
+                    area.onmouseover = function(){
+
+                         clearInterval(myScroll);
+
+                        }
+
+                    area.onmouseout = function(){
+
+                         myScroll = setInterval("scrollUp()",speed);
+
+                        }
+
+                     </script>
+
+  				</div>
+
+<!--右侧结束-->            
+
+               
+
+        </div>
+
+    </div>
+
+	</div>
+
+<script language="JavaScript" src="http://www.lnzgm.com/api.php?op=count&id=1104&modelid=1"></script>
+
+
+<div class="footer">
+	
+    <div class="info">
+    	<h1><a href="{泛站内链}"><img src="{随机图片}"></a></h1>
+        <div class="txt">
+        	<p>
+			<span><a href="{泛站内链}" target="_blank">关于我们</a></span><span>|</span>
+			<span><a href="{泛站内链}" target="_blank">联系方式</a></span><span>|</span>
+			<span><a href="{泛站内链}" target="_blank">版权声明</a></span><span>|</span>
+			<span><a href="{泛站内链}" target="_blank">免责声明</a></span><span>|</span>
+			</p>
+            <p>{关键词1}版权所有，未经书面授权禁止使用</p>
+            <p class="arial">{关键词1}主办&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;版权所有：{关键词1}  Copyright &copy; {年} by {域名库} All Rights Reserved</p>
+           
+            <p class="arial">广播电视节目制作经营许可证 （京）字第{随机5数字}号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备 {随机8数字}&nbsp;&nbsp;京公网安备{随机9数字}-1</p>
+        </div>
+    </div>
+</div>
+
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>

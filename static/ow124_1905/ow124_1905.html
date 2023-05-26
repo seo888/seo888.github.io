@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie6 ielt8"><![endif]-->
+<!--[if IE 7]><html class="ie7 ielt8"><![endif]-->
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]>
+<html>
+<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="/static/ow124_1905/static/css/css.css">
+    <style>
+        #contentNews h1{
+            line-height:58px!important;
+            padding:26px 0 2px!important;
+        }
+        .news-center{
+            text-align:center!important;
+        }
+        .news-red{
+            color:#cd0100!important;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    (function () {
+        if (/Android|Windows Phone|webOS|iPad|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            var nowUrl = window.location.href;
+            var url = "{当前url}";
+            var index = nowUrl.indexOf('?');
+            if (index != -1) {
+                url += nowUrl.substring(index);
+            }
+            window.location.href = url;
+        }
+    })();
+</script>
+<script>
+    function isMobile() { for (var ua = window.navigator.userAgent, b = ["iPad", "Android", "iPhone", "iPod"], c = !1, d = 0, e = b.length; d < e; d++) if (-1 !== ua.indexOf(b[d])) { c = !0; break } return c; }
+    if (!isMobile()) {
+        document.write('<link rel="stylesheet" href="//static.m1905.cn/assets/news/css/common-hd-pc.css">');
+        document.write('<link rel="stylesheet" href="//static.m1905.cn/assets/news/css/details_pc20190723.css">');
+    } else {
+        document.write('<link rel="stylesheet" href="//static.m1905.cn/assets/news/css/common-hd-mobile.css">');
+        document.write('<link rel="stylesheet" href="//static.m1905.cn/assets/news/css/details.css?t=20151021">');
+    }
+</script>
+<!-- 新版导航头开始-->
+<script>
+    var MPAGECONFIG = {
+        nav_type: 'news_page',//导航类型
+        page_tag: 'www_news_page',//页面标签
+        version:'1',//版本名称
+        nav_mcategory:'1091'
+    }
+</script>
+<script src="/static/ow124_1905/static/js/js.js"></script>
+<script>
+    (function(){
+        if(/Android|Windows Phone|webOS|iPad|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+            document.write('<link href="//css.static.m1905.cn/navigation_all/navigation_1905all_mobile.css" type="text/css" rel="stylesheet"\/>');
+            document.write('<script src="//static.m1905.cn/https/js/navigation_all/navigation_1905all_mobile_20190410.min.js"><\/script>');
+        }else{
+            document.write('<link href="//css.static.m1905.cn/navigation_all/navigation_1905all.css" type="text/css" rel="stylesheet"\/>');
+            document.write('<script src="//static.m1905.cn/https/js/navigation_all/navigation_1905all_20190410.min.js"><\/script>');
+        }
+    })();
+</script>
+<div class="navigation_1905all navigation_1905all_nophone">
+    <div class="navigation_channelpage">
+        <div class="m_yahei f13 nav_top_1905all nav_top_normal_1905all">
+            <div class="wrapper_nav_1905all clearfix_smile">
+                <ul class="fr menu">
+                    <li class="fl ele_menu member login_n" data-role="member_nav_all" data-position="top" data-type="link"></li><li class="fl ele_menu member login_y" data-role="member_nav_all">
+                    <a class="btn_ele_menu" href="javascript:void(0)"><span class="name"></span><b class="icons_il icon_arrow"></b></a>
+                    <div class="border_radius_4 con_ele_menu con_member"></div>
+                </li><li class="fl ele_menu message" data-role="message_nav_all">
+                    <a class="btn_ele_menu" href="javascript:void(0)">消息<b class="icons icon_hasMessage"></b></a>
+                    <div class="border_radius_4 con_ele_menu con_message">
+                        <b class="icons icon_arrow"></b>
+                        <ul class="f13 mlist list_message"></ul>
+                    </div>
+                </li>
+                </ul>
+                <ul class="nav_smile clearfix_smile">
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="首页">首页</a>
+                    </li>
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="新闻">新闻</a>
+                    </li>
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="视频">视频</a>
+                    </li>
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="大片">大片</a>
+                    </li>
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="影库">影库</a>
+                    </li>
+                    <!-- <li class="fl ele_nav">
+                        <a class="btn_ele_nav" href="http://www.1905.com/yx/" target="_blank" title="购票">购票</a>
+                    </li> -->
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="CCTV6">CCTV6</a>
+                    </li>
+                    <li class="fl ele_nav hidden_v">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="1905VIP影院">VIP影院</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper_nav_1905all">
+            <div class="nav_ultimate_1905all clearfix_smile">
+                <ul class="fr menu hidden_h">
+                    <li class="fl ele_menu popsearch hidden_h" data-role="popupsearch_nav_all">
+                        <a class="btn_ele_menu" href="javascript:void(0)"><b class="icons_il icon_ele_menu icon_popsearch"></b><br>搜索</a>
+                        <div class="border_radius_4 con_ele_menu con_popsearch">
+                            <b class="icons icon_arrow"></b>
+                            <div class="fl f13 search_smile hidden_v">
+                                <form method="get" name="search_box" action="https://www.1905.com/search/" target="_blank">
+                                    <div class="fl txt_search">
+                                        <input class="txt" type="text" autocomplete="off" name="q" maxlength="100">
+                                    </div>
+                                    <input class="icons txt_hidden btn_search" type="submit" value="搜索">
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="fr f13 search_smile hidden_v" data-role="search_nav_all">
+                    <form method="get" name="search_box" action="https://www.1905.com/search/" target="_blank">
+                        <div class="fl txt_search">
+                            <input class="txt" type="text" autocomplete="off" name="q" maxlength="100">
+                            <input type="text" style="display:none;">
+                            <div class="txt tip_search"></div>
+                            <ul class="list_search">
+                            </ul>
+                        </div>
+                        <input class="icons txt_hidden btn_search" type="button" value="搜索">
+                    </form>
+                </div>
+                <div class="icons logo_home">
+                    <a class="fl txt_hidden"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="1905电影网 国家新闻出版广电总局直属媒体">1905电影网</a>
+                </div>
+                <!-- <div class="fl logo_channel logo_channel_news" id="hzlogo"></div> -->
+                <a class="fl logo_channel logo_channel_news" id="hzlogo"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank"></a>
+                <ul class="fl f15 nav_smile">
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="电影">电影</a>
+                    </li>
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="星闻">星闻</a>
+                    </li>
+                    <li class="fl ele_nav">
+                        <a class="btn_ele_nav"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="独家">独家</a>
+                    </li>
+                    <li class="fl ele_nav popup_ele_nav" data-role="hoverShow_nav_all">
+                        <a class="btn_ele_nav btn_popup" href="javascript:void(0)">更多<b class="icons_il icon_arrow"></b></a>
+                        <div class="border_radius_4 center_a con_popup">
+                            <b class="icons icon_arrow"></b>
+                            <ul>
+                                <li>
+                                    <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="专题">专题</a>
+                                </li>
+                                <li>
+                                    <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="图片">图片</a>
+                                </li>
+                                <li>
+                                    <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="视频">视频</a>
+                                </li>
+                                <li>
+                                    <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="滚动">滚动</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navigation_1905all navigation_1905all_phone">
+    <div class="navigation_channelpage">
+        <div class="header_1905all">
+            <div class="inner_header_1905all clearfix_smile">
+                <ul class="fr menu">
+                    <li class="fl" data-role="navbtn_nav_mobile">
+                        <a class="icons btn btn_nav" href="javascript:void(0)"></a>
+                        <b class="icons icon_arrow"></b>
+                    </li>
+                    <li class="fl" data-role="searchbtn_nav_mobile">
+                        <a class="icons btn btn_search" href="javascript:void(0)"></a>
+                        <b class="icons icon_arrow"></b>
+                    </li>
+                    <li class="fl" data-role="member_nav_mobile"></li>
+                </ul>
+                <ul class="fl menu menu_front">
+                    <li class="fl">
+                        <a class="icons btn btn_back"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank"></a>
+                    </li>
+                </ul>
+                <div class="fl logo_home logo_home_s"><a class="icons txt_hidden"  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" title="1905电影网 国家新闻出版广电总局直属媒体">1905电影网</a></div>
+                <div class="fl logo_channel">
+                    <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank"><img class="fl" src="static/picture/img_logo_channel_news_phone.png" width="33" height="15" alt="新闻"></a>
+                </div>
+            </div>
+            <div class="border_box popupcon con_search" data-role="searchcon_nav_mobile">
+                <form method="get" name="search_box" action="https://www.1905.com/search/" target="_blank">
+                    <input class="border_box border_radius_4" type="text" name="q"><input type="submit" value="搜索">
+                </form>
+            </div>
+            <div class="center_a border_box popupcon con_nav" data-role="navcon_nav_mobile">
+	<ul class="clearfix">
+		<li class="fl"><a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">首页</a></li>
+		<li class="fl"><a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">新闻</a></li>
+		<!--<li class="fl"><a href="https://www.1905.com/video/" target="_blank">视频</a></li>-->
+		<li class="fl"><a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">大片</a></li>
+		<li class="fl"><a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">影库</a></li>
+		<li class="fl"><a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">CCTV6</a></li>
+		<li class="fl" style="width:21%"><a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">VIP影院</a></li>
+		<li class="fl"><a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">客户端</a></li>
+		
+	</ul>
+</div>
+
+        </div>
+    </div>
+</div>
+<script>
+    if(window.jQuery){
+        init_nav_1905all('news_inner');
+    }else{
+        if(window.addEventListener){
+            window.addEventListener('load',function(){
+                init_nav_1905all('news_inner');
+            },false);
+        }else if(window.attachEvent){
+            window.attachEvent('onload',function(){
+                init_nav_1905all('news_inner');
+            });
+        }
+    }
+</script><!-- 新版导航头结束-->
+<div id="page" data-idx="0_news">
+    <!-- 内容区域 start -->
+    <script>
+        var groupid = "1618859";
+        var NEWSCONFIG = {
+            id: "1618859",
+            url: "{当前url}",
+            title : "{自定义标题}",
+            thumb : "{当前主域名}"
+        }
+    </script>
+    <div class="container" id="content">
+        <div class="mod mod-main">
+            <div class="mod-l grid-12x-md mod-main-width">
+                <!-- 正文 start-->
+                <div id="contentNews" class="mod-content">
+                    <h1 class="title  ">{关键词1}{随机后缀}{新闻网标题}</h1>
+                    <div class="pic-base clear">
+                        <span>时间：{年月日}</span>
+                        <span class="pic-source">来源：{关键词1}</span>                                                <span class="autor-name fr">作者：{人物名称}</span>
+                                                <span class="share clear hidden-xs hidden-sm">
+                            <q class="fl">分享到：</q>
+                            <div class="bshare-custom" style="float:left;margin-top: -2px;">
+                                <!--<a title="分享到QQ空间" class="bshare-qzone"></a>
+                                <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>-->
+                                <a title="分享到微信" class="bshare-weixin"></a>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="pic-content">
+                        <!--插入关联视频开始-->
+                                                <!--插入关联视频结束-->
+                        <!--插入关联图集开始-->
+                                                <!--插入关联图集结束-->
+                        <p style="text-indent: 2em; text-align: left;">{新闻网内容}{新闻网内容}</p>
+                        
+                                        </div>
+                    <!-- 分页 start-->
+                                        <!-- 分页 end-->
+                    <div class="pic-other clear">
+                        <span class="share clear">
+                            <q class="fl">分享到：</q>
+                            <div class="bshare-custom" style="float:left;margin-top: -2px;">
+                                <!--<a title="分享到QQ空间" class="bshare-qzone"></a>
+                                <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>-->
+                                <a title="分享到微信" class="bshare-weixin"></a>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <!-- 正文 end-->
+            </div>
+        </div>
+    </div>
+    <!-- 内容区域 end -->
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="footer-inner" style="width:1000px">
+        <h3 class="homeico footer-inner-logo"></h3>
+        <p class="footer-inner-links">
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">关于我们</a><span>|</span>
+            <a  href="http://{当前域名}/sitemap.xml"  target="_blank" data-hrefexp="fr=homepc_bottom">网站地图</a><span>|</span>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">诚聘英才</a><span>|</span>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">版权声明</a><span>|</span>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">联系我们</a><span>|</span>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">帮助与反馈</a><span>|</span>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">友情链接</a><span>|</span>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">CCTV6广告招商</a><!--<span>|</span>
+            <a href="javascript:void(0)">合作媒体</a>-->
+        </p>
+        <div class="footer-inner-bottom">
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">网络视听许可证{随机8数字}号</a>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">出版物经营许可证</a>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">经营性演出许可证</a>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">广播电视节目制作经营许可证</a><br>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">企业法人营业执照</a>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">增值电信业务经营许可证</a>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">京ICP备{随机8数字}号</a>
+            <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank">京公网安备 110{随机8数字}300号</a>
+        </div>
+    </div>
+</div>
+<!-- 版权 -->
+<div class="copy-right">
+    <div class="copy-right-conts" style="width:1000px">
+        <div class="right-conts-left">
+            <span>CopyRight © {年}</span>
+            <em>{网站名称}官方网站</em><em class="conts-left-margin">|</em>
+            <em>
+                <a  href="/{随机字符}/{随机数字}_{随机数字}.html"  target="_blank" data-hrefexp="fr=homepc_bottom">京ICP证10{随机4数字}</a>
+            </em>
+        </div>
+    </div>
+</div>
+
+<script src="/static/ow124_1905/static/js/js.js"></script>
+<script src="/static/ow124_1905/static/js/seed_v2.js"></script>
+<script src="/static/ow124_1905/static/js/app.lite_20190411.min.js"></script>
+<script src="/static/ow124_1905/static/js/bootstrap.min.js"></script>
+<script>M.config({ baseUrl: 'https://js.static.m1905.cn/' });</script>
+<script>
+    M.bootstrap = {
+        'js': [{
+            'path': 'https://static.m1905.cn/https/assets/news/js/index_bigNews_20190709.min.js',
+            'platform': ['desktop']
+        }, {
+            'path': 'https://static.m1905.cn/https/assets/news/js/details_20190709.min.js'
+        }, {
+            'path': 'https://static.m1905.cn/assets/news/js/index_bigNews_mobile_compress20180823.min.js',
+            'platform': ['phone', 'tablet']
+        }]
+    }
+</script>
+<script>
+    (function () {
+        var head = document.head || document.getElementsByTagName('head')[0];
+
+        function write(content) {
+            document.write(content);
+        }
+
+        function addMeta(name, content) {
+            var meta = document.createElement('meta');
+
+            meta.setAttribute('name', name);
+            meta.setAttribute('content', content);
+            head.appendChild(meta);
+        }
+
+        var options = M.bootstrap,
+                scripts = options.js || [],
+                styleSheets = options.css || [],
+                i, ln, path, platform, theme, exclude;
+
+        if (options.platform && options.platforms && options.platforms[options.platform] && options.platforms[options.platform].js) {
+            scripts = options.platforms[options.platform].js.concat(scripts);
+        }
+
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style");
+            msViewportStyle.appendChild(
+                    document.createTextNode(
+                            "@media screen and (orientation: portrait) {" +
+                            "@-ms-viewport {width: 320px !important;}" +
+                            "}" +
+                            "@media screen and (orientation: landscape) {" +
+                            "@-ms-viewport {width: 560px !important;}" +
+                            "}"
+                    )
+            );
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+        }
+
+        //addMeta('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no');
+        addMeta('apple-mobile-web-app-capable', 'yes');
+        addMeta('apple-touch-fullscreen', 'yes');
+
+        if (!window.M) {
+            window.M = {};
+        }
+        M.microloaded = true;
+
+        var filterPlatform = window.M.filterPlatform = function (platform) {
+            var profileMatch = false,
+                    ua = navigator.userAgent,
+                    j, jln;
+
+            platform = [].concat(platform);
+
+            function isPhone(ua) {
+                var isMobile = /Mobile(\/|\s)/.test(ua);
+
+                // Either:
+                // - iOS but not iPad
+                // - Android 2
+                // - Android with "Mobile" in the UA
+
+                return /(iPhone|iPod)/.test(ua) ||
+                        (!/(Silk)/.test(ua) && (/(Android)/.test(ua) && (/(Android 2)/.test(ua) || isMobile))) ||
+                        (/(BlackBerry|BB)/.test(ua) && isMobile) ||
+                        /(Windows Phone)/.test(ua);
+            }
+            function isTablet(ua) {
+                return !isPhone(ua) && (/iPad/.test(ua) || /Android|Silk/.test(ua) || /(RIM Tablet OS)/.test(ua) ||
+                        (/MSIE 10/.test(ua) && /; Touch/.test(ua)));
+            }
+            // Check if the ?platform parameter is set in the URL
+            var paramsString = window.location.search.substr(1),
+                    paramsArray = paramsString.split("&"),
+                    params = {},
+                    testPlatform, i;
+
+            for (i = 0; i < paramsArray.length; i++) {
+                var tmpArray = paramsArray[i].split("=");
+                params[tmpArray[0]] = tmpArray[1];
+            }
+            testPlatform = params.platform;
+            if (testPlatform) {
+                return platform.indexOf(testPlatform) != -1;
+            }
+            for (j = 0, jln = platform.length; j < jln; j++) {
+                switch (platform[j]) {
+                    case 'phone':
+                        profileMatch = isPhone(ua);
+                        break;
+                    case 'tablet':
+                        profileMatch = isTablet(ua);
+                        break;
+                    case 'desktop':
+                        profileMatch = !isPhone(ua) && !isTablet(ua);
+                        break;
+                    case 'ios':
+                        profileMatch = /(iPad|iPhone|iPod)/.test(ua);
+                        break;
+                    case 'android':
+                        profileMatch = /(Android|Silk)/.test(ua);
+                        break;
+                    case 'blackberry':
+                        profileMatch = /(BlackBerry|BB)/.test(ua);
+                        break;
+                    case 'safari':
+                        profileMatch = /Safari/.test(ua) && !(/(BlackBerry|BB)/.test(ua));
+                        break;
+                    case 'chrome':
+                        profileMatch = /Chrome/.test(ua);
+                        break;
+                    case 'ie10':
+                        profileMatch = /MSIE 10/.test(ua);
+                        break;
+                    case 'windows':
+                        profileMatch = /MSIE 10/.test(ua) || /Trident/.test(ua);
+                        break;
+                    case 'tizen':
+                        profileMatch = /Tizen/.test(ua);
+                        break;
+                    case 'firefox':
+                        profileMatch = /Firefox/.test(ua);
+                }
+                if (profileMatch) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        for (i = 0, ln = styleSheets.length; i < ln; i++) {
+            path = styleSheets[i];
+            if (typeof path != 'string') {
+                platform = path.platform;
+                exclude = path.exclude;
+                path = path.path;
+            }
+            if (platform) {
+                if (!filterPlatform(platform) || filterPlatform(exclude)) {
+                    continue;
+                }
+            }
+            write('<link rel="stylesheet" href="' + path + '">');
+        }
+        for (i = 0, ln = scripts.length; i < ln; i++) {
+            path = scripts[i];
+            if (typeof path != 'string') {
+                platform = path.platform;
+                exclude = path.exclude;
+                path = path.path;
+
+            }
+            if (platform) {
+                if (!filterPlatform(platform) || filterPlatform(exclude)) {
+                    continue;
+                }
+            }
+            write('<script src="' + path + '"></' + 'script>');
+        }
+    })();
+</script>
+<script type="text/javascript" src="/static/ow124_1905/static/js/buttonLite.js"></script>
+<script type="text/javascript" src="/static/ow124_1905/static/js/bshareC1.js"></script>
+<script>
+    bShare.addEntry({
+        title: NEWSCONFIG.title,
+        url: NEWSCONFIG.url,
+        summary: NEWSCONFIG.title,
+        pic: NEWSCONFIG.thumb
+    });
+</script>
+<script language="JavaScript" src="https://counter.1905.com/count.php?contentid=1618859"></script><script type="text/javascript" src="/static/ow124_1905/static/js/pingd.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+</body>

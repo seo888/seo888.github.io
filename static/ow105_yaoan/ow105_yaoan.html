@@ -1,0 +1,590 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta property="wb:webmaster" content="bb91c6e63f2b2a37">
+    <meta charset="utf-8">
+    <title>{自定义标题}</title>
+    <meta name="SiteName" content="{网站名称}">
+    <meta name="SiteDomain" content="{当前主域名}">
+    <meta name="SiteIDCode" content="5323250001">
+    <meta name="ContentSource" content="{网站名称}">
+    <meta name="ColumnName" content="{关键词1}">
+    <meta name="ColumnKeywords" content="{关键词1}">
+
+    <meta name="ArticleTitle" content="{关键词1}{随机后缀}{新闻网标题}">
+    <meta name="PubDate" content="{当前时间}">
+    <meta name="Author" content="">
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <link href="/static/ow105_yaoan/static/css/style.css" rel="stylesheet" type="text/css">
+    <script src="/static/ow105_yaoan/static/js/jquery-1.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/ow105_yaoan/static/js/jquery.pack.js"></script>
+    <script type="text/javascript" src="/static/ow105_yaoan/static/js/jQuery.blockUI.js"></script>
+    <script type="text/javascript" src="/static/ow105_yaoan/static/js/jquery.SuperSlide.js"></script>
+
+    <script type="text/javascript" src="/static/ow105_yaoan/static/js/16sucai.js"></script>
+
+    <script type="text/javascript" src="/static/ow105_yaoan/static/js/js.js"></script>
+    <!--返回顶部的js-->
+    <script type="text/javascript" src="/static/ow105_yaoan/static/js/scrolltopcontrol.js"></script>
+
+    <script src="/static/ow105_yaoan/static/js/page.js" type="text/javascript"></script>
+
+    <style>
+        .readnr {
+            font-family: 宋体;
+            font-size: 12pt;
+        }
+
+        /* CSS Document */
+        .ruguoPager_red {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: "微软雅黑";
+            outline: none;
+        }
+
+        .ruguoPager_red {
+            width: 700px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        .ruguoPager_red ul {
+            float: left;
+        }
+
+        .ruguoPager_red ul li {
+            float: left;
+            display: inline;
+            font-size: 12px;
+        }
+
+        .ruguoPager_red ul li a {
+            font-size: 12px;
+        }
+
+        .ruguoPager_red .infos {
+            float: left;
+            display: inline;
+        }
+
+        .ruguoPager_red .infos li {
+            margin-right: 3px;
+            color: #F00;
+            font-size: 14px;
+        }
+
+        .ruguoPager_red .infos span {
+            margin: 0px 1px;
+            font-size: 14px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .ruguoPager_red .btns {
+            margin-left: 30px;
+            margin-top: 3px;
+        }
+
+        .ruguoPager_red .btns li {
+            float: left;
+            display: inline;
+            margin: 0px 2px;
+        }
+
+        .ruguoPager_red .btns li a {
+            padding: 2px 8px;
+            border: 1px solid #F00;
+            cursor: pointer;
+            color: #F00;
+        }
+
+        .ruguoPager_red .btns li a:hover {
+            color: #FFF;
+            background: #F00;
+        }
+
+        .ruguoPager_red .btns .curr a {
+            color: #FFF;
+            background: #F00;
+        }
+
+        .ruguoPager_red .goto {
+            margin-left: 10px;
+        }
+
+        .ruguoPager_red .goto input {
+            float: left;
+            border: 1px solid #F00;
+            display: inline;
+            width: 35px;
+            height: 21px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .ruguoPager_red .goto a {
+            float: left;
+            display: inline;
+            font-size: 12px;
+            padding: 2px 8px;
+            border: 1px solid #F00;
+            cursor: pointer;
+            color: #FFF;
+            background: #F00;
+            margin-left: 5px;
+        }
+
+        .ctn {
+            margin: 0 auto;
+            width: 700px;
+        }
+
+        .contents {
+            float: left;
+            display: inline;
+            width: 650px;
+            min-height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 25px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .contents .con_tit {
+            float: left;
+            display: inline;
+            width: 100%;
+        }
+
+        .contents .con_tit span {
+            font-family: "微软雅黑";
+            font-weight: normal;
+            font-size: 26px;
+        }
+
+        .contents .con_infos {
+            float: left;
+            display: inline;
+            width: 100%;
+            margin: 30px 0px 0px 0px;
+            border-bottom: 1px dotted #ccc;
+            padding-bottom: 10px;
+        }
+
+        .contents .con_infos span {
+            margin: 0px 3px;
+            color: #666;
+        }
+
+        .contents .con_infos .blue {
+            color: #06F;
+        }
+
+        .contents .con_infos .line {
+            color: #CCC;
+        }
+
+        .contents .con {
+            float: left;
+            display: inline;
+            width: 650px;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+
+        .contents .con p,
+        .contents .con b {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!--返回顶部的js结束-->
+
+    <script>
+        function getDateDemo() {
+            /*
+
+            //声明时间
+            var date = new Date();
+            alert(date);//当前时间
+            alert(date.toLocaleString());//转化为本地时间
+            alert(date.getFullYear());//显示年份
+            alert(date.getMonth() + 1);//显示月份 0-11，需要加1
+            alert(date.getDate());//显示一月中的日期
+            alert(date.getDay());//显示一周的日期，星期几
+            alert(date.getHours());//获取小时时间
+            alert(date.getMinutes());//获取当前分钟
+            alert(date.getSeconds());//获取当前秒数
+            alert(date.getMilliseconds());//获取当前的毫秒数
+            alert(date.getTime());//获取从1970年1月1日午夜零时，到当前时间的毫秒值
+            */
+            //分别获取年、月、日、时、分、秒
+            var myDate = new Date();
+            var year = myDate.getFullYear();
+            var month = myDate.getMonth() + 1;
+            var date = myDate.getDate();
+            var day = myDate.getDay();
+            var hours = myDate.getHours();
+            var minutes = myDate.getMinutes();
+            var seconds = myDate.getSeconds();
+
+            //月份的显示为两位数字如09月
+            if (month < 10) {
+                month = "0" + month;
+            }
+            if (date < 10) {
+                date = "0" + date;
+            }
+
+            //星期显示
+            var enabled = 0; today = new Date();
+            var day; var date;
+            if (today.getDay() == 0) day = "星期日"
+            if (today.getDay() == 1) day = "星期一"
+            if (today.getDay() == 2) day = "星期二"
+            if (today.getDay() == 3) day = "星期三"
+            if (today.getDay() == 4) day = "星期四"
+            if (today.getDay() == 5) day = "星期五"
+            if (today.getDay() == 6) day = "星期六"
+
+            //时间拼接
+            var dateTime = year + "年" + month + "月" + date + "日" + day;
+
+            //document.write(dateTime);//打印当前时间
+
+            var divNode = document.getElementById("time");
+            divNode.innerHTML = dateTime;
+
+        }
+        window.setInterval("getDateDemo()", 1000);//每隔1秒，调用一次getDateDemo()
+    </script>
+
+    <script src="/static/ow105_yaoan/static/js/jwplayer.js"></script>
+
+    <script>jwplayer.key = "98Sx98LQbaqk/BA4RCpM8AV3aoIscantvQSDjA==";</script>
+
+    <style>
+        .jwplayer {
+            margin: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--顶-->
+    <div class="top">
+        <div class="subtop">
+            <div class="welcom">{网站名称}欢迎您！</div>
+            <div class="weather"></div>
+            <div class="time">
+                <div id="time"></div>
+            </div>
+            <div class="search">
+                <script>
+                    function goslist() {
+                        var keyword = document.getElementById("key").value;
+                        //alert(keyword);
+                        window.open("{首页链接}" + keyword)
+                    }
+
+                </script>
+
+                <input class="text" id="key" type="text" placeholder="请输入你要搜索的新闻标题"><input class="button"
+                    onclick="goslist()" type="submit" value="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--顶结束-->
+    <!--头-->
+    <div class="header">
+        <div class="logo2"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img
+                    src="/static/ow105_yaoan/static/picture/logo.png"></a></div>
+        <div class="nav">
+            <ul>
+                <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">新闻</a> </li>
+                <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">政府信息公开</a> </li>
+                <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">政务服务</a> </li>
+                <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">政民互动</a> </li>
+                <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">统计信息</a></li>
+                <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">县情</a> </li>
+                <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">投资姚安</a> </li>
+                <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">旅游姚安</a> </li>
+            </ul>
+        </div>
+        <div class="location"><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a>> <a
+                href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a> &nbsp;&nbsp;>&nbsp;>&nbsp;&nbsp;<a
+                href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}推荐</a> </div>
+    </div>
+    <!--头结束-->
+    <!--内容主体-->
+    <div class="listmain">
+        <!--文章内容-->
+        <div class="read">
+            <div class="read-title">{关键词1}{随机后缀}{新闻网标题}</div>
+            <div class="from"><span>来源: {关键词1}</span> | <span>访问量:{随机数字}</span> | <span>发布时间: {当前时间} </span></div>
+
+            <!--fw-->
+
+            <div class="readnr con" id="con">
+                <div class="pages_content" id="UCAP-CONTENT"
+                    style="margin:0px;padding:40px 0px;font-size:medium;color:#333333;font-family:宋体;background-color:#FFFFFF;">
+                    <p>{新闻网内容}
+                    </p>
+                    <div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="/static/ow105_yaoan/static/js/buttonLite.js"></script>
+            <script type="text/javascript" src="/static/ow105_yaoan/static/js/bshareC0.js"></script>
+        </div>
+
+        <!--上一篇和下一篇-->
+        <div class="low">
+            <div class="readpre"><a href="#link#"><!--Read_prv,25--></a></div>
+            <div class="readnex"><a href="#link#"><!--Read_next,25--></a></div>
+        </div>
+        <!--上一篇和下一篇结束-->
+
+
+
+    </div>
+    <!--姚安动态结束-->
+
+    <!--列表主体结束-->
+    <!--底部-->
+
+    <div class="footer">
+        <div class="mx1100">
+            <div class="link clearfix mt16">
+                <div class="link-select">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">中央人民政府网站</a>
+                    <div class="linkdwon">
+                        <h2 class="fz16 clearfix ov-h">中央人民政府网站:</h2>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">中华人民共和国中央人民政府</a>
+                    </div>
+                </div>
+                <div class="link-select">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">各省市政府网站</a>
+                    <div class="linkdwon">
+                        <h2 class="fz16 clearfix ov-h">各省市政府网站:</h2>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">北京</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">天津</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">河北</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">山西</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">内蒙古</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">辽宁</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">吉林</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">黑龙江</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">上海</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">江苏</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">浙江</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">安徽</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">福建</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">江西</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">山东</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">河南</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">湖北</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">湖南</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">广东</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">广西</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">海南</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">重庆</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">四川</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">贵州</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">云南</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">西藏</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">陕西</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">甘肃</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">青海</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">宁夏</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">新疆</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">香港</a>
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html">新疆生产兵团</a>
+                    </div>
+                </div>
+
+                <div class="link-select">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">云南省各州市政府网站</a>
+                    <div class="linkdwon">
+                        <h2 class="fz16 clearfix ov-h">云南省各州市政府网站:</h2>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">昆明市政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">曲靖市政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">玉溪市政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">昭通市政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">楚雄州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">红河州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">丽江市政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">迪庆州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">文山州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">西双版纳州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">普洱市政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">大理州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">保山市政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">德宏州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">怒江州政府</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">临沧市政府</a>
+                    </div>
+                </div>
+
+
+                <div class="link-select">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html">楚雄州各县市政府网站</a>
+                    <div class="linkdwon">
+                        <h2 class="fz16 clearfix ov-h">楚雄州各县市政府网站:</h2>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">楚雄市</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">双柏县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">牟定县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">南华县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">姚安县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">大姚县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">永仁县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">元谋县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">武定县</a>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">禄丰市</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright fz14">
+                <div class="aboutus ta-c ov-h fz14 mt16 mb10 ov-h">
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">关于我们</a> |
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                        网站声明</a> |
+                    <a href="http://{当前域名}/sitemap.xml" target="_blank">网站地图</a> |
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a>
+                </div>
+                <div class="clearfix ov-h ta-c lineh30">
+                        Copyright {年} {网站名称} All Rights Reserved. 技术支持：
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a>
+                    </p>
+                    <p>
+                        网站标识码：5323250001 ICP备案号：
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="fc333"> 滇ICP备17007482号</a>
+                        公安备案号：
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="fc333"> 53232502000117 </a>
+                    </p>
+                    <p>
+                        <script
+                            type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1256562362'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1256562362%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="js fz14">
+            <ul>
+
+                <li>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="不良信息举报中心">
+                        <img alt='不良信息举报中心' src="/static/ow105_yaoan/static/picture/c4.png"></a><br>
+                    <span>不良信息举报中心 </span>
+                </li>
+                <li>
+                    <script type="text/javascript">
+                        document.write(
+                            unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/25/377/2417/60221757/CA253772417602217570002.js' type='text/javascript'%3E%3C/script%3E")
+                        );
+                    </script>
+                </li>
+
+                <!--li>
+
+						<a href="http://zc.yn.gov.cn/zhaocuo/web_wtbg.jsp?webid=5323250001" target="_blank" title="云南省政府网站曝光台">
+							<img alt='不良信息举报中心' src="/upload/20180820/2018082017212417.jpg" /></a><br />
+					</li-->
+                <li>
+                    <script id="_jiucuo_" sitecode='5323250001' src='/static/ow105_yaoan/static/js/jiucuo.js'></script>
+                </li>
+
+                <li>
+
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="云南省政府网站曝光台">
+                        <img alt='不良信息举报中心' src="/static/ow105_yaoan/static/picture/bgt.png"></a><br>
+                </li>
+
+
+                <li>
+                    <div style="width:300px;margin:0 auto; padding:20px 0;">
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"
+                            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img
+                                notreplace='' src="/static/ow105_yaoan/static/picture/2017101816272880.png" style="float:left;">
+                            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+                                滇公网安备 53232502000117号</p>
+                        </a>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        $(".link").slide({
+            type: "menu",
+            titCell: ".link-select",
+            targetCell: ".linkdwon",
+            effect: "slideDown",
+            delayTime: 300,
+            triggerTime: 0,
+            returnDefault: true
+        });
+    </script>
+    <!--底结束-->
+    <!--右边悬浮-->
+    <!--左边开始-->
+    <div id="ggleft" style="left:5px;">
+        <div class="cs_close2">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="$('#ggleft').fadeOut()"></a>
+        </div>
+    </div>
+
+        <script>
+            var pager = new ruguoPager();
+            pager.objName = "pager";
+            pager.pagerID = "pager";
+            pager.txtID = "con";
+            pager.toPoint = "con"
+            pager.showPageCount = 3;
+            pager.currPage = 1;
+            ruguoPagerLoad(pager);
+        </script>
+
+        <script type='text/javascript'>
+            $("embed[type='video/x-ms-asf-plugin']").each(function (i, mvideo) {
+                $(this).attr('id', 'myElement' + i);
+                var src = $(mvideo)[0].src;
+                //alert(src);
+                jwplayer("myElement" + i).setup({
+                    file: src,
+                    width: $(mvideo)[0].width,
+                    height: $(mvideo)[0].height,
+                    autostart: 'false',
+                });
+
+            });
+
+
+        </script>
+    </div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>   
+</body>
+
+</html>
+<!--read.htm (www.50cms.com)-->

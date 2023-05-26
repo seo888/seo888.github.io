@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="zh-CN"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <!-- 别忘记此处的meta标签，确保IE都是在标准模式下渲染4 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="shortcut icon" href="https://www.jsw.com.cn/favicon.ico">
+    <link rel="stylesheet" href="/static/ow165_jsw/static/css/cmstop.common.css">
+    <link rel="stylesheet" href="/static/ow165_jsw/static/css/cmstop.basecolor.css">
+    <link rel="stylesheet" href="/static/ow165_jsw/static/css/cmstop.article.css">
+    <link rel="stylesheet" href="/static/ow165_jsw/static/css/cmstop.gallery.css">
+    <link rel="stylesheet" href="/static/ow165_jsw/static/css/cmstop.singup.css">
+    <link rel="stylesheet" href="/static/ow165_jsw/static/css/cmstop.dialog.css">
+    <link rel="stylesheet" href="/static/ow165_jsw/static/css/cmstop.datepicker.css">
+    <script type="text/javascript" src="/static/ow165_jsw/static/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript" src="/static/ow165_jsw/static/js/config.js"></script>
+    <script src="/static/ow165_jsw/static/js/jquery-1.11.2.js"></script>
+    <script src="/static/ow165_jsw/static/js/cmstop.gotop.js"></script>
+    <script src="/static/ow165_jsw/static/js/cmstop.common.js"></script>
+    <script src="/static/ow165_jsw/static/js/cmstop.dialog.js"></script>
+    <script src="/static/ow165_jsw/static/js/cmstop.datepicker.js"></script>
+    <script src="/static/ow165_jsw/static/js/cmstop.gallery.article.js"></script>
+    <script type="text/javascript" src="/static/ow165_jsw/static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/static/ow165_jsw/static/js/cmstop-common.js"></script>
+    <script type="text/javascript" src="/static/ow165_jsw/static/js/cmstop.seccode.js"></script>
+    <script type="text/javascript">
+        var contentid = '1775707';// 文章ID
+        var title = "\u8f7f\u8f66\u7ffb\u5165\u6c60\u5858\uff0c\u4ed6\u8e5a\u5165\u51b0\u51b7\u7684\u6c34\u4e2d\u6551\u4eba\u2014\u2014\u8bb0\u201c\u9547\u6c5f\u597d\u4eba\u201d\u3001\u53e5\u5bb9\u5e02\u90ed\u5e84\u9547\u80dc\u5229\u6751\u6751\u6c11\u6bdb\u7389\u6210";//文章标题
+        var topicid = '';// 评论主题
+        var context = '';//全文内容缓存
+        var content = '';//第一页内容缓存
+        var _IMG_URL_SSL = '{当前url}';
+    </script>
+    <script type="text/javascript" src="/static/ow165_jsw/static/js/cmstop-imagezoom.js"></script>
+    <script>
+    $(function(){
+        $('.js-overlay').mouseenter(function() {
+            overlayPlay($(this));
+        }).mouseleave(function(){
+            var timeSpan = $('.time',$(this));
+            timeSpan.css({'background-color':timeSpan.attr('data-bgc')});
+            $(this).find('.overlay').fadeOut('fast');
+        });
+
+        if ($('.article-pictures').length > 0) {
+            // 图组调用
+            gallery({
+                icontainer : "gal_scrl_ct",
+                idrag : "bar",
+                panel : "thumb",
+                content : "gal_scrl_main",  
+                direction : "left",
+                acceleration : 5,
+                sliderAcc : 1
+            });
+        }
+        $.getJSON(APP_URL+'?app=system&controller=content&action=stat&jsoncallback=?&contentid='+contentid, function(data){});
+    });
+    </script>
+    <!-- IE8及IE8以下浏览器都支持HTML5 -->
+    <!--[if lt IE 9]>
+        <script src="https://img.jsw.com.cn/templates/jsw/js/html5/html5.js"></script>
+    <![endif]-->
+    <!-- IE6支持png24 -->
+    <!--[if lt IE 7 ]>
+        <script src="https://img.jsw.com.cn/templates/jsw/js/ie6_png24/iepngfix_tilebg.js"></script> 
+    <![endif]-->
+
+<script src="/static/ow165_jsw/static/js/ds.js"></script>
+<script type="text/javascript" src="/static/ow165_jsw/static/js/ds.js"></script>
+
+<!--<meta content="all" name="robots" >
+<meta name="baidu-tc-verification" content="c17a87218576a2fe48294da579d91eb1" /> -->
+
+<script src="/static/ow165_jsw/static/js/1488507769584.js"></script>
+		<style>
+em {
+    font-style: italic;
+}
+.article-detail .article-detail-inner p {
+    word-wrap: break-word;
+}
+.video-js{width: 90%;}
+
+			@media only screen and (max-width:1000px) {
+				.m-header {
+					height: auto;
+				}
+				.main,
+				.m-footer {
+					width: 100%;
+					position: relative;
+					margin: 0 auto;
+				}
+				.m-header-nav-list a {
+					font-size: 12px;
+					line-height: 39px;
+					margin-left: 5px;
+				}
+				.m-crumb {
+					width: 100%;
+				}
+				.scroll-btns ,.article-interaction{
+					display: none;
+				}
+				.article-content {
+					width: 94%;
+					padding: 3%;
+					overflow: hidden;
+				}
+				.article-detail,
+				.article-aside {
+					position: relative;
+					margin: 0 auto;
+					float: left;
+				}
+				.article-aside {
+					width: 100%;
+				}
+				.w660 {
+					width: 100%;
+				}
+				.ad300x240 {
+					margin: 0 auto;
+				}
+				.article-detail-inner img {
+					width: 95%;
+					height: auto;
+					max-width: 600px;
+					display: block;
+					margin: 0 auto;
+				}
+				.m-imagetitle .item {
+					margin-left: 30px;
+				}
+				.commend-video {
+					margin-bottom: 150px;
+				}
+				.m-footer {
+					height: auto;
+					width: 100%;
+				}
+			}
+			
+			@media only screen and (max-width:414px) {
+				.m-crumb {
+					margin: 10px auto;
+				}
+				.w660 {
+					width: 100%;
+				}
+				.article-detail {
+					float: left;
+					margin: 0 auto;
+				}
+				.article-detail,
+				.article-content {
+					height: auto;
+				}
+				.adtl img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			@media only screen and (min-width:736px) and (max-width:812px) {
+				.m-imagetitle .item {
+					margin-left: 30px;
+				}
+			}
+			@media only screen and (min-width:414px) and (max-width:735px) {
+				.m-imagetitle .item {
+					margin-left: 30px;
+				}
+			}
+			
+			@media only screen and (min-width:375px) and (max-width:413px) {
+				.m-imagetitle .item {
+					margin-left: 20px;
+				}
+			}
+			
+			@media only screen and (min-width:320px) and (max-width:374px) {
+				.m-imagetitle .item {
+					margin-left: 10px;
+				}
+			}
+iframe{width:100%;}
+		</style>
+</head>
+<body>
+<img src="/static/ow165_jsw/static/picture/logo-100-20.jpg" style="position: fixed; left: 9999px">
+
+
+    <!-- 顶部 -->
+    <header class="m-header">
+	<div class="main">
+        <div class="m-inner pos-r ov">
+            <!-- 右侧搜索、日历、登陆等 -->
+            <!-- 顶部导航 -->
+            <!-- 顶部导航 -->
+<nav class="m-header-nav">
+<ul class="m-header-nav-list">
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 新闻 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 时政 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 民生 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 社会 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 专题 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 金融 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 健康 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 舆情 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 支教 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 公益 </a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title=""> 微矩阵 </a></li>
+</ul>
+</nav>
+<style>
+body{font-family: Arial;}
+.article-content-title,.article-content-level2title,{
+font-family: 黑体;
+}
+</style>
+        </div>
+	</div>
+</header>    
+    <div class="hr20"></div>
+	<div class="hr20"></div>
+	<div class="hr20"></div>
+    
+    <div class="hr20"></div>
+
+    <!-- 面包屑 -->
+    <div class="column m-crumb" style="border-bottom:none;">
+	<img src="/static/ow165_jsw/static/picture/logo-100-20.jpg" width="100" class="fl-l" height="20">
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a>
+                <em class="icon16x16"></em>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html">新闻中心</a>
+                <em class="icon16x16"></em>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html">镇江新闻</a>
+                <em class="icon16x16"></em>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html">镇江新闻 - 区域</a>
+            </div>
+
+    <div class="column article-content js-returntop pos-r">
+        <h1 class="article-content-title">{关键词1}{随机后缀}{新闻网标题}</h1>
+                <div class="article-infos ov">
+            <span class="date fl-l">{当前时间}</span>
+                        <div class="fontsize fl-l ov"><a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="changeFont(this);return false;" class="increase fl-l icon16x16"></a><a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="changeFont(this);return false;" class="decrease fl-l icon16x16"></a></div>
+        </div>
+                
+        <article class="article-detail w660 fl-l">
+<div class="hr30"></div>
+            <div class="article-relevance">
+                                                                                <!-- 文章内容 -->
+            </div>
+            <div class="article-detail-inner article-relevance w660 ov">
+                <p>{新闻网内容}（<span>{人物名称} {人物名称} {人物名称}</span>）</p>            </div>
+                <div class="article-relevance">
+                                                                                                    <!-- 文章内容 -->
+                </div>
+                                <div class="hr20"></div>
+                <div><p class="fz14 cor444" style="text-align:right;">责任编辑：{人物名称}</p></div>
+                                <div class="hr20"></div>
+                <!-- 分页 -->
+                <!-- .disable为不可点击状态 -->
+                                <div class="hr30"></div>
+                                <div class="hline"></div>
+                <div class="hr40"></div>
+                <!-- 用户交互模块：点赞、分享、收藏等 -->
+                <div class="article-interaction">
+                    <div class="share fl-r">
+                        
+                        <div class="bdsharebuttonbox"><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a title="分享到QQ好友" href="#" class="bds_sqq" data-cmd="sqq"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+
+                    </div>
+                    <div class="interaction ov" style="margin-left:20px;">
+                        <a href="javascript:digg.set(1775707,'supports')" class="icon40x40 interaction-btn love fl-l js-ilove"><span class="hidden">10</span></a>
+                        <a href="#comment" class="icon40x40 interaction-btn comment fl-l"></a>
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="sidebar" onclick="addfavorite();return false;" class="icon40x40 interaction-btn collect fl-l"></a>
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="icon40x40 interaction-btn print fl-l"></a>
+                    </div>
+                </div>
+                <div class="hr40"></div>
+               
+        </article>
+
+
+        <!-- 右侧内容 -->
+        <aside class="article-aside pos-r fl-r">
+            <!-- 排行榜 -->
+			         
+
+
+            <!-- 推荐图片 -->
+            <div class="commend-picture">
+				<div class="m-title-a">
+      <h2 class="m-title-h2"><a>推荐图片</a></h2>
+</div>
+<div class="hr20"></div>
+<div class="commend-picture-inner">
+  <ul class="m-imagetitle">
+ <li class="item  odd
+">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="thumbbox"><img src="{随机图片}" width="130" height="80" alt="{标题}"></a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="title">{标题}</a>
+</li>
+  <li class="item  even
+">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="thumbbox"><img src="{随机图片}" width="130" height="80" alt="{标题}"></a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="title">{标题}</a>
+</li>
+  <li class="item  odd
+">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="thumbbox"><img src="{随机图片}" width="130" height="80" alt="{标题}"></a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="title">{标题}</a>
+</li>
+  <li class="item  even
+">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="thumbbox"><img src="{随机图片}" width="130" height="80" alt="{标题}"></a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="title">{标题}</a>
+</li>
+    </ul>
+</div>
+
+            </div>
+
+            <div class="hr20"></div>
+            
+            <div class="hr20"></div>
+            
+            <div class="hr20"></div>
+            <!-- 推荐视频 -->
+            <div class="commend-video">
+<div class="m-title-a">
+    <h2 class="m-title-h2"><a>推荐视频</a></h2>
+</div>
+<div class="hr20"></div>
+<div class="commend-picture-inner">
+    <ul class="m-imagetitle">
+
+            <li class="item odd js-overlay">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="thumb-link"><img src="{随机图片}" alt="" width="130" height="80">
+                       <!-- <span class="time"></span>-->
+                        </a>
+            <a class="title" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{关键词1}{标题}</a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+        </li>
+
+
+            <li class="item  js-overlay">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="thumb-link"><img src="{随机图片}" alt="" width="130" height="80">
+                       <!-- <span class="time"></span>-->
+                        </a>
+            <a class="title" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+        </li>
+
+
+        <li class="item odd js-overlay">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="thumb-link"><img src="{随机图片}" alt="" width="130" height="80">
+                       <!-- <span class="time"></span>-->
+                        </a>
+            <a class="title" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+        </li>
+
+
+            <li class="item  js-overlay">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}" class="thumb-link"><img src="{随机图片}" alt="" width="130" height="80">
+                       <!-- <span class="time"></span>-->
+                        </a>
+            <a class="title" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="overlay"><b class="overlay-play icon40x40"></b></a>
+        </li>
+
+    </ul>
+</div>
+  
+            </div>
+        </aside>
+        <div style="clear:both;"></div>
+    </div>
+    <!-- 返回顶部 -->
+    <div class="scroll-btns js-scrollbtns">
+        <div class="btn home icon40x40">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="text">返回首页</a>
+        </div>
+        <div class="hr10"></div>
+        <div class="btn rel icon40x40">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="text">相关新闻</a>
+        </div>
+        <div class="hr10"></div>
+        <div class="btn top icon40x40">
+            <a href="" class="text">返回顶部</a>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="m-footer">
+        <div class="m-footer-nav">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">网站简介</a>
+            <em>|</em>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">公司荣誉</a>
+            <em>|</em>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">广告服务</a>
+            <em>|</em>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系方式</a>
+            <em>|</em>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">报社电话</a>
+            <em>|</em>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">走进报社</a>
+        </div>
+		<div class="m-footer-nav">
+		<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">苏ICP备{随机8数字}号</a>
+		<em>|</em>
+		<a href="/static/ow165_jsw/static/file/2006006.jpg" target="_blank">苏新网备{随机7数字}号</a>
+		<em>|</em>
+		<a href="/static/ow165_jsw/static/file/1619661899795.jpg" target="_blank">广播电视节目制作经营许可证（苏）字第481号</a>
+		<em>|</em>
+		<a href="/static/ow165_jsw/static/file/1616729855772.jpg" target="_blank">互联网新闻信息服务许可证321{随机8数字}号</a>
+		</div>
+        <div class="copyright">{网站名称}有限公司<span>版权所有：Copyright ©  {域名库}  All Rights Reserved.</span>
+<script type="text/javascript" src="/static/ow165_jsw/static/js/21349507.js"></script>
+<script id="LA_COLLECT" src="/static/ow165_jsw/static/js/js-sdk-pro.min.js"></script>
+<script>LA.init({id: "JidunbqgdmjMERnN",ck: "JidunbqgdmjMERnN"})</script>
+</div>
+    </div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>   
+</body>
+</html>
+
+<script type="text/javascript" src="/static/ow165_jsw/static/js/comment.js"></script>
+<script type="text/javascript" src="/static/ow165_jsw/static/js/digg.js"></script>
+<!--<script type="text/javascript" src="https://img.jsw.com.cn/templates/jsw/js/article-show.js"></script> 
+<script type="text/javascript" src="//upload.jsw.com.cn/2020/0225/1582601043733.js"></script>-->  
+
+<script type="text/javascript">
+    // bShare划词分享
+    if(typeof(bShare) == 'undefined'){
+        document.write('<script type="text/javascript" src="//static.bshare.cn/b/buttonLite.js#uuid=&style=-1"><\/script><script type="text/javascript" src="http://static.bshare.cn/b/addons/bshareDrag.js?bp=qqmb,sinaminiblog,qzone,kaixin001,bsharesync&text=分享到"><\/script><script type="text/javascript">$(".BSHARE_POP img").addClass("BSHARE_IMAGE");<\/script><script type="text/javascript" src="http://static.bshare.cn/b/addons/bshareMM.js#shareClass=BSHARE_IMAGE"><\/script>');
+    }else{
+        document.write('<script type="text/javascript" src="//static.bshare.cn/b/addons/bshareDrag.js?bp=qqmb,sinaminiblog,qzone,kaixin001,bsharesync&text=分享到"><\/script><script type="text/javascript">$(".BSHARE_POP img").addClass("BSHARE_IMAGE");<\/script><script type="text/javascript" src="http://static.bshare.cn/b/addons/bshareMM.js#shareClass=BSHARE_IMAGE"><\/script>');
+    }
+</script>
+
+
+<script>
+    if(/MicroMessenger/i.test(navigator.userAgent)){
+        $.get("https://app.jsw.com.cn/?app=article&controller=fenxiangtest&action=ceshi&url=" + encodeURIComponent(window.location.href.split('#')[0]), function(result){
+            var wx_list = eval('(' + result + ')');
+	    console.log(title);
+	    console.log('https://img.jsw.com.cn/templates/jsw/css/images/logo-300-300.jpg');
+	    console.log('{关键词1}{随机后缀}{新闻网标题}');
+	    console.log('');
+            if(!wx_list){
+                return;
+            }
+            wx.config({
+                debug:false,
+                appId:wx_list['appId'],
+                timestamp:wx_list['timestamp'],
+                nonceStr:wx_list['nonceStr'],
+                signature:wx_list['signature'],
+                jsApiList:[
+                     
+                        'onMenuShareAppMessage',
+                     'onMenuShareTimeline',
+                     ]
+              });
+                        
+
+            wx.ready(function () {
+
+                    wx.onMenuShareAppMessage({
+                            title:title,
+                            desc:'{自定义描述}',
+                            link:  wx_list['url'], 
+                            imgUrl: 'https://img.jsw.com.cn/templates/jsw/css/images/logo-300-300.jpg', 
+                            type: '', 
+                            dataUrl: '', 
+                             success: function () {
+                               
+                            },
+                            cancel: function () {
+                              
+                            }
+                    });
+                
+                    wx.onMenuShareTimeline({
+                        title:title,
+                        link: wx_list['url'], 
+                        imgUrl: 'https://img.jsw.com.cn/templates/jsw/css/images/logo-300-300.jpg', 
+                        success: function () { 
+                            
+                        },
+                        cancel: function () { 
+                           
+                        }
+                    });
+              
+             });
+             wx.error(function(res){
+                // config信息验证失败会执行error函数
+                //alert(JSON.stringify(res));
+                console.log(JSON.stringify(res));
+            });
+        });
+    }
+</script>
+
+

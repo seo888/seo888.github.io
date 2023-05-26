@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{自定义标题}</title>
+    <meta name="fragment" content="!">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <link rel="icon" type="image/x-icon" href="http://www.chinajsb.cn//Public/zhuj2018/img/bitbug_favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/_/static/ow144_chinajsb/static/css/style.css">
+    <link rel="stylesheet" href="/_/static/ow144_chinajsb/static/css/share.min.css">
+    <link rel="stylesheet" type="text/css" href="/_/static/ow144_chinajsb/static/css/pageStyle.css">
+    <script src="/_/static/ow144_chinajsb/static/js/jquery.min.js"></script>
+    <script src="/_/static/ow144_chinajsb/static/js/flexible.js"></script>
+    <script src="/_/static/ow144_chinajsb/static/js/layer.js"></script>
+    <script src="/_/static/ow144_chinajsb/static/js/return-modernizr.js"></script><!--返回顶部-->
+    <style type="text/css">
+        .top .nav>ul>li {
+            float: left;
+            width: 7.1%;
+            position: relative
+        }
+
+        .content p {
+            text-indent: 2em;
+            line-height: 200%;
+        }
+
+        .content p img {
+            display: block
+        }
+
+        .detail .label span {
+            color: #0D63B0;
+            border: 1px solid #0D63B0;
+        }
+
+        .detail .label span:hover {
+            color: #fff;
+            background: #0D63B0;
+            font-weight: bold;
+        }
+
+        /* 返回顶部css */
+        .cd-top {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            text-indent: 100%;
+            white-space: nowrap;
+            background: rgba(232, 98, 86, 0.8) url(/static/ow144_chinajsb/static/image/top-arrow.svg) no-repeat center 50%;
+            visibility: hidden;
+            opacity: 0;
+            -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+            -moz-transition: opacity .3s 0s, visibility 0s .3s;
+            transition: opacity .3s 0s, visibility 0s .3s;
+        }
+
+        .cd-top.cd-is-visible,
+        .cd-top.cd-fade-out,
+        .no-touch .cd-top:hover {
+            -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+            -moz-transition: opacity .3s 0s, visibility 0s 0s;
+            transition: opacity .3s 0s, visibility 0s 0s;
+        }
+
+        .cd-top.cd-is-visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .cd-top.cd-fade-out {
+            opacity: .5;
+        }
+
+        .no-touch .cd-top:hover {
+            background-color: #e86256;
+            opacity: 1;
+        }
+
+        /* 返回顶部css结束 */
+        @media screen and (max-width: 350px) {
+            iframe {
+                width: 100% !important;
+                height: 184px !important;
+            }
+        }
+
+        @media screen and (min-width: 350px) and (max-width: 390px) {
+            iframe {
+                width: 100% !important;
+                height: 207px !important;
+            }
+        }
+
+        @media screen and (min-width: 390px) and (max-width: 405px) {
+            iframe {
+                width: 100% !important;
+                height: 212px !important;
+            }
+        }
+
+        @media screen and (min-width: 405px) and (max-width: 444px) {
+            iframe {
+                width: 100% !important;
+                height: 237px !important;
+            }
+        }
+
+        @media screen and (min-width: 444px) and (max-width: 465px) {
+            iframe {
+                width: 100% !important;
+                height: 249px !important;
+            }
+        }
+
+        @media screen and (min-width: 465px) and (max-width: 580px) {
+            iframe {
+                width: 100% !important;
+                height: 313px !important;
+            }
+        }
+
+        @media screen and (min-width: 580px) and (max-width: 640px) {
+            iframe {
+                width: 100% !important;
+                height: 370px !important;
+            }
+        }
+
+        @media screen and (min-width: 640px) {
+            iframe {
+                width: 100% !important;
+                height: 370px !important;
+            }
+        }
+    </style>
+</head>
+
+<body><!--公共头部-->﻿
+    <script>
+        function getRandum() {
+            Math.random();
+        }
+    </script>
+    <div class="top clearfix">
+        <div class="main header">
+            <div class="kk_top_left">
+                <p>中华人民共和国住房和城乡建设部主管</p>
+                <p>中国建设报社主办</p>
+            </div><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="user toLogin"></a>
+            <div class="logo"><a href="/{随机字符}/{随机数字}_{随机数字}.html"></a></div><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="search"></a>
+            <div class="kk_top_right"><!--<p>大资源平台  ■  大数据高地</p>-->
+                <p class="option">
+                    <!--未登录--><!--<a class="btn toLogin loginArea" href="/{随机字符}/{随机数字}_{随机数字}.html"><i></i>登录</a>--><!--已登录--><!--<a class="btn logined" href="#" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;" title="188139111"><i style="background-image: url(http://www.chinajsb.cn/Public/zhuj2018/dist/img/ico_user.png);"></i>188139111</a>--><a
+                        class="btn showSearch" href="/{随机字符}/{随机数字}_{随机数字}.html"><i></i>查找</a><label class="searchArea"><i
+                            style="cursor: pointer;"></i><input type="search" class="search" placeholder="智能搜索"
+                            onkeydown="KeyDown()"><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="hideSearch">×</a></label></p>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="main">
+                <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="important_01"
+                        data-channelid="120">要闻</a>
+                    <ul></ul>
+                </li>
+
+
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="test_01">党章党规</a>
+                    <ul></ul>
+                </li>
+
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="house_01"
+                        data-channelid="10">房地产</a>
+                    <ul>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="10"
+                                data-channel="house_01">房企</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="11"
+                                data-channel="house_02">市场</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="12"
+                                data-channel="house_03">政策</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="13"
+                                data-channel="house_04">深度</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="77"
+                                data-channel="house_05">品牌</a></li>
+                    </ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="building_01"
+                        data-channelid="15">建筑业</a>
+                    <ul>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="15"
+                                data-channel="building_01">聚焦</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="16"
+                                data-channel="building_02">政策</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="17"
+                                data-channel="building_03">企业</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="18"
+                                data-channel="building_04">人物</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="78"
+                                data-channel="building_05">品牌</a></li>
+                    </ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="chanjingbaodao_01"
+                        data-channelid="84">产经报道</a>
+                    <ul>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="84"
+                                data-channel="chanjingbaodao_01">深度观察</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="86"
+                                data-channel="chanjingbaodao_02">公司解码</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="87"
+                                data-channel="chanjingbaodao_03">人物访谈</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="88"
+                                data-channel="chanjingbaodao_04">战略分析</a></li>
+                    </ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="cases"
+                        data-channelid="112">中国城管</a>
+                    <ul>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="112" data-channel="cases">案例</a>
+                        </li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="113" data-channel="focus">关注</a>
+                        </li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="114"
+                                data-channel="observation">观察</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="115"
+                                data-channel="cityAffairs">城事</a></li>
+                        <li class="header_s_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" data-channelid="116" data-channel="people">人物</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="smartCity_01"
+                        data-channelid="24">智慧城市</a>
+                    <ul></ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="zgwuye_01"
+                        data-channelid="52">中国物业</a>
+                    <ul></ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="fazhijianshe_01"
+                        data-channelid="90">法治建设</a>
+                    <ul></ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="zfgongjijin_01"
+                        data-channelid="28">住房公积金</a>
+                    <ul></ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="thinkTank_01"
+                        data-channelid="42">智库</a>
+                    <ul></ul>
+                </li>
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="shushuozj_01"
+                        data-channelid="34">数说住建</a>
+                    <ul></ul>
+                </li>
+
+                <li class="header_f_li"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" data-channel="chinaSanitation_02"
+                        data-channelid="123">垃圾分类</a>
+                    <ul></ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <script src="/_/static/ow144_chinajsb/static/js/tools.js"></script>
+    <script type="text/javascript">
+        // 搜索显示
+        $('.showSearch').click(function () {
+            $('.option').addClass('show');
+            setTimeout(function () {
+                $('.search').focus()
+            }, 1000);
+        });
+
+        $('.hideSearch').click(function () {
+            $('.option').removeClass('show');
+        });
+
+        // 搜索
+        $(".searchArea i").on("click", function () {
+            var searchV = $(".searchArea input").val();
+            if (searchV) {
+                location.href = '/{随机字符}/{随机数字}_{随机数字}.html' + searchV;
+            } else {
+                layer.msg("搜索条件不能为空！");
+                return false;
+            }
+        });
+
+        // 登录\个人中心
+        $('.toLogin').click(function () {
+            if (!$K_GLOBAL.getCookie('zhujaccesstoken')) {
+                location.href = "//user.chinajsb.cn/user.php?s=/Passport/login&redirect=" + encodeURIComponent(location.href);
+            } else {
+                location.href = "//user.chinajsb.cn/user.php?s=/Passport/settings&userid=" + $K_GLOBAL.userInfo.uid;
+            }
+        });
+
+        function KeyDown() {
+            if (event.keyCode == 13) {
+                event.returnValue = false;
+                event.cancel = true;
+                $(".searchArea i").click();
+            }
+        }
+
+        $(function () {
+            getuserInfo(function (res) {
+                var user = $K_GLOBAL.userInfo;
+
+                $('.loginArea').html('<i style="background-image:url(' + user.avatar + ');"></i>' + user.nickname);
+            });
+        });
+
+        //初始化
+        $.ajax({
+            type: "GET",
+            url: "{当前url}",
+            dataType: "json",
+        });
+
+    </script>
+    <div class="main detail"><input type="hidden" name="articleId" id="articleId" value='32793'>
+        <div class="fl">
+            <!--<div><img src="" style="width:100%"/></div>-->
+            <div style="height:20px"></div>
+            <div class="channelName"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a> >&nbsp;<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+                    target="_blank">{关键词1}</a></div>
+            <div class="channelName_m"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a> >&nbsp;<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+                    target="_blank">{关键词1}</a></div>
+            <div class="title">{关键词1}{随机后缀}{新闻网标题}</div>
+            <div class="about"><span>{当前时间}</span><span>&nbsp;&nbsp;&nbsp;&nbsp;作者：{人物名称}</span></div>
+            <div class="content">
+                <p style="font-family:simsun;text-align:justify;">{新闻网内容}</p>
+                <p style="font-family:simsun;text-align:justify;"><br></p>
+                <p style="font-family:simsun;text-align:justify"><br></p>
+            </div><!--分页-->
+            <div class="page"></div><!--分页--><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="like "><i></i>赞<span id="likeNum"></span></a>
+            <div class="share"> 分享：
+                <div class="social-share fr" data-wechat-qrcode-title="分享到微信" data-wechat-qrcode-helper="<p>打开微信扫一扫</p>"
+                    data-sites="wechat,qq,weibo"></div>
+            </div>
+            <div class="commentBar"> 网友评论
+            </div>
+            <div class="commentForm isLogin" style="display:none;">
+                <div class="img"><img src="" alt=""></div>
+                <div class="form"><textarea name="" id="commentInput" placeholder="写下你的评论…"></textarea><input
+                        type="button" class="commentSubmit" value="回复"></div>
+            </div>
+            <div class="commentForm noLogin" style="display:none;"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span>登录</span>后可发表评论</a>
+            </div>
+            <div class="comment hasComment" style="display:none;">
+                <p class="titleBar">最新评论</p>
+                <ul><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="more loadMore">加载更多评论</a></ul>
+            </div>
+            <div class="comment noComment empty" style="display:none;"> 暂时没评论，快成为第一个评论的人吧。
+            </div><!--推荐文章-->
+            <div class="acticleList">
+                <ul>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <div>
+                                <p class="title">{关键词1}{标题}</p>
+                                <p class="time">{当前时间}</p>
+                                <p class="content"></p>
+                            </div>
+                            <div class="img"><img src="{随机图片}"></div>
+                        </a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <div>
+                                <p class="title">{标题}</p>
+                                <p class="time">{当前时间}</p>
+                                <p class="content"></p>
+                            </div>
+                        </a></li>
+                   <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <div>
+                                <p class="title">{标题}</p>
+                                <p class="time">{当前时间}</p>
+                                <p class="content"></p>
+                            </div>
+                        </a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <div>
+                                <p class="title">{标题}</p>
+                                <p class="time">{当前时间}</p>
+                                <p class="content">
+                                    {句子}
+                                </p>
+                            </div>
+                        </a></li>
+                     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <div>
+                                <p class="title">{标题}</p>
+                                <p class="time">{当前时间}</p>
+                                <p class="content">
+                                    {句子}
+                                </p>
+                            </div>
+                        </a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                            <div>
+                                <p class="title">{标题}</p>
+                                <p class="time">{当前时间}</p>
+                                <p class="content">{句子}</p>
+                            </div>
+                            <div class="img"><img src="{随机图片}"></div>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fr mobileHidden"><!-- 排行榜-->
+            <div class="column_link column_rank">
+                <div class="titleBar-More"><span>热门排行榜</span></div>
+                <ul class="list">
+                    <li><em>1</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></p>
+                    </li>
+                    <li><em>2</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                    <li><em>3</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                    <li><em>4</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                    <li><em>5</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                    <li><em>6</em>
+                        <p><a target="_blank" href="">{标题}</a></p>
+                    </li>
+                    <li><em>7</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                    <li><em>8</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                    <li><em>9</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                    <li><em>10</em>
+                        <p><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- 公共底部-->﻿<footer class="footer">
+        <div class="footer-box">
+            <div class="footer-menu">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">关于我们</a>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">广告刊例</a>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">人才招聘</a>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">版权声明</a>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">报社动态</a>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    <span>Copyright © {年} {域名库} All Rights Reserved.</span>
+                    <span>本网站所刊登的新闻等各类信息,均为{网站名称}版权所有,</span>
+                    <span>未经协议授权,禁止转载.</span>
+                </p>
+                <p>制作单位：{网站名称} | <a style="color:#69c;" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">京ICP备{随机8数字}号-1</a> |
+                    单位编号：11{随机8数字}4</p>
+                <p>互联网新闻信息服务许可证101{随机8数字}号</p>
+                <p>违法和不良信息举报电话：010-{随机8数字}</p>
+            </div>
+        </div>
+    </footer>
+
+    <ul class="scrollbar">
+        <li class="show-qrcode">
+            <a class="scrollbar-wx"></a>
+            <div class="qrcode-img">
+            </div>
+        </li>
+        <li>
+            <a class="scrollbar-wb" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"></a>
+        </li>
+        <li>
+            <a class="scrollbar-top" id="totop"></a>
+        </li>
+    </ul>
+
+    
+    <script src="/_/static/ow144_chinajsb/static/js/jquery.share.min.js"></script>
+    <script src="/_/static/ow144_chinajsb/static/js/show.js" type="text/javascript"></script><!--返回顶部--><a href="#0" class="cd-top">Top</a>
+    <script src="/_/static/ow144_chinajsb/static/js/return-main.js"></script><!--返回顶部End-->
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>    
+</body>
+
+</html>

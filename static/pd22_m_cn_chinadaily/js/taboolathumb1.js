@@ -1,0 +1,10 @@
+document.write('<div id=\"taboola-below-article-thumbnails\"></div>');
+document.write('<script type=\"text/javascript\">');
+document.write('window._taboola = window._taboola || [];');
+document.write('_taboola.push({');
+document.write('mode: \"thumbnails-a\",');
+document.write('container: \"taboola-below-article-thumbnails\",');
+document.write('placement: \"Below Article Thumbnails\",');
+document.write('target_type: \"mix\"');
+document.write('});');
+document.write('<\/script>');

@@ -1,0 +1,1 @@
+var IMG_URL="http://img.rmlt.com.cn/",UPLOAD_URL="http://upload.rmlt.com.cn/",APP_URL="http://app.rmlt.com.cn/",WWW_URL="http://www.rmlt.com.cn/",SPACE_URL="http://space.rmlt.com.cn/",COOKIE_PRE="rmlt_",COOKIE_DOMAIN=".rmlt.com.cn",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";

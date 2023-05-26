@@ -1,0 +1,1 @@
+/*document.writeln("<p class=\'bianfu\'>广告合作请联系邮箱：bwum26@163.com</p>");*/

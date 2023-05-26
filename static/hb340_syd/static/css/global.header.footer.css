@@ -1,0 +1,226 @@
+.header{
+	min-width:1280px;
+	background-color:#20629E; 
+	margin-bottom:20px;
+}
+.header .inner{
+	width:1280px;
+	margin:0px auto;
+}
+.header .logo{
+	width:220px;
+	height:75px;
+	background:url(../image/syd.newscenter.header.logo.png) center center #EDEDED no-repeat;
+	float:left;
+}
+.header .channelNav{
+	margin-left:240px;
+}
+.header .channelNav ul{
+	height:75px;
+	font-size: 0px;
+	line-height: 75px;
+	overflow: hidden;
+}
+.header .channelNav ul:after{
+	content: "";
+	display: inline-block;
+	width:100%;
+	height:0px;
+}
+.header .channelNav li{
+	display: inline-block;
+	margin-right:25px;
+}
+.header .channelNav li a{
+	font-size:19px;
+	color:white;
+	text-decoration: none;
+}
+/***********自适应**************/
+.header.navbar{
+	min-width: auto;
+	border-radius: 0px;
+	border:none;
+}
+.header.navbar .container{
+	padding-left:0px;
+	padding-right:0px;
+}
+.header.navbar .navbar-brand{
+	padding:0px 5px;
+	height:75px;
+	line-height:75px;
+	background-color:white;
+	overflow:hidden;
+}
+.header.navbar .navbar-brand img{
+	width:220px;
+	height:auto;
+	object-fit: contain;
+	display: inline-block;
+}
+.navbar .navbar-toggle{
+	background-color:white;
+}
+@media (max-width:767px){
+	.header.navbar{
+		border:solid 1px transparent;
+	}
+	.header.navbar .navbar-brand{
+		margin-left:2px;
+		height:50px;
+line-height:50px;
+	}
+	.header.navbar .navbar-brand img{
+		width:146px;
+		height:50px;
+	}
+	.header.navbar .channelNav li a{
+		padding-left:10px;
+		padding-right:10px;
+	}
+}
+.header.navbar::after,.header.navbar .container::after{
+	content:"";
+	display: block;
+	clear:none;
+}
+.header.navbar .navbar-collapse{
+	margin-left:0px;
+}
+@media (min-width:768px) {
+	.header.navbar .navbar-collapse{
+		margin-left:200px;
+	}
+}
+.header.navbar .channelNav{
+	margin-left:0px;
+}
+.header.navbar .channelNav li{
+	margin-right:0px;
+}
+.header.navbar .channelNav li:hover,.header.navbar .channelNav li:focus{
+	background-color:transparent;
+}
+.header.navbar .channelNav li a:hover,.header.navbar .channelNav li a:focus{
+	background-color:transparent;
+}
+.header.navbar .channelNav li a{
+	line-height: 37px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:5px;
+	padding-right:5px;
+}
+@media (min-width:992px) {
+	.header.navbar .channelNav li a{
+		line-height:37px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+}
+@media (min-width: 1200px) {
+	.header.navbar .channelNav li a{
+		padding-top:15px;
+		padding-bottom:15px;
+		
+	}
+} 
+/*首页页脚*/
+#footer.syd.indexPage{width:1000px;height:auto;margin:20px auto 0px;font-size:12px;background-color:rgb(255,255,255);color:rgb(102,102,102);border-top:solid rgb(102,102,102) 4px;margin-top:20px;position:relative;}
+#footer.syd.indexPage a{text-decoration:none;font-size:12px;color:rgb(102,102,102);}
+#footer.syd.indexPage img{border:none;}
+#footer.syd.indexPage .about{width:800px;height:20px;margin:20px auto;font-size:12px;margin-bottom:10px;color:rgb(102,102,102);}
+#footer.syd.indexPage .about a{display:block;width:70px;height:18px;float:left;margin-left:5px;text-align:center;}
+#footer.syd.indexPage .about a.a{border-right:dashed  1px;}
+#footer.syd.indexPage .copy{width:1000px;height:20px;text-align:center;margin:10px auto;font-size:12px;margin-bottom:5px;color:rgb(102,102,102);}
+#footer.syd.indexPage .contact{width:900px;height:31px;margin:0px auto;font-size:12px;color:rgb(102,102,102);}
+#footer.syd.indexPage .contact span{color:red;}
+#footer.syd.indexPage .space{height:10px;}
+#footer.syd.indexPage .oth{width:1000px;height:20px;font-size:12px;margin:5px auto;line-height:20px;text-align:center;background-color:rgb(230,230,230);color:rgb(102,102,102);}
+#footer.syd.indexPage .oth a{font-size:12px;text-align:center;}
+#footer.syd.indexPage .boxlist{width:1000px;height:80px;margin:0px auto;color:rgb(102,102,102);}
+#footer.syd.indexPage .boxlist div{width:105px;height:50px;padding:3px 5px;border:solid rgb(215,215,215) 1px;float:left;margin-left:8px;margin-top:10px;font-size:12px;line-height:18px;;letter-spacing:0px;}
+#footer.syd.indexPage .boxlist h3{line-height:50px;font-size:12px;font-weight:500;margin:0px;white-space: nowrap;}
+#footer.syd.indexPage .boxlist img{float:left;}
+#footer.syd.indexPage .boxlist div div{border:none;width:60px;height:40px;position:relative;top:0px;float:right;padding:0px 0px;margin-left:2px;}
+#footer.syd.indexPage .tempDiv{width:1010px;height:80px;margin-left:-5px;}
+#footer.syd.indexPage .tempDiv .ld{width:80px;height:80px;float:left;}
+#footer.syd.indexPage .tempDiv .smdj{width:390px;height:30px;float:left;margin:15px 0px 0px 0px;}
+#footer.syd.indexPage .tempDiv .lgwab{width:200px;height:20px;border: 1px solid #D7D7D7; float: left;margin-left: 8px;margin-top:15px;text-align:center;font-size:11px!important;padding:14px 3px 14px 10px;}
+#footer.syd.indexPage .tempDiv .lgwab img{float:left;}
+#footer.syd.indexPage .tempDiv .terrorVideo{width:310px;height:50px;float:left;margin-left:5px;margin-top:15px;}
+#footer.syd.indexPage .trust{width: 130px;height: 50px;position: absolute;right: 70px;top: 30px;}
+
+/*频道页脚*/
+#footer.channel{
+	/*min-width:1280px;*/
+	margin-top:30px;
+	background-color:#F5F5F5;
+}
+#footer.channel:before{
+	content: "";
+	display: block;
+	position: absolute;
+	width:100%;
+	height:2px;
+	background-color:#FFFFFF;
+	margin-top:2px;
+}
+#footer.channel .inner{
+	width:1280px;
+	margin:0px auto;
+	padding:50px 0px;
+}
+#footer.channel .statement{
+	line-height: 30px;
+	font-size:16px;
+	text-align: center;
+}
+#footer.channel .statement span{
+	display: block;
+	margin:0px 10px;
+}
+#footer.channel .statement a{
+	color:#000000;
+	margin-right:10px;
+	text-decoration: none;
+}
+#footer.channel .statement a:not(:last-child):after{
+	content: "|";
+	margin-left:14px;
+}
+#footer.channel .statement a span{
+	padding:0px;
+	margin:0px;
+	display:inine;
+}
+#footer .container{
+	padding:30px 0px;
+}
+@media (max-width:768px) {
+	#footer.channel .statement a:nth-last-child(2):after{
+		content:"";
+	}
+	#footer.channel .statement a:last-child{
+		display:block;
+		text-align:center;
+		margin:10px 0px;
+	}
+}
+@media (min-width:992px) {
+	#footer .container{
+		padding:50px 0px;
+	}
+	#footer .container span{
+		display: inline;
+	}
+}
+/*#change_view_model{display:none;}*/
+#change_view_model span{display:inline!important;}
+/*@media (max-width:1200px){
+	#change_view_model{
+		display:inline!important;
+	}
+} */

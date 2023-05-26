@@ -1,0 +1,1 @@
+document.write("<img src=\"https://www.zyjjw.cn/images/info_right.jpg\" border=\"0\"></img>")

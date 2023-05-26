@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+        <link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/cmstop.common.css">
+
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/style.css">
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/reset.css">
+	<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/config.js"></script>
+	<link rel="shortcut icon" href="http://www.ldnews.cn/favicon.ico">
+	<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/player.js"></script>
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/cmstop.basecolor.css">
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/cmstop.article.css">
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/cmstop.gallery.css">
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/cmstop.singup.css">
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/cmstop.dialog.css">
+	<link rel="stylesheet" href="/_/static/ow224_ldnews/static/css/cmstop.datepicker.css">
+	<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/config.js"></script>
+	 <script type="text/javascript">
+		var contentid = '698910';// 文章ID
+		var title = "\u5a04\u5e95\u5e02\u516c\u5b89\u673a\u5173\u6cd5\u6cbb\u516c\u5b89\u5efa\u8bbe\u4f1a\u8bae\u53ec\u5f00";//文章标题
+		var topicid = '14963085';// 评论主题
+		var context = '';//全文内容缓存
+		var content = '';//第一页内容缓存
+		var _IMG_URL = '{当前url}';
+	</script>
+<style type="text/css">
+.m-title-a{height: 45px; padding-bottom: 5px; }
+.m-title-h2{margin-top: 10px;margin-bottom: 25px;}
+.m-title-h2 {font-size: 18px;color: #e91321;}
+.m-title-a .m-title-h2 a{color: #e91321!important;font-weight: bold;}
+.m-title-a .m-title-h2{  border-bottom: 1px solid #e91321; height: 40px; }
+ .article-threesource{padding-top: 10px;}
+.article-picture-item{padding-top: 20px;padding-bottom: 20px margin-top:10px margin-bottom:10px; clear: both;}
+.m-imagetext{ height: 122px; }
+.m-lititle{width: 490px;position: relative;height: 113px;}
+.m-libottom{position: absolute; bottom: 0}
+.article-picture-item .title{line-height: 32px;}
+.article-picture-item  .time{ font-size: 14px; color: #999; }
+.article-picture-item .title a{font-size: 20px; font-weight: 600; }
+.tj_title em{float: left;display: block;width: 6px;height: 20px;background-color: #e91321;margin-right:7px;margin-top: 2px;}
+.tj_title span{float: left;font-size: 18px;color: #e91321;}
+.scroll-btns .topbnt {background-position: -10px -1320px;}
+.source{color: #999!important; margin-left: 10px; margin-right:10px;}
+a:hover
+{ 
+	color: #e91321!important;
+}
+</style>
+</head>
+<body>
+		<!-- 顶部 -->
+	<!--2022年内页通用头部-->
+ <div class="top">    
+            <div class="top_link">
+                <div class="logo-min"><img src="/_/static/ow224_ldnews/static/picture/logo-min.png" height="38"></div>
+                <div class="top_nav">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">时政</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">社会</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">专栏</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">娄底24小时</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">娄底日报</a>
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">娄底晚报</a>
+                </div>
+            </div>
+            <div class="top_time" id="currentDate">
+                <div class="search">
+                    <form name="search" id="search" method="GET" action="http://app.ldnews.cn/?app=search&controller=index&action=search">
+                        <input type="hidden" name="app" value="search">
+                        <input type="hidden" name="controller" value="index">
+                        <input type="hidden" name="action" value="search">
+                        <input type="hidden" name="type" value="all">
+                       <input type="text" name="wd" class="search-txt">
+
+                       <button type="button" aria-label="搜索" onclick="this.form.submit()"><i></i></button>
+                    </form>
+
+                    <form>
+                    </form>
+                        <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+            </div>
+    </div> 
+
+<!--/-内页通用头部-->
+<style>
+.xld-down a:hover{color:#fff;}
+</style>
+<script src="/_/static/ow224_ldnews/static/js/os.js"></script>
+	</div>
+	<div class="location">
+		<img src="/_/static/ow224_ldnews/static/picture/location_ico.png" alt="">
+		<p>您当前的位置：<a href="/{随机字符}/{随机数字}_{随机数字}.html">{网站名称}</a>    
+				  >   <a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a>
+				  >   <a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a>
+				 </p>
+	</div>
+	<div class="list_list">
+		<div class="list_left">
+			<div class="list_article">
+				<h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+				<div class="article_dc">
+		  <span class="date fl-l">{当前时间}</span>
+						<a class="source fl-l" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a>
+						<span class="editor fl-l">{人物名称}</span>
+					</div>
+			</div>
+			<div class="left_fx">
+				<div id="fx">
+					
+					<div class="fx_title">一 分享 一</div>
+					<div class="fx_code">
+						<div class="gb_resLay">
+							<div class="bdsharebuttonbox">
+								<ul class="gb_resItms">
+									<li> <a href="#" class="bds_weixin" data-cmd="weixin"></a> </li>
+									<li> <a href="#" class="bds_sqq" data-cmd="sqq"></a> </li>
+									<li> <a href="#" class="bds_tsina" data-cmd="tsina"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+   			<a href="#comment" class="comment icon16x16 fl-l"></a>
+				   <div class="fx_title">一 评论 一</div>
+		 				</div>
+			</div>
+			<div class="right_body">
+		<p>{新闻网内容}</p>								<div class="hr20"></div>
+				<div><p class="fz14 cor444" style="text-align:right;">责任编辑：{人物名称}</p></div>
+								<div class="hr20"></div>
+				<!-- 分页 -->
+				  <div id="news-editor">
+				</div>
+								<div class="hr30"></div>
+								<div class="hline"></div>
+				<div class="hr40"></div>
+
+				 <!-- 用户交互模块：点赞、分享、收藏等 -->
+				 <div class="article-interaction">
+                    <div class="share fl-r">
+                        
+                      <a class="bshareDiv" href="/{随机字符}/{随机数字}_{随机数字}.html">分享按钮</a><script type="text/javascript" src="/_/static/ow224_ldnews/static/js/buttonLite.js"></script>
+<script type="text/javascript">
+ $(function(){
+        $.getJSON(APP_URL+'?app=system&controller=content&action=stat&jsoncallback=?&contentid='+contentid);
+});
+ 
+</script>
+                    </div>
+                    <div class="interaction ov" style="margin-left:20px;">
+                        <a rel="nofollow" href="javascript:digg.set(698910,'supports')" class="icon40x40 interaction-btn love fl-l js-ilove"><span class="hidden">10</span></a>
+                        <a rel="nofollow" href="#comment" class="icon40x40 interaction-btn comment fl-l"></a>
+                        <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" rel="sidebar" onclick="addfavorite();return false;" class="icon40x40 interaction-btn collect fl-l"></a>
+                        <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="icon40x40 interaction-btn print fl-l"></a>
+                    </div>
+                </div>
+                <div class="hr40"></div>
+				   <div class="hline"></div>
+				<!--评论-->
+				<!-- 评论 -->
+<div class="article-comment" id="comment">
+    <div class="m-title-a">
+        <h2 class="m-title-h2"><a href="/{随机字符}/{随机数字}_{随机数字}.html">网友评论</a></h2>
+    </div>
+    <div class="hr20"></div>
+    <div class="m-comment">
+        <div class="comment-panel ov" id="commentWrapper">
+            
+        </div>
+    </div>
+    <div class="hr20"></div>
+    <div class="userlogin-panel border1">
+        <!-- 评论框 -->
+        <div id="comment_form_1681356887" class="comment-form">
+	<div class="c-inner">
+		<form action="/{随机字符}/{随机数字}_{随机数字}.html" method="post">
+			<input type="hidden" name="topicid" value="">
+			<input type="hidden" name="followid" value="">
+			<div class="textarea-wrap"><textarea name="content" class="textarea"></textarea><div class="login-warn"><p class="info login">
+				您需要登录后才可以评论，<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="cloud-login js-ajax-login" hidefocus="true">登录</a>| <a href="/{随机字符}/{随机数字}_{随机数字}.html" hidefocus="true">注册</a>
+			</p></div></div>
+			<div class="ov">
+				<div class="loginform-user-info"></div>
+				<input class="btn-post" type="submit" value="发表评论">
+			</div>
+		</form>
+	</div>
+</div>
+<script id="afterlogin_1681356887" type="text/template">
+	<div>
+		<div class="username-area">
+			<em></em>
+			<a class="quickLogout" href="/{随机字符}/{随机数字}_{随机数字}.html">退出</a>
+		</div>
+		<span class="anonymous"></span>
+		<div class="seccode-area" style="visibility: hidden;"></div>
+	</div>
+</script>
+<script id="beforelogin_1681356887" type="text/template">
+	<div>
+		<span class="info">
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="cloud-login js-ajax-login">登录</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html">注册</a>
+		</span>
+		<div class="seccode-area" style="visibility: hidden;"></div>
+	</div>
+</script>
+<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/comment.post.js"></script>
+<script type="text/javascript">
+$(function() {
+	var rid = '1681356887',
+	form = $('#comment_form_'+rid).find('form');
+	commentPost = new CommentPost({
+		form: form,
+		isLogin: 1,
+		isCheck: 1,
+		isSeccode: 1,
+		topicid: topicid,
+		afterLoginTemplate: $('#afterlogin_'+rid).html(),
+		beforeLoginTemplate: $('#beforelogin_'+rid).html(),
+		userInfoPanel: form.find('.loginform-user-info'),
+		warningPanel: form.find('.login-warn'),
+		loginSelector: '.cloud-login',
+		logoutSelector: '.quickLogout'
+	});
+});
+</script>        <!-- @end 评论框 -->
+    </div>
+    <div class="hr40"></div>
+</div>
+<!-- 登录框 -->
+<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/md5.js"></script>
+    <div class="singup-box singup-in-dialog hidden login-dialog-test">
+        <div class="singup-panel">
+            <div class="">
+                <div class="m-title-a">
+                    <h2 class="m-title-h2"><a>用户登录</a></h2>
+                </div>
+                <div class="hr20"></div>
+                <!-- 登录内容 -->
+                <div class="singup-form ov">
+                    <div class="singup-form-left singup-w330 fl-l">
+                        <form onsubmit="return false;" id="memberLogin" method="post" action="http://app.ldnews.cn/?app=member&amp;controller=index&amp;action=ajaxlogin">
+                            <div class="hr20"></div>
+                            <div class="ov">
+                                <div class="singup-line loginicon icon-user singup-item singup-w300 fl-l">
+                                    <p class="pos-a tip fz16">用户名</p>
+                                    <input type="text" name="username" id="member_login_username" class="input-text js-focus username">
+                                </div>
+                            </div>
+                            <div class="hr40"></div>
+                            <div class="ov">
+                                <div class="singup-line loginicon icon-pw singup-item singup-w300 fl-l">
+                                    <p class="pos-a tip fz16">密码</p>
+                                    <input type="password" name="password" id="member_login_password" class="input-text js-focus username">
+                                </div>
+                            </div>
+                            <div class="hr30"></div>
+                            <div class="ov">
+                                <input type="checkbox" class="fl-l" style="margin-top: 2px;margin-right: 10px;" value="1296000" name="cookietime" id="member_login_remember"><span class="fz12 fl-l margin-r-20">下次自动登录</span> <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="fz12 cor06c fl-l">忘记密码</a>
+                            </div>
+                            <div class="hr30"></div>
+                            <div class="ov">
+                                <div class="memberseccode">
+                                    <input type="text" style="width: 50px;" value="验证码" name="seccode" id="member_login_seccode" class="loginform-login-input-text m-input-text fl-l i-gray" tabindex="3">
+                                    <img align="absmiddle" width="52" height="24" src="/_/static/ow224_ldnews/static/picture/picture.png" class="loginform-img_mar fl-l" style="cursor:pointer;" id="member_login_seccodeimg">
+                                    <a onclick="this.parentNode.getElementsByTagName('img')[0].src='http://app.ldnews.cn/?app=system&amp;controller=seccode&amp;action=image&amp;action=image&amp;='+Math.random()*5;" class="reload icon16x16 fl-l" href="javascript:void(0);"></a>
+                                </div>
+                            </div>
+                            <div class="hr30"></div>
+                            <div class="ov">
+                                <input type="submit" value="登录" class="fl-l submit button1 margin-r-20 loginform-login-btn">
+                                <span class="fz12" style="line-height:40px;">没有账号 <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="fz12 cor06c">马上注册</a></span></div>
+                            <div class="hr40"></div>
+                        </form>
+                    </div>
+                    <div class="singup-form-right singup-w180 fl-l">
+                        <p class="fz16 title">使用第三方账号登录</p>
+                        <div class="hr20"></div>
+                        <div>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="loginThirdParty(this,'qzone')" class="web-login qq">QQ账户</a>
+                            <div class="hr30"></div>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="loginThirdParty(this,'sina_weibo')" class="web-login sina">新浪微博</a>
+                            <div class="hr30"></div>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="loginThirdParty(this,'tencent_weibo')" class="web-login tqq">腾讯微博</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/memberLogin.js"></script>				
+				   <div class="hr40"></div>
+								<!-- 相关新闻图文列表 -->
+							</div>
+		</div>
+		<div class="list_right">
+			<div class="list_tj">
+				<div class="tj_title">
+					<em></em><span>精彩推荐</span>
+				</div>
+				<div class="wrap_li">
+			<ul>
+<li class="pic_news">
+   <div class="big_pic tj_pic">
+   <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt=""></a>
+   </div>
+  <div class="big_text">
+  <a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a>
+  </div>
+</li>
+<li class="pic_news">
+   <div class="big_pic tj_pic">
+   <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt=""></a>
+   </div>
+  <div class="big_text">
+  <a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+  </div>
+</li>
+<li class="pic_news">
+   <div class="big_pic tj_pic">
+   <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt=""></a>
+   </div>
+  <div class="big_text">
+  <a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+  </div>
+</li>
+<li class="pic_news">
+   <div class="big_pic tj_pic">
+   <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt=""></a>
+   </div>
+  <div class="big_text">
+  <a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+  </div>
+</li>
+</ul>
+				</div>
+			</div>
+			<div class="hr20"></div>
+<div id="sidebar-follow">
+			  <div class="tj_title">
+					<em></em><span>新闻热榜</span>
+				</div>
+		   <style type="text/css" media="screen">
+
+#sidebar-follow {
+    width: 300px;
+}
+
+.rank-body ul li {
+    height: 30px;
+    line-height: 30px;
+    padding: 3px 0;
+    position: relative;
+    overflow: hidden;
+    font-size: 13px
+}
+
+.rank-body ul li i {
+    color: #999;
+    font-size: 20px;
+    vertical-align: sub;
+    width: 32px;
+    text-align: center;
+    display: inline-block;
+    font-family: Swisz, Georgia, Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑";
+    font-style: italic;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 30px;
+    line-height: 30px
+}
+
+.rank-body ul li a {
+    margin-left: 38px;
+    overflow: hidden
+}
+
+
+.rank-body li a {
+    color: #555
+}
+
+.rank-body li a:hover {
+    color: #c00
+}
+.rank-body li:nth-child(-n+3) i{color: #e91321;
+    
+}
+ 
+</style>
+
+
+<div id="sidebar-follow">
+<!--<div class="m-title-a">
+    <h2 class="m-title-h2"><a>新闻热榜</a></h2>
+</div>
+<div class="hr10"></div>-->
+    <div class="rank-body">
+        <ul>
+            
+            <li><i>1</i><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></li>
+
+            
+            <li><i>2</i><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{关键词1}{标题}</a></li>
+
+            
+            <li><i>3</i><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></li>
+
+            
+            <li><i>4</i><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></li>
+
+            
+            <li><i>5</i><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></li>
+
+            
+            <li><i>6</i><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></li>
+
+            
+            <li><i>7</i><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></li>
+
+                    </ul>
+    </div>
+<div class="hr10"></div>
+</div>
+	</div>
+		</div>
+	</div>
+<!-- 底部 -->
+    <footer class="m-footer">
+        <nav class="m-footer-nav">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a>
+            <em>|</em>
+            <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">关于我们</a>
+            <em>|</em>
+            <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">团队介绍</a>
+            <em>|</em>
+            <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">荣誉展厅</a>
+            <em>|</em>
+            <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a>
+            <em>|</em>
+            <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">版权声明</a>
+            <em>|</em>
+           <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">网站地图</a>
+            <em>|</em>
+            <a rel="nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">留言本</a>
+        </nav>
+	
+
+        <div class="copyright"><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="" title="{关键词1}">{关键词1}</a><span>版权所有：Copyright © {年}{域名库} All Rights Reserved. 违法和不良信息举报：0738-{随机7数字} </span></div>
+    </footer>
+
+
+
+<style>
+ .footer_link{margin-top:0px;padding-top:5px;padding-bottom:14px;text-align:center;background:#eee}
+ .footer_link img{margin:0px 3px 0px 3px;vertical-align:bottom;}
+</style> 
+
+ 
+	<div class="scroll-btns js-scrollbtns" style="left: 1590.5px; bottom: 100px;">
+		<div class="btn home icon40x40">
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="text" style="display: none;">返回首页</a>
+		</div>
+		<div class="hr10"></div>
+		<div class="btn rel home icon40x40">
+			<a rel="nofollow" href="#related" class="text" style="display: none;">相关新闻</a>
+		</div>
+		<div class="hr10"></div>
+		<div class="btn topbnt home icon40x40">
+			<a href="javascript:scroll(0,0)" rel="nofollow" class="text" style="display: none;">返回顶部</a>
+		</div>
+	</div>
+<script type="text/javascript">
+   $(function(){
+  content = $('.article-detail-inner').html();
+});
+</script>
+	<script src="/_/static/ow224_ldnews/static/js/cmstop.gotop.js"></script>
+	<script src="/_/static/ow224_ldnews/static/js/cmstop.common.js"></script>
+	<script src="/_/static/ow224_ldnews/static/js/cmstop.dialog.js"></script>
+	<script src="/_/static/ow224_ldnews/static/js/cmstop.datepicker.js"></script>
+	<script src="/_/static/ow224_ldnews/static/js/cmstop.gallery.article.js"></script>
+	<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/cmstop-common.js"></script>
+	<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/cmstop.seccode.js"></script>
+<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/comment.js"></script>
+<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/digg.js"></script>
+<script type="text/javascript" src="/_/static/ow224_ldnews/static/js/article-show.js"></script>
+<script src="/_/static/ow224_ldnews/static/js/sidebar-follow.js"></script>
+<script>
+/* <![CDATA[ */
+(new SidebarFollow()).init({
+	element: 'sidebar-follow',
+	distanceToTop: 15
+});
+/* ]]> */
+</script>
+	
+<script src="/_/static/ow224_ldnews/static/js/spm.js"></script>
+<script>
+if (window.spm) {
+  // 初始化配置
+  spm.config({
+	//userId: userId, // 此处填写已登录用户ID
+	siteId: "zm5175-001", // 此处填写该网站对应的网站标识（即SPM a段） 例如'zmXXXX-001'
+	additionalInfo: {
+	  //sex: value, // 此处填写已登录用户性别
+	  //profession: value, // 此处填写已登录用户职业
+	  //age: value, // 此处填写已登录用户年龄
+	  targetID: "698910", // 此处填写稿件ID
+	  organization: "zm5175", // 此处填写机构ID
+	  // 上报进入事件
+	  category: 'event',
+	  action: 'comeIn'
+	}
+  });
+}
+window.onbeforeunload = function () {
+  // 上报离开事件
+  spm.push({ category: 'event', action: 'leave' });
+};
+</script>
+</body>
+<!-- @end 脚本区域 -->
+</html>

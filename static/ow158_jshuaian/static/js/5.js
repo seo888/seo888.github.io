@@ -1,0 +1,1 @@
+document.writeln("<a href=\'http://222.184.79.49/hatjj/mbWeb.action\' target=\'_blank\' rel=\'nofollow\'><img src=\'/ad/shujuhuaian.jpg\' alt=\'数据淮安\'></a>");

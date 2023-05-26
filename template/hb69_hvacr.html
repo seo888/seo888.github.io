@@ -1,0 +1,937 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="gb2312">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}" />
+    <link href="/_/static/hb69_hvacr/static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/_/static/hb69_hvacr/static/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="/_/static/hb69_hvacr/static/css/mian.css" rel="stylesheet" type="text/css">
+    <link href="/_/static/hb69_hvacr/static/css/wap.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/_/static/hb69_hvacr/static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/_/static/hb69_hvacr/static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/_/static/hb69_hvacr/static/js/bootstrap.min.js"></script>
+    <script src="/_/static/hb69_hvacr/static/js/jquery.goup.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/_/static/hb69_hvacr/static/css/layui.css" media="all">
+    <script type="text/javascript" src="/_/static/hb69_hvacr/static/js/layui.js"></script>
+    <script type="text/javascript" src="/_/static/hb69_hvacr/static/js/IsMobileBrowse.js"></script>
+</head>
+<body>
+    <div style="display:none"><img src="   /static/hb69_hvacr/static/picture/wechat-bao_301x301.png"></div>
+    <!--微信分享-->
+    
+    
+    <script src="/_/static/hb69_hvacr/static/js/jweixin-1.0.0.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var WeChatMPType = "hvacrbao";
+    </script>
+    <script src="/_/static/hb69_hvacr/static/js/qhxx-wechat-share-ajax.js" type="text/javascript"></script>
+    <script src="/_/static/hb69_hvacr/static/js/jquery-qhxx-ip-callback.js" type="text/javascript"></script>
+
+    <div class="common-header" id="top">
+        <div class="header_container">
+            <a href="/{随机字符}/{随机字符}.html" class="logo"><img src="   /static/hb69_hvacr/static/picture/logo.png"></a>
+            <div class="nav_box">
+                <script type="text/javascript">
+                    function bindbtnMenu() {
+                        $("#btnMenu").click(function () {
+                            var menu = $("#example-navbar-collapse");
+                            if (menu.is(':visible')) {
+                                menu.slideUp();
+                                $(this).removeClass("glyphicon-remove")
+                                    .addClass("glyphicon-align-justify");
+                            }
+                            else {
+                                menu.slideDown();
+                                $(this).removeClass("glyphicon-align-justify")
+                                    .addClass("glyphicon-remove");
+                            }
+                        });
+                    }
+                    $(document).ready(function () {
+                        bindbtnMenu();
+                    });
+                </script>
+                <div class="clear"><button id="btnMenu" type="button" class="glyphicon glyphicon-align-justify" data-toggle1="collapse" data-target1="#example-navbar-collapse"> </button></div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="/{随机字符}/{随机字符}.html" target="_self">首页</a></li>
+                        <li><a href="/{随机字符}/{随机字符}.html" target="_self">冷冻冷藏</a></li>
+                        <li><a href="/{随机字符}/{随机字符}.html" target="_self">空气能</a></li>
+                        <li><a href="/{随机字符}/{随机字符}.html" target="_self">中央空调</a></li>
+                        <li><a href="/{随机字符}/{随机字符}.html" target="_self">供热采暖</a></li>
+                        <li><a href="/{随机字符}/{随机字符}.html" target="_self">制冷电器</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--搜索-->
+            <div class="serch_content">
+                <form id="frmSearch" action="/info.aspx" method="get" target="_blank">
+                    <input type="text" id="txtKeywords" name="keywords" placeholder="请输入搜索关键字" class="input_text">
+                    <button class="input_button btn" id="btnSearch" href="/{随机字符}/{随机字符}.html"><i class="glyphicon glyphicon-search"></i></button>
+                </form>
+            </div>
+            <!--搜索-->
+            <a href="/{随机字符}/{随机字符}.html" class="header_right" target="_blank">
+                <img src="/_/static/hb69_hvacr/static/picture/pic_1.png">
+            </a>
+        </div>
+    </div>
+    <!--左侧内容-->
+    <div class="center_content ">
+        <div class=" clearfix">
+            <div class="content_left left">
+                
+                <!--<script src="//img1.hvacr.cn/Bao/bao_detail_top.js?rnd=20211009162204678402" ></script>-->
+                <!--文章内容-->
+                <div class="article">
+                    <div class="article-title">
+                        <p class="cited_title">
+                            
+                        </p>
+                        <h1 class="text_title">
+                            {关键词1}{随机后缀}{新闻网标题}
+                        </h1>
+                        <p class="subtitle">
+                            
+                        </p>
+                        <div class="author">
+                            <a>{关键词1}</a><span class="time am-fl"><span class="dot">&bull;</span><abbr class="time">{年月日} </abbr></span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="video_box"></div>
+                    <div class="article-text" id="content_container">
+                        <div style="text-align: justify;">{句子}</div><div style="text-align: justify;">{句子}</div><div style="text-align: justify;"><img src="{随机图片}" alt="{随机关键词}"><br></div><div style="text-align: justify;">{新闻网内容}
+                    </div>
+                    <!--标签-->
+                    <div class="article_label clearfix">
+                        <a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a>
+                    </div>
+                    
+                    <div id="share_fixed" style="margin:0px; padding:0px;"></div>
+                    
+                    <script type="text/javascript">
+                        function bindCloseWeiXinWxa() {
+                            $("#closeWeiXinWxa,#mask_pop").click(function () {
+                                $("#weixin_pop").hide();
+                            });
+                        }
+                        function bindShareToWeiXin() {
+                            $("#shareToWeiXin").click(function () {
+                                $("#weixin_pop").show();
+                                var scrollTop = $(document).scrollTop();
+                                var height = $(window).height();
+                                var content_height = $("#mask_pop_content").height();
+                                var top = scrollTop + height / 2 - content_height / 2;
+                                $("#mask_pop_content").offset({ top: top });
+                            });
+                        }
+                        $(document).ready(function () {
+                            bindCloseWeiXinWxa();
+                            bindShareToWeiXin();
+                        });
+                    </script>
+                    <!--微信弹出-->
+                    <div class="weixin_pop" id="weixin_pop" style="display:none">
+                        <div id="mask_pop" tabindex="0" style="opacity: 0.7; background: rgb(0, 0, 0); position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; overflow: hidden; user-select: none; z-index: 1026; cursor: pointer; " class="ui-popup-backdrop"></div>
+                        <div class="ewm_pop" id="mask_pop_content">
+                            <a id="closeWeiXinWxa" href="/{随机字符}/{随机字符}.html" target="_self" class="glyphicon glyphicon-remove close"></a>
+                            <h4>分享给微信好友</h4>
+                            <img src="  /static/hb69_hvacr/static/picture/2102193-wxa.jpg" class="ewm_pic">
+                            <ul class="pop_text">
+                                <li class="title">使用指南</li>
+                                <li>1、打开微信，点击底部的“发现”</li>
+                                <li>2、使用“扫一扫”将网页分享给微信好友</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--品牌新闻-->
+                    <div id="brand_container"></div>
+                    <!--评论-->
+                    <script type="text/javascript">
+                        //获得Cookie解码后的值
+                        function GetCookieVal(offset) {
+                            var endstr = document.cookie.indexOf(";", offset);
+                            if (endstr == -1)
+                                endstr = document.cookie.length;
+                            return unescape(document.cookie.substring(offset, endstr));
+                        }
+                        //获取cookie值
+                        function get_Cookie(cookieName) {
+                            var cookieString = document.cookie;
+                            var start = cookieString.indexOf(cookieName + '=');
+                            if (start == -1)
+                                return null; //不存在此cookie
+                            start += cookieName.length + 1;
+                            var end = cookieString.indexOf(';', start);
+                            if (end == -1) return unescape(cookieString.substring(start));
+                            return unescape(cookieString.substring(start, end));
+                        }
+                        //获取cookie子项值
+                        function getUserItemValue(strUserInfo, itemName) {
+                            var result = "";
+                            if (strUserInfo == null || strUserInfo == "")
+                                return result;
+                            var arrUserInfo = strUserInfo.split("&");
+                            for (var i = 0; i < arrUserInfo.length; i++) {
+                                if (arrUserInfo[i].indexOf(itemName) != -1) {
+                                    var itemValue = arrUserInfo[i];
+                                    var arritemValue = itemValue.split("=");
+                                    result = arritemValue[1];
+                                    return result;
+                                }
+                            }
+                            return result;
+                        }
+                    </script>
+                    <div class="comment_box">
+                        <div class="comment_title clearfix" id="comment_container">
+                            <h2>
+                                参与评论
+                            </h2>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">共收到<span id="pinluntotal"></span>条评论</a>
+                        </div>
+                        <div class="input-module">
+                            <textarea id="txtPingLunContent" placeholder="请输入你的看法!" maxlength="150"></textarea>
+                        </div>
+                        <div class="user clearfix">
+                            <a href="/{随机字符}/{随机字符}.html" class="right" id="btnSubmitPingLun">提交评论</a>
+                            <div class="current-user left" id="pinglun-msg">
+                                <script type="text/javascript">
+                                    function getCookie(name) {
+                                        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                                        if (arr = document.cookie.match(reg))
+                                            return unescape(arr[2]);
+                                        else
+                                            return null;
+                                    }
+                                    function delCookie(name) {
+                                        var exp = new Date();
+                                        exp.setTime(exp.getTime() - 1);
+                                        var cval = getCookie(name);
+                                        if (cval != null)
+                                            document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+                                    }
+                                    function logout(src) {
+                                        var url = "http://passport.hvacr.cn/login.htm?url=" + window.location.href;
+                                        var html = "<a href=\"" + url + "\">登录</a>后参与评论";
+                                        //delCookie("UserInfo");
+                                        $.cookie('UserInfo', null);
+                                        $("#pinglun-msg").html(html);
+                                    }
+                                    if (document.cookie.indexOf("UserInfo=") == -1) {
+                                        var url = "http://passport.hvacr.cn/login.htm?url=" + window.location.href;
+                                        document.write("<a href=\"" + url + "\">登录</a>后参与评论");
+                                    }
+                                    else {
+                                        var CurUserName = getUserItemValue(get_Cookie("UserInfo"), "UserName");
+                                        var CurUserID = getUserItemValue(get_Cookie("UserInfo"), "UserID");
+                                        document.write("制冷大市场网友" + CurUserName + " 参与评论");
+                                        //document.write("&nbsp;<a href=\"/{随机字符}/{随机字符}.html\" onclick=\"logout(this)\" >退出</a>");
+                                    }
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <!--显示评论-->
+                    <div class="display-module">
+                        <ul id="pinlun_container"></ul>
+                        <a style="display:none" id="loadpinglunmore" class="more-news" href="/{随机字符}/{随机字符}.html">更多评论</a>
+                    </div>
+                    <!--显示评论-->
+                    <!--关于其他新闻-->
+                    <div class="conpany_new">
+                        <h4>关于{关键词1}的新闻</h4><div class="article_list"> <ul class="article_ul"><li><li>    <div class="am-cf inner_li">        <div class="img_box" style="display:block">            <a class="img" href="/{随机字符}/{随机字符}.html" target="_blank"><img class="load-img fade" src=" {随机图片}"></a>            <a href="/{随机字符}/{随机字符}.html" class="img_mark">{随机关键词}</a>            </div>            <div class="intro margin_left">            <h3><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}{标题}</a></h3>            <div class="abstract">{随机关键词}</div>            <div class="info">                <div class="info-list">                    <div class="user-info"><a class="name">{随机关键词}</a><span class="user-info-point">·</span>                        </div>                        <div class="time-div">                        <span class="time" pubtime="{今日时间}"></span>                        </div>                        </div>                        <div class="tags-list">                        </div>                    </div>                </div>        </div>    </li><li><li>    <div class="am-cf inner_li">        <div class="img_box" style="display:block">            <a class="img" href="/{随机字符}/{随机字符}.html" target="_blank"><img class="load-img fade" src="{随机图片}"></a>            <a href="/{随机字符}/{随机字符}.html" class="img_mark">{随机关键词}</a>            </div>            <div class="intro margin_left">            <h3><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></h3>            <div class="abstract">{随机关键词}</div>            <div class="info">                <div class="info-list">                    <div class="user-info"><a class="name">{随机关键词}</a><span class="user-info-point">·</span>                        </div>                        <div class="time-div">                        <span class="time" pubtime="{今日时间}"></span>                        </div>                        </div>                        <div class="tags-list">                        </div>                    </div>                </div>        </div>    </li><li><li>    <div class="am-cf inner_li">        <div class="img_box" style="display:block">            <a class="img" href="/{随机字符}/{随机字符}.html" target="_blank"><img class="load-img fade" src="{随机图片}"></a>            <a href="/{随机字符}/{随机字符}.html" class="img_mark">{随机关键词}</a>            </div>            <div class="intro margin_left">            <h3><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}{标题}</a></h3>            <div class="abstract">{随机关键词}</div>            <div class="info">                <div class="info-list">                    <div class="user-info"><a class="name">{随机关键词}</a><span class="user-info-point">·</span>                        </div>                        <div class="time-div">                        <span class="time" pubtime="{今日时间}"></span>                        </div>                        </div>                        <div class="tags-list">                        </div>                    </div>                </div>        </div>    </li> </ul> </div>
+                    </div>
+
+                    <script type="text/javascript">
+                        function isWeiXin() {
+                            return navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == "micromessenger" ? true : false;
+                        }
+                        function isAndroid() {
+                            return navigator.userAgent.match(/Android/i) ? true : false;
+                        }
+                        function isBlackBerry() {
+                            return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+                        }
+                        function isIOS() {
+                            return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+                        }
+                        function isWindowsMobile() {
+                            return navigator.userAgent.match(/IEMobile/i) ? true : false;
+                        }
+                        function isMobileClient() {
+                            if (isWeiXin() || isAndroid() || isBlackBerry() || isIOS() || isWindowsMobile()) {
+                                return "1";
+                            }
+                            return "0";
+                        }
+                    </script>
+
+                    <!--产品-->
+                    <div id="rightcxlmsells"></div>
+                    <!--产品-->
+                    <!--PC端显示广告-->
+                    <div id="qhxx_ad_1_pc" class="qhxx_ad_1_pc">
+                        <script type="text/javascript">
+                            var mediav_ad_pub = 'O8qNe6_2924987';
+                            var mediav_ad_width = '770';
+                            var mediav_ad_height = '123';
+
+                        </script>
+                        <script type="text/javascript" language="javascript" src="/_/static/hb69_hvacr/static/js/mvf_g2.js"></script>
+                    </div>
+
+                    <!--移动端显示广告-->
+                    <div id="qhxx_ad_1_mobile" class="qhxx_ad_1_mobile">
+                        <script type="text/javascript">
+                            var mediav_ad_pub = 'PDO49i_2924986';
+                            var mediav_ad_width = '400';
+                            var mediav_ad_height = '300';
+
+                        </script>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="content_right content_right_xq right">
+              
+                <div id="div_heigth">
+                </div>
+
+                <!--品牌新闻速递-->
+                <div class="brand_news" style="margin-top:0px;">
+                    <h3 style="border-top:0px;padding-top:0px">
+                        <div>企业新闻通</div>
+                        <div style="margin-top:5px;">{关键词1}</div>
+                    </h3>
+                    <ul class="qy_logo" id="brand_bao_container">
+                    </ul>
+                    <!--<a class="more-news" href="https://pinpai.hvacr.cn" target="_blank">浏览更多</a>-->
+                </div>
+
+                <!--新闻企业通-->
+                <div class="news_link">
+                    <h3>
+                        <div>企业新闻通</div>
+                        <div style="margin-top:5px;">{关键词1}</div>
+                    </h3>
+                    <ul class="qy_logo" id="enterprise_container2">
+                    </ul>
+                </div>
+
+                <div id="rightcxlm">
+                    <h3>{随机关键词}</h3>
+                </div>
+            </div>
+ 		
+      
+       
+        </div>
+        <!--wap手机版底部-->
+        <div class="mobile_footer">
+            <div class="mobile_search">
+                <form id="frmSearchWap" action="http://bao.hvacr.cn/info.aspx" method="get" target="_blank">
+                    <input type="text" id="txtKeywordsWap" name="keywords" placeholder="请输入关键字搜索">
+                    <button id="btnSearchWap">搜索</button>
+                </form>
+            </div>
+            <ul class="mobile_nav clear">
+                <li><a href="/{随机字符}/{随机字符}.html">冷冻冷藏</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html">中央空调</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html">空气能</a></li>
+                <li class="no-margin-right"><a href="/{随机字符}/{随机字符}.html">制冷电器</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html">供热采暖</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html">制冷百科</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html">业界动态</a></li>
+                <li class="no-margin-right"><a href="/{随机字符}/{随机字符}.html">企业新闻</a></li>
+            </ul>
+            <div class="mobile_ewm">
+                
+            </div>
+        </div>
+        <!--wap手机版底部-->
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <div class="footer_top clearfix">
+            <div class="footer_box_1 footer_box">
+                
+            </div>
+            <div class="footer_box_3 footer_box">
+                <div class="footer_title">
+                   
+                </div>
+                
+            </div>
+            <div>
+                <div>
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="footer_bottom_inner clearfix">
+            <p class="left">
+                <a href="/{随机字符}/{随机字符}.html">
+                    <img src="  /static/hb69_hvacr/static/picture/pic_3.png">
+                </a>&copy;{年} {网站名称}
+            </p>
+            <p class="right">
+                <a rel="nofollow" href="/{随机字符}/{随机字符}.html" target="_blank">网站介绍</a>
+                | <a rel="nofollow" href="/{随机字符}/{随机字符}.html" target="_blank">服务条款</a>
+                | <a rel="nofollow" href="/{随机字符}/{随机字符}.html" target="_blank">隐私声明</a>
+                | <a rel="nofollow" href="/{随机字符}/{随机字符}.html" target="_blank">会员服务</a>
+                | <a rel="nofollow" href="/{随机字符}/{随机字符}.html" target="_blank">广告服务</a> | <a href="/{随机字符}/{随机字符}.html" target="_blank">友情链接</a> | <a rel="nofollow" href="/{随机字符}/{随机字符}.html" target="_blank">联系我们</a> | <a href="http://{当前域名}/sitemap.xml" target="_blank">网站地图</a>
+            </p>
+        </div>
+    </div>
+    <input type="hidden" id="hidIPProvinceName" value="">
+    <input type="hidden" id="hidContentKey" value="冷链,两会,冷库">
+    <input type="hidden" id="hidProductKey" value="冷链">
+    <input type="hidden" id="hidBrandKey" value="">
+    <input type="hidden" id="hidMergeKeys" value="冷链,两会,冷库">
+    <input type="hidden" id="hidBaoID" value="2102193">
+    <input type="hidden" id="hidReplyID" value="0">
+    <input type="hidden" id="hidPage" value="1">
+    <input type="hidden" id="hidMaxPage" value="1">
+    <input type="hidden" id="hidCurProvince" value="">
+
+    <script type="text/javascript">
+        var layer;
+        layui.use(['layer'], function () {
+            //加载模块
+            layer = layui.layer;
+
+            //layer.open({
+            //    type: 1,
+            //    skin: 'layui-layer-rim', //加上边框
+            //    area: ['320px', '240px'], //宽高
+            //    content: 'html内容'
+            //});
+        });
+
+        function onWxPreviewImage() {
+            if (isWeiXin()) {
+                wxPreviewImage("#content_container img");
+            }
+        }
+        onWxPreviewImage();
+        function BindbtnSearch() {
+            $("#btnSearch,#btnSearchWap").click(function () {
+                var IsWap = false;
+                if (this.id.indexOf("Wap") != -1)
+                    IsWap = true;
+                var keyword = "";
+                if (IsWap)
+                    keyword = $.trim($("#txtKeywordsWap").val());
+                else
+                    keyword = $.trim($("#txtKeywords").val());
+                if (keyword == "") {
+                    if (IsWap)
+                        $("#txtKeywordsWap").focus();
+                    else
+                        $("#txtKeywords").focus();
+                    return false;
+                }
+            });
+        }
+        function binddatatime() {
+            $("[pubtime]").each(function (index, domEle) {
+                var str = $(domEle).attr("pubtime");
+                $(domEle).html(getDiffstr(str));
+            });
+        }
+        function getDiffstr(timestr) {
+            try {
+                var date1 = new Date(Date.parse(timestr.replace(/-/g, "/"))); //开始时间
+                var date2 = new Date();    //结束时间
+                var date3 = date2.getTime() - date1.getTime()  //时间差的毫秒数
+
+                var totalseconds = Math.max(0, Math.floor(date3 / 1000));
+                var totalminutes = Math.max(0, Math.floor(date3 / (1000 * 60)));
+                var totalhours = Math.max(0, Math.floor(date3 / (1000 * 60 * 60)));
+                var totaldays = Math.max(0, Math.floor(date3 / (1000 * 60 * 60 * 24)));
+                //alert(totalseconds);
+                if (totalseconds < 60) {
+                    if (totalseconds <= 2)
+                        return "刚刚";
+                    else
+                        return totalseconds + "秒前";
+                }
+                if (totalminutes <= 60)
+                    return totalminutes + "分钟前";
+                if (totalhours <= 24)
+                    return totalhours + "小时前";
+
+                return (date1.getMonth() + 1) + "-" + date1.getDate();
+            }
+            catch (err) {
+                //在此处理错误
+                return "";
+            }
+        }
+
+        function goTop() {
+            $.goup({
+                trigger: 100,
+                bottomOffset: 100,
+                locationOffset: 10,
+                title: '返回顶部',
+                titleAsText: true
+            });
+        }
+
+        function loadPingLun() {
+            $("#loadpinglunmore").click(function () {
+                var PageSize = 5;
+                var CurPage = parseInt($("#hidPage").val());
+                var MaxPage = parseInt($("#hidMaxPage").val());
+                var obj = $(this);
+                var otext = obj.text();
+                $.ajax({
+                    url: "/Tools/PingLunHandler.ashx?rnd=" + Math.random(),
+                    type: "get",
+                    dataType: "json",
+                    data: {
+                        token: Math.random(),
+                        rsformat: 'json',
+                        funsort: "loadbaopinlun",
+                        baoid: $("#hidBaoID").val(),
+                        pagesize: PageSize,
+                        page: CurPage
+                    },
+                    beforeSend: function (XMLHttpRequest) {
+                        obj.attr('disabled', "true").text("评论加载中…");
+                    },
+                    success: function (data, textStatus) {
+                        if (data.Success) {
+                            $("#pinlun_container").append(data.ReturnString);
+                            if (CurPage == 1) {
+                                var Total = parseInt(data.Tag);
+                                $("#pinluntotal_0,#pinluntotal").html(Total); //评论总条数
+                                if (Total == 0) {
+                                    $("#pinluntotal").parent().hide();
+                                }
+                                var MaxPage = Total / PageSize;
+                                if ((Total % PageSize) > 0)
+                                    ++MaxPage;
+                                $("#hidMaxPage").val(MaxPage);
+                            }
+                            var MaxPage = parseInt($("#hidMaxPage").val());
+
+                            if (CurPage >= MaxPage) {
+                                obj.hide();
+                            }
+                            else {
+                                obj.show();
+                                CurPage++;
+                                $("#hidPage").val(CurPage);
+                            }
+                        }
+                        else {
+                            layer.alert(data.ReturnString);
+                        }
+                    },
+                    complete: function (XMLHttpRequest, textStatus) {
+                        obj.removeAttr("disabled").text(otext);
+                    },
+                    error: function (data) {
+                    }
+                });
+            });
+        }
+
+        function dianZan(src) {
+            var obj = $(src);
+            var id = obj.attr("data-id");
+            var supportnum = parseInt(obj.attr("data-SupportNum"));
+            $.ajax({
+                url: "/Tools/PingLunHandler.ashx?rnd=" + Math.random(),
+                type: "post",
+                dataType: "json",
+                data: {
+                    token: Math.random(),
+                    rsformat: 'json',
+                    funsort: "supportoppose",
+                    id: id,
+                    type: 1
+                },
+                beforeSend: function (XMLHttpRequest) {
+                    obj.attr('disabled', "true").addClass("active").removeAttr("onclick");
+                },
+                success: function (data, textStatus) {
+                    if (data.Success) {
+                        obj.html("<i class=\"glyphicon glyphicon-thumbs-up\"></i>（" + (supportnum + 1) + "）");
+                    }
+                    else {
+                        layer.alert(data.ReturnString);
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                    //obj.removeAttr("disabled");
+                },
+                error: function (data) {
+                }
+            });
+        }
+
+        function reply(id) {
+            $("#hidReplyID").val(id);
+            ScrollID("comment_container");
+            $("#txtPingLunContent").focus();
+        }
+
+        function bindbtnSubmitPingLun() {
+            $("#btnSubmitPingLun").click(function () {
+                var replyid = parseInt($("#hidReplyID").val());
+                if (replyid <= 0)
+                    replyid = undefined;
+                var textarea = $("#txtPingLunContent");
+                AddPingLun(this, textarea, replyid);
+            });
+        }
+
+        function bindbtnSubmitPingLunKuai() {
+            $("#btnSubmitPingLunKuai").click(function () {
+                var replyid = parseInt($("#hidReplyID").val());
+                if (replyid <= 0)
+                    replyid = undefined;
+                var textarea = $("#txtPingLunContentKuai");
+                AddPingLun(this, textarea, replyid);
+            });
+        }
+
+        function pingluntoggle(src) {
+            $(src).parent().siblings("[data-role=pinglun]").toggle();
+        }
+
+        function pingluncancel(src) {
+            $(src).parent().parent().hide();
+        }
+
+        function pinglunsubmit(src) {
+            var textarea = $(src).parent().parent().find("textarea");
+            AddPingLun(src, textarea, undefined);
+        }
+
+        function AddPingLun(src, contentsrc, replyid) {
+            var CurUserName = "";
+            var CurUserID = 0;
+            //            if (document.cookie.indexOf("UserInfo=") == -1) {
+            //                window.location = "http://passport.hvacr.cn/login.htm?url=" + window.location.href;
+            //                return;
+            //            }
+            if (document.cookie.indexOf("UserInfo=") != -1) {
+                CurUserName = getUserItemValue(get_Cookie("UserInfo"), "UserName");
+                CurUserID = getUserItemValue(get_Cookie("UserInfo"), "UserID");
+            }
+
+            if (replyid == undefined) {
+                replyid = 0;
+            }
+            var Content = contentsrc.val();
+            if (Content == "请输入你的评论内容") {
+                layer.alert("请输入你的评论内容!");
+                contentsrc.focus();
+                return false;
+            }
+            if (Content.replace(/^\s+$/, '') == "") {
+                layer.alert("发言的内容不能为空！");
+                contentsrc.focus();
+                return false;
+            }
+            if (Content.length > 150) {
+                layer.alert("发言的内容超出最大限制150字符，请重新输入！");
+                contentsrc.focus();
+                return false;
+            }
+            var obj = $(src);
+            var baoid = $("#hidBaoID").val();
+
+            var ismobile = "0";
+
+            $.ajax({
+                url: "/Tools/PingLunHandler.ashx?rnd=" + Math.random(),
+                type: "post",
+                dataType: "json",
+                data: {
+                    token: Math.random(),
+                    rsformat: 'json',
+                    funsort: 'addbaopinglun',
+                    baoid: baoid,
+                    content: Content,
+                    userid: CurUserID,
+                    username: CurUserName,
+                    replyid: replyid,
+                    ismobile: isMobileClient()
+                },
+                beforeSend: function (XMLHttpRequest) {
+                    obj.attr('disabled', "true").text("发表中…");
+                },
+                success: function (data, textStatus) {
+                    if (data.Success) {
+                        layer.alert(data.ReturnString,{icon: 1});
+                        contentsrc.val("");
+                    }
+                    else {
+                        layer.alert(data.ReturnString);
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                    obj.removeAttr("disabled").text("发表评论");;
+                },
+                error: function (data) {
+                }
+            });
+        }
+
+        function ScrollID(id) {
+            $('html, body').animate({
+                scrollTop: parseInt($("#" + id).offset().top)
+            }, 1000);
+        }
+
+        function loadCXLMCompanyAndSells() {
+            $.ajax({
+                url: "/Tools/DatasHandler.ashx?rnd=" + Math.random(),
+                type: "get",
+                dataType: "json",
+                data: {
+                    token: Math.random(),
+                    rsformat: 'json',
+                    funsort: "gettopncxlmcompanyandsells",
+                    keywords: $("#hidProductKey").val(),
+                    topn: RightTopN,
+                    province: $("#hidCurProvince").val()
+                },
+                beforeSend: function (XMLHttpRequest) {
+                    //$("#pinlun_container").html("评论加载中…");
+                },
+                success: function (data, textStatus) {                  
+                    if (data.Success) {
+                        $("#rightcxlm").html(data.ReturnString);
+                        $("#rightcxlmsells").html(data.Tag);
+                    }
+                    else {
+                        layer.alert(data.ReturnString);
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                },
+                error: function (data) {
+                }
+            });
+        }
+
+        var share_fixed_top;
+        function bindshare_fixed() {
+            $(window).scroll(function () {
+                var wtop = parseInt($(document).scrollTop());
+                var wheight = parseInt($(window).height());
+                if ((wtop + wheight - 50) >= share_fixed_top) {
+                    $("#share_container").removeClass("share_fixed");
+
+                    if (isMobileClient() == "1") {
+                        $("#share_text_li").addClass("display-block").removeClass("display-none");
+                        $("#share_text_li").addClass("display-block").removeClass("display-none");
+                        $("#share_container_li").addClass("display-block").removeClass("display-none").addClass("border-none");
+                        $("#pinglun_li").addClass("display-none").removeClass("display-block");
+                    }
+                }
+                else {
+                    $("#share_container").addClass("share_fixed");
+
+                    if (isMobileClient() == "1") {
+                        $("#share_text_li").addClass("display-none").removeClass("display-block");
+                        $("#share_text_li").addClass("display-none").removeClass("display-block");
+                        $("#share_container_li").addClass("display-none").removeClass("display-block").removeClass("border-none");
+                        $("#pinglun_li").addClass("display-block").removeClass("display-none");
+                    }
+                }
+            });
+        }
+        function getIPInfo_callback(data) {
+            $("#hidCurProvince").val(data.ProvinceName);
+            loadCXLMCompanyAndSells();
+        }
+        function getLocationWeiXin() {
+            getLocation.weichatLatAndLon(
+                function (data) {
+                    //data包含经纬度信息
+                    getLocation.cityname(data.latitude, data.longitude, function (datas) {
+                        var json = { "ProvinceName": datas.province.replace("省", "") };
+                        getIPInfo_callback(json);
+                    });
+                }
+            );
+        }
+        function getProvince() {
+            var t = isWeiXin();
+            if (t) {
+                getLocationWeiXin();
+            }
+            else {
+                $.QHXX.getIPInfo(getIPInfo_callback);
+            }
+        }
+
+        function VisitCount() {
+            $.ajax({
+                url: "/Tools/DatasHandler.ashx?rnd=" + Math.random(),
+                type: "post",
+                dataType: "json",
+                data: {
+                    token: Math.random(),
+                    rsformat: 'json',
+                    funsort: "visitcountadd",
+                    baoid: $("#hidBaoID").val()
+                },
+                beforeSend: function (XMLHttpRequest) {
+                },
+                success: function (data, textStatus) {
+                    if (data.Success) {
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                },
+                error: function (data) {
+                }
+            });
+        }
+        function loadBrandView() {
+            var BrandName = $.trim($("#hidBrandKey").val());
+            if (BrandName == "")
+                return;
+            $.ajax({
+                url: "/Tools/DatasHandler.ashx?rnd=" + Math.random(),
+                type: "get",
+                dataType: "json",
+                data: {
+                    token: Math.random(),
+                    rsformat: 'json',
+                    funsort: "getbaodetailbrandview",
+                    brandname: BrandName
+                },
+                beforeSend: function (XMLHttpRequest) {
+                },
+                success: function (data, textStatus) {
+                    if (data.Success) {
+                        $("#brand_container").html(data.ReturnString);
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                },
+                error: function (data) {
+                }
+            });
+        }
+
+        function loadBrandBaos() {
+            $.ajax({
+                url: "/Tools/DatasHandler.ashx?rnd=" + Math.random(),
+                type: "get",
+                dataType: "json",
+                data: {
+                    token: Math.random(),
+                    rsformat: 'json',
+                    funsort: "gettopnbrandbao"
+                },
+                beforeSend: function (XMLHttpRequest) {
+                },
+                success: function (data, textStatus) {
+                    if (data.Success) {
+                        $("#brand_bao_container").html(data.Tag);
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                },
+                error: function (data) {
+                }
+            });
+        }
+
+        function loadBrandLogos() {
+            $.ajax({
+                url: "/Tools/DatasHandler.ashx?rnd=" + Math.random(),
+                type: "get",
+                dataType: "json",
+                data: {
+                    token: Math.random(),
+                    rsformat: 'json',
+                    funsort: "getqyxwtmemberlogo"
+                },
+                beforeSend: function (XMLHttpRequest) {
+                },
+                success: function (data, textStatus) {
+                    if (data.Success) {
+                        $("#enterprise_container2").html(data.Tag);
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+                },
+                error: function (data) {
+                }
+            });
+        }
+
+        var RightTopN = 0;
+        $(document).ready(function () {
+            BindbtnSearch();
+            share_fixed_top = parseInt($("#share_fixed").offset().top);
+            bindshare_fixed();
+            bindbtnSubmitPingLun();
+            bindbtnSubmitPingLunKuai();
+            goTop();
+            binddatatime();
+            loadPingLun();
+            loadBrandBaos();
+            loadBrandLogos();
+            //RightTopN = Math.floor(Math.max(50, ($(document).height() - 460)) / 280);
+            RightTopN = Math.floor(Math.max(50, ($(document).height() - 1000)) / 260);
+            $("#loadpinglunmore").click();
+            getProvince();
+            loadBrandView();
+            VisitCount();
+        });                
+    =
+    <script>(function () { var _53code = document.createElement("script"); _53code.src = "https://tb.53kf.com/code/code/d7a68dcc7350524aaa69e7104657ac4f6/5"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s); })();</script>
+    <script type="text/javascript">
+        $("#btnGetContactInfo").click(function () {
+            var api = $53.createApi();
+            api.push('cmd', 'kfclient');
+            api.push('type', 'popup');
+            //api.push('group_id', '11，22');
+            api.push('worker_id', '178b2b');
+            api.query();
+        })
+    </script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+ 
+</body>
+</html>

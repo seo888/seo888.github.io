@@ -1,0 +1,1 @@
+document.write("<a href=\"#\" title=\"文明大行动\" target=\"_blank\"><img src=\"https://www.hnjjtq.com/ad/260-195.jpg\" alt=\"菲朗格慕\"  width=\"100%\" height=\"195\"></a> ")

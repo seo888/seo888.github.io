@@ -1,0 +1,11 @@
+document.writeln("<center>");
+document.writeln("<script async src=\'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\'></script>");
+document.writeln("<!-- 移动 320*50 -->");
+document.writeln("<ins class=\'adsbygoogle\'");
+document.writeln("     style=\'display:inline-block;width:320px;height:50px\'");
+document.writeln("     data-ad-client=\'ca-pub-5344245277487250\'");
+document.writeln("     data-ad-slot=\'8031426520\'></ins>");
+document.writeln("<script>");
+document.writeln("(adsbygoogle = window.adsbygoogle || []).push({});");
+document.writeln("</script>");
+document.writeln("</center>");

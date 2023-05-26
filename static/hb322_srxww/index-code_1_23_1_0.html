@@ -1,0 +1,131 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>香港天气预报代码调用</title>
+    <link href="static/css/mobile.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var color = bgcolor = bdcolor = site = icon = "";
+        var num =0;
+        $(document).ready(function(){
+            init();
+            var pngtqico = document.querySelectorAll('.pngtqico')
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $(".pngtqico").each(function(i){
+                    if (this.src.indexOf('tianqibig')>1){
+                        this.src = this.src.replace("tianqibig", icon);
+                    }else {
+                        this.src = this.src.replace("/tianqi/", '/'+icon+'/');
+                    }
+
+                });
+            }else {
+                icon = 'tqicon1';
+            }
+            if (typeof(bgcolor) != 'undefined' && bgcolor != '') {
+                $("#mobile1").css('background-color', bgcolor);
+            }
+            if (typeof(bdcolor) != 'undefined' && bdcolor != '') {
+                $("#mobile1").css('border', '1px solid ' + bdcolor);
+            }
+            if (typeof(color) != 'undefined' && color != '') {
+                $("#mobile1 a").css('color', color);
+                $("#mobile1 .f1").css('color', color);
+            }
+            if (typeof(site) != 'undefined' && site == 'zgwdq') {
+                $("#link_more").html('[<a class="cc30" href="//www.tianqi.com/data/html/code_city.html?site=sds">更换城市</a>]');
+            }
+            if (typeof(wind) != 'undefined' && wind == 0) {
+                $("#mobile1 span.wind").remove();
+            }
+            if (typeof(textalign) != 'undefined' && textalign == 1) {
+                $("body").addClass('flex')
+            }
+        });
+        function init()
+        {
+            if(num == 0) num=2;
+
+            if(num == 1) {
+                $("div.divForecastWeather").remove();
+            }
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $("img.pngtqico").each(function(i){
+                    this.src = this.src.replace("images/tianqi", "images/" + icon);
+                });
+            }
+        }
+    </script>
+    <style type="text/css">
+        .cityname{height:22px; line-height:25px;}
+        .flex{display:flex;justify-content: center;align-items: center;}
+        #mobile1{
+            overflow:initial!important;
+            display:flex!important;
+            height:inherit!important;
+            align-items:center;
+        }
+        #mobile1 a{
+            display:flex!important;
+            align-items:center!important;
+        }
+    </style>
+</head>
+<body marginwidth="0" marginheight="0" style="background-color:transparent;overflow:hidden;font-size: 12px">
+<div id="mobile1" class="code1 zishiying" style="width: max-content;"> 
+    <a target="_blank" href="javascript:;" title="香港天气预报,点击查看香港未来七天天气预报 ">
+        <div class="">香港</div>
+        <div class="divCurrentWeather">
+            <img class='pngtqico' align='absmiddle' src='static/picture/b0.png' style='border:0;width:20px;height:20px'>晴            <span class="cc30 f1">20</span>～<span class="c390 f1">28</span><span class="wind" style="padding:0 2px;"> </span>
+            <strong>星期一</strong>
+        </div>
+        <div class="divForecastWeather">
+            <img class='pngtqico' align='absmiddle' src='static/picture/b3.png' style='border:0;width:20px;height:20px'>晴转雨            <span class="cc30 f1">22℃</span>～<span class="c390 f1">29℃</span><span class="wind" style="padding:0 2px;"></span>
+        </div>
+    </a>
+    <div id="link_more" class="order">
+                <a target="_blank" href="javascript:;">详细&raquo;</a>
+            </div>
+</div>
+<div style="display: none;">
+
+</div><div style="display: none;">
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?86f43783acc56b0c8abb5bb039edc763";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277635480&web_id=1277635480"></script>
+</div>
+<script>
+        var site = ''==0?'16':'';
+        var body = document.querySelector('body')
+        var pngtqico = document.querySelectorAll('.pngtqico');     
+        (function(){
+            if(hasMobile()){
+                site = 15
+                for(var i = 0; i<pngtqico.length;i++){
+                pngtqico[i].style.width = 1.5* (site/4.5) + 'vw'
+                pngtqico[i].style.height = 1.5* (site/4.5) + 'vw'
+            }
+                site = (site/4.5) + 'vw'
+                body.style.fontSize = site
+            }else{
+                for(var i = 0; i<pngtqico.length;i++){
+                pngtqico[i].style.width = 1.5* site
+                pngtqico[i].style.height = 1.5* site
+            }
+            }
+        })()
+        function hasMobile() {
+  let isMobile = false
+  if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+    isMobile = true
+  }
+  return isMobile
+}
+</script>
+</body></html><style>.province{display:flex;}.province select{width:100px;height:30px;border:1px solid #e6e6e6}.province button{background:#5a98de;color:white;text-align:center;width:40px;height:30px;line-height:30px;border:none;outline:none}</style>  <div class="province" style="display:none"><div id="province"></div><button>确定</button></div><script type="text/javascript" src="static/js/jquery.provincesCity.js"></script><script type="text/javascript" src="static/js/provincesData.js"></script><script>var province=document.querySelector('#province');var province1=document.querySelector('.province');var selects=document.querySelectorAll('.selectDom');var button=province1.querySelector('button');(function(){if(hasMobile()){for(var k=0;k<selects.length;k++){selects[k].style.width='30vw';selects[k].style.height='6vh';selects[k].style.fontSize='3vw'}button.style.width='10vw';button.style.height='inherit';button.style.fontSize='3.5vw'}else{return}})();function hasMobile(){let isMobile=false;if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)){isMobile=true}return isMobile}</script><script type="text/javascript">num=1;bdcolor="#";icon="tqicon1";temp=0;document.domain = "tianqi.com";document.cookie="PATHURL=c=code&id=1&bdc=%23&icon=1&wind=0&num=1;domain=.tianqi.com";</script>

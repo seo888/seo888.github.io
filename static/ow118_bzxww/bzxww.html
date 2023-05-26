@@ -1,0 +1,77 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>巴中天气预报代码调用</title>
+    <link href="static/css/code.css" rel="stylesheet" type="text/css">
+    <link href="static/css/new_zishiying.css" rel="stylesheet" type="text/css">
+    <!--[if IE 6]>
+    <script type="text/javascript" mce_src="DD_belatedPNG.js" src="//static.tianqistatic.com/static/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix(".pngtqico");</script>
+    <![endif]-->
+    <style>
+        #mobile6{margin:0;justify-content: center;width: max-content;display: block;}
+        .flex{display: flex!important;    width: auto!important;}
+    </style>
+    <script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var color = bgcolor = bdcolor = site = icon = "";
+        var num = 0;
+        $(document).ready(function(){
+            init()
+            if (typeof(bgcolor) != 'undefined' && bgcolor != '') {
+                $("#mobile6").css('background-color', bgcolor);
+            }
+            if (typeof(bdcolor) != 'undefined' && bdcolor != '') {
+                $("#mobile6").css('border', '1px solid ' + bdcolor);
+            }
+            if (typeof(color) != 'undefined' && color != '') {
+                $("body > a").css('color', color);
+                $(".cc30").css('color', color);
+                $(".c390").css('color', color);
+
+            }
+            if (typeof(site) != 'undefined' && site != '') {
+                if (site<12){site=12;}
+                $("#mobile6").css('font-size', site);
+
+            }
+            if (typeof(textalign) != 'undefined' && textalign == 1) {
+            $(" #mobile6").addClass('flex')
+        }
+        });
+        function init()
+        {
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $("img.pngtqico").each(function(i){
+                    this.src = this.src.replace("images/tianqi", "images/" + icon);
+                });
+            }
+        }
+    </script>
+</head>
+<body style="background-color:transparent">
+<table id="mobile1">
+    <a target="_blank" href="javascript:;" title="巴中天气预报,点击查看巴中未来七天天气预报 ">
+        <div id="mobile6" class="flex_column">
+            <div><span class="boild">巴中</span> 03月27日<br></div>
+            <div class="wtmid">
+                <div class="img"><img class='pngtqico' align='absmiddle' src='static/picture/b3.png' style='border:0;width:20px;height:20px'>&nbsp;&nbsp;&nbsp;多云</div>
+            </div>
+            <div><span class="cc30">9</span>～<span class="c390">18</span> 详细&raquo;</div>
+        </div>
+    </a>
+</table>
+<div style="display: none;">
+
+</div><div style="display: none;">
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?86f43783acc56b0c8abb5bb039edc763";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277635480&web_id=1277635480"></script>
+</div>
+</body></html><style>.province{display:flex;}.province select{width:100px;height:30px;border:1px solid #e6e6e6}.province button{background:#5a98de;color:white;text-align:center;width:40px;height:30px;line-height:30px;border:none;outline:none}</style>  <div class="province" style="display:none"><div id="province"></div><button>确定</button></div><script type="text/javascript" src="static/js/jquery.provincesCity.js"></script><script type="text/javascript" src="static/js/provincesData.js"></script><script>var province=document.querySelector('#province');var province1=document.querySelector('.province');var selects=document.querySelectorAll('.selectDom');var button=province1.querySelector('button');(function(){if(hasMobile()){for(var k=0;k<selects.length;k++){selects[k].style.width='30vw';selects[k].style.height='6vh';selects[k].style.fontSize='3vw'}button.style.width='10vw';button.style.height='inherit';button.style.fontSize='3.5vw'}else{return}})();function hasMobile(){let isMobile=false;if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)){isMobile=true}return isMobile}</script><script type="text/javascript">num=0;icon="tqicon1";temp=0;document.domain = "tianqi.com";document.cookie="PATHURL=c=code&a=getcode&id=6&py=bazhong&icon=1;domain=.tianqi.com";</script>

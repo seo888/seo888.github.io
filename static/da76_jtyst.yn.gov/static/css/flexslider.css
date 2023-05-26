@@ -1,0 +1,309 @@
+/*
+ * jQuery FlexSlider v2.6.2
+ * //www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * //www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ */
+
+
+/* ====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+
+.flex-container a:hover,
+.flex-slider a:hover {
+    outline: none;
+}
+
+.slides,
+.slides>li,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex-pauseplay span {
+    text-transform: capitalize;
+}
+
+
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+
+.flexslider {
+    margin: 0;
+    padding: 0;
+}
+
+.flexslider .slides>li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+
+.flexslider .slides img {
+    width: 100%;
+    display: block;
+}
+
+.flexslider .slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+html[xmlns] .flexslider .slides {
+    display: block;
+}
+
+* html .flexslider .slides {
+    height: 1%;
+}
+
+.no-js .flexslider .slides>li:first-child {
+    display: block;
+}
+
+
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+
+.flexslider {
+    margin: 0;
+    position: relative;
+    zoom: 1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flexslider .slides {
+    zoom: 1;
+}
+
+.flexslider .slides img {
+    height: auto;
+    -moz-user-select: none;
+}
+
+.flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.loading .flex-viewport {
+    max-height: 300px;
+}
+
+.carousel li {
+    margin-right: 5px;
+}
+
+.flex-direction-nav {
+    *height: 0;
+}
+
+.flex-disabled {
+    opacity: 0!important;
+    filter: alpha(opacity=0);
+    cursor: default;
+    z-index: -1;
+}
+
+.flex-pauseplay a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    opacity: 0.8;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    color: #000;
+}
+
+.flex-pauseplay a:before {
+    font-family: "flexslider-icon";
+    font-size: 20px;
+    display: inline-block;
+    content: '\f004';
+}
+
+.flex-pauseplay a:hover {
+    opacity: 1;
+}
+
+.flex-pauseplay a.flex-play:before {
+    content: '\f003';
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: right;
+    line-height: 24px;
+}
+
+.flex-control-nav li {
+    margin: 0 3px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    width: 11px;
+    height: 11px;
+    display: block;
+    background: #999;
+    cursor: pointer;
+    text-indent: 9999px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.flex-control-paging li a:hover {
+    background: #e3e3e3;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #e3e3e3;
+    cursor: default;
+}
+
+.flex-control-thumbs {
+    margin: 5px 0 0;
+    position: static;
+    overflow: hidden;
+}
+
+.flex-control-thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0;
+}
+
+.flex-control-thumbs img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .7;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.flex-control-thumbs img:hover {
+    opacity: 1;
+}
+
+.flex-control-thumbs .flex-active {
+    opacity: 1;
+    cursor: default;
+}
+
+
+/* ====================================================================================================================
+ * lxj
+ * ====================================================================================================================*/
+
+.slide_cont {
+    position: relative;
+}
+
+.slide_cont div {
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 99;
+    background: rgb(0, 0, 0);
+}
+
+.flex-direction-nav a {
+    margin: -27px 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+}
+
+.flex-direction-nav .flex-prev {
+    width: 24px;
+    height: 54px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAA2CAYAAADd0Vm+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF62lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAxOC0wNy0xMVQxMDoxMDo1NiswODowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wNy0xMVQxMDoxMDo1NiswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMTgtMDctMTFUMTA6MTA6NTYrMDg6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFhN2VjOTgtMmIxNS02NTRhLWJiZWItOTRiNGI4NzY0ODY1IiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6MGNiZThkMjUtYWZjYS1mMDRkLWEyNTQtNGRlZWZmNTA2OWU3IiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZDg3MzZjODQtNDFjNS1kZTRkLTgzZDYtNTVhZGRkZjI5Y2I0IiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpkODczNmM4NC00MWM1LWRlNGQtODNkNi01NWFkZGRmMjljYjQiIHN0RXZ0OndoZW49IjIwMTgtMDctMTFUMTA6MTA6NTYrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxYTdlYzk4LTJiMTUtNjU0YS1iYmViLTk0YjRiODc2NDg2NSIgc3RFdnQ6d2hlbj0iMjAxOC0wNy0xMVQxMDoxMDo1NiswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7xG2+8AAABPUlEQVRYw2NkYGBoYKAhYBy1YNSCUQtGLRi1YNSCUQuGtgVycnIcTU1NRgkJCceobkFkZKR0SUmJNSMQGBkZraSqBTNnzjR3cXHRPnz48A1CrifJAktLS4FJkya5sLGxsfT29h5dtGjRY6rFQUNDgzbQtZYnTpy4VVZWdurRo0c/qBLJ4uLibIsXL3aWl5cXnThx4uFp06bdp2oqOnTokJ+urq5ycHDwon379r2lejKVkpJiX7JkiQuQFu7r6zs0a9asBzTJB+3t7XrApGl27Nixm8DkeerZs2c/qZ7R7OzsBPv7+12YgaCzs/Pw8uXLn1I9JzMxMTHMnj3b0tHRUXP//v3XkpOTT9CkqIiJiZEB5eQ/f/78MzExWU2TskhBQYGjpaXFBGjZkdHietSCUQtGLRi1YNSCUQsGvwUABex/N3FyX1AAAAAASUVORK5CYII=) center center no-repeat;
+    left: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+.flex-direction-nav .flex-next {
+    width: 24px;
+    height: 54px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAA2CAYAAADd0Vm+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF62lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAxOC0wNy0xMVQxMDoxMTowOSswODowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOC0wNy0xMVQxMDoxMTowOSswODowMCIgeG1wOk1vZGlmeURhdGU9IjIwMTgtMDctMTFUMTA6MTE6MDkrMDg6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6YTY0ZmYzNTItZTVjMi1iOTQ4LWFjMDktNTYwZDJmNWU4NDUwIiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6Zjc2MTM0M2EtZGE0MS00MDRkLTkxYmEtYjFlNzQzZTMxZTNkIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NDU3MzYxMDAtZGI2Yi0yNjRlLTkxOWMtN2RiZTU2NDFjOTMyIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NTczNjEwMC1kYjZiLTI2NGUtOTE5Yy03ZGJlNTY0MWM5MzIiIHN0RXZ0OndoZW49IjIwMTgtMDctMTFUMTA6MTE6MDkrMDg6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmE2NGZmMzUyLWU1YzItYjk0OC1hYzA5LTU2MGQyZjVlODQ1MCIgc3RFdnQ6d2hlbj0iMjAxOC0wNy0xMVQxMDoxMTowOSswODowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6lolAfAAABPklEQVRYw2NkYGBoYKAhYBy1YNSCUQtGLRi1YNSCUQuGhgULFiywqqurO/fo0aMfNLHg3Llz4f+BoKen5+jy5cuf0iSIQL6wtbXV2LNnz9X09PSTNImDuLg42eLiYutfv379ycvL23P8+PEPVI9kOTk5jq6uLjMLCws1oK+ONzQ0XKVJKsrKylLMz8+3ffjw4evY2Ni9L1++/EX1ZOrk5CS8du3auMuXL9+1s7PbRFUL0tLSFIqKiuyePXv2NiYmZg+Q/kkVC6SkpNiBydXMyspKHZhkT1VWVl6iWhxERkZKl5eX2/4FgsLCwj2HDh16T7VUNHfuXAtHR0et/fv3X09NTT3+798/6uWDM2fOhLKwsDCBcvKSJUueUD0nAw21qampOfPgwQPalEWj9cGoBaMWjFowasGoBaMW0MUCAE1jmjfg3eBzAAAAAElFTkSuQmCC) center center no-repeat;
+    right: 0;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+
+@media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev {
+        opacity: 1;
+        left: 10px;
+    }
+    .flex-direction-nav .flex-next {
+        opacity: 1;
+        right: 10px;
+    }
+}

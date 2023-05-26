@@ -1,0 +1,144 @@
+/*
+ * @Author: Ren Jingjing
+ * @Date: 2018-12-11 10:40:04
+ * @LastEditors: Ren Jingjing
+ * @LastEditTime: 2019-01-08 17:03:02
+ * @Description: 
+ */
+ 
+ /* 清除内外边距 */
+ .hide{display:none}
+ body, div, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+ dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+ pre, /* text formatting elements 文本格式元素 */
+ fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+ th, td ,img{ /* table elements 表格元素 */
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-weight:  normal;
+ }
+ textarea {
+	 resize : none;
+ }
+ /* 设置默认字体 */
+ body,
+ button, input, select, textarea { /* for ie */
+	 font: 12px/1 "\5FAE\8F6F\96C5\9ED1", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+	 outline: none;
+ }
+ body, td, th,samp {
+	 font-family: 'Microsoft Yahei';
+ }
+ h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+ h2 { font-size: 16px; }
+ h3 { font-size: 14px; }
+ h4, h5, h6 { font-size: 100%; }
+ h1,h2,h3,h4,h5,h6{font-weight:normal;font-family: "\5FAE\8F6F\96C5\9ED1";}
+ 
+ address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+ code, kbd, pre, samp, tt {} /* 统一等宽字体 */
+ small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+ 
+ /* 重置列表元素 */
+ ul, ol { list-style: none; }
+ 
+ /* 重置文本格式元素 */
+ a{
+	 transition: all 0.3s ease-out;
+	 cursor:pointer;
+	 color: #333;
+	 text-decoration: none;
+	 }
+ a:hover {
+	 text-decoration: none;
+ }
+ /*除点状线*/
+ a:focus, *:focus {
+   noFocusLine: expression(this.onFocus=this.blur());
+ }
+ img{
+	max-width: 100%;
+	height: auto}
+ abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+	 border-bottom: 1px dotted;
+	 cursor: help;
+ }
+ .clear {
+	 clear: both;
+	 
+ }
+ q:before, q:after { content: ''; }
+ 
+ /* 重置表单元素 */
+ legend { color: #000; } /* for ie6 */
+ fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+ button, input, select, textarea {
+	 font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+ }
+ /* 重置表格元素 */
+ table {
+	 border-collapse: collapse;
+	 border-spacing: 0;
+ }
+ /* 重置 hr */
+ hr {
+	 border: none;
+	 height: 1px;
+ }
+ /*清除iPhone、iPad默认按钮样式*/
+ input[type="button"],
+ input[type="submit"], 
+ input[type="reset"] ,
+ select{
+	 -webkit-appearance: none;
+ }
+ textarea {  -webkit-appearance: none;}   
+ /*去除IE10+浏览器文本框后面的小叉叉*/
+ input::-ms-clear {
+	 display: none;
+ }
+ /* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+ html { overflow-y: scroll; }
+ /*给input的placeholder设置颜色*/
+ ::-webkit-input-placeholder { /* WebKit browsers */
+	 color:    #ccc;
+ }
+ :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	 color:    #ccc;
+ }
+ ::-moz-placeholder { /* Mozilla Firefox 19+ */
+	 color:    #ccc;
+ }
+ :-ms-input-placeholder { /* Internet Explorer 10+ */
+	 color:    #ccc;
+ }
+ .dis_in_bl{
+	 display: inline-block;
+	 *display: inline-block;
+	 *zoom: 1; 
+ }
+ body {
+	 scrollbar-face-color      : #bcbcbc;	/*滚动条页面颜色设定；*/
+	 scrollbar-highlight-Color :	#bcbcbc;	/*滚动条斜面和左面颜色设定；*/
+	 scrollbar-shadow-Color    :	#bcbcbc;	/*滚动条下斜面和右面颜色设定；*/
+	 scrollbar-3dlight-Color   :	#bcbcbc;	/*滚动条上边和左边的边沿颜色设定；*/
+	 scrollbar-arrow-Color     :	#505050;	/*滚动条两端箭头颜色设定；*/
+	 scrollbar-track-Color     :	#f1f1f1;	/*滚动条底版颜色设定；*/
+	 scrollbar-darkshadow-Color:	#f00;	/*滚动条下边和右边的边沿颜色设定。*/
+ }
+ .list-inline {
+	 padding-left: 0;
+	 
+	 list-style: none;
+   }
+   .list-inline > li {
+	 display: inline-block;float: left;
+   }
+ .left{float: left;}
+ .right{float: right;}
+ .bar{background: #f6f6f6;height: 10px;width: 100%;}
+ 
+ 
+ /***分享**/
+ a.bshareDiv,#bsPanel,#bsMorePanel,#bshareF{border:none;background:none;padding:0;margin:0;font:12px Helvetica,Calibri,Tahoma,Arial,宋体,sans-serif;line-height:14px;}#bsPanel div,#bsMorePanel div,#bshareF div{display:block;}.bsRlogo .bsPopupAwd,.bsRlogoSel .bsPopupAwd,.bsLogo .bsPopupAwd,.bsLogoSel .bsPopupAwd{line-height:16px !important;}a.bshareDiv div,#bsFloatTab div{*display:inline;zoom:1;display:inline-block;}a.bshareDiv img,a.bshareDiv div,a.bshareDiv span,a.bshareDiv a,#bshareF table,#bshareF tr,#bshareF td{text-decoration:none;background:none;margin:0;padding:0;border:none;line-height:1.2}a.bshareDiv span{display:inline;float:none;}div.buzzButton{cursor:pointer;font-weight:bold;}.buzzButton .shareCount a{color:#333}.bsStyle1 .shareCount a{color:#fff}span.bshareText{white-space:nowrap;}span.bshareText:hover{text-decoration:underline;}a.bshareDiv .bsPromo,div.bshare-custom .bsPromo{display:none;position:absolute;z-index:100;}a.bshareDiv .bsPromo.bsPromo1,div.bshare-custom .bsPromo.bsPromo1{width:51px;height:18px;top:-18px;left:0;line-height:16px;font-size:12px !important;font-weight:normal !important;color:#fff;text-align:center;background:url(../image/top_logos_sprite.png) no-repeat 0 -606px;}div.bshare-custom .bsPromo.bsPromo2{background:url(../image/top_logos_sprite.png) no-repeat;cursor:pointer;}<!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2019-04-10 10:04:58" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->

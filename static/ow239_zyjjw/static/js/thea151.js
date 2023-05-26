@@ -1,0 +1,1 @@
+document.write("<a href=\"https://www.tianjigroup.com/default.aspx\" target=_blank rel=\"external nofollow\"><img style=margin-top:5px src=\"https://www.zyjjw.cn/skin/2022ad/tjny.jpg\" border=0 width=280></a>")

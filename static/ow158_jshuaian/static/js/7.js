@@ -1,0 +1,1 @@
+document.writeln("<a href=\'https://jinshuju.net/f/ZXK7mJ\' rel=\'nofollow\' title=\'公众投稿\'><img src=\'https://gd-pub.jinshujufiles.com/hi/20171215085014_317a31\' alt=\'公众投稿\' height=\'180\' width=\'330\' /></a>");

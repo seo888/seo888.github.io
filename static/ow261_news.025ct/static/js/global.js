@@ -1,0 +1,12 @@
+document.writeln("<scr"+"ipt type=\"text\/javascript\">");
+document.writeln("  var _gaq = _gaq || [];");
+document.writeln("  _gaq.push([\'_setAccount\', \'UA-18032401-1\']);");
+document.writeln("  _gaq.push([\'_setDomainName\', \'.1jiayuan.com\']);");
+document.writeln("  _gaq.push([\'_trackPageview\']);");
+document.writeln(" ");
+document.writeln("  (function() {");
+document.writeln("    var ga = document.createElement(\'script\'); ga.type = \'text\/javascript\'; ga.async = true;");
+document.writeln("    ga.src = (\'https:\' == document.location.protocol ? \' https:\/\/ssl\' : \' http:\/\/www\') + \'.google-analytics.com\/ga.js\';");
+document.writeln("    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);");
+document.writeln("  })();");
+document.writeln("  <\/scr"+"ipt>");

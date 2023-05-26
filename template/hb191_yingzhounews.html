@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{自定义标题}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8"><!-- 强制ie8,for 360 -->
+<meta name="keywords" content='{关键词1}'>
+<meta name="description" content='{自定义描述}'>
+<link rel="stylesheet" href="/_/static/hb191_yingzhounews/static/css/pc_reset.css">
+<link rel="stylesheet" href="/_/static/hb191_yingzhounews/static/css/qb_ui.css">
+<link rel="stylesheet" href="/_/static/hb191_yingzhounews/static/css/icon.css">
+<script type="text/javascript" src="/_/static/hb191_yingzhounews/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/_/static/hb191_yingzhounews/static/js/layer.js"></script>
+<link rel="stylesheet" type="text/css" href="/_/static/hb191_yingzhounews/static/css/v7.css">
+<link rel="stylesheet" type="text/css" href="/_/static/hb191_yingzhounews/static/css/style.css">
+</head>
+<body>
+<!--下面是钩子插件,做风格的时候尽量加上,方便扩展  -->
+
+<div class="yq_top">
+	<div class="yq_top_nr wrap">
+    	<div class="nr_logo"></div>
+    	<div class="nr_riqi">      
+<script language="JavaScript"> 
+<!---
+today=new Date();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+var timeValue = ((hours >12) ? hours -12 :hours); 
+timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+timeValue += (hours >= 12) ? " 下午 " : " 上午 ";
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray("<span>星期日</span>","<em>星期一</em>","<em>星期二</em>","<em>星期三</em>","<em>星期四</em>","<em>星期五</em>","<em>星期六</em>"); 
+document.write(today.getFullYear(),"年",today.getMonth()+1,"月",today.getDate(),"日 ",d[today.getDay()+1]); 
+//-->
+</script>
+        </div>
+        <div class="nr_tianqi"></div>
+
+		<div id="net_scbar">
+        <form class="net_search_form" name="form1" method="post" action="/search/index/lists.html" onsubmit="return cksearch();">
+        <input id="keyword_s" type="text" name="keyword" class="net_scbar_txt">
+        <input type="submit" name="Submit" value="" class="scbar_btn">
+        </form><script type="text/javascript">
+<!--
+function cksearch(){
+	if (document.getElementById("keyword_s").value=='')
+	{
+		alert('关键字不能为空!');
+		return false;
+	}
+}
+//-->
+</script>
+        </div>
+         <div class="nr_info">
+		<a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('https://www.yingzhounews.net');" href="#">设为首页</a>
+        <a href="{泛站内链}">加入收藏</a>
+        </div>
+  </div>
+</div>
+<div class="yq_logo ">
+	<div>
+    	<div class="nr_logo"><a href="{泛站内链}" title="{标题}" target="_blank"></div>
+
+    </div>
+</div>
+
+
+<div class="yq_main ">
+	<div class="yq_main_nr wrap">
+    
+    
+<div class="fynews_menu_nav">
+ 
+     <ul>
+      	<li class=""><a href="{泛站内链}" title="颍州新闻网">首页</a></li>
+        <li class=""><a href="{泛站内链}" title="颍州新闻">颍州新闻</a></li>
+		<li class=""><a href="{泛站内链}" title="媒体焦点">媒体焦点</a></li>
+		<li class=""><a href="{泛站内链}" title="公示公告">公示公告</a></li>
+		<li class=""><a href="{泛站内链}" title="专题专栏">专题专栏</a></li>
+		<li class=""><a href="{泛站内链}" title="图片掠影">图片掠影</a></li>
+        <li id="last" class=""><a href="{泛站内链}" title="{关键词1}">{关键词1}</a></li>
+
+      </ul>
+
+</div>
+
+    </div>
+</div>
+
+<div class="yz_box">
+<div class="yz_ui_Site_nav wrap">
+	<ul>
+		<ol></ol>
+		<li><a href='{泛站内链}' class="home">网站首页</a>
+
+<!-- 频道 -->
+
+<!-- 栏目 -->
+ <a href="{泛站内链}">新闻中心</a>
+ <a href="{泛站内链}">{关键词1}</a>
+
+<!-- 自定义标题与链接 -->
+		</li>
+	</ul>
+</div> 
+<link rel="stylesheet" href="/_/static/hb191_yingzhounews/static/css/pclist.css">
+<script language="javascript" src="/_/static/hb191_yingzhounews/static/js/bencandy.js"></script>
+<div class="ArticlMainContainer wrap">
+
+	<div class="RightCnt_0">
+		<div class="ShowContent">
+			<div class="title">{关键词1}{随机后缀}{新闻网标题}</div>
+			<div class="infos">
+				<span><i class="glyphicon glyphicon-time"></i> {今日时间}</span><span>作者:{人物名称}</span><span>来源:{随机关键词2}</span>			【<a href="{泛站内链}">大</a> <a href="{泛站内链}">中</a> <a href="{泛站内链}">小</a>】
+			</div>
+			<div class="cnt" id="post1">
+			                 
+						
+						
+<p>{新闻网内容}</p>
+
+						
+					
+						
+						 
+					
+					
+					
+
+
+				
+			</div>
+		</div>
+<!--显示自定义字段内容 field="picurl,title,content,keywords" 就是过滤掉不在里边重复显示的字段-->
+<style type="text/css">.OtherInfos .SideBox{clear:both;}.OtherInfos img{height:100px;float:left;margin:3px;}</style>
+  	<div class="OtherInfos">
+
+	</div>
+
+		<div>
+			<span>编辑：{人物名称}</span>
+			<span style="float:right;">{当前时间}</span>
+		</div>
+	</div>
+	
+
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="wrap">
+	<div class="yq_copyright">
+     Copyright {年} {网站名称}  All Rights Reserved {域名库}<br>
+     {关键词1} 版权所有 </div>
+	</div>
+
+
+
+
+<script type="text/javascript" src="/_/static/hb191_yingzhounews/static/js/qibo.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>
+</html>

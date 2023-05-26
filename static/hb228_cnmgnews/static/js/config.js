@@ -1,0 +1,1 @@
+var IMG_URL="http://img.cnmgnews.com/",UPLOAD_URL="http://upload.cnmgnews.com/",APP_URL="http://app.cnmgnews.com/",WWW_URL="http://www.cnmgnews.com/",SPACE_URL="http://space.cnmgnews.com/",COOKIE_PRE="cmstop_",COOKIE_DOMAIN=".cnmgnews.com",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";

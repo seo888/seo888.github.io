@@ -1,0 +1,1 @@
+document.write("<a href=\"https://tb.53kf.com/code/client/18acd6b9202e699173a9d9f7717779172/1\" title=\"三亚药师考试\" target=\"_blank\"><img src=\"https://www.hnjjtq.com/ad/880-90-2.jpg\" alt=\"三亚药师培训\"  width=\"100%\" height=\"90\"></a> ")

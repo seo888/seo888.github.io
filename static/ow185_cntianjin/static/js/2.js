@@ -1,0 +1,1 @@
+document.write("<a href=\'/\' target=\'_blank\'><img src=\'/templets/@news03/images/ad02.gif\' border=\'0\' width=\'660\' height=\'70\' alt=\'广告\'></a>");

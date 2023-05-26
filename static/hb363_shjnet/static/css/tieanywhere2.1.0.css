@@ -1,0 +1,229 @@
+/* TieAnywhere 2.1.0 Build 201008241544 */
+
+
+
+.tie-area {
+	width:657px;
+	border: 1px solid #dcdddd;
+	background: #f7fcff;
+	font-size: 12px; 
+	margin-left:11px; 
+	margin-right:11px;
+	margin-bottom:7px;
+}
+
+	.tie-area strong { font-weight: bold; }
+	.tie-area form, .tie-area ul, .tie-area ol { margin: 0; padding: 0; }
+	.tie-area img { border: none; }
+	.tie-area a, .tie-area a:visited { color: #1e50a2; }
+   
+    .tie-area .cDRed{color: #ba2636; font:12px "宋体" }
+	.tie-area .cDRed a{ color: #ba2636; font:12px "宋体" }
+
+	.tie-area .tieCount { margin-left:400px; font:12px "宋体"   }
+	.tie-area .tieCount a{ color: #000; }
+	
+.tie-hidden { display: none; }
+
+
+.tie-titlebar {
+	height: 25px;
+	line-height: 25px;
+	clear: both;
+	overflow: hidden;
+	text-align: left;
+	background: url(../image/title_icon11.gif)  no-repeat;
+	margin-top: 12px;
+	padding-left: 19px;
+	font-size: 14px; 
+	border-bottom:1px dashed #CCC;
+}
+
+
+/* 跟贴展示区 */
+.tie-show { display: none; text-align: left; padding-bottom: 9px; }
+	.tie-show .tie-titlebar { margin-left: 19px; margin-right: 19px; }
+	.tie-show .tie-tips { font-size: 14px; margin: 0; padding: 18px 0 28px 0; text-align: center; }
+	.tie-show .checked { background: #f5f5f5; }
+	.tie-show .reply { text-align: left; padding: 16px 19px 0 19px; }
+		.tie-show .inner {
+			padding: 0 2px 18px 2px;
+			zoom: 1;
+			overflow: hidden;
+			border-bottom: 1px dotted #afafb0;
+		}
+			.tie-show .author { float: left; display: block; color: #1e50a2; height: 24px; line-height: 24px;  }
+			.tie-show .mobileAuthor {
+				background: url(../image/login.gif) no-repeat left;
+				padding-left: 15px;
+			}
+			.tie-show .from { color: #1e50a2; }
+			.tie-show .ip { color: #666; }
+			.tie-show .name { font-weight: bold; }
+			.tie-show .postTime { color: #666; float: right; display: block; line-height: 19px; }
+			.tie-show .body { font-size: 14px; padding: 12px 0; clear: both; }
+			.tie-show .hideTips { padding: 0 7px 7px 7px; font-size: 12px; color: #666; cursor: pointer; margin: 0; }
+			.tie-show .hideTips span { color: #ba2636; }
+			.tie-show .operations { color: #1e50a2; float: right; list-style: none; }
+				.tie-show .operations li { float: left; padding-left: 1.2em; }
+					.tie-show .operations a,
+					.tie-show .operations a:visited { color: #1e50a2; }
+					.tie-show .operations .visited { color: #666; }
+						.tie-show .operations .visited em { color: #1e50a2; }
+						.tie-show .operations .support em { font-style: normal; color: #ba2636; }
+					.tie-show .operations a:hover { color: #ba2535; }
+					.tie-show .relatedPost { width: 300px; color: #666; text-align: right; }
+					.tie-show .relatedPost a,
+					.tie-show .relatedPost a:visited { color: #666; }
+			.tie-show .content { margin: 9px 3px; line-height: 21px; }
+			.tie-show .commentBox {
+				padding: 3px;
+				background: #ffffee;
+				border: 1px solid #999;
+				overflow: hidden;
+				margin-bottom: 12px;
+				word-wrap: break-word;
+			}
+			.tie-show .commentInfo {
+				line-height: 20px;
+				height: 20px;
+				overflow: hidden;
+				position: relative;
+				font-size: 12px;
+				margin: 0 3px;
+			}
+			.tie-show .floorCount { color: #666; position: absolute; right: 3px; top: 0; }
+
+
+/* 发贴区 */
+.tie-post {
+	padding: 8px 19px 20px 19px;
+	zoom: 1;
+	overflow: hidden;
+	clear: both;
+}
+
+/* 表单输入框 */
+.tie-textbox {
+	background: #fff;
+	width: 80px;
+	height: 16px;
+	line-height: 16px;
+	border: 1px solid #dcdddd;
+	font-size: 12px;
+	padding: 2px;
+}
+
+/* 回复表单 */
+.tie-postform .tie-textarea {
+	width: 98%;
+	height: 130px;
+	padding: 5px 0 0 5px;
+	border: 1px solid #dcdddd;
+	background: #fff 
+	font-size: 14px;
+	clear: both;
+	text-align: left;
+	color: #555;
+}
+.tie-postform .tie-textarea-focus { color: #000; }
+.tie-postform .send { clear: both; padding: 5px 0 0; line-height: 23px; height: 23px; overflow: hidden; }
+	.tie-postform .send p { float: left; color: #555; margin: 0; }
+	.tie-postform .send span { float: right; }
+	.tie-postform .send .toPost { cursor: pointer; font-size: 12px; }
+
+
+/* 发贴作者 */
+.btn5 { BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../image/login.gif) no-repeat 0px 0px; BORDER-BOTTOM-WIDTH: 0px;  WIDTH: 42px;  HEIGHT:21px;  BORDER-RIGHT-WIDTH: 0px; }
+.btn6 { BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../image/search_btn_4.gif) no-repeat 0px 0px; BORDER-BOTTOM-WIDTH: 0px;  WIDTH: 70px;  HEIGHT:21px;  BORDER-RIGHT-WIDTH: 0px; }
+
+.tie-author {
+	clear: both;
+	text-align: left;
+	margin-bottom: 8px;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden; margin-top:7px;
+}
+	.tie-author input  { vertical-align: middle; }
+	.tie-author-logon,
+	.tie-author-nickname,
+	.tie-author-toname { display: none; }
+		.tie-author .tie-button { cursor: pointer; font-size: 12px; }
+	
+	.tie-author-logon { color: #1e50a2; position: relative; zoom: 1; height:24px; }
+
+
+/* 模拟对话框 */
+.tie-dialog {
+	width: 480px;
+	position: fixed;
+	_position: absolute;
+	border: 1px solid #666;
+	background: #fff;
+	text-align: left;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+}
+	.tie-dialog-titlebar {
+		background: #dff0ff;
+		height: 28px;
+		line-height: 28px;
+		padding: 4px 8px 4px 16px;
+		border-bottom: 1px solid #dcdddd;
+		cursor: move;
+		overflow: hidden;
+	}
+		.tie-dialog-title { float: left; color: #000; font-size: 14px; font-weight: bold; }
+		.tie-dialog-titlebar .tie-dialog-close { margin-top: 3px; float: right; }
+	.tie-dialog-body { padding: 10px 16px 14px 16px; clear: both; }
+
+.tie-nicknamedialog { width: 280px; }
+	.tie-nicknamedialog .tie-dialog-titlebar { background: #fdfdd8; }
+	.tie-nicknamedialog .tie-dialog-body { padding: 10px 0; }
+		.tie-nicknamedialog form { padding: 0 0 0 15px; }
+			.tie-nicknamedialog .tie-textbox { width: 142px; background: #fff; }
+			.tie-nicknamedialog label { font-size: 14px; padding-top: 10px; display: block; }
+			.tie-nicknamedialog .error { color: #ba2636; }
+
+.tie-quotedialog { width: 556px; }
+	.tie-quotedialog .tie-postform div { text-align: center; margin-top: 12px; }
+	.tie-quotedialog .tie-postform .tie-textarea { _width: 516px; }
+
+.tie-repostdialog-confirm {
+	border: none;
+	width: 65px;
+	height: 23px;
+	cursor: pointer;
+	background: url(http://comment.news.163.com/images/backgrounds1.1.png) no-repeat -153px -81px;
+}
+.tie-repostdialog-tips { color: #467902; font-size: 14px; margin: 22px 0; text-align: center; }
+.tie-repostdialog-content {
+	border-top: 1px dotted #afafb0;
+	border-bottom: 1px dotted #afafb0;
+	line-height: 21px;
+	padding: 9px 6px;
+	margin-bottom: 16px;
+	word-break: break-all;
+}.body1366 {
+	width: 1366px;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	height: auto;
+	
+}
+.body1920 {
+	height: auto;
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../image/315fm11.jpg);
+	background-repeat: repeat;
+}.ccf12 {
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+}

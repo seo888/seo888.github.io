@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="location" content="province=江西;city=赣州">
+<meta name="applicable-device" content="pc,mobile">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2023年赣州经开区欧潭人力资源有限公司招聘2名劳务派遣人员公告-赣州人事人才网</title>
+<meta name="keywords" content="2023年赣州经开区欧潭人力资源有限公司招聘2名劳务派遣人员公告">
+<meta name="description" content="赣州经开区欧潭人力资源有限公司是赣州经开区人才发展集团有限公司旗下全资子公司。因工作需要，赣州经开区欧潭人力资源有限公司">
+<meta name="author" content="赣州人事人才网">
+<meta name="copyright" content="www.797rs.com">
+<link rel="shortcut icon" href="https://www.797rs.com/favicon.ico">
+<link rel="canonical" href=""><script src="static/js/jquery.min.js"></script>
+<script src="static/js/htmlspecialchars.js"></script>
+
+<script src="static/js/gt.js"></script><script type="text/javascript">
+    var app_spell = "1";
+    var qscms = {
+        base: "",
+        keyUrlencode: "0",
+        domain: "http://www.797rs.com",
+        root: "/index.php",
+        companyRepeat: "0",
+        regularMobile: /^13[0-9]{9}$|14[0-9]{9}$|15[0-9]{9}$|18[0-9]{9}$|17[0-9]{9}$|16[0-9]{9}$|19[0-9]{9}$/,
+        district_level: "2",
+        smsTatus: "1",
+        captcha_open: "1",
+        varify_mobile: "1",
+        varify_suggest: "1",
+        varify_user_login: "0",
+        is_login: "0",
+        default_district: "1",
+        default_district_spell: "ganzhouquyu",
+        subsite: "0"
+    };
+    /*ie兼容 Promise*/
+    isIE();
+    function isIE() {
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "/Application/Home/View/default/public/js/bluebird.js";
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+    }
+    /*ie兼容 Promise end*/
+    $(function () {
+        if (eval(qscms.subsite)) {
+            // 开启分站
+            $.getJSON("/home/ajax_common/get_sub_header_min.html", function (result) {
+                if (eval(result.status) === 1) {
+                    $('#J_header_sub').html(result.data.html);
+                }
+            });
+        } else {
+            $.getJSON("/home/ajax_common/get_header_min.html", function (result) {
+                if (eval(result.status) === 1) {
+                    $('#J_header_sub').html(result.data.html);                    //updated by jie on 20200715
+                    //$('#J_header').html(result.data.html);
+                }
+            });
+        }
+    })
+    // 验证码统一处理
+    function qsCaptchaHandler(passCallback) {
+        var callBackArr = new Array();
+        $.ajax({
+            url: qscms.root + '?m=Home&c=captcha&t=' + (new Date()).getTime(),
+            type: 'get',
+            dataType: 'json',
+            success: function (config) {
+                if (config.verify_type == 'vaptcha') {
+                    // 手势验证码
+                    vaptcha({
+                        vid: config.vid,
+                        type: 'invisible',
+                        scene: 1,
+                        https: config.https,
+                        offline_server: qscms.root + '?m=Home&c=captcha&a=vaptcha_outage',
+                    }).then(function (vaptchaObj) {
+                        obj = vaptchaObj;
+                        vaptchaObj.listen('pass', function () {
+                            callBackArr['token'] = vaptchaObj.getToken();
+                            passCallback(callBackArr);
+                        });
+                        vaptchaObj.listen('close', function () { });
+                        vaptchaObj.validate();
+                    });
+                } else if (config.verify_type == 'tencent') {
+                    // 腾讯云验证码
+                    var TCaptchaObj = new TencentCaptcha(config.vid, function (res) {
+                        if (res.ret === 0) {
+                            callBackArr['Ticket'] = res.ticket;
+                            callBackArr['Randstr'] = res.randstr;
+                            passCallback(callBackArr);
+                        }
+                    });
+                    TCaptchaObj.show();
+                } else {
+                    // 极验
+                    initGeetest({
+                        gt: config.gt,
+                        challenge: config.challenge,
+                        offline: !config.success,
+                        new_captcha: config.new_captcha,
+                        product: 'bind',
+                        https: true
+                    }, function (captchaObj) {
+                        captchaObj.appendTo("#pop");
+                        captchaObj.onSuccess(function () {
+                            var captChaResult = captchaObj.getValidate();
+                            callBackArr['geetest_challenge'] = captChaResult.geetest_challenge;
+                            callBackArr['geetest_validate'] = captChaResult.geetest_validate;
+                            callBackArr['geetest_seccode'] = captChaResult.geetest_seccode;
+                            if ($('.J_gee_cha')) {
+                                $('.J_gee_cha').val(captChaResult.geetest_challenge);
+                                $('.J_gee_val').val(captChaResult.geetest_validate);
+                                $('.J_gee_sec').val(captChaResult.geetest_seccode);
+                            }
+                            passCallback(callBackArr);
+                        })
+                        captchaObj.onReady(function () {
+                            captchaObj.verify();
+                        });
+                        $('#btnCheck').on('click', function () {
+                            captchaObj.verify();
+                        })
+                        window.captchaObj = captchaObj;
+                    });
+                }
+            }
+        })
+    }
+</script>
+	<link href="static/css/common.css" rel="stylesheet" type="text/css">
+	<link href="static/css/news.css" rel="stylesheet" type="text/css">
+	<script src="static/js/jquery.common.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<div class="header_min" id="header">
+	<div class="header_min_top sub">
+		<div id="J_header" class="itopl font_gray6 link_gray6">
+							<!--<span class="link_white">欢迎登录赣州人事人才网！&nbsp;&nbsp; <a id="J_site_login" href="javascript:;">登录</a> &nbsp;|&nbsp; <a id="J_site_reg" href="javascript:;">免费注册</a></span>-->
+			    <!--分站-->
+				<div class="sub_city_box">
+					<div class="city_switch">
+						<div class="c_item"><span></span>&nbsp;&nbsp;[&nbsp;&nbsp;切换站点</div>
+						<div class="city_drop">
+							<div class="d_tit">点击进入&nbsp;&nbsp;<a href="javascript:;">[&nbsp;&nbsp;总站&nbsp;&nbsp;]</a></div>
+                            <div class="d_list">
+                                <a href="javascript:;" class="d_item">南康</a>
+                                <a href="javascript:;" class="d_item">赣县</a>
+                                <a href="javascript:;" class="d_item">于都</a>
+                                <a href="javascript:;" class="d_item">瑞金</a>
+                                <a href="javascript:;" class="d_item">宁都</a>
+                                <a href="javascript:;" class="d_item">兴国</a>
+                                <a href="javascript:;" class="d_item">信丰</a>
+                                <a href="javascript:;" class="d_item">龙南</a>
+                                <a href="javascript:;" class="d_item">石城</a>
+                                <a href="javascript:;" class="d_item">会昌</a>
+                                <a href="javascript:;" class="d_item">上犹</a>
+                                <a href="javascript:;" class="d_item">崇义</a>
+                                <a href="javascript:;" class="d_item">大余</a>
+                                <a href="javascript:;" class="d_item">全南</a>
+                                <a href="javascript:;" class="d_item">定南</a>
+                                <a href="javascript:;" class="d_item">安远</a>
+                                <a href="javascript:;" class="d_item">寻乌</a>
+                                <a href="javascript:;" class="d_item">经开区</a>
+                                <a href="javascript:;" class="d_item">蓉江新区</a>
+                                <div class="clear"></div>
+                            </div>
+						</div>
+					</div>
+					<div class="city_near">
+					<a href="javascript:;" class="d_item">总站</a>
+					</div>
+					&nbsp;&nbsp;]
+					<div class="clear"></div>
+				</div>		</div>
+		<div class="itopr font_gray6 link_gray6" id="J_header_sub">
+            <span class="white_top_tel">0797-8129873</span>
+            <span class="white_top_line">|</span>
+			<span class="link_yellow">欢迎登录赣州人事人才网！请 <a id="J_site_login" href="javascript:;">登录</a> 或 <a id="J_site_reg" href="javascript:;">免费注册</a></span>
+		</div>
+	    <div class="clear"></div>
+	</div>
+</div>
+
+ <div class="clear"></div>
+<div class="other_top_nav">
+    <div class="ot_nav_box">
+        <div class="ot_nav_logo"><a href="javascript:;">
+				<img src="static/picture/logo_home.gif" border="0"></a></div>
+		
+        <div class="ot_nav_sub">
+                    </div>
+        <div class="ot_nav_link " style="padding-left:0;max-width: 1000px;">
+            <ul class="link_gray6 nowrap">
+                                                                                                                <li class="on_li J_hoverbut ">
+                        <a href="javascript:;" target="_self">首  页</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="javascript:;" target="_self">最新招聘</a></li>                                                                                <li class="on_li J_hoverbut select">
+                        <a href="javascript:;" target="_blank">最新考讯</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="javascript:;" target="_self">最新人才</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="javascript:;" target="_blank">普工招聘</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="javascript:;" target="">零工市场</a></li>                    <li class="on_li J_hoverbut">
+                            <div class="nav_father" onmouseout="javascript:$('#show2').hide();" onmouseover="javascript:$('#show2').show();">
+                                <a href="javascript:void(0);">招聘会</a>
+                                <div class="nav_son" id="show2">
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">线上招聘会</a></div>
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">现场招聘会</a></div>
+                                </div>
+                            </div>
+                        </li>                                                            <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="javascript:;" target="">线上招聘会</a></li><li class="on_li J_hoverbut" style="background-image:url(static/image/nav_new.png);background-repeat:no-repeat;background-position:63px 18px;">
+                            <div class="nav_father" onmouseout="javascript:$('#show1').hide();" onmouseover="javascript:$('#show1').show();">
+                                <a href="javascript:void(0);">企业服务</a>
+                                <div class="nav_son" id="show1">
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">企业财税</a></div>
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">企业产权</a></div>
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">灵活用工</a></div>
+                                </div>
+                            </div>
+                        </li>                                                                                <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="javascript:;" target="_self">招聘会</a></li>                                        <li class="on_li J_hoverbut" style="background-image:url(static/image/nav_new.png);background-repeat:no-repeat;background-position:63px 18px;">
+                            <div class="nav_father" onmouseout="javascript:$('#show3').hide();" onmouseover="javascript:$('#show3').show();">
+                                <a href="javascript:void(0);">直播大厅</a>
+                                <div class="nav_son" id="show3">
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">直播大厅</a></div>
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">视频面试</a></div>
+                                </div>
+                            </div>
+                        </li>                                        <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="javascript:;" target="_blank">直播大厅</a></li>                                                            <li class="on_li J_hoverbut">
+                            <div class="nav_father" onmouseout="javascript:$('#show4').hide();" onmouseover="javascript:$('#show4').show();">
+                                <a href="javascript:void(0);">HR服务</a>
+                                <div class="nav_son" id="show4">
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">HR服务</a></div>
+                                    <div class="nav_son_cell"><a href="javascript:;" target="_blank">背景调查</a></div>                                    
+                                </div>
+                            </div>
+                        </li>                    <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="javascript:;" target="">背景调查</a></li>            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<script type="text/javascript" src="static/js/jquery.modal.dialog.js"></script>
+
+<div class="newslip_topimg">
+<img src="static/picture/news.jpg" border="0">
+</div>
+<div class="newsshow">
+  <div class="l">
+	<div class="main">
+	  <div class="ntitle">2023年赣州经开区欧潭人力资源有限公司招聘2名劳务派遣人员公告</div>
+	  <div class="time">
+	  			    		    	<span>日期：2023-03-31</span>
+			<span>浏览 <a class="click"></a> 次</span>
+	  </div>
+	  <div class="txt"><p class="p">
+	<span style="font-size:16px;">赣州经开区欧潭人力资源有限公司是赣州经开区人才发展集团有限公司旗下全资子公司。因工作需要，赣州经开区欧潭人力资源有限公司需招聘劳务派遣人员</span><span style="font-size:16px;">2名，外派至赣州保税实业集</span><span style="font-size:16px;">团有限公司</span><span style="font-size:16px;">旗下子公司</span><span style="font-size:16px;">赣州保税物业服务有限公司</span><span style="font-size:16px;">工作</span><span style="font-size:16px;">。现将有关事项公告如下：</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">一</span><span style="font-size:16px;">、总体要求</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">严格按照公开、平等、竞争、择优的总体要求，坚持依法、科学、公平进行招聘工作。</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">二、招聘人数、岗位及条件</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">本次公开招聘</span><span style="font-size:16px;">招商运营专员</span><span style="font-size:16px;">2</span><span style="font-size:16px;">名。</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">（</span><span style="font-size:16px;">一</span><span style="font-size:16px;">）</span><span style="font-size:16px;">应具备的基本条件</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">1.具有中华人民共和国国籍</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">2.拥护中华人民共和国宪法</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">3.具有良好的品行</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">4.具有正常履行职责的身体条件。</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">（</span><span style="font-size:16px;">二</span><span style="font-size:16px;">）</span><span style="font-size:16px;">有下列情形之一的人员，不具备应聘资格</span><span style="font-size:16px;">：</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">1.向企业提供虚假应聘资料的</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">2.未与上家单位解除劳动关系的</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">3.因违法犯罪受刑事处罚或相关法律法规规定不允许聘任的</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">4.因违纪违法受到党纪政务处分的，或过往工作中存在劣迹不适合从事国有企业有关工作的</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">5.与前单位签订竞业限制且仍在竞业期限内的</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">6.</span><span style="font-size:16px;">参加区属国有企业近</span><span style="font-size:16px;">3年内公开招聘并入围体检，但放弃体检资格或体检通过放弃入职的。</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">三、学历、年龄及岗位</span><span style="font-size:16px;">要求</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">1</span><span style="font-size:16px;">.</span><span style="font-size:16px;">35周岁以下，具有</span><span style="font-size:16px;">高中</span><span style="font-size:16px;">或以上学历</span><span style="font-size:16px;">，</span><span style="font-size:16px;">有</span><span style="font-size:16px;">相</span><span style="font-size:16px;">关物业管理经验优先；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">2</span><span style="font-size:16px;">.</span><span style="font-size:16px;">具有良好的沟通交流能力</span><span style="font-size:16px;">，</span><span style="font-size:16px;">团队意识强，吃苦耐劳，抗压力强；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">3</span><span style="font-size:16px;">.</span><span style="font-size:16px;">熟练使用</span><span style="font-size:16px;">Word、excel、PPT等办公软件</span><span style="font-size:16px;">；</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">4</span><span style="font-size:16px;">.</span><span style="font-size:16px;">熟悉物业操作流程，物业公司或地产公司</span><span style="font-size:16px;">3年以上的工作经历。</span> 
+</p>
+<p class="MsoNormal" align="justify" style="margin-left:0pt;text-align:justify;">
+	<span style="font-size:16px;">四、薪资待遇</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">底</span><span style="font-size:16px;">薪</span><span style="font-size:16px;">3000</span><span style="font-size:16px;">/月</span><span style="font-size:16px;">，享受五险，绩效提成根据《赣州保税物业公司绩效管理办法》要求核算</span><span style="font-size:16px;">。</span> 
+</p>
+<p class="MsoNormal" align="justify" style="margin-left:0pt;text-align:justify;">
+	<span style="font-size:16px;">五、</span><span style="font-size:16px;">报名</span><span style="font-size:16px;">方式</span> 
+</p>
+<p class="p" align="justify" style="text-align:justify;">
+	<span style="font-size:16px;">（</span><span style="font-size:16px;">一）报名</span> 
+</p>
+<p class="p">
+	<span style="font-size:16px;">1、报名方式：</span> 
+</p>
+<p class="p">
+	<span style="font-size:16px;">应聘人员</span><span style="font-size:16px;">将个人简历</span><span style="font-size:16px;">、身份证、学历证书</span><span style="font-size:16px;">及相关</span><span style="font-size:16px;">证件的扫描件以邮件形式发送至</span><span style="font-size:16px;">2628720068@qq.com（邮件请勿重复投递），如有学位证书、职称证书、荣誉证书等，则将其扫描件一并发送，请按“姓名+</span><span style="font-size:16px;">报名职位</span><span style="font-size:16px;">”的标题格式发送。</span> 
+</p>
+<p class="p">
+	<span style="font-size:16px;">2、报名时间：即日起至招满为止</span><span style="font-size:16px;">。</span> 
+</p>
+<p class="p">
+	<span style="font-size:16px;">（二）联系方式</span> 
+</p>
+<p class="MsoNormal" align="justify" style="margin-left:0pt;text-align:justify;">
+	<span style="font-size:16px;">电话：</span><span style="font-size:16px;">13397979637（刘女士）</span> 
+</p>
+<p class="MsoNormal" style="margin-left:0pt;">
+	<span style="font-size:16px;">地址：江西省赣州市赣州经济技术开发区综合保税区监管服务大楼</span><span style="font-size:16px;">4楼404室。</span> 
+</p>
+<p class="p">
+	<span style="font-size:16px;">（三）面试时间及地点另行通知</span> 
+</p>
+<p class="p">
+	<span style="font-size:16px;"><br>
+</span> 
+</p>
+<p class="p" style="text-align:right;">
+	<span style="font-size:16px;">赣州经开区欧潭人力资源有限公司</span> 
+</p>
+<p class="MsoNormal" align="justify" style="text-align:right;margin-left:0pt;">
+	<span style="font-size:16px;">2023年3月29日</span> 
+</p>
+<p class="MsoNormal" align="justify" style="font-size:medium;text-align:justify;">
+	<span style="font-family:仿宋;font-size:15pt;"></span> 
+</p></div>
+	<div class="next link_gray6">
+	  <div class="nextl substring">
+	  上一条：
+	  <a href="javascript:;">“高薪、双休、五险一金享不停！周六举办求职见面会！帮你搜寻好工作的零工市场，面对面求职首选</a>
+	  	  </div>
+	  <div class="nextr substring">
+	  下一条：
+	   <a href="javascript:;">赣州市章贡区粮食收储有限责任公司公开招聘员工拟录用人员公示</a>
+	  	  </div>
+	  <div class="clear"></div>
+    </div>
+	</div>
+  </div>
+  <div class="r">
+  	<div class="newsso">
+	<form id="form" action="/news/news_list.html">
+		<input name="key" type="text" class="soinpu" placeholder="新闻搜索">
+		<input type="button" value="" id="so_btn" class="btn">
+	</form>
+	<input type="hidden" class="f-seach-page" value="?m=Home&c=News&a=news_list&">
+	</div>
+		    <div class="cat">
+			<ul class="link_gray6">
+		  	<li class="odd select"><a href="javascript:;">本市招考</a></li><li class=" "><a href="javascript:;">成绩公示</a></li><li class="odd "><a href="javascript:;">外区招考</a></li><li class=" "><a href="javascript:;">张贴信息</a></li><li class="odd "><a href="javascript:;">现场招聘会</a></li><li class=" "><a href="javascript:;">简历指南</a></li><li class="odd "><a href="javascript:;">面试宝典</a></li><li class=" "><a href="javascript:;">职场八卦</a></li>			</ul>
+			<div class="clear"></div>
+	</div>
+	
+        <div class="listbox">
+			<div class="ntit"><div class="tlh">热门资讯</div></div>
+			<ul class="link_gray6">
+			<li><a target="_blank" href="javascript:;"><span style="color:#FF0000;">重磅！赣州出台24条政策促经济健康发展！条条都是干货！</span></a></li>			</ul>
+		</div>	
+    		
+        <div class="listbox">
+			<div class="ntit"><div class="tlh">推荐资讯</div></div>
+			<ul class="link_gray6">
+			<li><a target="_blank" href="javascript:;">南方医院赣州医院“粤招赣用”专项招聘公告</a></li><li><a target="_blank" href="javascript:;">赣州市人大常委会办公室2022年招募高校毕业生见习公告</a></li><li><a target="_blank" href="javascript:;">【赣州人事人才网】赣州市就业创业服务中心招募青年见</a></li><li><a target="_blank" href="javascript:;">上海浦东发展银行赣州分行招聘启事</a></li><li><a target="_blank" href="javascript:;">赣州市体育局及下属事业单位招聘公告</a></li><li><a target="_blank" href="javascript:;"><span style="color:#FF0000;font-weight:bold;">2020年赣州市“夏季专场”网络直播招聘会邀请函</span></a></li><li><a target="_blank" href="javascript:;">全南县陂头镇中心卫生院招聘公告</a></li><li><a target="_blank" href="javascript:;">江西坤巽古建设计院有限公司关于公开招聘12名工作人员</a></li><li><a target="_blank" href="javascript:;">2019年信丰县政府专职消防员招聘公告</a></li><li><a target="_blank" href="javascript:;">人保财险赣州市分公司2019年商非业务骨干招聘启事</a></li>			</ul>
+		</div>	
+  </div>
+  
+  <div class="clear"></div>
+</div>
+
+<div class="footer_min" id="footer">
+	<div class="links link_gray6">
+	<a target="_blank" href="javascript:;">网站首页</a>
+	
+	|   <a target="_blank" href="javascript:;">联系我们</a>|   <a target="_blank" href="javascript:;">网站简介</a>|   <a target="_blank" href="javascript:;">专场招聘</a>|   <a target="_blank" href="javascript:;">现场招聘</a>|   <a target="_blank" href="javascript:;">报纸招聘</a>|   <a target="_blank" href="javascript:;">员工风采</a>|   <a target="_blank" href="javascript:;">职场指南</a>|   <a target="_blank" href="javascript:;">网站声明</a>	|   <a target="_blank" href="javascript:;">意见建议</a>
+	</div>
+	<div class="txt">
+
+		联系地址：赣州经济技术开发区：赣州市经济技术开发区金岭路164号赣州市人力资源产业园2楼A08号       联系电话：0797-8129873<br>
+
+		招聘单位无权收取任何费用,请求职人员加强自我保护意识,按劳动法规保护自身权益,警惕虚假招聘,避免上当受骗! All Rights Reserved 797rs.com  赣州人事人才网 版权所有        网站备案： <a href="javascript:;" target="_blank">赣ICP备12004483号 </a>		<script>var _hmt = _hmt || [];(function() {  var hm = document.createElement("script");  hm.src = "//hm.baidu.com/hm.js?ca26dc962f9b4052e286581361306932";  var s = document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>
+    公网安备：<a href="javascript:;" target="_blank">36070002000242</a>
+	</div>
+</div>
+
+<div class="">
+	<div class=""></div>
+</div>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="/Application/Home/View/default/public/js/PIE.js"></script>
+  <script type="text/javascript">
+    (function($){
+        $.pie = function(name, v){
+            // 如果没有加载 PIE 则直接终止
+            if (! PIE) return false;
+            // 是否 jQuery 对象或者选择器名称
+            var obj = typeof name == 'object' ? name : $(name);
+            // 指定运行插件的 IE 浏览器版本
+            var version = 9;
+            // 未指定则默认使用 ie10 以下全兼容模式
+            if (typeof v != 'number' && v < 9) {
+                version = v;
+            }
+            // 可对指定的多个 jQuery 对象进行样式兼容
+            if ($.browser.msie && obj.size() > 0) {
+                if ($.browser.version*1 <= version*1) {
+                    obj.each(function(){
+                        PIE.attach(this);
+                    });
+                }
+            }
+        }
+    })(jQuery);
+    if ($.browser.msie) {
+      $.pie('.pie_about');
+    };
+  </script>
+<![endif]-->
+<script type="text/javascript" src="static/js/jquery.disappear.tooltip.js"></script>
+<div class="floatmenu">
+<div class="item mobile">
+    <a class="blk"></a>
+    <div class="popover popover1">
+      <div class="popover-bd">
+        <label>手机APP</label>
+        <span class="img-qrcode img-qrcode-mobile"><img src="static/picture/index-Home_Qrcode_index_https3A2F2Fwww.797rs.com2Fmobile2Findex2Fapp_download.html.php" alt=""></span>
+      </div>
+    </div>    <div class="popover">
+      <div class="popover-bd">
+        <label class="wx">企业微信</label>
+        <span class="img-qrcode img-qrcode-wechat"><img src="static/picture/5fa8a0f76b3fe.png" alt=""></span>
+      </div>
+      <div class="popover-arr"></div>
+    </div>  </div>  <div class="item ask">
+    <a class="blk" target="_blank" href="javascript:;"></a>
+  </div>
+  <div id="backtop" class="item backtop" style="display: none;"><a class="blk"></a></div>
+</div>
+<script language="JavaScript">
+
+var global = {
+    h:$(window).height(),
+    st: $(window).scrollTop(),
+    backTop:function(){
+      global.st > (global.h*0.5) ? $("#backtop").show() : $("#backtop").hide();
+    }
+  }
+  $('#backtop').on('click',function(){
+    $("html,body").animate({"scrollTop":0},500);
+  });
+  global.backTop();
+  $(window).scroll(function(){
+      global.h = $(window).height();
+      global.st = $(window).scrollTop();
+      global.backTop();
+  });
+  $(window).resize(function(){
+      global.h = $(window).height();
+      global.st = $(window).scrollTop();
+      global.backTop();
+  });
+  // 客服QQ
+  var app_qq = "在线客服";
+  var qq_open = "1";
+  if(app_qq != '' && qq_open == 1){
+      var QQFloatUrl = "/qqfloat/index/index.html";
+      $.getJSON(QQFloatUrl, function (result) {
+          if (result.status == 1) {
+              //$(".qq-float").html(result.data);
+              $("body").append(result.data);
+          }
+      });
+  }
+</script>
+<!--<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>-->
+<script type="text/javascript" src="static/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.getJSON("/ajax_common/news_click.html",{id:"19385"},function(result){
+			if(result.status==1){
+				$(".click").html(result.data);
+			}
+		});
+
+		// 广告位图片延迟加载
+		$("img.lazy").lazyload({
+	        effect : "fadeIn"
+	    });
+		$('#so_btn').click(function(){
+			$('input[name="key"]').val(htmlspecialchars($('input[name="key"]').val()));
+			var data = $('#form').serialize();
+			if(qscms.keyUrlencode==1){
+				data = encodeURI(data);
+			}
+			window.location.href = qscms.root + $('.f-seach-page').val() + data;
+		});
+	});
+</script>
+	<a href="https://smalltool.github.io/" style="display:none;">快速仿站</a>
+</body>
+</html>

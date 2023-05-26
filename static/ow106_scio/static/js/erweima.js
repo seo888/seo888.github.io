@@ -1,0 +1,6 @@
+document.writeln('<div class="erwei">')
+document.writeln('<div class="ma">')
+document.writeln('<p><img src="http://www.scio.gov.cn/Template/6721/Image/scio.jpg"></p>')    
+document.writeln('<p><img src="http://www.scio.gov.cn/Template/6721/Image/showchina.jpg"></p>')         
+document.writeln('</div>')          
+document.writeln('</div>')          

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="static/css/aliplayer-min.css">
+		<script type="text/javascript" src="static/js/aliplayer-min.js"></script>
+		<!-- <script type="text/javascript" src="/js/MemoryPlayComponent/index.js"></script> -->
+		<!-- <script src="/player/cyberplayer.js"></script> -->
+		<!-- <script src="https://imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.3.2.js" ></script> -->
+
+		<style>
+			body{margin:0;padding:0}
+			element.style {
+			    position: absolute;
+			    top: 110px;
+			    left: 30px;
+			    bottom: 30px;
+			    display: block;
+			}
+			.prism-big-play-btn {
+			    position: absolute;
+			    left: 30px;
+			    bottom: 20px;
+				top:110px;
+			    display: block;
+			}
+			.prism-player .prism-big-play-btn {
+			    background-size: contain;
+			    width: 54px;
+			    height: 54px;
+			}
+			.prism-player .prism-big-play-btn .outter {
+			    border: 7px solid rgba(255,255,255,.51);
+			    width: 54px;
+			    height: 54px;
+			    border-radius: 100%;
+			    position: absolute;
+			    box-sizing: border-box;
+			    top: 0;
+			    left: 0;
+			}
+			.prism-player .prism-thumbnail {
+			    border: 1px solid rgba(0, 0, 0, 0.02);
+			    width: 1px;
+			    height: 1px;
+			    position: absolute;
+			    bottom: 50px;
+			    display: none;
+			}
+			.prism-player .prism-liveshift-progress .cursor-hover img, .prism-player .prism-progress .cursor-hover img {
+				width: 24px !important; height: 24px !important;
+			}
+			.prism-cc-btn, .prism-setting-btn, .prism-volume {
+				display: none !important;
+			}
+			
+			#player-con {
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+	<body croll="no">
+		<div id="player-con"></div>
+	</body>
+	<script type="text/javascript" src="static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+	<script src="static/js/publics.js"></script>
+<!-- 	<script type="text/javascript">
+		// var wi = document.body.clientWidth||document.body.offsetWidth;
+		// var width = (wi*9)/16
+		// var video = getUrlParam('video');
+		// let strvsu = video + '?x-oss-process=video/snapshot,t_1000,f_jpg,w_0,h_0';
+		// var player = new TcPlayer('player-con', {
+		// 	"m3u8": video, //请替换成实际可用的播放地址
+		// 	"autoplay" : true,      //iOS 下 safari 浏览器，以及大部分移动端浏览器是不开放视频自动播放这个能力的
+		// 	"poster" : strvsu,
+		// 	"width" :  '100%',//视频的显示宽度，请尽量使用视频分辨率宽度
+		// 	"height" : width//视频的显示高度，请尽量使用视频分辨率高度
+		// });
+		
+	 //    var player = cyberplayer("player-con").setup({
+	 //        width: '100%', // 宽度，也可以支持百分比(不过父元素宽度要有)
+	 //        height: width, // 高度，也可以支持百分比
+	 //        title: "", // 标题
+	 //        file: video, // 播放地址
+	 //        image: strvsu, // 预览图
+	 //        autostart: false, // 是否自动播放
+	 //        stretching: "uniform", // 拉伸设置
+	 //        repeat: false, // 是否重复播放
+	 //        volume: 100, // 音量
+	 //        controls: true, // controlbar是否显示
+	 //        starttime: 0, // 视频开始播放时间点(单位s)，如果不设置，则可以从上次播放时间点续播
+	 //        ak: "76da3125500040c3af30abeb9a395de4" // 公有云平台注册即可获得accessKey
+	 //    });
+	</script> -->
+	<script>
+		//document.domain = 'lnyun.com.cn';
+		// const saveTime = function (memoryPlay) {
+		//     console.log(memoryPlay.getCurrentTime())
+		//   }
+		var wi = document.body.clientWidth||document.body.offsetWidth;
+		var width = (wi*9)/16
+		var player
+		var video = getUrlParam('video');
+		var divcol = getUrlParam('divcol');
+		let strvsu = getUrlParam('cover');
+		if(strvsu==1){
+			$.ajax({
+				url: '/cloud/apis/upload/api/feign/one?id='+video+'&divcol='+divcol,
+				dataType: 'json',
+				type: 'get',
+				success: function(data) {
+					if(data.code == 200){
+						if(data.data.fileType==1){
+							var cover = data.data.cover;
+							if (cover == null || cover == '' || cover == undefined) {
+								cover = data.data.mcover;
+							}
+							player = new Aliplayer({
+							   id: "player-con",
+							   source: data.data.url,
+							   width: '100%',
+							   height: width+"px",
+							   autoplay: false,
+							   cover:cover,
+							   controlBarVisibility: "hover",
+							   showBarTime: "3000",
+							   isLive: false,
+							   useH5Prism: true,
+							   preload: true,
+							   playsinline:true
+							}, function (player) {
+							   var memory_time =  window.localStorage.getItem(video);
+							   if (memory_time){
+							       player.seek(memory_time);
+							   }
+							});
+						}else if(data.data.fileType==3){
+							var str = '<audio class=" audio-js"  controls preload="none"  src="' + data.data.url + '">" /></audio>';
+							$('#player-con').html(str);
+						}
+						
+					}
+				}
+			});
+		}else if(strvsu>1){
+			$.ajax({
+				url: '/cloud/apis/upload/api/feign/one?id='+divcol+'&divcol='+strvsu,
+				dataType: 'json',
+				type: 'get',
+				success: function(data) {
+					if(data.code == 200){
+						var cover = data.data.cover;
+						if (cover == null || cover == '' || cover == undefined) {
+							cover = data.data.mcover;
+						}
+						player = new Aliplayer({
+						   id: "player-con",
+						   source: data.data.url,
+						   width: '100%',
+						   height: width+"px",
+						   autoplay: false,
+						   cover:cover,
+						   controlBarVisibility: "hover",
+						   showBarTime: "3000",
+						   isLive: false,
+						   useH5Prism: true,
+						   preload: true,
+						   playsinline:true
+						}, function (player) {
+						   var memory_time =  window.localStorage.getItem(video);
+						   if (memory_time){
+						       player.seek(memory_time);
+						   }
+						});
+					}
+				}
+			});
+		}else if(strvsu && strvsu.length>12) {
+			player = new Aliplayer({
+			   id: "player-con",
+			   source: video,
+			   width: '100%',
+			   height: width+"px",
+			   autoplay: false,
+			   cover:strvsu,
+			   controlBarVisibility: "hover",
+			   showBarTime: "3000",
+			   isLive: false,
+			   useH5Prism: true,
+			   preload: true,
+			   playsinline:true
+			}, function (player) {
+			   var memory_time =  window.localStorage.getItem(video);
+			   if (memory_time){
+			       player.seek(memory_time);
+			   }
+			});
+		}else{
+			//if(strvsu==null || strvsu=='' || strvsu==undefined || strvsu=='undefined'){
+				strvsu = video+'?x-oss-process=video/snapshot,t_1000,f_jpg,w_0,h_0';
+			//}
+			player = new Aliplayer({
+			   id: "player-con",
+			   source: video,
+			   width: '100%',
+			   height: width+"px",
+			   autoplay: true,
+			   cover:strvsu,
+			   controlBarVisibility: "hover",
+			   showBarTime: "3000",
+			   isLive: false,
+			   useH5Prism: true,
+			   preload: true,
+			   playsinline:true
+			}, function (player) {
+			   var memory_time =  window.localStorage.getItem(video);
+			   if (memory_time){
+			       player.seek(memory_time);
+			   }
+			});
+		}
+		
+		
+		 
+		  setTimeout(function(){
+			  player.on('timeupdate',function (e) {
+				  var time = player.getDuration();
+				  var curr = player.getCurrentTime();
+				  if(time == curr){
+					  curr = 0;
+				  }
+				 window.localStorage.setItem(video,curr);
+			  })
+		  },1500);
+	</script>
+</html>

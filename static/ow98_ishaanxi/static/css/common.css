@@ -1,0 +1,112 @@
+/* 页面初始化 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html { width: 100%; height: 100%; font-size: 14px; overflow-x: hidden; background: #fff; }
+body { width: 100%; height: 100%; background: #fff; color: #505050; font-size: 14px; font-family: "Microsoft YaHei", 微软雅黑, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: bold; }
+h1 { font-size: 32px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+p {  /* font-size: .19rem; */ }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+a { color: #505050; text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: none; }
+fieldset, img { border: none; }
+img { max-width: 100% }
+ol, ul, li { list-style: none; }
+input, textarea, select, button { outline: none; }
+table { border-collapse: collapse; }
+
+/*禁用了文本的拖拉，尤其在谷歌下*/
+textarea { resize: none; }
+input::-webkit-input-placeholder { color: #a0a0a0; }
+input::-moz-placeholder { color: #a0a0a0; }
+input:-ms-input-placeholder { color: #a0a0a0; }
+input:-moz-placeholder { color: #a0a0a0; }
+
+/* 去掉记住密码淡黄色底色 */
+input:-webkit-autofill { background-color: rgb(250, 255, 189); background-image: none; color: rgb(0, 0, 0); }
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; }
+
+/*为了使文本段落左右两边对齐*/
+
+/* p { text-align: justify; text-justify: distribute; } */
+.clearfloat:after { content: ""; display: block; height: 0; clear: both; visbility: hidden; }
+.clearfloat { *zoom: 1; }
+.mask { background: rgba(0, 0, 0, 0.5); position: fixed; top: 0; bottom: 0; left: 0; right: 0; display: none; }
+.blue { color: #e60012; }
+.red { color: #dd151b; }
+.main { max-width: 1200px; margin: 0 auto; }
+.margin-top { margin-top: 30px; }
+.nowrap { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+a:hover { color: #e60012 !important; }
+img { -webkit-transition: all 0.6s; -o-transition: all 0.6s; transition: all 0.6s; }
+.rslides-item img:hover, .news-list-box img:hover { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
+.row { margin: 0 }
+.italic { font-style: italic; }
+
+.z-container {
+	min-height: calc(100vh - 300px)
+}
+
+.file-icon{
+  padding-left:24px;
+  background-repeat:no-repeat;
+  background-position: 2px center;
+  background-image: url(../image/unknown.gif)
+}
+.file-icon-asp{background-image: url(../image/asp.gif)}
+.file-icon-aspx{background-image: url(../image/aspx.gif)}
+.file-icon-avi{background-image: url(../image/avi.gif)}
+.file-icon-bmp{background-image: url(../image/bmp.gif)}
+.file-icon-chm{background-image: url(../image/chm.gif)}
+.file-icon-doc{background-image: url(../image/doc.gif)}
+.file-icon-docx{background-image: url(../image/doc.gif)}
+.file-icon-exe{background-image: url(../image/exe.gif)}
+.file-icon-fla{background-image: url(../image/fla.gif)}
+.file-icon-flv{background-image: url(../image/flv.gif)}
+.file-icon-gif{background-image: url(../image/gif.gif)}
+.file-icon-htm{background-image: url(../image/htm.gif)}
+.file-icon-html{background-image: url(../image/htm.gif)}
+.file-icon-jar{background-image: url(../image/jar.gif)}
+.file-icon-jpg{background-image: url(../image/jpg.gif)}
+.file-icon-jpeg{background-image: url(../image/jpg.gif)}
+.file-icon-js{background-image: url(../image/js.gif)}
+.file-icon-jsp{background-image: url(../image/jsp.gif)}
+.file-icon-mdb{background-image: url(../image/mdb.gif)}
+.file-icon-mov{background-image: url(../image/mov.gif)}
+.file-icon-mp3{background-image: url(../image/mp3.gif)}
+.file-icon-mp4{background-image: url(../image/mp4.gif)}
+.file-icon-mv{background-image: url(../image/mv.gif)}
+.file-icon-pdf{background-image: url(../image/pdf.gif)}
+.file-icon-php{background-image: url(../image/php.gif)}
+.file-icon-png{background-image: url(../image/png.gif)}
+.file-icon-ppt{background-image: url(../image/ppt.gif)}
+.file-icon-pptx{background-image: url(../image/ppt.gif)}
+.file-icon-psd{background-image: url(../image/psd.gif)}
+.file-icon-rar{background-image: url(../image/rar.gif)}
+.file-icon-rm{background-image: url(../image/rm.gif)}
+.file-icon-shtml{background-image: url(../image/htm.gif)}
+.file-icon-swf{background-image: url(../image/swf.gif)}
+.file-icon-txt{background-image: url(../image/txt.gif)}
+.file-icon-wmp{background-image: url(../image/wmp.gif)}
+.file-icon-wmv{background-image: url(../image/wmv.gif)}
+.file-icon-xls{background-image: url(../image/xls.gif)}
+.file-icon-xlsx{background-image: url(../image/xls.gif)}
+.file-icon-zip{background-image: url(../image/jar.gif)}
+
+/* 面包屑 */
+.breadcrumb>li+li:before { content: '>' }
+.breadcrumb {margin: 20px 0; padding: 0; border: none; background: transparent; }
+@media (max-width:1199px) {
+    .breadcrumb { margin: 20px; }
+}
+@media (max-width:767px) {
+    .margin-top { margin-top: 20px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 16px; }
+    h5 { font-size: 14px; }
+}

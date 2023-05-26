@@ -1,0 +1,1 @@
+document.write("<div class=\"col-md-12 mbt\"><img src=\"https://www.shidiannet.com/s/images/ad/20da.png\" alt=\"学习贯彻党的二十大精神\" class=\"img-fluid\" ></div>")

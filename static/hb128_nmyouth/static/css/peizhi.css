@@ -1,0 +1,327 @@
+/*通配符开始*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+em{font-style: normal;}
+i{font-style: normal;}
+.zz_clear{
+    clear: both;
+}
+html,body,div,h1,h2,h3,h4,h5,h6,em,i,a,span,li,ol,p{
+    font-family: "微软雅黑";
+}
+input,textarea{
+    font-family: "微软雅黑";
+}
+img{
+    max-width: 100%;
+}
+/*通配符结束*/
+
+/*公用分页开始*/
+.dy_fenye{
+    padding: 26px 0;
+    overflow: hidden;
+}
+.dy_fenye .paginator{
+    text-align: center;
+}
+.dy_fenye .paginator a,.dy_span{
+    display: inline-block;
+    font-size: 16px;
+    color: #646464;
+    width:35px;
+    height:35px;
+    line-height: 35px;
+    text-align: center;
+    background: url("../image/dy_beijing7.png") center no-repeat;
+    margin: 0 3px;
+}
+.dy_fenye .paginator .dy_span{
+    color: #fff;
+    background: url("../image/dy_beijing7_1.png") center no-repeat;
+}
+.dy_fenye .paginator a[href]:hover{
+    color: #fff;
+    background: url("../image/dy_beijing7_1.png") center no-repeat;
+}
+.fen_l{
+    float: left;
+    line-height: 35px;
+    font-size: 16px;
+    color: #999999;
+}
+.fen_l>em{
+    color: #a50f10;
+}
+.fen_r{
+    float: right;
+}
+.fen_r .fenye_inp{
+    display: inline-block;
+    width:118px;
+    height:35px;
+    line-height: 35px;
+    padding-left: 16px;
+    padding-right: 75px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background: url("../image/dy_beijing8.png") center no-repeat;
+    position: relative;
+}
+.fen_r .fenye_inp input{
+    display: block;
+    width:100%;
+    height:35px;
+    line-height: 35px;
+    outline:none;
+    background: none;
+    border:none;
+    font-size: 16px;
+    color: #999999;
+    text-align: center;
+}
+.fen_r .fenye_inp>a{
+    position: absolute;
+    height:35px;
+    line-height: 35px;
+    right:0;
+    top:0;
+    width:58px;
+    text-align: center !important;
+    font-size: 16px;
+    color: #646464;
+    background: none;
+    margin: 0 !important;
+}
+.fen_r .fenye_inp>a:hover{
+    background: none !important;
+    color: #a50f10 !important;
+}
+@media (min-width: 320px) and (max-width: 750px) {
+    .fen_l{
+        float: none;
+        padding-bottom: 20px;
+    }
+    .fen_r{
+        float: none;
+    }
+}
+/*公用分页结束*/
+
+/*上下篇开始*/
+.shangxia{
+    padding: 45px 0;
+    position: relative;
+}
+.shangxia>a{
+    position: absolute;
+    right:0;
+    top:50%;
+    margin-top: -18px;
+    width:97px;
+    height:36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    background: url("../image/dy_beijing6.png") center no-repeat;
+}
+.shangxia>a:hover{
+    background: url("../image/dy_beijing6_1.png") center no-repeat;
+}
+.dy_shang{
+    width:48%;
+    float: left;
+}
+.dy_shang .dy_a6{
+    display: block;
+    height:25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #282828;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dy_shang .dy_a6 .dy_span6{
+    width:25px;
+    height:25px;
+    float: right;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    background: url("../image/dy_beijing4.png") center no-repeat;
+    margin-left: 10px;
+}
+.dy_shang .dy_a6[href]:hover{
+    color: #c5180a;
+}
+.dy_shang .dy_a6[href]:hover .dy_span6{
+    background: url("../image/dy_beijing4_1.png") center no-repeat;
+}
+.dy_xia{
+    width:35%;
+    padding-right: 13%;
+    float: right;
+}
+.dy_xia .dy_a7{
+    display: block;
+    height:25px;
+    line-height: 25px;
+    font-size: 14px;
+    color: #282828;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dy_xia .dy_a7 .dy_span6{
+    width:25px;
+    height:25px;
+    float: left;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    background: url("../image/dy_beijing5.png") center no-repeat;
+    margin-right: 10px;
+}
+.dy_xia .dy_a7[href]:hover{
+    color: #c5180a;
+}
+.dy_xia .dy_a7[href]:hover .dy_span6{
+    background: url("../image/dy_beijing5_1.png") center no-repeat;
+}
+@media (min-width: 320px) and (max-width: 750px) {
+    .shangxia{
+        padding: 15px 0;
+    }
+    .shangxia>a{
+        display: none;
+    }
+    .dy_xia{
+        width:48%;
+        padding-right: 0;
+    }
+}
+@media (min-width: 750px) and (max-width: 1024px) {
+    .shangxia{
+        padding: 15px 0;
+    }
+    .shangxia>a{
+        display: none;
+    }
+    .dy_xia{
+        width:48%;
+        padding-right: 0;
+    }
+}
+/*上下篇结束*/
+
+/*相关推荐开始*/
+.dy_xiangguan{
+    width:1100px;
+    min-height:157px;
+    margin-top: 50px;
+    position: relative;
+    background-color: #f5f5f5;
+}
+.dy_xiangguan .dy_img10{
+    width:90px;
+    height:109px;
+    display: block;
+    margin:0 auto;
+    padding-bottom: 40px;
+    position: absolute;
+    left:50%;
+    margin-left: -45px;
+    top:-24px;
+}
+.dy_xiangguan ul{
+    padding-top: 38px;
+}
+.dy_xiangguan ul li{
+    float: left;
+    width:458px;
+    height:32px;
+    overflow: hidden;
+    line-height: 30px;
+    background: url("http://www.nmyouth.org.cn/images/dy_xiaotu.png") 10px center no-repeat;
+}
+.dy_xiangguan ul li a{
+    float: left;
+    width:350px;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #666666;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.dy_xiangguan ul li span{
+    float: right;
+    font-size: 12px;
+    color: #666666;
+    margin-right: 10px;
+}
+.dy_xiangguan ul li:hover a{
+    color: #88664d;
+}
+/*相关推荐结束*/
+
+/*视频弹出开始*/
+.qlin_video_tcdb{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: url(../image/aj18.png) repeat;
+}
+.qlin_video_tcbox {
+    width: 800px;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 999999999999999;
+    background: #eee;
+    margin-left: -400px;
+    margin-top: -245px;
+}
+.qlin_video_tcbox1 {
+    height: 40px;
+    clear: both;
+    padding: 0 15px;
+}
+.qlin_video_tcbox2 {
+    height: 490px;
+}
+.qlin_video_tcbox1 span {
+    display: block;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #333;
+}
+.qlin_video_tcbox1 em {
+    display: block;
+    height: 40px;
+    float: right;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    line-height: 40px;
+}
+.qlin_video_tcbox1 em:hover{
+    color: #d22025;
+}
+/*视频弹出结束*/

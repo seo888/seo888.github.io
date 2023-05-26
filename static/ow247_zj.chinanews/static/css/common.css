@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    -webkit-text-decoration-skip: objects;
+    outline: none;
+    color: inherit;
+    cursor: pointer;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+a img {
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: SourceHanSansCN-Normal, SourceHanSansCN;
+    font-size: 0;
+}
+
+textarea,
+input,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+/* 公共头部 */
+.header{
+    width: 100%;
+    margin-bottom: 25px;
+}
+.header .header-top{
+    width: 100%;
+    background: #EFEFEF;
+    margin-bottom: 3px;
+}
+.header .header-top .head-top-nav{
+    width: 1143px;
+    height: 39px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-top-nav a{
+    font-size: 12px;
+    line-height: 1;
+    color: #333;
+    font-weight: 400;
+}
+.head-top-nav a:first-child{
+    font-weight: bold;
+}
+.header-mid,
+.adver{
+    width: 1143px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.adver{
+    margin-bottom: 42px;
+}
+.header-mid .adver-item,
+.adver .adver-item{
+    width: 570px;
+    height: 58px;
+    margin-bottom: 6px;
+}
+.header-bottom{
+    width: 1143px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.header-bottom .header-logo{
+    width: 279px;
+    height: 71px;
+}
+.header-time{
+    font-size: 16px;
+    line-height: .24px;
+    font-weight: 400;
+    color: #333;
+}
+.header-time span{
+    display: inline-block;
+    margin-right: 10px;
+}
+.header-search .search-top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+.search-top .search-text{
+    width: 256px;
+    height: 38px;
+    border: 1px solid #535353;
+    text-indent: 7px;
+    font-size: 13px;
+    font-family: LEXUS;
+    font-weight: bold;
+    color: #616263;
+    line-height: 38px;
+    margin-right: 8px;
+}
+.search-top .search-btn{
+    width: 67px;
+    height: 36px;
+    background: #B52823;
+    font-size: 18px;
+    font-family: LEXUS;
+    font-weight: bold;
+    color: #FDFCFC;
+    line-height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-search p{
+    font-size: 14px;
+    font-family: Alibaba;
+    font-weight: normal;
+    color: #585858;
+    line-height: 1;
+}
+.header-search p:last-child{
+    margin-top: 8px;
+}
+.header-nav{
+    width: 100%;
+    /* height: 85px; */
+    padding-top: 15px;
+    background: #A40000;
+}
+.navlist{
+    width: 1143px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.navlist li{
+    margin-bottom: 16px;
+    color: #fff;
+}
+.navlist li a:last-child{
+    margin-right: 0;
+}
+.navlist li a{
+    font-size: 20px;
+    font-family: FZHTJW;
+    font-weight: normal;
+    color: #fff;
+    line-height: 1;
+    margin-right: 12px;
+    display: inline-block;
+}
+.footer{
+    width: 1143px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 74px;
+}
+.footer p{
+    font-size: 15px;
+    font-family: FZLTZCHK;
+    font-weight: normal;
+    color: #888888;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.footer p:last-child{
+    margin-bottom: 0;
+}

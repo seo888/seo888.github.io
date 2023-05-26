@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/{随机字符}/{随机字符}/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/{随机字符}/{随机字符}/1999/xhtml">
+<head>
+	<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="location" content="province={随机关键词};city={随机关键词}">
+<meta name="applicable-device" content="pc,mobile">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+<meta name="author" content="{网站名称}">
+<meta name="copyright" content="{域名库}">
+<link rel="shortcut icon" href="/{随机字符}/{随机字符}/favicon.ico">
+<link rel="canonical" href=""><script src="/_/static/hb178_797rs/static/js/jquery.min.js"></script>
+<script src="/_/static/hb178_797rs/static/js/htmlspecialchars.js"></script>
+
+<script src="/_/static/hb178_797rs/static/js/gt.js"></script><script type="text/javascript">
+    var app_spell = "1";
+    var qscms = {
+        base: "",
+        keyUrlencode: "0",
+        domain: "http://www.797rs.com",
+        root: "/index.php",
+        companyRepeat: "0",
+        regularMobile: /^13[0-9]{9}$|14[0-9]{9}$|15[0-9]{9}$|18[0-9]{9}$|17[0-9]{9}$|16[0-9]{9}$|19[0-9]{9}$/,
+        district_level: "2",
+        smsTatus: "1",
+        captcha_open: "1",
+        varify_mobile: "1",
+        varify_suggest: "1",
+        varify_user_login: "0",
+        is_login: "0",
+        default_district: "1",
+        default_district_spell: "ganzhouquyu",
+        subsite: "0"
+    };
+    /*ie兼容 Promise*/
+    isIE();
+    function isIE() {
+        if (!!window.ActiveXObject || "ActiveXObject" in window) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "/Application/Home/View/default/public/js/bluebird.js";
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+    }
+    /*ie兼容 Promise end*/
+    $(function () {
+        if (eval(qscms.subsite)) {
+            // 开启分站
+            $.getJSON("/home/ajax_common/get_sub_header_min.html", function (result) {
+                if (eval(result.status) === 1) {
+                    $('#J_header_sub').html(result.data.html);
+                }
+            });
+        } else {
+            $.getJSON("/home/ajax_common/get_header_min.html", function (result) {
+                if (eval(result.status) === 1) {
+                    $('#J_header_sub').html(result.data.html);                    //updated by jie on 20200715
+                    //$('#J_header').html(result.data.html);
+                }
+            });
+        }
+    })
+    // 验证码统一处理
+    function qsCaptchaHandler(passCallback) {
+        var callBackArr = new Array();
+        $.ajax({
+            url: qscms.root + '?m=Home&c=captcha&t=' + (new Date()).getTime(),
+            type: 'get',
+            dataType: 'json',
+            success: function (config) {
+                if (config.verify_type == 'vaptcha') {
+                    // 手势验证码
+                    vaptcha({
+                        vid: config.vid,
+                        type: 'invisible',
+                        scene: 1,
+                        https: config.https,
+                        offline_server: qscms.root + '?m=Home&c=captcha&a=vaptcha_outage',
+                    }).then(function (vaptchaObj) {
+                        obj = vaptchaObj;
+                        vaptchaObj.listen('pass', function () {
+                            callBackArr['token'] = vaptchaObj.getToken();
+                            passCallback(callBackArr);
+                        });
+                        vaptchaObj.listen('close', function () { });
+                        vaptchaObj.validate();
+                    });
+                } else if (config.verify_type == 'tencent') {
+                    // 腾讯云验证码
+                    var TCaptchaObj = new TencentCaptcha(config.vid, function (res) {
+                        if (res.ret === 0) {
+                            callBackArr['Ticket'] = res.ticket;
+                            callBackArr['Randstr'] = res.randstr;
+                            passCallback(callBackArr);
+                        }
+                    });
+                    TCaptchaObj.show();
+                } else {
+                    // 极验
+                    initGeetest({
+                        gt: config.gt,
+                        challenge: config.challenge,
+                        offline: !config.success,
+                        new_captcha: config.new_captcha,
+                        product: 'bind',
+                        https: true
+                    }, function (captchaObj) {
+                        captchaObj.appendTo("#pop");
+                        captchaObj.onSuccess(function () {
+                            var captChaResult = captchaObj.getValidate();
+                            callBackArr['geetest_challenge'] = captChaResult.geetest_challenge;
+                            callBackArr['geetest_validate'] = captChaResult.geetest_validate;
+                            callBackArr['geetest_seccode'] = captChaResult.geetest_seccode;
+                            if ($('.J_gee_cha')) {
+                                $('.J_gee_cha').val(captChaResult.geetest_challenge);
+                                $('.J_gee_val').val(captChaResult.geetest_validate);
+                                $('.J_gee_sec').val(captChaResult.geetest_seccode);
+                            }
+                            passCallback(callBackArr);
+                        })
+                        captchaObj.onReady(function () {
+                            captchaObj.verify();
+                        });
+                        $('#btnCheck').on('click', function () {
+                            captchaObj.verify();
+                        })
+                        window.captchaObj = captchaObj;
+                    });
+                }
+            }
+        })
+    }
+</script>
+	<link href="/_/static/hb178_797rs/static/css/common.css" rel="stylesheet" type="text/css">
+	<link href="/_/static/hb178_797rs/static/css/news.css" rel="stylesheet" type="text/css">
+	<script src="/_/static/hb178_797rs/static/js/jquery.common.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+<div class="header_min" id="header">
+	<div class="header_min_top sub">
+		<div id="J_header" class="itopl font_gray6 link_gray6">
+							<!--<span class="link_white">欢迎登录赣州人事人才网！&nbsp;&nbsp; <a id="J_site_login" href="{泛站内链}">登录</a> &nbsp;|&nbsp; <a id="J_site_reg" href="{泛站内链}">免费注册</a></span>-->
+			    <!--分站-->
+				<div class="sub_city_box">
+					<div class="city_switch">
+						<div class="c_item"><span></span>&nbsp;&nbsp;[&nbsp;&nbsp;切换站点</div>
+						<div class="city_drop">
+							<div class="d_tit">点击进入&nbsp;&nbsp;<a href="{泛站内链}">[&nbsp;&nbsp;总站&nbsp;&nbsp;]</a></div>
+                            <div class="d_list">
+                                <a href="{泛站内链}" class="d_item">南康</a>
+                                <a href="{泛站内链}" class="d_item">赣县</a>
+                                <a href="{泛站内链}" class="d_item">于都</a>
+                                <a href="{泛站内链}" class="d_item">瑞金</a>
+                                <a href="{泛站内链}" class="d_item">宁都</a>
+                                <a href="{泛站内链}" class="d_item">兴国</a>
+                                <a href="{泛站内链}" class="d_item">信丰</a>
+                                <a href="{泛站内链}" class="d_item">龙南</a>
+                                <a href="{泛站内链}" class="d_item">石城</a>
+                                <a href="{泛站内链}" class="d_item">会昌</a>
+                                <a href="{泛站内链}" class="d_item">上犹</a>
+                                <a href="{泛站内链}" class="d_item">崇义</a>
+                                <a href="{泛站内链}" class="d_item">大余</a>
+                                <a href="{泛站内链}" class="d_item">全南</a>
+                                <a href="{泛站内链}" class="d_item">定南</a>
+                                <a href="{泛站内链}" class="d_item">安远</a>
+                                <a href="{泛站内链}" class="d_item">寻乌</a>
+                                <a href="{泛站内链}" class="d_item">经开区</a>
+                                <a href="{泛站内链}" class="d_item">蓉江新区</a>
+                                <div class="clear"></div>
+                            </div>
+						</div>
+					</div>
+					<div class="city_near">
+					<a href="{泛站内链}" class="d_item">总站</a>
+					</div>
+					&nbsp;&nbsp;]
+					<div class="clear"></div>
+				</div>		</div>
+		<div class="itopr font_gray6 link_gray6" id="J_header_sub">
+            <span class="white_top_tel">{当前时间}</span>
+            <span class="white_top_line">|</span>
+			<span class="link_yellow">欢迎登录{关键词1}！请 <a id="J_site_login" href="{泛站内链}">登录</a> 或 <a id="J_site_reg" href="{泛站内链}">免费注册</a></span>
+		</div>
+	    <div class="clear"></div>
+	</div>
+</div>
+
+ <div class="clear"></div>
+<div class="other_top_nav">
+    <div class="ot_nav_box">
+        <div class="ot_nav_logo"></div>
+		
+        <div class="ot_nav_sub">
+                    </div>
+        <div class="ot_nav_link " style="padding-left:0;max-width: 1000px;">
+            <ul class="link_gray6 nowrap">
+                                                                                                                <li class="on_li J_hoverbut ">
+                        <a href="{泛站内链}" target="_self">首  页</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="{泛站内链}" target="_self">最新招聘</a></li>                                                                                <li class="on_li J_hoverbut select">
+                        <a href="{泛站内链}" target="_blank">最新考讯</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="{泛站内链}" target="_self">最新人才</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="{泛站内链}" target="_blank">普工招聘</a></li>                                                                                <li class="on_li J_hoverbut ">
+                        <a href="{泛站内链}" target="">零工市场</a></li>                    <li class="on_li J_hoverbut">
+                            <div class="nav_father" onmouseout="javascript:$('#show2').hide();" onmouseover="javascript:$('#show2').show();">
+                                <a href="javascript:void(0);">招聘会</a>
+                                <div class="nav_son" id="show2">
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">{关键词1}</a></div>
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">{关键词1}</a></div>
+                                </div>
+                            </div>
+                        </li>                                                            <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="{泛站内链}" target="">{关键词1}</a></li><li class="on_li J_hoverbut" style="background-image:url(static/image/nav_new.png);background-repeat:no-repeat;background-position:63px 18px;">
+                            <div class="nav_father" onmouseout="javascript:$('#show1').hide();" onmouseover="javascript:$('#show1').show();">
+                                <a href="javascript:void(0);">企业服务</a>
+                                <div class="nav_son" id="show1">
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">企业财税</a></div>
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">企业产权</a></div>
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">灵活用工</a></div>
+                                </div>
+                            </div>
+                        </li>                                                                                <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="{泛站内链}" target="_self">招聘会</a></li>                                        <li class="on_li J_hoverbut" style="background-image:url(static/image/nav_new.png);background-repeat:no-repeat;background-position:63px 18px;">
+                            <div class="nav_father" onmouseout="javascript:$('#show3').hide();" onmouseover="javascript:$('#show3').show();">
+                                <a href="javascript:void(0);">直播大厅</a>
+                                <div class="nav_son" id="show3">
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">直播大厅</a></div>
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">视频面试</a></div>
+                                </div>
+                            </div>
+                        </li>                                        <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="{泛站内链}" target="_blank">直播大厅</a></li>                                                            <li class="on_li J_hoverbut">
+                            <div class="nav_father" onmouseout="javascript:$('#show4').hide();" onmouseover="javascript:$('#show4').show();">
+                                <a href="javascript:void(0);">HR服务</a>
+                                <div class="nav_son" id="show4">
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">HR服务</a></div>
+                                    <div class="nav_son_cell"><a href="{泛站内链}" target="_blank">背景调查</a></div>                                    
+                                </div>
+                            </div>
+                        </li>                    <li class="on_li J_hoverbut " style="display:none;">
+                        <a href="{泛站内链}" target="">背景调查</a></li>            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<script type="text/javascript" src="/_/static/hb178_797rs/static/js/jquery.modal.dialog.js"></script>
+
+<div class="newslip_topimg">
+
+</div>
+<div class="newsshow">
+  <div class="l">
+	<div class="main">
+	  <div class="ntitle">{关键词1}{随机后缀}{新闻网标题}</div>
+	  <div class="time">
+	  			    		    	<span>{当前时间}</span>
+			<span>浏览 <a class="click"></a> {随机5数字}次</span>
+	  </div>
+	  <div class="txt">
+<p>{新闻网内容}</p>
+
+
+<p class="MsoNormal" align="justify" style="font-size:medium;text-align:justify;">
+	<span style="font-family:仿宋;font-size:15pt;"></span> 
+</p></div>
+	<div class="next link_gray6">
+	  <div class="nextl substring">
+	  上一条编辑：{人物名称}
+	  <a href="{泛站内链}">{标题}</a>
+	  	  </div>
+	  <div class="nextr substring">
+	  下一条编辑：{人物名称}
+	   <a href="{泛站内链}">{随机关键词}</a>
+	  	  </div>
+	  <div class="clear"></div>
+    </div>
+	</div>
+  </div>
+  <div class="r">
+  	<div class="newsso">
+	<form id="form" action="/news/news_list.html">
+		<input name="key" type="text" class="soinpu" placeholder="{关键词1}搜索">
+		<input type="button" value="" id="so_btn" class="btn">
+	</form>
+	<input type="hidden" class="f-seach-page" value="?m=Home&c=News&a=news_list&">
+	</div>
+		    <div class="cat">
+			<ul class="link_gray6">
+		  	<li class="odd select"><a href="{泛站内链}">本市招考</a></li><li class=" "><a href="{泛站内链}">成绩公示</a></li><li class="odd "><a href="{泛站内链}">外区招考</a></li><li class=" "><a href="{泛站内链}">张贴信息</a></li><li class="odd "><a href="{泛站内链}">{关键词1}</a></li><li class=" "><a href="{泛站内链}">简历指南</a></li><li class="odd "><a href="{泛站内链}">面试宝典</a></li><li class=" "><a href="{泛站内链}">职场八卦</a></li>			</ul>
+			<div class="clear"></div>
+	</div>
+	
+        <div class="listbox">
+			<div class="ntit"><div class="tlh">热门资讯</div></div>
+			<ul class="link_gray6">
+			<li><a target="_blank" href="{泛站内链}"><span style="color:#FF0000;">{标题}{关键词1}</span></a></li>			</ul>
+		</div>	
+    		
+        <div class="listbox">
+			<div class="ntit"><div class="tlh">推荐资讯</div></div>
+			<ul class="link_gray6">
+			<li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}"><span style="color:#FF0000;font-weight:bold;">{关键词1}{标题}</span></a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li><li><a target="_blank" href="{泛站内链}">{标题}</a></li>			</ul>
+		</div>	
+  </div>
+  
+  <div class="clear"></div>
+</div>
+
+<div class="footer_min" id="footer">
+	<div class="links link_gray6">
+	<a target="_blank" href="{泛站内链}">网站首页</a>
+	
+	|   <a target="_blank" href="{泛站内链}">联系我们</a>|   <a target="_blank" href="{泛站内链}">网站简介</a>|   <a target="_blank" href="{泛站内链}">专场招聘</a>|   <a target="_blank" href="{泛站内链}">{关键词1}</a>|   <a target="_blank" href="{泛站内链}">报纸招聘</a>|   <a target="_blank" href="{泛站内链}">员工风采</a>|   <a target="_blank" href="{泛站内链}">职场指南</a>|   <a target="_blank" href="{泛站内链}">网站声明</a>	|   <a target="_blank" href="{泛站内链}">意见建议</a>
+	</div>
+	<div class="txt">
+
+		联系地址编辑：{人物名称}赣州经济技术开发区编辑：{人物名称}赣州市经济技术开发区金岭路164号赣州市人力资源产业园2楼A08号      <br>
+
+		 All Rights Reserved {域名库}  {网站名称} 版权所有        网站备案编辑：{人物名称} <a href="{泛站内链}" target="_blank">{关键词1}</a>		<script>var _hmt = _hmt || [];(function() {  var hm = document.createElement("script");  hm.src = "//hm.baidu.com/hm.js?ca26dc962f9b4052e286581361306932";  var s = document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>
+    公网安备编辑：{人物名称}<a href="{泛站内链}" target="_blank">{随机关键词}</a>
+	</div>
+</div>
+
+<div class="">
+	<div class=""></div>
+</div>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="/Application/Home/View/default/public/js/PIE.js"></script>
+  <script type="text/javascript">
+    (function($){
+        $.pie = function(name, v){
+            // 如果没有加载 PIE 则直接终止
+            if (! PIE) return false;
+            // 是否 jQuery 对象或者选择器名称
+            var obj = typeof name == 'object' ? name : $(name);
+            // 指定运行插件的 IE 浏览器版本
+            var version = 9;
+            // 未指定则默认使用 ie10 以下全兼容模式
+            if (typeof v != 'number' && v < 9) {
+                version = v;
+            }
+            // 可对指定的多个 jQuery 对象进行样式兼容
+            if ($.browser.msie && obj.size() > 0) {
+                if ($.browser.version*1 <= version*1) {
+                    obj.each(function(){
+                        PIE.attach(this);
+                    });
+                }
+            }
+        }
+    })(jQuery);
+    if ($.browser.msie) {
+      $.pie('.pie_about');
+    };
+  </script>
+<![endif]-->
+<script type="text/javascript" src="/_/static/hb178_797rs/static/js/jquery.disappear.tooltip.js"></script>
+<div class="floatmenu">
+<div class="item mobile">
+    <a class="blk"></a>
+    <div class="popover popover1">
+      <div class="popover-bd">
+        <label>手机APP</label>
+        <span class="img-qrcode img-qrcode-mobile">{当前时间}</span>
+      </div>
+    </div>    <div class="popover">
+      <div class="popover-bd">
+        <label class="wx">企业微信</label>
+        <span class="img-qrcode img-qrcode-wechat"><img src="{随机图片}" alt=""></span>
+      </div>
+      <div class="popover-arr"></div>
+    </div>  </div>  <div class="item ask">
+    <a class="blk" target="_blank" href="{泛站内链}"></a>
+  </div>
+  <div id="backtop" class="item backtop" style="display: none;"><a class="blk"></a></div>
+</div>
+<script language="JavaScript">
+
+var global = {
+    h:$(window).height(),
+    st: $(window).scrollTop(),
+    backTop:function(){
+      global.st > (global.h*0.5) ? $("#backtop").show() : $("#backtop").hide();
+    }
+  }
+  $('#backtop').on('click',function(){
+    $("html,body").animate({"scrollTop":0},500);
+  });
+  global.backTop();
+  $(window).scroll(function(){
+      global.h = $(window).height();
+      global.st = $(window).scrollTop();
+      global.backTop();
+  });
+  $(window).resize(function(){
+      global.h = $(window).height();
+      global.st = $(window).scrollTop();
+      global.backTop();
+  });
+  // 客服QQ
+  var app_qq = "在线客服";
+  var qq_open = "1";
+  if(app_qq != '' && qq_open == 1){
+      var QQFloatUrl = "/qqfloat/index/index.html";
+      $.getJSON(QQFloatUrl, function (result) {
+          if (result.status == 1) {
+              //$(".qq-float").html(result.data);
+              $("body").append(result.data);
+          }
+      });
+  }
+</script>
+<!--<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>-->
+<script type="text/javascript" src="/_/static/hb178_797rs/static/js/jquery.lazyload.min.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+
+</body>
+</html>

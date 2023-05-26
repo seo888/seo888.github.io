@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="">
+<meta name="description" content="{自定义描述}">
+<link rel="canonical" location="0" href=""> 
+<meta name="thumbnail" content="https://image.gxnews.com.cn/littlepic/2021/09/09/12598a9fd2a5c55601706b7bfdd16072.png">
+<meta name="renderer" content="webkit">
+
+<meta name="SiteName" content="{关键词1}">
+<meta name="SiteDomain" content="www.gxnews.com.cn">
+<meta name="SiteIDCode" content="{标题}-10">
+<meta name="ArticleTitle" content="{关键词1}{随机后缀}{新闻网标题}">  
+<meta name="ColumnName" content="{标题} 味广西 ">
+<meta name="ColumnType" content="广西新闻">
+<meta name="PubDate" content="2021-09-09 17:01">  
+<meta name="ContentSource" content="{关键词1}">
+
+<link rel="stylesheet" href="static/css/base-min.css">
+<link rel="stylesheet" href="static/css/css-min.css">
+<script type="text/javascript" language="javascript" src="static/js/jquery.min.js"></script>
+<script src="static/js/jweixin-1.0.0.js"></script>
+<script src="static/js/mobile-detect.1.2.1.min.js"></script>
+<script>
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    var md = new MobileDetect(window.navigator.userAgent);
+    
+    var pcview = location.search.split('pcview=')[1];
+    var hasSetPC = readCookie("pcview");
+    if(pcview){
+        var cookieName = 'pcview';
+        var cookieValue = '1';
+        var myDate = new Date();
+        myDate.setDate(myDate.getDate() + 1);
+        var domain = window.document.domain;
+        document.cookie = cookieName +"=" + cookieValue + ";expires=" + myDate 
+                          + ";domain="+domain+";path=/";
+    }else if(!hasSetPC && md.mobile()){
+        //window.location.href="http://3g.gxnews.com.cn/formwww.html?ref="+encodeURIComponent(window.document.location.href);
+    }
+    
+</script>
+<!-- 新闻传播分析埋点引入 -->
+<script src="static/js/spm.js"></script>
+</head>
+<body class="article-v2020">
+<div class="head">
+  <div class="head-top">
+    <div class="logo">
+      <a href="{自定义}" title="{关键词1}">{关键词1}</a>
+    </div>
+    <div class="date"><p class="company">{标题}</p>
+      <p>{关键词1}{句子}{句子}</p></div>
+    <div class="head-right">
+      <div class="head-tag">
+        <span class="head-red"><a href="{自定义}" target="_blank">{关键词1}</a> | <a href="{自定义}" target="_blank">记者热线</a>/<a href="{自定义}" target="_blank">举报热线({关键词1}举报受理和处置管理办法)</a>/<a href="{自定义}" target="_blank">投稿邮箱</a></span> |<span id="home">设为首页</span>
+        <span id="favorite">加入收藏</span>
+      </div>
+      <div class="head-point">
+        <div class="head-nav"><span>更多导航</span>
+          <ul class="head-nav-more hide">
+                        <li><a href="{自定义}" target="_blank">{关键词1}</a></li>
+                        <li><a href="{自定义}" target="_blank">掌上广西</a></li>
+                        <li><a href="{自定义}" target="_blank">掌上红豆</a></li>
+                        <li><a href="{自定义}" target="_blank">{关键词1}</a></li>
+                        <li><a href="{自定义}" target="_blank">网站建设</a></li>
+                        <li><a href="{自定义}" target="_blank">南宁铁路</a></li>
+                        <li><a href="{自定义}" target="_blank">{关键词1}</a></li>
+                        <li><a href="{自定义}" target="_blank">乐业</a></li>
+                        <li><a href="{自定义}" target="_blank">凌云</a></li>
+                        <li><a href="{自定义}" target="_blank">百色法院</a></li>
+                        <li><a href="{自定义}" target="_blank">大化</a></li>
+                        <li><a href="{自定义}" target="_blank">邕宁</a></li>
+                        <li><a href="{自定义}" target="_blank">宾阳</a></li>
+                        <li><a href="{自定义}" target="_blank">上林</a></li>
+                        <li><a href="{自定义}" target="_blank">田阳</a></li>
+                        <li><a href="{自定义}" target="_blank">扶绥</a></li>
+                      </ul>
+        </div>
+        <div class="head-search">
+          <form target="_blank" method="get" action="https://www.baidu.com/s" name="form_search">
+            <input type="hidden" value="7395986239519321881" name="s">
+            <input type="hidden" value="1" name="entry">
+            <input type="hidden" value="gbk" name="ie">
+            <div class="selectwrap">
+              <select name="nsid" id="default-channel-nsid" class="select">
+                <option value="1">全部</option>
+                <option value="2">红豆</option>
+                <option value="3">新闻</option>
+                <option value="4">视频</option>
+              </select>
+            </div>
+            <input type="text" placeholder="请输入关键词" id="bdcs-search-form-input" name="wd" autocomplete="off" class="inputtext">
+            <input type="sunmit" value="搜索" id="bdcs-search-form-submit" class="inputsubmit" onclick="$('#bdcs-search-form-input').val( 'site:gxnews.com.cn '+$('#bdcs-search-form-input').val() ); form_search.submit();$('#bdcs-search-form-input').val(''); ">
+          </form>
+        </div>
+        <div class="head-sound"><span id="soundid">{关键词1}</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <ul>
+      <li><a href="{自定义}" target="_blank"><strong>新闻</strong></a></li>
+      <li><a href="{自定义}" target="_blank">图片</a></li>
+      <li><a href="{自定义}" target="_blank">视频</a></li>
+      <li><a href="{自定义}" target="_blank">理论</a></li>
+      <li><a href="{自定义}" target="_blank">影视</a></li>
+      <li><a href="{自定义}" target="_blank">厅局</a></li>
+      <li>|</li>
+      <li><a href="{自定义}" target="_blank"><strong>财经</strong></a></li>
+      <li><a href="{自定义}" target="_blank">3C</a></li>
+      <li><a href="{自定义}" target="_blank">房产</a></li>
+      <li><a href="{自定义}" target="_blank">教育</a></li>
+      <li><a href="{自定义}" target="_blank">旅游</a></li>
+      <li><a href="{自定义}" target="_blank">汽车</a></li>
+      <li><a href="{自定义}" target="_blank">东盟</a></li>
+      <li>|</li>
+      <li><a href="{自定义}" target="_blank"><strong>南宁</strong></a></li>
+      <li><a href="{自定义}" target="_blank">柳州</a></li>
+      <li><a href="{自定义}" target="_blank">桂林</a></li>
+      <li><a href="{自定义}" target="_blank">梧州</a></li>
+      <li><a href="{自定义}" target="_blank">北海</a></li>
+      <li><a href="{自定义}" target="_blank">钦州</a></li>
+      <li><a href="{自定义}" target="_blank">防城港</a></li>
+    </ul>
+    <ul>
+      <li><a href="{自定义}" target="_blank"><strong>红豆</strong></a></li>
+      <li><a href="{自定义}" target="_blank">博客</a></li>
+       <li><a href="{自定义}" target="_blank">问政</a></li> 
+      <li><a href="{自定义}" target="_blank">时评</a></li>
+      <li><a href="{自定义}" target="_blank">发布</a></li>
+      <li><a href="{自定义}" target="_blank">天气</a></li>
+      
+      <li>|</li>
+      <li><a href="{自定义}" target="_blank"><strong>健康</strong></a></li>
+      <li><a href="{自定义}" target="_blank">体育</a></li>
+      <li><a href="{自定义}" target="_blank">通讯</a></li>
+      <li><a href="{自定义}" target="_blank">智库</a></li>
+      <li><a href="{自定义}" target="_blank">桂刊</a></li>
+      <li><a href="{自定义}" target="_blank">专题</a></li>
+      <li><a href="{自定义}" target="_blank">建站</a></li>
+      <li>|</li>
+      <li><a href="{自定义}" target="_blank"><strong>贵港</strong></a></li>
+      <li><a href="{自定义}" target="_blank">玉林</a></li>
+      <li><a href="{自定义}" target="_blank">百色</a></li>
+      <li><a href="{自定义}" target="_blank">贺州</a></li>
+      <li><a href="{自定义}" target="_blank">河池</a></li>
+      <li><a href="{自定义}" target="_blank">来宾</a></li>
+      <li><a href="{自定义}" target="_blank">崇左</a></li>
+    </ul>
+  </div>
+</div>
+<!--"/include/www2015/articletop.html"-->
+<div class="channel">
+  <div class="head-layout layout-place" id="layout_529">
+	<script language="javascript" type="text/javascript" src="static/js/529_56961bf064e2955affe9f90954f96d42.js"></script>
+  </div>
+  <div class="wrap">
+  <div class="more-left">
+    <div class="more-title"> <span><a href="{自定义}">{关键词1}</a>  
+				 &gt; <a href="{自定义}">{标题}</a>
+				 &gt; <a href="{自定义}">味广西</a>
+				 &gt; 正文</span>
+    </div>
+    <div class="article">
+        
+             
+      <h1>{关键词1}{随机后缀}{新闻网标题}</h1>            
+            
+      <div class="article-info"> 
+			<p><span>{标题}</span>
+            
+            			<span>编辑：{人物名称}</span>			            
+			<span>编辑：{人物名称}</span>            			</p>
+			<!--
+			<span id="article-mobile" class="article-mobile">手机阅读</span> 
+				<div id="article-mobile-code" class="article-mobile-code">
+				<img src="http://qr.liantu.com/api.php?w=220&h=220&text=http://v.gxnews.com.cn/a/" />
+				<span>扫一扫，手机阅读</span>
+				</div>
+			-->
+      </div>
+      <div class="article-content">
+      
+                
+        
+        <p style="text-indent: 2em; text-align: center;">{句子}{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{句子}{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{句子}{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{句子}{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{句子}{关键词1}{句子}{句子}</p><p style="text-indent: 2em; text-align: center;">{关键词1}{句子}{句子}</p><p style="TEXT-INDENT: 2em">{句子}{关键词1}{句子}{句子}</p><p style="TEXT-INDENT: 2em">{句子}{关键词1}{句子}{句子}</p><p style="TEXT-INDENT: 2em">{句子}{关键词1}{句子}{句子}</p><p style="TEXT-INDENT: 2em">{句子}{关键词1}{句子}{句子}</p><p style="TEXT-INDENT: 2em">{句子}{关键词1}{句子}{句子}</p><p style="TEXT-INDENT: 2em">{句子}{关键词1}{句子}{句子}</p><p style="TEXT-INDENT: 2em">{句子}{关键词1}{句子}{句子}</p>
+                <!--桂声频道版权声明-->
+		      </div>
+      
+            <div class="article-author">【
+		  <!--时政新闻-->  
+		             
+		  编辑：{人物名称}
+		   】
+	  </div>
+        
+	  <div class="article-about">
+      	<div class="article-share">
+            <div class="bdsharebuttonbox">
+            <a href="{自定义}" rel="nofollow" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_tqf" data-cmd="tqf" title="分享到腾讯朋友"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>           
+            <a href="{自定义}" rel="nofollow" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>            
+            <a href="{自定义}" rel="nofollow" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_qq" data-cmd="qq" title="分享到QQ收藏"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_huaban" data-cmd="huaban" title="分享到花瓣"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+            <a href="{自定义}" rel="nofollow" class="bds_more" data-cmd="more"></a></div>  
+          </div>
+		  <div id="qr_container" style="width:180px;margin:0 auto; position:relative;">扫一扫在手机打开当前页
+				<div id="qrcode"></div>
+			</div>
+          	  </div>
+    </div>
+    
+	  <div class="article-about">
+		<h2>相关文章</h2>
+		<ul class="new-list">
+		
+		</ul>
+	  </div>
+
+	  <div class="article-about">
+		<h2>高清图集推荐</h2>
+		<ul class="article-img-list">
+		  		  <li> 
+		  <a href="{自定义}" target="_blank">
+		  <img src="{随机图片}" height="134" width="178" alt="编辑：{人物名称}">
+		  <span>编辑：{人物名称}</span>
+		  </a>
+		  </li>
+		  		  <li> 
+		  <a href="{自定义}" target="_blank">
+		  <img src="{随机图片}" height="134" width="178" alt="{标题}">
+		  <span>{标题}</span>
+		  </a>
+		  </li>
+		  		  <li> 
+		  <a href="{自定义}" target="_blank">
+		  <img src="{随机图片}" height="134" width="178" alt="{标题}">
+		  <span>{标题}</span>
+		  </a>
+		  </li>
+		  		  <li> 
+		  <a href="{自定义}" target="_blank">
+		  <img src="{随机图片}" height="134" width="178" alt="{标题}">
+		  <span>{标题}</span>
+		  </a>
+		  </li>
+		  		  <li> 
+		  <a href="{自定义}" target="_blank">
+		  <img src="{随机图片}" height="134" width="178" alt="{标题}">
+		  <span>{标题}</span>
+		  </a>
+		  </li>
+		  		  <li> 
+		  <a href="{自定义}" target="_blank">
+		  <img src="{随机图片}" height="134" width="178" alt="{标题}">
+		  <span>{标题}</span>
+		  </a>
+		  </li>
+		  		</ul>
+	  </div>
+  </div>
+  <div class="more-right">  
+	
+<div class="more-wrap no-border article-right-jd">
+  <h2>焦点图片</h2>
+  <ul class="article-focus-list">
+        <li> 
+    <a href="{自定义}" target="_blank">
+    <img src="{随机图片}" height="124" width="165" alt="{标题}">
+    <span>{标题}</span>
+    </a>
+    </li>
+        <li> 
+    <a href="{自定义}" target="_blank">
+    <img src="{随机图片}" height="124" width="165" alt="{标题}">
+    <span>{标题}</span>
+    </a>
+    </li>
+        <li> 
+    <a href="{自定义}" target="_blank">
+    <img src="{随机图片}" height="124" width="165" alt="{标题}">
+    <span>{标题}</span>
+    </a>
+    </li>
+        <li> 
+    <a href="{自定义}" target="_blank">
+    <img src="{随机图片}" height="124" width="165" alt="{标题}">
+    <span>{标题}</span>
+    </a>
+    </li>
+      </ul>
+</div>
+<!--
+<div class="article-ad">
+  <div id="ggao_pid_34_555" class="gxnews_ggao_place"><script language="javascript" type="text/javascript" src="http://dq.gxnews.com.cn/ggao/js/34/555_70f12297e126ed83c8a527b563e53787.js"></script></div>
+</div>
+-->
+<div class="more-wrap article-right-tj" style="display:inline-block;">
+  <h2>推荐阅读</h2>
+  <ul class="new-list">
+    		<li><a href="{自定义}" target="_blank">{标题}</a></li>
+			<li><a href="{自定义}" target="_blank">{标题}</a></li>
+			<li><a href="{自定义}" target="_blank">{标题}</a></li>
+			<li><a href="{自定义}" target="_blank">{标题}</a></li>
+			<li><a href="{自定义}" target="_blank"><b>{标题}</b></a></li>
+			<li><a href="{自定义}" target="_blank">{标题}</a>&nbsp;<a href="{自定义}" target="_blank">{标题}</a></li>
+	  </ul>
+</div>
+
+<div class="more-wrap article-right-ph">
+  <h2>新闻排行</h2>
+  <ul class="rank-list">
+           <li><a title="{标题}" href="{自定义}" target="_blank">{标题}</a></li>
+           <li><a title="{标题}" href="{自定义}" target="_blank">{标题}</a></li>
+           <li><a title="{标题}" href="{自定义}" target="_blank">{标题}</a></li>
+           <li><a title="{标题}" href="{自定义}" target="_blank">{标题}</a></li>
+           <li><a title="{标题}" href="{自定义}" target="_blank">{标题}</a></li>
+           <li><a title="{标题}" href="{自定义}" target="_blank">{标题}</a></li>
+           <li><a title="{句子}" href="{自定义}" target="_blank">{句子}</a></li>
+           <li class="rank-last"><a title="{标题}" href="{自定义}" target="_blank">{标题}</a></li>
+     
+  </ul>
+</div>
+
+
+
+<!--lzy 20171016
+<div class="more-wrap">
+    <script type="text/javascript">
+        document.write('<a style="display:none!important" id="tanx-a-mm_57169120_6708921_40908520"></a>');
+        tanx_s = document.createElement("script");
+        tanx_s.type = "text/javascript";
+        tanx_s.charset = "gbk";
+        tanx_s.id = "tanx-s-mm_57169120_6708921_40908520";
+        tanx_s.async = true;
+        tanx_s.src = "http://p.tanx.com/ex?i=mm_57169120_6708921_40908520";
+        tanx_h = document.getElementsByTagName("head")[0];
+        if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);
+    </script>
+</div>
+-->   
+  </div>
+  <div id="div_baidu_ad_3"></div>
+</div>
+</div>
+
+<!--统计参数-->
+<script language="javascript">
+var aid   =20442017;
+var locid =20442017;
+var author='';
+var editor='麦一帆';
+var sid   =24760;
+</script>
+<!--/统计参数-->
+
+<script>
+  if (window.spm) {
+    // 初始化配置
+    spm.config({
+      siteId: 'zm1036-001', // 此处填写该网站对应的网站标识（即SPM a段） 例如'zmXXXX-001'
+	  touch:1,
+      additionalInfo: {
+        targetID: 20442017, // 此处填写稿件ID
+        organization: 'zm1036', // 此处填写机构ID
+        // 上报进入事件
+        category: 'event',
+        action: 'comeIn'
+      }
+    });
+  }
+  window.onbeforeunload = function () {
+    // 上报离开事件
+    if (window.spm) spm.push({ category: 'event', action: 'leave' });
+  };
+</script>
+<div class="footer">
+  <div class="footer-mes">
+    <p> 
+        <a href="{自定义}" target="_blank">{随机关键词}</a> |
+        <!--<a href="http://www.gxnews.com.cn/about/gxrb/more.php?id=42214" target="_blank">报社领导活动</a> |-->
+        <a href="{自定义}" target="_blank">{标题}</a> |
+        <a href="{自定义}" target="_blank">关于{关键词1}</a> |
+        <a href="{自定义}" target="_blank">招聘英才</a> |
+        <a href="{自定义}" target="_blank">广告服务</a> |
+        <a href="{自定义}" target="_blank">网站声明</a> |
+        <a href="{自定义}" target="_blank">呼叫中心</a>
+    </p>
+    <p>
+        <a target="_blank" href="{自定义}">{标题}</a>&nbsp;&nbsp;
+        <a target="_blank" href="{自定义}">{标题}</a>　　桂公网安备 45010302000154号        
+    </p>
+    <p>
+        互联网出版许可证（桂）字003号　　<a target="_blank" href="{自定义}">{标题}</a>
+    </p>
+  </div>
+  <div class="footer-rel">
+  
+    <div class="copyright" style="padding-top: 0px;">
+      {关键词1}版权所有 未经书面授权禁止复制或建立镜像<br>
+      <a href="{自定义}" target="_blank">举报热线（{关键词1}举报受理和处置管理办法）</a><br>
+      24小时举报电话: 0771-5690995
+      
+        <p class="analyse" style="height: auto; ">        
+            <span style="float:none; height: auto; line-height: 24px;"><!--analyse 点击统计-->
+                <script src="static/js/lib.analyse.inc.js" language="JavaScript" ></script>
+                <!--/analyse 点击统计-->
+                <!--<script src="http://fun.gxnews.com.cn/dqCount.php" language="JavaScript" ></script>-->
+            </span>
+        </p>
+      
+    </div>
+      
+    <div class="footer-int">
+      <div class="footer-int-right">
+        
+        <p>{句子}{关键词1}{句子}{句子}</p>
+        <p>{句子}{关键词1}{句子}{句子}</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/jquery.qrcode.min.js"></script>
+<script src="static/js/common-min.js"></script>
+<script src="static/js/sound.js"></script>
+<script type="text/javascript">
+if(typeof md !== 'undefined' && !md.mobile() && window.Player){
+    Player({
+              _url: 'http://www.gxnews.com.cn/js/v2015/wza/InterAmblyopia/swf/',
+                 t: 'http://wza.gxnews.com.cn/.m/turbowas/a.jsp?entryUri=%2Findex.html&entryDomain=http%3A%2F%2Fwww.gxnews.com.cn',
+                 y: ''
+    });
+}
+</script>
+<!-- 百度站长自动推送 -->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?2620280f16ac55aff03ddc777d6c29da";var s =document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script>
+<script src="static/js/jquery.cookie.js"></script>
+<script src="static/js/util.js"></script>
+<script src="static/js/www2009.js"></script>
+<script src="static/js/jquery.qrcode.min.js"></script>
+<script src="static/js/article.js"></script>
+<script src="static/js/article_2020.js"></script>
+<!-- BD广告 -->
+
+</body>
+</html>
+<!-- make by: http://travel.gxnews.com.cn/staticpages/20210909/newgx6139cd58-20442017.shtml  2022/10/26 01:26:38 gxnews-www4 -->

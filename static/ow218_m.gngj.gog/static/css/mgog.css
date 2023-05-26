@@ -1,0 +1,109 @@
+/*全局*/
+* { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { outline: none; text-decoration: none; color: #000000; }
+html { margin: 0 auto; }
+body { font-family: "宋体"; }
+.hide { display: none; }
+#uphome img { display: none; width: 10%; position: fixed; right: 5%; bottom: 5%; z-index: 100; cursor: pointer; }
+/*首页首屏*/
+.index_topad,.index_topad img { width: 100%; }
+.index_xjptt {margin-left: 5%; margin-right: 5%; }
+.index_xjptt ul li { margin-top: 1rem; padding-bottom: 1rem; }
+.index_xjptt ul li:first-child { border-bottom: 1px solid #cccccc; }
+.index_xjptt ul li h2 { font-size: 3.2rem; font-family: "黑体"; line-height: 140%; }
+.index_xjptt ul li p { margin-top: 0.5rem; }
+.index_xjptt ul li p span { font-size: 2rem; color: red; border: 1px solid red; border-radius: 0.2rem; padding: 0.2rem 0.4rem; }
+.index_xjptt ul li p i { font-size: 2rem; margin-left: 1rem; font-style: normal; color: #888888; }
+.index_top { margin-top: 3%; }
+.itop_logo { float: left; width: 31.25%; margin-left: 7%; }
+.itop_more { float: right; width: 12.5%; margin-top: 3.125%; margin-right: 7%; }
+.index_menu { background-color: #005fa8; border-top: 4px solid #00518f; margin-top: 3%; }
+.index_menu ul { margin-left: 4%; }
+.index_menu ul li { float: left; width: 12%; text-align: center; }
+.index_menu ul li a { color: #FFFFFF; font-size: 2.8rem; font-weight: bolder; }
+#menu_more { display: none; }
+.index_focus { position: relative; overflow: hidden; margin-top: 2%; display: block; }
+.index_focus a p {position: absolute; height: 15%; width: 100%; left: 0; bottom: 0; color: #fff; font-size: 2rem; line-height: 250%; background: #000; filter: alpha(opacity=60); opacity: 0.6; }
+#ifocus_menu { position: absolute; bottom: 1.8rem; right: 5%; z-index: 20; cursor: pointer; }
+#ifocus_menu ul li { background-color: #FFFFFF; float: left; -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px; }
+#ifocus_menu ul .selected { background-color: #00a5e4; }
+#ifocus_box ul li { display: none; }
+#ifocus_box ul li:first-child { display: block; }
+#ifocus_box ul .selected { display: block; }
+#ifocus_box ul li a { width: 100%; padding-bottom: 1rem; padding-top: 1rem; position: absolute; z-index: 10; bottom: 0; background-image: url(../image/focus_back_20150902.png); color: #FFFFFF; font-size: 2.8rem; text-indent: 5%; font-weight: bolder; }
+#ifocus_box ul li img { width: 100%; -ms-interpolation-mode: bicubic; }
+.index_topline { margin-top: 3%; }
+.index_topline h2 img { width: 7%; margin-left: 5%; margin-right: 2%; }
+.index_topline h2 a { font-size: 3.8rem; color: #005fa8; }
+.index_topline h3 { margin-top: 2%; font-size: 2.8rem; font-weight: normal; }
+.index_topline h3 a { color: #262626; }
+.index_news { margin-top: 3%; }
+.index_news ul { clear: both; overflow: hidden; }
+.index_news ul li { margin-left: 5%; margin-right: 5%; margin-top: 1rem; border-bottom: 1px solid #dedede; padding-bottom: 1rem; }
+.index_news ul li img { float: left; }
+.index_news ul li h5 { overflow: hidden; padding-left: 3%; padding-right: 3%; padding-top: 1rem; font-size: 2.8rem; font-weight: normal; }
+.index_news ul li i { float: right; margin-right: 3%; color: #a1a1a1; font-size: 2rem; font-style: normal; }
+.index_news .pic {margin-top: 2%; height: 15rem; clear: both; overflow: hidden; }
+.index_news .pic .pics_left { float: left; width: 43%; margin-left: 5%; }
+.index_news .pic .pics_right { float: right; width: 43%; margin-right: 5%; }
+.index_news .pic img { width: 27rem; position: absolute; z-index: -1; }
+.index_news .pic p { font-size: 2.8rem; width: 100%; text-align: center; color: #FFFFFF; background-image: url(../image/focus_back_20150902.png); line-height: 150%; margin-top: 40%; }
+.index_video { margin-top: 2%; position: relative; }
+.video_left { float: left; width: 43%; margin-left: 5%; }
+.video_right { float: right; width: 43%; margin-right: 5%; }
+.index_video img { width: 43%; position: absolute; z-index: -1; }
+.index_video p { font-size: 2.8rem; width: 100%; text-align: center; color: #FFFFFF; background-image: url(../image/focus_back_20150902.png); line-height: 150%; }
+.index_video span img { width: 10%; margin-left: 15%; margin-top: 3.5rem; }
+/*首页栏目*/
+.column { clear: both; position: relative; }
+.column_bar { width: 90%; margin-left: 5%; margin-top: 5%; border-bottom: 2px solid #dcdcdc; height: 4rem; }
+.column_bar h3 { float: left; margin-left: 2%; font-size: 3rem; font-weight: bolder; font-family: "黑体"; }
+.column_bar h3 a { color: #d90a15; }
+.column_bar span{ display: block; float: right; margin-right: 2%; font-size: 3rem;}
+.column_title { width: 90%; margin-left: 5%; margin-top: 2%; height: 4rem; }
+.column_title h3 { margin-left: 2%; font-size: 3rem; font-family: "宋体"; }
+.column_title h3 a { color: #d90a15; display: block; float: left; }
+.column_pics { margin-top: 2%; }
+.column_pics .pics_left { float: left; width: 43%; margin-left: 5%; }
+.column_pics .pics_right { float: right; width: 43%; margin-right: 4%; }
+.column_pics img { width: 43%; position: absolute; z-index: -1; }
+.column_pics p { font-size: 2.8rem; width: 100%; text-align: center; color: #FFFFFF; background-image: url(../image/focus_back_20150902.png); line-height: 150%; margin-bottom: 5%; }
+.column_news { clear: both; }
+.column_news ul li { display: block; margin-left: 5%; font-size: 2.8rem; margin-right: 5%; padding-bottom: 1rem; margin-top: 1rem; text-indent: 0.5rem; }
+.column_button { width: 90%; margin: 2% auto; padding-top: 1rem; padding-bottom: 1rem; text-align: center; background-color: #d3d3d3; font-size: 3.2rem; font-weight: bolder; border-radius: 15px; color: #fefefe; }
+/*首页页脚*/
+.index_foot { clear: both; margin-top: 3%; padding: 3% 0; width: 90%; margin: 0 auto; text-align: center; font-size: 2rem; color: #999999; border-top: 1px solid #CCCCCC; line-height: 200%; }
+/*栏目页、文章页顶部*/
+.top { width: 100%; background-color: #005fa8; border-bottom: 2px solid #999999; }
+.top_index { float: left; width: 10%; margin-left: 7%; margin-top: 2%; }
+.top h2 {float: left; color: #FFFFFF; width: 66%; text-align: center; font-size: 3.6rem; margin-top: 3%; }
+.top_more { float: right; width: 10%; margin-right: 7%; margin-top: 2%; }
+.menu { background-color: #005fa8; display: none; }
+.menu #menu_more { display: block; }
+.menu ul { margin-left: 5%; }
+.menu ul li { float: left; width: 13%; text-align: center; }
+.menu ul li a { color: #FFFFFF; font-size: 2.8rem; font-weight: bolder; }
+/*栏目页新闻列表*/
+.lm_news ul li { display: block; margin-left: 5%; font-size: 3.2rem; margin-right: 5%; padding-bottom: 1rem; margin-top: 1rem; border-bottom: 1px solid #c5c5c5; text-indent: 0.5rem; clear: both; overflow: hidden; }
+.lm_news ul li img { width: 25%; height: auto; float: left; }
+.lm_more { width: 90%; margin: 2% auto; padding-top: 1rem; padding-bottom: 1rem; text-align: center; background-color: #d3d3d3; font-size: 3.2rem; font-weight: bolder; border-radius: 15px; }
+.lm_more a { color: #fefefe; }
+/*文章页正文*/
+.zw { margin-top: 3%; width: 90%; margin-left: 5%; font-size: 2.8rem; line-height: 150%; }
+.zw h2 { width: 100%; font-size: 3.2rem; font-weight: bolder; margin-bottom: 1%; }
+.zw h3,h4 { width: 100%; font-size: 2.0rem; color: #999999; margin-bottom: 2%; font-weight: normal; }
+.zw img { margin: 0 auto; width: 100%; height: auto; }
+.zw p { margin-bottom: 2rem; }
+/*放到桌面*/
+#up2home { float: left; font-size: 2.4rem; margin-left: 22%; margin-top: 2%; }
+#u2h_show { display: none; position: fixed; width: 70%; background-color: #000000; color: #FFFFFF; text-align: center; left: 15%; bottom: 4%; opacity: 0.8; padding: 5% 0; z-index: 100; }
+#u2h_show span {display: block; border-width: 20px; position: absolute; bottom: -40px; left: 42%; border-style: solid dashed dashed; border-color: #000 transparent transparent; font-size: 0; line-height: 0; }
+#u2h_show p { font-size: 3rem; line-height: 200%; }
+/*浏览pc版*/
+#go2pc { width: 90%; margin: 2% auto; padding-top: 1rem; padding-bottom: 1rem; text-align: center; background-color: #00a5e4; font-size: 3.2rem; font-weight: bolder; color: #FFFFFF; }
+/*市州联播*/
+#szlb_menu { width: 90%; height: 9.6rem; font-size: 2.4rem; line-height: 200%; margin: 0 auto; border: 1px solid #CCCCCC; margin-top: 2%; }
+#szlb_menu ul li { width: 20%; float: left; text-align: center; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+#szlb_menu ul .select { font-weight: bolder; color: #FF0000}
+#szlb_show { width: 100%; height: auto; margin-top: 2%; }

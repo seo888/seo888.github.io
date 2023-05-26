@@ -1,0 +1,136 @@
+/* 全局定义 */
+
+*{margin:0; padding:0; list-style:none}
+.cube {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);/* 开启硬件加速 */
+}
+html {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);/* 禁止点选高亮显示 */
+	-webkit-overflow-scrolling:touch;/* 局部滚动 */
+	-webkit-touch-callout:none;/* 禁用长按弹出系统菜单 */
+	/*-webkit-user-select:none;/* 禁止选择 */
+}
+a,a:hover {color:#333; text-decoration:none; outline:none;}
+img{max-width:100%; height:auto; width:auto\9; border:none; vertical-align:middle; -ms-interpolation-mode:bicubic;}
+i{font-style:normal;}
+
+/* 清理元素 */
+.clearfix:after{ 
+    content:"\200B"; 
+    display:block; 
+    height:0; 
+    clear:both; 
+}
+.clearfix {*zoom:1;}/*IE6/7*/
+
+/* 定位 */
+.flex-center {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+	-webkit-box-align:center;
+	-ms-flex-align:center;
+	-webkit-align-items:center;
+	align-items:center;
+}
+
+.flex-between {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+	-webkit-box-align:start;
+	-ms-flex-align:start;
+	-webkit-align-items:flex-start;
+	align-items:flex-start;
+}
+
+.pos-abs{position:absolute; z-index:99;}
+.pos-fix{position:fixed; z-index:99;}
+
+html,body {position:relative;}
+body {
+    -webkit-font-smoothing:antialiased;
+	background:#fff;
+	font-family:Helvetica;
+	color:#333;
+}
+
+/* 框架 */
+header,main,footer{margin:3vmin auto; width:100%; background:#fff; clear:both;}
+header{margin:0 auto; background:#2985CF;}
+main{width:94%;}
+footer{}
+
+/* 文字列表页 */
+#m_txtlist{width:100%;}
+#m_txtlist li{min-height:10vmin; border-bottom:1px #ccc dashed; padding:10px 0; position:relative;}
+#m_txtlist li i{color:#999; font-size:3vmin; position:absolute; bottom:5px; right:0;}
+#m_txtlist h1{font-size:4vmin; font-weight:normal; line-height:6vmin;}
+#m_txtlist a{color:#333;}
+
+/* 分页 */
+#pagenum {margin:10px auto; text-align:center; font-size:14px; font-family:Helvetica;}
+#pagenum a {border:#ddd 1px solid; padding:2px 5px; margin-right:2px; color:#aaa; text-decoration:none;}
+#pagenum a:hover {border:#a0a0a0 1px solid; padding:2px 5px; margin-right:2px;}
+#pagenum a:active {border:#a0a0a0 1px solid; padding:2px 5px; margin-right:2px;}
+#pagenum a.current {border:#e0e0e0 1px solid; padding:2px 5px; margin-right:2px; font-weight:bold; color:#aaa; background-color:#f0f0f0;}
+#pagenum span.disabled {border:#f3f3f3 1px solid; padding:2px 5px; margin-right:2px; color:#ccc;}
+
+/* LOGO */
+#m_logo{color:#fff; padding:2px 10px;}
+#m_logo i{}
+#m_logo img{width:12vmin; height:12vmin; display:flex; align-items:center;}
+
+/* 正文 */
+#m_title{border-bottom:1px #619FE3 solid; margin-bottom:10px; padding-bottom:10px;}
+#m_title h1{color:#333; font-size:6.5vmin; line-height:10vmin; margin-bottom:10px; text-align:justify;}
+#m_title i{color:#305798; font-size:3.5vmin;}
+#m_title i a{color:#305798;}
+#m_con{font-size:5vmin; line-height:8vmin; border-bottom:1px #ccc solid; text-align:justify;}
+#m_con p{margin-bottom:5vmin;}
+#m_con p img,#m_con p video{max-width:100%; overflow:hidden;}
+
+/* 编辑推荐 */
+#m_tjxw{margin:10px auto; width:100%;}
+#m_tjxw ol{margin:20px 0; width:100%; height:8vmin; color:#1277B8; font-size:5vmin; line-height:8vmin; border-bottom:1px #999 dashed;}
+.data-list ul{width:100%; margin-bottom:15px; padding-bottom:15px; border-bottom:1px #eee solid; clear:both; display:table;}
+.data-list li{width:100%;
+	display:flex;
+	justify-content:space-between;
+}
+.data-list li a:first-of-type{width:33%; height:20vmin; margin-right:10px;}
+.data-list li a:first-of-type img{width:100%; height:100%;}
+.data-list li span{width:70%; min-height:10%;  
+	display:flex;
+	flex-wrap: wrap;
+	align-content:space-between;
+}
+.data-list li span h1{font-size:4vmin; line-height:6vmin;}
+.data-list li span p{color:#999; font-size:3vmin;}
+.data-list li span p i{margin-right:3px; font-size:3vmin;}
+.data-list li span a{color:#333;}
+
+/* 字体符号 */
+.fa{font-size:6vmin;}
+
+/* 视频 */
+.jwlogo{display:none;}
+.video embed, .video object, .video iframe {
+	width: 100% !important;
+	height: auto !important;
+	max-height: 53vmin;
+}
+.videoHeight0 {height:0;}

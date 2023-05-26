@@ -1,0 +1,59 @@
+*{margin: 0; padding: 0; list-style: none;}
+body{font-family: "微软雅黑"; font-size: 15px; min-width: 1204px;}
+a,a:hover{text-decoration: none; color: #000;}
+a:hover{color: #FF0000 !important;}
+h1,h2,h3,h4,h5,h6{font-weight: 500;}
+input,textarea{outline: none;}
+img{border:none;max-width:100%}
+
+.clear{clear: both;}
+.none,.hide{display: none;}
+.box{width: 1204px; margin: 0 auto;}
+
+@media screen and (max-width: 768px){
+	.box{width:100%; max-width:768px;}
+	body{min-width: auto;}
+}
+
+
+/*分页*/
+	.paging{padding:10px 0 20px 0;text-align:center;font-family:"宋体"}
+	.paging a,.paging i,.paging span{display:inline-block;height:28px;line-height:28px;padding:0 10px; margin:0 6px 0 0;}
+	.paging a{border:1px solid #e8e8e8;position:relative;}
+	.paging a:hover{background:#dc0817;border:1px solid #dc0817;color:#fff !important}
+	.paging span{background:#dc0817;border:1px solid #dc0817;color:#fff}
+	.paging i{font-style:normal;border:1px solid #e8e8e8;color:#bbb;}
+	.paging em{font-style:normal; color: #e4830d; padding:0 10px;}
+	.paging u{font-size: 12px; color: #999; text-decoration: none; padding:0 10px;}
+	.paging .num{border: 1px solid #e8e8e8; height: 24px; line-height: 24px; width: 40px; text-align: center; margin: 0 6px; color: #999;}
+	.paging a select{width:100%; height:30px; position:absolute; top:0; left:0; opacity:0;}
+	
+
+/*自适应分页 分辨率小于768显示移动端分页，否则显示PC端分页*/	
+	#PageWap{display:none;}
+	
+	@media screen and (max-width: 768px){
+		#PagePC{display:none;}
+		#PageWap{display:block;}
+	}
+
+
+/*浏览器升级提醒样式*/
+	.brows-tip{position: fixed; z-index: 99999; width: 100%; top: 0; opacity:0.5}
+	.brows-tip p{background: #000; line-height: 46px; color: #fff; text-align: center;}
+	.brows-tip p a{color: #FF0000;}
+	.brows-tip p span{display:inline-block; width:20px; height:46px; position:absolute; right:12px; cursor:pointer}
+	
+/*弹出层遮罩*/
+	.lock{position:absolute; z-index:999; top:0px; right:0px; bottom:0px; left:0px; width:100%; background:rgba(0,0,0,0.3); filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = '#80000000',endColorstr = '#80000000')\9;}
+	.lock h1{font-size:20px; text-align:center; color:#fff; height:32px; line-height:32px; width:100%; position:absolute; top:50%; margin-top:-32px;}
+	
+/*距离上端 左端*/
+	.mt25{margin-top:25px}
+	.ml22{margin-left:22px}
+	.ml21{margin-left:21px}
+
+	@media screen and (max-width: 768px){
+		.ml22{margin-left:0}
+		.ml21{margin-left:0}
+	}

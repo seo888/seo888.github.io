@@ -1,0 +1,1 @@
+document.write("<a href=\"#\" title=\"哈尔滨鲜花速递\" target=\"_blank\"><img src=\"https://www.hnjjtq.com/ad/260-195-1.jpg\" alt=\"沐夏花店\"  width=\"100%\" height=\"195\"></a> ")

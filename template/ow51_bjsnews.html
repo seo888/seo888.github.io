@@ -1,0 +1,371 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="renderer" content="webkit">
+  <title>{自定义标题}</title>
+  <meta name="keywords" content="{关键词1}" />
+  <meta name="description" content="{自定义描述}">
+  <link rel="stylesheet" type="text/css" href="/_/static/ow51_bjsnews/static/css/flexslider.css">
+  <link href="/_/static/ow51_bjsnews/static/css/base.min.css" rel="stylesheet">
+  <link href="/_/static/ow51_bjsnews/static/css/index.min.css" rel="stylesheet">
+  <link href="/_/static/ow51_bjsnews/static/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/_/static/ow51_bjsnews/static/css/iconfont.css">
+  <script type="text/javascript" src="/_/static/ow51_bjsnews/static/js/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="/_/static/ow51_bjsnews/static/js/jquery.flexslider.js"></script>
+</head>
+
+<body>
+  <div class="header"></div>
+  <link href="/_/static/ow51_bjsnews/static/css/detail_v3.css" rel="stylesheet">
+  <div class="index">
+    <div class="bui-box main container">
+      <div class="bui-left index-channel">
+        <div class="channel nav" id="index-channel">
+          <a href="{泛站内链}" class="logo" id="logo"><img src="/_/static/ow51_bjsnews/static/picture/logo2.png"></a>
+          <ul id="channel" class="nav navbar-nav">
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-1"
+                    target="_blank"></i><b>热门</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-2"
+                    target="_blank"></i><b>新闻</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-3"
+                    target="_blank"></i><b>娱乐</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-4"
+                    target="_blank"></i><b>财经</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-5"
+                    target="_blank"></i><b>体育</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-6"
+                    target="_blank"></i><b>国际</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-7"
+                    target="_blank"></i><b>社会</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-8"
+                    target="_blank"></i><b>医疗</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-9"
+                    target="_blank"></i><b>科技</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-10"
+                    target="_blank"></i><b>美食</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-11"
+                    target="_blank"></i><b>教育</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-12"
+                    target="_blank"></i><b>亲子</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-13"
+                    target="_blank"></i><b>房产</b></span></a>
+
+            </li>
+            <li class="">
+
+              <a href="{泛站内链}" class="channel-item"> <span><i class="icon iconfont icon-14"
+                    target="_blank"></i><b>健康</b></span></a>
+
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        $(function () {
+          $(".nav ul li a").each(function () {
+            if ($(this)[0].href == String(window.location) && $(this).attr('href') != "") {
+              $(this).addClass("active");
+            }
+          });
+        })
+
+      </script>
+      <div class="bui-left index-content" id="index-content">
+        <div id="add">
+        </div>
+        <div class="feed-infinite-wrapper">
+          <div class="detail_left_cnt">
+            <div class="J-title_detail title_detail">
+              <h1><span>{新闻网标题}</span></h1>
+              <div class="share_cnt_p clearfix">
+                <div class="fl">
+                  <i>{年月日}</i>
+                  <small>浏览次数：</small>{随机数字}
+                </div>
+                <small>
+                  <div class="user_error_op fr">
+                    <i></i>
+                  </div>
+                </small>
+              </div>
+              <small>
+              </small>
+            </div>
+            <small>
+              <div class="J-contain_detail_cnt contain_detail_cnt" id="J-contain_detail_cnt">
+
+                <p>{新闻网内容}</p>
+                <p><!--StartFragment--><!--EndFragment--></p>
+                <!-- 作者 -->
+
+                <p></p>
+                <div class="ep-source cDGray">
+                  <span class="left"><a href="{泛站内链}"></a> 本文来源：{关键词1} </span>
+                  <span class="ep-editor">责任编辑： {人物名称}</span>
+                </div>
+
+                <!-- 声明 -->
+              </div>
+            </small>
+          </div>
+        </div>
+        <div class="next">
+          <ul>
+            <li>上一篇：<a href="{泛站内链}">{标题}</a> </li>
+            <li class="on">下一篇：<a href="{泛站内链}">{标题}</a></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </div>
+
+      <div id="rightModule" class="bui-right index-right-bar">
+        <div class="search">
+          <form method="post" action="/search.html">
+            <div class="form-group">
+              <input type="text" name="keyword" placeholder="搜索" class="input">
+            </div>
+            <input type="submit" class="submit" value="">
+          </form>
+        </div>
+        <!-- <div class="new_WeChat">
+    <div class="img"><img src="/themes/news_pc/images/about_15.png"></div>
+    <div class="content">
+      <p>更多精彩内容</p>
+      <p>扫描二维码关注霍尔斯智库</p>
+      <p>或者搜索微信公众号horusch</p>
+    </div>
+  </div> -->
+        <div class="news-struct1" id="news-struct1">
+          <div class="news-struct2" id="news-struct2">
+            <div class="news-struct bui-box">
+              <div id="hotNewsWrap" class="bui-box">
+                <div class="pane-module">
+                  <div class="module-head">
+                    最新新闻
+                  </div>
+                  <ul class="module-content article-list" id="article-list">
+
+                    <li class="article-item clearfix"><a href="{泛站内链}" target="_blank"
+                        pdata="index_hot|hotNews|0|1" class="news-link">
+                        <div class="module-pic news-pic">
+                          <img src="{随机图片}" alt="{关键词1}{标题}" lazy="loaded">
+                        </div>
+                        <div class="news-inner">
+                          <p class="module-title">
+                            {关键词1}{标题} </p>
+                        </div>
+                      </a></li>
+
+
+                      <li class="article-item clearfix"><a href="{泛站内链}" target="_blank"
+                        pdata="index_hot|hotNews|0|1" class="news-link">
+                        <div class="module-pic news-pic">
+                          <img src="{随机图片}" alt="{标题}" lazy="loaded">
+                        </div>
+                        <div class="news-inner">
+                          <p class="module-title">
+                            {标题} </p>
+                        </div>
+                      </a></li>
+
+
+                      <li class="article-item clearfix"><a href="{泛站内链}" target="_blank"
+                        pdata="index_hot|hotNews|0|1" class="news-link">
+                        <div class="module-pic news-pic">
+                          <img src="{随机图片}" alt="{标题}" lazy="loaded">
+                        </div>
+                        <div class="news-inner">
+                          <p class="module-title">
+                            {标题} </p>
+                        </div>
+                      </a></li>
+
+
+                      <li class="article-item clearfix"><a href="{泛站内链}" target="_blank"
+                        pdata="index_hot|hotNews|0|1" class="news-link">
+                        <div class="module-pic news-pic">
+                          <img src="{随机图片}" alt="{标题}" lazy="loaded">
+                        </div>
+                        <div class="news-inner">
+                          <p class="module-title">
+                            {标题} </p>
+                        </div>
+                      </a></li>
+
+
+                      <li class="article-item clearfix"><a href="{泛站内链}" target="_blank"
+                        pdata="index_hot|hotNews|0|1" class="news-link">
+                        <div class="module-pic news-pic">
+                          <img src="{随机图片}" alt="{标题}" lazy="loaded">
+                        </div>
+                        <div class="news-inner">
+                          <p class="module-title">
+                            {标题} </p>
+                        </div>
+                      </a></li>
+
+
+                      <li class="article-item clearfix"><a href="{泛站内链}" target="_blank"
+                        pdata="index_hot|hotNews|0|1" class="news-link">
+                        <div class="module-pic news-pic">
+                          <img src="{随机图片}" alt="{标题}" lazy="loaded">
+                        </div>
+                        <div class="news-inner">
+                          <p class="module-title">
+                            {标题} </p>
+                        </div>
+                      </a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pane-module">
+          <div class="module-head">
+            今日推荐
+          </div>
+          <ul class="module-content bui-box picture-list clearfix" id="picture-list">
+
+            <li class="bui-left picture-item"><a href="{泛站内链}" target="_blank" class="link">
+                <div class="module-pic picture-img">
+                  <img src="{随机图片}" alt="{关键词1}{标题}" lazy="loaded">
+                </div>
+                <p>
+                  {关键词1}{标题} </p>
+              </a></li>
+
+
+            <li class="bui-left picture-item"><a href="{泛站内链}" target="_blank" class="link">
+                <div class="module-pic picture-img">
+                  <img src="{随机图片}"
+                    alt="{标题}" lazy="loaded">
+                </div>
+                <p>
+                  {标题} </p>
+              </a></li>
+
+
+            <li class="bui-left picture-item"><a href="{泛站内链}" target="_blank" class="link">
+                <div class="module-pic picture-img">
+                  <img src="{随机图片}"
+                    alt="{标题}" lazy="loaded">
+                </div>
+                <p>
+                  {标题} </p>
+              </a></li>
+
+
+            <li class="bui-left picture-item"><a href="{泛站内链}" target="_blank" class="link">
+                <div class="module-pic picture-img">
+                  <img src="{随机图片}"
+                    alt="{标题}" lazy="loaded">
+                </div>
+                <p>
+                  {标题} </p>
+              </a></li>
+
+          </ul>
+        </div>
+        <div class="pane-module">
+          <div class="module-head">
+            友情链接
+          </div>
+          <ul class="friend-links-content">
+
+            <li class="item"><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+
+
+            <li class="item"><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+
+          </ul>
+        </div>
+        <div class="company" id="company">
+          <p>Copyright © {年} {网站名称} 版权所有</p>
+          <p><a href="{泛站内链}" target="_blank">粤ICP备15050167号</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="moquu_top"></div>
+  <script>
+    function b() {
+      h = 100,
+        t = $(document).scrollTop(),
+        t > h ? $("#moquu_top").show() : $("#moquu_top").hide()
+    }
+    $(document).ready(function () {
+      b(),
+        $("#moquu_top").click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 300); return false;
+        })
+    }),
+      $(window).scroll(function () {
+        b()
+      });
+  </script>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>

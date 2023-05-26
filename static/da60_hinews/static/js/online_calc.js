@@ -1,0 +1,2 @@
+document.write("<script type='text/javascript' src='http://www.hinews.cn/calc/real_calc.js?click=true'></script>");
+document.close();<!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2019-03-09 12:03:07" check_sum="3bcee7cc5a424330844ab778a62d31c1]--><!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2020-12-25 15:12:54" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->

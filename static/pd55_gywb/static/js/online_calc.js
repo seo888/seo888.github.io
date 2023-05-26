@@ -1,0 +1,2 @@
+document.write("<script type='text/javascript' src='http://gyrmt.gywb.cn/cms_sys/real_calc/real_calc.js'></script>");
+document.close();<!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2018-12-29 16:12:48" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->

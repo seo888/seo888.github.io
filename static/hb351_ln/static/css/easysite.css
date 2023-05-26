@@ -1,0 +1,336 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend,
+input, textarea, p, blockquote, th, td, hr, button,
+article, aside, details, figcaption, figure, footer,
+header, menu, nav, section,form,span,label,a {
+    font-family: 'microsoft yahei';
+}
+.easysite-body-container{
+    background: #fcfcfc url("../image/body-bg.png") repeat 0 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'microsoft yahei';
+}
+.easysite-body-container .easysite-fn-clear:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.easysite-body-container .easysite-fn-clear{
+    zoom: 1;
+}
+.easysite-body-container ul,
+.easysite-body-container ol{
+    list-style: none;
+}
+.easysite-nav-wrap ul, .easysite-nav-wrap ol {
+    list-style: outside none none;
+}
+.easysite-body-container a{
+    text-decoration: none;
+}
+.easysite-nav-wrap a {
+    text-decoration: none;
+}
+.easysite-min-width{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*/!* 头部样式开始 *!/
+.top-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ddd;
+    width: 100%;
+    border-bottom: 1px solid #c9c9c9;
+    z-index: 1000;
+}
+/!* 头部样式结束 *!/
+
+/!* header部分样式开始 *!/
+.header-wrap{
+    margin-top: 87px;
+    _display: inline;
+}
+.header-wrap .header .header-logo{
+    display: inline-block;
+    padding: 20px 0;
+}
+/!* header部分样式结束 *!/*/
+
+/* 导航部分样式开始 */
+.easysite-nav-wrap{
+    background-color: #419dd5;
+    height: 52px;
+    line-height: 52px;
+    font-family: 'SimHei';
+}
+.easysite-nav-inner{
+   background-color: #419dd5;
+    height: 52px;
+}
+.easysite-nav-inner .easysite-nav-ul li{
+    float: left;
+    position: relative;
+    z-index: 101;
+}
+.easysite-nav-inner .easysite-nav-ul li .easysite-nav-name{
+    display: block;
+    width: 125px;
+    height: 48px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+.easysite-nav-inner .easysite-nav-ul li a:hover{
+    text-decoration: none;
+}
+.easysite-nav-inner .easysite-nav-ul li .easysite-nav-name:hover{
+    border-bottom: 4px solid #f26f9d;
+    background-color: #1e87c7;
+}
+.easysite-nav-inner .easysite-nav-ul .active .hover,
+.easysite-nav-inner .easysite-nav-ul .current .hover{
+    border-bottom: 4px solid #f26f9d;
+    background-color: #1e87c7;
+}
+.easysite-nav-inner .easysite-nav-ul .active .easysite-nav-select{
+    display: block;
+}
+.easysite-nav-ul li .easysite-nav-select{
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 200px;
+    z-index: 100;
+    display: none;
+}
+.easysite-nav-ul .easysite-nav-select dt a{
+    display: block;
+    /*text-align: center;*/
+    font-size: 14px;
+    color: #81c8f4;
+    background-color: #1e87c7;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    padding-left: 62px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.easysite-nav-ul .easysite-nav-select a i{
+    background: url("../image/nav-jiantou.png") no-repeat 0 0;
+    width: 7px;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    display: none;
+}
+.easysite-nav-ul .easysite-nav-select dt a:hover {
+    background-color: #1478b5;
+    color: #fff;
+}
+.easysite-nav-ul .easysite-nav-select dt a:hover i{
+    display: block;
+}
+/* 导航部分样式结束 */
+
+/* footer样式部分开始 */
+.easysite-footer-wrap{
+    border-top: 1px solid #d5d5d5;
+    color: #d0d0d0;
+    margin-top: 43px;
+}
+.easysite-footer-wrap p{
+    text-align: center;
+    padding: 12px 0 20px;
+    font-size: 12px;
+}
+/* footer样式部分结束 */
+
+/* 模块添加页面 */
+.easysite-content-wrap .easysite-section-one{
+    width: 1000px;
+    overflow: hidden;
+    min-height: 365px;
+    margin-top: 10px;
+}
+.easysite-section-one-background{
+    background: #E4E4E4;
+   /*background: url("../../images/section-one.png") no-repeat 0 0;*/
+}
+.easysite-content-wrap .easysite-section-two{
+    width: 318px;
+    min-height: 384px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.easysite-section-two-background{
+    background: #E4E4E4;
+	/*background: url("../../images/section-two.png") no-repeat;*/
+}
+.easysite-content-wrap .easysite-section-three{
+    width: 398px;
+    min-height: 384px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.easysite-section-three-background{
+    background: #E4E4E4;
+	 /*background: url("../../images/section-three.png") no-repeat;*/
+}
+.easysite-content-wrap .easysite-section-four{
+    width: 658px;
+    min-height: 384px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.easysite-section-four-background{
+    background: #E4E4E4;
+	/*background: url("../../images/section-four.png") no-repeat;*/
+}
+.easysite-content-wrap .easysite-section-five{
+    width: 998px;
+    min-height: 126px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.easysite-section-five-background{
+    background: #E4E4E4;
+	 /*background: url("../../images/section-five.png") no-repeat;*/
+}
+.easysite-content-wrap .easysite-section-two,
+.easysite-content-wrap .easysite-section-three,
+.easysite-content-wrap .easysite-section-four{
+    float: left;
+}
+.easysite-content-wrap .easysite-section-one,
+.easysite-content-wrap .easysite-section-two,
+.easysite-content-wrap .easysite-section-three,
+.easysite-content-wrap .easysite-section-four,
+.easysite-content-wrap .easysite-section-five{
+    border: 1px solid #b5b5b5;
+}
+.easysite-article-listul .easysite-theme-pagination{
+    border-top: 2px solid #eeeeee;
+    margin-top: 0;
+}
+/* article head */
+.easysite-article-title{
+    height: 48px;
+    line-height: 48px;
+    background-color: #61bdaf;
+    padding-left: 54px;
+    position: relative;
+}
+.easysite-article-icon{
+    background: url("../image/article-icon.png") no-repeat 0 0;
+    _background: url("../image/article-icon-ie.png") no-repeat 0 0;
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.easysite-article-title h2 {
+    color: #fff;
+    font-size: 16px;
+}
+/* list template one is base.css list */
+
+/* list template two */
+.easysite-module-listtwo{
+    border-top: 2px solid #eeeeee;
+}
+.easysite-module-head{
+    padding: 20px 20px 0 20px;
+    height: 93px;
+}
+.easysite-article-img{
+    float: left;
+    width: 30%;
+    height: 93px;
+}
+.easysite-article-img img{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    padding: 2px;
+}
+.easysite-big-title{
+    float: left;
+    width: 70%;
+    overflow: hidden;
+}
+.easysite-article-head{
+    width: 100%;
+    padding-bottom: 10px;
+    position: relative;
+}
+.easysite-article-head h4{
+    padding-left: 20px;
+    font-size: 18px;
+    color: #000;
+    width: 65%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.easysite-article-head h4 a{
+    color: #000;
+}
+.easysite-article-head span{
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: #686767;
+}
+.easysite-article-brief{
+    padding-left: 20px;
+    color: #686767;
+}
+.easysite-article-brief p{
+    height: 37px;
+    overflow: hidden;
+}
+.easysite-list-ul{
+    padding: 0 20px;
+    margin-top: 10px;
+}
+.easysite-list-ul li{
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px dashed #959595;
+    position: relative;
+}
+.easysite-list-ul .article-title{
+    display: inline-block;
+    _display: inline;
+    zoom: 1;
+    text-align: left;
+    width: 75%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.easysite-list-ul .article-title a{
+    color: #595757;
+}
+.easysite-list-ul .article-title a:hover{
+    color: #61bdaf;
+}
+.easysite-list-ul .article-time {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    text-align: right;
+    color: #686767;
+}

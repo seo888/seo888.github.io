@@ -1,0 +1,106 @@
+
+/**
+ * 响应式布局css
+ * @author	kevin
+ * @time	2015-06-12
+ * @email   tangkm@staff.tianya.cn
+
+*/
+/*share*/
+.TY_plug_share{ display:none; position:fixed; width:100%; height:auto; background:#FFF; z-index:10000; overflow:hidden; padding-bottom: 20px; }
+.TY_plug_share_static{ position: absolute; width:inherit;}
+.TY_plug_share_cover{  display:none; position:fixed; width:100%;  top:0; bottom:0; background:#000; opacity:0.8; z-index:9999;}
+
+.TY_plug_share h2{ padding:0; width:90%; height:30px; border-bottom:#eee 1px solid; margin:0 auto; margin-bottom:20px; position:relative;text-align: center;}
+.TY_plug_share h2 span{ padding:0 15px;margin-top:15px; background:#fff; text-align:center; line-height:30px; display:inline-block;  color:#666; font-size:16px;}
+
+
+.TY_plug_share .btn_clo{ width:320px; height:40px; margin:0 auto; margin-top: 20px; border-radius:5px; background:#ddd; color:#333; line-height:40px; text-align:center; font-size:14px; cursor: pointer;}
+
+.TY_plug_share .bdsharebuttonbox{ position:static; display:block; width:320px; height:180px; margin:0 auto; }
+.TY_plug_share .bdsharebuttonbox a{ width:70px; height:90px; float: left;  display:inline-block;   background:url(../image/share_iconV2.png) no-repeat; margin:0 5px; background-size:600px 500px;}
+.TY_plug_share_forIE .bdsharebuttonbox a{ background-image:url(../image/share_iconV2_ie.png)  }
+
+.TY_plug_share .bdsharebuttonbox a:hover{ background-color:#f5f5f5;}
+.TY_plug_share .bdsharebuttonbox a.bds_ty{ background-position:0 -90px;}
+.TY_plug_share .bdsharebuttonbox a.bds_weixin{ background-position:-210px 0;}
+.TY_plug_share .bdsharebuttonbox a.bds_qzone{ background-position:-70px 0;}
+.TY_plug_share .bdsharebuttonbox a.bds_tqq{ background-position:-70px -90px;}
+.TY_plug_share .bdsharebuttonbox a.bds_tsina{ background-position:0 0;}
+.TY_plug_share .bdsharebuttonbox a.bds_tieba{ background-position:-140px -90px;}
+.TY_plug_share .bdsharebuttonbox a.bds_douban{ background-position:-140px 0;}
+.TY_plug_share .bdsharebuttonbox a.bds_renren{ background-position:-210px -90px;}
+.pop_share h2{ border-bottom:#eaeaea 1px solid; height:35px; margin:0 20px; position:relative; margin-bottom:20px;}
+.pop_share h2 span{ position:absolute;  display:block; background:#FFF;  color:#969696; font-size:18px; font-weight:normal;  width:80px; left:50%; margin:25px 0 0 -40px; text-align:center; height:20px;  line-height:20px; }
+
+/*微信复制链接*/
+.copyToWx{ margin:10px 20px 20px 20px; word-break:break-all;border:#eee 1px solid; padding:10px 10px;}
+.copyToWx a{ color: #261cdc; line-height: 22px; font-size: 16px;}
+.copyToWx p{ margin: 0; padding: 10px 0 0 0; font-size: 12px; color: #999; text-align: center}
+.copyToWx_b{ margin:40px 30px; border: none;}
+.copyToWx_b p{padding: 30px 0 0 0;}
+.tc{ text-align: center;}
+
+.wx_qrcode{ display: none; padding: 15px 0 0 0 ;}
+.wx_qrcode #wx_code{ width: 160px;  margin: 0 auto; line-height: 160px;text-align: center;}
+.wx_qrcode p{ font-size: 12px; line-height: 20px; text-align:center; padding: 0; margin: 5px 20px; color:#999;}
+
+
+/*.copyToWx{ margin:40px 30px; word-break:break-all}
+.copyToWx a{ color: #261cdc; line-height: 22px; font-size: 16px;}
+.copyToWx p{ margin: 0; padding: 30px 0 0 0; font-size: 14px; color: #999; text-align: center}
+.copyToWx_big{ border:#eee 1px solid; }
+*/
+
+.share_wx{ display:none; }
+/*分享默认浏览器 微信*/
+.share_wx{ display:none; position:fixed; width:100%; top:0; bottom:0; z-index:10000;  }
+.share_wx .share_wx_arrow{ width:250px; height:250px; position:absolute;   }
+.share_wx_tip{ width:250px; height:150px; position:absolute; z-index:1; left:50%; margin-left:-125px; }
+.share_wx_text{ width:250px; height:100px;  background:url(../image/share_iconV2.png) no-repeat;  background-size:600px 500px;  background-position:0 -350px; }
+.share_wx_btn{ width:120px; height:50px; margin-left:65px;  background:url(../image/share_iconV2.png) no-repeat;  background-size:600px 500px;  background-position:0 -300px; }
+
+/*微信 qq  三星默认 浏览器  右上*/
+.browse_rt .share_wx_arrow{  right:20px; top:0; background:url(../image/share_iconV2.png) no-repeat;  background-size:600px 500px;  background-position:-350px 0;   }
+.browse_rt .share_wx_text{ background-position:0 -200px;}
+.browse_rt .share_wx_tip{ top:250px;}
+
+/*安卓百度浏览器   */
+.browse_an_bd .share_wx_arrow{  bottom:15px; left:75%; margin-left:-240px; background:url(../image/share_iconV2.png) no-repeat;  background-size:600px 500px;  background-position:-350px -250px;   -webkit-transform: rotateZ(10deg); transform: rotateZ(10deg); }
+.browse_an_bd  .share_wx_tip{bottom:250px; }
+
+
+/*安卓opra浏览器 右下*/
+.browse_rb .share_wx_arrow{  right:10px; bottom:0; background:url(../image/share_iconV2.png) no-repeat;  background-size:600px 500px;   background-position:-350px -250px;  }
+.browse_rb .share_wx_tip{  bottom:250px; }
+
+
+/*iphone   中下*/
+.browse_cb .share_wx_arrow{  left:50%; margin-left:-125px; bottom:50px; background:url(../image/share_iconV2.png) no-repeat;  background-size:600px 500px;   background-position:-350px -250px;   -webkit-transform: rotateZ(45deg); transform: rotateZ(45deg);}
+.browse_cb .share_wx_tip{   bottom:280px; }
+
+/*iphone   中下*/
+.browse_o .share_wx_arrow{ display:none;}
+.browse_o .share_wx_tip{ top:50%; margin-top:-100px; }
+
+.TY_plug_share_hide{ display:none;}
+.TY_plug_share_show{ display:block;}
+
+
+
+.TY_plug_share_forIE .copyToWx{ display: none;}
+.TY_plug_share_forIE .wx_qrcode #wx_code{ width: 256px;}
+
+@media screen and (min-width: 721px){
+	.copyToWx{ display: none;}
+    .TY_plug_share{  width:360px; left: 50%; margin-left: -200px; }
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+.TY_plug_share .btn_clo{ width:288px;}
+.TY_plug_share .bdsharebuttonbox{width:280px; height:180px;}	
+.TY_plug_share .bdsharebuttonbox a{ margin: 0;}
+}

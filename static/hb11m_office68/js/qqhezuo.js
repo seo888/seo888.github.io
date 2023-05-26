@@ -1,0 +1,1 @@
+  document.write("<p class=\'txt\'>商务合作QQ：shouyou68@gmail.com</p>")

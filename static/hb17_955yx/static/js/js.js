@@ -1,0 +1,1 @@
+document.write("<a href=\"http://down.s.qq.com/download/1106040804/apk/10226446_com.tencent.lolm.apk\" class=\"btn btn-green and-show\" >安卓版下载</a><span class=\"tip and-show\"></span><a href=\"https://apps.apple.com/cn/app/id1455054000\" class=\"btn btn-green ios-show\" >需跳转 Apple Store下载</a><span class=\"tip ios-show\"></span>")

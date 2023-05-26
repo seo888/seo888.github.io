@@ -1,0 +1,1 @@
+document.writeln("<A href=\'tencent://message/?uin=346660229&Site=sj33.cn&Menu=yes\' target=blank>在线交谈</A>");

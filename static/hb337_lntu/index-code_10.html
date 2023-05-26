@@ -1,0 +1,92 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>香港天气预报代码调用</title>
+    <link href="static/css/mobile.css" rel="stylesheet" type="text/css">
+    <link href="static/css/new_zishiying.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var color = bgcolor = bdcolor = site = icon=leftcolor=rightcolor = "";
+        var num = 0;
+        $(document).ready(function(){
+            init();
+
+            if (typeof(bgcolor) != 'undefined' && bgcolor != '') {
+                $("body").css('background-color', bgcolor);
+            }
+            if (typeof(bdcolor) != 'undefined' && bdcolor != '') {
+                $("#myscroll").css('border', '1px solid ' + bdcolor);
+            }
+            if (typeof(color) != 'undefined' && color != '') {
+                $("#myscroll").css('color', color);
+            }
+            if (typeof(leftcolor) != 'undefined' && leftcolor != '') {
+                $(".leftwea").css('color', leftcolor);
+            }
+            if (typeof(rightcolor) != 'undefined' && rightcolor != '') {
+                $(".rightwea").css('color', rightcolor);
+            }
+        });
+
+        function init(){
+            if(num==0) num=1;
+
+            for (var i=3; i > num; i--) {
+                $("#day_"+i).remove();
+            }
+
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $("img.pngtqico").each(function(i){
+                    this.src = this.src.replace("images/tianqi", "images/" + icon);
+                });
+            }
+        }
+
+    </script>
+
+</head>
+<body marginwidth="0" marginheight="0" style="background-color:transparent;display: flex;align-items: center;">
+<a target="_blank" href="javascript:;" title="香港天气预报,点击查看香港未来七天天气预报 ">
+    <div class="mobile9 mobile04" id="myscroll" style="font-size: 6px;">
+        <ul>
+            <li>
+                <div class="wtdate"> <strong>今天：</strong></div>
+                <div class="wtname">香港</div>
+                <div class="img"><img class='pngtqico' align='absmiddle' src='static/picture/b2.png' style='border:0;width:20px;height:20px'></div>
+                <div class="wtwt">阴转小雨</div>
+                <div class="wttemp"><font class="leftwea" color="#4899be">21</font>～<font class="rightwea" color="#f00">27</font> 详细&raquo;</div>
+            </li>
+            <li id="day_2">
+                <div class="wtdate"> <strong>明天：</strong></div>
+                <div class="wtname">香港</div>
+                <div class="img"><img class='pngtqico' align='absmiddle' src='static/picture/b3.png' style='border:0;width:20px;height:20px'></div>
+                <div class="wtwt">阴到小雨</div>
+                <div class="wttemp"><font class="leftwea" color="#4899be">23℃</font>～<font class="rightwea" color="#f00">26℃</font> 详细&raquo;</div>
+            </li>
+            <li id="day_3">
+                <div class="wtdate"> <strong>后天：</strong></div>
+                <div class="wtname">香港</div>
+                <div class="img"><img class='pngtqico' align='absmiddle' src='static/picture/b3.png' style='border:0;width:20px;height:20px'></div>
+                <div class="wtwt">多云</div>
+                <div class="wttemp"><font class="leftwea" color="#4899be">24℃</font>～<font class="rightwea" color="#f00">28℃</font> 详细&raquo;</div>
+            </li>
+        </ul>
+    </div>
+</a>
+<div id="showhint"></div>
+<script type="text/javascript" src="static/js/scroll.js"></script>
+<div style="display: none;">
+
+</div><div style="display: none;">
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?86f43783acc56b0c8abb5bb039edc763";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277635480&web_id=1277635480"></script>
+</div>
+</body></html><style>.province{display:flex;}.province select{width:100px;height:30px;border:1px solid #e6e6e6}.province button{background:#5a98de;color:white;text-align:center;width:40px;height:30px;line-height:30px;border:none;outline:none}</style>  <div class="province" style="display:none"><div id="province"></div><button>确定</button></div><script type="text/javascript" src="static/js/jquery.provincesCity.js"></script><script type="text/javascript" src="static/js/provincesData.js"></script><script>var province=document.querySelector('#province');var province1=document.querySelector('.province');var selects=document.querySelectorAll('.selectDom');var button=province1.querySelector('button');(function(){if(hasMobile()){for(var k=0;k<selects.length;k++){selects[k].style.width='30vw';selects[k].style.height='6vh';selects[k].style.fontSize='3vw'}button.style.width='10vw';button.style.height='inherit';button.style.fontSize='3.5vw'}else{return}})();function hasMobile(){let isMobile=false;if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)){isMobile=true}return isMobile}</script><script type="text/javascript">num=0;temp=0;document.domain = "tianqi.com";document.cookie="PATHURL=c=code&id=10;domain=.tianqi.com";</script>

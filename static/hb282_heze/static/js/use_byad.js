@@ -1,0 +1,1 @@
+document.write('<script type="text/javascript" src="//cbjs.baidu.com/js/m.js"></script>');

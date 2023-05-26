@@ -1,0 +1,460 @@
+.comment_system {
+    background: #fff;
+    border: 1px solid transparent;
+}
+.comment_system .hide {
+    display: none !important;
+}
+.comment_system .font-b{
+    font-family: Impact;
+    font-size: 20px;
+    color: #e74851;
+    margin: 0 6px;
+    vertical-align: -2px;
+}
+.comment_system .clear-both:after {
+    content: "";
+    clear: both;
+}
+
+.comment_system .form {
+    margin-top: 50px;
+    height: 96px;
+    background: #fff;
+    border: 1px solid #e74851;
+    border-radius: 10px;
+    position: relative;
+}
+.comment_system .form textarea {
+    overflow: auto;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border: 0;
+    outline: none;
+    margin: 10px;
+    resize: none;
+    font-size: 14px;
+}
+.comment_system .form .user-boder {
+    height: 8px;
+    width: 40px;
+    background: url("../image/user_border.png") no-repeat #fff;
+    position: absolute;
+    left: 6px;
+    top: -1px;
+}
+.comment_system .form .user-img {
+    position: absolute;
+    top: -37px;
+    left: 8px;
+    z-index: 1;
+}
+.comment_system .form .user-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.comment_system .form .user-login-btn {
+    position: absolute;
+    top: -43px;
+    left: 8px;
+    width: 40px;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #e74851;
+    border: 1px solid #e74851;
+    text-align: center;
+    cursor: pointer;
+}
+.comment_system .form .username {
+    position: absolute;
+    top: -12px;
+    left: 55px;
+    font-size: 16px;
+    color: #e74851;
+    background: #fff;
+    padding: 0 15px;
+}
+.comment_system .form-btn {
+    margin-top: 10px;
+    height: 30px;
+}
+.comment_system .form-btn .submit-btn {
+    background: #e7486e;
+    color: #fff;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    float: right;
+    border-radius: 8px;
+    position: relative;
+}
+.comment_system .form-btn .submit-btn:hover {
+    background: #cf4146;
+}
+.comment_system .form-btn .submit-btn:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    z-index: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-bottom: 20px solid #e7486e;
+}
+.comment_system .form-btn .submit-btn:hover:before {
+    border-bottom: 20px solid #cf4146;
+}
+.comment_system .form-btn .submit-loading {
+    float: right;
+    height: 30px;
+    width: 102px;
+    background: url("../image/loading_btn.gif") no-repeat;
+    cursor: wait;
+}
+
+
+.comment_system .comment-title {
+    border-bottom: 1px solid #e74851;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.comment_system .comment-title .text{
+    display: block;
+    font-size: 16px;
+    border: 1px solid #e74851;
+    border-bottom: 1px solid #fff;
+    width: 66px;
+    height: 29px;
+    line-height: 31px;
+    text-align: center;
+    color: #e74851;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    top: 1px;
+}
+.comment_system .comment-title .comment-number {
+    color: #e74851;
+    font-size: 14px;
+}
+.comment_system .empty-text {
+    margin-top: 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #999;
+    background: #f0f0f0;
+    text-align: center;
+    opacity: 0.5;
+}
+.comment_system .comment-list {
+
+}
+.comment_system .comment-list .list-title {
+    font-size: 16px;
+    color: #e74851;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.comment_system .comment-list .list-title:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: #e7486e;
+    width: 6px;
+    height: 100%;
+    border-radius: 3px;
+}
+.comment_system .comment-list .item {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px dashed #e5e5e5;
+    padding: 15px 0;
+}
+.comment_system .comment-list .item .comment-content {
+    width: calc(100% - 60px);
+}
+.comment_system .comment-list .item .comment-info {
+    display: flex;
+    justify-content: space-between;
+}
+.comment_system .comment-list .item .comment-user {
+    display: flex;
+    align-items: center;
+}
+.comment_system .comment-list .item .comment-user .ipaddress{
+    color: #dbdbdb;
+    font-size: 12px;
+    margin-left: 7px;
+}
+.comment_system .comment-list .item .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.comment_system  .comment-list .item .username{
+    font-size: 12px;
+    color: #e74851;
+
+}
+.comment_system  .comment-list .item .time {
+    float: right;
+    padding: 5px 0 0;
+    margin-right: 10px;
+    font-family: Arial;
+    color: silver;
+    font-size: 12px;
+}
+.comment_system  .comment-list .item .text {
+    padding-top: 20px;
+    word-break: break-all;
+}
+.comment_system .item .btn-list {
+    float: right;
+    display: flex;
+}
+.comment_system .item .btn-list > div {
+    margin: 0 10px;
+    color: #999;
+    font-size: 12px;
+}
+.comment_system .item .btn-list .del-btn {
+    display: none;
+}
+.comment_system .item .btn-list .reply-btn,
+.comment_system .item .btn-list .del-btn {
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+.comment_system .item .btn-list .reply-btn:hover,
+.comment_system .item .btn-list .del-btn:hover {
+    color: #e74851;
+}
+.comment_system .item .btn-list .ding {
+    height: 15px;
+    line-height: 17px;
+    padding-left: 25px;
+    font-size: 12px;
+    color: #999;
+    background: url("../image/ding.png") no-repeat  5px center;
+    cursor: pointer;
+}
+.comment_system .item .btn-list .ding:hover,
+.comment_system .item .btn-list .ding.active {
+    background: url("../image/ding-active.png") no-repeat 5px center;
+    color: #4398ed;
+}
+.comment_system .item .btn-list .flag {
+    height: 16px;
+    padding-left: 25px;
+    font-size: 12px;
+    color: #999;
+    background: url("../image/flag.png") no-repeat 5px center;
+    cursor: pointer;
+}
+.comment_system .item .btn-list .flag:hover,
+.comment_system .item .btn-list .flag.active {
+    color: #ff4e00;
+    background: url("../image/flag-hover.png") no-repeat 5px center;
+}
+.comment_system .item .btn-list .active {
+    cursor: default;
+}
+
+.comment_system .item .form-box {
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+.comment_system .item .form-box .form {
+    margin-top: 30px;
+}
+
+.comment_system .item .floor {
+    padding: 4px 10px 30px;
+    border: 1px solid #dee4e9;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.comment_system .item .floor.hover {
+    background-color: #fef6f6;
+}
+.comment_system .item .floor .btn-list {
+    visibility: hidden;
+}
+.comment_system .item .floor.hover > .btn-list {
+    visibility: visible;
+}
+
+.comment_system .load-more {
+    color: #e74851;
+    background-color: #ffe9ea;
+    padding: 5px 0;
+    line-height: 18px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+/* captcha start */
+/* Close button */
+.remodal {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #2b2e38;
+    font-family: 'Microsoft yahei', '微软雅黑', Tahoma, Verdana, Arial, sans-serif;
+    display: none;
+}
+.remodal-close {
+    display: block;
+    overflow: visible;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+    color: #95979c;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+button.remodal-close-message {
+    position: absolute;
+    font-size: 21px;
+    line-height: 35px;
+    margin: -17px 0 0 0;
+    top: 50%;
+    right: 0;
+}
+
+.remodal-close:hover, .remodal-close:focus {
+    color: #2b2e38;
+}
+
+button.remodal-close-message {
+    position: absolute;
+    font-size: 21px;
+    line-height: 35px;
+    top: 30px;
+    right: 10px;
+}
+
+.remodal.remodal-captcha {
+    width: 300px;
+    height: 280px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15)
+}
+
+.remodal h3.title {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 0 0 25px;
+    font-size: 18px;
+    text-align: left;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.remodal h3.title .remodal-close-captcha {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+}
+
+.remodal .captcha-content {
+    margin-left: 29px;
+    margin-right: 29px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    border: 1px solid #e4e4e4;
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+}
+.remodal .captcha-content span.captcha-lock {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    background-image: url("../image/member-icons.png");
+    background-repeat: no-repeat;
+    background-position: -100px -20px;
+}
+.remodal .captcha-content input.captcha-txt {
+    float: right;
+    width: 75px;
+    border: none;
+    background: transparent;
+    height: 40px;
+    overflow: hidden;
+    line-height: 42px;
+    font-size: 15px;
+}
+
+.remodal .captcha-content .captcha-icon {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.remodal .captcha-content .success {
+    background-image: url("../image/member-icons.png");
+    background-repeat: no-repeat;
+    background-position: 0 -20px;
+}
+
+.remodal .captcha-content .error {
+    background-image: url("../image/member-icons.png");
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
+}
+.remodal .captcha-content .captcha-image {
+    float: right;
+    width: 90px;
+    height: 42px;
+    overflow: hidden;
+}
+.remodal .captcha-content .captcha-image img {
+    margin-right: -1px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.remodal .captcha-buttons {
+    border-top: 1px solid #e4e4e4;
+}
+.remodal .captcha-buttons .captcha-btn {
+    line-height: 60px;
+    float: right;
+    padding: 0 20px;
+    color: #666666;
+    font-size: 15px;
+    outline: none;
+}
+.remodal .captcha-buttons .captcha-btn:hover {
+    color: #333;
+}
+/* captcha end */

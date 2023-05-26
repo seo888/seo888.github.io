@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <meta name="Author" content="{网站名称}">
+    <meta name="Robots" content="all">
+    <meta name="alexaVerifyID" content="Jks3vjyatrD6rel3wwX6DWRRqXE">
+    <meta name="google-site-verification" content="0VvFznp55Mskf3FjimMJLyXKMyzUGpEuMdngiVP02CQ">
+    <link rel="icon" href="https://www.cqn.com.cn/favicon.ico" mce_href="https://www.cqn.com.cn/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.cqn.com.cn/favicon.ico" mce_href="https://www.cqn.com.cn/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/ow90_cqn/static/css/globals.css">
+    <script language="javascript" src="/static/ow90_cqn/static/js/jquery-1.7.min.js"></script>
+    <script language="javascript" src="/static/ow90_cqn/static/js/jquery.cxslide.min.js"></script>
+    <script language="javascript" src="/static/ow90_cqn/static/js/commonv.js"></script>
+    <script language="javascript" src="/static/ow90_cqn/static/js/marquee.js"></script>
+    <script type="text/javascript" src="/static/ow90_cqn/static/js/adsview.js"></script>
+    <style type="text/css">
+        .slide_x {
+            background: none repeat scroll 0 0 #000;
+            height: 235px;
+            overflow: hidden;
+            position: relative;
+            width: 315px;
+            margin: 0 0;
+        }
+        
+        .slide_x A {
+            color: #eee;
+            text-decoration: none;
+        }
+        
+        .slide_x .box {
+            height: 235px;
+            overflow: hidden;
+            /*position: relative;*/
+            width: 315px;
+        }
+        
+        .slide_x .listsd {
+            overflow: hidden;
+            width: 9999px;
+        }
+        
+        .slide_x .listsd LI {
+            float: left;
+            position: relative;
+            width: 315px;
+            list-style: none;
+            background: none;
+            padding-left: 0px;
+        }
+        
+        .slide_x .listsd IMG {
+            vertical-align: top;
+        }
+        
+        .slide_x .listsd P {
+            bottom: 0px;
+            color: #eee;
+            font: 14px/40px "宋体";
+            height: 40px;
+            left: 0;
+            position: absolute;
+            text-indent: 12px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            filter: Alpha(opacity=60);
+            background: #000;
+            overflow: hidden;
+            text-overflow: clip;
+            -o-text-overflow: clip;
+        }
+        
+        .slide_x .btn {
+            bottom: 50px;
+            overflow: hidden;
+            position: absolute;
+            right: 5px;
+        }
+        
+        .slide_x .btn LI {
+            background-image: url("static/image/bg_datudian1.gif");
+            cursor: pointer;
+            float: left;
+            height: 15px;
+            line-height: 20px;
+            margin: 0;
+            overflow: hidden;
+            width: 5px;
+        }
+        
+        .slide_x .btn .selected {
+            background-image: url("static/image/bg_datudian2.gif");
+        }
+        
+        .slide_x .minus {
+            background-image: none;
+            cursor: pointer;
+            height: 35px;
+            left: 10px;
+            position: absolute;
+            top: 100px;
+            width: 35px;
+        }
+        
+        .slide_x .plus {
+            background-image: none;
+            cursor: pointer;
+            height: 35px;
+            position: absolute;
+            right: 10px;
+            top: 100px;
+            width: 35px;
+        }
+        
+        .adv {
+            padding: 10px 5px;
+        }
+    </style>
+    <style type="text/css">
+        .bshare {
+            margin: 0 auto;
+            text-align: right;
+            float: right;
+            height: 30px;
+        }
+        
+        .share_t {
+            position: relative;
+            top: -25px;
+        }
+        
+        .share_b {
+            position: relative;
+            top: -25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header -->
+    <!--header {-->
+    <div class="header">
+  <div class="headlg"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/static/ow90_cqn/static/picture/logo_256_97.jpg" alt="{网站名称}"></a> </div>
+  <div class="navset">
+    <div class="block">
+      <ul>
+        <li class="fx"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">分享链接</a></li>
+        <li class="sc"><a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="javascript:AddFavorite('https://www.cqn.com.cn','中国质量新闻网');">加入收藏</a></li>
+        <li class="sy"><a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="javascript:SetHome(this,'https://www.cqn.com.cn');">设为首页</a></li>
+        <li class="yd"><a href="/{随机字符}/{随机数字}_{随机数字}.html">移动</a></li>
+        <li class="bx"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a></li>
+        <style type="text/css">
+            .headlg {
+                width: 300px!important;
+            }
+
+            .navset {
+                width: 650px!important;
+            }
+			.navset li.yq {
+				background-image: url("static/image/yuqingicon.png");
+				background-repeat:no-repeat;
+				height: 31px;
+			}
+		
+		</style>
+        <li class="yq"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">舆情秘书</a></li>
+      </ul>
+    </div>
+    <div class="navset2">
+      <div class="block">
+        <div class="headdt">
+          <script language="javascript" type="text/javascript"> today = new Date();var d=new Array(" 星期日"," 星期一"," 星期二"," 星期三"," 星期四"," 星期五"," 星期六"); document.write(today.getFullYear()+"年" + [today.getMonth()+1]+"月" +today.getDate()+"日<span>" + d[today.getDay()])+"</span>";</script>
+        </div>
+        <div class="headfind">
+         <style type="text/css">
+		 	.headfind #contentKey{ width:180px; height:25px;padding:2px 3px; color:#999999;}
+			.headfind #search{ width:80px; height:35px;}
+		 </style>
+          <form name="searchform" id="searchform" action="/search/servlet/SearchServlet.do" onsubmit="per_submit();" method="POST" target="_blank">
+            <input name="contentKey" id="contentKey" type="text" maxlength="80" value="请输入关键字" onfocus="javascript:if(this.value=='请输入关键字')this.value=''; else this.select();" onblur="javascript:if(this.value=='')this.value='请输入关键字';">
+            <input type="button" value="搜 索" name="search" id="search" class="search" onclick="javascript:per_submit()"> 
+            <input type="hidden" name="op" value="">
+	         <input type="hidden" name="siteID" value="">
+             <input type="hidden" name="sort" value="date">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+//提交表单
+function per_submit()
+{
+  var flag = true;
+  
+  //alert("content="+form1.contentKey.value);
+  
+  if(searchform.contentKey.value=="质量先锋档案"){
+        window.open("https://www.cqn.com.cn/zlzbj/node_428.htm","质量先锋档案","fullscreen=yes");
+        flag = false;
+        return ;
+  }
+
+  if(searchform.contentKey.value==""){
+  	return;
+  }
+  if( flag == true ) 
+  {
+  	document.searchform.submit(); 
+  	result_list.innerHTML="正在进行检索，请耐心等待结果...";
+  } 
+}
+
+</script>
+    <!-- header }-->
+    <div class="mainmenubg">
+        <!--mainmenu {-->
+        	<div class="mainmenu">
+ 
+       <ul>
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">要闻</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">市场</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">监管</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">时评</a> </li>
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">民生</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">公告</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">热点</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">召回</a> </li>
+  </ul>
+        <ul>
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">财经</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">时讯</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">企业</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">观察</a> </li>
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">投诉</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">维权</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">信用</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">便民</a> </li>
+        </ul>
+        <ul>
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">品牌</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">汽车</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">食品</a> 
+		  <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">健康</a>
+		  <!--<a href="http://jiaju.cqn.com.cn/" target="_blank">家居</a>--> </li>
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">执法</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">口岸</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">数据</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">经营</a> </li>
+        </ul>
+        <ul class="last">
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">网视</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">播报</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">访谈</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">发布厅</a> </li>
+          <li> <strong><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文化</a></strong> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">杂谈</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">书画</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">影事</a> </li>
+        </ul>
+  </div>
+
+        <!-- mainmenu }-->
+    </div>
+    <!--/header -->
+    <div class="box">
+        <div class="locat"> <img src="/static/ow90_cqn/static/picture/arrow3.gif">您当前位置：
+            
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="">{网站名称}</a>>><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="">{关键词1}</a>>><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="">正文</a>
+
+        </div>
+    </div>
+    <div class="box">
+        <div class="Detail_M_L">
+            
+                <div class="Detail_Title">
+                    <h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+                    <div class="publish">
+                        {当前时间}<span class="from"> {网站名称}总局网站</span> </div>
+                </div>
+
+            <!-- share {-->
+            <div class="bshare share_t">
+                <div class="bdsharebuttonbox" data-tag="share_1">
+                    <a class="bds_weixin" data-cmd="weixin"></a>
+                    <a class="bds_tsina" data-cmd="tsina"></a>
+                    <a class="bds_qzone" data-cmd="qzone" href="/{随机字符}/{随机数字}_{随机数字}.html"></a>
+                    <a class="bds_mshare" data-cmd="mshare"></a>
+                    <a class="bds_more" data-cmd="more"></a>
+                </div>
+            </div>
+            <!-- share }-->
+            
+                <div class="Detail_Content">
+                    <div class="content"> <!--enpcontent--><p style="text-align: center;"><img src="{随机图片}" title="image.png" alt="image.png" style="width: 761.818px; height: 300px;" data-ratio="-1"></p><p>{关键词1}{句子}{句子}{关键词1}{句子}</p><p style="text-indent: 2em; text-align: left;">{关键词1}{句子}&nbsp;</p><p style="text-indent: 2em; text-align: left;">{句子}{句子}&nbsp;</p><p style="text-indent: 2em; text-align: left;">{句子}{关键词1}{句子}{关键词1}{句子}&nbsp;</p><p style="text-indent: 2em; text-align: left;">{句子}&nbsp;</p><p style="text-indent: 2em; text-align: left;">{句子}{关键词1}{句子}{关键词1}</p><!--/enpcontent--><!--enpproperty <articleid>8921393</articleid><date>2023-03-23 10:21:30:665</date><author></author><title>全国市场监管系统信用监管工作座谈会在福州召开</title><keyword></keyword><subtitle></subtitle><introtitle></introtitle><siteid>2</siteid><nodeid>20008</nodeid><nodename>总局动态</nodename><nodesearchname>总局动态</nodesearchname><picurl></picurl><picbig></picbig><picmiddle></picmiddle><picsmall></picsmall><url>https://www.cqn.com.cn/zj/content/2023-03/23/content_8921393.htm</url><urlpad>https://www.cqn.com.cn/m/zj/content/2023-03/23/content_8921393.htm</urlpad><sourcename>市场监管总局网站</sourcename><abstract>全国市场监管系统信用监管工作座谈会在福州召开</abstract><channel>1</channel>/enpproperty--> </div>
+                    <div class="Detail_Attachment"> </div>
+                    <div class="editor">(责任编辑:{人物名称})</div>
+                </div>
+
+            <!-- share {-->
+            <div class="bshare share_b">
+                <div class="bdsharebuttonbox" data-tag="share_2">
+                    <a class="bds_weixin" data-cmd="weixin"></a>
+                    <a class="bds_tsina" data-cmd="tsina"></a>
+                    <a class="bds_qzone" data-cmd="qzone" href="/{随机字符}/{随机数字}_{随机数字}.html"></a>
+                    <a class="bds_mshare" data-cmd="mshare"></a>
+                    <a class="bds_more" data-cmd="more"></a>
+                </div>
+            </div>
+            <!-- share }-->
+            <div class="Detail_Comment">
+                <div id="formComp" style="display:none">
+                    <form name="commentform" action="https://www.cqn.com.cn/nis/servlet/CommentSubmitServlet" method="post">
+                        <input type="hidden" value="10" name="topNum" id="topNum">
+                        <input type="hidden" value="1" id="compTypeId" name="compTypeId">
+                        <input type="hidden" value="comment" id="actionType" name="actionType">
+                        <input type="hidden" value="122" id="compId" name="compTypeId">
+                        <input type="hidden" value="https://www.cqn.com.cn/nis/servlet/CommentServlet?compId=122&compTypeId=1" id="ajaxUrl">
+                        <input type="hidden" value="https://www.cqn.com.cn/mp/login?noscode=no&daemon=yes" id="ssoUrl">
+                        <input type="hidden" value="https://www.cqn.com.cn/nis/comment/web/commentResult.jsp?compId=122&compTypeId=1" id="commentResult">
+                        <input type="hidden" value="-2" name="pkType" id="pkType">
+                        <table width="90%" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td height="30" style="padding-left:0px; font-size:14px; font-weight:bold;color:#611987;">我要评论：</td>
+                                <td>共<span id="commentCount">0</span>条评论</td>
+                                <td><a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="result()">查看评论</a></td>
+                            </tr>
+                            <tr>
+                                <td height="30" colspan="3">
+                                    <div id="commentLogin"> <span id="memberName">会员登录名</span>
+                                        <input id="commentLoginName" name="commentLoginName">
+                                        <span id="memberPassword">密码
+                    <input id="commentPassword" type="password" name="commentPassword">
+                    </span>
+                                        <input type="checkbox" onclick="changeIsAnonymous()" id="commentIsAnonymous"> 匿名发表 </div>
+                                </td>
+                            </tr>
+                            <tr> </tr>
+                            <tr>
+                                <td colspan="3" align="center"><textarea name="commentContent" cols="75" rows="6" id="commentContent" style="overflow:hidden;"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><span id="PK" style="display:none">
+                  <input type="radio" name="radio" value="1">
+                  我支持
+                  <input type="radio" name="radio" value="-1">
+                  我反对
+                  <input type="radio" name="radio" value="0">
+                  中立 </span></td>
+                                <td colspan="2"><input onclick="return formComp_submit();" type="button" value="提 交"></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div style="height:40px; line-height:40px; border-top:1px solid #aaaaaa;  padding-left:20px; font-size:14px; font-weight:bold;color:#611987;">最新评论</div>
+                <div id="newCommentTop10"></div>
+                <script src="/static/ow90_cqn/static/js/commentAjax.js"></script>
+            </div>
+            <div class="Detail_Statement"> <strong>声明：</strong>
+                <p>本网注明“来源：{网站名称}”的所有作品，版权均属于{网站名称}，未经本网授权不得转载、摘编或利用其他方式使用上述作品。已经本网授权使用作品的，应在授权范围内使用，并注明“来源：{网站名称}”。违反上述声明者，本网将追究其相关法律责任。</p>
+            </div>
+        </div>
+        <div class="Detail_M_R">
+            <dl class="cont meitu">
+                <dt class="cont_t"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">图片新闻</a></dt>
+                <dd class="cont_l" style="overflow: hidden;position: relative; width:315px; height:235px;">
+                    <div class="slide_x" id="slide_x">
+                        <div class="box">
+                            
+                                <ul class="listsd">
+                                                                            <li>
+                                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0" height="235" width="315"> </a>
+                                            <p>
+                                                {关键词1}{标题}
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0" height="235" width="315"> </a>
+                                            <p>
+                                                {标题}
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0" height="235" width="315"> </a>
+                                            <p>
+                                                {标题}
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0" height="235" width="315"> </a>
+                                            <p>
+                                                {标题}
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0" height="235" width="315"> </a>
+                                            <p>
+                                                {标题}
+                                            </p>
+                                        </li>
+                                </ul>
+
+                            <ul class="btn">
+                                <li class=""></li>
+                                <li class=""></li>
+                                <li class=""></li>
+                                <li class=""></li>
+                                <li class="selected"></li>
+                            </ul>
+                            <div class="plus"></div>
+                            <div class="minus"></div>
+                        </div>
+                        <script type="text/javascript">
+                            <!--
+
+                            $("#slide_x").cxSlide({
+                                plus: true,
+                                minus: true
+                            });
+                            -->
+                        </script>
+                </div></dd>
+            </dl>
+            <dl class="cont">
+                <dt class="cont_t"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">最新新闻</a></dt>
+                <dd class="cont_l">
+                    
+                        <ul>
+                                                            <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                       {标题}
+                                            
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}{关键词1}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {关键词1}{标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                            
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {关键词1}{标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {关键词1}{标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                        {标题}
+                                    </a>
+                                </li>
+                        </ul>
+
+                </dd>
+            </dl>
+            </div>
+        </div>
+        <div class="box">
+            <div class="Detail_Related">
+                <dl class="cont">
+                    <dt class="cont_t"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">相关新闻</a></dt>
+                    <dd class="cont_l">
+                        
+                            
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <!--footer -->
+        <div class="box">
+            <!--foot {-->
+             <style type="text/css">
+ .footer .outer_link ul{ padding-left:155px; margin:10px auto;  height:35px; line-height:35px; font-size:14px; color:#565656;background:url(static/image/freindlink_title.jpg) left center no-repeat;}
+ .footer .outer_link li{ margin:0 6px; float:left;}
+ .footer .outer_link li a {color:#565656; text-decoration:none;}
+ </style>
+  <div class="row footer">
+    <div class="row outer_link">
+		<ul>        
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">中国政府网</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a></li>
+			<li><a href="javascript:void(0);" target="_blank">国务院食品安全委员会</a></li>		 
+			<li><a href="javascript:void(0);" target="_blank">国务院反垄断委员会</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">国家认证认可监督管理委员会</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">国家标准化管理委员会</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">国家药品监督管理局</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a></li>
+      	</ul>
+    </div>
+    <div class="row inner_link">
+      <ul>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">报刊社简介</a>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">本站介绍</a>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">友情链接</a></li>
+      </ul>
+    </div>
+    <div class="row copyright"> {关键词1} 版权所有，未经许可不得转载。<br>
+      中华人民共和国互联网新闻信息服务许可证编号：10120170032<br>
+      网站备案号：<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">京ICP备09084810号-1</a>  {关键词1}制作经营许可证编号：（京）字第09421号<br>
+  公安机关网站备案号：<a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+		 <img src="/static/ow90_cqn/static/picture/wanganlogo.png" style="float:left;" width="20" border="0">
+		 京公网安备 11010502031058号
+      <table width="210" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr>
+                <td valign="middle"><!--政府与公益图片LOGO安装开始-->
+                    <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/33/000/0000/60506041/CA330000000605060410004.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                    <!--政府与公益图片LOGO安装结束-->
+                </td>
+                <td valign="middle"><!--安全联盟安装开始-->                    
+					  <a target="cyxyv" href="/{随机字符}/{随机数字}_{随机数字}.html"> <img src="/static/ow90_cqn/static/picture/label_sm_90030.png"></a>
+                    <!--安全联盟安装结束-->
+                   
+                  </td>
+              </tr>
+            </table>
+           
+	<!--360自动推送工具代码-->
+		<script>
+			(function(){
+				var src = "https://s.ssl.qhres2.com/ssl/ab77b6ea7f3fbf79.js";
+				document.write('<script src="' + src + '" id="sozz"><\/script>');
+			})();
+		</script>
+	<!--360自动推送工具代码-->
+    </div>
+  </div>
+  <!--「原本」原创认证 {-->
+<script src="/static/ow90_cqn/static/js/zgzlb.js" type="text/javascript"></script>
+  <!--}「原本」原创认证-->
+  <!-- 360站长{-->
+<script>
+(function(){
+var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+  <!--} 360站长-->
+
+            <!-- foot }-->
+        </div>
+        <script language="javascript" src="/static/ow90_cqn/static/js/effect.js"></script>
+        <div class="row" style="display:none;">
+            <script>
+                window._bd_share_config = {
+                    "common": {
+                        "bdSnsKey": {},
+                        "bdText": "",
+                        "bdMini": "2",
+                        "bdMiniList": false,
+                        "bdStyle": "0",
+                        "bdSize": "16"
+                    },
+                    "share": {}
+                };
+                with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'https://www.cqn.com.cn/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+            </script>
+        </div>
+        <!--/footer -->
+        <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+        <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+        <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+        <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>   
+</body>
+
+</html>

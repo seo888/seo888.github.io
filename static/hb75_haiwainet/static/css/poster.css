@@ -1,0 +1,143 @@
+/* line 3, ../sass/poster.scss */
+.posterOpen {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* line 8, ../sass/poster.scss */
+.poster {
+  display: none;
+  position: fixed;
+  width: 100%;
+  min-width: 980px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+/* line 19, ../sass/poster.scss */
+.poster div {
+  overflow: hidden;
+  height: auto;
+}
+/* line 23, ../sass/poster.scss */
+.poster .posterblock {
+  position: absolute;
+  width: 375px;
+  height: 700px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  top: 50px;
+  left: 50%;
+  background-color: #fefefe;
+  margin-left: -197.5px;
+}
+.poster .posterblock::-webkit-scrollbar {
+  width: 0px;
+  background-color: #fff;
+}
+/* line 35, ../sass/poster.scss */
+.poster .posterblock .posterImg img {
+  width: 375px;
+  height: auto;
+}
+/* line 40, ../sass/poster.scss */
+.poster .posterblock .posterButton {
+  margin-left: 20px;
+  border-top: 1px solid #ececec;
+  width: 345px;
+  height: 91px;
+  overflow: visible;
+  position: relative;
+}
+/* line 47, ../sass/poster.scss */
+.poster .posterblock .posterButton span {
+  width: 50px;
+  height: 40px;
+  margin-top: 15px;
+  margin-left: 40px;
+  display: inline-block;
+  padding-top: 44px;
+  text-align: center;
+  font-size: 12px;
+  color: #313131;
+  cursor: pointer;
+}
+/* line 58, ../sass/poster.scss */
+.poster .posterblock .posterButton span.download {
+  margin-left: 8px;
+  background: url(../image/loaddown.png) top center no-repeat;
+  background-size: 40px auto;
+}
+/* line 62, ../sass/poster.scss */
+.poster .posterblock .posterButton span.download a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50px;
+  height: 40px;
+}
+/* line 71, ../sass/poster.scss */
+.poster .posterblock .posterButton span.weixin {
+  background: url(../image/weixin.png) top center no-repeat;
+  background-size: 40px auto;
+}
+/* line 75, ../sass/poster.scss */
+.poster .posterblock .posterButton span.weixinFridend {
+  background: url(../image/weixinfriend.png) top center no-repeat;
+  background-size: 40px auto;
+}
+/* line 79, ../sass/poster.scss */
+.poster .posterblock .posterButton span.weibo {
+  background: url(../image/weibo.png) top center no-repeat;
+  background-size: 40px auto;
+}
+/* line 85, ../sass/poster.scss */
+.poster .posterblock .wx-box {
+  display: none;
+  width: 375px;
+  height: 251px;
+  position: absolute;
+  top: -251px;
+  left: -20px;
+  background-color: #f5f5f5;
+}
+/* line 93, ../sass/poster.scss */
+.poster .posterblock .wx-box #wxCode {
+  width: 130px;
+  height: 130px;
+  padding: 7px 8px 7px 6px;
+  margin: 15px auto;
+  border: 1px solid #C1C1C1;
+  background: #FFFFFF;
+  box-sizing: border-box;
+}
+/* line 102, ../sass/poster.scss */
+.poster .posterblock .wx-box .weixintit {
+  font-size: 14px;
+  color: #313131;
+  line-height: 21px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+/* line 110, ../sass/poster.scss */
+.poster .posterblock .wx-box p {
+  font-size: 14px;
+  color: #313131;
+  line-height: 20px;
+  text-align: center;
+}
+/* line 117, ../sass/poster.scss */
+.poster .posterblock .wx-box .wx-box-close {
+  position: absolute;
+  top: 11px;
+  right: 20px;
+  background: url(../image/close.png);
+  width: 21px;
+  height: 21px;
+}

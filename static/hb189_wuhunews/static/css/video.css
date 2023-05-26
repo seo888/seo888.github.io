@@ -1,0 +1,218 @@
+/*首页*/
+.img-box{width:640px;overflow:hidden;}
+.img-box .bg{width:490px;height:48px;overflow:hidden;background:#000;filter:alpha(opacity=60);opacity:0.6;position:absolute;left:0;top:265px;z-index:5;}
+.img-box h2{font-size:26px;line-height:38px;overflow: hidden;margin-bottom: 10px;}
+.img-box h2 a{color:#000;}
+.img-box p{color: #666;font-size: 18px;line-height: 28px;overflow: hidden;margin-bottom: 10px;height: 28px;}
+.img-box .source{line-height: 32px;overflow: hidden;border-bottom: 1px dashed #DDDDDD;color: #999;font-size: 12px;}
+.img-box span,.img-box time,.img-box .keywords a{float: left;padding-right:10px;overflow: hidden;}
+.img-box time {width:100px;}
+.img-box .keywords{width: 200px;height: 32px;}
+.img-box .keywords a{color:#053980;}
+.img-box .keywords a:hover{color:#0672C5;}
+.img-box .comment-box{float: right;}
+.img-box .share-cont{margin-top: 5px;}
+.video-content .description{
+    white-space: pre;
+}
+.img-box h2 a:hover{color:#2a79e4;}
+/*查看更多*/
+.view_more{overflow: hidden;font-size:14px;text-align:center;display:block;height:25px;line-height:25px;background: #eeecec;border:1px solid #ddd;/*background: url(images/more.png?v=20220414105438) 350px 15px no-repeat;*/margin-top:20px;border-radius: 3px;-webkit-border-radius: 3;-moz-border-radius: 3;/*padding-right: 20px;*/}
+.view_more:hover{/*background: #999 url(images/more.png) 350px 15px no-repeat;*/background: #ddd;}
+/*内容页面*/
+.article .video-main{border: none;width:100%;}
+.video-main .video-title{line-height:38px;font-size:26px;color:#333;margin-top: 10px;}
+.video-main .video-infos{position:relative;height:40px;line-height:40px;overflow:hidden;padding-bottom: 0;padding-top:0;}
+.video-infos .copyright, .video-infos .date, .video-infos .source, .video-infos .editors{font-size:12px;color:#666;float:left;padding-right:10px;}
+.video-infos .copyright{display:inline-block;*display: inline;zoom:1;background:#C2C2C2;line-height:20px;margin:10px 10px 0 0;padding:0 5px;color:#fff;cursor:default;}
+.video-infos a{font-size: 12px;font-family:Helvetica,"微软雅黑";}
+.video-infos .view-box em{margin:15px 10px 0 20px;}
+.video-infos .comment-box em{margin:16px 5px 0 10px;float:left;}
+.video-infos .fontsize2{float:right;overflow: hidden;}
+.video-infos .fontsize2{float:right;overflow: hidden;}
+.fontsize2 .small,.fontsize2 .big{cursor: pointer;width:20px;height:13px;overflow:hidden;background-image: url(https://www.wuhunews.cn/t/1/1/css/images/ico.png?v=20220414105438);background-repeat:no-repeat;margin:14px 0 0;}
+.fontsize2 .small{background-position:-48px -50px;}
+.fontsize2 .big{background-position:-70px -50px;}
+.video-content{font-size:16px;line-height:28px;color:#333;text-indent:0;padding-top: 10px;}
+.video-content p{line-height: 26px;margin-bottom: 26px;}
+.video-content p a {color:#1a75dc}
+.video-content p img { max-width: 99%; margin-left: -31px;}
+
+/*视频播放器*/
+.video-content .player { width: 640px; height: 480px;}
+.video-content .player > * { width: 100%; height: 100%;}
+.player-container {
+    position: relative;
+    width: 960px;
+    height: 480px;
+    background: #282828;
+}
+.player-container .player {
+    float: left;
+    overflow: hidden;
+}
+.player-container .album {
+    width: 320px;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+    color: #999;
+}
+.player-container .album-inner {
+    margin: 0 0 0 20px;
+}
+.player-container .arrow {
+    background-image: url(https://www.wuhunews.cn/t/1/1/css/images/album-arrow.png?v=20220414105438);
+    background-position: 0 0;
+    width: 10px;
+    height: 60px;
+    position: absolute;
+    top: 210px;
+    left: 640px;
+    cursor: pointer;
+}
+.player-container .arrow:hover {
+    background-position: -10px 0;
+}
+.player-container .album .name {
+    color: #2378E6;
+    font-size: 16px;
+    line-height: 60px;
+    border-bottom: 3px solid #2378E6;
+    display: inline-block;
+    height: 57px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    *width: 100px;
+}
+.player-container .album .list {
+    height: 420px;
+    width: 280px;
+    padding-right: 20px;
+}
+.player-container .album .item {
+    width: 100%;
+    clear: both;
+    line-height: 20px;
+    padding: 10px 0;
+    overflow: visible;
+    border-bottom: 1px solid #333;
+}
+.player-container .album .item:hover {
+    background: #222;
+}
+.player-container .album .item.active .time,
+.player-container .album .item.active .video a,
+.player-container .album .item:hover .time,
+.player-container .album .item:hover .video a {
+    color: #2378e6;
+}
+.player-container .album .time {
+    float: left;
+    width: 40px;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #666;
+}
+.player-container .album .video {
+    float: left;
+    width: 220px;
+    font-size: 14px;
+}
+.player-container .album .video a {
+    color: #999;
+}
+.player-container.extend .player {
+    width: 960px;
+}
+.player-container.extend .album {
+    display: none;
+}
+.player-container.extend .arrow {
+    left: 960px;
+    background-position: 0 -60px;
+}
+.player-container.extend .arrow:hover {
+    background-position: -10px -60px;
+}
+
+.video-content .description { margin-top: 20px;}
+/*分享*/
+.copy-share{margin:0 0 10px;overflow:hidden;padding: 0;background: none;}
+.copy-share .fcwb,.copy-share .fbwx{float:left;text-align:center;color:#fff;width:90px;height:36px;line-height:36px;overflow:hidden;margin-right:20px;display:inline;}
+.copy-share .fcwb{background:#e54f2a;}
+.copy-share .fbwx{background:#693;}
+.copy-share .peak{height:30px;line-height:30px;overflow:hidden;padding:0 10px;float:right;color:#525358;}
+.copy-share .peak em{width:18px;height:18px;float:left;overflow:hidden;background:#f4f4f4 url(https://www.wuhunews.cn/t/1/1/css/images/ico.png) -50px -70px no-repeat;margin:5px 8px 0 0;display:inline;}
+/*相关阅读*/
+.rel-news{border-bottom:1px solid #eee;padding:20px 0;width:100%;}
+.rel-news .hd{height:30px;line-height:30px;overflow:hidden;overflow:hidden;color:#444;}
+.copy-share .keyword{float: left;overflow: hidden;line-height: 34px;}
+.copy-share .keyword a{color:#0672c5;padding-right:15px;}
+
+/*搜索*/
+.search-time{height:60px;line-height:60px;background:#f6f6f6;}
+.search-time p{padding:0 15px;}
+.search-time p strong{color:#389ded;}
+.search-page .txt-list li{height:30px;line-height:30px;}
+.search-page .txt-list a{color:#444;float: left;overflow: hidden;height:30px;font-size: 14px;}
+.search-page .txt-list a:hover{color:#c00;}
+.search-page .txt-list em{margin-top:14px;}
+.search-page .date{font-size:12px;color:#999;padding-left: 10px;}
+/*分页*/
+.page {height:70px; line-height: 30px;padding-top:20px;text-align: center;font-size: 1.2rem; font-size: 12px;}
+.page a {display: inline-block; padding:0 12px; vertical-align: top;letter-spacing: normal; color: #fff;background: #bbb;margin:0 2px;}
+.page i {margin:0 2px;}
+.page a:hover {background: #666;}
+.page .now {cursor: default; background: #666;}
+.page .disable {cursor: default;}
+.page .disable:hover {background: #bbb;}
+
+.read-btn{margin-top:4px;}
+.video-page .read-btn .btn-s-orange{padding-top:0;}
+
+/*畅言*/
+#changyan_floatbar_wrapper { display: none!important;}
+#comment_sohu .head-gold-w { display: none!important;}
+
+/* 内容页分享/长微博 */
+.sharebox {width: 640px; margin: 20px auto; overflow: hidden; height: 36px;}
+.sharebox .digg, .sharebox .weibo, .sharebox .digged {
+    display: inline; float: left;height:28px; margin-right: 10px;line-height: 30px;text-align: center;margin-top: 4px; padding: 0 18px;
+}
+.sharebox .digg, .sharebox .weibo {border: 1px solid #ccc; color: #ccc;}
+.sharebox .digg .digg-icon,
+.sharebox .digged .digg-icon,
+.sharebox .digg:hover .digg-icon
+ { background: url(https://www.wuhunews.cn/t/1/1/css/images/icon.png?v=20220414105438) -72px -4px no-repeat; width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin: -2px 2px 0 0;}
+ .sharebox .digged .digg-icon,
+.sharebox .digged .digg-icon { background-position: -72px -34px;}
+.sharebox .digged .digg-icon { }
+.sharebox .digged {border: 1px solid #5dc430; color:#5dc430;}
+.sharebox .weibo:hover {border: 1px solid #ff8a00; color: #ff8a00;}
+
+/* 长微博 */
+.lw-dialog { position: relative; width: 100%; height: 100%;}
+.lw-button-panel { position: absolute; bottom: 0; left:20px; width: 440px; height: 110px; padding: 30px 120px;  box-sizing: border-box;}
+.lw-button-panel .lw-sina-button, .lw-button-panel .lw-tencent-button { width: 80px; height: 50px; line-height: 50px; text-align: center; cursor: pointer;}
+.lw-button-panel .lw-sina-button {background: url(https://www.wuhunews.cn/t/1/1/css/images/icon.png?v=20220414105438) 0 -122px;}
+.lw-button-panel .lw-sina-button:hover {background: url(https://www.wuhunews.cn/t/1/1/css/images/icon.png?v=20220414105438) -160px -122px;}
+.lw-button-panel .lw-tencent-button {background: url(https://www.wuhunews.cn/t/1/1/css/images/icon.png?v=20220414105438) -80px -122px;}
+.lw-button-panel .lw-tencent-button:hover {background: url(https://www.wuhunews.cn/t/1/1/css/images/icon.png?v=20220414105438) -240px -122px;}
+.lw-img-outter { height: 100%; padding:30px 20px 128px 20px; box-sizing: border-box;}
+.lw-button-panel {border-top:solid 1px #eee;}
+.lw-img { height: 100%; overflow-x: hidden; overflow-y: auto; text-align: center;}
+.lw-img p img {margin-top:180px; margin-left: 10px;}
+.lw-img p img.loading {position: absolute; left: 0; right: 0; margin: auto; top: -34px; bottom: 0;}
+.lw-button-panel .weibo {display: inline; float: left;width:80px;height:28px; margin-right: 10px;line-height: 28px;text-align: center;margin-top: 4px;}
+
+/* 标签页 */
+.tag-title { }
+.tag-title h2 .tag-name { padding:0 10px; text-align: center;height:40px;line-height: 40px;display: inline-block;position: absolute;left: 0; right: 0;z-index: 5;top:0; }
+.tag-title h2 {width: 640px; margin:0 auto; position: relative;height: 40px;}
+.tag-title h2 a { background-color: #fff; display: inline-block; padding: 0 16px;}
+.tag-title hr { position: absolute; width: 100%; top: 50%; border-top: 1px solid #e3e3e3; border-bottom: 0; margin: 0; padding: 0;left: 0;}
+
+.body-article .sr-bdimgshare { display: none!important; z-index: -1!important;}

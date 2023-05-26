@@ -1,0 +1,1 @@
+var DTPath = "https://www.12365.sh.cn/";var DTMob = "https://m.12365.sh.cn/";var SKPath = "https://www.12365.sh.cn/skin/wzdhdef/";var MEPath = "https://www.12365.sh.cn/member/";var DTEditor = "ueditor";var CKDomain = "";var CKPath = "/";var CKPrex = "czn_";

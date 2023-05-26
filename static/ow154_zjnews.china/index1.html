@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="”Content-Type”" content="”text/html;" charset="UTF-8″">  
+	<meta name="keywords" content="">
+<meta name="description" content="">
+<title>广告</title>
+<link rel="stylesheet" type="text/css" href="static/css/lrtk.css">
+<script type="text/javascript" src="static/js/jquery-1.4.2.min2.js"></script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#000000">
+
+<div id="container" class="banner">
+  <ol>
+<li><a href="javascript:;" target="_blank"><img src="static/picture/tl.jpg"></a></li>
+  </ol>
+    <div class="mouse_direction">
+        <div class="mouse_top"></div>
+        <div class="mouse_bottom"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function() {
+    var index = 0;
+    var adtimer;
+    var _wrap = $("#container ol"); //
+    var len = $("#container ol li").length;
+    //len=1;
+    if (len > 1) {
+        $("#container").hover(function() {
+            clearInterval(adtimer);
+        },
+        function() {
+            adtimer = setInterval(function() {
+
+                var _field = _wrap.find('li:first'); //�˱������ɷ����ں�����ʼ��,li:firstȡֵ�Ǳ仯��
+                var _h = _field.height(); //ȡ��ÿ�ι����߶�(���й��������,�˱����������ڿ�ʼ��,������м��ʱ����ʱ)
+                _field.animate({
+                    marginTop: -_h + 'px'
+                },
+                500,
+                function() { //ͨ��ȡ��marginֵ,���ص�һ��
+                    _field.css('marginTop', 0).appendTo(_wrap); //���غ�,�����е�marginֵ����,�����뵽���,ʵ���޷����
+                })
+
+            },
+            5000);
+        }).trigger("mouseleave");
+        function showImg(index) {
+            var Height = $("#container").height();
+            $("#container ol").stop().animate({
+                marginTop: -_h + 'px'
+            },
+            1000);
+        }
+
+        $("#container").mouseover(function() {
+            $("#container .mouse_direction").css("display", "block");
+        });
+        $("#container").mouseout(function() {
+            $("#container .mouse_direction").css("display", "none");
+        });
+    }
+
+    $("#container").find(".mouse_top").click(function() {
+        var _field = _wrap.find('li:first'); //�˱������ɷ����ں�����ʼ��,li:firstȡֵ�Ǳ仯��
+        var last = _wrap.find('li:last'); //�˱������ɷ����ں�����ʼ��,li:lastȡֵ�Ǳ仯��
+        //last.prependTo(_wrap);
+        var _h = last.height();
+        $("#container ol").css('marginTop', -_h + "px");
+        last.prependTo(_wrap);
+        $("#container ol").animate({
+            marginTop: 0
+        },
+        500,
+        function() { //ͨ��ȡ��marginֵ,���ص�һ��
+            //$("#container ol").css('marginTop',0).prependTo(_wrap);//���غ�,�����е�marginֵ����,�����뵽���,ʵ���޷����
+        })
+    });
+    $("#container").find(".mouse_bottom").click(function() {
+        var _field = _wrap.find('li:first'); //�˱������ɷ����ں�����ʼ��,li:firstȡֵ�Ǳ仯��
+        var _h = _field.height();
+        _field.animate({
+            marginTop: -_h + 'px'
+        },
+        500,
+        function() { //ͨ��ȡ��marginֵ,���ص�һ��
+            _field.css('marginTop', 0).appendTo(_wrap); //���غ�,�����е�marginֵ����,�����뵽���,ʵ���޷����
+        })
+    });
+});
+</script>
+
+</body>
+</html>

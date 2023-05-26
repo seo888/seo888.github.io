@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="author" content="">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+<script src="/static/pd37_news_cnnb/static/js/jquery-1.11.3.min.js"></script>
+<script src="/static/pd37_news_cnnb/static/js/jquery-2.1.4.min.js"></script>
+<script src="/static/pd37_news_cnnb/static/js/MPreview.mobile.min.js"></script>
+<script src="/static/pd37_news_cnnb/static/js/online_calc.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/pd37_news_cnnb/static/css/article.css">
+<link rel="stylesheet" type="text/css" href="/static/pd37_news_cnnb/static/css/moban.css">
+<link rel="stylesheet" type="text/css" href="/static/pd37_news_cnnb/static/css/MPreview.mobile.css">
+<script>
+    function loadScript(url, callback){
+        var script = document.createElement ("script")
+        script.type = "text/javascript";
+        if (script.readyState){ //IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" || script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else { //Others
+            script.onload = function(){
+                callback();
+            };
+        }
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+    function addSheetFile(path){
+        var fileref = document.createElement("link")
+        fileref.rel = "stylesheet";
+        fileref.type = "text/css";
+        fileref.href = path;
+        fileref.media = "screen";
+        var headobj = document.getElementsByTagName('head')[0];
+        headobj.appendChild(fileref);
+    }
+    window.onload = function(){
+        var ua=navigator.userAgent.toLowerCase();
+        var bIsIphoneOs=ua.match(/iphone os/i)=="iphone os";
+        var bIsAndroid=ua.match(/android/i)=="android";
+        var bIsWM=ua.match(/windows mobile/i)=="windows mobile";
+        if(bIsIphoneOs||bIsAndroid||bIsWM){
+            addSheetFile('/static/pd37_news_cnnb/static/css/article.css');
+            addSheetFile('/static/pd37_news_cnnb/static/css/MPreview.mobile.css');
+            loadScript("/static/pd37_news_cnnb/static/js/jquery-2.1.4.min.js",function(){
+            loadScript("/static/pd37_news_cnnb/static/js/MPreview.mobile.min.js",function(){
+                    $('#pc,embed').remove();
+                    $('#mobile').css('display', 'block');
+                    $('a').each(function(index, el) {
+                        $(this).attr('target', '_self');
+                    });
+                    var w = $(document).width() * 0.9;
+                    var h = w * 2 / 3;
+                    if(typeof(video) != "undefined"){
+                        CKobject.embed('http://flash.cnnb.com.cn:8080/ckplayer6.7/ckplayer/ckplayer.swf','a1','ckplayer_a1',w,h,true,flashvars,video,params);
+                    }
+                    $(window).bind('orientationchange',function(e){
+                        window.location.reload();
+                    });
+                    // var data = [];
+                    var title  = '{关键词1}{随机后缀}{新闻网标题}';
+                    var direction = 'left';
+                    var wrap = document.querySelector('#overlay');
+                    var elem = document.querySelectorAll('.contentArea img');
+                    $('.contentArea img').each(function(index, el) {
+                        $(this).removeAttr('style');
+                        $(this).removeAttr('height');
+                        // data.push($(this).attr('src'));
+                    });
+                    $("a").on('touch',function(e){
+                        var href = $(this).attr("href");
+                        var classname = $(this).attr("class");
+                        // alert(classname);
+                        if(classname == "gototop"){
+                            $('body,html').animate({scrollTop:0},1000);
+                        }else{
+                            window.location.href = href;
+                        }
+                    })
+                    for(var i = 0,len = elem.length;i < len;i++){
+                        elem[i].addEventListener('touch', function(e) {
+                            // e.preventDefault();
+                            wrap.className = wrap.className + ' in';
+                            var item = [];
+                            item.push(this.src);
+                            setTimeout(function() {
+                                MPreview({
+                                    data: item,
+                                    title: title,
+                                    direction: direction,
+                                    wrap: '#overlay',
+                                    init: function() {
+                                        // window.console && console.log('MPreview.mobile init');
+                                    },
+                                    close: function() {
+                                        wrap.className = wrap.className.replace(' in', '');
+                                    }
+                                });
+                            }, 400);
+                        });
+                    };
+                });
+            });
+        }else{
+            addSheetFile('/static/pd37_news_cnnb/static/css/moban.css');
+            loadScript("/static/pd37_news_cnnb/static/js/jquery-1.11.3.min.js",function(){
+                    $('#mobile').remove();
+                    $('#pc').css('display', 'block');
+                    $('a').each(function(index, el) {
+                        $(this).attr('target', '_blank');
+                    });
+                    $('#news_more_page_div_id a').each(function(index, el) {
+                        $(this).attr('target', '_self');
+                    });
+                    $('#Zoom img').each(function(index, el) {
+                        $(this).removeAttr('style');
+                        $(this).removeAttr('height');
+                    });
+            });
+        }
+    }
+</script>
+</head>
+<body>
+<style>
+    #pc,#mobile{display: none;}
+	#Zoom img{ margin:5px 0;}
+</style>
+<div id="pc">
+    <div id="topMenu">
+        
+        <ul class="mainNav menu1">
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a></li>
+            <li class="dropdown">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="dropmenu1">新闻</a>
+                <ul>
+<li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">头条</a></li>
+<li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">精彩图片</a></li>
+<li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">国内政经</a></li>
+<li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">热点聚焦</a></li>
+<li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">国际</a></li>
+<li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">社会</a></li>
+<li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href='javascript:;' rel='dropmenu1'>宁波</a>
+                <ul>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html">时政&middot;经济</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html">民生&middot;城事</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html">突发&middot;现场</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html">科技&middot;教育</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html">文化&middot;体育</a></li>
+                </ul>
+            </li>
+            <li class="dropdown edt">
+                <a href='javascript:;' rel='dropmenu1'>e点通</a>
+                <ul>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">书记留言箱</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">市长留言箱</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">部门回复精  选</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">市民文明巡访</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">小e追踪调查</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">林萍微心愿工作室</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href='javascript:;' rel='dropmenu1'>论坛</a>
+                <ul>               
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">民声热点</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">我要问政</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">风云楼市</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">公共交通</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">人在旅途</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">摄影天地</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">情感驿站</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href='#' rel='dropmenu1'>行业</a>
+                <ul>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">云涌创业</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">经济</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">活动</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">求职</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href='#' rel='dropmenu1'>视频</a>
+                <ul>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">在线视听</a></li>
+                <li class="dropNav"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">三哥演义</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="subNav">
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">搜索</a></li>
+            <li style="color: #dddddd;">|</li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">邮箱</a></li>
+            <li style="color: #dddddd;">|</li>
+            <li id="sc"><a href="">收藏</a></li>
+        </ul>
+    </div>
+    <div class="nextmenu">
+    	<img src="/static/pd37_news_cnnb/static/picture/1_2.jpg">
+    	<p class="p1">新闻</p>
+    	<p class="p2">报料热线：{随机8数字}</p>
+    </div>
+    <div style="width: 1170px; margin: 0 auto;">
+    <div class="mainArea">
+       
+        <div class="titleArea">
+            <div class="leftPart">
+                <div class="position"><span>
+
+您当前的位置 ： <a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a> &nbsp;&gt;&nbsp; <a href="/{随机字符}/{随机数字}_{随机数字}.html">新闻中心</a> &nbsp;&gt;&nbsp; <a href="/{随机字符}/{随机数字}_{随机数字}.html">宁波</a> &nbsp;&gt;&nbsp; <a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a>
+</span></div>
+                <div style="width:790px; height:2px; background-color:#468dcc;float:left;"></div>
+            </div>    
+                <div class="heading" style="padding: 28px 0 10px;">{关键词1}{随机后缀}{新闻网标题}</div>
+                <div class="subhead" style="height: 22px;float: left;font-size: 20px;line-height: 22px;padding-bottom: 28px;color:#666666;"></div>
+                <div class="source">
+                <span class="left"> 2023-02-15 18:10:00</span>
+                <span class="left">稿源： 
+
+                    {关键词1}
+　</span>
+                <div class="tool">
+                    <div class="fontSize">
+                        <a onclick="doZoom(18)"><img src="/static/pd37_news_cnnb/static/picture/1_14.jpg"></a>
+                        <a onclick="doZoom(16)"><img src="/static/pd37_news_cnnb/static/picture/1_15.jpg"></a>
+                        <a onclick="doZoom(14)"><img src="/static/pd37_news_cnnb/static/picture/1_16.png"></a>
+                    </div>
+                    <script type="text/javascript">
+                        function doZoom(size) {
+                            var zoom = document.all ? document.all['Zoom'] : document.getElementById('Zoom');
+                            zoom.style.fontSize = size + 'px';
+                        }
+						sc.onclick = function(){
+							alert("请使用组合快捷键'Ctrl+D'添加");
+						}
+                    </script>
+                </div>
+                </div>
+        </div>
+        <div class="contentArea">
+            <div class="leftPart">
+                
+                <div class="article">
+                    <center id="topic">
+
+
+</center>
+                    <div id="Zoom"><p style="text-align:left"><strong>　　{网站名称}记者 {人物名称} 通讯员 {人物名称}</strong></p>
+
+<p style="text-align:left">　　{新闻网内容}</p>
+
+ 
+
+
+
+</div>
+                    <p class="right"><b>编辑：</b> {人物名称}<span class="right" style="color:rgb(110,110,110);font-size:14px;padding-left: 30px;">纠错：<a href="mailto:{随机8数字}@qq.com" target="_blank" style="text-decoration: underline;padding-right:5px;">{随机8数字}@qq.com</a></span></p>
+                    <p class="clearfix"></p>
+                </div>
+<div>
+<!--<a href="http://www.lulong.cn" target="_blank"><img src="http://www.cnnb.com.cn/pic/0/04/16/04/4160461_914457.gif" width="650" height="40"></a>-->
+</div>
+
+                
+                <div class="picnewsArea">
+                    <ul>
+
+
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{关键词1}{标题}'><img src='{随机图片}' alt='{关键词1}{标题}'><p>{关键词1}{标题}</p></a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'><p>{标题}</p></a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'><p>{标题}</p></a></li>
+                    </ul>
+                </div>
+                <div class="picline">
+                	<ul>
+
+
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'><p>{标题}<img src="/static/pd37_news_cnnb/static/picture/xtb01.png" border="0"></p></a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{关键词1}{标题}'><img src='{随机图片}' alt='{关键词1}{标题}'><p>{关键词1}{标题}<img src="/static/pd37_news_cnnb/static/picture/xtb01.png" border="0"></p></a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'><p>{标题}</p></a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'><p>{标题}<img src="/static/pd37_news_cnnb/static/picture/xtb01.png" border="0"></p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         
+	</div>
+	<div class="rightPart">
+                <style media="screen">
+                    .ovh{overflow: hidden;}
+                    li.withPic {height: 72px;margin: 20px 0;}
+                    li.withPic img {float: left;margin-right: 10px;width: 90pt;height: 72px;}
+                    li.withPic .content {float: left;width: 175px;}
+                    p.date {font-family: "Arial";padding-top: 5px;font-size: 12px;color: #999;}
+                    ul.items li {height: 30px;overflow: hidden;}
+                    ul.items li a {font-size: 14px;color: rgb(57, 57, 57);line-height: 1.5em;white-space: nowrap;font-family: 'MicroSoft YaHei',"微软雅黑";}
+                </style>
+                <div class="rightPart">
+                    <div class="section-01 ovh">
+                        <div class="module" style="border-bottom: 2px #468dcc solid;"><span class="orangle">24小时</span>新闻点击榜</div>
+						<style>
+							li.withPic .content{
+								white-space: pre-line;
+								line-height: 20px;
+							}
+						</style>
+                        <ul>
+<li class='withPic'>
+<a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'></a>
+<div class='content'>
+<p class='title'><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{关键词1}{标题}'>{关键词1}{标题}</a></p>
+<!--<p class='date'>2023-02-06 06:55</p>-->
+</div>
+</li>
+<li class='withPic'>
+<a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'></a>
+<div class='content'>
+<p class='title'><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></p>
+<!--<p class='date'>2023-02-06 07:00</p>-->
+</div>
+</li>
+<li class='withPic'>
+<a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'><img src='{随机图片}' alt='{标题}'></a>
+<div class='content'>
+<p class='title'><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></p>
+<!--<p class='date'>2023-02-06 07:04</p>-->
+</div>
+</li>                        </ul>
+                        <ul>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{关键词1}'>{关键词1}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>                        </ul>
+                    </div>
+
+                    <div class="section-01 ovh" style="padding-top: 27px;">
+                        <div class="module"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="orangle">本地</span>看点</a></div>
+                        <ul>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>                        </ul>
+                    </div>
+                    <div class="section-01" style="padding-top: 17px;">
+                    	<div class="headl"><a href="javascript:;" target="_blank">明州论坛</a>/<a href="javascript:;" target="_blank">甬城晨笔</a></div>
+                    	<ul style="border-bottom: dashed 1px #d8d8d8; padding-bottom: 10px;">
+
+
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{关键词1}'>{关键词1}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+                        </ul>
+                        <ul>
+
+
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{关键词1}{标题}'>{关键词1}{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+<li><a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{标题}'>{标题}</a></li>
+                        </ul>
+                    </div>
+                    <ul class="mhj">
+                       <li style="float: left;">
+
+<a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{随机关键词}'><img src='{随机图片}' alt='{随机关键词}'><p>{随机关键词}</p></a>
+</li>
+                        <li style="float: right;">
+
+<a href='/{随机字符}/{随机数字}_{随机数字}.html' target='_blank' title='{随机关键词}'><img src='{随机图片}' alt='{随机关键词}'><p>{随机关键词} </p></a>
+</li>
+                    </ul>
+                    <div class="section-01" style="display: none;">
+                    	<div class="headl"><a href="javascript:;" target="_blank">茶座</a>/<a href="javascript:;" target="_blank">文摘</a></div>
+                    	<ul style="border-bottom: dashed 1px #d8d8d8; padding-bottom: 10px;">
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>                        </ul>
+                        <ul>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+</li>                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+    <div class="foot">
+	   <p>{关键词1} - 版权所有(C)</p>
+	   <p>Copyright(C) {年} {域名库}  All Rights Reserved</p>
+	   <p>互联网新闻信息服务许可证：{随机8数字}      信息网络传播视听节目许可证：{随机8数字}</p>
+	   <p>违法和不良信息举报电话：0574-{随机8数字}　举报邮箱：{随机8数字}@qq.com</p>
+</div>
+	</div>
+</div>
+
+<div style="display:none">
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript src='http://webd.cnnb.com.cn/webdig.js?z=5' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        wd_paramtracker("_wdxid=010010010011004000000000011100000030454330")
+    </script>
+    <script src="/static/pd37_news_cnnb/static/js/online_calc.js"></script>
+</div>
+	<div style="display:none;"><a href="/{随机字符}/{随机数字}_{随机数字}.html">仿站神器</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+</html>
+<!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2023-02-15 22:02:46" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->

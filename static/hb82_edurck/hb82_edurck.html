@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="6lHpWpyXduba2AHNm8QtAzyyT3hqqfp9WkPpLOJi">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}" />
+    <meta name="author" content="{关键词1}">
+    <meta name="copyright" content="{域名库}">
+	<link rel="shortcut icon" href="/{随机字符}/{随机字符}/favicon.ico">
+    <link href="/static/hb82_edurck/static/css/personal_ajax_dialog.css" rel="stylesheet">
+    <!-- Styles -->
+        <link href="/static/hb82_edurck/static/css/common.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/hb82_edurck/static/css/article.css">
+    <script type="text/javascript" src="/static/hb82_edurck/static/js/jquery-1.12.4.min.js"></script>
+    
+
+</head>
+<body>
+<!--[if lt IE 9]>
+<style>
+    .browser-uptate-tip{height: 40px;line-height: 40px;text-align: center;position: relative;background-color: #ffc107;}
+    .browser-uptate-tip .txt a{color: #000000;text-decoration: none;}
+    .browser-uptate-tip .close-tips{position: absolute;right:80px;top: 0px;width: 40px;height: 40px;cursor: pointer;}
+    .browser-uptate-tip .close-tips:hover{color: #fe2e5f;}
+</style>
+<script type="text/javascript">
+    $("body").prepend('<div class="browser-uptate-tip"><div class="txt"><a href="/{随机字符}/{随机字符}/browser/help">温馨提示，您的浏览器版本较低，请升级您的Internet Explorer浏览器！点击查看帮助</a></div><div class="close-tips">x</div></div>')
+    $(document).on("click",".close-tips",function () {
+        $(".browser-uptate-tip").hide();
+    })
+</script>
+<![endif]-->
+<link href="/static/hb82_edurck/static/css/change_color.css" rel="stylesheet" type="text/css">
+<div class="header">
+    <div class="nav-sub">
+        <div class="nav-sub-logo">
+            
+        </div>
+        <div class="nav-sub-l top-slide">
+            <div class="marqueee-wrap">
+                <ul>
+                                    </ul>
+            </div>
+        </div>
+        <div class="nav-sub-m">
+            <div class="nav-menu">
+                <ul>
+                                                                                                                                            <li class=""><a href="/{随机短字符}/{随机数字}.html" target="_self">首  页</a></li>
+                                                                                                                                                                                                                        <li class="   "><a href="/{随机短字符}/{随机数字}.html" target="_self">职位</a></li>
+                                                                                                                                                                                                                                                            <li class="  "><a href="/{随机短字符}/{随机数字}.html" target="_self">学校</a></li>
+                                                                                                                                                                                                                                                            <li class="  "><a href="/{随机短字符}/{随机数字}.html" target="_self">招聘公告</a></li>
+                                                                                                                                                                                                                                                            <li class="  "><a href="/{随机短字符}/{随机数字}.html" target="_self">教师成长</a></li>
+                                                                                                                                                                                                                                                            <li class="  "><a href="/{随机短字符}/{随机数字}.html" target="_self">教育人物</a></li>
+                                                                                                                                                                                                                                                            <li class="  "><a href="/{随机短字符}/{随机数字}.html" target="_self">教育情报</a></li>
+                                                                                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="nav-sub-r">
+            <ul class="login-wrap" id="login_nav_min">
+
+                <a hidden="" id="wyzgz_a_link" href="/{随机短字符}/{随机数字}.html" class="sub-r-link">{关键词1}</a>
+
+                <a hidden="" id="wyzp_a_link" href="/{随机短字符}/{随机数字}.html" class="sub-r-link">我要招聘</a>
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/hb82_edurck/static/js/jquery.SuperSlide.2.1.1.js"></script>
+<script>
+    $(function () {
+        $(".register_user").off().on("click",function(){
+            var url=$(this).attr("url");
+            if(url){
+                $.getJSON("/{随机字符}/{随机字符}/auth/register/status", function (result) {
+                    if (result.status == 0) {
+                        disapperTooltip('remind', result.msg);
+                    } else{
+                        location.href=url;
+                    }
+                });
+            }
+
+        })
+        // 头部公告滚动
+        $(".top-slide").slide({
+            mainCell:".marqueee-wrap ul",
+            effect:"leftMarquee",
+            autoPlay:true,
+            vis:1,
+            interTime:50,
+            trigger:"click"
+        });
+
+    })
+
+    $.get('/{随机字符}/{随机字符}/ajaxHeaderNav', function(data){
+        $('#login_nav_min').prepend(data.data.html);
+        if($('#quick_action_div').length>0){
+            $('#quick_action_div').html(data.data.release_html);
+        }
+        if(data.data.utype==1){ //学校登录
+            $(".drop_ul_navigation .drop_reg_com").css({"cursor":"default","color":"#afb5c0"})
+            $(".drop_ul_navigation .drop_reg_com").removeAttr('url');
+            $('#wyzgz_a_link').hide();
+            $('#wyzp_a_link').hide();
+
+        }else if(data.data.utype==2){ //个人登录
+            $(".drop_ul_navigation .drop_reg_resume").css({"cursor":"default","color":"#afb5c0"})
+            $(".drop_ul_navigation .drop_reg_resume").removeAttr('url');
+            $('#wyzgz_a_link').hide();
+            $('#wyzp_a_link').hide();
+        }else{ //未登录
+            $(".drop_ul_navigation .drop_reg_com").css({"cursor":"pointer","color":"#000000"})
+            $(".drop_ul_navigation .drop_reg_resume").css({"cursor":"pointer","color":"#000000"})
+            $('#wyzgz_a_link').hide();
+            $('#wyzp_a_link').hide();
+        }
+
+     });
+    function checkStatus(type){
+        if(type==1){
+            url = "{当前url}";
+        } else {
+            url = "{当前url}";
+        }
+        $.getJSON("/{随机字符}/{随机字符}/auth/register/status", function (result) {
+            if (result.status == 0) {
+                disapperTooltip('remind', result.msg);
+            } else{
+                location.href=url;
+            }
+        });
+    }
+
+</script>
+    <div>
+        <div>
+            
+        </div>
+    </div>
+    <div class="newsshow">
+        <div class="l">
+            <div class="main">
+                <div class="ntitle">{关键词1}{随机后缀}{新闻网标题}</div>
+                <div class="time">
+                                            <span>作者：{人物名称}</span>
+                                                                <span>来源：{关键词1}</span>
+                                        <span>日期：{今日时间}</span>
+
+                </div>
+                <div class="txt">
+                    {新闻网内容}
+                    <img src="{随机图片}" alt="{随机关键词}">
+                </div>
+                <div class="next link_gray6">
+                    <div class="nextl substring">
+                                                    上一条：<a href="/{随机短字符}/{随机数字}.html">{随机关键词}</a>
+                                            </div>
+                    <div class="nextr substring">
+                                                    下一条：<a href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                            </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="r">
+            
+            <div class="cat">
+                <ul class="link_gray6">
+                                                                        <li class="odd   select ">
+                                <a href="/{随机短字符}/{随机数字}.html">
+                                    招聘公告
+                                </a>
+                            </li>
+                                                    <li class=" ">
+                                <a href="/{随机短字符}/{随机数字}.html">
+                                    教师成长
+                                </a>
+                            </li>
+                                                    <li class="odd  ">
+                                <a href="/{随机短字符}/{随机数字}.html">
+                                    教育人物
+                                </a>
+                            </li>
+                                                    <li class=" ">
+                                <a href="/{随机短字符}/{随机数字}.html">
+                                    教育情报
+                                </a>
+                            </li>
+                                            
+                </ul>
+                <div class="clear"></div>
+            </div>
+            
+                            <div class="listbox">
+                    <div class="ntit"><div class="tlh">资讯列表</div></div>
+                    <ul class="link_gray6">
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{关键词1}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{关键词1}{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                            </ul>
+                </div>
+            
+
+            
+                            <div class="listbox">
+                    <div class="ntit"><div class="tlh">热门资讯</div></div>
+                    <ul class="link_gray6">
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                            </ul>
+                </div>
+            
+            
+                            <div class="listbox">
+                    <div class="ntit"><div class="tlh">推荐资讯</div></div>
+                    <ul class="link_gray6">
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{关键词1}{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                                    <li>
+                                                                    <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            </li>
+                                            </ul>
+                </div>
+            
+
+        </div>
+        <div class="clear"></div>
+    </div>
+<div class="footer_min_box">
+    <div class="footer_min" id="footer">
+        <div class="links link_gray6">
+            <a target="_blank" href="/{随机短字符}/{随机数字}.html">网站首页</a>
+                                                                        |   <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                                                |   <a target="_blank" href="/{随机短字符}/{随机数字}.html">{关键词1}</a>
+                                                                                |   <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                                                |   <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                                                |   <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                                                |   <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+                                                            |   <a target="_blank" href="/{随机短字符}/{随机数字}.html">{标题}</a>
+        </div>
+        <div class="txt">
+            
+            
+           
+            
+            Copyright © {年} {网站名称}  {域名库}
+            <p class="copyright">
+                
+                <br>
+            </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/hb82_edurck/static/js/jquery.disappear.tooltip.js"></script>
+<div class="floatmenu">
+    <div id="backtop" class="item backtop" style="display: none;"><a class="blk"></a></div>
+    
+        <div class="item mobile">
+            
+            <div class="popover popover1">
+                <div>
+                    
+                    
+                </div>
+            </div>
+            
+            <div class="popover">
+                <div>
+                    
+                    
+                </div>
+                <div class="popover-arr"></div>
+            </div>
+            
+        </div>
+    
+    <div></div>
+</div>
+<script type="text/javascript">
+    var global = {
+        h:$(window).height(),
+        st: $(window).scrollTop(),
+        backTop:function(){
+            global.st > (global.h*0.5) ? $("#backtop").show() : $("#backtop").hide();
+        }
+    }
+    $('#backtop').on('click',function(){
+        $("html,body").animate({"scrollTop":0},500);
+    });
+    global.backTop();
+    $(window).scroll(function(){
+        global.h = $(window).height();
+        global.st = $(window).scrollTop();
+        global.backTop();
+    });
+    $(window).resize(function(){
+        global.h = $(window).height();
+        global.st = $(window).scrollTop();
+        global.backTop();
+    })
+</script>
+<link href="/static/hb82_edurck/static/css/change_color.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/static/hb82_edurck/static/js/jquery.modal.dialog.js"></script>
+<div style="display: none;" class="website_statistics">
+    
+</div>
+<div id="captcha-popup" class="dx_captcha dx_captcha_loading-style-popup" style="width: 300px; transform: scale(1);z-index: 100002"></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>
+        <script>
+        $(function(){
+            var click_url = "/{随机字符}/{随机字符}/content/news/click/3988";
+            $.get(click_url).then(function(data) {
+                if(data.status=='1'){
+                    var click = parseInt("153") + 1;
+                    $('#news_click').text(click);
+                }
+            });
+        });
+    </script>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        var link = '["http:\/\/www.jyb.cn","http:\/\/ks.chinaedu.edu.cn\/","http:\/\/www.people.com.cn\/","http:\/\/www.xinhuanet.com\/","http:\/\/www.gmw.cn\/","http:\/\/www.chinanews.com\/","http:\/\/www.china.com.cn\/","http:\/\/www.youth.cn\/","http:\/\/www.centv.cn\/"]';
+        var link_array = eval('('+link+')');
+        $(".new_tag").click(function (event) {
+            var url = $(this).attr('href');
+            var pr = $(this).attr('preach');
+            var result= $.inArray(url, link_array);
+            if(result == -1){
+                if(pr!='preach'){
+                    if (url) {
+                        var address = "/{随机字符}/{随机字符}";
+                        address = address.split('//');
+                        if (address[1] && url.indexOf('http') != -1) {
+                            address = address[1];
+                            if (typeof (url) != 'undefined') {
+                                var url_end = url.substr(url.length - 4);
+                                if (url_end.indexOf('doc') == -1 && url_end.indexOf('docx') == -1 && url_end.indexOf('xls') == -1 && url_end.indexOf('xlsx') == -1) {
+                                    if (url != '/' && url.indexOf(address) == -1) {
+                                        event.preventDefault();
+                                        var link_tips = $(this).dialog({
+                                            title: '第三方链接提醒',
+                                            loading: true,
+                                            btns: ['继续前往', '取消前往'],
+                                            yes: function () {
+                                                window.open(url);
+                                            }
+                                        });
+                                        $.get("/{随机字符}/{随机字符}/link/tip", function (result) {
+                                            link_tips.setContent(result);
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        })
+    })
+</script>

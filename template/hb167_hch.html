@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}">
+<meta name="description" content="{自定义描述}">
+<script>
+    var isPC = function (){
+        var userAgentInfo = navigator.userAgent.toLowerCase();
+        var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        }
+        return flag;
+    }
+    var pcUlr = "http://hch.ahwang.cn";
+    var mobleUlr = "http://m.ahwang.cn";
+    if(isPC()&&window.location.href.indexOf(mobleUlr)!=-1){
+        window.location.href = pcUlr+GetUrlRelativePath()
+   }else if(!isPC()&&window.location.href.indexOf(pcUlr)!=-1 &&window.location.href.indexOf("mobile")==-1){
+           window.location.href = mobleUlr+GetUrlRelativePath(); 
+        
+    }
+    function GetUrlRelativePath(){
+        var url = document.location.toString();
+        var arrUrl = url.split("//");
+        var start = arrUrl[1].indexOf("/");
+        var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+        if(relUrl.indexOf("?") != -1){
+            relUrl = relUrl.split("?")[0];
+        }
+        return relUrl;
+    }
+</script>
+<meta http-equiv="mobile-agent" content="format=html5; url={当前url}">
+<link href="/_/static/hb167_hch/static/css/public.css" rel="stylesheet" type="text/css">
+<link href="/_/static/hb167_hch/static/css/master.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/_/static/hb167_hch/static/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<!-- 页眉starting  -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".font-size").hover(function(){
+            $(this).children(".size_level").slideDown("fast");
+        },function(){
+            $(this).children(".size_level").slideUp("fast");
+        });
+        $(".size_level li").click(function(){
+            var newssize = $(".news_txt").attr("data-size"),
+                liID = $(this).attr("id");
+            if(newssize.length==0){
+                newssize="standard";
+            }
+            if($(this).hasClass("on")){
+                return;
+            }else{
+                $(this).addClass("on").siblings().removeClass("on");
+                $(".news_txt").removeClass(newssize).addClass(liID).attr("data-size",liID);
+                wwwstore.setItem("fontSize",liID);
+            }
+        });
+    });
+</script>
+<header class="header">
+<div class="full-wrap">
+    <div class="wrap">
+       
+    </div>
+</div>
+</header>
+<!-- @end 页面 -->
+<!-- nav starting -->
+<nav>
+    <div class="wrap navlist">
+        <ul>
+            <li><a href="{泛站内链}">首页</a></li>
+            <li><a href="{泛站内链}">新闻</a></li>
+            <li><a href="{泛站内链}">房产</a></li>
+            <li><a href="{泛站内链}">汽车</a></li>
+            <li><a href="{泛站内链}">建材</a></li>
+            <li><a href="{泛站内链}">教育</a></li>
+            <li><a href="{泛站内链}">旅游</a></li>
+            <li><a href="{泛站内链}">健康</a></li>
+            <li><a href="{泛站内链}">美食</a></li>
+            <li><a href="{泛站内链}">文化</a></li>
+            <li><a href="{泛站内链}">金融</a></li>
+            <li><a href="{泛站内链}">商业</a></li>
+            <li><a href="{泛站内链}">县乡社区</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- @end nav--><div class="wrap t20">
+    <div class="lcontent fl">
+    <div class="share-box">
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        </div>
+    </div>
+
+    <div class="mcontent  fl top15 w700">
+    <div class="news_path top15"><a href="{泛站内链}">首页</a>&gt; <a href="{泛站内链}">{随机关键词}</a>&gt; <a href="{泛站内链}">新闻</a>&gt; {关键词1}</div>
+<!--图片模式新闻列表开始 -->
+<div class="news-mode-show">
+<div class="article-main">
+    <h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+    <div class="article-infos">
+     <span class="release-date">{当前时间}</span>
+     <span class="source">来源:
+    <a href="{泛站内链}" target="_blank">{随机关键词2}</a></span> 
+    <div class="font-size">
+  
+
+    </div>                 
+    </div>                                                                                 
+                    <!--文章内容-->
+   
+        <p>{新闻网内容}</p>
+
+    
+ 
+    <div></div>
+    <div></div>         
+                    
+                    <div></div>
+            </div>
+</div>
+<!-- @end图片模式新闻列表 -->
+<!-- 点击查看更多 -->
+    </div>
+    <div class="w300 fr t10">
+    <div class="anhui fl chah">
+    <h2>即时<i>安徽</i></h2>
+    <em><a href="{泛站内链}">更多</a></em>
+    <ul class="size16 m-l-15 t10 line40 left">  
+     
+    <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+     
+    <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+     
+    <li><a href="{泛站内链}" target="_blank">{关键词1}</a></li>
+     
+    <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+     
+    <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+     
+    <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+     
+    <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+     
+    <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+     
+    </ul>
+    </div>
+    <div class="zt bj-line w300 line35 size16 fl t10">
+        <h2><a href="{泛站内链}" class="colorca1">精彩专题</a></h2>
+<ul class="t10">
+<li class="videoroc"><a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt="{标题}"></a>
+            <p>{关键词1}</p></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+</ul>
+
+
+
+    </div>
+<!-- @end 专题 -->
+    <div class="zt bj-line w300 line35 size16 fl">
+        <h2><a href="">精彩活动</a></h2>
+    <ul class="size16 m-l-10 t10 line40 left"> 
+                    <li class="roctwo">
+                <a href="{泛站内链}" target="_blank"><img src="{随机图片}" alt="{标题}"></a>
+                <p>{关键词1}{标题}</p>
+                </li>
+                        <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+                        <li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+                        <li><a href="{泛站内链}" target="_blank">{随机关键词}</a></li>
+            </ul>
+    </div>
+        <!-- @end 文化ssi -->
+    <div class="zt bj-line w300 line35 size16 fl">
+        <h2><a href="" class="color434">点击排行</a></h2>
+        <ul class="size16 m-l-15 t20 line40 left">  
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+<li><a href="{泛站内链}" target="_blank">{标题}</a></li>
+</ul>    </div>
+        <!-- @end 教育 -->
+    </div>
+</div>
+<!-- 底部 -->
+<footer>
+    <div class="wrap">
+        <div class="ahwlogo fl"></div>
+        <div class="otherinfo fl line40 center">  
+            Copyright © {年} {域名库} All Right Reserved.　版权所有：{关键词1} 
+            <br>新闻备案号：皖网宣备{随机5数字}号　信息产业部备案/许可证编号: 皖ICP备{随机8数字}号<br>　
+            <a href="{泛站内链}" target="_blank">{随机关键词}</a><br>
+        </div>
+        
+    </div>
+</footer>
+
+<script>
+var _mtac = {};
+(function() {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500730101");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+})();
+</script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>           	
+</body>
+</html>

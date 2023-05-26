@@ -1,0 +1,1 @@
+document.write("<a href='https://www.gaoshouyou.com/gd/29.html' target=_blank><img src='https://rs.1.gaoshouyou.com/p/202004/0158e55cb67292923a7c261b4f4f27dd.jpg' border=0 width='1160' height='97' alt='好用的手游模拟器'></a>");

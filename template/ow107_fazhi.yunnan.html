@@ -1,0 +1,671 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>{自定义标题}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="robots" content="index, follow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="googlebot" content="index, follow">
+  <meta name="author" content="{当前主域名},{关键词1}">
+  <meta name="Copyright" content="{当前主域名},{关键词1}{辅助描述}">
+  <meta name="keywords" content="{关键词1}" />
+  <meta name="description" content="{自定义描述}">
+  <link rel="shortcut icon" href="http://commondata.yunnan.cn/cms_template/100/000/008/images/favicon.ico"
+    type="image/x-icon">
+  <link rel="stylesheet" href="/_/static/ow107_fazhi.yunnan/static/css/index.css" type="text/css" media="all">
+  <script type="text/javascript" src="/_/static/ow107_fazhi.yunnan/static/js/swfobject.js"></script>
+  <script type="text/javascript" src="/_/static/ow107_fazhi.yunnan/static/js/video3.js"></script>
+  <script type="text/javascript" src="/_/static/ow107_fazhi.yunnan/static/js/qrcode.min.js"></script>
+  <script type="text/javascript">
+    if ((navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i))) {
+      window.location.href = '//m.yunnan.cn/system/2023/03/24/032517843.shtml';
+    }
+  </script>
+</head>
+
+<body>
+
+
+  <style>
+    a {
+      text-decoration: none
+    }
+
+    .header2014 {
+      width: 100%;
+      height: 60px;
+      background-color: #f5f5f5;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      font-family: sans-serif
+    }
+
+    .header2014-mid img,
+    .header2014-mid input {
+      vertical-align: middle;
+      display: inline
+    }
+
+    .header2014-mid {
+      width: 1000px;
+      margin: 0 auto;
+      clear: both;
+      position: relative
+    }
+
+    .header2014-left {
+      height: 60px;
+      line-height: 60px;
+      font-size: 14px;
+      color: #000;
+      text-align: left;
+      position: relative;
+      float: left
+    }
+
+    .header2014-left-hide {
+      background-color: #fff;
+      border: 1px solid #d8d8d8;
+      position: absolute;
+      right: -55px;
+      line-height: 30px;
+      top: 60px;
+      display: none
+    }
+
+    #header2014-left-tip {
+      height: 60px;
+      display: inline-block
+    }
+
+    .header2014-left a,
+    .header2014-left a:link,
+    .header2014-left a:visited {
+      color: #000;
+      display: inline-block;
+      margin: 0 5px
+    }
+
+    .header2014-right a,
+    .header2014-right a:link,
+    .header2014-right a:visited {
+      color: #a4a4a4;
+      display: inline-block;
+      margin: 0 5px
+    }
+
+    .header2014-right {
+      height: 60px;
+      line-height: 60px;
+      font-size: 14px;
+      color: #a4a4a4;
+      text-align: left;
+      position: relative;
+      float: right
+    }
+
+    .header2014-right img {
+      vertical-align: middle;
+      display: inline
+    }
+
+    #header2014-right-tip {
+      height: 60px;
+      display: inline-block
+    }
+
+    .header2014-right-hide {
+      width: 90px;
+      height: 60px;
+      background: #fff;
+      border: 1px solid #dbe0e3;
+      border-radius: 3px;
+      -webkit-box-shadow: 0 0 6px #d3d3d3;
+      -moz-box-shadow: 0 0 6px #d3d3d3;
+      box-shadow: 0 0 6px #d3d3d3;
+      position: absolute;
+      left: 60px;
+      line-height: 30px;
+      text-align: center;
+      top: 60px;
+      display: none
+    }
+
+    .header2014-main {
+      width: 100%;
+      min-height: 65px;
+      background-color: #fff;
+      margin: 60px 0 0;
+      padding: 15px 0
+    }
+
+    .header2014-main-r {
+      position: absolute;
+      width: 345px;
+      right: 0;
+      top: 50%;
+      margin-top: -20px
+    }
+
+    .header2014-main-r input {
+      vertical-align: top
+    }
+
+    .header2014-main-r .inp1 {
+      width: 288px;
+      height: 38px;
+      line-height: 38px;
+      border: 1px solid #a7a7a7;
+      padding: 0 5px
+    }
+
+    .header2018-bottom-left {
+      float: left
+    }
+
+    .mobshow {
+      display: none
+    }
+
+    @media screen and (max-width:600px) {
+      .header2014 {
+        background-color: #fff
+      }
+
+      .header2014-right,
+      .header2018-bottom,
+      .pcshow {
+        display: none
+      }
+
+      .mobshow {
+        display: inline-block
+      }
+
+      .header2014-left,
+      .header2014-mid {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: sans-serif
+      }
+
+      .header2014-main {
+        min-height: 0;
+        padding: 0
+      }
+    }
+
+    .clearfix:after,
+    .clearfix:before {
+      content: '.';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      font-size: 0;
+      line-height: 0;
+      width: 0;
+      height: 0
+    }
+
+    .clearfix:after {
+      clear: both
+    }
+
+    .clearfix {
+      zoom: 1
+    }
+  </style>
+  <div class="header2014">
+    <div class="header2014-mid">
+      <div class="header2014-left"><span class="mobshow"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow107_fazhi.yunnan/static/picture/logo.jpg"
+              width="120"></a><a href="/{随机字符}/{随机数字}_{随机数字}.html">云南网首页</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">新闻</a> <a
+            href="/{随机字符}/{随机数字}_{随机数字}.html">云南</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">图片</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">社会</a> <a
+            href="/{随机字符}/{随机数字}_{随机数字}.html">公益</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">彩云网评</a> </span><span class="pcshow"><a
+            href="/{随机字符}/{随机数字}_{随机数字}.html">云南网首页</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">新闻</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">云南</a> <a
+            href="/{随机字符}/{随机数字}_{随机数字}.html">图片</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">社会</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">公益</a> <a
+            href="/{随机字符}/{随机数字}_{随机数字}.html">彩云网评</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">乡村振兴</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">法治</a> <a
+            href="/{随机字符}/{随机数字}_{随机数字}.html">教育</a> <span id="header2014-left-tip" onmouseout='hidetip2014("header2014-left-hide")'
+            onmouseover='showtip2014("header2014-left-hide")'>更多 <img src="/_/static/ow107_fazhi.yunnan/static/picture/down.jpg" alt="更多">
+            <div class="header2014-left-hide" id="header2014-left-hide"><a href="/{随机字符}/{随机数字}_{随机数字}.html">金色热线</a> <a
+                href="/{随机字符}/{随机数字}_{随机数字}.html">市长热线</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">新闻发布厅</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">人才强滇</a></div>
+          </span></span></div>
+      <div class="header2014-right"><a href="javascript:fycnPage();" id="fycn" target="_self">简</a> <a
+          href="javascript:fycnPage();" id="fytw" target="_self">繁</a> <span id="header2014-right-tip"
+          onmouseout='hidetip2014("header2014-right-hide")' onmouseover='showtip2014("header2014-right-hide")'><img
+            src="/_/static/ow107_fazhi.yunnan/static/picture/mail.png" alt="邮箱">
+          <div class="header2014-right-hide" id="header2014-right-hide"><a href="/{随机字符}/{随机数字}_{随机数字}.html">云南网邮箱</a> <a
+              href="/{随机字符}/{随机数字}_{随机数字}.html">云报邮箱</a></div>
+        </span><a href="/{随机字符}/{随机数字}_{随机数字}.html">登录</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">注册</a></div>
+    </div>
+  </div>
+  <div class="header2014-main">
+    <div class="header2014-mid clearfix header2018-bottom">
+      <div class="header2018-bottom-left"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow107_fazhi.yunnan/static/picture/logo.jpg" alt="法治新闻"></a>
+      </div>
+      <div class="header2014-main-r">
+        <form action="https://ynsearch.yunnan.cn/m_fullsearch/searchurl/mfullsearch!descResult.do" id="findform"
+          method="post" name="findform"><input name="keywords" value="请输入关键词" class="inp1"
+            onblur='""==this.value&&(this.value="请输入关键词")' onfocus='this.value=""'> <input name="channelId" value="0"
+            type="hidden"> <input type="image" src="//commondata.yunnan.cn/cms_template/100/000/091/images/search.png">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="/_/static/ow107_fazhi.yunnan/static/js/tw_cn.js"></script>
+  <script>function showtip2014(e) { document.getElementById(e).style.display = "block" } function hidetip2014(e) { document.getElementById(e).style.display = "none" }</script>
+  <div class="space01"></div>
+  <div class="w96 ohd clear">
+
+
+    <script type="text/javascript" src="/_/static/ow107_fazhi.yunnan/static/js/m.js"></script>
+    <!-- 广告位：2016内容页顶部广告 -->
+    <script type="text/javascript">BAIDU_CLB_fillSlot("2907053");</script>
+    <!-- 广告位：2011最终页面顶部横幅广告 -->
+    <script type="text/javascript">BAIDU_CLB_fillSlot("190322");</script>
+  </div>
+  <div class="space01"></div>
+  <div class="w96 ohd clear">
+    <div class="xleft fl">
+      <div class="xlayer01 ohd clear"><span class="cms_block_span">您当前的位置：<a href="/{随机字符}/{随机数字}_{随机数字}.html">{网站名称}</a>&nbsp;>>&nbsp;<a
+            href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a></a>&nbsp;>>&nbsp;</span>正文</div>
+      <div class="space01"></div>
+      <div class="xx ohd clear">
+        <div class="xcont ohd clear">
+          <span class="xt yh" id="layer213">{关键词1}{随机后缀}{新闻网标题}</span>
+          <div class="space01" style="height:20px;"></div>
+          <span class="xt2 yh fl">发布时间：<span>{当前时间}</span>&nbsp;&nbsp;来源：<span>
+
+            {关键词1}
+            </span></span>
+          <div class="xshare fr"><span>
+
+              <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow107_fazhi.yunnan/static/picture/wb.jpg" width="16"></a> <a id="qrcode" href="/{随机字符}/{随机数字}_{随机数字}.html"
+                onclick="wxqrcode()"><img src="/_/static/ow107_fazhi.yunnan/static/picture/wx.jpg" width="16">
+                <div id="wxpop">
+                  <div id="wxpopcon"><span>分享到微信</span><a id="wxpopclose" href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="closeqr()">×</a></div>
+                  <div id="popqrcode"></div>
+                  <script
+                    type="text/javascript">var url = document.URL; var qrcode = new QRCode(document.getElementById("popqrcode"), { text: url, width: 164, height: 164 });</script>
+                </div>
+              </a>
+              <script>function wxqrcode() { document.getElementById('wxpop').style.display = 'block'; } function closeqr() { document.getElementById('wxpop').style.display = 'none'; }</script>
+            </span> </div>
+          <div class="line02 ohd clear"></div>
+          <div class="xcc font14 yh ohd clear">
+            <input type="hidden" value="" name="vidpic" id="vidpic">
+            <div id="layer216">
+              <p>{新闻网内容}</p>
+            </div>
+
+
+
+            <div class="space01"></div>
+            <div class="fr">责任编辑:<span>{人物名称}</span></div>
+          </div>
+          <div class="space02"></div>
+          <div class="xer ohd clear">
+
+
+          </div>
+          <div class="space01"></div>
+          <div class="line01 ohd clear"></div>
+          <div class="xlt ohd clear" id="xgxwcontent">
+
+
+
+            <style>
+              .tr_100004160 {
+                line-height: 30px;
+              }
+
+              .tr_100004160 a {
+                text-decoration: none;
+                color: #000000;
+              }
+
+              .tr_100004160 a:hover {
+                text-decoration: none;
+                color: #3C6088;
+              }
+
+              .tr_td1_span_100004160 {
+                background-color: #FF6666;
+                display: block;
+                width: 15px;
+                height: 14px;
+                font-size: 12px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 14px;
+              }
+
+              .tr_td2_span_100004160 {
+                background-color: #FF9933;
+                display: block;
+                width: 15px;
+                height: 14px;
+                font-size: 12px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 14px;
+              }
+
+              .tr_td3_span_100004160 {
+                background-color: #FFCC99;
+                display: block;
+                width: 15px;
+                height: 14px;
+                font-size: 12px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 14px;
+              }
+
+              .tr_td4_span_100004160 {
+                background-color: #33CCCC;
+                display: block;
+                width: 15px;
+                height: 14px;
+                font-size: 12px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 14px;
+              }
+            </style>
+
+            <table border="0" cellspacing="0">
+            </table>
+
+
+
+
+          </div>
+          <div class="space02"></div>
+          <!--底部嵌入-->
+
+
+          <html>
+
+          <head>
+          </head>
+
+          <body>
+            <div class="tit2 ohd clear">
+              <span><a href="/{随机字符}/{随机数字}_{随机数字}.html">今日云南</a></span><span style="float: right"><a href="/{随机字符}/{随机数字}_{随机数字}.html" id="jubao"><img
+                    src="/_/static/ow107_fazhi.yunnan/static/picture/jubao.jpg" width="18"> 举报</a></span>
+            </div>
+            <div class="space01"></div>
+            <div class="xla ohd clear">
+              <div class="xla3 fl" style="width:100%;font-size:14px">
+                <ul class="lh2">
+
+
+                  <li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}{标题}</a></li>
+                  <li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+                  <li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+                  <li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+                  <li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+                  <li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+                  <li>·<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="space01" style="height:20px;"></div>
+            <div class="tit2 ohd clear"><span><a href="/{随机字符}/{随机数字}_{随机数字}.html">读图</a></span></div>
+            <div class="space01"></div>
+            <div class="ximg ohd clear">
+
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}{关键词1}</a></span>
+              </div>
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></span>
+              </div>
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></span>
+              </div>
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></span>
+              </div>
+              <div class="space01"></div>
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></span>
+              </div>
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></span>
+              </div>
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></span>
+              </div>
+              <div class="ximg1 fl" style="margin-right:11px">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="{随机图片}" border="0"
+                    width="154"></a>
+                <span><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a></span>
+              </div>
+
+            </div>
+          </body>
+
+          </html>
+          <!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2023-03-25 17:39:32" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->
+        </div>
+      </div>
+    </div>
+    <div class="xright fr">
+      <!--右侧嵌入-->
+
+
+      <div class="xlayer05 ohd clear">
+        <!-- 广告位：内容列表页右侧240x345 -->
+        <div class="tit ohd clear">
+          <span>政策解读</span>
+          <div class="moreright3 fr"></div>
+        </div>
+        <div class="space01"></div>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+
+
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+
+      </div>
+      <div class="space01"></div>
+      <div class="xlayer05 ohd clear">
+        <div class="tit ohd clear">
+          <span>彩云网评</span>
+          <div class="moreright3 fr"></div>
+        </div>
+        <div class="space01"></div>
+
+
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+
+      </div>
+      <div class="space01"></div>
+      <div class="xlayer05 ohd clear">
+        <div class="tit ohd clear">
+          <span>视频</span>
+          <div class="moreright3 fr"></div>
+        </div>
+        <div class="space01"></div>
+
+
+        <div class="xlayer05 ohd fl">
+          <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+          <h3><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></h3>
+        </div>
+
+        <div class="space01"></div>
+
+
+        <ul class="font14 yh">
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></li>
+        </ul>
+
+      </div>
+      <div class="space01"></div>
+      <div class="xlayer05 ohd clear">
+        <div class="tit ohd clear">
+          <span>专题</span>
+          <div class="moreright3 fr"></div>
+        </div>
+        <div class="space01"></div>
+
+
+        <div class="xlayer05 ohd fl">
+          <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+          <h3><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></h3>
+        </div>
+
+        <div class="space01"></div>
+
+
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+
+      </div>
+
+      <div class="xlayer05 ohd clear">
+        <div class="tit ohd clear">
+          <span><a href="/{随机字符}/{随机数字}_{随机数字}.html">云南观察</a></span>
+          <div class="moreright3 fr"></div>
+        </div>
+        <div class="space01"></div>
+
+
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}{关键词1}</a></li>
+        </ul>
+        <ul class="font14 yh">
+          <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+        </ul>
+
+      </div>
+      <div class="space01"></div>
+      <!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2023-03-25 17:42:13" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->
+    </div>
+  </div>
+  <input type="hidden" value="{关键词1}{随机后缀}{新闻网标题}" name="title">
+  <input type="hidden" value="032517843" name="nsid">
+  <input type="hidden" value="{网站名称}" name="sitename">
+  <input type="hidden" value="{当前时间}" name="pubtime">
+  <input type="hidden" value="{人物名称}" name="subscriber">
+  <input type="hidden" value="{关键词1}" name="copyfrom">
+  <input type="hidden" value="0" name="origin">
+  <input type="hidden" value="{关键词1}{辅助描述}" name="nodename">
+  <div class="space01"></div>
+
+
+    <a href="/{随机字符}/{随机数字}_{随机数字}.html">云南网简介</a>　｜　 服务合作 ｜　 <a
+    href="/{随机字符}/{随机数字}_{随机数字}.html">广告报价</a>　｜　 <a href="/{随机字符}/{随机数字}_{随机数字}.html">联系方式</a>　｜　 <a href="/{随机字符}/{随机数字}_{随机数字}.html">中央厨房</a>　｜　 <a
+    href="/{随机字符}/{随机数字}_{随机数字}.html">网站声明</a><br><a href="/{随机字符}/{随机数字}_{随机数字}.html">滇ICP备08000875号</a> <a
+    href="/{随机字符}/{随机数字}_{随机数字}.html">互联网新闻信息服务许可证编号：53120170002</a> <a href="/{随机字符}/{随机数字}_{随机数字}.html">信息网络传播视听节目许可证号：2511600</a><br><a
+    href="/{随机字符}/{随机数字}_{随机数字}.html">互联网出版许可证：新出网证（滇）字 04号</a><br><a href="/{随机字符}/{随机数字}_{随机数字}.html">广播电视节目制作经营许可证号：（云）字第00093号</a><br><a
+    href="/{随机字符}/{随机数字}_{随机数字}.html">增值电信业务经营许可证编号：滇B2-20090008</a> ® {域名库} All Rights Reserved since
+  {年}<br>未经{网站名称}书面特别授权，请勿转载或建立镜像，违者依法必究
+  <!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2022-11-16 17:39:25" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->
+
+
+  <script src="/_/static/ow107_fazhi.yunnan/static/js/online_calc.js"></script>
+  <script src="/_/static/ow107_fazhi.yunnan/static/js/unicodeConv.js" type="text/javascript"></script>
+  <script src="/_/static/ow107_fazhi.yunnan/static/js/webstat_end.js" type="text/javascript"></script>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>
+<!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2023-03-24 07:52:11" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->

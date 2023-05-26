@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+<link rel="shortcut icon" href="http://hwd.hydst.com/templates/hengyang/image/logo1.png">
+<link rel="stylesheet" href="/_/static/ow320_hydst/static/css/style1.css">
+<link rel="stylesheet" type="text/css" href="/_/static/ow320_hydst/static/css/pplm.css">
+<link rel="stylesheet" type="text/css" href="/_/static/ow320_hydst/static/css/sy.css">
+<link rel="stylesheet" type="text/css" href="/_/static/ow320_hydst/static/css/dl_zc.css">
+<script src="/_/static/ow320_hydst/static/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/_/static/ow320_hydst/static/js/jquery-1.9.1.js"></script>
+<script src="/_/static/ow320_hydst/static/js/ClientBehavior1.js" type="text/javascript"></script>
+<script src="/_/static/ow320_hydst/static/js/jquery-1.8.3.minn.js"></script>
+</head>
+<style>
+div.fL div,p
+{
+	width:auto !important;
+}
+       div.fL img
+{
+	max-width:100% !important;
+        margin:0 auto;
+}
+</style>
+<script>
+    $(function() {
+        search();
+        dengru();
+        zhuce();
+    })
+    
+</script>
+<body>
+<link href="/_/static/ow320_hydst/static/css/style.css" rel="stylesheet" type="text/css">
+<div class="kuan1520">
+         <div class="kuan1320">
+   <div class="kuan820 fl">
+      <div class="logo fl" style="margin-top:15px;"></div>
+      <div class="logo-r-ad fl"> </div>
+      <div class="ss fr" style=" margin-top:25px; width:490px;">
+        <span><select id="selectlist" style="margin-top:2px;height:35px;border:none;">
+ <option value="vods">点播</option>
+  <option value="news">新闻</option>
+    </select></span>
+        <div id="bdcs" style="float:right;">
+          <div class="bdcs-container">
+            <meta http-equiv="x-ua-compatible" content="IE=9">
+            <!-- 嵌入式 -->
+            <div class="bdcs-main bdcs-clearfix" id="default-searchbox">
+              <div class="bdcs-search bdcs-clearfix" id="bdcs-search-inline">
+                
+                  <input type="hidden" name="s" value="9413525167638165204">
+                  <input type="hidden" name="entry" value="1">
+                  <input type="text" name="q" class="bdcs-search-form-input" id="bdcs-search-form-input" placeholder="搜你想看的~" autocomplete="off" style="height: 40px; line-height: 40px;">
+                  <input type="submit" class="bdcs-search-form-submit " id="bdcs-search-form-submit" value="搜索">
+               
+              </div>
+              <div class="bdcs-search-sug" id="bdcs-search-sug" style="top: 54px; width: 309px;">
+                <ul class="bdcs-search-sug-list" id="bdcs-search-sug-list">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="qmt w320 fr" style="margin-top:18px;">
+      <div class="qmtlist">
+        <div class="lm" id="d1" style="display: none;">
+          <div class="lmico"></div>
+          <a id="zhu" target="_blank" style="cursor: pointer;"> 注册</a>/
+          <a id="den" target="_blank" style="cursor: pointer;">登录</a>   
+        </div>
+         <div class="lm" id="d2" style="display: none;">
+          <div class="lmico"></div>
+          <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" style="cursor: pointer;"> 会员</a>/
+          <a id="exit" target="_blank" style="cursor: pointer;">退出</a>   
+        </div>
+        <div class="lm" id="d3" style="display: none;">
+          <div class="lmico"></div>
+          <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" style="cursor: pointer;"> 会员</a>/
+          <a style="cursor: pointer;" target="_blank">退出</a>   
+        </div>
+        <div class="wx"><a>
+          <div class="wxico" onclick="showwx();"></div>
+          <p onclick="showwx();">微信</p> </a> 
+        </div>
+       <div class="tq">
+         <div style="display: inline-block;height:58px;width:230px;float: right;    background: linear-gradient(to right,#ff8b1e 0, #ff5f00 100%) !important;
+    background: -wekit-linear-gradient( left,#ff8b1e 0, #ff5f00 100%) !important;">
+           <iframe id="fancybox-frame" name="fancybox-frame1534303401371" frameborder="0" scrolling="no" hspace="0" src="/_/static/ow320_hydst/index-code_225.html" style="    width: 230px;height:60px; margin-left: 20px;"></iframe>
+           </div>
+        </div>
+      </div>
+    </div>
+         <!--qmt end--> 
+       </div>
+     </div>
+     <div class="nav" style="background-color:#ff5500;">
+       <div class="k1320_nav">
+          <ul>
+             <li>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a>
+             </li>
+             <li>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">广电媒体</a>
+             </li>
+             <li>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">品牌栏目</a>
+             </li>
+            <li>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">专题报道</a>
+             </li>
+             <li>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">活动</a>
+             </li>
+         <!--    <li class="zhibo">
+                <a>直播</a>
+                <ul>
+				 	<li>
+					 	<a>广电直播</a>
+						<ul>
+							<li><a href="/guangdianzb-155.html" target="_blank">FM98.9衡阳综合广播</a></li>
+							<li><a href="/guangdianzb-158.html" target="_blank">FM101.8衡阳交通经济广播</a></li>
+						</ul>
+					 </li>
+				 </ul>
+			  	 
+				 <ul>
+				 	<li><a href="/dianshizb.html" target="_blank">电视直播</a></li>
+				 </ul>    
+             </li>-->
+             <li>
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">广电动态</a>
+             </li>
+          </ul>
+       </div>
+     </div>
+     
+     <div class="wx_tk" style="display:none;">
+     <div class="cha" onclick="closeWindow1();" style="width: 40px;height: 40px;float: right; margin-top: 10px;">
+                     <img src="/_/static/ow320_hydst/static/picture/矢量智能对象(3).png">
+                  </div>
+     </div>
+    <div class="wx_tk1" style="display:none;">
+     <div class="cha" onclick="closeWindow2();" style="width: 40px;height: 40px;float: right; margin-top: 10px;">
+                     <img src="/_/static/ow320_hydst/static/picture/矢量智能对象(3).png">
+                  </div>
+    
+     <img src="/_/static/ow320_hydst/static/picture/hygdgfwb.png" style="width:120px; height:120px;display: inline;margin-left: 20px;margin-top: 30px;">
+      <p>衡阳广电官方微博</p>
+     </div>
+     
+     <div class="denglnr" style=" display:none;" id="denglu">
+      <div class="dengl_top">
+         <div class="ti">
+            <img src="http://hwd.hydst.com/templates/hengyang/image/logo.png">
+            <div class="login-title">
+               <div class="title-dot"></div>
+               <span> 登录</span>
+               <a>
+                  <div class="cha" onclick="closeWindow();">
+                     <img src="/_/static/ow320_hydst/static/picture/矢量智能对象(3).png">
+                  </div>
+               </a>
+           </div>  
+         </div> <!--ti  end-->
+         <div class="zhong">
+            <div class="srsjh">
+                <input class="logininput" id="txtusername" name="txtusername" placeholder="请输入手机号/用户名" type="text">
+            </div>
+            <div class="srsjh" style="margin-bottom:16px;">
+               <input name="txtpassword" id="txtpassword" class="logininput" value="" placeholder="请输入密码" type="password">
+               <a><img src="/_/static/ow320_hydst/static/picture/矢量智能对象(4).png"></a>
+            </div>
+            <div class="srsjh" style="border-bottom:none;margin:0;">
+               <p style="float:right; margin:0; line-height:20px; color:#343434">忘记密码？</p>
+            </div>
+            <div class="zh_dl">
+              <a id="login_login_btn" style="cursor: pointer;" target="_blank">登录</a>
+            </div>
+         </div>
+         <div class="dl_zc">
+            <a onclick="zc();" style="cursor: pointer;" target="_blank"><span>注册</span></a>
+         </div>
+      </div>
+  </div>
+  
+  
+  <div class="denglnr" style="display:none;height: 490px;" id="login_zc">
+      <div class="dengl_top" style="height: 426px;">
+         <div class="ti">
+            <img src="http://hwd.hydst.com/templates/hengyang/image/logo.png">
+            <div class="login-title">
+               <div class="title-dot"></div>
+               <span> 注册</span>
+               <a>
+                  <div class="cha" onclick="closeWindow();">
+                     <img src="/_/static/ow320_hydst/static/picture/矢量智能对象(3).png">
+                  </div>
+               </a>
+           </div>  
+         </div>
+         
+         <div class="zhong" style="height: 330px;">
+            <div class="srsjh">
+               <input name="username" id="username" class="logininput" maxlength="20" placeholder="请填写手机号" type="text">
+            </div>
+            <div class="srsjh">
+                 <input name="password" id="password" class="logininput" maxlength="18" type="password" placeholder="请确认密码">
+            </div>
+            <div class="srsjh" style="margin-bottom:16px;">
+                <input name="mail" id="mail" class="wenbenkuang" maxlength="80" type="text" placeholder="请输入验证码">
+               <a id="js-get_mobile_vcode" style="cursor: pointer;">
+                  <div class="yzm">
+                  <input name="dianji" id="dianji" value="点击获取验证码" type="button" style="border:0px;line-height:40px;background: #ffff;">
+                  </div>
+               </a>
+            </div>
+            <div class="srsjh" style="border-bottom:none; margin-top:40px; margin-bottom:0px;line-height:20px;">
+               <p style="margin:0;  color:#343434; font-size:13px; display:block; text-align:center;">点击注册即表示您同意<span style=" color:#ff5f00;">《用户协议》《隐私政策》</span></p>
+            </div>
+            <div class="zh_dl" style="margin-top:5px;">
+              <a id="btnSubmit" style="cursor: pointer;" target="_blank">注册</a>
+            </div>
+         </div>
+         <div class="dl_zc">
+            <a onclick="dl();" style="cursor: pointer;" target="_blank"><span>安全登录</span></a>
+         </div>
+      </div>
+  </div>
+  
+<script src="/_/static/ow320_hydst/static/js/jquery.cookie.js" type="text/javascript"></script>
+    <script type="text/javascript">
+     var cook = $.cookie("user");
+        if (cook != null) {
+            $("#d1").hide();
+            $("#d2").css("display", "block");
+            
+        }
+        $("#exit").click(function() {
+            $.cookie('user', null);
+            window.location.reload();
+        });
+    $(function(){
+    $("#zhu").click(function(){
+        showZC();
+    })
+    $("#den").click(function(){
+        showDL();
+    })
+     $("#login_login_btn").click(function() {
+            if ($("#txtusername").val() == "") {
+                alert('用户名不能为空！');
+                return false;
+            }
+            if ($("#txtpassword").val() == "") {
+                alert('密码不能为空！');
+                return false;
+            }
+            $.getJSON("../../Interface/RegisterUserLoginAPI.ashx?action=RegisterUserLoginFunction&StID=0&UserName=" + $("#txtusername").val() + "&UserPassWord=" + $("#txtpassword").val() + "&UserSource=3", function(data) {
+                if (data.RegisterUser[0].UserGUID != undefined) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (1 * 24 * 60 * 60 * 1000));
+                    $.cookie('user', data.RegisterUser[0].UserGUID, { path: '/', expires: date }); //赋值    
+                    window.location.reload();
+                } else {
+                    alert("用户名或密码不正确!");
+                }
+            });
+        });
+        $("#btnSubmit").click(function() {
+                var txtName = $("#username").val();
+                var Phone = txtName;
+                var txtPwd = $("#password").val();
+                var code = $("#mail").val();
+               
+                $.getJSON("../../Interface/PhoneRegisterAPI.ashx?action=PhoneInsertRegister&StID=0&UserName=" + txtName + "&UserPassWord=" + txtPwd + "&Code=" + code + "&Phone=" + Phone + "&InviteCode=" + txtName + "", function(data) {
+                    if (data.RegisterUser.Result != "Failed") {
+                        alert("注册成功");
+                         window.location.reload();
+                    } else {
+                        alert("注册失败，请稍后重新注册!");
+                    }
+                });
+            });
+            $("#dianji").click(function() {
+                
+                var txtName = $("#username").val();
+                if (txtName.length != 11) {
+                    alert('请输入正确的手机号码');
+                    return false;
+                }
+                var Phone = txtName;
+                $.getJSON("../../Interface/PhoneRegisterNewAPI.ashx?action=PhoneRegisterAd&Phone=" + Phone, function(data) {
+                    if (data.RegisterInfo.Result != "Failed") {
+                        alert("发送成功");              
+                        settime();
+                        
+                    } else {
+                        alert("发送失败，请稍后重新注册!");
+                    }
+                });
+            });
+    })
+  // 弹窗
+ 
+ var countdown = 60;
+ function settime() {
+    if(countdown == 0) {
+        $("#dianji").attr("disabled", false);
+        $("#dianji").attr("value", "免费获取验证码");
+        //countdown = 60;
+    } else {
+        $("#dianji").attr("disabled", true);
+        $("#dianji").attr("value", "重新发送(" + countdown + ")");
+        countdown--;
+    }
+    if(countdown >= 0){
+        setTimeout(settime, 1000);
+    }
+}
+  function showZC() {
+    $('#login_zc').show();  //显示弹窗
+    $('.big').css('display','block'); //显示遮罩层
+   <!-- $('.big').css('height',document.body.clientHeight+'px'); -->//设置遮罩层的高度为当前页面高度
+  }
+  function showwx(){
+  $('.wx_tk').show();
+   $('.big').css('display','block'); //显示遮罩层
+  }
+   function showwb(){
+  $('.wx_tk1').show();
+   $('.big').css('display','block'); //显示遮罩层
+  }
+  function showDL() {
+    $('#denglu').show();  //显示弹窗
+    $('.big').css('display','block'); //显示遮罩层
+   <!-- $('.big').css('height',document.body.clientHeight+'px'); -->//设置遮罩层的高度为当前页面高度
+  }
+  // 关闭弹窗
+  function closeWindow() {
+    $('.denglnr').hide();  //隐藏弹窗
+   
+  }
+  function closeWindow1(){
+    $(".wx_tk").hide();
+  }
+  function closeWindow2(){
+    $(".wx_tk1").hide();
+  }
+  function zc(){
+	  $('#login_zc').show();
+	  $('#denglu').hide();
+	  }
+	    function dl(){
+	  $('#login_zc').hide();
+	  $('#denglu').show();
+	  }
+</script>
+
+     
+    
+   
+       <!-------------------头部导航结束------------------>
+       <section style="margin-top:35px;">
+         <div class="section-all">
+         <!-----------------左边整块----------------->
+            <div class="section-left">
+               <div class="main fL">
+                    <div class="article" style="width:810px;">
+                    <h3 class="biaoti">{关键词1}{随机后缀}{新闻网标题}</h3>
+                    <h5></h5>
+                    <div class="assist">
+                     <p class="info fL">
+                      <span class="source">来源:</span>&nbsp;<span class="hynew">{关键词1}</span>
+                      &nbsp;&nbsp;&nbsp;&nbsp;
+                     <span class="time">发布时间:</span>&nbsp;<span class="hynew">{当前时间} </span>
+                      &nbsp;&nbsp;&nbsp;&nbsp;<span class="time">浏览量:</span>&nbsp;<span class="hynew">{随机数字}</span></p>
+                    </div><!--assist end-->
+                    
+                    
+                          <div class="ystg_ind_05 blue" style="box-sizing: border-box; text-size-adjust: none; width: 800px; margin: 30px 0px; font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif; font-size: 17px; white-space: normal; background-color: rgb(255, 255, 255);"><p class="title" style="box-sizing: border-box; text-size-adjust: none; padding: 0px; margin-top: 0px; margin-bottom: 0px; list-style: none; letter-spacing: 1px; color: rgb(51, 51, 51); line-height: 1.765em; text-align: justify; width: 800px;"><span class="label" style="box-sizing: border-box; letter-spacing: 0px; background-color: rgb(33, 68, 140); margin-right: 11px; display: inline-block; line-height: 24px;"></span></span><span class="text" style="box-sizing: border-box;">{新闻网内容}</span></p></div><p><br></p>   
+                    
+                    </div><!--article end-->
+               </div><!--main fL end-->
+               <div class="left-tppl">
+               <div class="left-ggao">
+              
+               </div><!--ggao end-->
+               <div class="comment">
+                 <h4 class="clearfix"><p class="t fL">我要说两句</p></h4>
+                 <div class="xt"></div><!--xt end-->
+                 <div class="pinglun-all">
+                    <div node-type="header-login" class="header-login">评论</div>
+                    <div class="post-wrap-w">
+                    <div class="post-wrap-border-l"></div><!--post-wrap-border-l end-->
+                    <div class="post-wrap-border-r"></div>
+                    <div node-type="post-wrap-main" class="post-wrap-main">
+                   <div class="post-wrap-border-t">
+                   <div node-type="post-wrap-border-t-l" class="post-wrap-border-t-l"></div>
+                   <div node-type="post-wrap-border-t-r" class="post-wrap-border-t-r"></div>
+                   </div><!--post-wrap-border-t end-->
+                   <div class="wrap-area-w">
+                   <div class="area-textarea-w">
+                    <textarea node-type="textarea" name="" id="text" class="textarea-fw textarea-bf" placeholder="有事没事说两句..."></textarea>
+                   </div><!--area-textarea-w end-->
+            </div><!--wrap-area-w end-->
+           
+       
+        </div><!--post-wrap-main end-->
+        
+        <script>
+            function SendComment() {
+                if ($("#text").val() == "") {
+                    alert('评论内容不能为空');
+                    return false;
+                }
+                if ($.cookie("user") == null) {
+                    alert('请登录后评论');
+                    return false;
+                }
+                $.post("/templates/hengyang/rcom.ashx", { rguid: '694a5079-ba7f-4c00-9485-930b0ea63fd8', uguid: '', content: $("#text").val() }, function(data) {
+                    alert(data);
+                    location.reload(false);
+                });
+            }
+           
+            
+        
+        </script>
+         <div class="xlorcy">
+            <div node-type="function-face" class="function-face-w">
+                        <a class="effect-w" href="javascript:void(0)">
+                            <i class="face-b"></i>
+                        </a>
+                    </div><!--function-face-w end-->
+                <div class="issue-btn-w">
+                    <a href="javascript:SendComment()">
+                        <button node-type="issue" class="btn-fw"></button>
+                    </a>
+                </div><!--issue-btn-w end-->
+               </div><!-- xlorcy end-->
+              <div class="user-pl">
+              <div node-type="empty-prompt" class="empty-prompt-w">
+                        <span class="prompt-null-w">还没有评论，快来抢沙发吧！</span>
+              </div><!--empty-prompt-w end-->
+              </div><!--user-pl end-->
+              
+              
+             
+        </div><!--post-wrap-w end-->
+         
+                 
+                </div><!--pinglun-all end-->
+               </div><!--comment end-->
+               </div><!--left-tppl end-->
+            </div><!--section-left end-->
+            <!-----------------左边整块结束----------------->
+            <div class="section-right">
+                 <div class="right-g2" style="display: none;">
+                 
+                 </div><!--right-g2 end-->
+                <!--<div class="hx w320 fr">
+                     <div class="title"><a  target="_blank" class="splz-vo" style="color:#ff5f00;">视频推荐</a></div>
+                      <ul class="vlist">
+                       
+                        
+                      </ul>
+                </div>-->
+                  <div class="right-all" style="height:1350px;">
+                      <div class="jctj-top">
+                       <div class="jctj-topimg"><img src="/_/static/ow320_hydst/static/picture/zt-jctj.png"></div><!--jctj-topimg end-->
+                       <div class="jctj-font"><h1>精彩推荐</h1></div>
+                       <!--jctj-font end-->
+                       
+                      </div><!--jctj-top end-->
+                      <!-----------------------阅读排行--------------->
+                      <div class="zt-rdpx">
+                      <div class="rdpx-top">
+                       <div class="rdpx-topimg">
+                       <img src="/_/static/ow320_hydst/static/picture/zt-rdpx.png">
+                       <h2>阅读排行</h2>
+                       </div><!--rdpx-topimg end-->
+                       <div class="rd-xt"></div><!--rd-xt end-->
+                      </div><!--rdpx-top end-->
+                     <div class="rd-shishi">
+                      <div class="rdpx-ulli">
+                         <ul>
+                         
+                         <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{关键词1}{标题}</a></li>
+                         
+                         <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+                         
+                         <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+                         
+                         <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+                         
+                         <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+                         
+                         <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+                         
+                         <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{关键词1}{标题}</a></li>
+                         
+                         
+                         
+                         </ul>
+                      </div><!--rdpx-ulli end--></div><!--rd-shishi end-->
+                      </div><!--zt-rdpx end-->
+
+
+
+
+                      <!--------------------阅读排行结束、--------------->
+                    </div>
+             </div>
+            </div><!--section-right end-->
+         <!--section-all end-->
+       </section>
+        <!--  底部-->
+  <footer style="height:320px;">
+            <div class="hr"></div>
+
+            <div class="footer-all">
+           
+            <!----------验证码----------->
+            <div class="footer-font" style="margin-top:30px;margin-right:0%;">
+              <div class="font-bored" style="width:80%;">
+                   <ul>
+                     <li><span>技术支持联系电话：0734-{随机7数字}</span> &nbsp;&nbsp;<span>杜绝虚假新闻举报电话：0734-{随机7数字}</span></li>
+                     <li class="img-font">
+                    <!-- <img src="/templates/hengyang/image/1469495363_27137500.png" />-->
+                     <span class="fonts">网络视听节目许可证：11{随机8数字}  &nbsp;&nbsp;互联网新闻信息服务许可  431{随机8数字}</span> 
+                     </li>
+                     <li><span><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">湘ICP备 {随机8数字}号-1 </a><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"> &nbsp;湘公网安备 430408{随机8数字}号</a> </span></li>
+                    <!-- <li><span>地址：湖南省衡阳市蒸湘区蔡伦大道68号 &nbsp; </span></li>-->
+                     <li><span>Copyright {年} {域名库} All Right</span></li>
+<li><span><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="新媒体技术与服务提供商" alt="技术支持：{网站名称}" style="
+    color: #f8f8f8;
+">技术支持：{网站名称}</a></span></li>
+                   </ul>
+             </div><!--font-bored end-->
+            </div><!--footer-font end-->
+            
+            <div class="shangbiao" style="margin-top:30px;margin-right:-2%;">
+               <div class="tbiao" style="width:640px;">
+               <table width="100%" cellspacing="0" style="margin:0 auto;">
+                  <tr>
+                      <th scope="col"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/ow320_hydst/static/picture/sy_footer1.jpg" style="margin-right:15px;" width="60px"></a></th>
+                    <th scope="col"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/ow320_hydst/static/picture/sy_footer2.jpg" width="130"></a></th>
+                    <th scope="col"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/ow320_hydst/static/picture/sy_footer3.jpg" width="130"></a></th>
+                  <th scope="col"><img src="/_/static/ow320_hydst/static/picture/sy_footer44.jpg" width="130"></th>
+                  </tr>
+                </table>
+                
+               </div><!--tbiao end-->
+            </div><!--shangbiao end-->
+
+       
+  </div><!--footer-all end-->
+       <div class="bqsm-all">
+            <div class="bqsm">
+              <a href="#"><span>关于我们</span></a>&nbsp;&nbsp;-&nbsp;&nbsp;
+              <a href="#"><span>版权声明</span></a>&nbsp;&nbsp; -&nbsp;&nbsp;
+              <a href="#"><span>广告服务</span></a>&nbsp;&nbsp; -&nbsp;&nbsp;
+              <a href="#"><span>联系我们</span></a> &nbsp;&nbsp;-&nbsp;&nbsp;
+              <a href="#"><span>免费条款</span></a>
+            </div>
+         </div>
+         
+    
+
+      </footer>
+      <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+      <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+      <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+      <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+<script>
+document.getElementsByTagName("audio")[0].removeAttribute("autoplay"); 
+//移除audio标签的自动播放
+
+</script>
+</html>

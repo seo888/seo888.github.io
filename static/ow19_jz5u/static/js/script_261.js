@@ -1,0 +1,1 @@
+document.write('<div style="display: inline-block;margin:20px 20px 0 70px;"><script src=\'https://t.xuchuang.com/a/js?id=519344&app_id=518722\'></script></div>');

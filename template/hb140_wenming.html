@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<!--默认打开极速浏览模式-->
+		<meta name="renderer" content="webkit">
+		<!--使用ie最高版本-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>{自定义标题}</title>
+		<meta name="keywords" content="{关键词1}" />
+		<meta name="description" content="{自定义描述}" />
+		<meta name="filetype" content="0"> 
+		<meta name="publishedtype" content="1"> 
+		<meta name="pagetype" content="2"> 
+		<meta name="catalogs" content="xn_0">
+		<meta name="wlhlauth" content="5f20c8774b088a06c1925ba2062022de"><meta name="baidu-site-verification" content="8af9155ec480e9fb5d36cccd69f18c3a">
+		<link rel="stylesheet" type="text/css" href="/_/static/hb140_wenming/static/css/idangerous.swiper.css">
+        <link rel="stylesheet" type="text/css" href="/_/static/hb140_wenming/static/css/jquery.bxslider.css">
+		<link rel="stylesheet" type="text/css" href="/_/static/hb140_wenming/static/css/css.css">
+		<link rel="stylesheet" type="text/css" href="/_/static/hb140_wenming/static/css/indexStyle.css">
+		<link rel="shortcut icon" href="/{随机字符}/{随机字符}/images/favicon.png">
+<!--兼容ie6-8媒体查询-->
+		<script src="/_/static/hb140_wenming/static/js/html5.min.js"></script>
+		<script src="/_/static/hb140_wenming/static/js/respond.min.js"></script>
+		<script src="/_/static/hb140_wenming/static/js/idangerous.swiper.min.js"></script>
+	<style>
+li.gyggAd:hover{box-shadow: 2px 2px 6px #ddd;}
+.foot_wrap{height:100px;}
+.favlinks li{width: 230px;height: 60px;float: left;margin: 5px;overflow: hidden;border: 1px solid #cdcdcd;}
+.favlinks li:hover {border: 1px solid #ffffff;box-shadow: 2px 2px 5px #444;}
+.rokingFavLinkLocal li{width:auto;height: 25px;overflow: hidden;}
+.rokingFavLinkLocal li a{width:100%;}
+.rokingFavLinkLocal li:hover{background:#fff;color:red;}
+
+@media screen and (max-width: 1280px){
+	.tt_cont h2 .tt_second {width: 25%;}
+}
+@media screen and (max-width: 900px) {
+
+                .TRS_Editor img{width:100%;}
+
+            }
+</style>
+
+		<link rel="stylesheet" type="text/css" href="/{随机字符}/{随机字符}/newSite/newsFocuse/focusNews/202303/fixedStyle.css">
+
+</head>
+
+      
+        
+
+	<body>
+	<h1 style="display:none">{网站名称}</h1>
+<script src="/_/static/hb140_wenming/static/js/jquery-1.11.1zt1.min.js"></script>
+
+<div id="mdgov_enterpriseNavigation">
+        <div class="top">
+            <div class="inner">
+                <h1>
+				                    
+					<script>   
+					  var   CalendarData=new   Array(20);   
+					  var   madd=new   Array(12);   
+					  var   TheDate=new   Date();   
+					  var   tgString="甲乙丙丁戊己庚辛壬癸";   
+					  var   dzString="子丑寅卯辰巳午未申酉戌亥";   
+					  var   numString="一二三四五六七八九十";   
+					  var   monString="正二三四五六七八九十冬腊";   
+					  var   weekString="日一二三四五六";   
+					  var   sx="鼠牛虎兔龙蛇马羊猴鸡狗猪";   
+					  var   cYear;   
+					  var   cMonth;   
+					  var   cDay;   
+					  var   cHour;   
+					  var   cDateString;   
+					  var   DateString;   
+					  var   Browser=navigator.appName;   
+
+					  function   init()   
+					  {     
+						  CalendarData[0]=0x41A95;   
+						  CalendarData[1]=0xD4A;   
+						  CalendarData[2]=0xDA5;   
+						  CalendarData[3]=0x20B55;   
+						  CalendarData[4]=0x56A;   
+						  CalendarData[5]=0x7155B;   
+						  CalendarData[6]=0x25D;   
+						  CalendarData[7]=0x92D;   
+						  CalendarData[8]=0x5192B;   
+						  CalendarData[9]=0xA95;   
+						  CalendarData[10]=0xB4A;   
+						  CalendarData[11]=0x416AA;   
+
+						  CalendarData[12]=0xAD5;   
+						  CalendarData[13]=0x90AB5;   
+						  CalendarData[14]=0x4BA;   
+						  CalendarData[15]=0xA5B;   
+						  CalendarData[16]=0x60A57;   
+						  CalendarData[17]=0x52B;   
+						  CalendarData[18]=0xA93;   
+						  CalendarData[19]=0x40E95;   
+						  madd[0]=0;   
+						  madd[1]=31;   
+						  madd[2]=59;   
+						  madd[3]=90;   
+						  madd[4]=120;   
+						  madd[5]=151;   
+						  madd[6]=181;   
+						  madd[7]=212;   
+						  madd[8]=243;   
+						  madd[9]=273;   
+						  madd[10]=304;   
+						  madd[11]=334;   
+						}   
+					  function   GetBit(m,n)   
+					  {     
+							return   (m>>n)&1;   
+					  }   
+					  function   e2c()   
+					  {       
+						  var   total,m,n,k;   
+						  var   isEnd=false;   
+						  var   tmp=TheDate.getYear();   
+						  if   (tmp<1900)     tmp+=1900;   
+						  total=(tmp-2001)*365   
+							  +Math.floor((tmp-2001)/4)   
+							  +madd[TheDate.getMonth()]   
+							  +TheDate.getDate()   
+							  -23;   
+						  if   (TheDate.getYear()%4==0&&TheDate.getMonth()>1)   
+							  total++;   
+						  for(m=0;;m++)   
+						  {       
+							  k=(CalendarData[m]<0xfff)?11:12;   
+							  for(n=k;n>=0;n--)   
+							  {   
+								  if(total<=29+GetBit(CalendarData[m],n))   
+								  {     
+									  isEnd=true;   
+									  break;   
+								  }   
+								  total=total-29-GetBit(CalendarData[m],n);   
+							  }   
+							  if(isEnd)break;   
+						  }   
+						  cYear=2001   +   m;   
+						  cMonth=k-n+1;   
+						  cDay=total;   
+						  if(k==12)   
+						  {   
+							  if(cMonth==Math.floor(CalendarData[m]/0x10000)+1)   
+								  cMonth=1-cMonth;   
+							  if(cMonth>Math.floor(CalendarData[m]/0x10000)+1)   
+								  cMonth--;   
+						  }   
+						  cHour=Math.floor((TheDate.getHours()+3)/2);   
+					  }   
+					  function   GetcDateString()   
+					  {   var   tmp="";   
+						  tmp+=tgString.charAt((cYear-4)%10);       //年干   
+						  tmp+=dzString.charAt((cYear-4)%12);       //年支   
+						  tmp+="年";    
+						  tmp+=" ";   
+						  if(cMonth<1)   
+						  {     
+							tmp+="闰";   
+							  tmp+=monString.charAt(-cMonth-1);   
+						  }   
+						  else   
+							  tmp+=monString.charAt(cMonth-1);   
+						  tmp+="月";   
+						  tmp+=(cDay<11)?"初":((cDay<20)?"十":((cDay<30)?"廿":"卅"));   
+						  if(cDay%10!=0||cDay==10)   
+							  tmp+=numString.charAt((cDay-1)%10);   
+						  tmp+="    ";   
+						  cDateString=tmp;   
+						  return   tmp;   
+					  }   
+					  function   GetDateString()   
+					  {     
+						  var   tmp="";   
+						  var   t1=TheDate.getYear();   
+						  if   (t1<1900)t1+=1900;   
+						  tmp+=t1   
+									+"年"   
+									+(TheDate.getMonth()+1)+"月"   
+									+TheDate.getDate()+"日   "   
+									+"   星期"+weekString.charAt(TheDate.getDay());     
+						  DateString=tmp;   
+						  return   tmp;   
+					  }   
+					  init();   
+					  e2c();   
+					  GetDateString();   
+					  GetcDateString();   
+					  setInterval(function(){$('#cdateRoking').html(GetDateString)},1000); 
+					  setInterval(function(){$('#cdate').html(GetcDateString)},1000);  
+				</script>
+					
+					
+					<div class="datenow fl">
+                    	<span id="cdateRoking"></span>
+                    	<span style="display:None;" id="cdate"></span>
+                    </div>	
+
+                	<div class="top_center2020 fr">
+                        <div id="demo1_top1" class="demo1_top1">
+                            <dl>
+                            	<dd><h1 class="rokingTopTitle">{关键词1}{标题}</h1></dd>
+                           	
+                           		
+                            </dl>
+                        </div>
+                	</div>
+                	<script>
+					  //无缝滚动
+					  $(function() {
+					    var num = 380;
+					    function goLeft() {
+					        if (num == -870) {
+					            num = 380;
+					        }
+					        num -= 1;
+					        $(".demo1_top").css({
+					            left: num
+					        })
+					    }
+					    //设置滚动速度
+					    var timer = setInterval(goLeft, 20);
+					    //设置鼠标经过时滚动停止
+					    $(".top_center2020").hover(function() {
+					        clearInterval(timer);
+					    },
+					    function() {
+					        timer = setInterval(goLeft, 20);
+					    })
+					})
+					</script>
+
+
+                    
+                </h1>
+            </div>
+        </div>
+        <!--导航栏开始-->
+        <div class="inner">
+            <div id="mdgov_enterpriseNavigationWrap">
+                <div class="nav navbar-header small_hearder" id="nav-menu1">
+                        <div class="nav_top">
+                            <div class="nav_top_logo fl">
+                                
+                            </div>
+                            <!--页头专题轮播-->
+                            <div class="nav_top_zt fr">
+                                 <div class="nav_top_ztpage pic" id="pic">
+                                 	<ul>									
+									 
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020230318819245917868.jpg" alt="{标题}" class="bg"></a></li>
+									 
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020230121537388615192.jpg" alt="{标题}" class="bg"></a></li>
+									 
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020210708597408809095.jpg" alt="{标题}" class="bg"></a></li>
+									 
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020210430646285206879.jpg" alt="{标题}" class="bg"></a></li>
+									 
+		      						</ul>
+                                      
+                                 </div>
+                            </div>
+                            <!--淡入淡出轮播-->
+                            <script>
+							  $(function(){
+							    var index = -1;
+							    var pic = $('#pic img');
+							    var length = pic.length;
+							    var transform = function(){
+							      if(index === length - 1){
+							        index = 0;
+							      }else{
+							        index++;
+							      }
+							      pic.eq(index - 1).fadeOut(2000);
+							      pic.eq(index).fadeIn(2000);
+							    };
+							    transform();
+							    setInterval(transform,3000);
+							  });
+							</script>
+                        </div>
+                   
+<div class="nav_tit">
+                            <ul class="ulMenu">
+                                                            
+                                <a href="/{随机字符}/{随机字符}.html">
+                                    <li class="navhover sy">
+                                        <i class="i_1"></i>
+                                        首页
+                                    </li>
+                                </a>
+                                
+								<li class="rokNav xwjj">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">新闻聚焦</a>
+								</li>
+								<li class="rokNav wmsj">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">文明实践</a>
+								</li>
+								<li class="rokNav xfxn">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">幸福西宁</a>
+								</li>
+								<li class="rokNav wcnr">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">未成年人</a>
+								</li>
+								<li class="rokNav zyfw">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">志愿服务</a>
+								</li>
+								<li class="rokNav yfys">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">移风易俗</a>
+								</li>
+								<li class="rokNav wmcj">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">文明创建</a>
+								</li>
+								<li class="rokNav wmcs">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">文明城市</a>
+								</li>
+								<li class="rokNav wmdw">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">文明单位</a>
+								</li>
+								<li class="rokNav wmcz">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">文明村镇</a>
+								</li>
+								<li class="rokNav xjdx">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">先进典型</a>
+								</li>
+								<li class="rokNav cxjs">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">诚信建设</a>
+								</li>
+								<li class="rokNav ddmf">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">道德模范</a>
+								</li>
+								<li class="rokNav sbhr">
+									<a href="/{随机字符}/{随机字符}.html" target="_blank">身边好人</a>
+								</li>
+                            </ul>
+                        </div>
+                </div>
+                <div id="mastWrap" class="header_box"></div>
+            </div>
+        </div>
+    </div>
+        <!--导航栏结束-->
+
+    <!--手机导航-->
+        <div class="navphone" style="opacity: 0;">
+            <div class="inner">
+                <div class="nav">
+                        <div class="nav_top">
+                            <div class="nav_top_logo fl">
+                                
+                            </div>
+                            <!--专题轮播-->
+                            <div class="nav_top_zt fl">
+                                 <div class="nav_top_ztpage pic" id="pic2">
+                                 	<ul>
+				                     
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020200706383343619993.jpg" alt="{标题}" class="bg" style="display: block; opacity: 0.284272;"></a></li>
+									 
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020200702543069912802.jpg" alt="{标题}" class="bg" style="display: none;"></a></li>
+									 
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020200701395717510393.jpg" alt="{标题}" class="bg" style="display: none;"></a></li>
+									 
+										<li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb140_wenming/static/picture/W020200701342744371600.jpg" alt="{标题}" class="bg" style="display: block; opacity: 0.715728;"></a></li>
+									 
+		      						</ul>
+                                      
+                                 </div>
+                            </div>
+                            <!--淡入淡出轮播2-->
+                            <script>
+							  $(function(){
+							    var index1 = -1;
+							    var pic1 = $('#pic2 img');
+							    var length1 = pic1.length;
+							    var transform_s = function(){
+							      if(index1 === length1 - 1){
+							        index1 = 0;
+							      }else{
+							        index1++;
+							      }
+							      pic1.eq(index1 - 1).fadeOut(2000);
+							      pic1.eq(index1).fadeIn(2000);
+							    };
+							    transform_s();
+							    setInterval(transform_s,3000);
+							  });
+							</script>
+                        </div>
+                        <div class="nav_tit">
+                            <ul class="ulMenu">
+                                                            
+                                <a href="/{随机字符}/{随机字符}.html">
+                                    <li class="navhover sy">
+                                        <i class="i_1"></i>
+                                        <h3 class="nav_line">首页</h3>
+                                        <span>|</span>
+                                    </li>
+                                </a>
+                                <a target="_blank" href="/{随机字符}/{随机字符}.html">
+                                    <li class="zx">
+                                        <i class="i_2"></i>
+                                        <h3 class="nav_line">新闻聚焦</h3>
+                                        <span>|</span>
+                                    </li>
+                                </a>
+                                <a target="_blank" href="/{随机字符}/{随机字符}.html">
+                                    </a><li class="cj"><a target="_blank" href="/{随机字符}/{随机字符}.html">
+                                        <i class="i_3"></i>
+                                        </a><h3 class="nav_line"><a target="_blank" href="/{随机字符}/{随机字符}.html"></a><a href="/{随机字符}/{随机字符}.html">文明创建</a></h3>
+                                        <span>|</span>
+                                    </li>
+                                
+                                <a target="_blank" href="/{随机字符}/{随机字符}.html">
+                                    <li class="by">
+                                        <i class="i_4"></i> 
+                                        <h3 class="nav_line">幸福西宁</h3>
+                                        <span>|</span>
+                                    </li>
+                                </a>
+                                <a target="_blank" href="/{随机字符}/{随机字符}.html">
+                                    <li class="wh">
+                                        <i class="i_5"></i>
+                                        <h3 class="nav_line">诚信建设</h3>
+                                        <span>|</span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+                       <script>
+                           var str = window.location.href;
+
+                           if(str.match("/xbwz/zx/")){
+                           $('.ulMenu .zx').addClass('navhover');
+                               $('.ulMenu .sy').removeClass('navhover');
+                           }else if(str.match("/xbwz/cj/")){
+                           $('.ulMenu .cj').addClass('navhover');
+                               $('.ulMenu .sy').removeClass('navhover');
+                           }else if(str.match("/xbwz/by/")){
+                           $('.ulMenu .by').addClass('navhover');
+                               $('.ulMenu .sy').removeClass('navhover');
+                           }else if(str.match("/xbwz/wh/")){
+                           $('.ulMenu .wh').addClass('navhover');
+                               $('.ulMenu .sy').removeClass('navhover');
+                           }else if(str.match("/xbwz/zt_49765/")){
+                           $('.ulMenu .zl').addClass('navhover');
+                               $('.ulMenu .sy').removeClass('navhover');
+                           }else if(str.match("/xbwz/yjsgk1/")){
+                               $('.ulMenu .yjsgk').addClass('navhover');
+                               $('.ulMenu .sy').removeClass('navhover');
+                           }else{
+                           $('.ulMenu .sy').addClass('navhover');
+                           }
+                        
+            </script>
+<!--头部效果-->
+	<script src="/_/static/hb140_wenming/static/js/topad1.js"></script>
+
+
+
+		<!--主体-->
+		<div class="inner">
+			<div class="contain">
+				<div class="position">
+					<p><img src="/_/static/hb140_wenming/static/picture/homePage_red.png" style="width: 12px;" data-bd-imgshare-binded="1">						
+						<a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}" class="CurrChnlCls">{网站名称}</a>><a href="/{随机字符}/{随机字符}.html" target="_blank" title="{随机关键词}" class="CurrChnlCls">{随机关键词}</a>><a href="/{随机字符}/{随机字符}.html" target="_blank" title="新闻聚焦" class="CurrChnlCls">新闻聚焦</a>><a href="/{随机字符}/{随机字符}.html" target="_blank" title="{关键词1}" class="CurrChnlCls">{关键词1}</a>
+					</p>
+				</div>
+				<div class="article">
+					<h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+					<p class="laiyuan">
+						<span>来源：{随机关键词2}</span>
+						<span class="time">{今日时间}</span>
+						
+					</p>
+					<div class="cont">
+						{新闻网内容}											
+					</div>
+					<span class="edit">编辑：{人物名称}</span>
+
+
+<span class="appendix">
+
+
+
+
+
+</span>
+
+
+
+
+
+	
+				</div>
+			</div>
+		</div>
+		
+
+		<!--底部开始-->
+		<div class="foot">
+			<div class="inner">
+				<div class="foot_wrap">
+					<p>{网站名称}</p>
+					<p>{关键词1} ©版权所有</p>
+					<p><img src="/_/static/hb140_wenming/static/picture/foot_police.png"></p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		
+                <div>
+                    
+                </div>
+	
+	<!-- 头条判断 -->
+	<script type="text/javascript">
+		var str1=$('.tt_second').text();
+		var str2=$('.tt_third').text();
+		var str3=$('.tt_fourth').text();
+		str1_num=str1.length;
+		str2_num=str2.length;
+		str3_num=str3.length;
+		str_three=str1_num+str2_num+str3_num;
+		str_two=str1_num+str2_num;
+		if(str_three<=72){
+			$('.tt_second').show();
+			$('.tt_third').show();
+			$('.tt_fourth').show();
+		}else if(str_three>72){
+			$('.tt_fourth').hide();
+			if(str_two<72){
+				$('.tt_second').show();
+				$('.tt_third').show();
+			}else{
+				$('.tt_third').hide();
+				$('.tt_second').show();
+			}
+		}
+
+	</script>
+	<script>
+		var mySwiper = new Swiper('.swiper-container',{
+		  	autoplay:3000,
+		  	loop:true,
+		    pagination: '.pagination',
+		    paginationClickable: true,
+		    //freeMode: true,
+		    //freeModeFluid: true
+                    autoplayDisableOnInteraction:false
+		})
+	</script>
+	<script type="text/javascript">
+		//创建鼠标滑过选项卡
+		$(".cj_tab li").hover(function(){
+		    $(this).addClass('active').parents().siblings().children().removeClass('active');;
+		    $('.cj_cont .tab_cont').eq($('.cj_tab li').index(this)).show().siblings('.cj_cont .tab_cont').hide();
+		},function(){});
+		//榜样鼠标滑过选项卡
+		$(".by_tab li").hover(function(){
+		    $(this).addClass('active').parents().siblings().children().removeClass('active');;
+		    $('.by_tab_wrap .by_tab_cont').eq($('.by_tab li').index(this)).show().siblings('.by_tab_wrap .by_tab_cont').hide();
+		},function(){});
+		//文化鼠标滑过选项卡
+		$(".wh_tab li").hover(function(){
+		    $(this).addClass('active').parents().siblings().children().removeClass('active');;
+		    $('.wh_tab_wrap .wh_tab_cont').eq($('.wh_tab li').index(this)).show().siblings('.wh_tab_wrap .wh_tab_cont').hide();
+		},function(){});
+		//专题论评鼠标滑过选项卡
+		$('.zt_tit').hover(function(){
+			$(this).addClass('active');
+			$('.zt_cont').show();
+			$('.lp_cont').hide();
+			$('.lp_tit').removeClass('active');
+			$('.zt_href').show();
+			$('.lp_href').hide();
+		})
+		$('.lp_tit').hover(function(){
+			$(this).addClass('active');
+			$('.lp_cont').show();
+			$('.zt_cont').hide();
+			$('.zt_tit').removeClass('active');
+			$('.lp_href').show();
+			$('.zt_href').hide();
+		})
+
+                //公益广告
+		/*$(".gygg_cont0421 li").hover(function(){
+			$(this).addClass('active').parent('a').siblings('a').children('li').removeClass('active');
+		})*/
+
+	</script>
+        <script src="/_/static/hb140_wenming/static/js/jquery.bxslider.js"></script>
+        <script type="text/javascript">
+		$(document).ready(function(){
+		    $('.slider3').bxSlider({
+		        slideWidth: 280,
+		        minSlides: 2,
+		        maxSlides: 4,
+				moveSlides: 1,
+		        slideMargin: 10,
+		        auto: true,
+		     });
+			 
+			  $('.slider4').bxSlider({
+		        slideWidth: 200,
+		        minSlides: 2,
+		        maxSlides: 5,
+				moveSlides: 1,
+		        slideMargin: 40,
+		        auto: true,
+		     });
+		});
+	</script>
+
+	
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>
+</html>

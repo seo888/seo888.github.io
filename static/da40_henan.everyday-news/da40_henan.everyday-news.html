@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="textml; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="/static/da40_henan.everyday-news/static/css/style.css">
+  <title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+  <script type="text/javascript" src="/static/da40_henan.everyday-news/static/js/jquery1.42.min.js"></script>
+  <script type="text/javascript" src="/static/da40_henan.everyday-news/static/js/jquery.SuperSlide.2.1.1.js"></script>
+  <script type="text/javascript">
+    document.oncontextmenu = new Function("event.returnValue=false");
+    document.onselectstart = new Function("event.returnValue=false");
+  </script>
+</head>
+
+<body>
+  <script>
+    function AddFavorite(sURL, sTitle) {
+
+      sURL = encodeURI(sURL);
+      try {
+
+        window.external.addFavorite(sURL, sTitle);
+
+      } catch (e) {
+
+        try {
+
+          window.sidebar.addPanel(sTitle, sURL, "");
+
+        } catch (e) {
+
+          alert("加入收藏失败，请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+
+        }
+
+      }
+
+    }
+  </script>
+  <script>
+    function SetHome(obj, vrl) {
+      try { obj.style.behavior = 'url(#default#homepage)'; obj.setHomePage(vrl); }
+      catch (e) {
+        if (window.netscape) {
+          try {
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+          }
+          catch (e) {
+            alert("此操作被浏览器拒绝！n请在浏览器地址栏输入“about:config”并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+          }
+          var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+          prefs.setCharPref('browser.startup.homepage', vrl);
+        } else {
+          alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入：" + vrl + "点击确定。");
+        }
+      }
+    } 
+  </script>
+  <div class="sss">
+    <div class="center">
+      <div class="centerleft"><a href="/{随机字符}/{随机字符}.html" style="color: #000;">关于{关键词1}</a></div>
+      <div class="centerright">
+        <ul>
+          <li><a href="javascript:void(0)" onclick="SetHome(this,window.location)" style="color: #000;">设为首页</a></li>
+          <li><a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)"
+              style="color: #000;">加入收藏</a></li>
+          <li><a href="/{随机字符}/{随机字符}.html" style="color: #000;">联系我们</a></li>
+          <li><a href="/{随机字符}/{随机字符}.html" target="_blank" style="color: #000;">人员查询</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="logo">
+    <div class="logoleft">
+      <a href="/{随机字符}/{随机字符}.html"></a>
+
+      <div class="soso">
+        <form action="http://henan.everyday-news.com.cn/index.php" method="get">
+          <input type="hidden" name="c" value="content">
+          <input type="hidden" name="a" value="search">
+          <input class="submit" value="" type="submit">
+          <div class="inputWarp">
+            <input class="txtArea" name="kw" placeholder="输入关键词" type="text">
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <div class="daohang">
+    <ul>
+      <li><a href="/{随机字符}/{随机字符}.html">首页</a></li>
+      <li><a href="/{随机字符}/{随机字符}.html">{关键词1}</a></li>
+      <li><a href="/{随机字符}/{随机字符}.html">监督维权</a></li>
+      <li><a href="/{随机字符}/{随机字符}.html">曝光台</a></li>
+      <li><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+      <li><a href="/{随机字符}/{随机字符}.html">关注民生</a></li>
+      <li><a href="/{随机字符}/{随机字符}.html">法制聚焦</a></li>
+    </ul>
+  </div>
+  <div class="daohangxia">
+    <div class="daohangxias">
+      <ul>
+        <li><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">群众来信</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">食药打假</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">名人字画</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">焦点网谈</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">旅游视界</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">视频列表</a></li>
+      </ul>
+    </div>
+    <!--<div class="daohangxiaz"></div>
+<div class="daohangxiax">
+      <ul>
+        <li><a href="http://www.hlj.gov.cn/" target="_blank">黑龙江省</a></li>
+        <li><a href="http://www.jiangsu.gov.cn/" target="_blank">江苏省</a></li>
+        <li><a href="http://www.zj.gov.cn/index.html" target="_blank">浙江省</a></li>
+        <li><a href="http://www.ah.gov.cn/" target="_blank">安徽省</a></li>
+        <li><a href="http://www.fujian.gov.cn/" target="_blank">福建省</a></li>
+        <li><a href="http://www.jiangxi.gov.cn/" target="_blank">江西省</a></li>
+        <li><a href="http://www.shandong.gov.cn/" target="_blank">山东省</a></li>
+        <li><a href="http://www.hubei.gov.cn/" target="_blank">湖北省</a></li>
+        <li><a href="http://www.hunan.gov.cn/" target="_blank">湖南省</a></li>
+        <li><a href="http://www.gd.gov.cn/" target="_blank">广东省</a></li>
+        <li><a href="http://www.sc.gov.cn/" target="_blank">四川省</a></li>
+        <li><a href="http://www.gzgov.gov.cn/" target="_blank">贵州省</a></li>
+        <li><a href="http://www.yn.gov.cn/index.html" target="_blank">云南省</a></li>
+        <li><a href="http://www.shaanxi.gov.cn" target="_blank">陕西省</a></li>
+        <li><a href="http://www.gansu.gov.cn/index.html" target="_blank">甘肃省</a></li>
+        <li><a href="http://www.qh.gov.cn/index.html" target="_blank">青海省</a></li>
+        <li><a href="http://www.hainan.gov.cn/" target="_blank">海南省</a></li>
+        <li><a href="http://www.jl.gov.cn/" target="_blank">吉林省</a></li>
+        <li><a href="http://www.hebei.gov.cn/" target="_blank">河北省</a></li>
+        <li><a href="http://www.henan.gov.cn/" target="_blank">河南省</a></li>
+        <li><a href="http://www.shanxigov.cn/" target="_blank">山西省</a></li>
+        <li><a href="http://www.ln.gov.cn/" target="_blank">辽宁省</a></li>
+      </ul>
+  </div>-->
+  </div>
+  <div class="erweizhi">
+    <img src="/static/da40_henan.everyday-news/static/picture/01.jpg" style="padding-top: 12px;"> 您的当前位置：
+    <a href="/{随机字符}/{随机字符}.html">首页</a> > <a href="/{随机字符}/{随机字符}.html" title="{关键词1}">{关键词1}</a>
+  </div>
+  <div class="erzhong">
+    <div class="erzhongz">
+      <div class="erzhongzs">
+        <ul style="padding-top: 25px;">
+          <p style="font-size: 30px; color: #333; font-weight: 700; ">{关键词1}{随机后缀}{新闻网标题}</p>
+        </ul>
+        <div class="erzhongzsx" style="float: left;">
+          <ul>
+            <p style="font-size: 14px; color: #999;float: left; margin-top:10px;">
+              来源：{关键词1}—{网站名称} &nbsp;&nbsp;&nbsp; 时间：{当前时间}</p>
+          </ul>
+        </div>
+
+        <div class="fenxiang" style="width: 200px;height: 30px;float: right;margin-top: 45px;">
+          <div class="bshare-custom"><a title="分享到微信" class="bshare-weixin"></a><a title="分享到QQ好友"
+              class="bshare-qqim"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到腾讯微博"
+              class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="分享到QQ空间"
+              class="bshare-qzone"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span
+              class="BSHARE_COUNT bshare-share-count">0</span></div>
+          <script type="text/javascript" src="/static/da40_henan.everyday-news/static/js/buttonLite.js"></script>
+          <script type="text/javascript" src="/static/da40_henan.everyday-news/static/js/bshareC0.js"></script>
+
+        </div>
+
+
+      </div>
+      <div class="erzhongzz">
+        <div class="erzhongzzyi">
+          <ul>
+            <li>
+              <p style="font-size: 16px; font-weight: 700; width: 100%; color: #333; float:left;">导读：</p>
+              <p style="font-size: 14px; color: #333; float: left;">{关键词1}{句子}{句子}...</p>
+            </li>
+          </ul>
+        </div>
+        <div class="erzhongzzer" bosszone="content" style="margin-bottom: 30px;">
+          <p
+            style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:37px;background:rgb(255,255,255)">
+            <span style=";font-family:宋体;font-size:16px"><span style="font-family:宋体">{新闻网内容}</span></span></p>
+          <p
+            style="margin-top:0;margin-right:0;margin-bottom:0;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;background:rgb(255,255,255)">
+            <span style=";font-family:宋体;font-size:16px">&nbsp;<img src="{随机图片}"</span></p>
+          <p
+            style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-align:justify;text-justify:inter-ideograph;line-height:37px;background:rgb(255,255,255)">
+            <span style=";font-family:宋体;font-size:16px"><span style="font-family:宋体">{新闻网内容}</span></span></p>
+            <strong><span style="font-family: 宋体;font-size: 16px"><span
+                  style="font-family:宋体">编辑：{人物名称}</span></span></strong></p>
+          <p><br></p>
+        </div>
+      </div>
+      <div class="erzhongzx">
+        <ul>
+          <li>上一篇：<a href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+          <li>下一篇：{标题}</li>
+        </ul>
+      </div>
+      <div class="erzhongzxg">
+        <p style="font-size: 14px; line-height: 14px; padding-top: 18px;font-weight: 700;">相关推荐</p>
+        <ul>
+          <li><a href="/{随机字符}/{随机字符}.html" style="color: #00a7cb; font-weight: 700;">[每日地方] </a><a
+              href="">{标题}...</a></li>
+          <li><a href="/{随机字符}/{随机字符}.html" style="color: #00a7cb; font-weight: 700;">[每日地方] </a><a
+              href="/{随机字符}/{随机字符}.html">{标题} ...</a></li>
+          <li><a href="/{随机字符}/{随机字符}.html" style="color: #00a7cb; font-weight: 700;">[每日地方] </a><a
+              href="/{随机字符}/{随机字符}.html">{标题}...</a></li>
+          <li><a href="/{随机字符}/{随机字符}.html" style="color: #00a7cb; font-weight: 700;">[每日地方] </a><a
+              href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+          <li><a href="/{随机字符}/{随机字符}.html" style="color: #00a7cb; font-weight: 700;">[每日地方] </a><a
+              href="/{随机字符}/{随机字符}.html">{标题}...</a></li>
+          <li><a href="/{随机字符}/{随机字符}.html" style="color: #00a7cb; font-weight: 700;">[每日地方] </a><a
+              href="/{随机字符}/{随机字符}.html">{标题}...</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="erzhongy">
+      <div class="erzhongys">
+        <div class="erzhongyss"><a href="//{随机字符}/{随机字符}.html" style="font-size: 16px; font-weight: 700; margin-top:  10px;">顶端栏目</a></div>
+        <div class="erzhongysx">
+          <ul>
+            <li> ><a href="/{随机字符}/{随机字符}.html">每日新闻</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">{关键词1}/a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">视频列表</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">曝光台</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">法制聚焦</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">食品打假</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">每日地方</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">名人字画</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">焦点网谈</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">{关键词1}</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">监督维权</a></li>
+            <li> ><a href="/{随机字符}/{随机字符}.html">旅游视界</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="erzhongyg"><a href="/{随机字符}/{随机字符}.html"><img src="{随机图片}"></a></div>
+      <div class="erzhongyx">
+        <div class="erzhongyxs">
+          <a href="//{随机字符}/{随机字符}.html" style="font-size: 16px; font-weight: 700; margin-top: 10px; color: #333;">最新资讯</a>
+        </div>
+        <div class="erzhongyxx">
+          <ul>
+            <li><a href="//{随机字符}/{随机字符}.html">{关键词1}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html">{关键词1}{标题}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html">{关键词1}{标题}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="erzhongyzx">
+        <div class="erzhongyzxs">
+          <a href="//{随机字符}/{随机字符}.html" style="font-size: 16px; font-weight: 700; margin-top: 10px; color: #333;">最新资讯</a>
+        </div>
+        <div class="erzhongyzxx">
+          <ul>
+            <li><a href="/{随机字符}/{随机字符}.html" style="color: #ee6d0d; padding-right:10px;">01</a><a href="">{标题}
+                ...</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" style="color: #ee6d0d; padding-right:10px;">02</a><a
+                href="">{标题}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" style="color: #ee6d0d; padding-right:10px;">03</a><a
+                href="">{关键词1}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" style="color: #ee6d0d; padding-right:10px;">04</a><a href="">{标题}</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" style="color: #ee6d0d; padding-right:10px;">05</a><a
+                href="">{标题}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dibu">
+    <div class="dibuz">
+      <div class="dibuzx">
+        <h2>友情链接：</h2>
+        <div style="padding:15px 0;">
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{关键词1}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{关键词1}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{关键词1}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+          <a href="/{随机字符}/{随机字符}.html" target="_blank" style="color:#333;font-size:14px;padding:5px;">{随机关键词}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="beian">
+    <div class="beianz">
+      <ul class=" list-paddingleft-2">
+        <li>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 地址：北京市海淀区羊坊店路3号&nbsp;
+            联系电话：{随机8数字}&nbsp; 邮 &nbsp;&nbsp; 箱:{当前主域名}&nbsp; {当前主域名}</p>
+        </li>
+        <li>
+          <p>&nbsp;</p>
+        </li>
+        <li>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            网站备案/许可证：京ICP备19051216号&nbsp;
+        </li>
+        <li>
+          <p>&nbsp;</p>
+        </li>
+        <li>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            广播电视节目制作&nbsp; 音像制品制作&nbsp; 电影摄制发行&nbsp; 统一社会信用代码证号：91110102MA0093EQ6R</p>
+        </li>
+        <li>
+          <p>&nbsp;</p>
+        </li>
+        <li>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {关键词1} {当前主域名} 提供最新国内外新闻及新闻资讯 &nbsp;</p>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>

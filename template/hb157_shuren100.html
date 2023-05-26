@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#FFF">
+    <meta name="format-detection" content="telephone=no">
+    <base target="_blank">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}" />
+    <link type="image/x-icon" href="/{随机字符}/{随机字符}/file/static/v2021/common/favorite.ico" rel="shortcut icon">
+    <link href="/_/static/hb157_shuren100/static/css/css.css" type="text/css" rel="stylesheet">
+    <link href="/_/static/hb157_shuren100/static/css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/_/static/hb157_shuren100/static/css/swiper.min.css">
+    <link rel="stylesheet" href="/_/static/hb157_shuren100/static/css/music.css">
+    <script type="text/javascript" src="/_/static/hb157_shuren100/static/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/_/static/hb157_shuren100/static/js/h5.js"></script>
+    <script type="text/javascript" src="/_/static/hb157_shuren100/static/js/qrcode.js"></script>
+    <script type="text/javascript" src="/_/static/hb157_shuren100/static/js/xgplayer.js"></script>
+    <script type="text/javascript" src="/_/static/hb157_shuren100/static/js/music.js"></script>
+    <style>
+        
+        @media screen and (max-width: 1010px) {
+            html,
+            body {
+                min-width: 0;
+                width: auto;
+            }
+            body {
+                margin: 0 auto;
+                position: relative;
+            }
+            a,
+            img,
+            button,
+            input,
+            textarea {
+                -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            }
+            body {
+                margin: 0 auto;
+                position: relative;
+            }
+            #txtListRight,
+            #LogoAndSearch,
+            #nav,
+            #ad {
+                display: none;
+            }
+            .m_top_nav {
+                display: block;
+            }
+            .m_top_nav .swiper-slide {
+                width: auto !important;
+            }
+            .m_top_nav.fixed {
+                position: fixed;
+                top: 0;
+                left: 50%;
+                margin-left: -375px;
+                z-index: 900;
+            }
+            .m_top_nav * {
+                overflow: visible;
+            }
+            .m_top_nav ul {
+                position: relative;
+                height: 82px;
+                width: 100%;
+            }
+            .m_top_nav li {
+                height: 82px;
+                float: left;
+            }
+            .m_top_nav li a {
+                color: #fff;
+                padding: 0 30px;
+                height: 82px;
+                display: block;
+            }
+            .wid_1400,
+            #text_content {
+                width: 750px;
+            }
+            #LogoAndSearch {
+                width: 750px;
+            }
+            #m_txtList_left {
+                width: 750px !important;
+            }
+            .wid_all_1400 {
+                width: 750px !important;
+            }
+            #text_content {
+                width: 710px;
+                padding: 0px 20px 20px;
+                border: 0;
+                margin: 0 auto;
+            }
+            #text_content h1 {
+                font-size: 40px;
+                line-height: 60px;
+            }
+            #text_content h2 {
+                padding-bottom: 20px;
+                font-size: 26px;
+                padding: 0;
+                margin-top: 20px;
+            }
+            #text_content h3 {
+                font-size: 32px;
+                font-weight: normal;
+                line-height: 60px;
+                color: #555;
+                text-align: center;
+                margin-top: 15px;
+            }
+            #text_content p {
+                font-size: 34px;
+                line-height: 60px;
+                height: 100%;
+                /*text-align:justify;*/
+                /* margin-bottom: 20px; */
+            }
+            #text_content img {
+                max-width: 100%;
+                min-width: 4%;
+                width: 100%;
+                vertical-align: middle;
+            }
+            #text_content video {
+                width: 100%;
+                vertical-align: middle;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            #text_content .TRS_Editor img {
+                max-width: 100%;
+                min-width: 4%;
+                vertical-align: middle;
+                margin: 0 auto;
+                display: block;
+            }
+            #xgyd .title {
+                border-bottom: 3px solid #d62e2e;
+                line-height: 64px;
+                font-size: 32px;
+                color: #d62e2e;
+                font-weight: bold;
+                padding: 0 20px !important;
+            }
+            #xgyd ul {
+                margin-bottom: 40px;
+                width: 95% !important;
+                margin: 0px auto;
+            }
+            #xgyd ul li span {
+                float: none;
+                font-size: 30px;
+                height: 100%;
+                color: #6b6b6b;
+                font-family: "微软雅黑";
+                display: block;
+            }
+            #xgyd ul li a {
+                font-size: 32px;
+                line-height: 54px;
+                height: 100%;
+                color: #4b4b4b;
+                font-family: "微软雅黑";
+                display: block;
+                margin-bottom: 16px;
+            }
+            #xgyd ul li {
+                padding: 20px 0;
+                background: none;
+                line-height: 46px;
+                height: auto;
+                border-bottom: 1px solid #ccc;
+                width: 100% !important;
+            }
+            #xgyd ul li:before {
+                background: none;
+            }
+            #xgyd ul li:hover {
+                background: none;
+            }
+            #xgyd ul li:hover a {
+                color: #4b4b4b;
+            }
+            #xgyd ul li:hover span {
+                color: #6b6b6b;
+            }
+            .footer p {
+                font-size: 22px;
+                color: #707483;
+                line-height: 40px;
+                font-family: '微软雅黑';
+                min-height: 48px;
+            }
+            .station {
+                padding: 10px 0px;
+                width: 710px;
+                margin: 0 auto;
+                font-size: 26px;
+                border-bottom: 1px solid #e4e4e4;
+            }
+        }
+        @media screen and (max-width:1010px) {
+            .m_top_logo {
+                display: block;
+                height: 120px;
+                width: 750px;
+                margin: 0 auto;
+            }
+            .m_top_logo img {
+                display: block;
+                margin-top: 70px;
+                margin-left: 15px;
+                width: 80%;
+                height: auto;
+            }
+            /*.m_top_logo img{display:block;margin-top:30px;margin-left:26px;}*/
+            .m_top_nav {
+                width: 750px;
+                height: 100px;
+                line-height: 100px;
+                font-size: 34px;
+                font-weight: bold;
+                color: #fff;
+                background: rgb(214, 46, 46);
+                overflow: hidden;
+                position: relative;
+                margin: 0 auto;
+            }
+            .m_top_nav.fixed {
+                position: fixed;
+                top: 0;
+                left: 50%;
+                margin-left: -375px;
+                z-index: 900;
+            }
+            .m_top_nav * {
+                overflow: visible;
+            }
+            .m_top_nav ul {
+                position: relative;
+                height: 82px;
+                width: 100%;
+            }
+            .m_top_nav li {
+                height: 82px;
+                float: left;
+            }
+            .m_top_nav li a {
+                color: #fff;
+                padding: 0 30px;
+                height: 82px;
+                display: block;
+            }
+            .m_top_nav .m_nav_mask {
+                width: 120px;
+                height: 83px;
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                right: 0;
+                background: url(/{随机字符}/{随机字符}/jyxc/202303/27/v2021/index/images/m_nav_mask.png) no-repeat center top;
+            }
+            .m_index_focus {
+                position: relative;
+                width: 750px;
+                margin: 0 auto;
+            }
+            #text_content table {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            #text_content td {
+                font-size: 34px;
+                line-height: 1.5em;
+                padding: 15px 0px !important;
+            }
+            .m_index_focus * {
+                overflow: visible;
+            }
+            .m_index_focus ul {
+                position: relative;
+                width: 100%;
+            }
+            .m_index_focus ul li {
+                position: relative;
+                float: left;
+            }
+            .m_index_focus ul .title a {
+                display: block;
+                width: 530px;
+                height: 49px;
+                color: #fff;
+                overflow: hidden;
+            }
+            .m_index_focus ul img {
+                width: 100%;
+                display: block;
+            }
+            .m_index_focus .pagination {
+                text-align: right;
+                position: absolute;
+                right: 20px;
+                height: 15px;
+                bottom: 20px;
+            }
+            .m_index_focus .pagination span {
+                display: inline-block;
+                width: 13px;
+                height: 13px;
+                background: url(/{随机字符}/{随机字符}/Public/Home/images/jyb_index_focusbtn.png) no-repeat right center;
+                margin-right: 12px;
+            }
+            .m_index_focus .pagination span.swiper-active-switch {
+                background: url(/{随机字符}/{随机字符}/Public/Home/images/jyb_index_focusbtn.png) no-repeat left center;
+            }
+            #author {
+                /* height: 55px; */
+                line-height: 55px;
+                padding-right: 25px;
+                font-size: 22px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            /* .xl_title h2 span{
+                float: left;
+            } */
+            .jiaoyu_yinti {
+                font-size: 40px !important;
+                line-height: 60px !important;
+            }
+            .jiaoyu_fubiaoti {
+                font-size: 40px !important;
+                line-height: 60px !important;
+            }
+            #js_pub {
+                display: none;
+            }
+            #js_source {
+                display: block;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scy-boxs">
+        <!-- logoAndSearch 开始 -->
+<div class="wid_1400" id="LogoAndSearch">
+   
+    <div id="search" class="right pos_r" style="margin-top: 50px;">
+        <form id="searchform">
+            <input type="text" class="inp-txt pos_a" placeholder="请输入关键字" maxlength="40" autocomplete="off" name="searchword" id="searchword">
+            <input type="submit" id="sear_btn" class="pos_a cursor outline_none" value="&nbsp;">
+        </form>
+    </div>
+</div>
+
+
+<div class="wid_all_1400 f12_fff" id="nav">
+    <div class="wid_1400">
+        <ul class="clear">
+            <li style="margin-right:30px;" class="current"><a href="/{随机字符}/{随机字符}.html" target="_blank">首页</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">要闻播报</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">市县动态</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">基础教育</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">高等教育</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">职业教育</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">幼儿教育</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">理论研究</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">品牌活动</a></li>
+            <li style="margin-right: 0px;"><a href="/{随机字符}/{随机字符}.html" target="_blank">学生学习辅导</a></li>
+        </ul>
+    </div>
+</div>        <div class="m_top_nav swiper_container_top_nav pchide swiper-free-mode">
+    <div class="m_nav_mask m_nav_mask_left" id="m_nav_mask_fun_left" style="display: none;"></div>
+    <ul class="swiper-wrapper" style="padding-left: 0px; padding-right: 0px; width: 1316px; height: 82px;">
+        <li class="swiper-slide swiper-slide-visible swiper-slide-active"><a href="/{随机字符}/{随机字符}.html" target="_blank">首页</a></li>
+        <li class="swiper-slide swiper-slide-visible">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">要闻播报</a>
+        </li>
+        <li class="swiper-slide swiper-slide-visible">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">市县动态</a>
+        </li>
+        <li class="swiper-slide swiper-slide-visible">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">基础教育</a>
+        </li>
+        <li class="swiper-slide">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">高等教育</a>
+        </li>
+        <li class="swiper-slide">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">职业教育</a>
+        </li>
+        <li class="swiper-slide">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">幼儿教育</a>
+        </li>
+        <li class="swiper-slide">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">理论研究</a>
+        </li>
+        <li class="swiper-slide">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">品牌活动</a>
+        </li>
+        <li class="swiper-slide">
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">学生学习辅导</a>
+        </li>
+    </ul>
+    <div class="m_nav_mask" id="m_nav_mask_fun"></div>
+</div>        <!-- nav  结束 -->
+        <div class="blank10" style="height:22px;"></div>
+        <div class="wid_1400" id="ad">
+            <script type="text/javascript" src="http://www.shuren100.com/file/script/A34.js"></script>
+        </div>
+        <div class="wid_1400">
+            <!-- 左侧 正文 开始-->
+            <div class="left" style="width: 900px;" id="m_txtList_left">
+                <div id="text_content" class="clear">
+                    <div class="left mrg_l_40 pad_t_10 station">
+                        <a href="/{随机字符}/{随机字符}.html" target="_self">首页</a>&nbsp;&gt;&nbsp;<a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>&nbsp;&gt;&nbsp;<span>{关键词1}</span>
+                    </div>
+                    <div class="mrg_t_25 f_222 text_fix" id="text_fix">
+                        <div class="xl_title clear">
+                            <div class="clear fb txtcenter jiaoyu_yinti" style="font-size: 24px;font-weight: bold;line-height: 28px;margin-top: 20px;">
+                                                            </div>
+                            <h1 class="clear fb txtcenter">{关键词1}{随机后缀}{新闻网标题}</h1>
+                            <div class="clear txtcenter  jiaoyu_fubiaoti" style="font-size: 24px;line-height: 28px;">
+                                                            </div>
+                            <h2 class="f12_747474 clear">
+                                <span id="js_pub">发布时间：{今日时间}</span>
+                                <span style="float: left;" id="js_source">来源：{随机关键词2}</span>
+                            </h2>
+                        </div>
+                        <div>
+                            <p>{新闻网内容}</p>                        </div>
+                    </div>
+                    <!--分页开始-->
+                    <div class="clearfix mrg_auto txtcenter" style="width: 210px; text-align:center;margin:30px auto 0px;" id="paginationBtn">
+                        <div class="blank10"></div>
+                    </div>
+                    <!--分页结束-->
+                    <div id="moeCode" class="mhide"></div>
+                    <div class="moe_wcode mhide"><img src=""><br></div>
+                    <div class="bg_eee f14 clear" id="author">
+                                                                                                                        <span style="margin-right: 20px;float: right;">责任编辑：{人物名称}</span>
+                    </div>
+                </div>
+                                <!-- 相关阅读 开始 -->
+                <div class="clear" id="xgyd">
+                                                            <h3 class="title">相关阅读</h3>
+                    <ul class="clear com_ul_iocn f12_747474">
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{关键词1}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li>
+                                                <li><a target="_blank" href="/{随机字符}/{随机字符}.html">{标题}</a></li>
+                                            </ul>
+                                    </div>
+                                <!-- 相关阅读 结束 -->
+            </div>
+            <!-- 左侧 正文 结束-->
+            <!-- 右侧 开始 -->
+            <div class="right" style="width: 450px;" id="txtListRight">
+    <div class="blank10" style="height:22px;"></div>
+    <!-- 最新发布 开始 -->
+    <div class="clear" id="zxfb">
+        <h3 class="clear txtrightH3">最新发布</h3>
+        <div class="blank10"></div>
+        <ul class="clear f12_747474">
+        </ul>
+    </div>
+    <!-- 最新发布 结束 -->
+    <div class="blank10" style="height:22px;"></div>
+    <div>
+        <script type="text/javascript" src="http://www.shuren100.com/file/script/A35.js"></script>    
+    </div>
+    <!-- 公众号 开始 -->
+    <div class="blank10" style="height:22px;"></div>
+    <h3 class="clear txtrightH3">公众号文章</h3>
+    <div class="blank10" style="height:20px;"></div>
+    <div class="slideBox3">
+        <ul class="pic">
+            
+        </ul>
+        <a class="prev" href="javascript:void(0);" target="_self"></a>
+        <a class="next" href="javascript:void(0);" target="_self"></a>
+        <div class="txt lh32">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+    <!-- 公众号 结束 -->
+    <!-- 富媒体 开始 -->
+    <div class="blank10" style="height:22px;"></div>
+    <h3 class="clear txtrightH3" style="display: none;">富媒体</h3>
+    <div class="blank10"></div>
+    <!-- Swiper -->
+    <div class="diepic" style="display: none;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="" width="260" height="400" alt="">
+                        <p></p>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <!-- 富媒体 结束 -->
+</div>        </div>
+        <!-- 右侧 结束 -->
+    </div>
+    <div class="blank30"></div>
+    <div class="footer">
+    
+    <p>Copyright © {年} {网站名称} All Rights Reserved</p>
+    
+    <div style="width:300px;margin:0 auto; padding:20px 0;">
+        <a target="_blank" href="/{随机字符}/{随机字符}.html" style="display:inline-block;text-decoration:none; width: 71px;height:29px; padding-left: 10px;">
+            <img src="/_/static/hb157_shuren100/static/picture/index_blxx.gif" style="float:left;">
+        </a>
+        <a target="_blank" href="/{随机字符}/{随机字符}.html" style="display:inline-block;text-decoration:none; width: 71px;height:29px;padding-left: 10px;">
+            <img src="/_/static/hb157_shuren100/static/picture/index_jbzx.gif" style="float:left;">
+        </a>
+    </div>
+</div>    <div id="info" data-catid="60"></div>
+    <script src="/_/static/hb157_shuren100/static/js/jquery.SuperSlide.2.1.3.js" type="text/javascript"></script>
+    <!-- Swiper JS -->
+    <script src="/_/static/hb157_shuren100/static/js/swiper.min.js"></script>
+    <script src="/_/static/hb157_shuren100/static/js/user.js" type="text/javascript"></script>
+    <script src="/_/static/hb157_shuren100/static/js/right.js" type="text/javascript"></script>
+    <script src="/_/static/hb157_shuren100/static/js/musicplayer.js" type="text/javascript"></script>
+    
+
+<!--微信分享 开始-->
+<script src="/_/static/hb157_shuren100/static/js/jweixin-1.0.0.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div> 
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+.tab_nav{
+	position: fixed;
+	background: rgba(255,255,255,0.80);
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+}
+.tab_nav>ul{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+}
+.tab_nav>ul>li>a{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	padding: 4px;
+}
+.tab_nav>ul>li>a>span{
+	font-size: 12px;
+}
+.icon-tab{
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+}
+.icon-home{
+	background-image: url(../image/icon-home.png);
+}
+.icon-consult{
+	background-image: url(../image/icon-mic.png);
+}
+.icon-pc{
+	background-image: url(../image/icon-pc.png);
+}
+.icon-house{
+	background-image: url(../image/icon-house.png);
+}
+.icon-search{
+	background-image: url(../image/icon-search.png);
+}
+
+/* miniZZHZ */
+.tab_nav_zzhz {
+  background-color: #ffffff;
+}
+.tab_nav_zzhz > ul > li > div {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	padding: 4px;
+}
+.tab_nav_zzhz > ul > li > div.active > span{
+  color: #18943b;
+}
+.tab_nav_zzhz > ul > li > div > span {
+  color: #797979;
+  font-size: 12px;
+}
+.tab_nav_zzhz .icon-tab {
+  width: 30px;
+  height: 30px;
+}
+
+
+.share_bg {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: rgba(131,139,139,0.3);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.bdsharebuttonbox{
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	bottom: -58px;
+	left: 0;
+	background: #ffffff;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px 0;
+	transition: all 0.3s ease-in-out;
+}
+.bdsharebuttonbox>a{
+	width: 48px;
+	height: 48px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.bds_qzone,
+.bds_tsina,
+.bds_tqq{
+	background-size: 50% 50%;
+	background-position: 11px 11px !important;
+	background-repeat: no-repeat;
+}
+.bds_qzone{
+	background-image: url(../image/icon-Qzone.png) !important;
+}
+.bds_tsina{
+	background-image: url(../image/icon-Weibo.png) !important;
+}
+.bds_tqq{
+	background-image: url(../image/icon-txweibo.png) !important;
+}

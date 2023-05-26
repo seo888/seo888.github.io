@@ -1,0 +1,248 @@
+@media all and (min-width: 600px) {
+  /* Change color for backdrop */
+  .fancybox-custom-layout .fancybox-bg {
+    /* background: #fcfaf9; */
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .fancybox-custom-layout.fancybox-is-open .fancybox-bg {
+    opacity: 1;
+  }
+
+  /* Move caption area to the right side */
+  .fancybox-custom-layout .fancybox-caption {
+    padding: 0;
+  }
+
+  .fancybox-custom-layout .fancybox-caption__body {
+    max-height: 100%;
+  }
+
+  .fancybox-custom-layout .fancybox-caption h3 {
+    color: #444;
+    font-size: 21px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+
+  .fancybox-custom-layout .fancybox-caption a {
+    color: #444;
+  }
+
+  /* Remove gradient from caption*/
+  .fancybox-custom-layout .fancybox-caption::before {
+    display: none;
+  }
+
+  /* Adjust content area position */
+  .fancybox-custom-layout .fancybox-stage {
+    /* right: 300px; */
+  }
+
+  /* Align buttons at the right side  */
+  .fancybox-custom-layout .fancybox-toolbar {
+    background: #3b3b45;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    direction: rtl;
+  }
+
+  .fancybox-custom-layout .fancybox-thumbs {
+    width: 110px;
+  }
+
+  .fancybox-custom-layout.fancybox-show-thumbs .fancybox-inner {
+    right: 110px;
+  }
+
+  .fancybox-custom-layout .fancybox-thumbs__list a {
+    max-width: 100%;
+    width: 102px;
+  }
+
+  /* Remove background from all buttons */
+  .fancybox-custom-layout .fancybox-button {
+    background: transparent;
+  }
+
+  /* Navigation arrows */
+  .fancybox-custom-layout .fancybox-navigation .fancybox-button div {
+    padding: 2px;
+  }
+
+  .fancybox-custom-layout .fancybox-navigation .fancybox-button[disabled] {
+    color: #ccc;
+  }
+
+  .fancybox-custom-layout
+    .fancybox-navigation
+    .fancybox-button:not([disabled]) {
+    color: #fff;
+  }
+
+  /* Reposition right arrow */
+  .fancybox-custom-layout .fancybox-button--arrow_left {
+    left: 5%;
+  }
+
+  .fancybox-custom-layout .fancybox-button--arrow_right {
+    right: 5%;
+  }
+
+  .fancybox-custom-layout .fb-caption {
+    text-align: left;
+    font-size: 16px;
+    background-color: #373737;
+    margin-top: 50px;
+    color:#ffffff;
+    padding: 10px 10%;
+  }
+
+  .fancybox-custom-layout .fb-caption .fb-caption-release-title {
+    font-size: 12px;
+    color: #ccc;
+  }
+
+  .fancybox-custom-layout .fb-caption .fb-caption-release-title a {
+    font-size: 12px;
+    color: #ccc;
+  }
+
+  .fancybox-custom-layout .fb-caption .fb-caption-release-title a:hover {
+    font-size: 12px;
+    color: #fff;
+  }
+
+  .fancybox-custom-layout .fb-caption .fb-caption-desc {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .fancybox-custom-layout .fb-caption .fb-caption-company {
+    font-size: 12px;
+    color: #ccc;
+  }
+
+  .fancybox-custom-layout .fb-caption .fb-caption-link {
+    color: #fff;
+  }
+}
+
+@media  all and (max-width: 600px) {
+  .fancy-video-wrap {
+    width: auto!important;
+    height: auto!important;
+  }
+}
+
+/* Align buttons at the right side  */
+.fancybox-custom-layout .fancybox-toolbar {
+  direction: rtl;
+}
+
+.fancybox-custom-layout .fancybox-thumbs__list a:before {
+  border: 2px solid #00837e;
+}
+
+.fancybox-custom-layout .fancybox-button--toggle {
+  position: relative;
+}
+
+.fancybox-custom-layout .fancybox-button--hide {
+  position: absolute;
+  top: 100%;
+  right: 8px;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  margin-top: 16px;
+  background-color: #fff;
+  color: #333;
+  padding: 8px 0;
+  display: none;
+}
+
+.fancybox-custom-layout .fancybox-button--toggle.show .fancybox-button--hide {
+  display: block;
+}
+
+.fancybox-custom-layout .fancybox-button--hide .fancybox-button--hide-arrow {
+  position: absolute;
+  bottom: 100%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom-color: #fff;
+}
+
+.fancybox-custom-layout .fancybox-button--hide-prnshare .cshare {
+  direction: ltr;
+}
+
+.fancybox-custom-layout .fancybox-button--hide-download {
+  width: 125px;
+}
+
+.fancybox-custom-layout .fancybox-button--hide-download div,
+.fancybox-custom-layout .fancybox-button--hide-download svg {
+  width: auto;
+  height: auto;
+}
+
+.fancybox-custom-layout .fancybox-button--hide-download .fb-download-type {
+  display: flex;
+  direction: ltr;
+  align-items: center;
+  padding: 4px 8px;
+}
+
+.fancybox-custom-layout .fancybox-button--hide-download .fb-download-thumbnail {
+  width: 25px;
+  color: #00837e;
+}
+
+.fancybox-custom-layout .fancybox-button--hide-prnshare {
+  width: 150px;
+}
+
+.fancy-video-wrap {
+  position: relative;
+}
+
+.fancy-video-wrap .fancy-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ccc;
+  font-size: 90px;
+}
+
+.fancybox-custom-layout .fancy-arrow {
+  font-size: 50px;
+  text-shadow: 1px 1px 10px #666;
+  display: inline-block;
+}
+
+.fancybox-custom-layout .fancy-arrow.fancy-arrow-left {
+  transform: rotate(-180deg);
+}
+
+.fancybox-custom-layout .cshare div {
+  height: auto;
+}
+
+[data-fancybox="gallery"] img {
+  max-width: 100%;
+}
+
+.fancybox-custom-layout .fb-caption .fb-caption-time {
+  font-size: 14px;
+  color: #8a8a8a;
+  display: none;
+}

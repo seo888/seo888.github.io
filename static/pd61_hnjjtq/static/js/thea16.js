@@ -1,0 +1,1 @@
+document.write("<a href=\"https://tb.53kf.com/code/client/18acd6b9202e699173a9d9f7717779172/1\" title=\"Gymlwaih\" target=\"_blank\"><img src=\"https://www.hnjjtq.com/ad/260-195-2.jpg\" alt=\"金格丽赫珠宝\"  width=\"100%\" height=\"195\"></a> ")

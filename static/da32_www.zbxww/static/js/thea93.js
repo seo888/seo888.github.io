@@ -1,0 +1,1 @@
+document.write("<a href='http://www.zbxww.org/e/public/ClickAd?adid=93' target=_blank><img src='/d/file/p/2023-01-18/d63024169ac4286e2de1cc24766f34e1.png' border=0 width='300' height='250' alt=''></a>");

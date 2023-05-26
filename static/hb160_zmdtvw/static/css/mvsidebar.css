@@ -1,0 +1,264 @@
+
+/* CSS Document */
+
+.mod_mv_list{overflow:hidden}
+.mv_list__list{margin-right:-30px;zoom:1}
+.mv_list__list:after{content:"";display:block;clear:both}
+.mv_list__item{float:left;width:160px;height:90px;padding-top:5px;padding-bottom:45px;padding-right:13px;padding-left:0px;overflow:hidden}
+.mv_list__item:nth-child(2n+0){float:right;width:160px;height:90px;padding-top:5px;padding-bottom:45px;padding-right:0px;padding-left:0px;}
+.mv_list__item_mv{float:left;width:160px;height:90px;padding-top:15px;padding-bottom:px;padding-left:15.5px;overflow:hidden}
+.mv_list__item_box{position:relative;margin-right:0}
+.mv_list__cover{position:relative;display:block;overflow:hidden;padding-top:90px;margin-bottom:0px;}
+/*.mv_list__cover:after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.4) 80%,rgba(0,0,0,.7) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#99000000', GradientType=0 )}*/
+.mv_list__pic{position:absolute;top:0;left:0;width:160px;height:90px;transform:scale(1);transition:transform .75s}
+.mv_list__pic img{width:100%;height:100%}
+.mv_list__cover:hover .mv_list__pic{transform:scale(1.07);transition:transform .75s cubic-bezier(0,1,.75,1)}
+.mv_list__lang{position:absolute;top:0;left:0;width:34px;line-height:20px;color:#fff;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#3A000000', endColorstr='#3A000000');background:rgba(0,0,0,.23);text-align:center;font-size:12px}
+.mv_list__lang{height:20px;line-height:22px}
+.mv_list__desc,.mv_list__singer,.mv_list__title{text-align:center;line-height:40px;display:block;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mv_list__mintitle{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;line-height:25px;color:#999;}
+.mv_list__singer{line-height:28px}
+.mv_list__info{line-height:14px;font-family:poppin,'PingFang SC',Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif}
+.mv_list__desc,.mv_list__info,.mv_list__singer,.mv_list__singer a{color:#999}
+.mv_list__cover:hover .mv_list__cover{color:#fff}
+.mv_list__listen{margin-right:10px}
+.mv_list__listen_icon{display:inline-block;width:19px;height:12px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-image:-webkit-image-set(url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png) 1x,url(../images/icon_sprite@2x.png) 2x);background-position:-180px -20px;margin-right:5px;vertical-align:-1px}
+.mod_slide{overflow:hidden;margin-bottom:25px}
+.mod_slide:after{content:"";display:block;clear:both}
+.slide__list{position:relative;font-size:0;width:500%}
+.slide__item{display:inline-block;width:4%}
+.mod_slide_action{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+.slide_action{position:absolute;top:0;width:50%;height:100%}
+.slide_action__btn{position:absolute;top:50%;margin-top:-54px;width:72px;height:108px;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#66999999', endColorstr='#66999999');background:url(#?max_age=2592000);background:rgba(153,153,153,.4);opacity:0;visibility:none;transition-property:opacity,transform;transition-duration:.5s;z-index:2}
+.slide_action__btn--left{transform:translateX(-100%)}
+.slide_action__btn--right{transform:translateX(100%)}
+.mod_slide_box:hover .slide_action__btn{opacity:1;visibility:none;transform:translateX(0);transition-property:opacity,transform,background,width;transition-duration:.5s}
+.slide_action:hover .slide_action__btn{width:80px;filter:none;background:#31c27c;transition-property:background,width;transition-duration:.5s}
+.slide_action--left,.slide_action__btn--left{left:0}
+.slide_action--right,.slide_action__btn--right{right:0}
+.slide_action__arrow{position:absolute;top:50%;margin-top:-9px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-image:-webkit-image-set(url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png) 1x,url(../images/icon_sprite@2x.png) 2x);width:11px;height:18px}
+.slide_action__arrow--left{left:28px;background-position:-180px 0}
+.slide_action__arrow--right{right:28px;background-position:-160px 0}
+.mod_slide_switch{width:100%;text-align:center;font-size:0}
+.slide_switch__item{display:inline-block;width:30px;height:1px;padding:10px 0;margin:0 5px}
+.slide_switch__bg{display:block;width:100%;height:1px;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#4CFFFFFF', endColorstr='#4CFFFFFF');background-color:rgba(255,255,255,.3)}
+.slide_switch__item--current .slide_switch__bg{filter:none;background-color:#fff}
+.mod_cover{zoom:1}
+.mod_cover__icon_play{position:absolute;left:50%;top:50%;margin:-25px;width:50px;height:50px;filter:alpha(opacity=0);opacity:0;-webkit-transform:scale(.7);-webkit-transition-property:opacity,-webkit-transform;-webkit-transition-duration:.5s;transform:scale(.7);transition-property:opacity,transform;transition-duration:.5s;zoom:1}
+@supports (-webkit-appearance:none){.mod_cover.play::after{content:"";position:absolute;top:50%;left:50%;margin:-50px -70px;width:35px;height:40px;background:url(img/play_ani.png?max_age=2592000&v=8941832651edecbe32917f5161e33877);-webkit-animation:play .7s forwards ease-in-out;animation:play .7s forwards ease-in-out}
+@-webkit-keyframes play{0{opacity:1;-webkit-transform:translateY(0)}
+100%{opacity:0;-webkit-transform:translateY(-40px)}
+}
+@keyframes play{0{opacity:1;transform:translateY(0)}
+100%{opacity:0;transform:translateY(-20px)}
+}
+}
+.mod_cover__mask{position:absolute;left:0;top:0;width:100%;height:100%;background-color:#000;opacity:0;filter:alpha(opacity=0);-webkit-transition:opacity .5s;transition:opacity .5s}
+.mod_cover:hover .mod_cover__icon_play{background:0 0\9;filter:progid:dximagetransform.microsoft.alphaimageloader(src="../image/cover_play_sidebar.png", sizingmethod="crop") alpha(opacity=90);opacity:.9;-webkit-transform:scale(1);-webkit-transition-property:opacity,-webkit-transform;-webkit-transition-duration:.5s;transform:scale(1);transition-property:opacity,transform;transition-duration:.5s;cursor:pointer}
+.mod_cover .mod_cover__icon_play:hover,.mod_cover__icon_play{background-image:url(../image/cover_play_sidebar.png);background-image:-webkit-image-set(url(../image/cover_play_sidebar.png) 1x,url(../images/cover_play_sidebar@2x.png) 2x)}
+.mod_cover .mod_cover__icon_play:hover{opacity:1;filter:none}
+.mod_cover:hover .mod_cover__mask{opacity:.2;filter:alpha(opacity=20);-webkit-transition:opacity .5s;transition:opacity .5s}
+.mod_list_menu{font-size:0;height:36px}
+.list_menu__item{display:inline-block;margin-right:10px;vertical-align:top}
+.list_menu__icon_add,.list_menu__icon_down,.list_menu__icon_pause,.list_menu__icon_play,.list_menu__icon_share{display:block;width:36px;height:36px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/icon_list_menu.png?max_age=2592000&v=873fb6560497db4abbe63767018022eb);background-image:-webkit-image-set(url(img/icon_list_menu.png) 1x,url(img/icon_list_menu@2x.png) 2x);background-repeat:no-repeat}
+.list_menu__icon_play{background-position:0 0}
+.list_menu__icon_pause{background-position:0 -200px}
+.list_menu__icon_share{background-position:0 -40px}
+.list_menu__icon_add{background-position:0 -80px}
+.list_menu__icon_down{background-position:0 -120px}
+.list_menu__item:hover .list_menu__icon_play{background-position:-40px 0}
+.list_menu__item:hover .list_menu__icon_pause{background-position:-40px -200px}
+.list_menu__item:hover .list_menu__icon_share{background-position:-40px -40px}
+.list_menu__item:hover .list_menu__icon_add{background-position:-40px -80px}
+.list_menu__item:hover .list_menu__icon_down{background-position:-40px -120px}
+.songlist__item--disable .list_menu__item{cursor:default}
+.songlist__item--disable .list_menu__icon_play,.songlist__item--disable .list_menu__item:hover .list_menu__icon_play{background-position:-160px 0}
+.songlist__item--disable .list_menu__icon_pause,.songlist__item--disable .list_menu__item:hover .list_menu__icon_pause{background-position:-160px -200px}
+.songlist__item--disable .list_menu__icon_share,.songlist__item--disable .list_menu__item:hover .list_menu__icon_share{background-position:-160px -40px}
+.songlist__item--disable .list_menu__icon_add,.songlist__item--disable .list_menu__item:hover .list_menu__icon_add{background-position:-160px -80px}
+.songlist__item--disable .list_menu__icon_down,.songlist__item--disable .list_menu__item:hover .list_menu__icon_down{background-position:-160px -120px}
+.btn_operate_menu{position:absolute;bottom:auto;right:-99px;width:20px;height:20px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-image:-webkit-image-set(url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png) 1x,url(../images/icon_sprite@2x.png) 2x);background-position:-80px -40px}
+.btn_operate_menu:hover{background-position:-80px -60px}
+.mod_operate_menu{position:absolute;top:auto;left:auto;z-index:100;color:#4F4F4F;font-size:14px}
+.operate_menu__cont,.operate_menu__sub{width:168px;padding:5px 0;background-color:#fff;box-shadow:0 0 10px 0 rgba(183,183,183,.65);border:1px solid #bfbfbf}
+.operate_menu__link{display:block;height:36px;line-height:36px;padding-left:40px;padding-right:15px;margin-bottom:1px;position:relative;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.operate_menu__list{max-height:250px;overflow-y:auto}
+.operate_menu__list--no_icon .operate_menu__link{padding-left:15px}
+.operate_menu__link--hover,.operate_menu__link:hover{background-color:#31c27c;color:#fff}
+.operate_menu__link--disabled{opacity:.5;filter:alpha(opacity=50);cursor:default;pointer-events:none}
+.operate_menu__top_line{padding-top:5px;border-top:1px solid #f0f0f0;margin-top:5px}
+.operate_menu__bottom_line{padding-bottom:5px;border-bottom:1px solid #f0f0f0;margin-bottom:5px}
+.operate_menu__sub{position:absolute;top:initial;left:169px;width:180px;overflow:hidden;color:#4F4F4F;display:none;z-index:-1}
+.operate_menu__sub.top{top:-3px}
+.operate_menu__sub.bottom{bottom:-3px}
+.operate_menu__sub ul{max-height:250px;overflow-x:hidden;overflow-y:auto}
+.operate_menu__sub .mod_operate_menu__link{padding-left:15px}
+.operate_menu__item--hover .operate_menu__sub,.operate_menu__item:focus .operate_menu__sub{display:block;max-height:285px}
+.operate_menu__icon_add,.operate_menu__icon_arrow,.operate_menu__icon_batch,.operate_menu__icon_delete,.operate_menu__icon_down,.operate_menu__icon_edit,.operate_menu__icon_like,.operate_menu__icon_prev_arrow,.operate_menu__icon_radio,.operate_menu__icon_share{position:absolute;width:16px;height:16px;left:15px;top:10px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-image:-webkit-image-set(url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png) 1x,url(../images/icon_sprite@2x.png) 2x);background-repeat:no-repeat}
+.operate_menu__icon_like{background-position:-60px 0}
+.operate_menu__icon_add{background-position:-20px 0}
+.operate_menu__icon_radio{background-position:-80px 0}
+.operate_menu__icon_delete{background-position:-100px 0}
+.operate_menu__icon_down{background-position:-40px -220px}
+.operate_menu__icon_share{background-position:-100px -180px}
+.operate_menu__icon_batch{background-position:-120px 0}
+.operate_menu__icon_edit{background-position:-140px 0}
+.operate_menu__icon_arrow{width:6px;height:11px;left:auto;right:15px;top:12px;background-position:0 0}
+.operate_menu__icon_prev_arrow{width:6px;height:11px;left:20px;top:12px;background-position:-10px 0}
+.operate_menu__link:hover .operate_menu__icon_add{background-position:-20px -20px}
+.operate_menu__link:hover .operate_menu__icon_like{background-position:-60px -20px}
+.operate_menu__link:hover .operate_menu__icon_radio{background-position:-80px -20px}
+.operate_menu__link:hover .operate_menu__icon_delete{background-position:-100px -20px}
+.operate_menu__link:hover .operate_menu__icon_down{background-position:-40px -240px}
+.operate_menu__link:hover .operate_menu__icon_share{background-position:-100px -200px}
+.operate_menu__link:hover .operate_menu__icon_batch{background-position:-120px -20px}
+.operate_menu__link:hover .operate_menu__icon_arrow{background-position:0 -20px}
+.operate_menu__link:hover .operate_menu__icon_prev_arrow{background-position:-10px -20px}
+.operate_menu__link:hover .operate_menu__icon_edit{background-position:-140px -20px}
+.mod_page_nav{clear:both;text-align:center;margin-bottom:60px;font-size:0}
+.mod_page_nav a{color:#a2a2a2}
+.mod_page_nav a,.mod_page_nav strong{font-size:16px;font-weight:400;display:inline-block;line-height:50px;margin:0 5px;padding:0 21px;box-sizing:border-box;min-width:24px}
+.mod_page_nav .current,.mod_page_nav a:hover{color:#fff;background-color:#31c27c}
+.mod_page_nav__next,.mod_page_nav__prev{font-size:0}
+.mod_page_nav__next_icon,.mod_page_nav__prev_icon{display:inline-block;width:6px;height:11px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-repeat:no-repeat}
+.mod_page_nav__prev_icon{background-position:-10px 0}
+.mod_page_nav__next_icon{background-position:0 0}
+.mod_page_nav a:hover .mod_page_nav__prev_icon{background-position:-10px -20px}
+.mod_page_nav a:hover .mod_page_nav__next_icon{background-position:0 -20px}
+.mod_part,.mod_part_detail{position:relative;margin-bottom:30px}
+.part__hd,.part_detail__hd{overflow:hidden;height:60px}
+.part__tit,.part_detail__tit{float:left;font-size:24px;font-weight:400;line-height:58px}
+.part__more{position:absolute;top:20px;right:0;font-size:14px}
+.icon_part_arrow{display:inline-block;width:7px;height:12px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-image:-webkit-image-set(url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png) 1x,url(../images/icon_sprite@2x.png) 2x);background-position:-120px -40px;margin-left:6px;vertical-align:-1px}
+.part__more:hover .icon_part_arrow{background-position:-120px -60px}
+.mod_part .mv_list__item,.mod_part .playlist__item{padding-bottom:0}
+.mod_part .mv_list__item,.mod_part .singer_list__item{width:20%}
+.part__tags{float:left;overflow:hidden;padding-left:30px;padding-top:14px}
+.part__tag_item{float:left;font-size:15px;line-height:30px;padding:0 15px}
+.part__tag_item.current{background-color:#31c27c;color:#fff}
+.part_switch{position:absolute;top:7px;right:0;height:40px;line-height:40px;border-radius:2px;font-size:0}
+.part_switch__item{position:relative;display:inline-block;padding:0 16px;height:38px;position:relative;font-size:14px;border-width:1px;border-style:solid;border-color:#c9c9c9 transparent #c9c9c9 transparent}
+.part_switch__item--left{right:-1px;border-top-left-radius:2px;border-bottom-left-radius:2px;border-color:#c9c9c9}
+.part_switch__item--right{border-top-right-radius:2px;border-bottom-right-radius:2px;border-color:#c9c9c9}
+.part_switch__item--select,.part_switch__item--select:hover{background-color:#31c27c;color:#fff;border-color:#31c27c;z-index:2}
+.part_tags{position:relative;float:left;line-height:38px;margin:8px 6px 0 0;padding:0 25px 0 10px;border:1px solid #c9c9c9;border-radius:2px;font-size:14px}
+.part_tags:hover{background-color:#37c27c;border-color:#37c27c;color:#fff}
+.part_tags__delete{position:absolute;top:50%;right:4px;margin-top:-8px;width:16px;height:16px;background:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png) -160px -120px;overflow:hidden}
+.part_tags:hover .part_tags__delete{background-position:-160px -80px}
+.part_tags .part_tags__delete:hover{background-color:rgba(225,225,225,.3);border-radius:12px}
+.mod_tag{position:relative;margin:52px 0 0}
+.tag__list{position:relative;height:auto;zoom:1;clear:both;overflow:hidden;line-height:26px;padding-left:65px}
+.tag__tit{position:absolute;top:0;left:0;font-weight:400;width:65px}
+.tag__item{float:left;padding:0 8px;margin:0 24px 15px 0}
+.tag__item--expand,.tag__item--expand:hover,.tag__item--select,.tag__item--select:hover{background-color:#31c27c;color:#fff}
+.tag__list--select .tag__item{margin-right:19px}
+.tag__arrow{display:inline-block;width:10px;height:6px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-position:-120px -260px;margin-left:3px;vertical-align:1px}
+.tag__item:hover .tag__arrow{background-position:-140px -260px}
+.tag__item--select .tag__arrow,.tag__item--select:hover .tag__arrow{background-position:-160px -260px}
+.tag__item--expand .tag__arrow,.tag__item--expand:hover .tag__arrow{background-position:-100px -260px}
+.popup_tag{position:absolute;top:148px;left:0;width:100%;border:1px solid #bfbfbf;background-color:#fff;padding:19px 0 5px;z-index:4}
+@supports (-webkit-appearance:none){.popup_tag{-webkit-box-shadow:0 0 10px rgba(183,183,183,.65);box-shadow:0 0 10px rgba(183,183,183,.65);border:0 none}
+}
+.icon_rank_down,.icon_rank_keep,.icon_rank_new,.icon_rank_popular,.icon_rank_re,.icon_rank_up{display:block;margin-left:auto;margin-right:auto;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/icon_rank.png?max_age=2592000&v=a4df626c2c09dd0a7fa0a34716f5673c);background-image:-webkit-image-set(url(img/icon_rank.png) 1x,url(img/icon_rank@2x.png) 2x)}
+.icon_rank_keep{width:14px;height:3px;margin-top:38px;background-position:0 -30px}
+.icon_rank_up{width:14px;height:13px;margin-top:28px;background-position:0 0}
+.icon_rank_down{width:14px;height:13px;margin-top:28px;background-position:0 -15px}
+.icon_rank_new{width:23px;height:8px;margin-top:36px;background-position:0 -40px}
+.icon_rank_re{width:14px;height:8px;margin-top:36px;background-position:0 -50px}
+.icon_rank_popular{width:15px;height:15px;margin-top:27px;background-position:0 -60px}
+.popup_data_detail{position:absolute;top:364px;right:303px;width:580px;background:#fff;box-shadow:0 0 4px rgba(0,0,0,.35);border-radius:4px;border:1px solid #ddd}
+body:last-child .popup_data_detail{border:0 none}
+.popup_data_detail__tit{line-height:22px;font-size:20px;font-weight:400;padding:0 0 20px}
+.popup_data_detail__cont{max-height:400px;font-size:14px;line-height:22px;margin:30px 5px 30px 10px;overflow-y:auto}
+.popup_data_detail__cont p,.popup_data_detail__tit{margin:0 24px 0 19px}
+.popup_data_detail__cont p{min-height:22px;text-align:justify}
+.popup_data_detail__arrow{position:absolute;top:50px;right:-11px;width:11px;height:17px;background:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/popup_arrow.png?max_age=2592000&v=76ff6082d781be93773f44cfc8b8c66d) 0 -17px no-repeat}
+body:last-child .popup_data_detail__arrow{background-position:0 0}
+.none_txt{position:relative;font-size:20px;color:#666;line-height:38px;text-align:center;padding:90px 0 100px;z-index:2}
+.none_txt__symbol{display:block;width:213px;height:203px;margin:0 auto 27px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/symbol_none.png?max_age=2592000&v=c84c149ce79bc53304df9c31e13aef49);background-image:-webkit-image-set(url(img/symbol_none.png) 1x,url(img/symbol_none@2x.png) 2x)}
+.none_txt__symbol--album{width:207px;height:207px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/symbol_none--album.png?max_age=2592000&v=9d75c128b054a2f600a5937e7de70ccb);background-image:-webkit-image-set(url(img/symbol_none--album.png) 1x,url(img/symbol_none--album@2x.png) 2x)}
+.none_txt__symbol--album{width:200px;height:182px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/symbol_none--mv.png?max_age=2592000&v=a2787488b92fa27b9c437dc8aad5f5fb);background-image:-webkit-image-set(url(img/symbol_none--mv.png) 1x,url(img/symbol_none--mv@2x.png) 2x)}
+.none_txt a{color:#31c27c}
+.mod_mv_banner{position:relative;overflow:hidden;margin-bottom:111px}
+.mod_mv_banner .section_inner{position:relative;z-index:2}
+.mod_mv_banner .mod_slide_switch{position:absolute;bottom:20px;left:0;z-index:3}
+.mod_mv_banner .mod_slide{position:relative;width:500%}
+.mv_banner_list__item{float:left;width:20%}
+.mv_banner_list__pic{display:block;width:100%}
+.page_mv .main{padding-bottom:67px}
+.page_mv .mod_part{margin-top:-90px}
+.page_mv .mv_list__cover{margin-bottom:20px}
+.page_mv .mv_list__info,.page_mv .mv_list__singer,.page_mv {color:#fff;z-index:2;position:absolute;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px}
+.page_mv{left:10px;bottom:21px;max-width:120px}
+.page_mv .mv_list__singer{left:10px;bottom:0;max-width:120px}
+.page_mv .mv_list__info{right:10px;bottom:2px}
+.page_mv .mv_list__listen_icon{background-position:-180px -260px}
+.mod_mv_slider{position:relative}
+.slider__next,.slider__prev{position:absolute;top:110px;width:26px;height:52px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/slider_arrow.png?max_age=2592000&v=f63a909749ce0e37e690f856c11fb122)}
+.slider__prev{left:-45px;background-position:0 0}
+.slider__next{right:-45px;background-position:-26px 0}
+.slider__prev:hover{background-position:0 -54px}
+.slider__next:hover{background-position:-26px -54px}
+.mv_slider__inner{height:405px;margin-right:-20px;overflow:hidden}
+.mod_mv_slider .mod_mv{position:relative;width:500%}
+.mod_mv_slider .mod_mv:after{content:"";display:block;clear:both}
+.mod_mv_slider .mv_list__list{float:left;width:20%;margin-right:0}
+.mv_list__item--big .mv_list__cover{padding-top:273px}
+.mv_list__item--big .mv_list__pic{width:auto}
+.mv_list__item{overflow:visible}
+.mv_list_popup{position:absolute;top:100%;left:0;right:0;background-color:#f2f2f2;height:0;visibility:hidden;-webkit-transition:height .2s .2s ease-out,visibility 1ms .4s;transition:height .2s .2s ease-out,visibility 1ms .4s;overflow:hidden}
+.mv_list__item_box{z-index:1;-webkit-transition:z-index 1ms .4s ease-out;transition:z-index 1ms .4s ease-out}
+.mv_list__item:hover .mv_list__item_box{z-index:9;-webkit-transition:z-index 1ms ease-out;transition:z-index 1ms ease-out}
+.mv_list__item:hover .mv_list_popup{visibility:visible;height:146px;-webkit-transition:height .2s .2s ease-out;transition:height .2s .2s ease-out}
+.mv_list_popup__info{padding:10px 10px 0}
+.mv_list_popup__desc{line-height:20px;padding:6px 10px 0}
+.mod_part .mv_list__item--big{width:40%}
+.page_mv_all,.page_mv_top{background:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/bg_detail.jpg?max_age=2592000&v=3ef20cb3b37674fd8904f801ce817668) 50% 90px repeat-x}
+.page_mv_all .mod_part_detail{margin-top:18px}
+.mod_toplist{position:relative;padding-top:50px}
+.toplist__hd{line-height:64px;height:64px;margin-bottom:10px;padding-left:30px}
+.toplist__tit{float:left;font-weight:400;font-size:24px;margin-right:15px}
+.toplist__tips{position:absolute;top:62px;right:26px;line-height:40px}
+.toplist_switch{margin-right:15px;font-size:0}
+.toplist_switch__data{font-size:14px}
+.toplist_switch__btn{display:inline-block;vertical-align:middle;width:17px;height:23px;overflow:hidden}
+.toplist_switch__btn,_::-webkit-:not(:root:root){margin-top:7px}
+.toplist_switch__btn--disable{opacity:.4;filter:alpha(opacity=40);pointer-events:none;cursor:default}
+.toplist_switch__arrow_next,.toplist_switch__arrow_prev{display:block;width:7px;height:12px;background-image:url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png);background-image:-webkit-image-set(url(http://www.zmdtvw.cn/skin/2019newindex_guo/images/icon_sprite.png) 1x,url(../images/icon_sprite@2x.png) 2x)}
+.toplist_switch__arrow_prev{margin-left:3px;background-position:-160px -40px}
+.toplist_switch__arrow_next{margin-left:7px;background-position:-120px -40px}
+.toplist_switch__btn:hover .toplist_switch__arrow_prev{background-position:-160px -60px}
+.toplist_switch__btn:hover .toplist_switch__arrow_next{background-position:-120px -60px}
+.popup_data_detail{top:108px}
+.popup_data_detail__arrow{position:absolute;top:-11px;left:50%;margin-left:-8px;width:17px;height:11px;background:url(http://www.zmdtvw.cn/skin/2019newindex_guo/css/img/popup_arrow.png?max_age=2592000&v=76ff6082d781be93773f44cfc8b8c66d) -11px -17px no-repeat}
+body:last-child .popup_data_detail__arrow{background-position:-11px 0}
+.mod_mv_tab{height:50px;font-size:0;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#e9e9e9;border-bottom-color:rgba(153,153,153,.11);padding-left:30px}
+.mv_tab__item{display:inline-block;font-size:16px;margin-right:80px}
+.mv_tab__item--current{color:#31c27c}
+.mod_mv_toplist{margin:35px 0 60px}
+.mv_toplist__item{position:relative;height:90px;padding:5px 0 5px 297px}
+.mv_toplist__item:hover{z-index:2}
+.mv_toplist__item:after{content:"";clear:both;display:block}
+.mv_toplist__item--even{background-color:#fbfbfd}
+.mv_toplist__number,.mv_toplist__rank{position:absolute;top:0;height:90px;line-height:90px}
+.mv_toplist__number{width:45px;top:2px;left:0;text-align:right;font-size:24px;color:#333}
+.mv_toplist__number--top{color:#ff4222}
+.mv_toplist__rank{left:45px;width:72px;font-size:12px;text-align:center;color:#999}
+.mv_toplist__cover{position:absolute;top:5px;left:117px;width:160px;overflow:hidden;margin-right:20px}
+.mv_toplist__cover .mv_list__cover{margin-bottom:0}
+.mv_toplist__info,.mv_toplist__singer,.mv_toplist__title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height:20px}
+.mv_toplist__title{padding-top:14px;font-weight:400}
+.mv_toplist__info,.mv_toplist__singer,.mv_toplist__singer a{color:#999}
+.mv_toplist__singer a:hover{color:#37c27c}
+.mv_toplist__heat{position:absolute;top:29px;right:26px;width:100px;height:85px;text-align:right}
+.mv_toplist__heat strong{display:block;font-size:24px;font-weight:400;color:#444;line-height:24px}
+.mv_toplist__heat span{display:block}
+.mv_toplist__heat_tips{position:absolute;top:57px;right:-73px;width:190px;display:none;border-radius:2px}
+.mv_toplist__heat_tips .popup_data_detail__cont{margin:10px 15px;line-height:22px}
+.mv_toplist__heat_tips .popup_data_detail__cont p{margin:0}
+.mv_toplist__heat:hover .mv_toplist__heat_tips{display:block}
+.icon_rank_keep{margin-top:43px}
+.icon_rank_new,.icon_rank_re{margin-top:41px}
+.icon_rank_up{margin-top:38px}
+.icon_rank_down{margin-top:38px}
+.icon_rank_popular{margin-top:37px}

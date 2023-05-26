@@ -1,0 +1,39 @@
+window.localStorageKey={lastReadList:'lastReadList',readHabit:'readHabit',novelVisit:'novelVisit',searchUrl:'searchUrl',}
+window.urlPath={verifyUsername:'/user/verifyUsername.json',login:'/user/login.php',toLogin:'/user/login.json',bookcase:'/user/bookcase.php',addBookcase:'/user/addbookcase.json',delBookcase:'/user/delbookcase.json',userinfo:'/user/userinfo.php',passwd:'/user/password.php',toPasswd:'/user/password.json',logout:'/user/logout.php',register:'/user/register.php',toRegister:'/user/register.json',novelVisit:'/novelVisit.json',search:'/search.php',errorChapter:'/errorChapter.json',category_page:'/{sortPinyin}/{sortId}_{page}.html',book:'/html/{sid}/{bid}/',chapter:'/html/{sid}/{bid}/{cid}.html',}
+getArgs();function getArgs(){var refresh=true;var searchUrl=localStorage.getItem(window.localStorageKey.searchUrl);if(searchUrl){try{searchUrl=JSON.parse(searchUrl);if((Date.now()-parseInt(searchUrl.time))<3600*1000){refresh=false;window.urlPath.search=searchUrl.url;}}catch(e){}}
+if(refresh){$.ajax({url:'/getArgs',type:"get",async:false,success:function(res){if(res.code==0){localStorage.setItem(window.localStorageKey.searchUrl,JSON.stringify({"time":Date.now(),"url":res.data.searchUrl}));window.urlPath.search=res.data.searchUrl;}else{localStorage.setItem(window.localStorageKey.searchUrl,JSON.stringify({"time":Date.now(),"url":"/search.php"}));window.urlPath.search="/search.php";}},error:function(err){console.log(err)
+localStorage.setItem(window.localStorageKey.searchUrl,JSON.stringify({"time":Date.now(),"url":"/search.php"}));window.urlPath.search="/search.php";}});}}
+function fixwidth(){var _bqgmb_head=$("#_bqgmb_head");var _bqgmb_h1=$("#_bqgmb_h1");if(_bqgmb_head[0]){var w=(_bqgmb_head[0].scrollWidth-175)+'px';_bqgmb_h1.css({'width':w});}}
+function getCookie(key){if(document.cookie.length>0){var params=document.cookie.split('; ');if(params.length>0){var _args=[],tmpArgs;for(var i in params){tmpArgs=params[i].split('=');_args[tmpArgs[0]]=tmpArgs[1];}
+if(key){for(var i in _args){if(key==i)return _args[i];}}else{return _args;}}}
+return key?'':[];}
+function checkLogin(redirectUrl){redirectUrl=redirectUrl||false;var isLogin=getCookie('token');if(isLogin){if(redirectUrl!=false){location.href=redirectUrl;}
+return true;}
+if(redirectUrl!=false){alert('未登陆')}
+return false;}
+function showlogin(){var html;if(checkLogin()){html='<div id="login_top"><a class="login_topbtn c_index_login" href="'+window.urlPath.userinfo+'">会员中心</a></div>';}else{html='<div id="login_top"><a class="login_topbtn c_index_login" href="'+window.urlPath.login+'">登录</a><a href="'+window.urlPath.register+'" class="login_topbtn c_index_login">注册</a></div>';}
+$('#login_top').html(html);}
+function register(){var uname=$("#regname").val();var upass=$("#regpass").val();var uemail=$('#regemail').val();if(uname==false){alert('请输入用户名长度不少于5位的字母、数字');$("#regname").focus();return;}
+if(upass==false){alert('请输入密码长度不少于6位的密码');$("#regpass").focus();return;}
+if(uemail==false){alert('请输入正确的邮箱');$("#regemail").focus();return;}
+if(!(/^[a-zA-Z0-9]{5,20}$/.test(uname))){alert('请输入用户名长度不少于5位的字母、数字');$("#regname").focus();return;}
+if(!(/^[0-9a-zA-Z~!@#$%^&*]{6,12}$/.test(upass))){alert('密码必须为6-12位的数字或字母或特殊字符(~!@#$%^&*)');$("#regpass").focus();return;}
+if(!(/^[a-zA-Z0-9]+([-_.][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([-_.][a-zA-Z0-9]+)*\.[a-z]{2,}$/.test(uemail))){alert('邮箱不正确');$("#regemail").focus();return;}
+$.ajax({url:window.urlPath.toRegister,dataType:"json",type:"post",data:{username:uname,password:upass,email:uemail,},success:function(data){window.location.href=window.urlPath.userinfo;},error:function(err){var data=JSON.parse(err.responseText);alert(data.message);}});}
+function login(){var uname=$("#username").val();var upass=$("#userpass").val();if(uname==""){alert('请输入用户名');$("#username").focus();return false;}
+if(upass==""){alert('请输入密码');$("#userpass").focus();return false;}
+$.ajax({url:window.urlPath.toLogin,dataType:"json",type:"post",data:{username:uname,password:upass},success:function(data){var url=window.urlPath.userinfo;var dumpUrl=sessionStorage.getItem('dumpUrl');if(dumpUrl){url=dumpUrl;sessionStorage.removeItem('dumpUrl');}
+location.href=url;},error:function(err){var data=JSON.parse(err.responseText);alert(data.message)}})}
+function addBookMark(bid,cid,title){$.ajax({url:window.urlPath.addBookcase,dataType:"json",type:"post",data:{bid:bid,cid:cid,title:title,action:'addbookmark'},success:function(data){alert('加入书签成功');},error:function(err){var data=JSON.parse(err.responseText);if(data.code==401){alert('您还没有登录，请登录后加入书签！');}else{alert(data.message);}}});}
+function addBookCase(bid){$.ajax({url:window.urlPath.addBookcase,dataType:"json",type:"post",data:{bid:bid,action:'addbookinfo'},success:function(data){alert('加入书架成功！');},error:function(err){var data=JSON.parse(err.responseText);console.log(data.error);if(data.code==401){alert('您还没有登录，请登录后加入书架！')}else{alert(data.message);}}});}
+function delete_bookcase(id){$.ajax({url:window.urlPath.delBookcase,dataType:"json",type:"post",data:{caseid:id,},success:function(data){window.location.href=window.urlPath.bookcase;},error:function(err){var data=JSON.parse(err.responseText);alert(data.message);}});}
+function novelVisit(bid){NovelVisit.add(bid);}
+var NovelVisit={key:localStorageKey.novelVisit,add:function(bid){var date=new Date();var day=this.timeAdd0(date.getDay());var bookIds=localStorage.getItem(this.key);try{bookIds=JSON.parse(bookIds);if(!bookIds){bookIds={};}}catch(e){bookIds={};}
+var _new=true;for(var i in bookIds){if(i!=day){bookIds[i]=[];}}
+if(bookIds.hasOwnProperty(day)){if(bookIds[day].indexOf(bid)>=0){_new=false;}}else{bookIds[day]=[];}
+if(_new){bookIds[day].push(bid);}
+localStorage.setItem(this.key,JSON.stringify(bookIds));if(_new){setTimeout(function(){$.ajax({url:window.urlPath.novelVisit,dataType:"json",type:"post",data:{bid:bid},success:function(data){},error:function(err){}})},1000);}},timeAdd0:function(time){time=time.toString();return time.length==1?'0'+time.toString():time;}};function panel(num){getArgs();var html='';html+='<form name="articlesearch" action="'+window.urlPath.search+'" method="get">';html+='<table cellpadding="0" cellspacing="0" style="width:100%;">';html+='<tr>';html+='<td style="background-color:#fff; border:1px solid #CCC;"><input id="s_key_'+num+'" name="keyword" type="text" class="key" value="输入书名后搜索，宁可少字不要错字" onFocus="this.value=\'\'" /></td>';html+='<td style="width:35px; background-color:#0080C0; background-image:url(\'/images/search.png\'); background-repeat:no-repeat; background-position:center"><input name="submit" type="submit" value="" class="go" onclick="toSearch('+num+')"></td>';html+='</tr>';html+='</table>';html+='</form>';$('.search').html(html);}
+function postErrorChapter(articleid,chapterid){$.ajax({url:window.urlPath.errorChapter,dataType:"json",type:"post",data:{articleid:articleid,chapterid:chapterid},success:function(data){alert('已经提交，请耐心等待处理结果');},error:function(err){alert('发生错误');}});}
+function formatNovelPath(book){var novelPath=window.urlPath.book;novelPath=novelPath.replace(new RegExp('{sid}','g'),book.sid);novelPath=novelPath.replace(new RegExp('{bid}','g'),book.bid);novelPath=novelPath.replace(new RegExp('{py}','g'),book.py);return novelPath;}
+function formatChapterPath(chapter){var chapterPath=window.urlPath.chapter;chapterPath=chapterPath.replace(new RegExp('{sid}','g'),chapter.sid);chapterPath=chapterPath.replace(new RegExp('{bid}','g'),chapter.bid);chapterPath=chapterPath.replace(new RegExp('{py}','g'),chapter.py);chapterPath=chapterPath.replace(new RegExp('{cid}','g'),chapter.cid);return chapterPath;}
+$(function(){$('.nr_page').eq(1).find('table').css('margin','20px 0');});

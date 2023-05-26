@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <link rel='stylesheet' id='open_social_css-css' href='/static/ow92_sx-news/static/css/os.css' type='text/css' media='all'>
+    <!--<script type='text/javascript' src='http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js'></script>-->
+    <link rel="stylesheet" href="/static/ow92_sx-news/static/css/style.css" media="all">
+    <link href="/static/ow92_sx-news/static/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <!--[if lt IE 9]><script src="/style/js/html5.js"></script><![endif]-->
+    <script src="/static/ow92_sx-news/static/js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(window).scroll(function(){
+                $offset = $('.placeholder').offset();//不能用自身的div，不然滚动起来会很卡
+                if($(window).scrollTop()>$offset.top){
+                    $('.header').css({'position':'fixed','top':'0px','left':$offset.left+'px','z-index':'999'});
+                    $(".container").css({"margin-top":"93px"});
+                }else{
+                    $('.header').removeAttr('style');
+                    $('.container').removeAttr('style');
+                }
+            });
+        })
+    </script>
+    <script>
+        window._deel = {
+            maillist: '',
+            maillistCode: '',
+            commenton: 0,
+            roll: [0,0]
+        }
+    </script>
+    </head>
+    <body class="single single-post single-format-standard">
+<div class="placeholder"></div>
+<header class="header" style="height: 52px;">
+<!-- 登录 -->
+<!--
+<script>
+document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+</script>
+ -->
+<div class="navbar">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" style="float:left"><img src="/static/ow92_sx-news/static/picture/logo.png" border="0" width="180" height="46"></a>
+<ul class="nav">
+  <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></li>
+ 
+<li id="tabnav_btn_1" onmouseover="tabit(this)" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">社会</a>
+    <ul class="sub-menu">
+      
+    </ul>
+</li><li id="tabnav_btn_2" onmouseover="tabit(this)" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">财经</a>
+    <ul class="sub-menu">
+      
+    </ul>
+</li><li id="tabnav_btn_3" onmouseover="tabit(this)" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">教育</a>
+    <ul class="sub-menu">
+      
+    </ul>
+</li><li id="tabnav_btn_4" onmouseover="tabit(this)" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">科技</a>
+    <ul class="sub-menu">
+      
+    </ul>
+</li><li id="tabnav_btn_5" onmouseover="tabit(this)" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">体育</a>
+    <ul class="sub-menu">
+      
+    </ul>
+</li><li id="tabnav_btn_6" onmouseover="tabit(this)" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">娱乐</a>
+    <ul class="sub-menu">
+      
+    </ul>
+</li><li id="tabnav_btn_7" onmouseover="tabit(this)" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">汽车</a>
+    <ul class="sub-menu">
+      
+    </ul>
+</li> 
+</ul>
+<div class="menu pull-right">
+
+</div>
+</div></header>
+<section class="container">
+      <div class="content-wrap">
+    <div class="content">
+          <header class="article-header">
+        <h1 class="article-title"><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{随机后缀}{新闻网标题}</a></h1>
+        <div class="meta"> <span class="muted">来源：{关键词1}</span> <span class="muted"><i class="icon-user icon12"></i> <a href="/{随机字符}/{随机数字}_{随机数字}.html"></a></span>
+              <time class="muted"><i class="ico icon-time icon12"></i> {当前时间}</time>
+              <span class="muted"><i class="ico icon-eye-open icon12"></i><script src="http://sx-news.com/e/public/ViewClick?classid=1&id=223664&addclick=1"></script> 浏览</span> </div>
+      </header>
+          <div class="banner banner-post">
+      </div>
+          <article class="article-content">
+        <blockquote>
+              <p><strong>小编：</strong> {关键词1}{句子}</p>
+            </blockquote>
+        <p>{新闻网内容}</p>
+        <!--fav--> 
+        <p><strong>免责声明：</strong>本文仅代表作者个人观点，与{网站名称}无关。其原创性以及文中陈述文字和内容未经本站证实，对本文以及其中全部或者部分内容、文字的真实性、完整性、及时性本站不作任何保证或承诺，请读者仅作参考，并请自行核实相关内容。</p>
+        <!--fav end--> 
+        
+          
+        
+        <!--related-->
+        <div class="related-post">
+              <h6>你可能喜欢的：</h6>
+              <dl class="fix">
+            <div id='tag741ea220ff5887504d724069fe0ee1bf'>
+     
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{关键词1}{标题}"><img src="{随机图片}" alt="{关键词1}{标题}"><span>{关键词1}{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{关键词1}{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+    
+<dd><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}"><img src="{随机图片}" alt="{标题}"><span>{标题}</span></a></dd>
+</div>
+          </dl>
+            </div>
+        <!--related:end--> 
+        
+      </article>
+          <nav class="article-nav">
+<span class="article-nav-prev"> <a href="/{随机字符}/{随机数字}_{随机数字}.html">上一篇</a></span> <span class="article-nav-next">     <a href="/{随机字符}/{随机数字}_{随机数字}.html">下一篇</a></span> 
+
+</nav>
+          
+          <!--comment--> 
+          
+          <!--comment:end--> 
+          
+        </div>
+  </div>
+      
+      <aside class="sidebar">
+  <div class="widget d_banner">
+    <div class="d_banner_inner"> <script src='http://sx-news.com/plus/ad_js.php?aid=22' language='javascript'></script> </div>
+  </div>
+  <div class="widget d_textbanner"> 
+    <script src='http://sx-news.com/plus/ad_js.php?aid=23' language='javascript'></script> 
+  </div>
+  <div class="widget widget_text">
+    <div class="textwidget"> <script src='http://sx-news.com/plus/ad_js.php?aid=24' language='javascript'></script> </div>
+  </div>
+  <div class="widget widget_text">
+    <div class="textwidget"> <script src='http://sx-news.com/plus/ad_js.php?aid=25' language='javascript'></script> </div>
+  </div>
+  <div class="widget d_postlist">
+    <h3 class="widget_tit">推荐文章</h3>
+    <ul>
+<li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{关键词1}{标题}{关键词1}"></span>
+<span class="text">{关键词1}{标题}{关键词1}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{关键词1}{标题}"></span>
+<span class="text">{关键词1}{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{关键词1}{标题}"></span>
+<span class="text">{关键词1}{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{关键词1}{标题}"></span>
+<span class="text">{关键词1}{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li><li>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}" alt="{标题}"></span>
+<span class="text">{标题}</span>
+<span class="muted">{年月日}</span>
+<span class="muted"><span class="ds-thread-count" data-replace="1"><script src="http://sx-news.com/e/public/ViewClick?classid=3&id=130972&addclick=1"></script> 次阅读</span></span></a>
+</li>
+    </ul>
+  </div>
+  <div class="widget widget_text">
+    <div class="textwidget"> <script src='http://sx-news.com/plus/ad_js.php?aid=26' language='javascript'></script> </div>
+  </div>
+</aside>
+ </section>
+<footer class="footer">
+  <div class="footer-inner">
+    <div style="padding:0 20px;overflow:hidden;">
+      <div class="copyright pull-left">版权归{网站名称}所有 | 本网站致力于资讯传播，希望建立合作关系。若有任何不当请联系我们，将会在24小时内删除。 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274451898'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/stat.php%3Fid%3D1274451898%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>
+      <div class="trackcode pull-right"> 
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+</html>

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+<meta http-equiv="mobile-agent" content="format=html5; url= {当前url}">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<base target="_blank">
+<link rel="stylesheet" href="/_/static/ow137_news.hbtv/static/css/swiper.css">
+<link rel="stylesheet" href="/_/static/ow137_news.hbtv/static/css/observe-gray.css">
+<style>
+	html, body, div, span, p, a, ol, ul, li, h1, h2, h3, h4, h5, h6, form, input { font-family: inherit; font-style: normal; font-size: 100%; margin: 0; padding: 0; border: 0; outline: 0; box-sizing: border-box; }
+	ol, ul, li { list-style: none outside none; }
+	::-webkit-scrollbar{width:1rem;}
+	::-webkit-scrollbar-track{background-color:#ffffff;}
+	::-webkit-scrollbar-thumb{border-radius:1rem;background-color:#cccccc;}
+	html, body {
+		font-family: "Microsoft YaHei";
+		font-size: 16px;
+		line-height: 1rem;
+		background-color: #ffffff;
+		color: #333333;
+	}
+	img, audio, video {
+		display: block;
+		max-width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+	img.icon_play {
+		display: inline-block;
+		width: auto;
+		height: auto;
+		vertical-align: top;
+		margin-right: 0.3rem;
+	}
+	img.full_banner {
+		height: 100px;
+	}
+	a {
+		color: #000000;
+		text-decoration: none;
+		-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+	}
+	a:hover {
+		color: #c01e12;
+	}
+	.block {
+		display: block;
+		width: 100%;
+	}
+	.displaynone {
+		display: none;
+	}
+	.flex_sb {
+		display: flex;
+		justify-content: space-between;
+	}
+	.flex_sbc {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.flex_sac {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.flex_fsc {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.flex_cc {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.flex_grow {
+		flex-grow:1;
+	}
+	.divcenterflex {
+		display: flex;
+		justify-content: space-between;
+		width: 87.5rem;
+		padding: 10px 0;
+		margin: 0 auto;
+	}
+	.itemcenterflex {
+		align-items: center;
+	}
+	.divpercentage300 {
+		width: 30rem;
+	}
+	.divpercentage300 ul {
+		padding: 1rem 0;
+	}
+	.divpercentage300 ul li {
+		line-height: 1rem;
+		min-height: 2.25rem;
+	}
+	.divpercentage300 ul li {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.divpercentage300 ul li:nth-child(5) a, .divpercentage300 ul li:nth-child(10) a,.divpercentage300 ul li:nth-child(15) a {
+		font-weight: bold;
+	}
+	.ul_first_none li:first-child {
+		display: none;
+	}
+	.ul_first_big li:first-child {
+		font-size: 1.25rem;
+		font-weight: bold;
+		line-height: 1.3rem;
+		height: 2.6rem;
+	}
+	.ul_first_big li:first-child a {
+		font-weight: bold;
+	}
+	.divpercentage225 {
+		width: 22.5rem;
+	}
+	.divpercentage300 .banner {
+		height: 16.875rem;
+		margin-top: 1.35rem;
+		margin-bottom: 1.35rem;
+	}
+	.divpercentage225 .banner {
+		height: 12.65rem;
+		margin-top: 1.35rem;
+	}
+	.divpercentage600 {
+		width: 60rem;
+	}
+	.divh2header {
+		display: flex;
+		border-bottom: 1px solid #cccccc;
+	}
+	.divh2header h2 {
+		font-size: 1.125rem;
+		font-weight: bold;
+		letter-spacing: 2px;
+		border-bottom: 3px solid #c01e12;
+		padding-bottom: 0.625rem;
+		margin-bottom: -2px;
+		/*
+		letter-spacing: 3px;
+		padding: 0 0.725rem 0.625rem 0.375rem;
+		transform: skewX(-18deg);
+		text-shadow: 2px 2px #cccccc;
+		*/
+	}
+	.tworowflex {
+		margin-top: 1rem;
+	}
+	.tworowflex a {
+		position: relative;
+		width: 10.8rem;
+		height: 6.075rem;
+		overflow: hidden;
+	}
+	.tworowflex img {
+		width: 100%;
+		height: 100%;
+	}
+	.tworowflex img.fixed_play {
+		position: absolute;
+		left: 4.4rem;
+		top: 2rem;
+		width: auto;
+		height: auto;
+	}
+	.tworowflex h4 {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1.5rem;
+		line-height: 1.5rem;
+		background-color: rgba(0,0,0,0.5);
+		color: #ffffff;
+		font-size: 0.875rem;
+		text-indent: 0.3rem;
+	}
+	.tworowflex a:hover h4 {
+		height: auto;
+	}
+	.tworowflex h3 {
+		font-weight: bold;
+		line-height: 1.125rem;
+	}
+	.tworowflex .title {
+		width: 18rem;
+	}
+	.tworowflex .time {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(255,255,255,0.5);
+		color: #cccccc;
+		font-size: 0.875rem;
+	}
+	.icon_dot_red {
+	    color: #c01e12;
+	    margin-right: 0.3rem;
+	}
+	#header {
+		background-color: #ffffff;
+		padding: 1rem 0;
+	}
+	#header .mainlogo img {
+		width: auto;
+	}
+	#header .mainsearch input {
+		background-color: #f2f2f2;
+		height: 30px;
+	}
+	#header .mainsearch input[type='submit'] {
+		background-color: #ffffff;
+		padding: 0 0.5rem;
+		cursor: pointer;
+	}
+	#header .mainnav {
+		background-color: #ffffff;
+		color: #333333;
+		overflow: hidden;
+	}
+	#header .mainnav a:hover {
+		border-bottom: 0.2rem solid #ffffff;
+		padding-bottom: 0.1rem;
+	}
+	#header .mainnav_hover {
+		background-color: #c01e12;
+		color: #c01e12;
+	}
+	#header .mainnav_hover a {
+		color: #ffffff;
+	}
+	#gallery_toutiao {
+		height: 16.875rem;
+		margin-bottom: 18px;
+	}
+	#gallery_toutiao img {
+		height: 100%;
+	}
+	#gallery_toutiao h4 {
+	    position: absolute;
+	    left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 1.125rem;
+        line-height: 1.25rem;
+        padding: 2rem 1rem 1.5rem 1rem;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+        color: #ffffff;
+        text-align: center;
+    }
+	#gallery_toutiao .swiper-pagination-bullet {
+		width: 6px;
+		height: 6px;
+		background: #ffffff;
+		opacity: 1;
+	}
+	#gallery_toutiao .swiper-pagination-bullet-active {
+		width: 1.5rem;
+		background-color: #c01e12;
+		border-radius: 8px;
+	}
+	#gallery_zhuanti {
+		height: 12.5rem;
+		margin-top: 1rem;
+		margin-bottom: 5px;
+	}
+	#gallery_zhuanti img {
+		height: 100%;
+	}
+	#gallery_zhuanti .swiper-button-prev, #gallery_zhuanti .swiper-button-next {
+		width: 1.25rem;
+		height: 1.75rem;
+		background-color: rgba(0,0,0,0.7);
+		color: #ffffff;
+	}
+	#gallery_zhuanti .swiper-button-prev {
+		left: 0;
+	}
+	#gallery_zhuanti .swiper-button-next {
+		right: 0;
+	}
+	#gallery_zhuanti .swiper-button-prev:after, #gallery_zhuanti .swiper-button-next:after {
+		font-size: 0.875rem;
+	}
+	#dingzhifuwu a {
+		width: 14.4rem;
+		height: 8.1rem
+	}
+	#dingzhifuwu .flex_fsc {
+		height: 1.75rem;
+		margin-bottom: -1rem;
+	}
+	#dingzhifuwu .flex_fsc img {
+		width: 24px;
+		height: 24px;
+	}
+	#bianminfuwu {
+		background-color: #fafafa;
+	}
+	#bianminfuwu a {
+		background-color: #ffffff;
+		box-shadow: 0 2px 5px 1px #f0f0f0;
+		border-radius: 2px;
+		height: 5.125rem;
+	}
+	#bianminfuwu a.flex_cc img {
+		width: 48px;
+		height: 48px;
+	}
+	#footer {
+		background-color: #f2f2f2;
+		padding: 2.5rem 0;
+		margin-top: 2.5rem;
+	}
+	#footer h2 {
+		font-weight: bold;
+		padding-bottom: 1.5rem;
+	}
+	#footer a {
+		display: block;
+		padding: 0.5rem 0;
+	}
+	</style>
+</head>
+<body>
+<style>
+    #tip-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        max-width: 677px;
+        margin-left: auto;
+        margin-right: auto;
+        display: none;
+    }
+    .tip-inner {
+        position: relative;
+        background: #C6E0F8;
+        color: rgba(0, 0, 0, .5);
+        font-size: 12px;
+        line-height: 1.4;
+        padding: 10px 40px 10px 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .icon_closed {
+        position: absolute;
+        margin: 3px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        box-sizing: border-box;
+        right: 15px;
+        top: 28%;
+    }
+    .icon_closed:before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 15px;
+        background: rgba(0, 0, 0, .5);
+        transform: rotate(45deg);
+        top: -3px;
+        left: 11px;
+    }
+    .icon_closed:after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 15px;
+        background: rgba(0, 0, 0, .5);
+        transform: rotate(-45deg);
+        top: -3px;
+        left: 11px;
+    }
+</style>
+<div id="tip-box">
+<div class="tip-inner">
+此为临时链接，仅用于预览，将在短期内失效。
+<a id="js_close_temp" class="icon_closed"></a>
+</div>
+</div>
+<script>
+    var tipBox = document.querySelector("#tip-box");
+    var tipClose = document.querySelector("#js_close_temp");
+    tipClose.onclick = () => {
+        tipBox.style.display = "none";
+    }
+    if (window.location.href.indexOf("previewp") > -1) {
+        tipBox.style.display = "block";
+    }
+</script><div id="header">
+<div class="mainlogo divcenterflex itemcenterflex">
+<div style="width:44rem;"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self"><img src="/_/static/ow137_news.hbtv/static/picture/cjy_header_logo.jpg"></a></div>
+<div><form class="mainsearch flex_sbc" action="https://www.baidu.com/s"><img src="/_/static/ow137_news.hbtv/static/picture/cjy_header_search.jpg"><input type="hidden" name="q6" value="news.hbtv.com.cn"><input type="text" name="q1"><input type="submit" value="搜索"></form></div>
+<div class="flex_sbc"><img src="/_/static/ow137_news.hbtv/static/picture/cjy_header_phone.jpg"><a href="/{随机字符}/{随机数字}_{随机数字}.html">客户端</a><img src="/_/static/ow137_news.hbtv/static/picture/cjy_header_dropdown.jpg"></div>
+<div class="flex_sbc"><a href="/{随机字符}/{随机数字}_{随机数字}.html">官方微信</a><img src="/_/static/ow137_news.hbtv/static/picture/cjy_header_dropdown.jpg"></div>
+<div class="flex_sbc"><a href="/{随机字符}/{随机数字}_{随机数字}.html">官方微博</a><img src="/_/static/ow137_news.hbtv/static/picture/cjy_header_dropdown.jpg"></div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">看电视</a></div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">听广播</a></div>
+</div>
+<div class="mainnav mainnav_hover">
+<div class="divcenterflex">
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">直播</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">思享</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">城市圈</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">湖北</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">国际</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">湖北新闻</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">健康</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">教育</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">文旅</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">乡村</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">社区</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">出行</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">音乐</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">老友</a></div>
+</div>
+</div>
+<div class="mainnav">
+<div class="divcenterflex">
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">光谷</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">纪检</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">市场监管</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">书香</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">专题</a></div>
+<div>|</div>
+<div><a href="/{随机字符}/{随机数字}_{随机数字}.html">滚动</a></div>
+<div style="width:40%;"></div>
+</div>
+</div>
+</div>
+<style>
+	audio {display:block !important;width: 100%;height:64px;}
+	#main_article {
+		line-height: 2rem;
+	}
+	#article_nav span {
+		margin-right: 0.5rem;
+	}
+	#article_title {
+		font-size: 2rem;
+		font-weight: bold;
+		letter-spacing: 2px;
+		line-height: 2.5rem;
+		padding: 1rem 0 1.5rem;
+	}
+	#article_attr {
+		color: #717171;
+		border-bottom: 1px solid #f2f2f2;
+	}
+	#article_content {
+		font-size: 1.125rem;
+		padding: 1rem 0 3rem;
+	}
+	#article_content p {
+		margin: 2rem 0;
+	}
+	#article_content img {
+		width: auto;
+		max-width: 100%;
+		margin: 1rem auto;
+	}
+	#article_zan {
+		color: #717171;
+		border: 1px solid #717171;
+		border-radius: 1rem;
+		padding: 0 2rem;
+	}
+	.bdsharebuttonbox .icon_play {
+		cursor: pointer;
+	}
+	.bd_weixin_popup {
+        box-sizing: content-box;
+    }
+    .digged{
+      cursor: not-allowed;
+    }
+    /* 音频小插件样式 */
+    .audio-box {
+        width: 40%;
+        height: 40px;
+        line-height: 40px;
+        min-width: 500px;
+        background-color: rgba(0, 0, 0, 0.01);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin: 0 auto;
+        text-align: initial;
+        text-indent: 0;
+        cursor: pointer;
+    }
+
+    .audio-box .play-btn {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background: url('static/image/mplay2.png') no-repeat 0 0;
+        margin-top: 10px;
+        margin-left: 6%;
+        float: left;
+    }
+
+    .audio-box .audio-progress {
+        vertical-align: middle;
+        display: inline-block;
+        width: 66%;
+        height: 2px;
+        background: #ccc;
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    .audio-box .audio-progress .audio-progress-bar {
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        background: #29C233;
+        float: left;
+    }
+
+    .audio-box .currentTime {
+        display: inline-block;
+        width: 20%;
+        height: 100%;
+        line-height: 40px;
+        text-align: center;
+        text-indent: 0;
+        font-size: 14px;
+    }
+	</style>
+<div class="divcenterflex">
+<div id="main_article" class="divpercentage300 divpercentage600">
+<div id="article_nav" class="flex_fsc">
+<span><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a></span>
+</div>
+<h1 id="article_title">{关键词1}{随机后缀}{新闻网标题}</h1>
+<div id="article_attr" class="flex_sbc">
+<div>{当前时间}　</div>
+<div class="flex_sbc bdsharebuttonbox">
+<span>分享到：</span>
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/wechat.png" data-cmd="weixin">
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/weibo.png" data-cmd="tsina">
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/qq.png" data-cmd="sqq">
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/qqzone.png" data-cmd="qzone">
+</div>
+</div>
+<div id="article_content">
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 18px; text-indent: 2em; text-align: justify;">{新闻网内容}</p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 18px; text-indent: 2em; text-align: justify;">{新闻网内容}</p>
+</div>
+<div class="flex_sbc">
+<div id="article_zan" class="flex_sbc" dignum="0" style="display: none;">
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/digg.png">
+<span class="digg">0</span>
+</div>
+<div class="flex_sbc bdsharebuttonbox">
+<span>分享到：</span>
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/wechat.png" data-cmd="weixin">
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/weibo.png" data-cmd="tsina">
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/qq.png" data-cmd="sqq">
+<img class="icon_play" src="/_/static/ow137_news.hbtv/static/picture/qqzone.png" data-cmd="qzone">
+</div>
+</div>
+</div>
+<div class="divpercentage300 divpercentage225">
+<div class="tworowflex">
+</div>
+<div class="divh2header">
+<h2><a href="/{随机字符}/{随机数字}_{随机数字}.html">推荐阅读</a></h2>
+</div>
+<ul class="ul_first_big">
+<!—# 热点滚动新闻 #—>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><strong>{关键词1}</strong>{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+</ul>
+<div class="divh2header">
+<h2>便民服务</h2>
+</div>
+<div id="bianminfuwu">
+<div class="tworowflex flex_sb">
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_01.jpg">社会保障</a>
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_02.jpg">交通出行</a>
+</div>
+<div class="tworowflex flex_sb">
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_03.jpg">公积金</a>
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_04.jpg">公安服务</a>
+</div>
+<div class="tworowflex flex_sb">
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_05.jpg">职业资格</a>
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_06.jpg">医疗健康</a>
+</div>
+<div class="tworowflex flex_sb">
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_07.jpg">市场监管</a>
+<a class="flex_cc" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow137_news.hbtv/static/picture/bianminfuwu_08.jpg">法律服务</a>
+</div>
+</div>
+<style>
+#dingzhifuwu a {
+	width: 10.8rem;
+	height: 6.075rem
+}
+</style>
+<div class="divh2header">
+<h2>定制服务</h2>
+</div>
+<div id="dingzhifuwu">
+<div class="tworowflex flex_sb">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="flex_fsc"><img src="/_/static/ow137_news.hbtv/static/picture/dingzhifuwu_02.jpg">{标题}</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="flex_fsc" style="font-size:0.875rem;"><img src="/_/static/ow137_news.hbtv/static/picture/dingzhifuwu_03.jpg">{标题}</a>
+</div>
+<div class="tworowflex flex_sb">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+</div>
+<div class="tworowflex flex_sb">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="flex_fsc"><img src="/_/static/ow137_news.hbtv/static/picture/dingzhifuwu_01.jpg">{标题}</a>
+<a class="flex_fsc" style="font-size:0.875rem;"><img src="/_/static/ow137_news.hbtv/static/picture/dingzhifuwu_02.jpg">{标题}</a>
+</div>
+<div class="tworowflex flex_sb">
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="divcenterflex">
+<div class="divpercentage300">
+<img style="width: 204px;margin-bottom:0.5rem;" src="/_/static/ow137_news.hbtv/static/picture/cjy_footer_logo.jpg">
+<p><a>信息网络传播视听节目许可证号 {随机7数字}</a></p>
+<p><a href="/{随机字符}/{随机数字}_{随机数字}.html">鄂ICP备{随机8数字}号-2</a></p>
+<p><a href="/{随机字符}/{随机数字}_{随机数字}.html">鄂公网安备420106{随机8数字}号</a></p>
+<p><a>{关键词1}版权所有</a></p>
+<p><a>COPYRIGHT © {年} ALL RIGHTS RESERVED.</a></p>
+</div>
+<div>
+<h2>品牌产品</h2>
+<a>长江云TV（湖北IPTV）</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">大数据舆情中心</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">长江云 • 新时代文明实践中心</a>
+</div>
+<div>
+<h2>关于我们</h2>
+<a>版权声明</a>
+<a>免责声明</a>
+<a href="http://{当前域名}/sitemap.xml">网站地图</a>
+</div>
+<div>
+<h2>联系我们</h2>
+<a>台长信箱</a>
+<a>联系方式</a>
+</div>
+<div>
+<h2>友情链接</h2>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">央视网</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">人民网</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">新华网</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">湖北省政府网</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">湖北文化产业网</a>
+</div>
+<div>
+<h2 style="color:#f2f2f2;">友情链接</h2>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">湖北广播电视台</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">国家广电总局官网</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">湖北省广播电视局</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">湖北传媒网</a>
+<a href="/{随机字符}/{随机数字}_{随机数字}.html">中国记协网</a>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="/_/static/ow137_news.hbtv/static/js/jquery.js"></script>
+<script type="text/javascript" src="/_/static/ow137_news.hbtv/static/js/swiper.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var mySwiperToutiao = new Swiper('#gallery_toutiao', {
+		mousewheel: true,
+		loop: true,
+		speed: 500,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '#gallery_toutiao .swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '#gallery_toutiao .swiper-button-next',
+			prevEl: '#gallery_toutiao .swiper-button-prev',
+		},
+	});
+
+})
+</script>
+<script>
+    var isPC = function (){
+        var userAgentInfo = navigator.userAgent.toLowerCase();
+        var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        }
+        return flag;
+    }
+    var pcUlr = "https://news.hbtv.com.cn";
+    var mobleUlr = "https://m.hbtv.com.cn";
+    var pcDomainName = pcUlr.split("//")[1];
+	var mobleDomainName = mobleUlr.split("//")[1];
+    if(isPC()&&window.location.href.indexOf(mobleDomainName)!=-1){
+        window.location.href = "//"+pcDomainName+GetUrlRelativePath()
+    }else if(!isPC()&&window.location.href.indexOf(pcDomainName)!=-1){
+        window.location.href = "//"+mobleDomainName+GetUrlRelativePath()
+    }
+    function GetUrlRelativePath(){
+        var url = document.location.toString();
+        var arrUrl = url.split("//");
+        var start = arrUrl[1].indexOf("/");
+        var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+        if(relUrl.indexOf("?") != -1){
+            relUrl = relUrl.split("?")[0];
+        }
+        return relUrl;
+    }
+</script>
+<script src="/_/static/ow137_news.hbtv/static/js/myAudio.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+</html>

@@ -1,0 +1,1 @@
+document.write("<div style=\"width: 99%;height: auto;margin-top: 10;margin-right: auto;margin-bottom: 10;margin-left: auto;\"><a href=\"https://www.y7wan.com/d/2883/3172\" title=\"天剑奇缘\" target=\"_blank\" rel=\"nofollow\"><img src=\"https://www.xkxiazai.com/demo/800.jpg\" alt=\"天剑奇缘\" title=\"天剑奇缘\" style=\"width:100%;height: auto;\"></a></div>")

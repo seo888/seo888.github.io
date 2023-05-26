@@ -1,0 +1,928 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+<meta name="SiteName" content="{关键词1}">
+<meta name="SiteDomain" content="{域名库}">
+<meta name="SiteIDCode" content="{随机8数字}">
+<meta name="ColumnName" content="温馨提示">
+<meta name="ColumnDescription" content="温馨提示">
+<meta name="ColumnKeywords" content="温馨提示">
+<meta name="ColumnType" content="新闻">
+<meta name="ArticleTitle" content="{自定义标题}">
+<meta name="PubDate" content="{年月日}">
+<meta name="ContentSource" content="{关键词1}">
+<meta name="others" content="页面生成时间 {年月日}">
+<meta name="template,templategroup,version" content="30d3a7eac758479e804134569f02cb96,default,6.6">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="/_/static/pd38_wenchang_hainan/static/css/listCon.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/_/static/pd38_wenchang_hainan/static/css/common.css">
+<link href="/_/static/pd38_wenchang_hainan/static/css/page.css" rel="stylesheet" type="text/css">
+<link href="/_/static/pd38_wenchang_hainan/static/css/share.css" rel="stylesheet" type="text/css">
+  <!--div id='wx_pic' style='margin:0 auto;display:none;'>
+	<img src='/nwenchang/xhtml/images/wenchang_weixin.png' />
+</div-->
+
+<!-- 从es搜索中获取相关稿件信息	开始-->
+<script type="text/javascript">  
+		function getReldocuments(){
+        //alert("开始调用ejs服务，获取相关稿件...");
+        var keyword = document.getElementById("keyword").value; //获取当前稿件的稿件关键字
+        var mcId = document.getElementById("mcId").value; //获取当前稿件ID+栏目ID，做唯一标识
+        var url = "/common/getMListByKeyword"; //调用ejs的接口路径，ip和端口改为项目对应的
+        $.ajax({
+              type : "post",
+              url : url,
+              async : true,
+              data : {
+                    "keywords" : keyword,
+                    "size" : 6, // 取多少条关联稿件，根据项目要求定义
+                    "id" : mcId,
+                    "rangeTimeGte":"2019-01-01"
+              },
+              dataType : "json",
+              success : function (data) {
+                  //  console.log(data);
+                    if (data != null && data != ""&&data.error==null) {
+                            var htmls = "";
+                            for (var i in data) {
+                              var url = "" + data[i].url;
+                              htmls += "<li>" + "<a class='keyword_a' href"+"='"+url+"' title='"+data[i].title+"' target='_blank'>"+data[i].title+"</a>"+"</li>";
+                                    
+                            }
+                            document.getElementById("cmspro_reldocuments").innerHTML = htmls; //将获取到的相关稿件列表，拼接到对应显示的区域，id按照项目对应id号定义
+                      
+                            //处理a标签href自动拼接其他路径问题，视项目情况而定-Start
+                            var keyword_a = document.getElementsByClassName("keyword_a")
+                            for (var i=0 ; i< keyword_a.length ; i++) {
+                                   if(keyword_a[i].getAttribute('href').split('http://').length > 1){
+                                         var str = keyword_a[i].getAttribute('href').split('http://')[1]
+                                         keyword_a[i].setAttribute('href', 'http://' + str)
+                                   }
+                             }
+                            //处理a标签href自动拼接其他路径问题，视项目情况而定-End
+                    }
+              }
+       });
+}
+</script>
+<!-- 从es搜索中获取相关稿件信息	 结束-->
+  
+</head>
+<body onload="getReldocuments()">
+<!DOCTYPE html>
+
+    <link rel="stylesheet" type="text/css" href="/_/static/pd38_wenchang_hainan/static/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/_/static/pd38_wenchang_hainan/static/css/common.css">
+  	<link rel="stylesheet" type="text/css" href="/_/static/pd38_wenchang_hainan/static/css/dhstyle.css">
+  	<script language="JavaScript" src="/_/static/pd38_wenchang_hainan/static/js/jquery-3.6.0.js"></script>
+	<script language="JavaScript" src="/_/static/pd38_wenchang_hainan/static/js/jqmigrate.js"></script>
+	<script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.Mask.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/soundmanager2-nodebug-jsmin.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/WXA11y.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/_/static/pd38_wenchang_hainan/static/css/WXA11y.css">
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.load.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.line.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.panel.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.ui.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.light.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.refresh.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.Init.js"></script>
+    <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/Hj.easyRead.history.js"></script>
+  <div id="voice">
+</div>
+ <!--div id='wx_pic12' style='margin:0 auto;display:none;'>
+	<img src='/wenchang/xhtml/images/wenchang_weixin.png' />
+</div-->
+<div class="hheader">
+    <div class="htop">
+        <!--<div class="hlogo">
+            <a href="/wenchang/index.shtml" target="_parent"><img src="/wenchang/xhtml/images/hlogo.png"></a>
+        </div>-->
+      	<div class="logo_box">
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">
+<img src="/_/static/pd38_wenchang_hainan/static/picture/681b5c3545dc408a8f91f5fa59184096.png">
+                <div class="logo_name">
+              </div>
+
+			</a>
+        </div>
+        <div class="htopr">
+            <div class="htopt">
+                <ul class="hjf">
+                    <li class="hover"><a style="color:#ffffff;" title="點擊以繁體中文方式瀏覽" class="icon fan" id="StranLink" href="javascript:StranBody()">繁</a></li>
+                    <li><a style="color:#337BD7;" title="English" href="/{随机字符}/{随机数字}_{随机数字}.html" target='_black'>EN</a></li>
+                </ul>
+                <div class="ht">
+                    <a title="公务邮箱" href='/{随机字符}/{随机数字}_{随机数字}.html' target='_black'><img src="/_/static/pd38_wenchang_hainan/static/picture/ht1.png"></a>
+                    <a title="APP下载" href='/{随机字符}/{随机数字}_{随机数字}.html' target='_black'><img src="/_/static/pd38_wenchang_hainan/static/picture/ht2.png"></a> 
+                    <a title="智能机器人" href='/{随机字符}/{随机数字}_{随机数字}.html' target='_black'><img src="/_/static/pd38_wenchang_hainan/static/picture/ht3.png"></a>
+                    <a title="微博" href='/{随机字符}/{随机数字}_{随机数字}.html' target='_black'><img src="/_/static/pd38_wenchang_hainan/static/picture/ht4.png"></a>
+                    <a title="微信" href='/{随机字符}/{随机数字}_{随机数字}.html' target='_black'><img src="/_/static/pd38_wenchang_hainan/static/picture/ht5.png"></a>
+                  	<a title="用户中心" href='/{随机字符}/{随机数字}_{随机数字}.html' target='_black'><img src="/_/static/pd38_wenchang_hainan/static/picture/topyhkj.png"></a>
+                  	<a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="aria.start()"><img src="/_/static/pd38_wenchang_hainan/static/picture/ht6.png"></a> 
+                  <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="aria.oldFixedStart()">关怀版</a>
+                  <script defer="" async="" type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/aria.js" ></script>
+                  <!--<a href="/wenchang/xhtml/wza/wzaindex.html" target="_blank">更多服务</a>
+                   -->
+					<script defer="" async="" type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/assist.js"></script>
+                    
+                </div>
+                <div class="hzqdh" style='display:none'><img src="/_/static/pd38_wenchang_hainan/static/picture/hzqdh.gif"></div>
+            </div>
+            <div class="hinp">
+            	<script>
+			 function checkSubmit(){
+			 if(document.getElementById('keywords').value==''||document.getElementById('keywords').value=='请输入您要搜索的关键字')
+				alert('请输入您要搜索的关键字！');
+			 else
+				document.dataform.submit();
+			 }
+        </script>
+
+           
+            	<form name="dataform" method="get" action="http://wenchang.hainan.gov.cn/search5/html/searchResult.html?" id="dataform" target="_blank">
+                <input name="uc" type="hidden" id="uc" value="1">
+<input name="siteCode" type="hidden" id="siteCode" size="50" value="4690050001">
+<input name="column" type="hidden" id="siteCode" size="50" value="全站">
+			<input type="text" value="请输入您要搜索的关键字" onblur="if(this.value==''){this.value='请输入您要搜索的关键字'}" maxlength="50" id="keywords" class="keyWord" onfocus="this.value=''" name="searchWord">
+
+		
+            <img src="/_/static/pd38_wenchang_hainan/static/picture/hsele.png" onclick="checkSubmit();" style="cursor:pointer;" alt="">
+			</form>
+                <script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/public.js"></script>
+            </div>
+        </div>
+    </div>
+    <div class="hnav">
+        <ul>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">首页</a></li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">市领导</a></li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">新闻</a></li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">信息公开</a>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">政务服务</a></li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">互动</a></li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">数据</a></li>
+            <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">市情</a></li>
+        </ul>
+    </div>
+</div>
+ 
+<script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/public.js"></script>
+<!DOCTYPE html>
+    <link href="/_/static/pd38_wenchang_hainan/static/css/mindex.css" rel="stylesheet" type="text/css">
+	<link href="/_/static/pd38_wenchang_hainan/static/css/common1.css" rel="stylesheet" type="text/css">
+  
+  <!--div id='wx_pic21' style='margin:0 auto;display:none;'>
+	<img src='/nwenchang/xhtml/images/wenchang_weixin.png' />
+</div-->
+   <!--div id='wx_pic22' style='margin:0 auto;display:none;'>
+	<img src='/nwenchang/xhtml/images/wenchang_weixin.png' />
+   </div-->
+<div class="mheader">
+  <div class="fl"></div>
+  <img src="/_/static/pd38_wenchang_hainan/static/picture/mlogo.png"> 
+  
+  
+  <!--<div class="fr"> <a href="javascript:void(0)"  onClick="play();" id="te"><img src="/nwenchang/xhtml/images/mmore.png"></a> </div>-->
+  <div class="msearch">
+  	<img class="msImg" src="/_/static/pd38_wenchang_hainan/static/picture/caid.png">
+</div>
+<div class="msearch_input">
+
+    <script>
+      function checkSubmit2(){
+        if(document.getElementById('keywords2').value==''||document.getElementById('keywords2').value=='请输入您要搜索的关键字')
+          alert('请输入您要搜索的关键字2！');
+        else
+          document.pageform.submit();
+      }
+    </script>
+
+    <form name="pageform" method="get" action="http://wenchang.hainan.gov.cn/search5/html/searchResult.html?" id="pageform" target="_blank">
+      <input name="uc" type="hidden" id="uc" value="1">
+      <input name="siteCode" type="hidden" id="siteCode" size="50" value="4690050001">
+      <input name="column" type="hidden" id="siteCode" size="50" value="全站">
+      <input type="text" value="请输入您要搜索的关键字" onblur="if(this.value==''){this.value='请输入您要搜索的关键字'}" maxlength="50" id="keywords2" class="keyWord" onfocus="this.value=''" name="searchWord">
+
+
+      <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/pd38_wenchang_hainan/static/picture/hsele1.png" onclick="checkSubmit2();" style="cursor:pointer;" alt=""></a>
+    </form>
+</div>
+  <script>
+        $(function(){
+            $(".msImg").click(function() {
+                $(".msearch_input").toggle();
+            });
+        });
+      </script>
+</div>
+
+<div class="mtnav">
+  <ul>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">首页</a></li>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">市领导</a></li>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">新闻</a></li>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">政策</a></li>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">服务</a></li>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">互动</a></li>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">数据</a></li>
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">市情</a></li>
+  </ul>
+</div>
+<!--列表按钮start-->
+<div class="mblock" id="mnav5" style="display:none;">
+  <div class="zsidebar grey" id="te2">
+    <div class="zlist">
+      <ul class="yiji">
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">首页</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">市领导</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">新闻</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">政策</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">服务</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">互动</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">数据</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent"><span class="mh">市情</span><img src="/_/static/pd38_wenchang_hainan/static/picture/mnr.png"></a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--列表按钮end-->
+
+<script>
+
+    
+
+ function play(){
+  if(document.getElementById('mnav5').style.display == "none"){
+    document.getElementById('mnav5').style.display = "block";
+  }else{
+      document.getElementById('mnav5').style.display = "none";
+    
+  }
+ 
+ }
+
+ $(document).bind('click',function(e){ 
+var e = e || window.event; //浏览器兼容性 
+var elem = e.target || e.srcElement; 
+while (elem) { //循环判断至跟节点，防止点击的是div子元素 
+if (elem.id && elem.id=='te' || elem.id && elem.id=='te2') { 
+return; 
+} 
+elem = elem.parentNode; 
+} 
+
+$('#mnav5').css('display','none'); //点击的不是div或其子元素 
+}); 
+
+
+
+</script>
+<script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/jquery.qrcode.js"></script>
+<script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/qrcode.js"></script>
+<script type="text/javascript" src="/_/static/pd38_wenchang_hainan/static/js/sngov.js"></script>
+
+<script language="javascript">
+			var websitename = "文昌市人民政府网";
+			var webjg = "文昌市人民政府网";
+
+
+			function doZoom(size1, size2, size3, size4) {
+				document.getElementById('zoom').style.fontSize = size4 + 'px';
+			}
+			
+			$(function() {
+				var sourceText = $('#ly').text();//来源
+				//var xxgkfbjg = $('#xxgkfbjg').text();//来源
+				// alert(sourceText);
+				if( null==sourceText|| ""==sourceText ){
+				  
+							$('#ly').text(websitename);
+			
+				}
+				//if( null==xxgkfbjg|| ""==xxgkfbjg ){
+				  
+				//			$('#xxgkfbjg').text(webjg);
+			
+				//}
+			});
+			
+		</script>
+  
+ <div class="hcontent">
+    <div class="hcon"> 
+<div class="main">
+  <div class="cen-main">
+    <div class="cen-div color" style="padding-top:0;">
+      <div class="con_title_left fl_left">
+        <div class="powz">
+首页&nbsp;>&nbsp;{关键词1}
+</div>
+        
+        <div class="div1" style="display:none;">
+          温馨提示
+        </div>
+      </div>
+      <div class="title_cen mar-t2 text">
+        <ucaptitle>
+          {关键词1}{随机后缀}{新闻网标题}
+        </ucaptitle>
+      </div>
+      <div class="line mar-t2 con_div">
+            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="30%" align="left">
+                	<span style="padding-left:25px;"><img src="/_/static/pd38_wenchang_hainan/static/picture/2016_info_time.gif" style="vertical-align:  middle;"><publishtime>
+                    2023-03-28 01:31
+                  </publishtime></span>
+                  </td>
+                  <td width="30%" align="left">来源： 
+                  <span id='ly'>{关键词1}</span></td>
+                  
+                <td align="center" width="20%" class="czt"> 【字体：
+                  <script language="javascript"></script>
+                  <a onclick="this.href='javascript:doZoom(16,14,14,16);'">大</a>&nbsp;<a href="#" onclick="this.href='javascript:doZoom(16,14,14,14);'">中</a>&nbsp;<a href="#" onclick="this.href='javascript:doZoom(16,14,14,12);'">小</a>】<span onclick="window.print()" class="printIco">打印</span></td>
+                
+                 <td align="right" width="20%">
+              		<div class="content_shareIcon" style="float: left;">
+                            分享到：<div id="share-1" style="display: contents;" data-sites="wechat ,weibo, qq, qzone"></div>
+                          </div>
+                          <script src="/_/static/pd38_wenchang_hainan/static/js/share.js"></script>
+                  <script>
+                      $('#share-1').share();
+                      $('#share-2').share({sites: ['qzone', 'qq', 'weibo','wechat']});
+                      $('#share-3').share();
+                      $('#share-4').share();
+                  </script>
+              	</td>
+                
+                <!--<td align="right" width="10%"  class="czt"><div class="bdsharebuttonbox"><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["mshare","qzone","tsina","bdysc","weixin","renren","tqq","bdxc","kaixin001","tqf","tieba","douban","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com//static/pd38_wenchang_hainan/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+              
+              </td>-->
+              
+              </tr>
+              
+            </table>
+    </div>
+    <div class="con_cen line mar-t2 xxgk_content_content" id="zoom">
+      <ucapcontent>
+        <p align="" style="margin-top: 1em; margin-bottom: 0px; text-indent: 2em; text-align: justify; line-height: 2; font-family: 宋体; font-size: 12pt;">{新闻网内容}</p>
+      </ucapcontent>
+      <p class="conzrbj" id="authorp">责任编辑：
+                  <span id="author">{人物名称}</span></p>
+      
+      
+      
+    </div> 
+    <div class="info_ewm">
+
+    </div>
+      
+      
+      <input type="hidden" id="keyword" value="文昌市,降雨,一周,持续,迎来,"><!-- 隐藏域获取关键字，便于js调用 -->
+      <input type="hidden" id="mcId" value="1923c7ab98a44c17bcfd98b1f9896a6f_0a3af6916c854172baaca645aa6532eb"><!-- 隐藏域获取当前稿件ID+栏目ID，做唯一标识 -->
+      
+      <div class="cxggj">
+      	<p>相关稿件</p>
+        <ul id="cmspro_reldocuments">
+          <li><p>上一篇：<a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p></li>
+          <li><p>下一篇：<a href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></p></li>
+        
+        </ul>
+      </div>
+      
+      
+    <div class="dy">
+      <div class="fr"><a href="#">【TOP】</a>【<a href="#" onclick="window.print();">打印页面</a>】【<a href="#" onclick="window.close();">关闭页面</a>】</div>
+    </div>
+    
+    <!DOCTYPE html>
+	<script id="_trs_ta_js" src="/_/static/pd38_wenchang_hainan/static/js/ta.js" async="async" defer="defer"></script>
+    <link rel="stylesheet" type="text/css" href="/_/static/pd38_wenchang_hainan/static/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/_/static/pd38_wenchang_hainan/static/css/common.css">
+	<style type="text/css">
+.hyqli{ width: 1043px; height: 122px; padding: 5px; background: #eeeeee; position: absolute; top: 46px; left: 0; overflow-x: hidden; display: none; *overflow: scroll;}
+.hyqli li span{ color: #3E3E3E;}
+#foot .hyqli .yinc-lj{ display: none; line-height: 24px;z-index: 999; background: #ffffff; overflow: hidden; padding: 10px; border: 2px solid #1e4b8f; position:relative;}
+#foot .hyqli li:hover .yinc-lj{ display: block;}
+div.yinc-lj a {
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    padding-left: 20px;
+    padding-right: 10px;
+    background: url(/static/pd38_wenchang_hainan/static/image/zx-dfbszn4.png) 5px 50% no-repeat;
+}
+.hyqc>li:hover{ background: #eeeeee; color:#1e4b8f; height: 178px;}
+.hyqc>li:hover>div{ display: block;}
+.hyqli li{ float: left;  padding-left: 15px; width:232px; font-size: 14px; height: 25px; color:#333333; line-height: 25px;}
+	</style>
+<div class="hfooter" id="foot">
+            <div class="hyqlj">
+                <div class="hyqlj1">
+                    <span>链&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接</span>
+                    <ul>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/pd38_wenchang_hainan/static/picture/hdb1.png">{关键词1}</a></li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/pd38_wenchang_hainan/static/picture/hdb1.png">{随机关键词}</a></li>
+                        <li style="display:none"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/pd38_wenchang_hainan/static/picture/hdb2.png">省政协</a></li>
+                    </ul>
+                </div>
+                <div class="hyqlj2">
+                    <ul class="hyqc">
+                        <li>国家部委
+                        	<div class="hyqli">
+                                <ul>
+                         							
+                           <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 外交部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国防部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 发展改革委</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 教育部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 科技部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 工业和信息化部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 公安部</a></li>
+<li><span>&gt; 国家安全部</span></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 民政部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 司法部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 财政部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 自然资源部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 生态环境部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 住房和城乡建设部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 交通运输部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 水利部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 农业农村部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 商务部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 文化和旅游部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li>&gt; {关键词1}</li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 应急管理部</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 人民银行</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 审计署</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><span>&gt; 国家外国专家局</span></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家航天局</a></li>
+<li><span>&gt; 国家原子能机构</span></li>
+<li><span>&gt; 国家海洋局</span></li>
+<li><span>&gt; 国家核安全局</span></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海关总署</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家税务总局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家市场监督管理总局</a></li>
+<li><span>&gt; 国家广播电视总局</span></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家体育总局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家统计局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家国际发展合作署</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家医疗保障局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国务院参事室</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家认证认可监督管理委员会</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家标准化管理委员会</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家新闻出版署（国家版权局）</a></li>
+<li><span>&gt; 国家宗教事务局</span></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国务院研究室</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国务院侨务办公室</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国务院台湾事务办公室</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国务院新闻办公室</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 新华通讯社</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 中国科学院</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 中国社会科学院</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 中国工程院</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国务院发展研究中心</a></li>
+<li><a href="javascript:void(0);">&gt; 中央广播电视总台</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 中国气象局</a></li>
+<li><span>&gt; {关键词1}</span></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 中国证券监督管理委员会</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家行政学院</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家信访局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家粮食和物资储备局</a></li>
+<li>&gt; 国家能源局</li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家国防科技工业局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家烟草专卖局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家移民管理局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家林业和草原局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家铁路局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 中国民用航空局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家邮政局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家文物局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">&gt;国家矿山安全监察局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家外汇管理局</a></li>
+<li>&gt; {关键词1}</li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家知识产权局</a></li>
+<li><a href="javascript:void(0);">&gt; 出入境管理局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家公务员局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家档案局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家保密局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 国家密码管理局</a></li>
+
+
+                                </ul>
+                            </div>
+                        </li>
+                      <li>省直部门
+                        	<div class="hyqli">
+                                <ul>
+							
+                           <li><a title="{关键词1}" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省发展和改革委员会</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省自然资源和规划厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省旅游和文化广电体育厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省生态环境厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省农业农村厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省工业和信息化厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省商务厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省科学技术厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省财政厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省人力资源和社会保障厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省教育厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省卫生健康委员会</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省公安厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省司法厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省民政厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省民族宗教事务委员会</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省住房和城乡建设厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省交通运输厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省审计厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省外事办公室</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省水务厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省退役军人事务厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省应急管理厅</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省国有资产监督管理委员会</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省地方金融监督管理局</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省市场监督管理局</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省医疗保障局</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省统计局</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省林业局</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省乡村振兴局</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 洋浦经济开发区</a>
+</li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海南省社会保险服务中心</a>
+</li>
+
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li>市县政府
+                        	<div class="hyqli">
+                    	<ul>
+							
+                           <li><a title="海口市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 海口市</a></li>
+<li><a title="三亚市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 三亚市</a></li>
+<li><a title="三沙市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 三沙市</a></li>
+<li><a title="儋州市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 儋州市</a></li>
+<li><a title="琼海市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 琼海市</a></li>
+<li><a title="文昌市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt;  文昌市</a></li>
+<li><a title="万宁市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 万宁市</a></li>
+<li><a title="东方市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 东方市</a></li>
+<li><a title="五指山市" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 五指山市</a></li>
+<li><a title="乐东黎族自治县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 乐东黎族自治县</a></li>
+<li><a title="澄迈县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 澄迈县</a></li>
+<li><a title="临高县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 临高县</a></li>
+<li><a title="定安县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 定安县</a></li>
+<li><a title="屯昌县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 屯昌县</a></li>
+<li><a title="陵水黎族自治县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 陵水黎族自治县</a></li>
+<li><a title="昌江黎族自治县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 昌江黎族自治县</a></li>
+<li><a title="保亭黎族苗族自治县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 保亭黎族苗族自治县</a></li>
+<li><a title="琼中黎族苗族自治县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 琼中黎族苗族自治县</a></li>
+<li><a title="白沙黎族自治县" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 白沙黎族自治县</a></li>
+
+                        </ul>
+                    
+                    </div>
+                        </li>
+						<li>市政府机构
+                        	<div class="hyqli">
+                    	<ul>
+							
+                           <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市人民政府办公室</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市发展和改革委员会</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市自然资源和规划局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市旅游和文化广电体育局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市生态环境局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市农业农村局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市财政局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市人力资源和社会保障局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市教育局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市卫生健康委员会</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市公安局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市司法局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市民政局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市住房和城乡建设局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市交通运输局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市审计局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市水务局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; {关键词1}</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市应急管理局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市统计局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市市场监督管理局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市林业局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市医疗保障局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市乡村振兴局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市行政审批服务局</a></li>
+<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">&gt; 市综合行政执法局</a></li>
+
+                        </ul>
+                    
+                    </div>
+                        </li>
+                        <li>各镇政府
+                        	<div class="hyqli">
+                    	<ul>
+                            
+							
+                           <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市文城镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市铺前镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市锦山镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市抱罗镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市冯坡镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市翁田镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市昌洒镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市龙楼镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市东郊镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市文教镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市东阁镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市潭牛镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市东路镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市蓬莱镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市会文镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市重兴镇</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">文昌市公坡镇</a></li>
+
+                                    
+                        </ul>
+                    
+                    </div>
+                        </li>
+                        <li>其他
+                        	<div class="hyqli">
+                    	<ul>
+							
+							
+                           <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">
+海南自由贸易港</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">海南人才工作网</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">网络违法犯罪举报网</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">中国互联网举报中心</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">人民网海南频道</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">中国新闻网海南</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">海南日报</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">南海网</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">海南乡村振兴网</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">文昌党建网</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a></li>
+
+
+                        </ul>
+                    
+                    </div>
+                        </li>
+                    
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    <div class="clear"></div>
+                </div>
+            </div>
+  
+  <!--非本域名链接跳转弹窗
+<style>
+         .alert-mengban{position: fixed;top: 0px;left: 0px;z-index: 1000;background: #000000;opacity: 0.8 !important;filter: alpha(opacity=80) !important;width: 100%;height: 100%;display: none;}
+        .alert-warning{position: fixed;left: 50%;top:-400px;margin-left:-300px; width: 600px;height: 270px;background:#fff;z-index: 1001;display: none;}
+        .alert-delete{width: 100%;height: 38px;position: relative;}
+        .alert-delete span{position: absolute;top:10px;right: 10px; width: 19px;height: 19px;background: url(http://www.hainan.gov.cn/hn/images/2018_delete.png) center center no-repeat;cursor:pointer;}
+        .alert-wzsm{width: 560px;height: 100px;margin: 15px auto 0; line-height: 35px;font-size: 24px;color: #000;text-align: center;font-family:"Microsoft YaHei"; padding-bottom: 15px;border-bottom: 1px solid #d4d4d4;}
+        .alert-wzsm p{font-size:24px;font-family:"Microsoft YaHei";}
+        .alert-footer{width: 100%; height: 105px;font-size: 20px;color: #000;}
+        .alert-footer span{cursor: pointer;float: left;font-family:"Microsoft YaHei";}
+        .continue{width: 124px;height: 42px;display:inline-table; background-color:#347bd7;border:2px solid;border-radius:25px; color:#FFFFFF; text-align:center; line-height:42px;}
+        .fangqi{line-height: 42px;font-size: 20px;color: #347bd7;margin-left: 30px;}
+        .xuanze{width: 210px;height: 42px;margin: 25px auto 0;}
+
+
+        @media only screen and (max-width: 414px) {
+            .alert-warning{position: fixed;left:2%;top:-400px;margin-left:0; width: 96%;height: auto;background: #fff;background-size: 100%; z-index: 1001;}
+            .alert-wzsm{width: 80%;height: auto;margin: 15px auto 0; line-height: 28px;font-size: 18px;color: #000;text-align: center; }
+            .alert-wzsm p{font-size:18px;}
+            .alert-footer{width: 100%; height: 70px;line-height: 70px;font-size: 18px;color: white;margin-top: 10px;}
+            .continue{ width: 124px;height: 42px;background-size: 100%; display:inline-table; background-color:#000099;}
+
+        }
+        
+    </style>
+
+
+<a id="hash"  href="javascript:void(0)" onclick="return false;"></a>
+	<div class="alert-warning">
+	          <div class="alert-delete">
+		   <span id="closets"></span>
+		</div>	
+		<div class="alert-wzsm">
+			<p>您访问的链接即将离开“文昌市人民政府”门户网站，进入非政府网站<br />是否继续？</p>
+			<p id="outUrl" style="display: none"></p>
+		</div>
+		<div class="alert-footer">		
+		     <div class="xuanze">
+                              <span class="continue" onclick="window.open(outUrl.innerText);document.getElementById('closets').click();">继续访问</span>	
+			<span class="fangqi">放弃</span>	
+		     </div>
+		</div>
+
+	</div>
+	<div class="alert-mengban"></div>
+
+<div class="Whidden" style="display:none">
+
+</div>
+
+
+<script>
+
+$("a").each(function(){
+    var htm=$(this).html();
+    $(this).click(function(){
+		if(this.href!=""&&this.href.toLowerCase().indexOf("javascript")==-1&&this.href.toLowerCase().indexOf("gov.cn")==-1&&this.href.toLowerCase().indexOf("www.gov.mo")==-1&&this.href.toLowerCase().indexOf("www.taiwan.cn")==-1&&this.href.toLowerCase().indexOf("webadmin.hi.cegn.cn")==-1&&this.href.toLowerCase().indexOf("web.hainan.gov.cn")==-1&&this.href.toLowerCase().indexOf("www.gov.hk")==-1&&this.href.toLowerCase().indexOf("javascript:preVious")==-1&&this.href.toLowerCase().indexOf("javascript:next")==-1){
+
+		document.getElementById('outUrl').innerText=this.href;
+	          document.getElementById('hash').click();
+		$(".alert-mengban").fadeIn(200);
+		$(".alert-warning").delay(200).show().animate({top:"75px"}, 300);
+		$("#closets,.fangqi,.alert-mengban").click(function() {
+			$(".alert-warning").animate({top:"-400px"}, 200).hide(300);
+			$(".alert-mengban").delay(300).fadeOut(300);
+		});
+		$(".continue").click(function(){			
+		       $(".alert-warning").hide(200);
+	                 $(".alert-mengban").delay(200).fadeOut(200);
+		})
+		
+
+		return false;
+
+		}
+        });
+    });
+
+
+
+$("select").on("change",function () {
+ var opVal = $(this).find("option:selected").val();
+  
+ if(opVal!=""&&opVal.toLowerCase().indexOf("javascript")==-1&&opVal.toLowerCase().indexOf("gov.cn")==-1&&this.href.toLowerCase().indexOf("www.gov.mo")==-1&&this.href.toLowerCase().indexOf("www.taiwan.cn")==-1&&this.href.toLowerCase().indexOf("wenchang.hainan.gov.cn")==-1&&this.href.toLowerCase().indexOf("web.hainan.gov.cn")==-1&&this.href.toLowerCase().indexOf("webadmin.hi.cegn.cn")==-1&&this.href.toLowerCase().indexOf("www.gov.hk")==-1&&opVal.toLowerCase().indexOf("javascript:preVious")==-1&&opVal.toLowerCase().indexOf("javascript:next")==-1){
+
+                document.getElementById('outUrl').innerText=opVal;
+                document.getElementById('hash').click();
+                $(".alert-mengban").fadeIn(200);
+                $(".alert-warning").delay(200).show().animate({top:"75px"}, 300);
+                $("#closets,.fangqi,.alert-mengban").click(function() {
+                    $(".alert-warning").animate({top:"-400px"}, 200).hide(300);
+                    $(".alert-mengban").delay(300).fadeOut(300);
+                });
+                $(".continue").click(function(){
+                    $(".alert-warning").hide(200);
+                    $(".alert-mengban").delay(200).fadeOut(200);
+                })
+
+
+                return false;
+
+            }
+
+})
+
+
+
+</script>
+非本域名链接跳转弹窗--> 
+  
+  
+            <div class="hfc" style="font-size:12px;">
+                <div class="fl">
+                    <ul>
+                       <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">关于我们</a>｜</li> 
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">网站地图</a>｜</li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a>｜</li>
+                      <li>网站支持IPV6</li>
+                    </ul>
+                    <p>版权所有@{关键词1}&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                        主办：{网站名称}&nbsp;&nbsp;&nbsp;&nbsp;运行维护：{网站名称}<br>
+                      <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">琼ICP备{随机8数字}</a>&nbsp;&nbsp;&nbsp;&nbsp;政府网站标识码：{随机8数字}&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/pd38_wenchang_hainan/static/picture/hdb3.png">琼公网安备 {随机8数字}号</a> <br>网站违法和不良信息举报电话：0898-{随机8数字}、0898-{随机8数字}</p>
+                </div>
+              <div style="display:none;">
+                <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1275934139&web_id=1275934139"></script>
+
+
+              </div>
+                <div class="fr">
+                    <ul>
+                        <li class="hdb"></li>
+                        <li class="hzc"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/pd38_wenchang_hainan/static/picture/zfzc.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+  <script language="JavaScript">var _trackDataType = 'web';var _trackData = _trackData || [];</script>
+<script type="text/javascript" id="kpyfx_js_id_10005731" src="/_/static/pd38_wenchang_hainan/static/js/10005731.js"></script>
+  
+  <script type="text/javascript">
+    setTimeout(function() {
+      document.getElementById("zc").src='/wenchang/xhtml/fodb.html';
+
+}, 0);
+
+	//请配置domain 和 fullUrl 参数，user为test是本机测试环境，正式环境改为official,输出位置id为visitCount
+	var visitConfig = {
+			api : {
+				test : '',
+              official  : '/u/visit/count',
+				use : 'official',
+				domain : 'http://wenchang.hainan.gov.cn/',
+				fullUrl: 'http://wenchang.hainan.gov.cn/wenchang/index.shtml',
+				showId : ''
+			}
+	};
+	</script>
+<script src="/_/static/pd38_wenchang_hainan/static/js/count.js"></script>
+  </div>
+</div>
+      </div></div></div>
+      
+      
+<!DOCTYPE html>
+
+<div class="m_foder">
+	<p class="m_foderc"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">手机版</a>
+         | <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_parent">电脑版</a>
+    </p>    
+    <p>版权所有@{关键词1}</p>
+
+</div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+ 
+  <script>
+$(document).ready(function(){  
+              
+              var author = $('#author').text();
+              if (author == "" ||  null==author) {
+                $('#authorp').hide();
+                
+              }
+            });
+         
+});
+</script>
+</html>

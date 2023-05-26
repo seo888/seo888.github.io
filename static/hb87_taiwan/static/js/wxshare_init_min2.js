@@ -1,0 +1,1 @@
+!function(){"use strict";void 0!==window.Promise&&function(n){let t=document.createElement("script");t.src=n,t.onerror=function(n){},document.head.appendChild(t)}("http://ats.taiwan.cn/homepage2021/js/wxshare_min2.js?random="+Math.random())}();

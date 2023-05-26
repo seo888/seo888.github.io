@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "/{随机字符}/{随机字符}/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="/{随机字符}/{随机字符}/1999/xhtml">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--必填-->
+  <meta property="og:type" content="news">
+  <meta property="og:title" content="{标题}">
+  <meta property="og:description" content="{自定义描述}">
+  <meta property="og:image" content="">
+  <!--选填-->
+  <meta property="og:url" content="{当前url}">
+  <meta property="og:release_date" content="{今日时间}">
+
+  <title>{自定义标题}</title>
+  <meta name="keywords" content="{关键词1}" />
+  <meta name="description" content="{自定义描述}" />
+
+		
+
+  <link href="/static/hb226_chinanews/static/css/base.css" rel="stylesheet" type="text/css">
+  <link href="/static/hb226_chinanews/static/css/header_2015.css" rel="stylesheet" type="text/css">
+  <link href="/static/hb226_chinanews/static/css/news.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="/static/hb226_chinanews/static/js/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="/static/hb226_chinanews/static/js/glogal.js"></script>
+  <script type="text/javascript" src="/static/hb226_chinanews/static/js/hr.ad.min.js" ></script>
+  <script>
+    var phoneWidth = parseInt(window.screen.width);
+    var designWidth = 540;
+    var phoneScale = phoneWidth / designWidth;
+    var ua = navigator.userAgent;
+    if (/Android (d+.d+)/.test(ua)) {
+      var version = parseFloat(RegExp.$1);
+      if (version > 2.3) {
+        document.write('<meta name="viewport" content="width=' + designWidth +', minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+      } else {
+        document.write('<meta name="viewport" content="width=' + designWidth +', target-densitydpi=device-dpi">');
+      }
+    } else {
+      document.write('<meta name="viewport" content="width=' + designWidth +', user-scalable=no, target-densitydpi=device-dpi">');
+    }
+  </script>
+
+
+  <style type="text/css">
+    .nav_navcon li{width:80px;}
+
+    .w1000:after,.mainCont:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+
+    .longtextArea p {
+      font-size: 16px;
+    }
+
+    @media (min-width: 1200px){
+
+      .substation a {
+        margin: 0 2px;
+      }
+
+      .w1000 {
+        width: 1140px;
+      }
+
+      .mainCont{
+        width:1140px;
+      }
+
+      .mainLeft {
+        width: 820px;
+      }
+
+      .headline dt {
+        font-size: 24px; line-height: 60px;
+      }
+
+      .longtextArea{
+        font-size: 18px;
+        line-height: 180%;
+      }
+      .longtextArea p {
+        font-size: 18px;
+        line-height: 180%;
+      }
+
+    }
+  </style>
+
+  <link href="/static/hb226_chinanews/static/css/wap.css" rel="stylesheet" type="text/css">
+  <!--script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8e73e20ae43ca439dbb8ae3d215b0226";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script-->
+</head>
+
+<body>
+
+
+<!--导航-->
+<style type="text/css">
+.nav_navcon li{width:80px;}
+</style>
+
+<div class="w1000">
+
+<div class="logo_div"><span class="logo"><a href="/{随机字符}/{随机字符}.html">     <img alt="{网站名称}" height="60" src="/static/hb226_chinanews/static/picture/logo.jpg" width="210"></a> </span>
+
+	<div class="searchnav" id="zxss" style="width: 745px;padding:0;">
+
+<div class="left">
+
+<div class="branch_text">
+
+</div>
+	<div id="nowTime"></div>
+</div>
+
+		<div class="searchinput right" style="margin-top:12px;"><input id="q" class="search_input" onclick="this.value='',this.style.color='#000'" onkeydown="if(event.keyCode==13)return submitFunNew()" name="q" type="text" value="请输入关键字">
+
+<div class="search_listbox">
+
+<div class="dii7" id="id7" onmouseover="search_select(0)" onmouseout="search_select(1)" style="_position:relative;padding:0px;margin:0px;">
+
+<div class="select_border">
+
+<div class="select_container"><select id="s0" class="selectnews" name="s0"> <option value="cns">中 新</option>  <option value="baidu">百 度</option> </select></div>
+</div>
+</div>
+</div>
+<a class="search_a" onclick="submitFunNew()">搜 索</a>
+
+<div class="clear"></div>
+</div>
+<script>
+			var date = new Date();
+			var yy = date.getFullYear();
+			var MM = date.getMonth() + 1; 		  
+			var dd = date.getDate();
+			var weekData=['日','一','二','三','四','五','六'];
+			document.getElementById('nowTime').innerHTML = yy+'年'+MM+'月'+dd+'日 星期'+weekData[date.getDay()];
+function submitFunNew(){
+	var date=new Date();
+	var hotword=document.getElementsByName('q')[0].value;
+	if (hotword==''||hotword=='请输入关键字'){
+		alert('请输入关键字!');
+		return false;
+	}else{
+		if(document.getElementsByName('s0')[0].value=='cns'){ 
+			window.open("http://search.news.chinanews.com/search.do?q="+encodeURIComponent(hotword)+"&dbtype=gx");
+        }else if(document.getElementsByName('s0')[0].value=='baidu'){
+			window.open("http://www.baidu.com/s?ie=utf-8&bs=%E4%B8+%9B%BD&sr=&z=&cl=3&f=8&wd="+encodeURIComponent(hotword)+"&ct=0");
+        }}
+}
+</script>
+<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+</div>
+</div>
+
+<div class="w1000">
+
+<div id="nav">
+
+<ul class="nav_navcon">
+	<li><a href="/{随机字符}/{随机字符}.html">首页</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">头条</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">时政外事</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">财经资讯</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">社会法制</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">科教文体</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">港澳台侨</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">东盟时政</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">东盟经济</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">东盟社会</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">东盟文体</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">广西各地</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">旅游</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">房地产</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">金融资讯</a></li>
+	<li><a href="/{随机字符}/{随机字符}.html">汽车新闻</a></li>
+	<li><a class="red" href="/{随机字符}/{随机字符}.html">中新视频</a></li>
+	<li> <a href="/{随机字符}/{随机字符}.html">图片新闻</a></li>
+	<li><a class="red" href="/{随机字符}/{随机字符}.html">节庆展会</a></li>
+	<li> <a href="/{随机字符}/{随机字符}.html">消费维权</a></li>
+	<li> <a href="/{随机字符}/{随机字符}.html">重磅专题</a></li>
+	<li> <a href="/{随机字符}/{随机字符}.html">外报广西</a></li>
+	<li> <a href="/{随机字符}/{随机字符}.html">外报专版</a></li>
+</ul>
+
+
+</div>
+</div>
+
+<!--导航结束-->
+
+<div class="top">
+  <div class="top_nav">
+    <a href="/{随机字符}/{随机字符}.html">{关键词1}</a> • <a>正文</a>
+  </div>
+</div>
+<!-- 文章正文 -->
+<div class="mainCont">
+  <div class="mainLeft">
+    <div class="newslistArea">
+      <div class="newslistTitle">您的位置：<a href="/{随机字符}/{随机字符}.html">首页</a>&gt;{关键词1}</div>
+      <div class="transform">
+        <div class="size">字号：<a href="javascript:T(15);">大</a><a href="javascript:T(14);">中</a><a href="javascript:T(12);">小</a></div>
+        <div class="collect"><a href="/{随机字符}/{随机字符}.html" onclick="add_favorite('马中关丹国际物流园开工建设');" class="t6">收藏</a></div>
+        <div class="share"></div>
+      </div>
+      <div class="newsInfoBox">
+        <dl class="headline">
+          <dt class="wryh">{关键词1}{随机后缀}{新闻网标题}</dt>
+          <dd><span>发表时间：{今日时间}</span>来源：{随机关键词2}</dd>
+        </dl>
+        <div class="summary">
+          <p><strong>摘要提示：</strong>{句子}{关键词1}</p></div>
+        <div class="longtextArea" id="ArticleCnt">
+          <!--视频播放器-->
+          
+
+                    <!--正文分页开始-->
+          <div class="img_wrapper" style="text-align: center;"><img src="{随机图片}" alt="{随机关键词}　{人物名称}　摄"><span class="img_descr"></span></div>
+<div class="img_wrapper" style="text-align: center;">{随机关键词}　{人物名称}　摄</div>
+
+<p>　　{新闻网内容}</p>
+                      <!--正文分页结束-->
+        </div>
+
+
+        <div class="cyfenxiangtb">
+          <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+          <script>
+            window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+          </script>
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+    <div class="pictArea">
+      <div class="tadaytext"><h3>最新新闻</h3></div>
+      <ul class="related">
+          <li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>      </ul>
+
+      <div style="margin-top:30px; margin-left:15px;">
+        <!-- 广告位：文章页-底部 -->
+        <script>
+          (function() {
+            var s = "_" + Math.random().toString(36).slice(2);
+            document.write('<div id="' + s + '"></div>');
+            (window.slotbydup=window.slotbydup || []).push({
+              id: '2059221',
+              container: s,
+              size: '640,80',
+              display: 'inlay-fix'
+            });
+          })();
+        </script>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!--right-->
+  <div class="mainRight">
+
+
+
+
+    <div class="sidepart310" style="margin-top:0px;">
+      <h3>热门推荐</h3>
+      <div class="sidepartBox">
+        <ul class="sidepartList">
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li>        </ul>
+      </div>
+    </div>
+
+
+
+
+    <div class="sidepart310">
+      <h3>最新视频</h3>
+      <div class="sidepicBox">
+        <ul class="videoList">
+            <li><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank"><img src="{随机图片}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank">{随机关键词}</a></span></li><li><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank"><img src="{随机图片}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank">{随机关键词}</a></span></li><li><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank"><img src="{随机图片}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank">{随机关键词}</a></span></li><li><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank"><img src="{随机图片}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank">{随机关键词}</a></span></li>        </ul>
+        <div class="clear"></div>
+        <ul class="videoText">
+            <li><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank">{关键词1}{随机后缀}</a></li><li><a href="/{随机字符}/{随机字符}.html" class="red" target="_blank">{标题}</a></li>        </ul>
+      </div>
+    </div>
+
+
+
+    <div class="sidepart310">
+      <h3>中新推荐</h3>
+      <div class="sidepartBox">
+        <ul class="sidepartList sidepartList2">
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li>        </ul>
+      </div>
+    </div>
+    <div class="sidepart310">
+      <h3>热点图片</h3>
+      <div class="sidepicBox">
+        <ul class="videoList">
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}" alt="{随机关键词}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></span></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}" alt="{随机关键词}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></span></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}" alt="{随机关键词}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></span></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}" alt="{随机关键词}" width="136" height="94"></a><span><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></span></li>        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+
+    <div class="sidepart310">
+      <h3>阅读排行</h3>
+      <div class="sidepartBox">
+        <ul class="sidepartList sidepartList2">
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{关键词1}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{随机关键词}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank"><font color="">{标题}</font></a></li>        </ul>  </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!-- footer -->
+<p>
+<style><!--
+.pagebottom{width:100%;margin:15px auto;color:#737373;font-size:12px;clear:both;}
+.pagebottom_1{color:#737373;height:auto;font-size:14px;line-height:30px;text-align:center;background:none;}
+.pagebottom a{color:#737373; text-decoration:none;}
+.pagebottom a:hover{color:#737373; text-decoration:underline;}
+.pagebottom_2{text-align:center;line-height:26px;padding-top:5px;}
+--></style>
+</p>
+
+<div style="width: 100%; border-top: 1px solid #d7d7d7;">
+
+<div class="pagebottom">
+<center>
+<div class="pagebottom_1"><a href="/{随机字符}/{随机字符}.html">关于我们</a>　| <a href="/{随机字符}/{随机字符}.html">{关键词1}</a>　|　<a href="/{随机字符}/{随机字符}.html">联系我们</a>　|　<a href="/{随机字符}/{随机字符}.html">广告服务</a>　|　<a href="/{随机字符}/{随机字符}.html">供稿服务</a>　|　<a href="/{随机字符}/{随机字符}.html">法律声明</a>　|　<a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+
+<div class="pagebottom_2">{网站名称}所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。</div>
+
+<div class="pagebottom_2">未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。</div>
+
+<div class="pagebottom_2">[<a href="/{随机字符}/{随机字符}.html">网上传播视听节目许可证（{随机7数字})</a>]　[<a href="/{随机字符}/{随机字符}.html">京ICP证{随机6数字}号</a>]　[京公网安备：{随机9数字}]　[<a href="/{随机字符}/{随机字符}.html">京ICP备{随机8数字}号-1</a>]
+
+</div>
+</center>
+</div>
+</div>
+
+
+
+<script src="/static/hb226_chinanews/static/js/jweixin.1.6.0.js"></script>	
+<script src="/static/hb226_chinanews/static/js/wxshare.js"></script> 
+
+	
+
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+</body>
+</html>

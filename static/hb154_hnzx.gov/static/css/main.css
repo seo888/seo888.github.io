@@ -1,0 +1,61 @@
+
+
+body {
+    margin: 0;
+    padding: 0px;
+    font-family: "Microsoft YaHei", YaHei, "微软雅黑", SimHei, "黑体";
+    font-size: 14px
+}
+
+#mLogo {
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1000;
+}
+
+#leftLogo {
+    position: absolute;
+    top: 0.5rem;
+    left: 1vw;
+    z-index: 1000;
+}
+
+#leftLogo img {
+    display: block;
+    width: 100%;
+}
+
+
+
+@media (max-width: 1000px) {
+    #mLogo {
+        width: 20%;
+    }
+}
+
+#video {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    *height: 100% !important;
+    /* min-width: 100%; */
+}
+
+img {
+    display: none;
+}
+
+.vjs-captions-button.vjs-menu-button.vjs-menu-button-popup.vjs-control.vjs-button {
+    display: none;
+}
+
+video:focus {
+    outline: 0;
+}

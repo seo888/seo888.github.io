@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh_CN">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-mobile-web-app-capable" content="yes"> 
+  <title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" /> 
+  <link rel="stylesheet" href="/_/static/da19_m.bbtnews/css/touch-app.css"> 
+  <link rel="stylesheet" href="/_/static/da19_m.bbtnews/css/header.css"> 
+  <link rel="apple-touch-startup-image" href="/_/static/da19_m.bbtnews/css/320x460.png"> 
+  <link rel="apple-touch-icon" apple-touch-icon-precomposed="false" sizes="57x57" href="/_/static/da19_m.bbtnews/css/cover_bda44c8a1f274d82b89cb76a0fd4a2ae.png"> 
+  <script type="text/javascript" src="/_/static/da19_m.bbtnews/js/jweixin-1.2.0.js"></script> 
+  <script src="/_/static/da19_m.bbtnews/js/zepto.min.js"></script>
+  <!--http://zeptojs.com/ --> 
+  <script src="/_/static/da19_m.bbtnews/js/cmstop.touchapp.js"></script> 
+  <script type="text/javascript" src="js/config.js"></script> 
+  <script src="/_/static/da19_m.bbtnews/js/jquery-1.11.2.js"></script> 
+  <style>
+	.ui-article-detail p img {margin-left:auto !important;}
+        .m-header{
+            display: none;
+        }
+        .m-header-margin{
+           margin-top: 0;
+        }
+    </style> 
+  <script>
+    $(function(){
+         var contentp = $('#content-show').find("p").not($('img'));
+        contentp.each(function(i){
+            var content = $(this).html();
+            var reg=/&nbsp;/g;
+            var reg1 = /　/g;
+            var noplace =content.replace(reg1, '');
+            var noplace =noplace.replace(reg,'');
+            $(this).css({'text-indent':'2em'});
+            $(this).html(noplace);
+        });
+        var contentimg = $('#content-show p:has(img)');
+        contentimg.each(function(i){
+            $(this).css({'text-align':'center'});
+        })
+
+     })
+
+ </script>
+ </head>  
+ <body> 
+  <div class="ui-container m-header-margin"> 
+   <div> 
+    <article class="ui-article-container"> 
+     <header> 
+      <h1 class="ui-article-title">{新闻网标题}</h1> 
+      <div class="ui-article-infos"> 
+       <time>{当前时间}</time> 
+       <span class="source">{关键词1}</span> 
+       <var class="js-font big-fontSize"></var> 
+      </div> 
+     </header> 
+     <!-- 正文 --> 
+     <section class="ui-article-detail"> 
+      <div id="content-show" class="mar-t-20">
+       <p>{新闻网内容}<br>
+        <img src="{随机图片}"></p>
+      </div> 
+     </section> 
+     <section> 
+      <div class="share"> 
+       <dl> 
+        <dt>
+         分享到
+        </dt> 
+        
+       </dl> 
+      </div> 
+     </section> 
+     <!-- 相关内容 --> 
+     <section class="on-content" style="border:none;"> 
+     </section> 
+     <!--@end 相关内容 --> 
+     <!-- 广告位 --> 
+     <div class="AdPositionId ui-ad"> 
+      <a href="{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}" width="310" alt=""></a> 
+     </div> 
+     <!--@end 广告位 --> 
+     <!-- 精彩推荐 --> 
+     <section class="on-content"> 
+      <h3 class="title"><a href="">精彩推荐</a></h3> 
+      <div class="ui-mod-lists ui-cate-list"> 
+       <ul> 
+        <li> <a href="{随机字符}/{随机字符}.html">{关键词1}{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html">{标题}</a> </li> 
+       </ul> 
+      </div> 
+      <!--  <div class="ui-mod-picsummary ui-picture-list">
+
+                </div> --> 
+     </section> 
+     <!--@end 精彩推荐 --> 
+     <!-- 评论 --> 
+     <div class="comment"> 
+      <!--             </div>
+            <!--@end 评论 --> 
+      <!-- @end正文 --> 
+     </div>
+    </article> 
+   </div> 
+  </div> 
+  <!--<div class="tohome"><a href="http://m.bbtnews.com.cn/">返回首页</a></div>--> 
+  <div class="download"> 
+   <a download="" id="client-link" href="{随机字符}/{随机字符}.html">{关键词1}下载安装手机客户端</a> 
+  </div> 
+  <!-- 底部栏目面板 --> 
+  <div class="js-category-bottom-container"></div> 
+  <!--@end 底部栏目面板 --> 
+  <!-- 底部 --> 
+  <footer class="ui-bottom-bar"> 
+   <a href="{随机字符}/{随机字符}.html">PC版</a> 
+   <a href="{随机字符}/{随机字符}.html">触屏版</a> 
+   <p>Copyright © 2023 {关键词1}. All Rights Reserved</p>
+  </footer> 
+  <!--@end 底部 --> 
+  <script src="/_/static/da19_m.bbtnews/js/jweixin-1.0.0.js"></script> 
+  <script src="/_/static/da19_m.bbtnews/js/share.js"></script> 
+  <script>
+    share({
+        'postUrl' : 'http://m.bbtnews.com.cn/',
+        'title' : '黑龙江银保监局：哈银消费金融2022年投诉总量269件',
+        'description' : '3月14日，北京商报记者注意到，银保监会黑龙江监管局官网公布关于2022年银行保险消费投诉情况的通报，2022年全年，黑龙江银保监局及地市银保监分局共收到银行业消费投诉3231件，同比下降15.04%。',
+        'url' : 'http://m.bbtnews.com.cn/content/ed/82/290974.html',
+        'thumb' : 'https://upload.bbtnews.com.cn/tp.jpg'
+    });
+</script> 
+  <script>
+$(function(){
+	$('#content-show>p').each(function(k,v){
+		if($(this).find('img').length!=0){
+			$(this).css('text-indent','0px');
+		}
+
+	})
+})
+</script> 
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+ </body>
+</html>

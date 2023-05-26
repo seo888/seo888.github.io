@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+    <script>
+        var isPC = function () {
+            var userAgentInfo = navigator.userAgent.toLowerCase();
+            var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+            var flag = true;
+            for (var v = 0; v < Agents.length; v++) {
+                if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+            }
+            return flag;
+        }
+        var pcUlr = "//www.northnews.cn";
+        var mobleUlr = "//m.northnews.cn";
+        if (isPC() && window.location.href.indexOf(mobleUlr) != -1) {
+            window.location.href = pcUlr + GetUrlRelativePath()
+        } else if (!isPC() && window.location.href.indexOf(pcUlr) != -1) {
+            window.location.href = mobleUlr + GetUrlRelativePath()
+        }
+        function GetUrlRelativePath() {
+            var url = document.location.toString();
+            var arrUrl = url.split("//");
+            var start = arrUrl[1].indexOf("/");
+            var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+            if (relUrl.indexOf("?") != -1) {
+                relUrl = relUrl.split("?")[0];
+            }
+            return relUrl;
+        }
+    </script>
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/iconfont.css">
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/site.css">
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/index.css">
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/2016content.css">
+    <link rel="stylesheet"
+        href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css/blue.css">
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/style.css">
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/article_picture.css">
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/article_hang.css">
+    <meta http-equiv="mobile-agent" content="format=html5; url=">
+    <script type="text/javascript" src="/static/da42_northnews/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/da42_northnews/static/js/article_hang.js"></script>
+    <!--[if IE]>
+    <script>
+        (function() {
+            if (!
+                    /*@cc_on!@*/
+                    0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+    <![endif]-->
+    <link rel="shortcut icon"
+        href="http://res.northnews.cn/t/site/10001/a9883e902818c51ecd220a566892fcb7/assets/css_2019/images/favicon2.ico">
+</head>
+
+<body class="body-article">
+    <script type="text/javascript" src="/static/da42_northnews/static/js/sensitive.js"></script>
+    <script type="text/javascript" src="/static/da42_northnews/static/js/xcConfirm.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/da42_northnews/static/css/xcConfirm.css">
+    <header class="header">
+        <div class="column" style="height:105px;">
+            <h1 class="logo">
+                <a href="/{随机字符}/{随机字符}.html" title="{关键词1}" class="ie6_png32">
+                    <img src="/static/da42_northnews/static/picture/73d1402e39b885d251c902481efcc514.png">
+                </a>
+            </h1>
+            <div class="icon">
+                <ul>
+                    <li class="k01"><a href="/{随机字符}/{随机字符}.html" target="_blank">客户端</a></li>
+                    <li class="k02"><a href="/{随机字符}/{随机字符}.html" target="_blank">手机{关键词1}</a></li>
+                    <li class="k03"><a href="/{随机字符}/{随机字符}.html" target="_blank">投稿</a></li>
+                </ul>
+            </div>
+            <div class="today" id="localtime"></div>
+            <script type="text/javascript">
+                function showLocale(objD) {
+                    var str, colorhead, colorfoot;
+                    var yy = objD.getYear();
+                    if (yy < 1900) yy = yy + 1900;
+                    var MM = objD.getMonth() + 1;
+                    if (MM < 10) MM = '0' + MM;
+                    var dd = objD.getDate();
+                    if (dd < 10) dd = '0' + dd;
+                    var hh = objD.getHours();
+                    if (hh < 10) hh = '0' + hh;
+                    var mm = objD.getMinutes();
+                    if (mm < 10) mm = '0' + mm;
+                    var ss = objD.getSeconds();
+                    if (ss < 10) ss = '0' + ss;
+                    var ww = objD.getDay();
+                    if (ww == 0) colorhead = "<font color=\"#676767\">";
+                    if (ww > 0 && ww < 6) colorhead = "<font color=\"#676767\">";
+                    if (ww == 6) colorhead = "<font color=\"#676767\">";
+                    if (ww == 0) ww = "星期日";
+                    if (ww == 1) ww = "星期一";
+                    if (ww == 2) ww = "星期二";
+                    if (ww == 3) ww = "星期三";
+                    if (ww == 4) ww = "星期四";
+                    if (ww == 5) ww = "星期五";
+                    if (ww == 6) ww = "星期六";
+                    colorfoot = "</font>"
+                    str = colorhead + yy + "年" + MM + "月" + dd + "日&nbsp;&nbsp;" + ww + colorfoot;
+                    return (str);
+                }
+                function tick() {
+                    var today;
+                    today = new Date();
+                    document.getElementById("localtime").innerHTML = showLocale(today);
+                    window.setTimeout("tick()", 1000);
+                }
+                tick();
+            </script>
+            <div class="search">
+                <style>
+                    #wd {
+                        height: 35px;
+                        width: 234px;
+                        border: 1px solid #DDDDDD;
+                        border-right: none;
+                        border-radius: 3px 0px 0px 3px;
+                        font-size: 14px;
+                        text-indent: 10px;
+                        float: left;
+                    }
+
+                    #search-btn {
+                        cursor: pointer;
+                        width: 45px;
+                        height: 37px;
+                        background-image: url('/static/da42_northnews/static/image/sBtn.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        float: left;
+                        background-size: 16px 16px;
+                        border: 1px solid #525358;
+                        background-color: #525358;
+                        border-radius: 0px 3px 3px 0px;
+                    }
+                </style>
+                <form action="/s" name="search" method="get" style="margin-top:5px;">
+                    <!--<input type="hidden" name="alias" id="alias" value="' . $alias . '"/>-->
+
+                    <input type="text" name="wd" id="wd" value="" autocomplete="on" placeholder="请输入关键字">
+                    <button type="submit" id="search-btn"> </button>
+                </form>
+                <div style="clear: both;margin-bottom: 25px;"></div>
+            </div>
+        </div>
+        <div class="navm">
+            <ul>
+                <li class="nav-one"><a href="/{随机字符}/{随机字符}.html" target="_blank">首页</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">新闻</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">国内</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">国际</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">旅游</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">文化</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">教育</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">生活</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">网视</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">财经</a></li>
+
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">体育</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">娱乐</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">盟市新闻</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">专题</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">老照片</a></li>
+                <li><a href="/{随机字符}/{随机字符}.html" target="_blank">考试</a></li>
+            </ul>
+        </div>
+        <input type="hidden" name="alias" value="menu275" id="alias">
+    </header>
+    <set name="site_id" value="$site_id"></set>
+    <set name="app_id" value="$app_id"></set>
+    <set name="content_id" value="$content_id"></set>
+    <set name="menu_id" value="$menu_id"></set>
+    <set name="comment_on" value="$comment_on"></set>
+    <list id="88" template="shared/block/ad_show_ht_top"></list>
+    <!--位置 动态-->
+    <div class="senav">
+        <div class="wp">
+            <p><a href="/{随机字符}/{随机字符}.html">首页</a>
+                > <a href="//{随机字符}/{随机字符}.html"></a>
+
+                > 正文</p>
+        </div>
+    </div>
+    <!--位置-->
+    <div class="column article mar-t-25 pos-r ov_v">
+        <div class="left-cont">
+            <!-- 文章主体 -->
+            <article class="article-main">
+                <h1 class="article-title">{关键词1}{随机后缀}{新闻网标题}</h1>
+                <div class="article-infos">
+                    <time class="date">2023-03-22 17:03:04</time>
+                    <span class="source">
+                        <a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a>
+                    </span>
+                    <span class="comment-box"><a href="#comment"><em></em></a></span>
+                    <a href="#SOHUCS" class="comment-count"><span id="sourceId::2193346"
+                            class="cy_cmt_count">0</span></a>
+                </div>
+                <div class="article-content">
+                    <p
+                        style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 2em; text-align: justify;">
+                        {新闻网内容}
+                    </p>
+                    <p
+                        style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 2em; text-align: justify;">
+                        {新闻网内容}
+                    </p>
+                    
+                    <p style="text-align: center; text-indent: 0px;"><img id="XinhuaMMS://1241658,0,0,5"
+                            src="{随机图片}"
+                            data-mce-src="{随机图片}"
+                            data-origin-src="{随机图片}"
+                            data-mce-attachid="5850338" data-mce-alias="GetAttachment.do?id=1241658"></p>
+                    <p
+                        style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 0px; text-align: center;">
+                        <span style="color: rgb(0, 112, 192);">{标题}</span></p>
+                    <p style="text-align: center; text-indent: 0px;"><img id="XinhuaMMS://1241659,0,0,5"
+                            src="{随机图片}"
+                            data-mce-src="{随机图片}"
+                            data-origin-src="{随机图片}"
+                            data-mce-attachid="5850339" data-mce-alias="GetAttachment.do?id=1241659"></p>
+                    <p
+                        style="margin-top: 1em; margin-bottom: 1em; line-height: 2; font-size: 16px; text-indent: 0px; text-align: center;">
+                        <span style="color: rgb(0, 112, 192);">{标题}</span></p>
+                    <p style="text-align: right;"><span class="author">[责任编辑：{人物名称}]</span></p>
+                </div>
+
+                <div class="article">
+                    <!-- 文章投票挂件 -->
+                    <!--投票-->
+                    <!--关联投票链接-->
+                    <!--关联专题链接-->
+                    <!--关联活动报名链接-->
+                    <!--关联视频链接-->
+                </div>
+            </article>
+
+            <!-- 文章附件 -->
+
+            <!-- 分享 -->
+            <!--无外网则隐藏-云设置可设置-->
+            <div class="sharebox" data-contentid="2193346">
+                <div class="f-l ">
+                    <a href="//{随机字符}/{随机字符}.html" class="digg" id="support"><i
+                            class="digg-icon"></i>点赞 0</a>
+                    <a href="//{随机字符}/{随机字符}.html" class="weibo">发长微博</a>
+                </div>
+                <div class="f-r baidu">
+                    <div class="bdsharebuttonbox">
+                        <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+                        <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+                        <a title="分享到QQ好友" href="#" class="bds_sqq" data-cmd="sqq"></a>
+                        <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+                        <a href="//{随机字符}/{随机字符}.html" class="bds_more" data-cmd="more"></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="hr-10"></div>
+
+            <!-- 相关阅读 -->
+            <!--相关阅读-->
+            <div class="relatedread panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">相关阅读</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}   ">{标题} </a>
+                        </li>
+                        <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank"
+                                title="{标题}">{标题}</a>
+                        </li>
+                        <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank"
+                                title="{标题}">{标题}</a>
+                        </li>
+                        <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a>
+                        </li>
+                        <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank"
+                                title="{标题}">{标题}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                $(".relatedread.panel li a").each(function () {
+                    var title = $(this).text();
+                    if (title.length > 86) {
+                        $(this).text(title.substring(0, 85) + "...");
+                    }
+                })
+            </script>
+
+            <!-- 评论 -->
+            <!--无外网则隐藏-云设置可设置-->
+
+            <list id="55" limit="1" template="shared/block/ad_article_ht01"></list>
+            <!—# 今日内蒙古 #—>
+                <list id="47" limit="4" template="shared/block/list_todaynmg_pic"></list>
+        </div>
+        <!-- 右侧主体 -->
+        <aside class="right-cont">
+            <!-- 微信/客户端二维码/关注 -->
+            <!-- 侧边栏微信二维码与客户端二维码块 -->
+            
+            <div class="clear"></div>
+            <style>
+                .app-2code:before {
+                    content: " ";
+                    background: url("/static/da42_northnews/static/image/fdc9d18cfcbab353dc9ae69509fbba43.png!w300_h300.png") no-repeat;
+                    background-size: 30px 30px;
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-left: -13px;
+                    margin-top: -13px;
+                    border-radius: 3px;
+                }
+            </style>
+
+            <!-- 广告位 -->
+            <!-- 侧边栏广告块 -->
+
+            <!-- 推荐文章列表 -->
+            <!-- 侧边栏推荐文章列表块 -->
+            <section class="rmwz ov">
+                <div class="mod-title1">
+                    <h2>推荐文章</h2>
+                </div>
+                <div class="ov">
+                    <ul class="pic-list">
+                        <li class="pic-img">
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="280" height="168" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li class="pic-img">
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="280" height="168" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li class="pic-txt"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li class="pic-txt"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li class="pic-txt"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li class="pic-txt"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li class="pic-txt"><a href="/{随机字符}/{随机字符}.html"
+                                title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li class="pic-txt"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 热门文章列表 -->
+            <!-- 侧边栏热门文章列表块 -->
+            <section class="rmwz ov mar-t-20">
+                <div class="mod-title1">
+                    <h2>热门文章</h2>
+                </div>
+                <div class="ov">
+                    <ul class="pic-list">
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}"
+                                        title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pic-summary">
+                                <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                                    <img width="80" height="60" class="img"
+                                        src="{随机图片}"
+                                        alt="{标题}" title="{标题}"></a>
+                                <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}"
+                                        target="_blank">{标题}</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+    </div>
+    <div class="hr-10"></div>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="column m-footer">
+            <p><a href="/{随机字符}/{随机字符}.html" target="_blank">网站介绍</a> | <a href="/{随机字符}/{随机字符}.html" target="_blank">广告刊例</a> | <a
+                    href="/{随机字符}/{随机字符}.html" target="_blank">联系方式</a> | <a href="/{随机字符}/{随机字符}.html" target="_blank">法律声明</a></p>
+            <p><span>版权声明：{关键词1}版权所有，未经授权， 请勿转载或建立镜像，违者依法必究。</span></p>
+                <span class="copyright">{关键词1} 版权所有 Copyright © 2004-2023 {当前主域名} All Rights Reserved.</span> <a
+                    href="/{随机字符}/{随机字符}.html" target="_blank" class="white"><span class="icp r_bor">蒙ICP备10000005号</span></a>
+                <span>互联网新闻信息服务许可证：<a href="/{随机字符}/{随机字符}.html" target="_blank">15120180001</a></span>
+                <!--<span class="powerby">授权信息</span>-->
+            </p>
+        </div>
+    </footer>
+    <!-- Cmstop pv 统计代码，勿删 -->
+    
+
+    <!--中宣部大数据统计-->
+    
+    <script id="longweibo-template" type="text/template">
+    <div class="lw-dialog">
+        <div class="lw-img-outter">
+            <div class="lw-img"><p><img class="loading" src="http://res.northnews.cn/assets/images/loading.gif"/></p></div>
+        </div>
+                <div class="lw-button-panel">
+            <a href="javascript:longWeiboSina('守好药品检查“责任田”  内蒙古百名检查员忙充电','2193346');" class="weibo"><div class="lw-sina-button f-fl f-csp"></div></a>
+            <a href="javascript:longWeiboTencent('守好药品检查“责任田”  内蒙古百名检查员忙充电');" class="weibo"><div class="lw-tencent-button f-fr f-csp"></div></a>
+        </div>
+    </div>
+</script>
+
+    <script type="text/javascript" src="/static/da42_northnews/static/js/jquery.corner.js"></script>
+    <script type="text/javascript" src="/static/da42_northnews/static/js/qrcode.min.js"></script>
+    <link rel="stylesheet" href="/static/da42_northnews/static/css/style1.css">
+    <script src="/static/da42_northnews/static/js/dialog.js"></script>
+    <script type="text/javascript" src="/static/da42_northnews/static/js/common.js"></script>
+    <script type="text/javascript" src="/static/da42_northnews/static/js/article.js"></script>
+    <script src="/static/da42_northnews/static/js/jquery.jplayer.min.js"></script>
+    <script src="/static/da42_northnews/static/js/myAudio.js"></script>
+    <script type="text/javascript" src="/static/da42_northnews/static/js/article_picture.js"></script>
+</body>
+
+</html>

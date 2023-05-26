@@ -1,0 +1,86 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f7f7f7;
+	font-family: "微软雅黑";
+}
+a{outline: none!important; border: none;}
+.w {
+	width: 1220px;
+	margin: 0 auto;
+}
+#qrcode{width: 150px; height: 150px;}
+.erweim{width: 200px; height: 40px; margin: 0 auto; line-height: 40px; text-align: center;}
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.bd_weixin_popup{width:252px!important;height:310px!important;}
+/*当前位置*/
+.position {
+	width: 100%;
+	height: 55px;
+	line-height: 50px;
+	background-color: #f7f7f7;
+}
+
+.position .position-txt {
+	font-size: 13px;
+	color: #454545;
+}
+
+/*文章正文*/
+.con {
+	width: 1220px;
+	/*min-height: 680px;*/
+	margin: 0px auto;
+padding:40px 150px;
+background-color: #fff;
+}
+.con-title{    font-size: 28px;    color: #333;    font-weight: bold; min-height: 50px; line-height: 50px; text-align: center; }
+.small-title{width: 900px; font-size: 14px; color: #999; height: 50px; line-height: 50px;}
+.small-title .date{margin:0 150px;}
+.small-title .fare{float: right; margin-right: 15px;}
+
+.main-txt{margin-top: 10px;}
+.main-txt p{font-size: 16px; color: #333; line-height: 30px;table-layout: fixed;
+    word-break: break-all;
+    overflow: hidden;
+/*text-indent: 2em;*/
+}
+
+
+
+.main-txt table td  img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main-corner{float: right; margin-top: 20px; margin-bottom: 40px;}
+.main-corner div{font-size: 15px; color: #333; line-height: 26px;}
+.main-word{width: 100%; height: 40px; line-height: 40px; padding: 0 20px; background-color: #f1f1f1;}
+.main-word .main-word-left{float: left;}
+.main-word-left span{font-size: 15px; font-weight: bold; color: #fa0505;}
+.main-word .main-word-right{float: right;}
+.main-word-right span{float: left;}
+.main-word-right .printer{margin-left: 30px; padding-left: 25px; background: url(../images/printer.png) no-repeat left center;}
+.main-word-right .close{margin-left: 25px; padding-left: 25px; background: url(../images/close.png) no-repeat left center;}
+.con-main .line{border: 1px #c5c5c5 dotted; margin: 20px 0;}
+.con-main .prev{margin-bottom: 15px;}
+@media only screen and (max-width: 1023px){
+.con-main {
+    border-top: 1px solid #dedcd8;
+    width: 100%;
+    margin-top: 10px!important;
+    padding-top: 10px;}
+#zoom p img{ max-width:100%;}
+}

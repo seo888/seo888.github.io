@@ -1,0 +1,420 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="IE=8.0000" http-equiv="X-UA-Compatible">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{标题}">
+    <meta name="description" content="{自定义描述}" />
+    <meta http-equiv="X-UA-Compatible" content="" ie="EmulateIE8">
+    <meta http-equiv="Content-language" content="zh-CN">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Keywords" content="$column.ClassKey">
+    <meta name="Description" content="$column.ClassDescribe">
+    <meta name="SiteName" content="{标题}">
+    <meta name="SiteDomain" content="{随机字符}/{随机字符}.html">
+    <meta name="ColumnName" content="{关键词1}">
+    <meta name="ColumnDescription" content="{关键词1}">
+    <meta name="ColumnKeywords" content="{关键词1}">
+    <meta name="ColumnType" content="{关键词1}">
+    <meta name="SiteIDCode" content="5300000003">
+    <link href="/static/da75_hrss.yn.gov/static/css/Base.css" rel="stylesheet" type="text/css">
+    <link href="/static/da75_hrss.yn.gov/static/css/YNHRSS.css" rel="stylesheet" type="text/css">
+    <link href="/static/da75_hrss.yn.gov/static/css/glob.css" rel="stylesheet" type="text/css">
+    <script src="/static/da75_hrss.yn.gov/static/js/jquery1.42.min.js" type="text/javascript"></script>
+    <script src="/static/da75_hrss.yn.gov/static/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        jQuery("body").addClass("gray").css("background-color", "#EAEAEA");
+        jQuery("img").addClass("gray");
+        jQuery("span").addClass("gray");
+        jQuery("li").addClass("gray");
+
+        /**设置文本框初始值***/
+        function ProFocus(obj, str) {
+            if (obj.value == str) {
+                obj.value = "";
+                obj.style.color = "#000";
+            }
+        }
+        /**设置文本框初始值***/
+        function ProBlur(obj, str) {
+            if (obj.value == "") {
+                obj.value = str;
+                obj.style.color = "#999";
+            }
+        }
+        /**关键字查询***/
+        function getKeyword() {
+            var keyword = document.getElementById("tb_keyword").value;
+            var Cid = document.getElementById("ddl_originlist").value;
+            if (keyword == "输入关键字") {
+                alert("请输入查询关键字！");
+            } else {
+                window.location.href = "/SearchList.aspx?kw=" + encodeURIComponent(keyword) + "&Cid=" + Cid;
+            }
+        }
+        /**关键字查询***/
+        function getBSKeyword() {
+            var keyword = document.getElementById("tb_bskeyword").value;
+            var Cid = document.getElementById("tb_bs_classId").value;
+
+            if (keyword == "输入关键字") {
+                alert("请输入查询关键字！");
+            } else {
+
+                window.location.href = "/SearchList.aspx?kw=" + encodeURIComponent(keyword) + "&Cid=" + Cid;
+            }
+        }
+    </script>
+    <style>
+        .cusString {
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        #Body_ltl_newsContent table {
+            border-collapse: collapse;
+            width: 756px;
+        }
+
+        #Body_ltl_newsContent table tr td {
+            min-height: 25px;
+            _height: 25px;
+            height: 100%;
+            border: 1px solid
+        }
+
+        .m {
+            width: 740px;
+            height: 416px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            background: #000;
+            border: 1px solid #DEDEDE
+        }
+
+        div.readBox h2 {
+            line-height: 25px;
+            margin-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .vjs-big-play-button {
+            important;
+            top: 180px !important;
+            left: 330px !important
+        }
+    </style>
+    <link href="/static/da75_hrss.yn.gov/static/css/video-js.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!---nav--->
+    <div class="nav">
+        <div class="site-nav">
+            <div class="sn-lf">
+                <ul>
+                    <li><a href="{随机字符}/{随机字符}.html"></a>{关键词1}</li>
+                    <li><a href="{随机字符}/{随机字符}.html">{随机关键词2}</a>|</li>
+                    <li><a href="{随机字符}/{随机字符}.html">{随机关键词2}</a>|</li>
+                    <li><a href="{随机字符}/{随机字符}.html">{随机关键词2}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="layer1 clearfix mt5">
+        <!---main--->
+        <div class="main">
+            <!---logo--->
+            <!---logo--->
+            <div class="logo">
+                <div class="logo_m">
+                    <a href="{随机字符}/{随机字符}.html">
+                        <img src="/static/da75_hrss.yn.gov/static/picture/logo.png"></a>
+                </div>
+            </div>
+            <!---menu--->
+            <div class="menu">
+                <ul>
+                    <li style="width: 70px"><a style="width: 60px" href="{随机字符}/{随机字符}.html">首页</a></li>
+                    <li style="width:102px"><a href="{随机字符}/{随机字符}.html">{关键词1}</a></li>
+                    <li style="width:102px"><a href="{随机字符}/{随机字符}.html" target="_blank">智慧党建</a></li>
+                    <li style="width:102px"><a href="{随机字符}/{随机字符}.html">通知公告</a></li>
+                    <li style="width:102px"><a href="{随机字符}/{随机字符}.html">招考招聘</a></li>
+                    <li style="width:102px"><a href="{随机字符}/{随机字符}.html">政府信息公开</a></li>
+                    <li style="width:102px"><a href="{随机字符}/{随机字符}.html" target="_blank">人事考试</a></li>
+                    <li style="width:102px"><a href="{随机字符}/{随机字符}.html">组织机构</a></li>
+                    <li style="width:126px"><a href="{随机字符}/{随机字符}.html" target="_blank">{随机关键词2}</a></li>
+                    <li style="width:106px"><a href="{随机字符}/{随机字符}.html" target="_blank">政务服务</a></li>
+                </ul>
+            </div>
+            <!---menu--->
+            <div class="menu2" style="height: 45px;">
+                <div class="sn-lf2">
+                    {关键词1}<span class="li_2"></span>
+                </div>
+                <div class="sn-lr2" style="width:905px">
+                    <ul class="ul11 mt5" style="height: 40px; margin-top: 10px;width:auto;">
+                        <li><a title="昆明市人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">昆明</a>|</li>
+                        <li><a title="玉溪市人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">玉溪</a>|</li>
+                        <li><a title="楚雄州人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">楚雄</a>|</li>
+                        <li><a title="文山人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">文山</a>|</li>
+                        <li><a title="普洱市人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">普洱</a>|</li>
+                        <li><a title="德宏州人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">德宏</a>|</li>
+                        <li><a title="怒江州人力资源和社会保障局" href="{随机字符}/{随机字符}.html" target="_blank">怒江</a>|</li>
+                        <li><a title="红河州人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">红河</a>|</li>
+                        <li><a title="迪庆州人力资源和社会保障局" href="{随机字符}/{随机字符}.html" target="_blank">迪庆</a>|</li>
+                        <li><a title="临沧市人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">临沧</a>|</li>
+                        <li><a title="大理州人力资源和社会保障局" href="{随机字符}/{随机字符}.html" target="_blank">大理</a>|</li>
+                        <li><a title="西双版纳州人力资源和社会保障局" href="{随机字符}/{随机字符}.html" target="_blank">西双版纳</a>|</li>
+                        <li><a title="丽江人力资源和社会保障局" href="{随机字符}/{随机字符}.html" target="_blank">丽江</a>|</li>
+                        <li><a title="昭通市人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">昭通</a>|</li>
+                        <li><a title="曲靖市人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">曲靖</a>|</li>
+                        <li><a title="保山市人力资源和社会保障网" href="{随机字符}/{随机字符}.html" target="_blank">保山</a>|</li>
+                    </ul>
+                    <div style="float:right;">
+                        <a href="{随机字符}/{随机字符}.html" target="_blank"><img src="/static/da75_hrss.yn.gov/static/picture/202204141733.png"
+                                style="width:248px;height:45px;"></a>
+                    </div>
+                </div>
+            </div>
+            <!---hot--->
+            <div class="hot">
+                <div class="sn-lf2">
+                    新闻聚焦<span class="li_2"></span>
+                </div>
+                <div class="txtScroll-top" style="width:290px">
+                    <div class="bd">
+                        <ul class="infoList" style="font-size: 14px;">
+                            <li>
+                                <div class="cusString">
+                                    <span class="date">{年月日}</span>
+                                    <a title="{标题}" href="{随机字符}/{随机字符}.html">{标题}</a>
+                                </div>
+
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".txtScroll-top").slide({ mainCell: ".bd ul", autoPage: true, effect: "top", interTime: 5000, autoPlay: true, vis: 1 });                
+                </script>
+                <!---搜索开始--->
+                <div class="searchkeyword" style="padding-top: 5px;float:left;margin-left:10px;margin-right:0px">
+                    <select id="ddl_originlist" style="width: 120px; margin-right: 10px;" class="searchtxt">
+                        <option value="">{关键词1}</option>
+                        <option value="365">国内要闻</option>
+                        <option value="526">云南要闻</option>
+                        <option value="456">权威发布</option>
+                        <option value="558">通知公告</option>
+                        <option value="556">部省要情</option>
+                        <option value="369">州市信息</option>
+                        <option value="647">厅内动态</option>
+                        <option value="458">招考招聘</option>
+                        <option value="641">公务员公开遴选 </option>
+                        <option value="373">专题栏目 </option>
+                        <option value="643">选拔表彰</option>
+                        <option value="635">民生关注 </option>
+                        <option value="560">政策文件</option>
+                        <option value="371">就业创业 </option>
+                        <option value="372">社会保障 </option>
+                        <option value="374">人才队伍 </option>
+                        <option value="642">资料下载 </option>
+                        <option value="375">人事制度 </option>
+                        <option value="376">收入分配 </option>
+                        <option value="459">组织机构</option>
+                        <option value="377">劳动关系 </option>
+                        <option value="378">农民工工作 </option>
+                        <option value="1138">信息公开</option>
+                        <option value="384">图片新闻 </option>
+                    </select>
+                    <input type="text" onfocus="ProFocus(this,'输入关键字')" onblur="ProBlur(this,'输入关键字');" value="输入关键字"
+                        id="tb_keyword" class="searchtxt">
+                    <img style="cursor: pointer" src="/static/da75_hrss.yn.gov/static/picture/btn_search.png" onclick="getKeyword();">
+                </div>
+                <div style="float:right;margin-top:-2px;"><a href="{随机字符}/{随机字符}.html"><img
+                            src="/static/da75_hrss.yn.gov/static/picture/202204141755.png" style="width:248px"></a></div>
+            </div>
+            <table cellpadding="0" cellspacing="0" style="width:1025px">
+                <tr>
+                    <td style=" vertical-align:top">
+                        <div class="readBox mt5" style="width:750px !important;">
+                            <h1> <a href="{随机字符}/{随机字符}.html">首页</a> &gt; <a href="{随机字符}/{随机字符}.html">招考招聘</a> &gt; <a
+                                    href="{随机字符}/{随机字符}.html">{关键词1}</a> &gt; 内容</h1>
+                            <h2> <span id="Body_lb_newsTitle">{关键词1}{随机后缀}{新闻网标题}</span></h2>
+                            <h3> 文章来源：<span id="Body_lb_NewsOrigin"></span>&nbsp;&nbsp;&nbsp;&nbsp;发布时间：<span
+                                    id="Body_lb_postTime">{今日时间}</span>&nbsp;&nbsp;&nbsp;&nbsp;阅读次数：<span
+                                    id="Body_lb_newsclick">6</span> &nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                            <span id="Body_ltl_newsContent">
+                                <p style="line-height: 37px"><span style=";font-family:宋体;font-size:29px">&nbsp;</span>
+                                </p>
+                                <p
+                                    style=";text-autospace:none;text-align:center;line-height:44px;background:rgb(255,255,255)"><span
+                                            style="font-family:方正小标宋_GBK">{关键词1}{随机后缀}{新闻网标题}</span></span>
+                                </p>
+                                <p style="text-indent:43px;line-height:40px"><span
+                                        style=";font-family:宋体;font-size:21px">&nbsp;</span></p>
+                                <p style="text-indent:43px;line-height:40px"><span
+                                        style=";font-family:方正仿宋_GBK;font-size:21px"><span
+                                            style="font-family:方正仿宋_GBK">{新闻网内容}</span>
+                                <h1><span style=";font-family:方正黑体_GBK;font-size:21px"><span
+                                            style="font-family:方正黑体_GBK">一、{标题}</span></span></h1>
+                                <p
+                                    style="text-indent:43px;text-autospace:none;line-height:40px;background:rgb(255,255,255)">
+                                    <span style="font-family: 方正仿宋_GBK;font-size: 21px"><span
+                                            style="font-family:方正仿宋_GBK">{新闻网内容}</span>
+                                </p>
+ 
+                                
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_default.png"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_doc.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_default.png"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_pdf.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_pdf.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_pdf.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_pdf.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_pdf.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_pdf.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="line-height: 16px;"><img src="/static/da75_hrss.yn.gov/static/picture/icon_doc.gif"><a
+                                        href="{随机字符}/{随机字符}.html">{标题}</a></p>
+                                <p style="text-indent:43px;line-height:40px"><span
+                                        style=";font-family:方正仿宋_GBK;font-size:21px"></span><br></p>
+                                <p style="text-indent:43px;line-height:40px"><span
+                                        style=";font-family:方正仿宋_GBK;font-size:21px">&nbsp;</span></p>
+                                <p style="text-indent:299px;text-autospace:none;line-height:40px"><span
+                                        style=";font-family:方正仿宋_GBK;font-size:21px"><span
+                                            style="font-family:方正仿宋_GBK">{关键词1}</span></span></p>
+                                <p style=";text-autospace:none;text-align:center;line-height:40px"><span
+                                        style=";font-family:方正仿宋_GBK;font-size:21px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{今日时间}</span></p>
+                                <p><br></p>
+                            </span>
+                            <p> </p>
+                            <div id="pages"> </div>
+                        </div>
+                    </td>
+                    <td style=" vertical-align:top">
+                        <div style="float:right;width:230px">
+                            <!---信息公开--->
+
+                            <div class="model2 mt5" style='width:210px;'>
+                                <div class="tltle1">
+                                    <ul>
+                                        <li>栏目导航</li>
+                                    </ul>
+                                </div>
+                                <ul class="ul1">
+                                </ul>
+                            </div>
+
+                            <div class="model2 h347 mt5" style="padding-top: 0px;width:210px;">
+                                <div class="tltle1">
+                                    <ul class="ul13">
+                                        <li>最新新闻</li>
+                                    </ul>
+                                </div>
+                                <ul class="ul13">
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}"
+                                            href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}"
+                                            href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}"
+                                            href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}"
+                                            href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}"
+                                            href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}" href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}" href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}" href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}"
+                                            href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                    <li style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; "><a
+                                            title="{标题}"
+                                            href="{随机字符}/{随机字符}.html">{标题}</a></li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="foot mt10" style=" text-align:center;padding-top:20px;background-position:bottom;height:auto!important">
+        <table style="width:1024px;margin:0 auto;">
+            <tr>
+                <td valign="top" style="width:100px;">
+                    <script
+                        type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/25/000/0000/40639247/CA250000000406392470002.js' type='text/javascript'%3E%3C/script%3E"));</script>
+                </td>
+                <td valign="top" style=" text-align:left">
+                    <p style="text-align:left;width:100%;display:block;margin:0;font-size:14px;margin-bottom:10px;"><a
+                            href="{随机字符}/{随机字符}.html" target="_blank" style="font-weight:bold">网站地图</a></p>
+                    <p style="text-align:left;width:100%;display:block;margin:0;font-size:14px;margin-bottom:10px;">
+                        主办单位：{关键词1} &nbsp;运行维护：{关键词1}</p>
+                    <p style="text-align:left;width:100%;display:block;margin:0;font-size:14px;margin-bottom:10px;">
+                        联系方式：0871-12333</p>
+                    <p
+                        style="text-align:left;width:100%;display:block;margin:0; text-align:left;margin-top:5px;font-size:14px;margin-bottom:10px;">
+                        <a href="{随机字符}/{随机字符}.html" target="_blank">滇ICP备10002878号</a>&nbsp;&nbsp;<a target="_blank"
+                            href="{随机字符}/{随机字符}.html"
+                            style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                            <img src="/static/da75_hrss.yn.gov/static/picture/balogo.png" style="float:left;margin-right:5px;">滇公网安备
+                            53010202000568号
+                        </a>&nbsp;&nbsp;网站标识码：5300000003
+                    </p>
+                    <p style="text-align:left;width:100%;display:block;margin:0;font-size:14px">版权所有，未经授权，不得转载、引用
+                        <script
+                            type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1254489625'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1254489625%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+                    </p>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script>
+        jQuery(function () {
+            jQuery.ajax({
+                url: "https://hrss.yn.gov.cn/ajax/newsClicks.ashx?tag=newsup&id=55702",
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                    if (res && res.status) {
+                        jQuery("#Body_lb_newsclick").html(res.total)
+                    }
+                }
+            })
+        })
+
+    </script>
+    <script>console.log('$msg')</script>
+</body>
+
+</html>

@@ -1,0 +1,656 @@
+<!--
+ * @Description:
+ * @Version: 0.0.1
+ * @Company: hNdt
+ * @Author: xiaWang1024
+ * @Date: 2019-10-14 14:50:58
+ * @LastEditTime: 2019-11-13 16:33:31
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+
+ <head>
+     <meta charset="UTF-8">
+     <title>{自定义标题}</title>
+     <meta name="keywords" content="{关键词1}" />
+     <meta name="description" content="{自定义描述}">
+     <base target="_blank">
+     <link type="image/x-icon" href="{泛站内链}" rel="shortcut icon">
+     <link rel="stylesheet" href="/_/static/ow55_news/static/css/reset.css">
+     <link rel="stylesheet" href="/_/static/ow55_news/static/css/page_base.css">
+     <link rel="stylesheet" href="/_/static/ow55_news/static/css/desc.css">
+     <script type="text/javascript" src="/_/static/ow55_news/static/js/jquery-1.11.3.min.js"></script>
+     <script src="/_/static/ow55_news/static/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+     <script src="/_/static/ow55_news/static/js/desc.js" type="text/javascript"></script>
+     <!--[if lt IE 9]>
+          <script src="http://static.hnr.cn/hnr/public/html5shiv.min.js"></script>
+          <![endif]-->
+     <script type="text/javascript">
+         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+         document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F7dc9841fcb7bb1666d47344800f2c9ca' type='text/javascript'%3E%3C/script%3E"));
+     </script>
+ </head>
+
+ <body>
+
+     <!-- 大象PC视频正文头部 开始 -->
+    <script type="text/javascript" src="/_/static/ow55_news/static/js/hnr_common.js"></script>
+    <script type='text/javascript' src="/_/static/ow55_news/static/js/swfobject.js"></script>
+    <script type="text/javascript" src="/_/static/ow55_news/static/js/player_v2018.js"></script>
+<script type="text/javascript">
+    /**
+    * pc端跳转到手机端
+    **/
+    var url = location.href.toLowerCase();
+    function isWap() {
+        if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+            return true
+
+        } else {
+            return false
+        }
+    }
+
+    function isHome() {
+        if (!url.split('.cn/')[1]) {
+            return true
+        }
+    }
+    function isArticle() {
+        if(url.indexOf('/article/1/') > 0) {
+            return true
+        }
+    }
+
+function isFromWap(){
+	return !(window.location.href.indexOf('fm')<0)
+}
+
+
+    if (isWap()&&(isArticle())) {
+        if(!isFromWap()){
+         if (url.indexOf('?') > 0) {
+            GoMobile(url + '&source=mobile');
+        } else {
+            GoMobile(url + '?source=mobile');
+        }
+     }
+    }
+</script>
+    <style type="text/css">
+        #topnav {
+            width: 1000px;
+            overflow: hidden;
+            margin: 0px auto;
+            text-align: center;
+        }
+
+        #topnav a {
+            width: 50px;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+            display: block;
+        }
+
+        .left {
+            float: left;
+        }
+
+        #topnav ul li {
+            list-style: none;
+        }
+
+        #topnav {
+            width: 1000px;
+            overflow: hidden;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /*.page-turn{display: block;width: 98px;height: 38px;line-height: 38px;border: 1px solid #dedede;}
+    .cursor-disable{cursor: not-allowed;}
+    .f-999-999, .f-999-999 a:link, .f-999-999 a:visited, a.f-999-999, a.f-999:link, a.f-999-999:visited{color: #999;text-decoration: none;}
+    .f-999-999 a:hover, a.f-999:hover{color: #999;text-decoration: none;}*/
+        /* pages */
+        #paginationBtn {
+            padding: 20px 0 20px 0;
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+            width: auto !important;
+        }
+
+        #paginationBtn a:link,
+        .pages a:visited,
+        .pages a:active {
+            background: #FFFFFF;
+            border: #DDDDDD 1px solid;
+            padding: 3px;
+            text-decoration: none;
+        }
+
+        #paginationBtn a:hover {
+            background: #258CFF;
+            border: #258CFF 1px solid;
+            color: #FFFFFF;
+            padding: 3px;
+            text-decoration: none;
+        }
+
+        #paginationBtn strong {
+            background: #258CFF;
+            padding: 3px;
+            border: #258CFF 1px solid;
+            color: #FFFFFF;
+        }
+
+        #paginationBtn .pages_inp {
+            width: 30px;
+            border: #DDDDDD 1px solid;
+            color: #666666;
+            padding: 2px;
+            text-align: center;
+        }
+
+        #paginationBtn .pages_btn {
+            width: 26px;
+            border: #FF6600 1px solid;
+            color: #FFFFFF;
+            padding: 1px;
+            background: #FF6600;
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+        #paginationBtn label {
+            background: #FFFFFF;
+            border: #DDDDDD 1px solid;
+            color: #666666;
+            padding: 3px 5px 3px 5px;
+        }
+
+        #paginationBtn label em {
+            color: red;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        #paginationBtn label span {
+            font-weight: bold;
+        }
+
+        #paginationBtn cite {
+            font-style: normal;
+        }
+
+        #paginationBtn .property_h {
+            border-bottom: #FFFFFF 1px solid;
+            text-align: left;
+            background: url('http://news.hnr.cn/djn/spacer.gif');
+            color: #006699;
+            font-weight: bold;
+            padding-left: 15px;
+        }
+
+        #paginationBtn .property_l {
+            padding: 0 20px 0 20px;
+            color: #006699;
+        }
+
+        #paginationBtn input {
+            width: 2em !important;
+        }
+    </style>
+    <div id="topnav">
+        <ul class="clearfix">
+            <li class="left"><a href="{泛站内链}" target="_self" style="width: 100px;">映象网首页</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">新闻</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">原创</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">视频</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">财经</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">房产</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">汽车</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">政务</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">教育</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">健康</a></li>
+ 
+            <li class="left"><a href="{泛站内链}" target="_self">旅游</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">体彩</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">食药</a></li>
+            <li class="left"><a href="{泛站内链}" target="_self">公益</a></li>
+<!--    <li class="left"><a href="http://www.hnr.cn/baokuan/" target="_self" style="width: 65px;">河南爆款</a></li>
+            <li class="left"><a href="http://www.hnr.cn/hnr/shudu/" target="_self" style="width: 65px;">数读有道</a></li>
+            <li class="left"><a href="http://www.hnr.cn/read/" target="_self" style="width: 65px;">郑在读书</a></li> -->
+        </ul>
+    </div>     <!-- 大象PC视频正文头部 结束 -->
+     <div class="bor_t_dedede"></div>
+     <div style="width: 1000px; clear: both; overflow: hidden; padding-top: 10px; margin: 0px auto;">
+         <!-- <script language="javascript" type="text/javascript"
+             src="http://e.hnr.cn/choose/view/{C817B203-A1B2-4124-022E-2C5C445B085A}.js"></script> -->
+     </div>
+     <div class="wid1000 mrg_auto mrg_t_15 clearfix">
+         <a class="left blck hnrLogo" href="{泛站内链}" target="_self"><em></em>
+             <h1 class="f24 normal mrg_l_10">映象新闻</h1>
+         </a>
+         <div class="left mrg_l_40 pad_t_10">
+             <a href="{泛站内链}" target="_self">{网站名称}</a>&nbsp;&gt;&nbsp;<a href="{泛站内链}">头条
+             </a>&nbsp;&gt;&nbsp;<span>正文</span>
+         </div>
+     </div>
+     <div class="wid1000 mrg_auto">
+         <h2 class="f32 lh48 mrg_t_30">{新闻网标题}</h2>
+         <div class="clearfix mrg_t_25 bor_b_dedede pad_b_15" id="share_right">
+             <p class="left"><span>{当前时间} </span>&nbsp;&nbsp;<span>来源：{关键词1}</span></p>
+             <div class="right">
+                 <em class="discuss_bg none mrg_l_30 txtmiddle" style="display:none;"></em>
+                 <span class="f_666 txtmiddle none">5034</span>
+                 <em class="favorites_bg mrg_l_30 txtmiddle pointer" onclick="AddFavorite(document.title,location.href)"></em>
+                 <em class="print_bg mrg_l_30 txtmiddle pointer" onclick="window.print()"></em>
+                 <em class="font_magnify mrg_l_30 txtmiddle pointer" onclick="turnbig(document.getElementById('text_fix'))"></em>
+                 <em class="font_narrow mrg_l_30 txtmiddle pointer" onclick="turnsmall(document.getElementById('text_fix'))"></em>
+             </div>
+         </div>
+     </div>
+     <div class="wid1000 clearfix mrg_auto mrg_t_20" style="padding-bottom: 120px;">
+         <div class="left overhide" style="width: 660px;">
+             <div id="text_content">
+                 <div class="f16 lh34 mrg_t_25 f_222 text_fix" id="text_fix">
+                    <p>{新闻网内容}</p>
+                 </div>
+                 <!--分页开始-->
+                 <div class="clearfix mrg_auto txtcenter" style="width: 210px; text-align:center;margin:30px auto 0px;" id="paginationBtn">
+                     <div class="blank10"></div>
+                 </div>
+                 <!--分页结束-->
+                 <!-- 20160912 二维码 开始 -->
+                 <div class="blank10" style="clear:both;overflow: hidden; height:40px;"></div>
+                 <div style="width: 304px; margin: 0px auto;">
+                     <div style="width:104px; height:172px;background: url('static/image/news_txt_ewmhnr20160920.gif') no-repeat; float: left;">
+                     </div>
+                     <div style="width:104px; height:172px;background: url('static/image/news_txt_ewmjz20160920.gif') no-repeat; float: right;">
+                     </div>
+                 </div>
+                 <div class="blank10" style="clear:both;overflow: hidden; height:15px;"></div>
+                 <!-- 20160912 二维码 结束 -->
+                 <div class="clearfix mrg_t_45">
+                     <span class="right">责编： {人物名称}</span>
+                 </div>
+             </div>
+             <div style="height: 58px;line-height: 58px;width:628px;bottom:0;z-index:999;_height:43px;_padding-top: 15px;" class="bor_dedede pad_l_30 mrg_t_25 fixed bg_fff none" id="share_bottom">
+                 <em class="discuss_bg mrg_l_30 none txtmiddle " style="display:none;"></em>
+                 <span class="f_666 txtmiddle none">5034</span>
+                 <em class="favorites_bg mrg_l_30 txtmiddle pointer" onclick="AddFavorite(document.title,location.href)"></em>
+                 <em class="print_bg mrg_l_30 txtmiddle pointer" onclick="window.print()"></em>
+                 <em class="font_magnify mrg_l_30 txtmiddle pointer" onclick="turnbig(document.getElementById('text_fix'))"></em>
+                 <em class="font_narrow mrg_l_30 txtmiddle pointer" onclick="turnsmall(document.getElementById('text_fix'))"></em>
+             </div>
+             <!-- 评论 S -->
+             <div class="comment" id="comment"></div>
+             <!-- 评论 E -->
+             <h2 class="f_0087bd normal f18 bor_b_dedede lh32 mrg_t_20 clearfix">
+                 <a href="{泛站内链}" class="left">相关阅读</a>
+                 <span class="change f_999 f14 right txtmiddle pointer" id="change"><em></em>换一换</span>
+             </h2>
+             <div class="changeList">
+
+
+<ul class="">
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {关键词1}{标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                {句子}</p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">标题
+                {句子}</p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                {句子}</p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                {句子}</p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">标题
+                {句子}</p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                {句子}</p>
+        </li>
+</ul>
+<ul class="none">
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                </p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                {句子}</p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                {句子}</p>
+        </li>
+        <li class="bor_b_dedede pad_t_15 pad_b_15">
+            <h3 class="normal dot-ellipsis dot-height-48"><a href="{泛站内链}" class="f22 lh48"> {关键词1}{标题}</a></h3>
+            <p class="f_999 dot-ellipsis dot-height-28">
+                {句子}</p>
+        </li>
+</ul>             </div>
+
+         </div>
+         <!--公共右侧-->
+
+<!--
+ * @Description:
+ * @Version: 0.0.1
+ * @Company: hNdt
+ * @Author: xiaWang1024
+ * @Date: 2019-11-13 16:05:52
+ * @LastEditTime: 2019-11-13 16:19:43
+ -->
+<div class="right overhide" style="width: 300px;">
+    <h2 class="f_0087bd normal f18 bor_b_dedede lh32"><a href="{泛站内链}">慢新闻</a></h2>
+
+    <a href="{泛站内链}" class="mrg_t_20 block relative" style="*zoom:1;">
+<img src="{随机图片}" alt="{标题}" width="300" height="168">
+<span class="alpha60 absolute f_fff lh34 f16 overhide" style="bottom: 0;width: 290px;height: 35px;padding: 0 5px;">{标题}</span>
+</a>
+
+
+
+<div class="block mrg_t_20">
+    
+</div>
+<!--<h2 class="f_0087bd normal f18 bor_b_dedede lh32 mrg_t_20"><a href="/tjsp/page/1/20">推荐视频</a></h2>-->
+<h2 class="f_0087bd normal f18 bor_b_dedede lh32 mrg_t_20"><a href="{泛站内链}">大象陪办</a></h2>
+<ul class="f16 lh38 mrg_t_15 f_444">
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {关键词1}{标题}</a>
+</li>
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {标题}</a>
+</li>
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {标题}</a>
+</li>
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {标题}</a>
+</li>
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {标题}</a>
+</li>
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {标题}?</a>
+</li>
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {关键词1}{标题}</a>
+</li>
+<li>
+        <a href="{泛站内链}" target="_blank">
+            {标题}</a>
+</li>
+
+</ul>
+<!--<div class="block mrg_t_20">
+    <script language="javascript" type="text/javascript"
+            src="http://e.hnr.cn/choose/view/{ADF5C758-1109-DE21-979A-B97B28DADA1A}.js"></script>
+</div>-->
+
+         <div style="width:1000px; clear: both; overflow: hidden; padding-top: 10px; margin: 0px auto;">
+             <!-- <script language="javascript" type="text/javascript"
+                 src="http://e.hnr.cn/choose/view/{8738C78F-09FC-4C11-0AA7-971ECF9AA7F5}.js"></script> -->
+         </div>
+     </div>
+     <!-- 版权 S -->
+<style type="text/css">
+        #copy {
+            width: 100%;
+            padding: 26px 0px 18px 0px;
+            background: #f8f8f8 url(static/image/index_copy.gif) repeat-x;
+            clear: both;
+            line-height: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            width: 100%;
+            min-width: 1000px;
+            _width: expression((document.documentElement.clientWidth || document.body.clientWidth)<1000?"1000px":"");
+        }
+
+        #copy a:link,
+        #copy a:visited {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #copy a:hover {
+            color: #666;
+            text-decoration: underline;
+        }
+    </style>
+    <div class="" id="copy">
+        <div class="wid1000 mrg_auto">
+            <p>
+                <a href="{泛站内链}">网站简介</a> | <a href="{泛站内链}">版权声明</a> | <a href="{泛站内链}">广告服务</a> | <a href="{泛站内链}">联系方式</a> | <a href="{http://{当前域名}/sitemap.xml}">网站地图</a>
+            </p>
+            <p>Copyright &copy; {年} {域名库} Corporation,All Rights Reserved</p>
+            <p>{网站名称} 版权所有</p>
+        </div>
+    </div>    
+    
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+    <script src="/_/static/ow55_news/static/js/sensorsdata.min.js"></script>
+<script>
+    setTimeout(()=>{
+        var sensors = window['sensorsDataAnalytic201505'];
+        sensors.init({
+            sdk_url: 'https://res.hntv.tv/lib/sensorsdata/sensorsdata.min.js',
+            name: 'sensors',
+            server_url: 'https://behavior.hntv.tv/behavior/sa.gif?token=27f1e21b78daf376&project=hntv&clientId=bd4859dcd7b141eeb297e2f6b6333cec',
+            show_log: false,
+            heatmap: {
+                clickmap: 'default',
+                scroll_notice_map: 'default',
+                collect_url: true,
+                collect_input: false,
+                element_selector: 'not_use_id'
+            }
+        });
+        //当前页面能拿到稿件ID（比如正文页）
+        let articleId = "";
+        var startTime  = new Date().getTime(); //开始时间
+        // console.log(startTime,'startTime');
+        //记录页面停留时间
+        window.onbeforeunload  = function() {
+            //监听页面关闭
+            var countTime='';
+            var endTtime = new Date().getTime()
+            var time = endTtime - startTime
+            countTime = endTtime + time
+            // console.log(countTime,'countTime')
+            sensors.track('ViewArticleTime',{
+                articleId:articleId, //文章id
+                beginTime: startTime, //开始时间
+                endTime: countTime, //结束时间
+            })
+        }
+        if (articleId) {
+            sensors.track('ViewArticle',{
+                articleId: articleId
+            })
+        }
+        sensors.quick('autoTrack');
+    },3000)
+</script>     <!-- 版权 E -->
+     <script type="text/javascript">
+         $('#change').click(function () {
+             $('.changeList ul').each(function (index, item) {
+                 if ($(item).hasClass('none')) {
+                     $(item).removeClass('none')
+                 } else {
+                     $(item).addClass('none')
+                 }
+             })
+         })
+     </script>
+
+    <!--微信分享 开始-->
+<script src="/_/static/ow55_news/static/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript">
+  $(function () {
+      $.ajax({
+      type: "GET",
+      url: 'https://dxapi.hntv.tv/dxshare/wxconfig',
+      data:{
+        url:window.location.href
+      },
+      success: function (res) {
+        if (res.code == 0) {
+          let data = res.data;
+          wx.config({
+            debug: false,
+            appId: data.appId,
+            timestamp: data.timestamp,
+            nonceStr: data.nonceStr,
+            signature: data.signature,
+            jsApiList: [
+              "checkJsApi",
+              "onMenuShareTimeline",
+              "onMenuShareAppMessage",
+            ],
+          });
+          wxShare();
+        }
+      },
+      error: function (e) {
+        console.log(e);
+      },
+    });
+        function wxShare() {
+            var title = '风大！郑州多条路段护栏被“吹倒”，通行请小心！'
+            var description ='河南交通广播'
+            var link = window.location.href
+            var imgUrl = 'http://d1.hnr.cn/weixinshare/share-logo.png'
+            //检测api是否生效
+            wx.ready(function () {
+                wx.checkJsApi({
+                    jsApiList: ['getNetworkType', 'previewImage'],
+                    success: function (res) {
+                        console.log(JSON.stringify(res))
+                    },
+                })
+                //分享给好友
+                wx.onMenuShareAppMessage({
+                    title: title,
+                    desc: description,
+                    link: link,
+                    imgUrl: imgUrl,
+                })
+                //分享到朋友圈
+                wx.onMenuShareTimeline({
+                    title: title,
+                    desc: description,
+                    link: link,
+                    imgUrl: imgUrl,
+                })
+            })
+        }
+  });
+    </script>
+<script src="/_/static/ow55_news/static/js/sensorsdata.min.js"></script>
+  <script>
+    var sensors = window['sensorsDataAnalytic201505'];
+    sensors.init({
+      sdk_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.15.1/sensorsdata.min.js',
+      heatmap_url: 'https://cdn.jsdelivr.net/npm/sa-sdk-javascript@1.15.1/heatmap.min.js',
+      name: 'sensors',
+      server_url: 'https://behavior.hntv.tv/behavior/sa.gif?token=1427918398613422082&project=hntv&clientId=c60ca46e8f094225be1476131232b1e3',
+      show_log: true,
+      app_js_bridge: true,
+      heatmap: {
+        clickmap: 'default',
+        scroll_notice_map: 'default',
+        collect_url: true,
+        collect_input: false,
+        element_selector: 'not_use_id'
+      }
+    });
+    // 获取url
+    var url_str = window.location.href;
+    var url_tongji = new URL(url_str);
+    // 分割url
+    var url_array = url_tongji.pathname.split("/");
+    if (url_array && url_array.length != 0) {
+      var article_id_last = url_array[url_array.length - 1];
+      // 检测是否是正整数
+      if (article_id_last && article_id_last.match(/^[0-9]*[1-9][0-9]*$/)) {
+        console.log("匹配成功", article_id_last);
+        //当前页面能拿到稿件ID（比如正文页）
+        if (article_id_last && article_id_last != '') {
+          sensors.quick('autoTrack', {
+            article_id: article_id_last
+          })
+          sensors.track('ViewArticle', {
+            articleId: article_id_last
+          })
+        } else {
+          //当前页面无法拿到稿件ID（其他页面）
+          sensors.quick('autoTrack');
+        }
+      }else{
+        console.log("未匹配到数据2")
+      }
+
+    }else{
+      console.log("未匹配到数据1")
+    }
+  </script>    <!--微信分享 结束-->
+
+     <!-- 版权 E -->
+     <!--[if IE 6]>
+      <script src="http://static.hnr.cn/hnr/public/headerIE6.js" type="text/javascript"></script>
+      <script language="javascript" type="text/javascript">
+          DD_belatedPNG.fix(".pngImg,#pics,#picsRepeat,#links,#link:hover");
+      </script>
+      <![endif]-->
+      <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+      <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+      <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div> 
+ </body>
+
+ </html>

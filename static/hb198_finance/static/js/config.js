@@ -1,0 +1,1 @@
+var IMG_URL="http://img.qianlong.com/",UPLOAD_URL="http://upload.qianlong.com/",APP_URL="http://qlapp.qianlong.com/",WWW_URL="http://www.qianlong.com/",SPACE_URL="http://space.qianlong.com/",COOKIE_PRE="qianlongnet_",COOKIE_DOMAIN=".qianlong.com",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";

@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>        
+	<meta http-equiv="content-language" content="zh-cn">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">	
+	<title>{自定义标题}</title>
+	<meta name="keywords" content="{关键词1}" />
+	<meta name="description" content="{自定义描述}">
+	<link rel="stylesheet" type="text/css" href="/_/static/ow36_m.pikacn/static/css/tps.common.css">
+	<link href="/_/static/ow36_m.pikacn/static/css/index.css" rel="stylesheet" type="text/css">
+<link href="http://img.{随机字符}{随机数字}.com/skin/pkm.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/_/static/ow36_m.pikacn/static/js/two.js"></script>
+</head>
+
+<body>
+<header id="header">
+
+    <div class="sx"><a href="{泛站内链}" onclick="history.back()"></a></div>
+
+    <h1 class="logo_h1"><a href="{泛站内链}"></a></h1>
+
+    <span class="right"></span>
+
+</header>
+
+<div class="menu" style="height:auto; display: none;">
+
+	<h2 class="menu_feilei">分类导航 :</h2>
+
+	<ul>
+
+		
+
+		<li><a href="{泛站内链}">汽车动态</a></li>
+
+		
+
+		<li><a href="{泛站内链}">汽车问答</a></li>
+
+		
+
+		<li><a href="{泛站内链}">汽车新闻</a></li>
+
+		
+
+		<li><a href="{泛站内链}">汽车知识</a></li>
+
+		
+
+		<li><a href="{泛站内链}">生活平台</a></li>
+
+		
+
+    </ul>
+
+</div>
+
+<article class="cnn article-body">
+	<h2 class="cnntit"> {新闻网标题}</h2>
+	<div class="cnn_xt">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="cnn_sj">{随机数字}次浏览</div>
+		<div class="cnn_sj">{当前时间}</div>		
+	</div>
+	<div class="p_re art_aq_content" style="">
+
+<div class="cnnr artjs">
+    <p>　　{关键词1}{句子}</p>
+	<p><img alt="{关键词1}" border="0" id="30147141" src="{随机图片}"></p>
+<p>　　{句子}{关键词1}{句子}</p>
+<p><img alt="{关键词1}" border="0" id="30147143" src="{随机图片}"></p>
+<p>　　{句子}{关键词1}{句子}{句子}{关键词1}</p>
+<p><img alt="{关键词1}" border="0" id="30147145" src="{随机图片}"></p>
+<p>　　{句子}{关键词1}</p>
+
+</div> 
+
+<div class="fenye">
+        	<a href="{泛站内链}">上一篇</a>
+            <a href="{泛站内链}" class="hover">下一篇</a>
+        </div>
+
+</div>
+</article>
+<script src="/_/static/ow36_m.pikacn/static/js/jquery.min.js"></script>
+    <script>
+$(function(){ 
+   var a=$(".article-body").outerHeight(); 
+   var arr =document.location.pathname.split("/");
+   var arrLen =arr.length;
+   var styleEle='<style>'+
+					'.article-body{position:relative;height:1000px;overflow:hidden;}'+
+					'.packupbutton{position:absolute; left:0;bottom:0;width:100%;padding:16px 0; cursor:pointer;}'+
+					'.gradient{position:absolute;z-index:1;bottom:0;left:0;width:100%;height:100px;background-image: -webkit-linear-gradient(top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);background-image: linear-gradient(top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);}'+
+					'.openall{ position: absolute;z-index: 2;bottom: 0.8rem;left: 35%;width: 25%;padding: 0.1rem 0.2rem 0.1rem 0.4rem;margin: 0 auto;-webkit-border-radius: 18px;-moz-border-radius: 18px;border-radius: 18px;font-size: 14px;color: #2e67ca;text-align: center;border: 1px solid #2e67ca;background: #deeaff;}'+
+					'.arrowbox{display:inline-block;position:relative;width:14px;height:14px;margin:0 0 -4px 5px}'+
+					'.arrowbox b, .arrowbox i{position:absolute;left:0;top:0}'+
+					'.arrowbox b{width:14px;height:14px}'+
+					'.arrowbox .arrowa {top: 2px;border-top: 7px solid #2e67ca;}'+
+					'.arrowbox .arrowb{border-top: 7px solid #deeaff;}'+
+					'.arrowbox i{display:block;border-bottom:7px dashed transparent;border-left:7px dashed transparent;border-right:7px dashed transparent;overflow:hidden}'+
+				'</style>';
+   $("body").prepend(styleEle);
+   var b=$(".article-body").outerHeight();  
+   if(a>b && arr[arrLen-1].indexOf("_") < 0 ){
+	   
+	   $(".article-body").append('<div class="packupbutton"><div class="gradient"></div> <div class="openall">阅读全文<span class="arrowbox"><b><i class="arrowa"></i><i class="arrowb"></i></b></span></div></div>'); 
+	   $(".openall").on("click",function(){
+		 $(".article-body").animate({height:a},function(){$(".article-body").height('auto')});
+		 $(this).parent(".packupbutton").hide();
+	   })   
+	   
+    }else{
+		
+		 $(".article-body").css("height",'auto');	
+		
+	}
+			
+			
+})
+	</script>
+<script type="text/javascript">
+	//infogame1();
+</script>
+<script>two11();</script>
+
+<div class="zuixins">
+  <h2>相关推荐</h2>
+  <div class="zuixins_right">推荐</div>
+</div>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt="{关键词1}{标题}"></a></div>
+	<h2><a href="{泛站内链}"> {关键词1}{标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt=" {标题}"></a></div>
+	<h2><a href="{泛站内链}"> {标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	two12();
+</script>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt=" {标题}"></a></div>
+	<h2><a href="{泛站内链}"> {标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt=" {标题}"></a></div>
+	<h2><a href="{泛站内链}"> {标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	two13();
+</script>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt=" {标题}"></a></div>
+	<h2><a href="{泛站内链}"> {标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt=" {标题}"></a></div>
+	<h2><a href="{泛站内链}"> {标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	two14();
+</script>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt=" {标题}"></a></div>
+	<h2><a href="{泛站内链}"> {标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+<div class="news_cn">
+	<div class="imgs"><a href="{泛站内链}">
+		<img src="{随机图片}" alt=" {关键词1}{标题}"></a></div>
+	<h2><a href="{泛站内链}"> {关键词1}{标题}</a></h2>
+	<div class="sjpl" style="display: block; color: red;">
+		<div class="sjplVideo"><img src="{随机图片}" alt="{人物名称}"></div>
+		<div class="sjpl_left">{人物名称}</div>
+		<div class="sjpl_right">汽车动态</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	two15();
+</script>
+<script type="text/javascript">
+	two16();
+</script>
+<script type="text/javascript">
+	two17();
+</script>
+<script type="text/javascript">
+	//infogame6();
+</script>
+<div id="footer">
+
+  <div class="foot">
+
+    <div class="corp">CopyRight©{年} {网站名称} Right Reserved</div>
+
+    <div class="link">湘ICP备20001234号-2</div>
+
+  </div>
+
+</div>
+
+
+<script type="text/javascript" language="javascript" src="/_/static/ow36_m.pikacn/static/js/tps.pack.js"></script>	
+
+<script type="text/javascript" language="javascript" src="/_/static/ow36_m.pikacn/static/js/tps.slider.js"></script>
+
+<script type="text/javascript" language="javascript">
+
+$(function()
+
+{
+
+	$("#header span.right").on("click",function()
+
+	{
+
+        var val = $(this).attr('class');
+
+        if(val.indexOf('on') == -1)
+
+		{
+
+            $(this).addClass('on');
+
+            $(".menu").show(0).stop().animate
+
+			({
+
+                height:'auto'
+
+            },0);
+
+        }
+
+		else
+
+		{
+
+            $(this).removeClass('on');
+
+            $(".menu").hide(0).stop().animate
+
+			({
+
+                height:'auto'
+
+            },0);
+
+        }
+
+    });	
+
+	$(".menu a").on("click",function()
+
+	{
+
+        $(this).parents(".menu").hide();
+
+        $("#header span.right").removeClass('on');
+
+    });
+
+	if($("#slider-container"))
+
+	{
+
+		$("#slider-container").sliderUi
+
+		({
+
+			speed: 700,
+
+			cssEasing: "cubic-bezier(0.285, 1.015, 0.165, 1.000)"
+
+		});
+
+		$("#caption-slide").sliderUi
+
+		({
+
+			caption: true
+
+		});	
+
+	}
+
+})
+
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d479dc5914b7a62b5f6e7e52190ede03";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图
+</body>
+</html>

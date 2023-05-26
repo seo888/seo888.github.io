@@ -1,0 +1,1 @@
+uid=(arr=document.cookie.match(new RegExp("(^| )__statis=([^;]*)(;|$)")))?arr[2]:new Date().getTime();document.cookie="__statis="+uid+";max-age=31536000";document.writeln("<img src='http://statics.cn3x.com.cn/tj.gif?"+uid+"&rnd="+Math.random()+"' style='display: none;'>");

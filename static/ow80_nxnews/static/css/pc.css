@@ -1,0 +1,169 @@
+
+/* reset */
+html,body{height: 100%;}
+*{padding: 0;margin: 0;border: 0;font-style: normal;-webkit-tap-highlight-color: rgba(0,0,0,0);/*禁止链接高亮*/-webkit-touch-callout: none;/*禁止链接长按弹出选项菜单*/}
+nav, footer, section, header, article{display: block;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{color: #000;text-decoration:none;outline: none;}
+a:hover{ text-decoration:underline;}
+input,textarea,button{-moz-border-radius: 0px;-webkit-border-radius: 0px;border-radius: 0px;}
+.clear{ clear:both;}
+.clearfix{display:block; #zoom:1;/*ie6-ie7*/}
+.clearfix:after{content:''; overflow:hidden; width:100%; height:0px; font-size:0px; margin:0px; padding:0px; display:block; clear: both}
+.domPC,.domMobile{display: none;}
+/* 屏幕为IPAD */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+	#article{margin:0px!important;}
+	#aside,.adIframeLazy,#nc_icon{display:none!important;}
+}
+/*header*/
+#pcHeader{min-width: 768px;max-width: 100%; margin: 0 auto;border-bottom: 1px solid #1264a4; background:#146eba; height:35px; line-height:49px;}
+#pcHeader .con{min-width: 768px;max-width: 1000px;margin: 0 auto;}
+#pcHeader .nav {float:left;overflow: hidden;padding-top: 10px;}
+#pcHeader .nav a{ float:left;height:14px;line-height:14px;padding:0 8px;font-family:"宋体"; font-size:14px; color:#fff; border-right: 1px solid #045c98;border-left: 1px solid #108bbd;}
+#pcHeader .nav a.first{border-left: none;}
+#pcHeader .nav a.last{border-right: none;}
+/*#pcHeader .conR{ float:right; color:#fff;font-family:"宋体"; font-size:16px;}
+#pcHeader .conR a{float:left;height:35px;line-height:35px;color:#fff;font-size:16px;}
+#pcHeader .apply{height:35px;color:#fff;font-size:16px; float:left; display:inline; margin-right:15px;}
+#pcHeader .apply .applyDiv{ float:left; position:relative; }
+#pcHeader .apply .applyDiv ul{ position:absolute; left:0; top:50px; width:110px; border:1px solid #ccc; z-index:10; background:#fff; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius:5px; padding:5px; display:none;}
+#pcHeader .apply .applyDiv ul li{ border-bottom:1px dashed #ccc;}
+#pcHeader .apply .applyDiv ul li.last{ border-bottom:none;}
+#pcHeader .apply .applyDiv ul a{ float:none;height:45px; line-height:45px; padding-left:45px; display:block; background:url(imgs/xl_common_v2.png) no-repeat; color:#808080; font-size:14px; font-size:"宋体";}
+#pcHeader .apply .applyDiv .app1 a{ background-position:0 -542px; }
+#pcHeader .apply .applyDiv .app2 a{ background-position:0 -583px;}
+#pcHeader .apply .applyDiv .app3 a{ background-position:0 -625px; }
+#pcHeader .apply .applyDiv .app4 a{ background-position:0 -670px; }
+#pcHeader .apply .applyDiv .app5 a{ background-position:0 -715px; }
+#pcHeader .apply .btnMore{height:35px;line-height:35px;color:#fff;font-size:16px; float:left;padding-right:20px; background:url(imgs/xl_common_v2.png) 100% 7px no-repeat; display:inline; margin-right:15px;}
+#pcHeader .apply .on{color:#fe8e01; background:url(http://www.xinhuanet.com/2015/xilan/xl_common_v2.png) 100% -72px no-repeat;}*/
+/*centerHeader*/
+#headerTitle{background: #fafafa;border-bottom: 1px solid #e8e8e8; text-align: left;}
+/*articleTit*/
+#articleTit{ max-width:1000px;min-width:768px;margin: 0 auto;padding-top:20px;text-align: left;}
+#articleTit .crumbs{display: inline-block!important;width: 100%; margin-top:15px; margin-bottom:10px;}
+#articleTit .crumbs .search{ float:right; position:relative;}
+#articleTit .crumbs .search .ss { width:173px; height:33px; line-height:26px; border:none; padding:0 31px 0 10px ;background:url(http://www.nxnews.net/images/xl_common_v2.png) 0 0 no-repeat; color:#999;}
+#articleTit .crumbs .search .ss_submit { background:url(../image/space.gif); border:none; width:30px; height:30px; position:absolute; right:1px; top:1px; cursor:pointer; z-index:99; }
+#article h1{ float:none;clear:both;font-size: 26px;line-height:50px;padding:2px 0;font-weight:bold;text-align: left; font-weight:normal; font-family:"微软雅黑"}
+#articleTit .logo{ float:left;width:150px; height:40px;margin-left: 10px; background:url(http://www.nxnews.net/images/xl_common_v2.png) 0 -45px no-repeat; }
+#articleTit .curDiv{ float:left;height:40px;line-height:40px;font-size:14px; }
+#articleTit .curDiv span{ display: inline-block;}
+#articleTit .info .comment .line02 a { padding: 0px!important; }
+#article .info{padding: 5px 10px 0 10px;overflow: hidden;color:#8d8d8d; font-size:14px; clear:both;}
+#article .info span{display:inline-block;font-size: 14px;padding-right: 10px; color:#8d8d8d;}
+#article .info .source{ float:left; padding-top:5px;}
+#article .info i{ display:inline-block; padding-right:10px;}
+#article .info .comment{float:right;line-height:38px;height:38px;}
+#article .info .comment li{float:left;width: 34px;height: 38px;position: relative;margin-left: 5px;left:0px;overflow: hidden; }
+#article .info .comment .scrollDiv{width: 34px;height: 76px;position: absolute;left: 0px;top:0px;}
+#article .info .comment .bdsharebuttonbox{ float:left;}
+#article .info .comment .line01,#articleTit .info .comment .line02{ width: 34px;height: 38px;background:url(http://www.nxnews.net/images/xl_common_v2.png) no-repeat;cursor: pointer;}
+#article .info .comment a{ display: block; width:34px; height:37px; font-size:12px; text-align:center; line-height:30px; }
+#article .info .comment .pl .line01{ background-position:0px -100px; width:auto;}
+#article .info .comment .share .line01{ background-position:-34px -100px; width:auto;}
+#article .info .comment .fx .line01{ background-position:-36px -100px; margin:0;}
+#article .info .comment .sc .line01{ background-position:-70px -100px;}
+#article .info .comment .dy .line01{ background-position:-106px -100px;}
+#article .info .comment .fd .line01{ background-position:-140px -100px;}
+#article .info .comment .sx .line01{ background-position:-176px -100px;}
+#article .info .comment .line02,#articleTit .info .comment .line02 a{margin:0px;line-height:18px;font-size:16px;text-align:center;text-indent: 0px!important;color:#f96560;}
+#article .info .comment .line02{height:37px;}
+#article .info .comment .pl .line02{}
+#article .info .comment .pl .line02,#articleTit .info .comment .pl .line02 a{color: #80d65d;}
+#article .info .comment .share .line02{}
+#article .info .comment .share .line02 a{color: #f9665e;}
+#article .info .comment .dy .line02{}
+#article .info .comment .dy .line02 a{color: #5dc4f5;}
+#article .info .comment .fd .line02{}
+#article .info .comment .fd .line02 a{color: #fdb936;}
+#article .info .comment .sx .line02{}
+#article .info .comment .sx .line02 a{color: #408fc5;}
+#article .info .comment #wyhs{display: none!important;}
+#article .picLink{ text-align:right; color:#097cb3; font-size:12px; margin:0 auto; width:562px;}
+#article .picLink a{ font-size:12px; color:#097cb3;}
+.combox .title{ height:40px; line-height:40px; /*border-bottom:1px solid #d5d5d5;*/ margin-bottom:15px; color:#1381b6; position:relative; padding-left:100px;}
+.combox .title h3{ font-size:16px; font-family:"微软雅黑"; color:#383838; font-weight:bold; position:absolute; left:0; top:0; /*border-bottom:1px solid #ef0909;*/}
+.combox .title span{ margin-right:8px;}
+.combox .title span a{ font-size:12px; font-family:"宋体"; color:#929292; border:1px solid #dfdedc; padding:5px 10px;}
+.combox .title span a:hover{ background:#3096e8; color:#fff; text-decoration:none;}
+.comlist li{ position:relative; padding-left:15px; line-height:33px;}
+.comlist li i{ position:absolute; width:8px; height:8px; left:0; top:10px; background:url(http://www.nxnews.net/images/xl_common_v2.png) -213px -510px no-repeat;}
+.comlist li a{ font-size:16px; color:#303030;}
+.comlist li strong{ font-weight:bold;}
+/*视频*/
+#videoArea{ position:relative; text-align:center; width:562px; height:439px; margin:0 auto;}
+#videoArea img{ cursor:pointer;}
+#videoArea iframe{ position:absolute; left:0; top:0; width:100%; height:100%;  z-index:999;}
+/*热门推荐*/
+#popularNews { margin-bottom:35px;}
+#popularNews .left{ float:left; width:275px;}
+#popularNews .right{ float:right; width:380px;}
+/*相关阅读*/
+#relatedNews { margin-bottom:35px;}
+#relatedNews .tit1{ left:0; top:0; border:none; color:#6b6b6b; cursor:pointer;}
+#relatedNews .tit2{ left:120px; top:0; border:none; color:#6b6b6b; cursor:pointer;}
+#relatedNews .on{ border-bottom:1px solid #ef0909; color:#1381b6;}
+/*PC style layout*/
+#center{min-width: 768px;max-width: 1000px;margin: 0 auto;padding: 20px 0; position:relative;}
+#aside{width: 300px; float: right;margin-right: 10px;}
+#article{overflow: hidden; position:absolute; font-family:"宋体"; width:300px;}
+#towCode{width:100px;height:270px;position:fixed;top:320px;left:50%;margin-left:502px;}
+.ewm_fortune{background:url(../image/xh_cj_twoCode.jpg) no-repeat;}
+#towCode .closeBtn{height:20px;line-height:20px;position:absolute;left:0px;bottom:-20px;margin-left:10px;cursor:pointer;}
+
+/* article style */
+.article{padding: 10px;}
+.article,
+.article p{font-size: 16px;line-height: 35px;}
+.article p{margin-bottom: 10px;color: #393939;}
+.article p a{ font-size:16px; line-height: 35px;}
+.article p strong{ font-size:16px; font-weight:bold; line-height:35px;}
+.article p img{}
+/* share style */
+#share{height: 45px;padding: 0 10px;text-align: right;}
+#share .bdsharebuttonbox{display: inline-block;#display:inline;#zoom:1;}
+
+/* articleEdit style */
+#articleEdit{padding: 30px 0 10px;margin:0 10px 20px 10px;text-align: right;}
+#articleEdit .closeA,
+#articleEdit .printA,
+#articleEdit .editor{display:inline-block;height: 32px;line-height: 32px;}
+#articleEdit .editor{color:#999;}
+#articleEdit .xwApp{display:inline-block;height:18px;line-height:18px;position:relative;font-size:14px;color: #f96560;font-weight: bold;vertical-align: middle;}
+#articleEdit .xwApp i{display:inline-block;width:10px;height:18px;vertical-align: middle;margin-right:5px;background:#f7f7f7 url(http://www.nxnews.net/images/xl_common_v2.png) -170px -45px no-repeat;}
+#articleEdit .xwApp img{display:none;position:absolute;bottom:0px;left:-100px}
+#articleEdit .xwApp:hover img{display:block!important;}
+/* footer style */
+#footer{padding: 20px;border-top: 1px solid #dbdada;background: #303030;}
+#footer p{font-size:14px;line-height: 18px;text-align: center;color: #fff;font-family: "宋体";}
+
+/* returnTop style */
+#returnTop{width: 30px;height: 30px;background: url(../image/xh_cj_icon.png) no-repeat 0px 0px;position: fixed;right: 10px;bottom: 10px;display: none;}
+#nc_icon{ color:#fff;top: 320px;}
+#nc_icon:hover{ color:#333;}
+
+/* asideRight height set */
+
+/*#asideRight{height: 2980px!important;}*/
+#aside .info{height: 3120px!important;}
+#Xfuchaung iframe{ position:fixed; right:0; bottom:0; z-index:500;}
+/*二维码分享*/
+.yjfx{ position:absolute; left:-40px; top:35px; width:33px; height:100px; background:url(http://www.nxnews.net/images/xl_common_v2.png) -68px -494px no-repeat;}
+.yjfxImg{ position:fixed; left:50%; top:235px; width:100px; height:100px; margin-left:-610px; text-align:center; color:#8d8d8d; font-size:14px; line-height:14px;}
+.yjfxImg img{ width:100px; height:100px;}
+
+#videoArea{ margin-bottom:20px; display:none;}
+.domPC { display: block; }
+#wyhs_num { padding: 0px!important; font-size: 12px; color: #000; }
+/* ===纠错=== */
+.tiyi1 { position:relative; z-index:100; }
+.tiyi1 .tiyi01 { position:absolute; left:-445px; top:25px; background-color:#FFF; height:342px; width:600px; visibility:visible; }
+.tiyi1 .tiyi03 { position:absolute; left:570px; top:2px; background:url("../image/space.gif") 0 -131px no-repeat; width: 24px; height: 24px; }
+.tiyi1 .advise, .tiyi1 .advise2 { cursor:pointer; color:#8a0000 }
+.silderIframe{position:fixed;right:5px;top:200px;}
+
+/*翻页*/
+#div_currpage a,#div_currpage span{ display:inline-block; border:1px solid #ccc; background:#f9f9f9; font-size:14px; margin:5px 0px; padding:3px 8px; color:#000;}
+#div_currpage span.page-Article{ border:1px solid #146eba;}

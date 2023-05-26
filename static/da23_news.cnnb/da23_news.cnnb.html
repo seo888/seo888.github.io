@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=gb2312"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"> 
+  <meta name="author" content=""> 
+  <title>{描述}{关键词1}{辅助描述}{随机版本}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{标题}{标题}{句子}《{关键词1}》{句子}" />
+  <script>
+    function loadScript(url, callback){
+        var script = document.createElement ("script")
+        script.type = "text/javascript";
+        if (script.readyState){ //IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" || script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else { //Others
+            script.onload = function(){
+                callback();
+            };
+        }
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+    function addSheetFile(path){
+        var fileref = document.createElement("link")
+        fileref.rel = "stylesheet";
+        fileref.type = "text/css";
+        fileref.href = path;
+        fileref.media = "screen";
+        var headobj = document.getElementsByTagName('head')[0];
+        headobj.appendChild(fileref);
+    }
+    window.onload = function(){
+        var ua=navigator.userAgent.toLowerCase();
+        var bIsIphoneOs=ua.match(/iphone os/i)=="iphone os";
+        var bIsAndroid=ua.match(/android/i)=="android";
+        var bIsWM=ua.match(/windows mobile/i)=="windows mobile";
+        if(bIsIphoneOs||bIsAndroid||bIsWM){
+            addSheetFile('http://news.cnnb.com.cn/packages/2015/css/mobile/article.css');
+            addSheetFile('http://news.cnnb.com.cn/packages/2015/css/MPreview.mobile.css');
+            loadScript("http://news.cnnb.com.cn/packages/2015/js/jquery-2.1.4.min.js",function(){
+            loadScript("http://news.cnnb.com.cn/packages/2015/js/MPreview.mobile.min.js",function(){
+                    $('#pc,embed').remove();
+                    $('#mobile').css('display', 'block');
+                    $('a').each(function(index, el) {
+                        $(this).attr('target', '_self');
+                    });
+                    var w = $(document).width() * 0.9;
+                    var h = w * 2 / 3;
+                    if(typeof(video) != "undefined"){
+                        CKobject.embed('http://flash.cnnb.com.cn:8080/ckplayer6.7/ckplayer/ckplayer.swf','a1','ckplayer_a1',w,h,true,flashvars,video,params);
+                    }
+                    $(window).bind('orientationchange',function(e){
+                        window.location.reload();
+                    });
+                    // var data = [];
+                    var title  = '公示了!鄞州大道-福庆路（东钱湖段）快速路二期工程选址已定';
+                    var direction = 'left';
+                    var wrap = document.querySelector('#overlay');
+                    var elem = document.querySelectorAll('.contentArea img');
+                    $('.contentArea img').each(function(index, el) {
+                        $(this).removeAttr('style');
+                        $(this).removeAttr('height');
+                        // data.push($(this).attr('src'));
+                    });
+                    $("a").on('touch',function(e){
+                        var href = $(this).attr("href");
+                        var classname = $(this).attr("class");
+                        // alert(classname);
+                        if(classname == "gototop"){
+                            $('body,html').animate({scrollTop:0},1000);
+                        }else{
+                            window.location.href = href;
+                        }
+                    })
+                    for(var i = 0,len = elem.length;i < len;i++){
+                        elem[i].addEventListener('touch', function(e) {
+                            // e.preventDefault();
+                            wrap.className = wrap.className + ' in';
+                            var item = [];
+                            item.push(this.src);
+                            setTimeout(function() {
+                                MPreview({
+                                    data: item,
+                                    title: title,
+                                    direction: direction,
+                                    wrap: '#overlay',
+                                    init: function() {
+                                        // window.console && console.log('MPreview.mobile init');
+                                    },
+                                    close: function() {
+                                        wrap.className = wrap.className.replace(' in', '');
+                                    }
+                                });
+                            }, 400);
+                        });
+                    };
+                });
+            });
+        }else{
+            addSheetFile('http://news.cnnb.com.cn/packages/2020/css/moban.css');
+            loadScript("http://news.cnnb.com.cn/packages/2015/js/jquery-1.11.3.min.js",function(){
+                    $('#mobile').remove();
+                    $('#pc').css('display', 'block');
+                    $('a').each(function(index, el) {
+                        $(this).attr('target', '_blank');
+                    });
+                    $('#news_more_page_div_id a').each(function(index, el) {
+                        $(this).attr('target', '_self');
+                    });
+                    $('#Zoom img').each(function(index, el) {
+                        $(this).removeAttr('style');
+                        $(this).removeAttr('height');
+                    });
+            });
+        }
+    }
+</script> 
+ </head> 
+ <body> 
+  <style>
+    #pc,#mobile{display: none;}
+	#Zoom img{ margin:5px 0;}
+</style> 
+  <div id="pc"> 
+   <div id="topMenu"> 
+    <ul class="mainNav menu1"> 
+     <li><a href="{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li> 
+     <li class="dropdown"> <a href="{随机字符}/{随机字符}.html" rel="dropmenu1">新闻</a> 
+      <ul> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">头条</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">精彩图片</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">热点聚焦</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">国际</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">社会</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">文娱</a></li> 
+      </ul> </li> 
+     <li class="dropdown"> <a href="{随机字符}/{随机字符}.html" rel="dropmenu1">宁波</a> 
+      <ul> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html">时政&middot;经济</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html">民生&middot;城事</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html">突发&middot;现场</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html">科技&middot;教育</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html">文化&middot;体育</a></li> 
+      </ul> </li> 
+     <li class="dropdown edt"> <a href="{随机字符}/{随机字符}.html" rel="dropmenu1">{随机关键词}</a> 
+      <ul> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">书记留言箱</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">市长留言箱</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">部门回复精 选</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">小e追踪调查</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">e眼关注（视频）</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li> 
+      </ul> </li> 
+     <li class="dropdown"> <a href="{随机字符}/{随机字符}.html" rel="dropmenu1">论坛</a> 
+      <ul> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">民声热点</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">我要问政</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">风云楼市</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">人在旅途</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">摄影天地</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">情感驿站</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></li> 
+      </ul> </li> 
+     <li class="dropdown"> <a href="{随机字符}/{随机字符}.html" rel="dropmenu1">行业</a> 
+      <ul> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">云涌创业</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">经济</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">活动</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">求职</a></li> 
+      </ul> </li> 
+     <li class="dropdown"> <a href="{随机字符}/{随机字符}.html" rel="dropmenu1">视频</a> 
+      <ul> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">在线视听</a></li> 
+       <li class="dropNav"><a href="{随机字符}/{随机字符}.html" target="_blank">三哥演义</a></li> 
+      </ul> </li> 
+    </ul> 
+    <ul class="subNav"> 
+     <li><a href="{随机字符}/{随机字符}.html">搜索</a></li> 
+     <li style="color: #dddddd;">|</li> 
+     <li><a href="{随机字符}/{随机字符}.html">邮箱</a></li> 
+     <li style="color: #dddddd;">|</li> 
+     <li id="sc"><a href="{随机字符}/{随机字符}.html">收藏</a></li> 
+    </ul> 
+   </div> 
+   <div class="nextmenu"> 
+   
+    <p class="p1">新闻</p> 
+    <p class="p2">报料热线：{随机8数字}</p> 
+   </div> 
+   <div style="width: 1170px; margin: 0 auto;"> 
+    <div class="mainArea"> 
+     <div class="titleArea"> 
+      <div class="leftPart"> 
+       <div class="position">
+        <span> 您当前的位置 ： <a href="{随机字符}/{随机字符}.html">{关键词1}</a> &nbsp;&gt;&nbsp; <a href="{随机字符}/{随机字符}.html">新闻中心</a> &nbsp;&gt;&nbsp; <a href="{随机字符}/{随机字符}.html">宁波</a> &nbsp;&gt;&nbsp; <a href="{随机字符}/{随机字符}.html">民生·城事</a> </span>
+       </div> 
+       <div style="width:790px; height:2px; background-color:#468dcc;float:left;"></div> 
+      </div> 
+      <div class="heading" style="padding: 28px 0 10px;">
+        {新闻网标题}
+      </div> 
+      <div class="subhead" style="height: 22px;float: left;font-size: 20px;line-height: 22px;padding-bottom: 28px;color:#666666;"></div> 
+      <div class="source"> 
+       <span class="left"> {当前时间}</span> 
+       <span class="left">稿源： {关键词1} 　</span> 
+       <div class="tool"> 
+        <div class="fontSize"> 
+         <a onclick="doZoom(18)"><img src="/static/da23_news.cnnb/images/1_14.jpg"></a> 
+         <a onclick="doZoom(16)"><img src="/static/da23_news.cnnb/images/1_15.jpg"></a> 
+         <a onclick="doZoom(14)"><img src="/static/da23_news.cnnb/images/1_16.png"></a> 
+        </div> 
+        <script type="text/javascript">
+                        function doZoom(size) {
+                            var zoom = document.all ? document.all['Zoom'] : document.getElementById('Zoom');
+                            zoom.style.fontSize = size + 'px';
+                        }
+						sc.onclick = function(){
+							alert("请使用组合快捷键'Ctrl+D'添加");
+						}
+                    </script> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="contentArea"> 
+      <div class="leftPart"> 
+       <div class="article"> 
+        <center id="topic"> 
+        </center> 
+        <div id="Zoom">
+         <p style="text-align:left"><strong>　　{关键词1}记者 {人物名称}</strong></p> 
+         <p style="text-align:left">{新闻网内容}</p> 
+        </div> 
+        <p class="right"><b>编辑：</b> {人物名称}<span class="right" style="color:rgb(110,110,110);font-size:14px;padding-left: 30px;">纠错：<a href="{随机字符}/{随机字符}.html" target="_blank" style="text-decoration: underline;padding-right:5px;">{当前主域名}</a></span></p> 
+        <p class="clearfix"></p> 
+       </div> 
+       <div> 
+        <!--<a href="{随机字符}/{随机字符}.html" target="_blank"><img src="http://www.cnnb.com.cn/pic/0/04/16/04/4160461_914457.gif" width="650" height="40"></a>--> 
+       </div> 
+       <div class="picnewsArea"> 
+        <ul> 
+         <li><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"><p>{标题}</p></a></li> 
+         <li><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"><p>{标题}</p></a></li> 
+         <li><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"><p>{标题}</p></a></li> 
+        </ul> 
+       </div> 
+       <div class="picline"> 
+        <ul> 
+         <li><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"><p>{标题}</p></a></li> 
+         <li><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"><p>{标题}</p></a></li> 
+         <li><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"><p>{标题}</p></a></li> 
+         <li><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"><p>{标题}</p></a></li> 
+        </ul> 
+       </div> 
+       <div class="quickLink"> 
+        <div class="link">
+         <a href="{随机字符}/{随机字符}.html">{关键词1}首页</a>
+        </div> 
+        <div class="link">
+         <a href="{随机字符}/{随机字符}.html">新闻中心首页</a>
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="rightPart"> 
+     <style media="screen">
+                    .ovh{overflow: hidden;}
+                    li.withPic {height: 72px;margin: 20px 0;}
+                    li.withPic img {float: left;margin-right: 10px;width: 90pt;height: 72px;}
+                    li.withPic .content {float: left;width: 175px;}
+                    p.date {font-family: "Arial";padding-top: 5px;font-size: 12px;color: #999;}
+                    ul.items li {height: 30px;overflow: hidden;}
+                    ul.items li a {font-size: 14px;color: rgb(57, 57, 57);line-height: 1.5em;white-space: nowrap;font-family: 'MicroSoft YaHei',"微软雅黑";}
+                </style> 
+     <div class="rightPart"> 
+      <div class="section-01 ovh"> 
+       <div class="module" style="border-bottom: 2px #468dcc solid;">
+        <span class="orangle">24小时</span>新闻点击榜
+       </div> 
+       <style>
+							li.withPic .content{
+								white-space: pre-line;
+								line-height: 20px;
+							}
+						</style> 
+       <ul> 
+        <li class="withPic"> <a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"></a> 
+         <div class="content"> 
+          <p class="title"><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a></p> 
+          <!--<p class='date'>2023-02-06 06:55</p>--> 
+         </div> </li> 
+        <li class="withPic"> <a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"></a> 
+         <div class="content"> 
+          <p class="title"><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a></p> 
+          <!--<p class='date'>2023-02-06 07:00</p>--> 
+         </div> </li> 
+        <li class="withPic"> <a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}"><img src="{随机图片}" alt="{标题}"></a> 
+         <div class="content"> 
+          <p class="title"><a href="{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a></p> 
+          <!--<p class='date'>2023-02-06 07:04</p>--> 
+         </div> </li> 
+       </ul> 
+       <ul> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+       </ul> 
+      </div> 
+      <div class="section-01 ovh" style="padding-top: 27px;"> 
+       <div class="module">
+        <a href="{随机字符}/{随机字符}.html"><span class="orangle">本地</span>看点</a>
+       </div> 
+       <ul> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       </ul> 
+      </div> 
+      <div class="section-01" style="padding-top: 17px;"> 
+       <div class="headl">
+        <a href="{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a>/
+        <a href="{随机字符}/{随机字符}.html" target="_blank">甬城晨笔</a>
+       </div> 
+       <ul style="border-bottom: dashed 1px #d8d8d8; padding-bottom: 10px;"> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+       </ul> 
+       <ul> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+         <li><a href=".*?" target="_blank" title="{标题}">{标题}</a></li> 
+       </ul> 
+      </div> 
+      <ul class="mhj"> 
+       <li style="float: left;"> <a href="{随机字符}/{随机字符}.html" target="_blank" title="{随机关键词}"><img src="{随机图片}" alt="还钱难"><p>{随机关键词}</p></a> </li> 
+       <li style="float: right;"> <a href="{随机字符}/{随机字符}.html" target="_blank" title="{随机关键词}"><img src="{随机图片}" alt="报喜"><p>{随机关键词} </p></a> </li> 
+      </ul> 
+      <div class="section-01" style="display: none;"> 
+       <div class="headl">
+        <a href="{随机字符}/{随机字符}.html" target="_blank">茶座</a>/
+        <a href="{随机字符}/{随机字符}.html" target="_blank">文摘</a>
+       </div> 
+       <ul style="border-bottom: dashed 1px #d8d8d8; padding-bottom: 10px;"> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       </ul> 
+       <ul> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+        <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="foot"> 
+     <p>{关键词1}（{随机关键词}）版权所有(C)</p> 
+     <p>Copyright(C) 2001-2023 {当前主域名} All Rights Reserved</p> 
+     <p>互联网新闻信息服务许可证：{随机9数字} 信息网络传播视听节目许可证：1104076</p> 
+     <p>违法和不良信息举报电话：{随机7数字}　举报邮箱：{当前主域名}</p> 
+    </div> 
+   </div> 
+  </div> 
+  <div id="mobile"> 
+   <div id="header"> 
+    <div class="">
+     <a href="{随机字符}/{随机字符}.html" style="display:block;height:100%;"></a>
+    </div> 
+    <div class="channel left">
+     <a href="{随机字符}/{随机字符}.html" style="color:#fff;">看天下</a>
+    </div> 
+    <div class="channel left" style="border:none;">
+     <a href="{随机字符}/{随机字符}.html" style="color:#fff;">看宁波</a>
+    </div> 
+    <ul class="menu"> 
+     <!-- <li><a href=""><img src="images/mobile/03.png" alt="" /></a></li> --> 
+     <!-- <li><a href="#"><img src="images/mobile/04.png" /></a></li> --> 
+    </ul> 
+   </div> 
+   <div class="newsArea"> 
+    <div class="newsTitle"> 
+     <p class="title">{新闻网标题}</p> 
+     <p class="subtitle"></p> 
+     <p><span class="source">稿源： {关键词1} </span> <span class="time">{当前时间}</span></p> 
+    </div> 
+    <div class="contentArea"> 
+     <p style="text-align:left"><strong>{新闻网内容}</strong></p> 
+     <p style="width: 100%;text-align: left;">编辑： {人物名称}</p> 
+     <p style="width: 100%;text-align: right;font-size: 14px;color: rgb(110,110,110);">纠错<a href="{随机字符}/{随机字符}.html" target="_blank" style="color:rgb(110,110,110);">：{当前主域名}</a></p> 
+     <div style="margin-top:10px;"> 
+      <h2 class="gdkd usu"></h2> 
+      <ul class="newslist-01" style="border-top: 1px #eaeaea solid;"> 
+       <li style="overflow: hidden;"> 
+        <div style="float: left;width: 70%;height: 100%;overflow: hidden;text-align:justify;"> 
+         <a href="{随机字符}/{随机字符}.html"><p style="margin:0;line-height: 1.4em;">{标题}</p></a> 
+        </div> 
+        <div style="float: right;height: 10%;width:25%;overflow: hidden;"> 
+         <a href="{随机字符}/{随机字符}.html"><img src="images/00300876798_i1000200000135be_7ddc24ff.jpg"></a> 
+        </div> </li> 
+       <li style="overflow: hidden;"> 
+        <div style="float: left;width: 70%;height: 100%;overflow: hidden;text-align:justify;"> 
+         <a href="{随机字符}/{随机字符}.html"><p style="margin:0;line-height: 1.4em;">{标题}</p></a> 
+        </div> 
+        <div style="float: right;height: 10%;width:25%;overflow: hidden;"> 
+         <a href="{随机字符}/{随机字符}.html"><img src="images/00300876797_3c8fb459.jpg"></a> 
+        </div> </li> 
+       <li style="overflow: hidden;"> 
+        <div style="float: left;width: 70%;height: 100%;overflow: hidden;text-align:justify;"> 
+         <a href="{随机字符}/{随机字符}.html"><p style="margin:0;line-height: 1.4em;">{标题}</p></a> 
+        </div> 
+        <div style="float: right;height: 10%;width:25%;overflow: hidden;"> 
+         <a href="{随机字符}/{随机字符}.html"><img src="images/00300876789_4bceb023.jpg"></a> 
+        </div> </li> 
+       <li style="overflow: hidden;"> 
+        <div style="float: left;width: 70%;height: 100%;overflow: hidden;text-align:justify;"> 
+         <a href="{随机字符}/{随机字符}.html"><p style="margin:0;line-height: 1.4em;">{标题}</p></a> 
+        </div> 
+        <div style="float: right;height: 10%;width:25%;overflow: hidden;"> 
+         <a href="{随机字符}/{随机字符}.html"><img src="images/00300876784_c61f2bd7.jpg"></a> 
+        </div> </li> 
+      </ul> 
+     </div> 
+     <div> 
+      <h2 class="jxyd usu"></h2> 
+      <ul class="lajiduo"> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li>
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+      </ul> 
+     </div> 
+     <div> 
+      <h2 class="tfh usu"></h2> 
+      <ul class="lajiduo"> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+       <li> <a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a> </li> 
+      </ul> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="link-01">
+    <a href="{随机字符}/{随机字符}.html">回首页</a>
+    <a class="gototop">回顶部</a>
+   </div> 
+   <div class="footer"> 
+    <p style="font-size:14px">{关键词1}版权所有</p> 
+    <p style="font-size:12px;">Copyright(C) 2001-2023 {当前主域名}　All Rights Reserved</p> 
+   </div> 
+   <style>
+        .overlay { background: #000; width: 100%; height: 100%; overflow: hidden; position: fixed; top: 0; left: 0; z-index: 999999;
+            -webkit-transition: all 300ms ease-in 0s;
+                    transition: all 300ms ease-in 0s;
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+            -webkit-transform: translate3d(100%, 0px, 0px); 
+                transform: translate3d(100%, 0px, 0px);
+        }
+        .overlay.in { 
+            -webkit-transform: translate3d(0px, 0px, 0px); 
+                    transform: translate3d(0px, 0px, 0px);
+        }
+		.lajiduo{}
+        .lajiduo li{line-height: 1.4em;}
+        .lajiduo li a{text-overflow: ellipsis;white-space: nowrap;width: 100%;display: inline-block;overflow: hidden;font-size: 0.9em;color: rgb(110,110,100);}
+        .usu{margin:0;height:40px;overflow:hidden;color:#129bf0;line-height: 40px;font-size: 1.2em;}
+        .jxyd{}
+        .jxyd::after{content: '继续阅读';}
+		.gdkd::after{content: '更多看点';}
+        .tfh{background-size: contain;}
+        .tfh::after{content: '24小时排行';background-color: white;padding-right: 10px;}
+     .newslist-01 li {
+        font-size: 0.9em;
+		color:rgb(110,110,110);
+        border-bottom: 1px #eaeaea solid;
+        padding: 10px 0;
+    }
+    </style> 
+   <div class="overlay" id="overlay"></div> 
+  </div> 
+  <div style="display:none"> 
+   <script type="text/javascript">
+        document.write(unescape("%3Cscript src='http://webd.cnnb.com.cn/webdig.js?z=5' type='text/javascript'%3E%3C/script%3E"));
+    </script> 
+   <script type="text/javascript">
+        wd_paramtracker("_wdxid=010010010011004000000000011100000030454330")
+    </script> 
+   <script src="/static/da23_news.cnnb/js/online_calc.js"></script> 
+  </div>   
+  <!--ecms sync check [sync_thread_id="3bcee7cc5a424330844ab778a62d31c1" sync_date="2023-02-15 22:02:46" check_sum="3bcee7cc5a424330844ab778a62d31c1]-->
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+ </body>
+</html>

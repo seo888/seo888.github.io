@@ -1,0 +1,1 @@
+var DTPath = "https://www.530311.com/";var DTMob = "https://m.530311.com/";var SKPath = "https://www.530311.com/skin/default/";var MEPath = "https://www.530311.com/member/";var DTEditor = "ueditor";var CKDomain = "";var CKPath = "/";var CKPrex = "c6g_";

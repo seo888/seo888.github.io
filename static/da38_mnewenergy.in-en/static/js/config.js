@@ -1,0 +1,1 @@
+var DTPath = "https://www.in-en.com/";var DTMob = "https://m.in-en.com/";var SKPath = "https://www.in-en.com/skin/inencom/";var MEPath = "https://www.in-en.com/member/";var DTEditor = "fckeditor";var CKDomain = ".in-en.com";var CKPath = "/";var CKPrex = "Dnm_";

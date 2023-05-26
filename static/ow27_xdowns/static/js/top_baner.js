@@ -1,0 +1,3 @@
+//顶部通栏
+//var cpro_id="u3149320";(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"1180",rsi1:"90",pat:"6",tn:"baiduCustNativeAD",rss1:"#ffffff",conBW:"1",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#555555",titSU:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"};
+//document.writeln("<script type=\'text/javascript\' src=\'//cpro.baidustatic.com/cpro/ui/c.js\'></script>");

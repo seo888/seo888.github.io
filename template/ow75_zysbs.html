@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="renderer" content="webkit">
+
+<title>{自定义标题}</title>
+
+<meta name="keywords" content="{关键词1}" />
+
+<meta name="description" content="{自定义描述}">
+
+<link rel="shortcut icon" href="https://www.zysbs.cn/favicon.ico">
+
+<link href="/_/static/ow75_zysbs/static/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="/_/static/ow75_zysbs/static/css/list.css" rel="stylesheet">
+
+<link href="/_/static/ow75_zysbs/static/css/video-js.css" rel="stylesheet">
+
+<script src="/_/static/ow75_zysbs/static/js/jquery.min2.js"></script>
+
+<script type="text/javascript">
+
+//移动终端判断 true 移动终端 false否
+
+var idx="";
+
+var u=navigator.userAgent;
+
+if(!!u.match(/AppleWebKit.*Mobile.*/)==false && u.indexOf('Android') == -1 && u.indexOf('iPhone') ==-1 && u.indexOf('iPad')==-1){
+
+		  $(document).ready(function(){
+
+			  $(".navbar02").show();
+
+			  $(".footer2").hide();
+
+			  $(".footer").show();
+
+			
+
+		});
+
+        }else{
+
+            var reqUrl=location.href;
+
+            idx=reqUrl.indexOf('mobile');
+
+           if(idx=='-1'){
+
+			 $(document).ready(function(){
+
+			 	$("#daohang").show();
+
+				$(".navbar03").show();
+
+				$(".footer").hide();
+
+				$(".footer2").show();
+
+				$(".carousel-inner").css({"height":$(window).height()/3});
+
+				$(".carousel-inner>.item>a>img").css({"height":$(window).height()/3});
+
+				$(".carousel-inner>.item>img").css({"height":$(window).height()/3});
+				
+				$(".content img").css({"width":$(window).width()/1.1});
+				
+
+				//隐藏代码
+
+				
+
+			});
+
+           }
+
+        }
+
+
+
+ </script>
+
+<!-- If you'd like to support IE8 -->
+
+<style type="text/css">
+
+/*html5*/
+
+        article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+
+	display:block;
+
+}
+
+.videos_container {
+
+	width:100%;
+
+}
+
+</style>
+
+<script language="javascript">function T(n){document.getElementById("ArticleCnt").style.fontSize=n+"px";}</script>
+
+</head><body>
+
+<div class="navbar" id="daohang" style="display:none;">
+
+  <div class="container"> <a class="logosmall" href="#"><img src="/_/static/ow75_zysbs/static/picture/logosmall.png"></a>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--logo-->
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-5 logo"><a href="#"><img src="/_/static/ow75_zysbs/static/picture/logo.png" alt="{网站名称}" title="{网站名称}"></a></div>
+
+    <div class="col-md-7 topicons"> 
+    <!--<div class="col-md-7 topicons"> <a class="weixin">微信<img class="wxewm" src="https://www.zysbs.cn/statics/images/zysbs/wxewm.png"></a>-->
+
+      <!--<div class="dropdown-menu searchbox" aria-labelledby="dLabelsou">
+
+        <div class="search">
+
+          <div class="tab" id="search"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" onClick="setmodel(1, $(this));" style="outline:medium none;" hidefocus="true"  class="on" >搜新闻</a> </div>
+
+          <div class="bd">
+
+            <form action="#" method="get" target="_blank">
+
+              <input type="hidden" name="m" value="search"/>
+
+              <input type="hidden" name="c" value="index"/>
+
+              <input type="hidden" name="a" value="init"/>
+
+              <input type="hidden" name="typeid" value="" id="typeid"/>
+
+              <input type="hidden" name="siteid" value="1" id="siteid"/>
+
+              <input type="text" class="text" name="q" id="q"/>
+
+              <input type="submit" value="搜 索" class="button" />
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>-->
+
+      <div class="contactus">
+          <img src="/_/static/ow75_zysbs/static/picture/tel.png">
+          <img src="/_/static/ow75_zysbs/static/picture/emall.png">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--//logo--> 
+
+<!--nav02--> 
+
+<!--pc导航-->
+
+<div class="navbar02" style="display:none;">
+
+  <div class="container"> 
+    <div class="row"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">高层</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">国内</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">国际</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">社会</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">中原</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">娱乐</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">国防</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">政法</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">廉政</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">消费</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">房产</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">汽车</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">教育</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">卫生</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">旅游</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">财经</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">体育</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">原创</a>  </div>
+
+     </div>
+
+</div>
+
+<!--手机导航-->
+
+<div class="navbar03" style="display:none;">
+
+  <div class="container"> 
+    <div class="row"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">高层</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">国内</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">国际</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">社会</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">中原</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">娱乐</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">国防</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">政法</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">廉政</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">消费</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">房产</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">汽车</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">教育</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">卫生</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">旅游</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">财经</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">体育</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html">原创</a>  </div>
+
+     </div>
+
+</div>
+
+<!--//nav02-->
+<div class="container rmxw-info">
+
+  <div class="row">
+
+    <div class="crumbs"><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a><span> &gt; </span><a href="/{随机字符}/{随机数字}_{随机数字}.html">国内</a> >  正文</div>
+
+    <h1 class="zhengbiaoti">{关键词1}{随机后缀}{新闻网标题}</h1>
+
+    <div class="pagerexw-ly">
+
+      <p><span>来源：{网站名称}</span><span>发布时间：{当前时间} </span></p>
+
+      <div class="bdsharebuttonbox">
+
+      <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_more" data-cmd="more"></a>
+
+      <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+      <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+     <!-- <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>-->
+
+      <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">
+
+      </a><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="bds_people" data-cmd="people" title="分享到人民微博"></a></div>
+
+    </div>
+
+    <div class="col-md-9" style="margin-bottom:50px;">
+
+      <div id="Article">
+
+        <div style="display:none"></div>
+
+        <div class="content">
+
+          <p>{新闻网内容}</p>
+
+
+        </div>
+
+        <div id="pages" class="text-c"></div>
+
+
+        <div class="related">
+
+        
+          <h5 class="blue">延伸阅读：</h5>
+
+          <ul class="list blue lh24 f14">
+
+             
+          </ul>
+
+          
+        </div>
+
+        <div class="bk15"></div>
+
+      </div>
+
+    </div>
+
+    
+
+    <!--right-->
+
+    <div class="col-md-3 indexright">
+
+      <div class="smallad">
+
+      
+      
+      
+      <a href="" target="_blank"><img src="{随机图片}" alt="" width="250" height="192">
+
+      
+    
+      </a></div>
+
+      <div class="lmtex2">
+
+        <h3>热点话题</h3>
+
+      </div>
+
+      <script>  
+
+        $(function () {  
+
+            $("#tabs1 a").mousemove(function (e) {  
+
+                $(this).tab('show');  
+
+            });
+
+        });  
+
+    </script>
+
+      <div role="tablist" id="tabs1"> </div>
+
+      <div class="clearfix"></div>
+
+      
+      <div class="tab-content">
+
+        <ul role="tabpanel" class="tab-pane active phxh" id="home">
+
+        
+        </ul>
+
+      </div>
+
+      
+      <div class="line"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+
+	function show_ajax(obj) {
+		var keywords = $(obj).text();
+		var offset = $(obj).offset();
+		var jsonitem = '';
+		$.getJSON("https://www.zysbs.cn/index.php?m=content&c=index&a=json_list&type=keyword&modelid=1&id=191803&keywords="+encodeURIComponent(keywords),
+				function(data){
+				var j = 1;
+				var string = "<div class='point key-float'><div style='position:relative'><div class='arro'></div>";
+				string += "<a href='JavaScript:;' onclick='$(this).parent().parent().remove();' hidefocus='true' class='close'><span>关闭</span></a><div class='contents f12'>";
+				if(data!=0) {
+				  $.each(data, function(i,item){
+					j = i+1;
+					jsonitem += "<a href='"+item.url+"' target='_blank'>"+j+"、"+item.title+"</a><BR>";
+					
+				  });
+					string += jsonitem;
+				} else {
+					string += '没有找到相关的信息！';
+				}
+					string += "</div><span class='o1'></span><span class='o2'></span><span class='o3'></span><span class='o4'></span></div></div>";		
+					$(obj).after(string);
+					$('.key-float').mouseover(
+						function (){
+							$(this).siblings().css({"z-index":0})
+							$(this).css({"z-index":1001});
+						}
+					)
+					$(obj).next().css({ "left": +offset.left-100, "top": +offset.top+$(obj).height()+12});
+				});
+	}
+
+	function add_favorite(title) {
+		$.getJSON('https://www.zysbs.cn/api.php?op=add_favorite&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+			if(data.status==1)	{
+				$("#favorite").html('收藏成功');
+			} else {
+				alert('请登录');
+			}
+		});
+	}
+
+$(function(){
+  $('#Article .content img').LoadImage(true, 660, 660,'https://www.zysbs.cn/statics/images/s_nopic.gif');    
+})
+//-->
+</script>
+
+<script language="JavaScript" src="https://www.zysbs.cn/api.php?op=count&id=191803&modelid=1"></script>
+
+<div class="footer">
+
+  <p> 
+   <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/ow75_zysbs/static/picture/foot_blxx.png"></a> 
+   <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/ow75_zysbs/static/picture/foot_blxxjb.jpg"></a> 
+   <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/_/static/ow75_zysbs/static/picture/foot_hlxjb.jpg"></a>
+  </p>
+
+  <p>冀公网安备 13040302001135号 互联网新闻信息服务许可证编号：13120180023 </p>
+
+  <p>12300电信用户申诉受理中心 12318全国文化市场举报网站 </p>
+
+  <p><a href="/{随机字符}/{随机数字}_{随机数字}.html">冀ICP备18004470号</a> {网站名称} 版权所有，未经书面授权禁止使用</p>
+
+  <p><a href="/{随机字符}/{随机数字}_{随机数字}.html">网站简介</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html">广告服务</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html">免责申明</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html">招聘信息</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html">联系我们</a></p>
+
+  <p>©{年}{网站名称}版权所有</p>
+
+</div>
+
+<div class="footer2">
+
+  <p>©{网站名称}版权所有</p>
+
+</div>
+
+<script src="/_/static/ow75_zysbs/static/js/bootstrap.min.js"></script> 
+
+<script src="/_/static/ow75_zysbs/static/js/jquery.liMarquee.js"></script> 
+
+<script>
+
+	$(window).load(function(){
+
+		$('.str3-2').liMarquee();
+
+		$('.str4').liMarquee();
+
+	});
+
+
+
+	</script> 
+
+<script>
+
+(function(){
+
+    var bp = document.createElement('script');
+
+    var curProtocol = window.location.protocol.split(':')[0];
+
+    if (curProtocol === 'https') {
+
+        bp.src = 'https://www.zysbs.cn/statics/js/zysbs/push.js';        
+
+    }
+
+    else {
+
+        bp.src = 'https://www.zysbs.cn/statics/js/zysbs/push.js';
+
+    }
+
+    var s = document.getElementsByTagName("script")[0];
+
+    s.parentNode.insertBefore(bp, s);
+
+})();
+
+</script>
+
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+
+</body>
+
+</html>

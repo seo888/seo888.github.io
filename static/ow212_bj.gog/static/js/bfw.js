@@ -1,0 +1,1 @@
+document.write('<script type="text/javascript" src="https://stat.gog.cn/stat/bfw?r=' + encodeURI(document.referrer) + '"></script>');

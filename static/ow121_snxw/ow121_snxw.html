@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- 在IE运行最新的渲染模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+    <link rel="icon" href="https://xmimg.snxw.com/site/1/pc/suining/images/favicon.ico" type="img/x-ico">
+    <title>{自定义标题}</title>
+
+    <!-- 指定360使用webkit引擎渲染 -->
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="/static/ow121_snxw/static/css/new-index_1.css">
+
+    <script src="/static/ow121_snxw/static/js/hm.js"></script><script type="text/javascript" src="/static/ow121_snxw/static/js/jquery-3.5.0.js"></script>
+    <script type="text/javascript" src="/static/ow121_snxw/static/js/jquery-migrate-3.4.0.min.js"></script>
+    <script type="text/javascript" src="/static/ow121_snxw/static/js/ckplayer.js"></script>
+    <script type="text/javascript" src="/static/ow121_snxw/static/js/new-main_2.js"></script>
+    <script type="text/javascript" src="/static/ow121_snxw/static/js/carousel_2.js"></script>
+
+    <script type="text/javascript">
+		browserRedirect();
+        function browserRedirect() {
+            var id = "856658"
+            var url = "https://xmapp.snxw.com/";
+            if (/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase())) {
+                //跳转移动端页面
+                console.log('移动')
+                window.location.href= url+"wap/article/index/"+id ;
+            } else {
+                //跳转pc端页面
+            }
+        }
+       
+    </script>
+
+    <style>
+        .yc {display:none;}
+        .new-footlink ul li a:hover {
+            color: #d62d1d;
+        }
+        .new-nav h1 a:hover {
+            color: #d62d1d;
+        }
+        .new-nav h1 a {
+            color: #fff;
+        }
+        .new-nav ul li a:hover {
+            color: #d62d1d;
+        }
+        .new-nav {
+            height: 70px;
+            line-height: 70px;
+            margin: 0 auto;
+            margin-top: 12px;
+
+        }
+        #font p video{
+            width: 600px;
+        }
+    </style>
+    <script src="/static/ow121_snxw/static/js/share.js"></script>
+    <link rel="stylesheet" href="/static/ow121_snxw/static/css/share_style0_24.css">
+</head>
+<body class="new-body">
+<!-- 头部第一排 -->
+<script language="javascript">
+    //加入收藏
+    function AddFavorite(sURL, sTitle) {
+
+        sURL = encodeURI(sURL);
+
+        try {
+
+            window.external.addFavorite(sURL, sTitle);
+
+        } catch (e) {
+
+            try {
+
+                window.sidebar.addPanel(sTitle, sURL, "");
+
+            } catch (e) {
+
+                alert("加入收藏失败,请使用Ctrl+D进行添加,或手动在浏览器里进行设置.");
+
+            }
+
+        }
+
+    }
+
+    //设为首页
+    function SetHome(url) {
+
+        if (document.all) {
+
+            document.body.style.behavior = 'url(#default#homepage)';
+
+            document.body.setHomePage(url);
+
+        } else {
+
+            alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+
+        }
+
+    }
+
+</script>
+<style>
+    .top-link-active>a{
+        display: block;
+        margin-top:8px;
+        line-height: 16px;
+        padding: 3px 8px;
+        cursor: pointer;
+        border-radius: 2px;
+        background: #006ac1;
+        color:#fff !important;
+        font-size: 12px;
+    }
+</style>
+<div class="top-link" style="max-width: 1200px;margin: 0 auto;">
+    <div class="container" style="margin:0 auto;">
+        <span class="zb">主管：{关键词1}宣传部&nbsp;&nbsp;主办：{关键词1}传媒集团&nbsp;&nbsp;新闻热线：0825-{随机8数字}</span>
+        <ul class="top-linkrt">
+            <li class="header-li-top"><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">网站首页</a> <span>|</span></li>
+            <li class="header-li-top"><a onclick="AddFavorite(&#39;window.location&#39;,&#39;遂宁新闻网&#39;)" href="/{随机字符}/{随机数字}_{随机数字}.html" title="加入收藏">加入收藏</a> <span>|</span>
+            </li>
+            <li class="header-li-top"><a onclick="SetHome(&#39;http://www.snxw.com//&#39;)" href="/{随机字符}/{随机数字}_{随机数字}.html" title="设为首页">设为主页</a></li>
+
+        </ul>
+    </div>
+</div>
+<script>
+    /*登陆*/
+    $("body").on("click", ".land", function() {
+        $(".land-box").show();
+    });
+    // $(".land").click(function () {
+    //     $(".land-box").show();
+    // })
+    /*登陆注册弹层关闭*/
+    $("body").on("click", ".land-close", function() {
+        $(".landing-flex").hide();
+    });
+    // $(".land-close").click(function () {
+    //     $(".landing-flex").hide();
+    // });
+    /*注册*/
+    $("body").on("click", ".register", function() {
+        $(".register-box").show();
+    });
+    // $(".register").click(function () {
+    //     $(".register-box").show();
+    // })
+    $("body").on("click", ".switch-register", function() {
+        $(".land-box").hide();
+        $(".register-box").show();
+    });
+    // $(".switch-register").click(function () {
+    //     $(".land-box").hide();
+    //     $(".register-box").show();
+    // });
+
+    // checkIsLogin();
+</script>
+<script language="JavaScript" type="text/javascript">
+    $(function(){
+        $('.top-link').on('click','li',function(){
+            $(this).addClass('top-link-active').siblings().removeClass('top-link-active');
+        })
+    })
+    showtime()
+    function showtime() {
+        var today, hour, second, minute, year, month, date;
+        var strDate;
+        today = new Date();
+        var n_day = today.getDay();
+        switch (n_day) {
+            case 0: {
+                strDate = "星期日"
+            }
+                break;
+            case 1: {
+                strDate = "星期一"
+            }
+                break;
+            case 2: {
+                strDate = "星期二"
+            }
+                break;
+            case 3: {
+                strDate = "星期三"
+            }
+                break;
+            case 4: {
+                strDate = "星期四"
+            }
+                break;
+            case 5: {
+                strDate = "星期五"
+            }
+                break;
+            case 6: {
+                strDate = "星期六"
+            }
+                break;
+            case 7: {
+                strDate = "星期日"
+            }
+                break;
+        }
+        year = today.getFullYear();
+        month = today.getMonth() + 1;
+        date = today.getDate();
+        hour = today.getHours();
+        minute = today.getMinutes();
+        second = today.getSeconds();
+        document.getElementById('time').innerHTML = year + "年" + month + "月" + date + "日" + " " + checkTime(hour) + ":" + checkTime(minute) + " " + strDate; //显示时间
+        setTimeout("showtime();", 1000); //设定函数自动执行时间为 1000 ms(1 s)
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        return i
+    }
+</script><!-- 头部第第二排 -->
+<!--<link rel="stylesheet" type="text/css" href="https://xmimg.snxw.com/site/1/pc/suining/css/new-index_1.css">-->
+
+<style>
+    .top-links {
+        background: #fff url() no-repeat 90% center;
+    }
+    
+    .float-code {
+        display: none;
+    }
+    
+    .xz-ft-icon:hover .float-code {
+        display: block
+    }
+    /*!*主题样式  begin*!*/
+    /*!*主题色：#03a1eb*!*/
+    /*.nav-area h1 a:hover{*/
+    /*    color: #03a1eb;*/
+    /*    background: #fff;*/
+    /*}*/
+    /*.nav-area h1 a{*/
+    /*    color: #fff;*/
+    /*}*/
+    /*a:hover,*/
+    /*.pic-3 a:hover .pic-des,*/
+    /*.divide .txt a,*/
+    /*.nav-container ul li:hover a,*/
+    /*.headlines-title a {*/
+    /*    color: #03a1eb;*/
+    /*}*/
+    /*搜索按钮*/
+    
+    .topser-btn {
+        background: #03a1eb url(static/image/hsearchbtn.png) no-repeat scroll center center;
+    }
+    /*导航样式 */
+    
+    .nav-area {
+        background: #006ac1;
+    }
+    /*底部样式*/
+</style>
+<script>
+    $(document).ready(function() {
+        $('#search').on('keydown', '#account', function(event) {
+            if (event.keyCode == 13) {
+                submitsearch()
+            }
+        })
+    });
+
+    //提交检索
+    function submitsearch(event) {
+        let keyword = $("#account").val();
+
+        if (keyword == "站内搜索" || keyword == "") {
+            alert("请输入查询关键字!");
+            return false;
+        } else {
+
+            location.href = "https://xmapp.snxw.com/pc/1/searchs?keyword=" + encodeURIComponent(keyword)
+        }
+    }
+</script>
+<div class="top-logo container clearfix">
+    <div class="logo-lf">
+        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/static/ow121_snxw/static/picture/logo_1.png" style="float: left;">
+            <h6><img src="/static/ow121_snxw/static/picture/logo-word_1.png"></h6>
+        </a>
+
+    </div>
+
+
+
+    <div class="top-ser" style="position: relative">
+        <div class="top-links top-links-lf" id="zhanwei" tabindex="1">
+            <p>站内</p>
+        </div>
+        <div id="search">
+            <input class="topser-txt" type="text" name="keyword" id="account" value="站内搜索" onfocus="this.value=&#39;&#39;">
+
+
+            <input type="button" class="topser-btn" value="搜索" onclick="submitsearch()">
+        </div>
+
+
+    </div>
+
+    <div class="top-logort">
+        <div class="weather clearfix">
+            <iframe width="250" scrolling="no" height="35" frameborder="0" allowtransparency="true" src="/static/ow121_snxw/index-code_1_1_suining1_1.html" style="margin-left: 13px;"></iframe>
+        </div>
+        <div class="top-plat">
+            <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/static/ow121_snxw/static/picture/top-plat1.png">客户端</a>
+            <a href="javascript:viod(0);" class="xz-ft-icon" style="position: relative;"><img src="/static/ow121_snxw/static/picture/top-plat2.png">官方微信</a>
+            <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/static/ow121_snxw/static/picture/top-plat3.png">官方微博</a>
+        </div>
+    </div>
+</div><!-- 列表页导航栏 -->
+<div class="new-nav">
+    <div class="container">
+        <h1><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">新闻中心</a></h1>
+        <ul>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">遂宁</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">民生</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">周末</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">理论</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">视频</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">国内</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">国际</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">船山</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">安居</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">射洪</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">蓬溪</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">大英</a></li>
+        </ul>
+    </div>
+</div>
+<div class="new-position container">
+    <p>您所在的位置：</p>
+    <a href="/{随机字符}/{随机数字}_{随机数字}.html">{网站名称}</a><span>&gt;</span>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html">
+        首页    </a><span>&gt;</span>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" title="" class="CurrChnlCls">
+                <strong>{关键词1}</strong>    </a>
+            </div>
+
+<!-- main -->
+<div class="newg-main container">
+    <div class="newx-lf">
+        <h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+        <h2></h2>
+        <div class="newx-lftit">
+            <span>新闻来源：{关键词1}</span>
+            <span>更新时间：{当前时间}</span>
+            <!--<a target="_blank" href="#" class="nx-icon1"></a>-->
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="window.print();" class="nx-icon2" title="打印"></a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="setFontsize(1,&#39;font&#39;)" class="nx-icon4" title="放大"></a>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="setFontsize(0,&#39;font&#39;)" class="nx-icon5" title="缩小"></a>
+            <div class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1605777747380"><a href="" class="bds_more" data-cmd="more"></a><a href="" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></div>
+        </div>
+
+
+        <div class="newx-conwd" id="font">
+            <p>{新闻网内容}</p><p>{新闻网内容}</p><p style="text-indent: 2em; text-align: justify;">（全媒体记者 {人物名称} {人物名称} {人物名称}）</p><p><br></p>
+            <div class="fenye"></div>
+        </div>
+        <div class="newx-conjz">
+            <span><i>责任编辑：{人物名称}&nbsp;&nbsp;&nbsp;&nbsp;编辑：{人物名称}</i></span>
+        </div>
+    </div>
+
+           <div class="newg-rt">
+            <div class="v_outm new-pubcarol">
+                <div class="prevm">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html"></a>
+                </div>
+                <div class="v_showm">
+                    <div style="left: 0px;" class="v_contm">
+                        <ul>
+    <li index="0">
+
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}”">
+                            <img src="{随机图片}" alt="">
+                            <p><span><strong>{关键词1}</strong>{标题}</span></p>
+                        </a>
+                    </li>
+    <li index="1">
+
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                            <img src="{随机图片}" alt="">
+                            <p><span>{标题}</span></p>
+                        </a>
+                    </li>
+    <li index="2">
+
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                            <img src="{随机图片}" alt="">
+                            <p><span>{标题}</span></p>
+                        </a>
+                    </li>
+    <li index="3">
+
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">
+                            <img src="{随机图片}" alt="">
+                            <p><span>{标题}</span></p>
+                        </a>
+                    </li>
+</ul>
+
+                    </div>
+                </div>
+                <div class="nextm">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html"></a>
+                </div>
+            </div>
+            <!-- main1-end -->
+            <div class="new-rtm2 newg-rtm2 mt12" id="new-rtm2">
+                <div class="title">
+                    <h1>今日关注</h1>
+                    <ul>
+                        <li class="new-rm2act"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                 <div class="new-rtm2con">
+      <div class="new-rtm2con1">
+                <h1><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{关键词1}{标题}" style="color:"><strong>{关键词1}</strong>{标题}</a></h1>
+                <div class="con">
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+                    <p></p>
+                </div>
+            </div>
+      <div class="new-rtm2con1">
+                <h1><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" style="color:">{标题}</a></h1>
+                <div class="con">
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+                    <p></p>
+                </div>
+            </div>
+      <div class="new-rtm2con1">
+                <h1><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" style="color:">{标题}</a></h1>
+                <div class="con">
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+                    <p></p>
+                </div>
+            </div>
+      <div class="new-rtm2con1">
+                <h1><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" style="color:">{标题}</a></h1>
+                <div class="con">
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+                    <p></p>
+                </div>
+            </div>
+      <div class="new-rtm2con1">
+                <h1><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" style="color:">{标题}</a></h1>
+                <div class="con">
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+                    <p></p>
+                </div>
+            </div>
+      <div class="new-rtm2con1">
+                <h1><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}" style="color:">{标题}</a></h1>
+                <div class="con">
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}"></a>
+                    <p></p>
+                </div>
+            </div>
+   </div>
+            </div>
+            <!-- main2-今日关注-end -->
+            <div class="new-rtmpub new-rtm2 newg-rtm3 mt12">
+                <div class="title">
+                    <h1>百度新闻热搜词</h1>
+                    <span>来源：{随机关键词}</span>
+                </div>
+                                <div class="newg-rtm3cona">
+                    <a style="background: #125ccb" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{随机关键词}">
+                        {随机关键词}          </a>  
+                    <a style="background: #17a2b7" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{随机关键词}">
+                        {随机关键词}           </a>   
+                    <a style="background: #c6395f" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{随机关键词}">
+                        {随机关键词}           </a> 
+                              </div>
+                <ul>
+                    <li>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a>
+                    </li>
+                                          <li>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a>
+                    </li>
+                                          <li>
+                        <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a>
+                    </li>
+                                      </ul>
+
+
+            </div>
+            <!-- main3-百度新闻热搜词-end -->
+            <div class="new-rtmpub newg-rtm4 mt12">
+                <div class="title">
+                    <h1>看点新闻</h1>
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" class="more">更多</a>
+                </div>
+                <ul>
+ <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{关键词1}{标题}"><strong>{关键词1}</strong>{标题}</a></li>
+ <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+ <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+ <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+ <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+</ul>
+            </div>
+            <!-- main4-手机随机报-end -->
+            <div class="new-rtmpub newg-rtm4 mt12">
+                <div class="title">
+                    <h1>推荐视频</h1>
+                    <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" class="more">更多</a>
+                </div>
+
+                        <ul>
+            <div class="img-box">
+                <img src="{随机图片}" width="100%">
+                <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" class="newg-sp"></a>
+                <p target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html" class="img-box-text"> <span class="img-box-text-size"> </span></p>
+            </div>
+                        <li>
+                <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+            </li>
+                     <li>
+                <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+            </li>
+                     <li>
+                <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+            </li>
+                     <li>
+                <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+            </li>
+                     <li>
+                <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a>
+            </li>
+                 </ul>
+
+            </div>
+            <!-- main5-推荐视频-end -->
+        </div>
+    </div>
+    <!-- main-end -->
+
+    <div class="new-footlink">
+    <div class="container">
+        <ul>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">新华网</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">人民网</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">中国新闻网</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">新浪新闻</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">腾讯新闻</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">搜狐新闻</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">网易新闻</a></li>
+        </ul>
+        <ul>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">中国网</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">四川新闻网</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">四川在线</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">凤凰资讯</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">南方网</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">CCTV新闻</a></li>
+            <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">国际在线</a></li>
+        </ul>
+    </div>
+</div>    <link rel="stylesheet" href="/static/ow121_snxw/static/css/qj_footer.css">
+    <div class="pub-footbtm">
+
+    <ul>
+        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">网站介绍</a><span>┊</span></li>
+        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">联系方式</a><span>┊</span></li>
+        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">招聘贤才</a><span>┊</span></li>
+        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">广告服务</a></li>
+    </ul>
+    <p>{关键词1}版权所有 未经书面授权 不得复制或建立镜像　举报电话：0825-{随机8数字}</p>
+    <p>地址：四川省遂宁市遂州中路718号　邮编：{随机6数字}　电话：0825-{随机8数字}　传真：0825-{随机8数字}</p>
+    <p>互联网新闻信息服务许可证编号：{随机8数字}{随机4-8数字}　<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" style="font-family:宋体;">蜀ICP备{随机8数字}号</a> 川公网安备 {随机8数字}{随机8数字}号
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img src="/static/ow121_snxw/static/picture/snwjba.png" height="20" border="0" width="20"></a>
+    </p>
+    <p>增值电信业务经营许可证：川B2-{随机8数字}广播电视节目制作经营许可证：(川)字第101号</p>
+    <p>遂宁市互联网不良与违法信息举报中心电话（传真）：0825-2988759　遂宁传媒集团廉洁监督举报电话：0825-{随机8数字}</p>
+	<div class="foot-btm" style="width:800px;">
+			<a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">
+				<img src="/static/ow121_snxw/static/picture/footicon1.jpg">
+				<span>中国互联网举报中心</span>
+			</a>
+			<a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">
+				<img src="/static/ow121_snxw/static/picture/footicon2.jpg">
+
+
+				<span>四川省互联网举报中心</span>
+			</a>
+			<a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">
+				<img src="/static/ow121_snxw/static/picture/footicon3.jpg">
+				<span>经营性网站备案信息</span>
+
+			</a>
+			<a href="javascript:viod(0);">
+				<img src="/static/ow121_snxw/static/picture/footicon4.jpg">
+				<span>网络110<br>报警服务</span>
+			</a>
+            <a style="width:127px;" href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+				<img src="/static/ow121_snxw/static/picture/footicon5.jpg">
+				<span style="width:72px;">网上有害信息<br>举报专区</span>
+			</a>
+            <a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">
+				<img src="/static/ow121_snxw/static/picture/footicon2.jpg">
+
+
+				<span>未成年人举报渠道</span>
+			</a>
+		</div>
+
+</div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+</body></html>

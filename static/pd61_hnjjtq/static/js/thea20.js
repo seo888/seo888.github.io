@@ -1,0 +1,1 @@
+document.write("<a href=\"#\" title=\"文明大行动\" target=\"_blank\"><img src=\"https://www.hnjjtq.com/ad/880-90-1.jpg\" alt=\"海南新闻网\"  width=\"100%\" height=\"90\"></a> ")

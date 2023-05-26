@@ -1,0 +1,1011 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, img, ul, li, a, span, p, i, strong, b, em, form, input, label, div, body, html,
+blockquote, dd, dl, figure, pre{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #333;
+    font-size: 14px;
+    overflow-x: hidden;
+    background: #fafafa;
+    font-family: Microsoft Yahei,Arial;
+}
+a,a:hover,a:active,a:focus{
+    background-color: transparent;
+    text-decoration: none;
+    color: #666;
+    outline: none;
+}
+/**
+ * 去除IE10中活动链接的灰色背景.
+ */
+
+/**
+ * 去除IE6-10中a链接包裹图片蓝色边框.
+ */
+ul{
+    padding-inline-start: 0px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-weight: normal;
+}
+/**
+ * 去除列表边距及符号.
+ */
+ul,
+ol,
+dl,
+li,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+/**
+ * 删除表格单元格之间的间距。
+ */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td,
+th {
+    padding: 0;
+	border: 1px solid #DDD;
+}
+/**
+ * 删除表格单元格之间的间距。
+ * 字体相关属性改为继承
+ */
+button,
+input,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: none;
+}
+/**
+ * IE 8/9/10/11中，去除默认垂直滚动条属性
+ */
+textarea {
+    overflow: auto;
+    resize: none;
+}
+/**
+ * HTML5新模块元素在IE8、9版本浏览器中没有被定义默认样式。为解决该问题，给下列元素添加“block”显示属性。
+ */
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+/**
+ * IE 8/9/10/11/12 兼容template标签
+ */
+template {
+    display: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+input{
+    outline: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+
+.box_sizing{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari */
+}
+
+.hidden2,
+.hidden3,
+.hidden4,
+.hidden5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.hidden1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hidden2 {
+    -webkit-line-clamp: 2;
+}
+.hidden3 {
+    -webkit-line-clamp: 3;
+}
+.hidden4 {
+    -webkit-line-clamp: 4;
+}
+.hidden5 {
+    -webkit-line-clamp: 5;
+}
+.all{
+    width: 100%;
+    padding-bottom: 20px;
+}
+.bgwhite{
+    background: #fff;
+}
+.bggray{
+    background: #fafafa;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header{
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
+.top{
+    width: 100%;
+    position: relative;
+}
+.header_r{
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.header_r span,.header_r a{
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    margin-right: 12px;
+}
+.header_r a:last-child{
+    margin-right: 0;
+}
+.mobile img{
+    float: left;
+    margin-right: 4px;
+    margin-top: 11px;
+}
+.pc img{
+    float: left;
+    margin-right: 8px;
+    margin-top: 14px;
+}
+#register{
+    color: #e5000f;
+}
+
+.header_b{
+    width: 100%;
+}
+.logo{
+    float: left;
+}
+.header_br{
+    width: 415px;
+    height: 34px;
+    line-height: 34px;
+    float: right;
+    margin-top: 12px;
+
+}
+
+.search_l{
+    width: 355px;
+    border: 2px solid #de0000;
+}
+.s_name{
+    width: 115px;
+    font-size: 14px;
+    color: #fe4445;
+    padding-left: 9px;
+}
+.search{
+    border: 0;
+    height: 34px;
+    width: 236px;
+}
+.header_br input[type="text"]::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+.header_br input[type="text"]:-moz-placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+.header_br input[type="text"]::-moz-placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+.header_br input[type="text"]:-ms-input-placeholder {
+    font-size: 14px;
+    color: #999;
+}
+.btn{
+    width: 60px;
+    height: 38px;
+    border: 2px solid #de0000;
+    background-color: #de0000;
+    cursor: pointer;
+}
+
+.top_qrcode,.top_nav{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding: 15px 0;
+    box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    display: none;
+}
+.top_qrcode{
+    width: 80px;
+    padding: 10px;
+    /*right: 54px;*/
+    right: 50px;
+    left: auto;
+}
+.top_qrcode .sanjiao{
+    top: -10px;
+    right: 40px;
+}
+.top_nav .container{
+    position: relative;
+}
+.sanjiao{
+    position: absolute;
+    top: -25px;
+    /*right: 13px;*/
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-top: none;
+}
+.top_nav ul{
+    width: 100%;
+}
+.top_nav ul li{
+    width: 100%;
+    /*padding: 25px 0 0 0;*/
+    line-height: 60px;
+    min-height: 60px;
+}
+
+.top_nav ul li:first-child{
+    line-height: 49px;
+}
+.tn_l{
+    width: 143px;
+    text-align: right;
+    padding-right: 65px;
+}
+.tn_r{
+    width: 1057px;
+}
+.tn_l span{
+    font-size: 16px;
+    color: #000000;
+    font-weight: bold;
+    position: relative;
+}
+.tn_l span:after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 0px;
+    width: 2px;
+    height: 16px;
+    background-color: #eb0416;
+}
+.tn_r{
+    border-bottom: 1px solid #e5e5e4;
+    line-height: 60px;
+}
+.top_nav ul li:first-child .tn_r {
+    line-height: 49px;
+}
+.top_nav ul li:last-child .tn_r{
+    border-bottom: none;
+}
+.tn_r a{
+    display: inline-block;
+    margin-right: 38px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666666;
+    /*margin-bottom: 25px;*/
+}
+
+
+.nav{
+    border-bottom: 3px solid #d80313;
+    margin-top: 30px;
+}
+.nav ul li.dad{
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    position: relative;
+}
+.nav ul li.dad .nav_a{
+    display: block;
+    font-size: 16px;
+    color: #333;
+    background: #fff;
+    padding: 0 18px;
+    text-align: center;
+    transition: all 0.5s linear;
+}
+.nav ul li.dad .nav_a:hover,
+.nav ul li.active .nav_a{
+    color: #ffffff;
+    background: #dd0000;
+    transition: all 0.5s linear;
+}
+.nav ul li.dad:first-child.active .nav_a:hover,
+.nav ul li.dad:first-child.active .nav_a
+{
+    padding: 0 73px;
+    transition: all 0.5s linear;
+}
+.sons{
+    /*width: 187px;*/
+    width: 93.5px;
+    position: absolute;
+    top: 34px;
+    /*left: -55px;*/
+    left: -13px;
+    box-shadow: 0px 0px 8px 0px
+    rgba(7, 0, 2, 0.2);
+    padding: 7px 0;
+    display: none;
+    background: #fff;
+    /*z-index: 3;*/
+    z-index: 1000;
+    border-top: 3px solid #d80313;
+}
+.nav ul li.dad:first-child .sons{
+    width: 1200px;
+    position: absolute;
+    top: 34px;
+    left: 0px;
+    box-shadow: 0px 0px 8px 0px
+    rgba(7, 0, 2, 0.2);
+    /*padding: 7px 0;*/
+    display: none;
+    z-index: 2;
+}
+.nav ul li.dad .sons li{
+    /*width: 50%;*/
+    width: 100%;
+    padding: 0;
+    float: left;
+    text-align: center;
+}
+.nav ul li.dad .sons li .nav_b{
+    color: #333;
+    font-size: 16px;
+    padding: 0;
+    display: inline;
+    position: relative;
+}
+.nav ul li.dad .sons .nav_b:hover{
+    background: #fff;
+    color: #d80313;
+}
+.nav ul li.dad .sons li .nav_b:hover span{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d80313;
+}
+.nav ul li.dad .sons.nav_active{
+    display: block;
+}
+
+.top_nb {
+    display: block;
+}
+
+.banner{
+    width: 100%;
+}
+.banner .banner_swiper img{
+    width: 100%;
+}
+
+
+
+.footer{
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    /*margin-top: 20px;*/
+}
+.footer_list{
+    margin-top: 34px;
+    text-align: center;
+}
+.footer_list ul{
+    display: inline-block;
+}
+.footer_list ul li{
+    float: left;
+    position: relative;
+}
+.footer_list ul li:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background: #adadad;
+    width: 1px;
+    height: 15px;
+}
+.footer_list ul li:last-child:after{
+    content: none;
+}
+.footer_list ul li a{
+    padding: 0 18px;
+}
+.footer_list ul li:first-child a{
+    padding-left: 0;
+}
+.footer_list ul li:last-child a{
+    padding-right: 0;
+}
+.footer_l,.footer_r{
+    width: 210px;
+    text-align: center;
+}
+.footer_l img,.footer_r img{
+    margin-top: 67px;
+    width: 110px;
+    height: 110px;
+}
+.footer_l span,.footer_r span{
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    color: #666666;
+}
+.footer_p{
+    margin-top: 27px;
+    width: 780px;
+}
+.footer_p p{
+    text-align: center;
+    font-size: 12px;
+    line-height: 26px;
+    color: #999999;
+}
+.footer_p a{
+    color: #999999;
+    margin-left: 15px;
+}
+.footer_logo{
+    text-align: center;
+}
+.footer_logo img{
+    width: 141px;
+    height: 52px;
+    padding: 29px;
+}
+
+body{
+    position: relative;
+}
+.slider{
+    position: fixed;
+    /*bottom: 20%;*/
+    bottom: 15%;
+    right: 216px;
+    z-index: 9;
+}
+.slider1{
+    position: relative;
+}
+.s_close{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+.slider2{
+    position: fixed;
+    bottom: 5%;
+    right: 10px;
+    display: none;
+    width: 56px;
+    text-align: center;
+}
+
+@media (max-width: 1920px) {
+    .slider{
+        position: fixed;
+        /*bottom: 20%;*/
+        bottom: 15%;
+        right: 20px;
+    }
+}
+@media (max-width: 1400px) {
+    .slider{
+        position: fixed;
+        /*bottom: 20%;*/
+        bottom: 15%;
+        right: 10px;
+    }
+}
+
+
+
+
+/* 登录注册弹窗样式 */
+#login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#login .login,
+#login .enroll,
+#login .forgetpass {
+    width: 350px;
+    /* height: 550px; */
+    height: auto;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    /* bottom: 0; */
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 40px 30px;
+    box-sizing: border-box;
+}
+
+
+#login .login .nav1 {
+    width: 162px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 54px;
+    font-weight: 400;
+    position: relative;
+}
+#login .login .nav1:after{
+    content: '';
+    position: absolute;
+    width: 307px;
+    height: 1px;
+    top: 45px;
+    left: -73px;
+    background-color: #e5e5e5
+}
+
+#login .login .nav1 span {
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login .login .nav1 span.active5 {
+    color: #ec0315;
+}
+
+#login .login .nav1 span:hover {
+    color: #ec0315;
+}
+
+#login .login .quick,
+#login .login .account {
+    /*width: 360px;*/
+}
+
+#login .login .account {
+    display: none;
+}
+
+#login .login label {
+    width: 100%;
+    /*border-bottom: 1px solid #dedede;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+#login .login label.code{
+    margin-top: 0;
+}
+
+#login .login label i {
+    font-size: 28px;
+    color: #999;
+}
+
+#login .login label input {
+    width: 260px;
+    height: 40px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding-left: 13px;
+    box-sizing: border-box;
+    border: 0;
+}
+
+#login .login label span {
+    width: 92px;
+    height: 38px;
+    border: 1px solid #999999;
+    background: none;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    color: #999;
+    cursor: pointer;
+    margin-left: 18px;
+}
+
+#login .login .quick .code input {
+    width: 150px;
+}
+
+#login .login .button-box {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#login .login .button-box .signin{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ec0315;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ec0315;
+}
+#login .login .button-box .register {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ec0315;
+    color: #ec0315;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login .login .button-box div:hover {
+    /*background: #ec0315;*/
+    /*color: #ec0315;*/
+}
+
+#login .login .button-box .register {
+    margin-top: 10px;
+}
+
+.gam {
+    width: 78px;
+    margin: 23px auto 0;
+}
+
+.gam a {
+    width: 27px;
+    height: 26px;
+    padding: 0 6px;
+    border-radius: 50%;
+    float: left;
+}
+
+#login .login .account a.forget {
+    float: right;
+    margin-top: 10px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+#login .enroll {
+    display: none;
+}
+
+#login .forgetpass {
+    display: none;
+}
+
+#login .enroll input,
+#login .forgetpass input {
+    margin-top: 10px;
+    border: 0;
+    padding-left: 13px;
+    box-sizing: border-box;
+    width: 260px;
+    height: 40px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+#login .enroll .phone {
+    margin-top: 42px;
+}
+
+#login .forgetpass .phone {
+    margin-top: 60px;
+}
+
+#login .enroll .code,
+#login .forgetpass .code {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#login .enroll .code input,
+#login .forgetpass .code input {
+    width: 150px;
+    border: 0;
+    margin-top: 0;
+}
+
+#login .enroll .code span,
+#login .forgetpass .code span {
+    width: 92px;
+    height: 38px;
+    border: 1px solid #999999;
+    background: none;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    color: #999;
+    cursor: pointer;
+    margin-left: 18px;
+}
+
+#login .enroll .agreement {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+}
+
+#login .enroll .agreement input {
+    width: 12px;
+    height: 12px;
+    margin-top: 0;
+}
+
+#login .enroll .agreement span {
+    font-size: 12px;
+    color: #999;
+}
+
+#login .enroll .agreement a {
+    color: #ec0315;
+}
+
+#login .enroll .button,
+#login .forgetpass .button {
+    width: 260px;
+    height: 40px;
+    background: #ec0315;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 30px;
+    cursor: pointer;
+    border: 1px solid #ec0315;
+}
+
+#login .forgetpass .button {
+    margin-top: 80px;
+}
+
+#login .enroll .button:hover,
+#login .forgetpass .button:hover {
+    color: #fff;
+    /*background: #ec0315;*/
+}
+
+#login .enroll .sign,
+#login .forgetpass a {
+    /*width: 360px;*/
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login .enroll .sign span {
+    font-size: 14px;
+    color: #999;
+}
+
+#login .enroll .sign a,
+#login .forgetpass a {
+    color: #ec0315;
+}
+
+/* 协议弹出框样式 */
+.protocol {
+    display: none;
+}
+
+.layui-layer.agree {
+    border-radius: 8px;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.layui-layer.agree .layui-layer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.layui-layer.agree .layui-layer-content h1 {
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+}
+.layui-layer.agree .l_content{
+    width: 100%;
+    overflow: hidden;
+}
+.layui-layer.agree .layui-layer-iframe .layui-layer-btn a, .layui-layer.agree.layui-layer-page .layui-layer-btn a {
+    /*margin-top: -140px;*/
+}
+.layui-layer.agree .layui-layer-content .content {
+    width: 100%;
+    height: 430px;
+    margin-top: 33px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #666;
+    overflow: auto;
+}
+
+.layui-layer.agree .layui-layer-iframe .layui-layer-btn,
+.layui-layer.agree.layui-layer-page .layui-layer-btn {
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.layui-layer.agree .layui-layer-iframe .layui-layer-btn a,
+.layui-layer.agree.layui-layer-page .layui-layer-btn a {
+    background: #ec0315;
+    border: 0;
+}
+
+#login i.off1 {
+    font-style: normal;
+    font-size: 24px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+}
+.line_tree{
+    margin-top: 28px;
+    text-align: center;
+}
+.sh_read{
+    position:absolute;
+    right: 0;
+    margin: 3px 4px;
+    border: solid 1px #ff2727;
+    color: #ff2727;
+    border-radius: 3px;
+    font-size: 12px;"
+}

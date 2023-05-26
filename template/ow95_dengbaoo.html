@@ -1,0 +1,741 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="{网站名称}">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<title>{自定义标题}</title>
+	<meta name='robots' content='max-image-preview:large'>
+	<link rel='stylesheet' id='wp-block-library-css' href="/_/static/ow95_dengbaoo/static/css/style.min.css"
+		type='text/css' media='all'>
+	<link rel='stylesheet' id='classic-theme-styles-css' href="/_/static/ow95_dengbaoo/static/css/classic-themes.min.css"
+		type='text/css' media='all'>
+	<style id='global-styles-inline-css' type='text/css'>
+		body {
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--duotone--dark-grayscale: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--duotone--grayscale: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--duotone--purple-yellow: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--duotone--blue-red: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--duotone--midnight: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--duotone--magenta-yellow: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--duotone--purple-green: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--duotone--blue-orange: url('https://www.dengbaoo.cn/3043.html');
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+			--wp--preset--spacing--20: 0.44rem;
+			--wp--preset--spacing--30: 0.67rem;
+			--wp--preset--spacing--40: 1rem;
+			--wp--preset--spacing--50: 1.5rem;
+			--wp--preset--spacing--60: 2.25rem;
+			--wp--preset--spacing--70: 3.38rem;
+			--wp--preset--spacing--80: 5.06rem;
+		}
+
+		:where(.is-layout-flex) {
+			gap: 0.5em;
+		}
+
+		body .is-layout-flow>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-flow>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-flow>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignleft {
+			float: left;
+			margin-inline-start: 0;
+			margin-inline-end: 2em;
+		}
+
+		body .is-layout-constrained>.alignright {
+			float: right;
+			margin-inline-start: 2em;
+			margin-inline-end: 0;
+		}
+
+		body .is-layout-constrained>.aligncenter {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+			max-width: var(--wp--style--global--content-size);
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+
+		body .is-layout-constrained>.alignwide {
+			max-width: var(--wp--style--global--wide-size);
+		}
+
+		body .is-layout-flex {
+			display: flex;
+		}
+
+		body .is-layout-flex {
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		body .is-layout-flex>* {
+			margin: 0;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+
+		.wp-block-navigation a:where(:not(.wp-element-button)) {
+			color: inherit;
+		}
+
+		:where(.wp-block-columns.is-layout-flex) {
+			gap: 2em;
+		}
+
+		.wp-block-pullquote {
+			font-size: 1.5em;
+			line-height: 1.6;
+		}
+	</style>
+	<link rel='stylesheet' id='style-css' href="/_/static/ow95_dengbaoo/static/css/style.css" type='text/css' media='all'>
+	<script type='text/javascript' src="/_/static/ow95_dengbaoo/static/js/jquery.min.js" id='jquery-js'></script>
+	<link rel="https://api.w.org/" href="https://www.dengbaoo.cn/wp-json/">
+	<link rel="alternate" type="application/json" href="https://www.dengbaoo.cn/wp-json/wp/v2/posts/3043">
+	<link rel="canonical" href="">
+	<link rel="alternate" type="application/json+oembed"
+		href="https://www.dengbaoo.cn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dengbaoo.cn%2F3043.html">
+	<link rel="alternate" type="text/xml+oembed"
+		href="https://www.dengbaoo.cn/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.dengbaoo.cn%2F3043.html&format=xml">
+	<!--
+This site is protected by WP-CopyRightPro
+Copyright 2010  Wp-CopyRightPro, IN  (http://wp-copyrightpro.com/)
+-->
+
+	<!-- EVITAR CLICK DERECHO-->
+
+	<!-- SELECCION DE TEXTO-->
+	<script type="text/javascript">
+		// IE Evitar seleccion de texto
+		document.onselectstart = function () {
+			if (event.srcElement.type != "text" && event.srcElement.type != "textarea" && event.srcElement.type != "password")
+				return false
+			else return true;
+		};
+
+		// FIREFOX Evitar seleccion de texto
+		if (window.sidebar) {
+			document.onmousedown = function (e) {
+				var obj = e.target;
+				if (obj.tagName.toUpperCase() == "INPUT" || obj.tagName.toUpperCase() == "TEXTAREA" || obj.tagName.toUpperCase() == "PASSWORD")
+					return true;
+				/*else if (obj.tagName=="BUTTON"){
+				return true;
+				}*/
+				else
+					return false;
+			}
+		}
+// End -->
+	</script>
+
+
+	<!-- EVITAR IFRAME-->
+
+
+	<!-- EVITAR DRAG AND DROP-->
+
+	<meta name="keywords" content="{关键词1}" />
+	<meta name="description" content="{自定义描述}">
+	<meta property="og:type" content="acticle">
+	<meta property="og:site_name" content="{网站名称}">
+	<meta property="og:title" content="{新闻网标题}">
+	<meta property="og:description" content="{句子}">
+	<meta property="og:url" content="{当前url}">
+	<meta property="og:image" content="https://www.dengbaoo.cn/wp-content/uploads/2023/01/tunian-220x150.png">
+	<style>
+		:root {
+			--tb--main: #FF5722
+		}
+
+		.mejs-container {
+			clear: none !important
+		}
+
+		.mejs-container {
+			margin: 0 auto;
+		}
+
+		.brand {
+			color: #009100;
+		}
+	</style>
+	<!--HEADER_CODE_START-->
+	<meta name="baidu-site-verification" content="BSzy2srxWO">
+	<meta name="360-site-verification" content="3b84129fa3ba7adee8bd7c360a8c74c3">
+	<!--HEADER_CODE_END-->
+	<link rel="icon" href="https://www.dengbaoo.cn/wp-content/uploads/2018/08/cropped-%E5%9B%BE%E5%BD%A22-32x32.png"
+		sizes="32x32">
+	<link rel="icon" href="https://www.dengbaoo.cn/wp-content/uploads/2018/08/cropped-%E5%9B%BE%E5%BD%A22-192x192.png"
+		sizes="192x192">
+	<link rel="apple-touch-icon"
+		href="https://www.dengbaoo.cn/wp-content/uploads/2018/08/cropped-%E5%9B%BE%E5%BD%A22-180x180.png">
+	<meta name="msapplication-TileImage"
+		content="https://www.dengbaoo.cn/wp-content/uploads/2018/08/cropped-图形2-270x270.png">
+	<link rel="shortcut icon" href="https://www.dengbaoo.cn/favicon.ico">
+</head>
+
+<body
+	class="post-template-default single single-post postid-3043 single-format-standard home nav_fixed m-excerpt-cat m-excerpt-desc site-layout-2 m-sidebar m-list-thumb-left">
+	<header class="header">
+		<div class="container">
+			<div class="logo"><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{网站名称}"><img
+						src="/_/static/ow95_dengbaoo/static/picture/陕西登报logo.png" alt="{网站名称}"><img class="-dark"
+						src="/_/static/ow95_dengbaoo/static/picture/陕西登报logo.png" alt="{网站名称}">{网站名称}</a></div>
+			<ul class="site-nav site-navbar">
+				<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></li>
+				<li class="menu-item-has-children"><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a>
+					<ul class="sub-menu">
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">三秦都市报</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">西安晚报</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">西安日报</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">各界导报</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">华商报</a></li>
+					</ul>
+				</li>
+				<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">登报价格套餐</a></li>
+				<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">登报格式案例</a></li>
+				<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">登报资讯常识</a></li>
+				<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a></li>
+				<li class="navto-search"><a href="/{随机字符}/{随机数字}_{随机数字}.html" class="search-show"><i
+							class="tbfa">&#xe611;</i></a>
+				</li>
+			</ul>
+			<div class="topbar">
+				<ul class="site-nav topmenu">
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">西安登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">咸阳登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">渭南登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">延安登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">榆林登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">商洛登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">安康登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">宝鸡登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">汉中登报</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">铜川登报</a></li>
+					<li class="menusns menu-item-has-children">
+						<a href="/{随机字符}/{随机数字}_{随机数字}.html">关注我们</a>
+						<ul class="sub-menu">
+							<li><a class="sns-wechat" href="/{随机字符}/{随机数字}_{随机数字}.html" title="微信官方客服">微信官方客服</a>
+							</li>
+							<li><a target="_blank" rel="external nofollow" href="/{随机字符}/{随机数字}_{随机数字}.html">本站搜狐号</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<i class="tbfa m-icon-nav">&#xe612;</i>
+	<div class="site-search">
+		<div class="container">
+			<form method="get" class="site-search-form" action="https://www.dengbaoo.cn/">
+				<input class="search-input" name="s" type="text" placeholder="输入关键字" value="" required="required">
+				<button class="search-btn" type="submit"><i class="tbfa">&#xe611;</i></button>
+			</form>
+		</div>
+	</div>
+	<div class="breadcrumbs">
+		<div class="container">当前位置：<a href="/{随机字符}/{随机数字}_{随机数字}.html">{网站名称}</a> <small><i
+					class="tbfa">&#xe87e;</i></small> <a href="/{随机字符}/{随机数字}_{随机数字}.html">站内公告</a> <small><i
+					class="tbfa">&#xe87e;</i></small> {关键词1} </div>
+	</div>
+	<section class="container">
+		<div class="content-wrap">
+			<div class="content">
+				<header class="article-header">
+					<h1 class="article-title"><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{随机后缀}{新闻网标题}</a></h1>
+					<div class="article-meta">
+						<span class="item">{年月日}</span> <span class="item">分类：<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+								rel="category tag">站内公告</a></span>
+						<span class="item post-views">阅读({随机数字})</span> <span class="item"></span>
+					</div>
+				</header>
+				<article class="article-content">
+					<p><img decoding="async" class="alignnone size-full wp-image-3044" src="{随机图片}" alt="2023年春节"
+							width="499" height="333"></p>
+					<p>{关键词1}{句子}{关键词1}{句子}</p>
+					<p>{句子}</p>
+					<p>{句子}{关键词1}{句子}{句子}{关键词1}</p>
+					<p>{关键词1}{句子}</p>
+					<p>{关键词1}|{网站名称}</p>
+					<p>{年月日}</p>
+				</article>
+				<div class="post-actions">
+					<a href="/{随机字符}/{随机数字}_{随机数字}.html" etap="like" class="post-like action action-like"
+						data-pid="3043"><i class="tbfa">&#xe64c;</i>赞(<span>{随机数字}</span>)</a> <a
+						href="/{随机字符}/{随机数字}_{随机数字}.html" class="action action-rewards" data-event="rewards"><i
+							class="tbfa">&#xe601;</i> 点赞礼物</a>
+				</div>
+				<div class="post-copyright">未经允许不得转载<a href="/{随机字符}/{随机数字}_{随机数字}.html">{网站名称}</a> &raquo; <a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a></div>
+				<div class="shares"><dfn>分享到</dfn><a href="/{随机字符}/{随机数字}_{随机数字}.html"
+						data-url="https://www.dengbaoo.cn/3043.html" class="share-weixin" title="分享到微信"><i
+							class="tbfa">&#xe61e;</i></a><a etap="share" data-share="weibo" class="share-tsina"
+						title="分享到微博"><i class="tbfa">&#xe645;</i></a><a etap="share" data-share="qq" class="share-sqq"
+						title="分享到QQ好友"><i class="tbfa">&#xe60f;</i></a><a etap="share" data-share="qzone"
+						class="share-qzone" title="分享到QQ空间"><i class="tbfa">&#xe600;</i></a><a etap="share"
+						data-share="twitter" class="share-twitter" title="分享到Twitter"><i class="tbfa">&#xe902;</i></a>
+				</div>
+				<div class="article-tags"><a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="tag">{关键词1}</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html" rel="tag">{随机关键词}</a><a href="/{随机字符}/{随机数字}_{随机数字}.html"
+						rel="tag">{随机关键词}</a><a href="/{随机字符}/{随机数字}_{随机数字}.html" rel="tag">{随机关键词}</a></div>
+
+
+				<nav class="article-nav">
+					<span class="article-nav-prev">上一篇<br><a href="/{随机字符}/{随机数字}_{随机数字}.html"
+							rel="prev">{标题}</a></span>
+					<span class="article-nav-next">下一篇<br><a href="/{随机字符}/{随机数字}_{随机数字}.html"
+							rel="next">{关键词1}{标题}</a></span>
+				</nav>
+
+				<div class="relates relates-imagetext">
+					<div class="title">
+						<h3>相关推荐</h3>
+					</div>
+					<ul>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{关键词1}{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}{标题}</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+					    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="{随机图片}" alt="{标题}"></a><a
+								href="/{随机字符}/{随机数字}_{随机数字}.html">{标题}</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar">
+			<div class="widget widget_ui_textorbui"><a class="style02"
+					href="/{随机字符}/{随机数字}_{随机数字}.html"><strong>吐血推荐</strong>
+					<h2>{随机关键词}</h2>
+					<p>{句子}</p>
+				</a></div>
+			<div class="widget widget_ui_tags">
+				<h3>热门标签</h3>
+				<div class="items"><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">西安晚报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">三秦都市报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">各界导报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">西安日报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">华商报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">西安登报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">陕西报纸</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">榆林登报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">商洛登报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">宝鸡登报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">安康登报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">陕西日报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">汉中登报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">延安登报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">陕西登报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">咸阳登报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">省级报纸</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">注销公告</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">登报声明</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">西安刻章</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">绥德登报</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">渭南登报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">登报挂失</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">阳光报</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">登报公示</a><a href="/{随机字符}/{随机数字}_{随机数字}.html">简易注销</a><a
+						href="/{随机字符}/{随机数字}_{随机数字}.html">遗失声明</a></div>
+			</div>
+			<div class="widget widget_ui_textorbui"><a class="style02" href="/{随机字符}/{随机数字}_{随机数字}.html"
+					target="_blank"><strong>吐血推荐</strong>
+					<h2>{关键词1}</h2>
+					<p>{句子}</p>
+				</a></div>
+			<div class="widget widget_ui_posts">
+				<h3>热门文章</h3>
+				<ul>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}"
+									alt="{标题}"></span><span class="text">{关键词1}{标题}</span><span class="muted">{年月日}</span></a>
+					</li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}"
+									alt="{标题}"></span><span class="text">{标题}</span><span class="muted">{年月日}</span></a>
+					</li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}"
+									alt="{标题}"></span><span class="text">{标题}</span><span class="muted">{年月日}</span></a>
+					</li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}"
+									alt="{标题}"></span><span class="text">{标题}</span><span class="muted">{年月日}</span></a>
+					</li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}"
+									alt="{标题}"></span><span class="text">{标题}</span><span class="muted">{年月日}</span></a>
+					</li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html"><span class="thumbnail"><img src="{随机图片}"
+									alt="{标题}"></span><span class="text">{标题}</span><span class="muted">{年月日}</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="widget widget_ui_textorbui"><a class="style05" href="/{随机字符}/{随机数字}_{随机数字}.html"
+					target="_blank"><strong>吐血推荐</strong>
+					<h2>{随机关键词}</h2>
+					<p>{句子}
+					</p>
+				</a></div>
+		</div>
+	</section>
+
+	<div class="branding">
+		<div class="container">
+			<h2>{网站名称} 22年金牌口碑</h2>
+			<h4>业务遍及榆林、延安、汉中、宝鸡、咸阳、商洛、安康、西安、渭南等陕西全域，所登报纸为市级、省级，国家级报纸。公开发行，工商税务认可，权威有保障！</h4>
+			<a target="blank" class="btn btn-primary" href="/{随机字符}/{随机数字}_{随机数字}.html">联系我们<i
+					class="tbfa">&#xe87e;</i></a><a target="blank" class="btn btn-primary"
+				href="/{随机字符}/{随机数字}_{随机数字}.html">联系我们<i class="tbfa">&#xe87e;</i></a>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; {年} &nbsp; <a href="/{随机字符}/{随机数字}_{随机数字}.html">{网站名称}</a> &nbsp; <a
+					href="http://{当前域名}/sitemap.xml">网站地图</a>
+			</p>
+			<a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">陕ICP备15005528号-3</a>
+
+		</div>
+	</footer>
+
+
+	<div class="karbar karbar-rm">
+		<ul>
+			<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"><i class="tbfa">&#xe68d;</i><span>返回首页</span></a>
+			</li>
+			<li class="karbar-totop"><a href="javascript:(TBUI.scrollTo());"><i
+						class="tbfa">&#xe613;</i><span>回顶部</span></a></li>
+		</ul>
+	</div>
+	<div class="sign">
+		<div class="sign-mask"></div>
+		<div class="sign-tips"></div>
+		<form class="-in">
+			<h4><small class="signup-loader">切换注册</small>登录</h4>
+			<div class="-item">
+				<label for="inputEmail">用户名或邮箱</label>
+				<input type="text" name="username" class="ipt" id="inputEmail" placeholder="用户名或邮箱">
+			</div>
+			<div class="-item">
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html">找回密码</a>
+				<label for="inputPassword">密码</label>
+				<input type="password" name="password" class="ipt" id="inputPassword" placeholder="登录密码">
+			</div>
+			<div class="sign-submit">
+				<input type="button" class="btn btn-primary btn-block signinsubmit-loader" name="submit" value="登录"
+					id="site_login">
+				<input type="hidden" name="action" value="signin">
+				<label><input type="checkbox" checked="checked" name="remember" value="forever">记住我</label>
+			</div>
+		</form>
+		<form class="-up">
+			<h4><small class="signin-loader">切换登录</small>注册</h4>
+			<div class="-item">
+				<label for="inputName">昵称</label>
+				<input type="text" name="name" class="ipt" id="inputName" placeholder="设置昵称">
+			</div>
+			<div class="-item">
+				<label for="inputEmail2">邮箱</label>
+				<input type="email" name="email" class="ipt" id="inputEmail2" placeholder="邮箱">
+			</div>
+			<div class="sign-submit">
+				<input type="button" class="btn btn-primary btn-block signupsubmit-loader" name="submit" value="快速注册"
+					id="site_register">
+				<input type="hidden" name="action" value="signup">
+			</div>
+		</form>
+	</div>
+	<script>
+		window.TBUI = { "www": "https:\/\/www.dengbaoo.cn", "uri": "https:\/\/www.dengbaoo.cn\/wp-content\/themes\/dux", "ajaxurl": "https:\/\/www.dengbaoo.cn\/wp-admin\/admin-ajax.php", "ver": "8.1", "roll": "1 2", "ajaxpager": "0", "fullimage": false, "captcha": 0, "captcha_appid": "", "captcha_comment": 1 }</script>
+
+	<script>(function () {
+				var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?f29af8481b98d199965b530516783e1d" : "https://jspassport.ssl.qhimg.com/11.0.1.js?f29af8481b98d199965b530516783e1d";
+				document.write('<script src="' + src + '" id="sozz"></script>
+
+
+	<!--FOOTER_CODE_END-->
+	<link rel='stylesheet' id='mediaelement-css'
+		href="/_/static/ow95_dengbaoo/static/css/mediaelementplayer-legacy.min.css" type='text/css' media='all'>
+	<link rel='stylesheet' id='wp-mediaelement-css' href="/_/static/ow95_dengbaoo/static/css/wp-mediaelement.min.css"
+		type='text/css' media='all'>
+	<script type='text/javascript' src="/_/static/ow95_dengbaoo/static/js/loader.js" id='loader-js'></script>
+	<script type='text/javascript' id='mediaelement-core-js-before'>
+var mejsL10n = { "language": "zh", "strings": { "mejs.download-file": "\u4e0b\u8f7d\u6587\u4ef6", "mejs.install-flash": "\u60a8\u6b63\u5728\u4f7f\u7528\u7684\u6d4f\u89c8\u5668\u672a\u5b89\u88c5\u6216\u542f\u7528Flash\u64ad\u653e\u5668\uff0c\u8bf7\u542f\u7528\u60a8\u7684Flash\u64ad\u653e\u5668\u63d2\u4ef6\uff0c\u6216\u4ece https:\/\/get.adobe.com\/flashplayer\/ \u4e0b\u8f7d\u6700\u65b0\u7248\u3002", "mejs.fullscreen": "\u5168\u5c4f", "mejs.play": "\u64ad\u653e", "mejs.pause": "\u6682\u505c", "mejs.time-slider": "\u65f6\u95f4\u8f74", "mejs.time-help-text": "\u4f7f\u7528\u5de6\/\u53f3\u7bad\u5934\u952e\u6765\u524d\u8fdb\u4e00\u79d2\uff0c\u4e0a\/\u4e0b\u7bad\u5934\u952e\u6765\u524d\u8fdb\u5341\u79d2\u3002", "mejs.live-broadcast": "\u73b0\u573a\u76f4\u64ad", "mejs.volume-help-text": "\u4f7f\u7528\u4e0a\/\u4e0b\u7bad\u5934\u952e\u6765\u589e\u9ad8\u6216\u964d\u4f4e\u97f3\u91cf\u3002", "mejs.unmute": "\u53d6\u6d88\u9759\u97f3", "mejs.mute": "\u9759\u97f3", "mejs.volume-slider": "\u97f3\u91cf", "mejs.video-player": "\u89c6\u9891\u64ad\u653e\u5668", "mejs.audio-player": "\u97f3\u9891\u64ad\u653e\u5668", "mejs.captions-subtitles": "\u8bf4\u660e\u6587\u5b57\u6216\u5b57\u5e55", "mejs.captions-chapters": "\u7ae0\u8282", "mejs.none": "\u65e0", "mejs.afrikaans": "\u5357\u975e\u8377\u5170\u8bed", "mejs.albanian": "\u963f\u5c14\u5df4\u5c3c\u4e9a\u8bed", "mejs.arabic": "\u963f\u62c9\u4f2f\u8bed", "mejs.belarusian": "\u767d\u4fc4\u7f57\u65af\u8bed", "mejs.bulgarian": "\u4fdd\u52a0\u5229\u4e9a\u8bed", "mejs.catalan": "\u52a0\u6cf0\u7f57\u5c3c\u4e9a\u8bed", "mejs.chinese": "\u4e2d\u6587", "mejs.chinese-simplified": "\u4e2d\u6587\uff08\u7b80\u4f53\uff09", "mejs.chinese-traditional": "\u4e2d\u6587(\uff08\u7e41\u4f53\uff09", "mejs.croatian": "\u514b\u7f57\u5730\u4e9a\u8bed", "mejs.czech": "\u6377\u514b\u8bed", "mejs.danish": "\u4e39\u9ea6\u8bed", "mejs.dutch": "\u8377\u5170\u8bed", "mejs.english": "\u82f1\u8bed", "mejs.estonian": "\u7231\u6c99\u5c3c\u4e9a\u8bed", "mejs.filipino": "\u83f2\u5f8b\u5bbe\u8bed", "mejs.finnish": "\u82ac\u5170\u8bed", "mejs.french": "\u6cd5\u8bed", "mejs.galician": "\u52a0\u5229\u897f\u4e9a\u8bed", "mejs.german": "\u5fb7\u8bed", "mejs.greek": "\u5e0c\u814a\u8bed", "mejs.haitian-creole": "\u6d77\u5730\u514b\u91cc\u5965\u5c14\u8bed", "mejs.hebrew": "\u5e0c\u4f2f\u6765\u8bed", "mejs.hindi": "\u5370\u5730\u8bed", "mejs.hungarian": "\u5308\u7259\u5229\u8bed", "mejs.icelandic": "\u51b0\u5c9b\u8bed", "mejs.indonesian": "\u5370\u5ea6\u5c3c\u897f\u4e9a\u8bed", "mejs.irish": "\u7231\u5c14\u5170\u8bed", "mejs.italian": "\u610f\u5927\u5229\u8bed", "mejs.japanese": "\u65e5\u8bed", "mejs.korean": "\u97e9\u8bed", "mejs.latvian": "\u62c9\u8131\u7ef4\u4e9a\u8bed", "mejs.lithuanian": "\u7acb\u9676\u5b9b\u8bed", "mejs.macedonian": "\u9a6c\u5176\u987f\u8bed", "mejs.malay": "\u9a6c\u6765\u8bed", "mejs.maltese": "\u9a6c\u8033\u4ed6\u8bed", "mejs.norwegian": "\u632a\u5a01\u8bed", "mejs.persian": "\u6ce2\u65af\u8bed", "mejs.polish": "\u6ce2\u5170\u8bed", "mejs.portuguese": "\u8461\u8404\u7259\u8bed", "mejs.romanian": "\u7f57\u9a6c\u5c3c\u4e9a\u8bed", "mejs.russian": "\u4fc4\u8bed", "mejs.serbian": "\u585e\u5c14\u7ef4\u4e9a\u8bed", "mejs.slovak": "\u65af\u6d1b\u4f10\u514b\u8bed", "mejs.slovenian": "\u65af\u6d1b\u6587\u5c3c\u4e9a\u8bed", "mejs.spanish": "\u897f\u73ed\u7259\u8bed", "mejs.swahili": "\u65af\u74e6\u5e0c\u91cc\u8bed", "mejs.swedish": "\u745e\u5178\u8bed", "mejs.tagalog": "\u4ed6\u52a0\u7984\u8bed", "mejs.thai": "\u6cf0\u8bed", "mejs.turkish": "\u571f\u8033\u5176\u8bed", "mejs.ukrainian": "\u4e4c\u514b\u5170\u8bed", "mejs.vietnamese": "\u8d8a\u5357\u8bed", "mejs.welsh": "\u5a01\u5c14\u58eb\u8bed", "mejs.yiddish": "\u610f\u7b2c\u7eea\u8bed" } };
+	</script>
+	<script type='text/javascript' src="/_/static/ow95_dengbaoo/static/js/mediaelement-and-player.min.js"
+		id='mediaelement-core-js'></script>
+	<script type='text/javascript' src="/_/static/ow95_dengbaoo/static/js/mediaelement-migrate.min.js"
+		id='mediaelement-migrate-js'></script>
+	<script type='text/javascript' id='mediaelement-js-extra'>
+			 /* <![CDATA[ */
+			 var _wpmejsSettings = { "pluginPath": "\/wp-includes\/js\/mediaelement\/", "classPrefix": "mejs-", "stretching": "responsive" };
+/* ]]> */
+	</script>
+	<script type='text/javascript' src="/_/static/ow95_dengbaoo/static/js/wp-mediaelement.min.js"
+		id='wp-mediaelement-js'></script>
+	<script type='text/javascript' src="/_/static/ow95_dengbaoo/static/js/vimeo.min.js"
+		id='mediaelement-vimeo-js'></script>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+document.write("<section class=\"row m10 zyl0\">  <div class=\"col-12\"><a target=\"_blank\" href=\"http://www.zaiyulin.com/tags/学习贯彻党的二十大精神/\" title=\"学习宣传贯彻党的二十大精神\"><img alt=\"学习宣传贯彻党的二十大精神\" src=\"http://www.zaiyulin.com/images/ad/20da.png\" class=\"img-f\"></a></div></section>")

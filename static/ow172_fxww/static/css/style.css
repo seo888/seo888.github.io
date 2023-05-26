@@ -1,0 +1,741 @@
+
+/*document*/
+html, body, ul, li, ol, dl, dd, img, div, form, input, form, h1, h2, h3, h4, h5, h6, p {
+    padding: 0px;
+    margin: 0px;
+}
+/*
+html{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(1);
+}
+*/
+ul, li {
+    list-style: none;
+}
+
+input, {
+    outline: none;
+}
+
+.clearfix:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+img {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    width: 100%;
+    hegiht: auto;
+    font-size: 12px;
+    font-family: "微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+}
+
+.blank_10 {
+    height: 10px;
+    clear: both;
+}
+
+.blank_20 {
+    clear: both;
+    height: 20px;
+}
+
+.blank_40 {
+    clear: both;
+    height: 40px;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+i {
+    font-style: normal;
+}
+
+/*临汾消防首页*/
+.xfnav, .xffoot {
+    background-color: #ed1d1d
+}
+
+.xftop {
+    width: 100%;
+    height: 160px;
+    background-color: #ec0000;
+    background-repeat:no-repeat;
+
+}
+
+.xftopc{
+   width:1000px;
+   height:160px;
+   overflow:hidden;
+   margin:0 auto;
+   background-image: url("../image/xflogo.png") ;
+}
+
+.xfnav {
+    width: 100%;
+    height: 56px;
+}
+
+.xfnav ul {
+    display: block;
+    width: 1000px;
+    height: 56px;
+    margin: 0 auto;
+}
+
+.xfnav ul li {
+    display: block;
+    width: 100px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    float: left;
+}
+
+.xfnav ul li a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.xftt {
+    width: 1000px;
+    height: 95px;
+    margin: 0 auto;
+    border-bottom: dotted #369 1px;
+}
+
+.xftt h1 {
+    text-align: center;
+}
+
+.xftt h1 a {
+    line-height: 65px;
+    font-size: 30px;
+    color: #369;
+}
+
+.xftt p {
+    line-height: 30px;
+    font-size: 14px;
+    color: #999;
+}
+
+.xftt p a {
+    color: #699;
+}
+
+.xfxw {
+    width: 1000px;
+    height: 465px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.xfxw_l {
+    width: 310px;
+    float: left;
+    height: 455px;
+    padding-top: 10px;
+}
+
+.xfxw_l h2 {
+    line-height: 46px;
+}
+
+.xfxw_l h2 a {
+    font-size: 20px;
+    color: #2f5593;
+    text-align: left;
+}
+
+.xfxw_l ul li {
+    line-height: 36px;
+    font-size: 16px;
+    color: #333;
+}
+
+.xfxw_r {
+    width: 680px;
+    float: right;
+    height: 445px;
+    margin-top: 10px;
+    border: solid 1px #336699;
+}
+
+.xfad {
+    width: 1000px;
+    height: 180px;
+        margin: 10px auto;
+border:solid 1px red;
+}
+
+.xfmain {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.xfl {
+    width: 660px;
+    float: left;
+    border: solid 0px #2f5593;
+}
+
+.xfbox {
+    width: 320px;
+    overflow: hidden;
+    float: left;
+}
+
+.xfboxc {
+    width: 100%;
+    height: 345px;
+    padding-top: 3px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.xfboxc ul li {
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+.xfboxc ul li a {
+    font-size: 16px;
+}
+
+.xfts {
+    position: absolute;
+    width: 315px;
+    height: 35px;
+    background: #3366cc;
+    text-align: center;
+    top: 143px;
+    left: 0px;
+    border: solid 0px red;
+    z-index: 998;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.xfbts {
+    position: absolute;
+    width: 315px;
+    height: 35px;
+    text-align: center;
+    border: solid 0px red;
+    z-index: 999;
+    top: 143px;
+    left: 0px
+}
+
+.xfbts a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 35px;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+/**/
+.xfts1 {
+    position: absolute;
+    width: 315px;
+    height: 35px;
+    background: #3366cc;
+    text-align: center;
+    top: 200px;
+    left: 0px;
+    border: solid 0px red;
+    z-index: 998;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.xfbts1 {
+    position: absolute;
+    width: 315px;
+    height: 35px;
+    text-align: center;
+    border: solid 0px red;
+    z-index: 999;
+    top: 200px;
+    left: 0px
+}
+
+.xfbts1 a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 35px;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+/**/
+
+.xfbox h3 {
+    border-top: 2px solid #2f5593;
+    font-size: 18px;
+    color: #36c;
+    line-height: 46px;
+    padding-left: 10px;
+}
+
+.boxr {
+    float: right
+}
+
+.xfbox h3 a {
+
+}
+
+.xfbox h3 span {
+    float: right;
+    margin-right: 20px;
+    line-height: 46px;
+}
+
+.xfbox h3 span a img {
+    padding-top: 14px;
+    width: 18px;
+    height: 18px;
+}
+
+.xfr {
+    width: 320px;
+    float: right;
+    border: solid 0px #999999;
+}
+
+.xfvideobox {
+    width: 320px;
+    overflow: hidden;
+    float: left;
+}
+
+.xfvideobox h3 {
+    border-bottom: 1px solid #2f5593;
+    font-size: 18px;
+    color: #36c;
+    line-height: 46px;
+    padding-left: 10px;
+}
+
+.xfvideobox h3 a {
+
+    font-size: 18px;
+    color: #36c;
+}
+
+.xfvideobox h3 span {
+    margin-left: 30px;
+}
+
+.xfvideobox h3 span a {
+    color: #f93;
+}
+
+.xfvideoboxc {
+    width: 100%;
+    height: 345px;
+    padding-top: 3px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.xfvideoboxc ul li {
+    line-height: 32px;
+    padding-left: 30px;
+    background: url("../image/xfvideolibg.jpg") 5px 9px no-repeat;
+}
+
+.xfvideoboxc ul li a {
+    font-size: 16px;
+}
+
+.xftj {
+    width: 100%;
+    background-color: #fed;
+}
+
+.xftj h3 {
+    border-bottom: 1px solid #2f5593;
+    font-size: 18px;
+    color: #36c;
+    line-height: 46px;
+    padding-left: 10px;
+}
+
+.xftj h3 a {
+
+    font-size: 18px;
+    color: #ba1c1d;
+    line-height: 46px;
+
+}
+
+.xftj .nyrp6 {
+    width: 240px;
+    padding: 40px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.xftj .nyrp6 ul {
+    padding: 0;
+    text-align: left;
+    width: 260px;
+    overflow: hidden;
+}
+
+.xftj .nyrp6 li {
+    width: 104px;
+    height: 142px;
+    float: left;
+    background-image: url(../image/xftjbg.jpg);
+    text-align: center;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+.xftj .nyrp6 li .pp {
+    width: 98px;
+    height: 120px;
+    padding: 3px 0 0 3px;
+}
+
+.xftj .nyrp6 li img {
+    width: 98px;
+    height: 120px;
+}
+
+.xftj .nyrp6 li .pf {
+    text-align: center;
+    line-height: 22px;
+}
+
+.xftj .nyrp6 li a {
+    float: left;
+    width: 104px;
+    height: 142px;
+    color: #383838;
+}
+
+.xftj .nyrp6 li a:hover {
+    background-image: url(../image/xftjbghover.jpg);
+    color: #FFFFFF;
+}
+
+.xftj .nyrp6 .li1 {
+    margin-right: 0px;
+}
+
+.xfyq {
+    width: 100%;
+    background-color: #f1f1f1;
+    border-top: solid 1px #d2d2d2;
+}
+
+.xfyqc {
+    width: 1000px;
+    margin: 0 auto;
+    height: 88px;
+    overflow: hidden;
+}
+
+.xfyq_l {
+    width: 80px;
+    line-height: 88px;
+    color: #0d5e95;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+}
+
+.xfyq_r {
+    width: 880px;
+    line-height: 24px;
+    font-size: 14px;
+    float: right;
+    padding: 15px 10px 10px 10px;
+    overflow: hidden;
+}
+
+.xfyq_r a {
+    color: #0d5e95;
+    margin-left: 8px;
+}
+
+.xffoot {
+    width: 100%;
+    height: 135px;
+}
+
+.xffootc {
+    width: 1000px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin: 0 auto;
+}
+.xffootc  a{color:#fff;}
+/*焦点图*/
+.focus {
+    position: relative;
+    width: 680px;
+    height: 445px;
+    background-color: #000;
+    float: left;
+}
+
+.focus img {
+    width: 680px;
+    height: 445px;
+}
+
+.focus .shadow .title {
+    width: 260px;
+    height: 65px;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.focus .shadow .title a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.focus .btn {
+    position: absolute;
+    bottom: 34px;
+    left: 510px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.focus .btn a {
+    position: relative;
+    display: inline;
+    width: 13px;
+    height: 13px;
+    border-radius: 7px;
+    margin: 0 5px;
+    color: #B0B0B0;
+    font: 12px/15px "\5B8B\4F53";
+    text-decoration: none;
+    text-align: center;
+    outline: 0;
+    float: left;
+    background: #D9D9D9;
+}
+
+.focus .btn a:hover, .focus .btn a.current {
+    cursor: pointer;
+    background: #fc114a;
+}
+
+.focus .fPic {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.focus .D1fBt {
+    overflow: hidden;
+    zoom: 1;
+    height: 16px;
+    z-index: 10;
+}
+/*问题*/
+.focus .shadow a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    overflow: hidden;
+    margin-left: 10px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.focus .fcon {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: none;
+    background: #000
+}
+
+.focus .fcon img {
+    display: block;
+}
+
+.focus .fbg {
+    bottom: 25px;
+    right: 40px;
+    position: absolute;
+    height: 21px;
+    text-align: center;
+    z-index: 200;
+}
+
+.focus .fbg div {
+    margin: 4px auto 0;
+    overflow: hidden;
+    zoom: 1;
+    height: 14px
+}
+
+.focus .D1fBt a {
+    position: relative;
+    display: inline;
+    width: 12px;
+    height: 12px;
+    border-radius: 7px;
+    margin: 0 5px;
+    color: #B0B0B0;
+    font: 12px/15px "\5B8B\4F53";
+    text-decoration: none;
+    text-align: center;
+    outline: 0;
+    float: left;
+    background: #D9D9D9;
+}
+
+.focus .D1fBt .current, .focus .D1fBt a:hover {
+    background: #fc114a;
+}
+
+.focus .D1fBt img {
+    display: none
+}
+
+.focus .D1fBt i {
+    display: none;
+    font-style: normal;
+}
+
+.focus .prev, .focus .next {
+    position: absolute;
+    width: 40px;
+    height: 74px;
+    background: url(http://www.lfxww.com/r/cms/lfxww/lfxww/images/focus_btn.png) no-repeat;
+}
+
+.focus .prev {
+    top: 50%;
+    margin-top: -37px;
+    left: 0;
+    background-position: 0 -74px;
+    cursor: pointer;
+}
+
+.focus .next {
+    top: 50%;
+    margin-top: -37px;
+    right: 0;
+    background-position: -40px -74px;
+    cursor: pointer;
+}
+
+.focus .prev:hover {
+    background-position: 0 0;
+}
+
+.focus .next:hover {
+    background-position: -40px 0;
+}
+/*footer*/
+.footer {
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.flink {
+	border-top:5px solid #4C85BA;
+	border-bottom:5px solid #4C85BA;
+	border-left:1px solid #C5D3EE;
+	border-right:1px solid #C5D3EE;
+	padding:5px;
+}
+.flink a{color:#006697;}
+.flink h2{border-bottom:1px solid #4B84BB; width:100%; }
+.flink h2 span{ width:100px; color:#fff; background:#4B84BB; height:25px; line-height:25px; display:inline-block; font-size:14px; text-align:center;}
+.flink ul li{ float:left;}
+.flink ul li a {height:25px;line-height:25px;display:inline-block;text-align:center; padding:0 5px;}
+#f_link ul li{line-height:22px; float:left; display:block; margin:0 7px; white-space:nowrap;}
+.fcopy {
+	text-align:center;
+	line-height:30px;
+	border-top:2px solid #4B84BB
+}
+.fcopy a {
+	color:#4B84BB;
+}
+.fcopy em {
+	font-style:normal;
+	padding:0 15px;
+}
+.foott{width:1000px; margin:0 auto; position:relative;}
+.foott img{float:right;}
+.foott p{line-height:30px; text-align:center}
+.foott p img{float:none;}
+.foott a{ color:#03F;}
+.foott h2{ position:absolute; right:20px; top:57px;}
+
+.gg_pr2{width:300px; height:250px; margin:0 auto;}
+.lfxfgdtp{width:1000px;height:255px; margin:0 auto; border:solid red 0px;}
+.dis{display:block; padding-top:28px; background:url(../image/20150921.jpg)  no-repeat center center; }
+.box_long_pic { width:245px; height:225px; float:left; margin-right:10px }
+.box_long_pic img { width:245px; height:180px; margin-bottom:5px }
+.box_long_pic span { width:245px; height:25px; display:block; text-align:center }
+.box_long_pic span a { color:#003F76 }
+.box_long_pic span a:hover { color:red }

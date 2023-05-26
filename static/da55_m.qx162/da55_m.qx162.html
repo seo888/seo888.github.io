@@ -1,0 +1,716 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN"><!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}" />
+    <link href="/static/da55_m.qx162/static/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/static/da55_m.qx162/static/css/view.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/da55_m.qx162/static/css/cmstop-article.css">
+    <link rel="stylesheet" type="text/css" href="/static/da55_m.qx162/static/css/cmstop-comment-mode.css">
+
+    <!--[if lt IE 9 ]>
+        <script type="text/javascript" src="http://img.qx162.com/templates/default/js/helper/modernizr.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/config.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/cmstop-common.js"></script>
+    <script type="text/javascript" src="http://img.qx162.com/templates/default/js/m.js"></script>
+
+    <script type="text/javascript">
+        var contentid = '374037';// 文章ID
+        var title = "\u8d35\u5dde\u7701\u524d\u4e24\u6708\u65b0\u8bbe\u7acb\u7ecf\u8425\u4e3b\u4f539.44\u4e07\u6237 \u540c\u6bd4\u589e\u957f54.09%";//文章标题
+        var topicid = '780641';// 评论主题
+        var context = '';//全文内容缓存
+        var content = '';//第一页内容缓存
+        var _IMG_URL = 'http://img.qx162.com/templates/default';
+    </script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/cmstop-imagezoom.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/fet.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/repos.js"></script>
+    <script type="text/javascript">fet.setAlias({ IMG_URL: "http://img.qx162.com/" })</script>
+
+    <!--页头导航_ICON开始zd-->
+    <link rel="shortcut icon" type="image/x-icon" href="{随机字符}/{随机字符}.htmlfavicon.ico">
+    <link rel="icon" type="image/x-icon" href="{随机字符}/{随机字符}.htmlfavicon.ico">
+    <!--页头导航_ICON结束-->
+
+    <!--公共头部-->
+    <link href="/static/da55_m.qx162/static/css/bbs.css" rel="stylesheet" type="text/css">
+    <script src="/static/da55_m.qx162/static/js/jquery8.js" type="text/javascript"></script>
+    <script src="/static/da55_m.qx162/static/js/bbs.js" type="text/jscript"></script>
+
+    <link href="/static/da55_m.qx162/static/css/basic.css" rel="stylesheet">
+    <link href="/static/da55_m.qx162/static/css/index.css" rel="stylesheet">
+    <style type="text/css">
+        .right {
+            border: none;
+        }
+
+        .lei {
+            padding-bottom: 15px;
+        }
+
+        .tcleft b {
+            font-weight: normal;
+            font-size: 24px;
+        }
+
+        .news2 {
+            border-top: 4px solid #333;
+        }
+
+        .comment-form .btn-post {
+            border: 0;
+            width: 100px;
+            height: 40px;
+            background: #da2b2b;
+            text-align: center;
+            line-height: 40px;
+            font-size: 14px;
+            color: white;
+            padding: 0;
+        }
+
+        .position {
+            padding: 0px 0px 10px 0px;
+            font-size: 14px;
+            border-bottom: 1px solid #ccc;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .position a {
+            font-size: 14px;
+        }
+
+        .position a:hover {
+            font-size: 14px;
+        }
+
+        .left h1 {
+            width: 605px;
+            height: auto;
+            font-family: "Microsoft YaHei", "simhei", "宋体";
+            color: #101010;
+            font-size: 30px;
+        }
+
+        .article-content {
+            font-size: 14px;
+        }
+
+        .article-content p {
+            font-family: "Microsoft YaHei", "simhei", "宋体";
+            /*color:#404040;*/
+            color: #252525;
+            margin-bottom: 10px;
+            text-align: justify;
+            text-justify: inter-ideograph;
+            word-wrap: break-word;
+            line-height: 34px;
+        }
+
+        .fontSizeSmall p {
+            font-size: 18px;
+            color: #252525;
+        }
+
+        .fontSizeBig p {
+            font-size: 20px;
+            color: #252525;
+        }
+
+        .lei {
+            border-bottom: 1px dashed #e4e4e4;
+            font-size: 14px;
+        }
+
+        .xgwz li {
+            font-size: 16px;
+        }
+
+        .news2 ul li {
+            overflow: hidden;
+            line-height: 25px;
+            fong-size: 16px;
+        }
+
+        .listright {
+            margin-top: 0;
+        }
+
+        .article-title-top {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .article-title-top h1 {
+            display: block;
+            text-align: left;
+            font-size: 36px;
+            font-family: "Microsoft YaHei, SimHei, Arial";
+            color: #252525;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .article-infos .fontsize {
+            position: absolute;
+            width: 70px;
+            /*left: 534px;*/
+            left: auto;
+            top: 14px;
+        }
+
+        .bdsharebuttonbox {
+            float: right;
+            margin-top: 14px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/index.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/jquery.cookie.js"></script>
+    <style type="text/css">
+        /*    .mod_cont{ padding-right: 3px; }
+ .hd_top_fixed{background: white; z-index: 9999;}
+ .fixed{position: fixed;width: 100%;left:0; top:0;}
+ .anm{transition:all 0.01s;-webkit-transition: all 0.01s;}
+ .hd_top_search_f{height: 56px;}
+ .h_find_f{ transform:translate(-0px,-18px);-webkit-transform:translate(-0px,-18px);}
+ .qx_logo_f{ margin: 10px 0;}
+ .qx_logo_f img{height:40px;} */
+    </style>
+    <div class="hd_top_fixed">
+        <div class="hd_top header-topbar">
+            <div class="w_1000">
+                <p class="hd_tool"><a href="javascript:void(0)"
+                        onclick="SetHome(this,'{随机字符}/{随机字符}.html')">设为首页</a><a href="javascript:void(0)"
+                        onclick="shoucang('{关键词1}','{随机字符}/{随机字符}.html')">加入收藏</a><a href="{随机字符}/{随机字符}.html"
+                        class="no_border">网站地图</a><span class="hd_time">2015年11月10日19：22：53 星期二</span></p>
+                <p class="mobile_itmes"><a href=""><em class="phone_icon"></em>手机{关键词1}</a><a href="" class="no_border"><em
+                            class="wx_icon"></em>官方微信</a>
+                    <img src="/static/da55_m.qx162/static/picture/ewm.jpg" id='wx'>
+                </p>
+
+            </div>
+        </div>
+
+        <!-- 广告 -->
+       
+        <script type="text/javascript">
+
+
+// 导航自动固定
+            /*if(typeof(s)=="undefined"){
+             window.onscroll=function(){
+            
+                var sh=$('body').scrollTop();
+            
+            
+                if(sh>0){
+                $('.hd_top').hide();
+                $('.hd_top_fixed').addClass('fixed');
+                $('.qx_logo').addClass('qx_logo_f');
+                $('.h_find').addClass('h_find_f');
+                $('.hd_top_search').addClass('hd_top_search_f');
+                }else{
+                $('.hd_top').show();
+                $('.hd_top_fixed').removeClass('fixed');
+                $('.qx_logo').removeClass('qx_logo_f'); 
+                $('.h_find').removeClass('h_find_f');
+                $('.hd_top_search').removeClass('hd_top_search_f');
+                }
+                
+             
+             };    
+            
+            }*/
+        </script><!--位置-标题star-->
+        <!--位置 搜索-->
+        <div class="position clearfix">
+            <div style="width:600px; float:left;">
+                您当前的位置：<a href="{随机字符}/{随机字符}.html">首页</a> <em>&gt;</em> <a href="{随机字符}/{随机字符}.html">资讯</a>
+                <em>&gt;</em> <a href="{随机字符}/{随机字符}.html">贵州</a>
+            </div>
+
+            <!--搜索-->
+            <div style="width:300px; float:right; margin-top:-30px;">
+                <!-- 搜索框 -->
+                <div class="search clearfix fl">
+                    <form id="search_form" method="get" action="http://app.qx162.com/" target="_blank">
+                        <div class="lb" id="searchFormOption">
+                            <ul class="u_bg">
+                                <li><a id="loginUl" style="cursor: default;" class="a_cl">全站</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="t_btn clearfix">
+                            <div class="text_bg" id="suggest_list">
+                                <input type="hidden" name="app" value="search">
+                                <input type="hidden" name="controller" value="index">
+                                <input type="hidden" name="action" value="search">
+                                <input type="hidden" id="type" name="type" value="all">
+                                <input id="keyword" type="text" name="wd" value="" class="text01" autocomplete="off"
+                                    placeholder="{关键词1} 热搜 贵州">
+
+                            </div>
+                            <div class="btn_bg"><input name="" type="submit" id="btnSearch1" class="btn01" value="">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- 搜索框end -->
+            </div>
+            <!--搜索end-->
+        </div>
+        <!--标题star-->
+        <div class="article-title-top">
+            <h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+            <div class="article-infos">
+                <div class="lei">
+                    <div class="zuoze">{当前时间}</div>
+
+                    <div class="zuoze"> 来源：{网站名称}</div>
+                    <div class="zuoze">
+                        <div class="zt">
+                            <div class="fontsize">
+                                <span class="f-l">字号：</span>
+                                <span class="small" title="切换到小字号" onclick="changeFont(this);return false;"></span>
+                                <span class="big bactive" onclick="changeFont(this);return false;"
+                                    title="切换到大字号"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bdsharebuttonbox"><a href="{随机字符}/{随机字符}.html" class="bds_more" data-cmd="more">分享到：</a><a
+                            title="分享到QQ空间" href="{随机字符}/{随机字符}.html" class="bds_qzone" data-cmd="qzone"></a><a
+                            title="分享到新浪微博" href="{随机字符}/{随机字符}.html" class="bds_tsina" data-cmd="tsina"></a><a title="分享到微信"
+                            href="{随机字符}/{随机字符}.html" class="bds_weixin" data-cmd="weixin"></a></div>
+                    <script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": { "bdSize": 16 } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com//static/da55_m.qx162/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                </div>
+            </div>
+        </div>
+        <!--位置-标题end-->
+        <div class="content">
+            <div class="left" style="border:0;overflow:hidden;">
+
+                <div class="c">
+                    <div class="cc2">
+                        <script type="text/javascript">
+                            function doZoom(size) { document.getElementById('zoom').style.fontSize = size + 'px'; }
+                        </script>
+
+                        <!-- 文章内容 -->
+                        <div class="article-content fontSizeSmall BSHARE_POP">
+                            <span id="zoom">
+                                <p>{新闻网内容}
+                                </p>
+                            </span>
+                        </div><!-- @end 文章内容 -->
+
+
+                        <style type="text/css">
+                            .conbtm {
+                                margin-top: 20px;
+                                margin-bottom: -20px;
+                            }
+
+                            .befrombottom {
+                                float: right;
+                                color: #666666;
+                                font-size: 14px;
+                                margin-right: 5px;
+                            }
+
+                            .befrombottom a {
+                                font-size: 14px;
+                                color: #666666;
+                            }
+                        </style>
+                        <div class="conbtm"><span><a href="{随机字符}/{随机字符}.html" target="_blank">【{关键词1}版权及免责申明】</a></span><span
+                                class="befrombottom" style="">&nbsp;来源:{网站名称}&nbsp; 责任编辑： {人物名称}</span></div>
+                    </div>
+                </div>
+                <br>
+                <div class="page1">
+                    <p align="center" class="pageLink"></p>
+                </div>
+
+
+                <p style="height:2px;width:588px;border-top:1px solid #999;margin:0px;"></p>
+                <!-- 心情 -->
+                <div class="article-mood topblank">
+                    <div class="_inner">
+
+                        <ul class="ov">
+                            <li class="item" id="m_1">
+                                <div class="progress" title="0">
+                                    <div class="per bdper" style="height:0%;"></div>
+                                </div>
+                                <span>微笑</span>
+                                <div class="mood-ico">
+                                    <a href="javascript:mood.set(1);">
+                                        <img src="/static/da55_m.qx162/static/picture/weixiao.png" class="imgnumber" alt="微笑" width="40"
+                                            height="40">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="item" id="m_3">
+                                <div class="progress" title="0">
+                                    <div class="per bdper" style="height:0%;"></div>
+                                </div>
+                                <span>流汗</span>
+                                <div class="mood-ico">
+                                    <a href="javascript:mood.set(3);">
+                                        <img src="/static/da55_m.qx162/static/picture/liuhan.png" class="imgnumber" alt="流汗" width="40"
+                                            height="40">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="item" id="m_2">
+                                <div class="progress" title="0">
+                                    <div class="per bdper" style="height:0%;"></div>
+                                </div>
+                                <span>难过</span>
+                                <div class="mood-ico">
+                                    <a href="javascript:mood.set(2);">
+                                        <img src="/static/da55_m.qx162/static/picture/nanguo.png" class="imgnumber" alt="难过" width="40"
+                                            height="40">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="item" id="m_4">
+                                <div class="progress" title="0">
+                                    <div class="per bdper" style="height:0%;"></div>
+                                </div>
+                                <span>羡慕</span>
+                                <div class="mood-ico">
+                                    <a href="javascript:mood.set(4);">
+                                        <img src="/static/da55_m.qx162/static/picture/xianmu.png" class="imgnumber" alt="羡慕" width="40"
+                                            height="40">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="item" id="m_5">
+                                <div class="progress" title="0">
+                                    <div class="per bdper" style="height:0%;"></div>
+                                </div>
+                                <span>愤怒</span>
+                                <div class="mood-ico">
+                                    <a href="javascript:mood.set(5);">
+                                        <img src="/static/da55_m.qx162/static/picture/fennu.png" class="imgnumber" alt="愤怒" width="40"
+                                            height="40">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="item" id="m_6">
+                                <div class="progress" title="0">
+                                    <div class="per bdper" style="height:0%;"></div>
+                                </div>
+                                <span>流泪</span>
+                                <div class="mood-ico">
+                                    <a href="javascript:mood.set(6);">
+                                        <img src="/static/da55_m.qx162/static/picture/liulei.png" class="imgnumber" alt="流泪" width="40"
+                                            height="40">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div><!-- @end 心情 -->
+                <div class="mygt_title" style="border-top:none">
+                    <div class="tcleft"><b>相关新闻</b></div>
+                    <div class="tcright3">
+                        <div class="rel-news">
+                            <div class="keywords"><strong>关键词：</strong>
+
+                                <a href="{随机字符}/{随机字符}.html" title="{随机关键词}" target="_blank">{随机关键词}</a>
+                                <a href="{随机字符}/{随机字符}.html" title="{随机关键词}" target="_blank">{随机关键词}</a>
+                                <a href="{随机字符}/{随机字符}.html" title="{随机关键词}" target="_blank">{随机关键词}</a>
+                                <a href="{随机字符}/{随机字符}.html" title="{随机关键词}" target="_blank">{随机关键词}</a>
+                                <a href="{随机字符}/{随机字符}.html" title="{随机关键词}" target="_blank">{随机关键词}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="xgwz">
+                    <ul>
+
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html"
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html" 
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                        <li><a href="{随机字符}/{随机字符}.html" 
+                                target="_blank">&bull;&nbsp;{标题}</a><span>{年月日}</span></li>
+                    </span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+            <div class="right" style="width:330px;padding-left:2px;">
+                <link href="/static/da55_m.qx162/static/css/lv2.css" rel="stylesheet">
+                <link href="/static/da55_m.qx162/static/css/cmstop-right-common.css" rel="stylesheet" type="text/css">
+                <div class="listright">
+                    
+                    </div>
+                    <!-- 新闻排行 -->
+                    <div class="news-rank-box">
+                        <div class="m-head dotted-head">
+                            <ul class="tab-head" id="tabmenu">
+                                <li><a rel="tab" href="{随机字符}/{随机字符}.html" target="_blank" title="">浏览</a></li>
+                                <!-- 当前样式为class="tabactive" -->
+                                <li><a rel="tab" href="{随机字符}/{随机字符}.html" target="_blank" title="">评论</a></li>
+                            </ul>
+                            <em class="ico"></em>
+                            <div class="title"><a href="{随机字符}/{随机字符}.html" target="_blank" title="" class="words">新闻排行</a>
+                            </div>
+                        </div>
+                        <div class="m-main" id="tabcontent">
+                            <div title="tab">
+                                <ul class="list">
+                                    <li class="item"><em class="ico n1">1</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}"
+                                            class="title">{标题}“</a></li>
+                                    <li class="item"><em class="ico n2">2</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}"
+                                            class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico n3">3</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}"
+                                            class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">4</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">5</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a>
+                                    </li>
+                                    <li class="item"><em class="ico">6</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}"
+                                            class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">7</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a>
+                                    </li>
+                                    <li class="item"><em class="ico">8</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">9</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">10</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div title="tab">
+                                <ul class="list">
+                                    <li class="item"><em class="ico n1">1</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico n2">2</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}"
+                                            class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico n3">3</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}"
+                                            class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">4</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">5</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a>
+                                    </li>
+                                    <li class="item"><em class="ico">6</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a>
+                                    </li>
+                                    <li class="item"><em class="ico">7</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">8</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">9</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                    <li class="item"><em class="ico">10</em><a href="{随机字符}/{随机字符}.html" target="_blank"
+                                            title="{标题}" class="title">{标题}</a></li>
+                                </ul>
+                            </div>
+                        </div><!-- 公共区块 新闻排行 -->
+                    </div><!-- @end 新闻排行 -->
+                    <!--最新新闻-->
+                    <div class="listrightcon">
+                        <div class="listrightcon_title">最新新闻</div>
+                        <div class="listrightcon_list">
+                            <ul class="listrightcon_list_show">
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="花{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                                <li>
+                                    <a href="{随机字符}/{随机字符}.html" title="{标题}">{标题}</a>
+
+                                </li>
+                            </ul>
+                        </div><!-- 公共区块 最新新闻 -->
+                    </div>
+                    <!--最新新闻end-->
+                    <div class="positionfixed"></div>
+                    <div class="gg4 right_ad">
+
+                        </div>
+                        <p style="font-size:14px; margin:10px auto;">合作联系邮箱：{当前主域名} </p>
+                        <!-- 全局广告 列表页右侧公共广告2 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function () {
+                $('.article-content a').each(function (i, a) {
+                    var $a = $(a);
+                    if (!$a.attr('target')) {
+                        $a.attr('target', '_blank');
+                    }
+                });
+            });
+
+            $(window).scroll(function () {
+                var omng = $('.right_ad').offset();
+                var jtl = $('.positionfixed').offset();
+
+                if (omng.top < $(document).scrollTop() + 20) {
+                    $('.right_ad').css({
+                        position: 'fixed',
+                        top: 20,
+                        margin: 0,
+                        'z-index': 1,
+                        background: '#fff',
+                        left: omng.left
+                    })
+                } else if (omng.top < jtl.top + 147) {
+                    $(".right_ad").css({
+                        position: 'static'
+                    })
+                }
+            });
+        </script><!-- 公共区块 公共右侧列表 -->
+
+        <div style="clear:both;"></div>
+    </div>
+    <style>
+        .listright {
+            margin-top: 0px;
+        }
+    </style>
+    <div class="footer">
+        <div class="w_1000">
+            <div class="footer_about"><a href="{随机字符}/{随机字符}.html" target="_blank">关于我们（About Us）</a> | <a href="{随机字符}/{随机字符}.html"
+                    target="_blank">免责声明</a> | <a href="{随机字符}/{随机字符}.html" target="_blank" rel="nofollow">广告报价</a> | <a
+                    href="{随机字符}/{随机字符}.html" target="_blank">网站地图</a> | <a href="{随机字符}/{随机字符}.html" target="_blank">联系我们</a>&nbsp;
+            </div>
+            <div class="footer_copyright">
+                <p><a href="{随机字符}/{随机字符}.html"></a><span style="text-indent: 2em;">&nbsp;</span><a
+                        href="{随机字符}/{随机字符}.html">黔ICP备14000209号-2</a><span style="text-indent: 2em;"> | </span><a
+                        href="{随机字符}/{随机字符}.html">互联网直播备案号：黔ILS备201708030002</a><span style="text-indent: 2em;"> | </span><a
+                        href="{随机字符}/{随机字符}.html">贵公网安备 52010202000582号</a>&nbsp;<span
+                        style="text-indent: 2em;">|&nbsp;</span><a href="{随机字符}/{随机字符}.html">互联网新闻信息编辑培训资格证</a></p>
+            </div>
+            <script type="text/javascript" src="/static/da55_m.qx162/static/js/recommend.js"></script>
+            <script type="text/javascript">// <![CDATA[
+                var _hmt = _hmt || [];
+                (function () {
+                    var hm = document.createElement("script");
+                    hm.src = "//hm.baidu.com/hm.js?d9067cc288532dfcff28474f85b4a54d";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+// ]]></script>
+        </div>
+    </div>
+
+    <!-- 脚本区域 -->
+
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/ZeroClipboard.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/digg.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/article-show.js"></script>
+    <script type="text/javascript" src="/static/da55_m.qx162/static/js/mood-show.js"></script>
+    <script>
+        $(function () {
+            $('.article-content a').each(function (i, a) {
+                var $a = $(a);
+                if (!$a.attr('target')) {
+                    $a.attr('target', '_blank');
+                }
+            });
+        });
+    </script>
+
+
+    <div id="qxw_localtime" style="display: none;"></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>

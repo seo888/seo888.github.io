@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <link href="http://www.yongzhou.gov.cn/images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/_/static/ow53_yongzhou/static/css/global_v17.css">
+    <link rel="stylesheet" href="/_/static/ow53_yongzhou/static/css/yznews.css" type="text/css">
+    <link rel="stylesheet" href="/_/static/ow53_yongzhou/static/css/orbit.css">
+    <style>
+            #mb7_x2p{
+                width: 450px;
+                word-wrap: break-word;
+                text-overflow: ellipsis;
+                display: -webkit-box;/** 对象作为伸缩盒子模型显示 **/
+                -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                -webkit-line-clamp: 3; /** 显示的行数 **/
+                overflow: hidden;  /** 隐藏超出的内容 **/
+            }
+        </style>
+        <style>
+            span.bt{
+                width: 450px;
+                word-wrap: break-word;
+                text-overflow: ellipsis;
+                display: -webkit-box;/** 对象作为伸缩盒子模型显示 **/
+                -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+                -webkit-line-clamp: 1; /** 显示的行数 **/
+                overflow: hidden;  /** 隐藏超出的内容 **/
+            }
+        </style>
+    <script src="/_/static/ow53_yongzhou/static/js/jquery-1.7.2.min.js"></script>
+    <script language="JavaScript" src="/_/static/ow53_yongzhou/static/js/header.js"></script>
+    <script language="JavaScript" src="/_/static/ow53_yongzhou/static/js/textgd2.js"></script>
+    <script src="/_/static/ow53_yongzhou/static/js/global.js" type="text/javascript"></script>
+    <script>
+        var content_materials = [];
+        console.log(content_materials)
+    </script>
+
+    <script>
+
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {     //移动终端浏览器版本信息
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            }(),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+        if (browser.versions.mobile) {//判断是否是移动设备打开
+            var href = window.location.href.split('/');
+            var test = href[2];
+            if (test == 'city.yongzhou.gov.cn') {
+                test = test.replace(test, 'wap.yongzhou.gov.cn/city');
+            } else if (test == 'news.yongzhou.gov.cn') {
+                test = test.replace(test, 'wap.yongzhou.gov.cn/news');
+            } else if (test == 'zt.yongzhou.gov.cn') {
+                test = test.replace(test, 'wap.yongzhou.gov.cn/zt');
+            } else if (test == 'edu.yongzhou.gov.cn') {
+                test = test.replace(test, 'wap.yongzhou.gov.cn/edu');
+            } else if (test == 'photo.yongzhou.gov.cn') {
+                test = test.replace(test, 'wap.yongzhou.gov.cn/photo');
+            } else if (test == 'culture.yongzhou.gov.cn') {
+                test = test.replace(test, 'wap.yongzhou.gov.cn/culture');
+            } else if (test == 'theory.yongzhou.gov.cn') {
+                test = test.replace(test, 'wap.yongzhou.gov.cn/theory');
+            } else {
+                test = test.replace(test, 'wap.yongzhou.gov.cn');
+            }
+
+            href[2] = test;
+            window.location.href = href.join('/');
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <script>
+        !(function (c, b, d, a) {
+            c[a] || (c[a] = {}); c[a].config = { pid: "gcduf58k97@8b71c4ce5583f24", appType: "web", imgUrl: "https://arms-retcode.aliyuncs.com/r.png?", sendResource: true, enableLinkTrace: true, behavior: true };
+            with (b) with (body) with (insertBefore(createElement("script"), firstChild)) setAttribute("crossorigin", "", src = d)
+        })(window, document, "https://retcode.alicdn.com/retcode/bl.js", "__bl");
+    </script>
+    <!--头部区域st-->
+    <div class="header">
+        <div class="se_top1">
+            <div class="se_txp">
+                <a href="{泛站内链}"target="_blank">永网首页</a><span class="line12">|</span>
+                <a href="{泛站内链}"target="_blank">永州新闻</a><span class="line12">|</span>
+                <a href="{泛站内链}"target="_blank">教育新闻</a><span class="line12">|</span>
+
+
+                <a href="{泛站内链}"target="_blank">视频新闻</a><span class="line12">|</span>
+
+
+                <a href="{泛站内链}"target="_blank">遇见</a><span class="line12">|</span>
+
+
+                <a href="{泛站内链}"target="_blank">永网关注</a><span class="line12">|</span>
+
+
+
+
+
+                <a href="{泛站内链}"target="_blank">文化永州</a><span class="line12">|</span>
+
+
+
+                <a href="{泛站内链}"target="_blank">永网专题</a><span class="line12">|</span>
+
+
+                <a href="{泛站内链}"target="_blank">问政永州</a><span class="line12">|</span>
+
+                <a href="{泛站内链}"target="_blank">公示公告</a><span class="line12">|</span>
+            </div>
+        </div>
+    </div>
+    <div class="ad_1 ad_h70 topad2">
+
+    </div>
+    <div class="clear h10"></div>
+    <div class="se_adlg">
+        <div class="se_logo m370" style="width: 460px;text-align: center">
+            <a class="" href="{泛站内链}">
+            </a>
+
+        </div>
+        <div class="se_sous m370 left">
+
+            <div class="search se_d1">
+                <form method="get" target="_blank" action="{泛站内链}">
+                    <input type="text" name="search_text" value="" placeholder="搜索从这里开始...">
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--清除样式隔离-->
+    <div class="clear h10"></div>
+
+
+    <!--头部区域end-->
+    <!--头部区域end-->
+    <input class="column_id" type="hidden" value="119">
+    <script>
+        var city_id = $(".column_id").val();
+        var city_arr = ["{关键词1}", "{随机关键词}", "{随机关键词}", "{随机关键词}", "{随机关键词}"];
+        if (city_id == "117") {
+            var one = city_arr[0];
+
+            $("#pic").attr("src", "/themes/default/images/yz-logo.jpg");
+        } else if (city_id == "118") {
+            var two = city_arr[1];
+
+            $("#pic").attr("src", "/themes/default/images/hn-logo.jpg");
+        } else if (city_id == "119") {
+            var three = city_arr[2];
+
+            $("#pic").attr("src", "/themes/default/images/gn-logo.jpg");
+
+        }
+        // else if("189">city_id  && city_id>"172" && city_id<>"174" ){
+        //   var three=city_arr[4];
+        //   
+        //   $("#pic").attr("src","http://city.yongzhou.gov.cn/themes/default/images/qx-logo.jpg");
+        // }
+        else {
+            //var seven=city_arr[3];
+            //$("#pic").attr("src","/themes/default/images/logo.png");
+        }
+
+
+    </script> <!-- 头部 -->
+
+    <div class="ad_1 topad2">
+        <script language="javascript" src="/_/static/ow53_yongzhou/static/js/1.B0_2.js"></script>
+    </div>
+    <!--主体区域st-->
+    <div class="se_main">
+        <div class="new-detailtit">
+            <div class="title_nav" style="color: chocolate;font-size: 14px;">
+                <a href="{泛站内链}"target="_blank">{网站名称}</a>
+                <!---->
+                <!---->
+                &gt; <a href="{泛站内链}"target="_blank">首页 </a>
+                <!---->
+                <!---->
+                <!---->
+                &gt; <a href="{泛站内链}"target="_blank">{关键词1} </a>
+                <!---->
+                <!---->
+            </div>
+            <div class="title">
+                {新闻网标题} </div>
+            <div class="fenxian right">
+                <div class="bshare-custom icon-medium-plus">
+                    <a title="分享到QQ空间" class="bshare-qzone"></a>
+                    <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                    <a title="分享到人人网" class="bshare-renren"></a>
+                    <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+                    <a title="分享到网易微博" class="bshare-neteasemb"></a>
+                    <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span
+                        class="BSHARE_COUNT bshare-share-count">0</span>
+                </div>
+                <script type="text/javascript" src="/_/static/ow53_yongzhou/static/js/buttonLite.js">
+                </script>
+                <script type="text/javascript" src="/_/static/ow53_yongzhou/static/js/bshareC0.js"></script>
+            </div>
+            <div class="author">
+                <!---->
+                <span id="source">[来源：<i clsss="s_txt">{关键词1}</i>]</span>&nbsp;&nbsp;
+                <!---->
+                <!---->
+                <!---->
+                <span id="bianji">[编辑：<i class="e_txt"> {人物名称} 二审： {人物名称} 三审： {人物名称}</i>]</span> &nbsp;&nbsp;
+                <!---->
+                <!---->
+                <span id="time">时间：<i class="t_txt">{当前时间}</i></span>
+                <!---->
+            </div>
+        </div>
+
+        <!--主体st-->
+
+        <div class="se_box_news">
+            <div class="mbox770">
+                <div class="news_detail_ad">
+                    <script language="javascript" src="/_/static/ow53_yongzhou/static/js/1.018.js">
+                    </script>
+                </div>
+                <!--清除样式隔离-->
+                <div class="content">
+                    <p style="text-indent: 2em;"><span class="m2o-tip-space"
+                            style="position:absolute;margin:0;padding:0;width:1px;height:1px;visibility:hidden;"></span>{句子}
+                    </p>
+                    <p style="text-indent: 2em;"><span class="m2o-tip-space"
+                            style="position:absolute;margin:0;padding:0;width:1px;height:1px;visibility:hidden;"></span><strong>{句子}</strong>
+                    </p>
+                    <p style="text-indent: 2em;">
+                        {关键词1}{句子}{句子}{关键词1}{句子}
+                    </p>
+                    <p>
+                    <p style="text-indent: 0px; text-align: center;"><img
+                            src="{随机图片}"></p>
+                    <p style="text-indent: 2em;">{关键词1}{句子}{句子}{关键词1}{句子}</p>
+                    <p style="text-indent: 2em;"><span class="m2o-tip-space"
+                            style="position:absolute;margin:0;padding:0;width:1px;height:1px;visibility:hidden;"></span><strong>{句子}</strong>
+                    </p>
+                    <p>
+                    <p style="text-indent: 0px; text-align: center;"><img
+                            src="{随机图片}"></p>
+                    <p style="text-indent: 2em;">
+                        {句子}{句子}{关键词1}{句子}
+                    </p>
+                    <p style="text-indent: 2em;"><span class="m2o-tip-space"
+                            style="position:absolute;margin:0;padding:0;width:1px;height:1px;visibility:hidden;"></span><strong>{句子}</strong>
+                    </p>
+                    <p style="text-indent: 2em;">
+                        {句子}
+                    </p>
+                    <p>
+                    <p style="text-indent: 0px; text-align: center;"><img
+                            src="{随机图片}">
+                    </p>
+                    <p style="text-indent: 2em;">{句子}{关键词1}{句子}
+                        {句子}</p>
+                    <p style="text-indent: 2em;"><span class="m2o-tip-space"
+                            style="position:absolute;margin:0;padding:0;width:1px;height:1px;visibility:hidden;"></span><strong>{句子}</strong>
+                    </p>
+                    <p>
+                    <p style="text-indent: 0px; text-align: center;"><img
+                            src="{随机图片}"></p>
+                    <p style="text-indent: 2em;">
+                        {句子}{关键词1}{句子}{句子}{关键词1}
+                    </p> <!---->
+                </div>
+                <!--清除样式隔离-->
+                <div class="clear h20"></div>
+                <!--清除样式隔离-->
+                <div class="se_box_tit">
+                    <h2>相关新闻<span>关键词：{随机关键词},{随机关键词},{随机关键词}</span></h2>
+                </div>
+
+
+
+                <!---->
+
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="{泛站内链}"target="_blank">
+                            <img
+                                src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="{泛站内链}"target="_blank">
+                                <span class="bt">{关键词1}{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p" id="mb7_x2p">
+                            {关键词1}{句子}<a
+                                href="{泛站内链}"target="_blank">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="{泛站内链}"target="_blank">国内新闻</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+
+                <!---->
+
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="{泛站内链}"target="_blank">
+                            <img
+                                src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="{泛站内链}"target="_blank">
+                                <span class="bt">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p" id="mb7_x2p">
+                            {句子}<a
+                                href="{泛站内链}"target="_blank">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="{泛站内链}"target="_blank">国内新闻</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+
+                <!---->
+
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="{泛站内链}"target="_blank">
+                            <img
+                                src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="{泛站内链}"target="_blank">
+                                <span class="bt">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p" id="mb7_x2p">
+                            {句子}<a
+                                href="{泛站内链}"target="_blank">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="{泛站内链}"target="_blank">国内新闻</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+
+                <!---->
+
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="{泛站内链}"target="_blank">
+                            <img
+                                src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="{泛站内链}"target="_blank">
+                                <span class="bt">{关键词1}{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p" id="mb7_x2p">
+                            {句子}<a
+                                href="{泛站内链}"target="_blank">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="{泛站内链}"target="_blank">国内新闻</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+
+                <!---->
+
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="{泛站内链}"target="_blank">
+                            <img
+                                src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="{泛站内链}"target="_blank">
+                                <span class="bt">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p" id="mb7_x2p">
+                            {句子}<a
+                                href="{泛站内链}"target="_blank">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="{泛站内链}"target="_blank">国内新闻</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+
+                <!---->
+
+                <!---->
+                <div class="mb7_x2">
+                    <div class="mb7_x2pic">
+                        <a href="{泛站内链}"target="_blank">
+                            <img
+                                src="{随机图片}">
+                        </a>
+                    </div>
+                    <div class="mb7_x2body ">
+                        <h3>
+                            <a href="{泛站内链}"target="_blank">
+                                <span class="bt">{标题}</span>
+                            </a>
+                        </h3>
+                        <p class="mb7_x2p" id="mb7_x2p">
+                            {句子}<a
+                                href="{泛站内链}"target="_blank">【详情】</a>
+                        </p>
+
+                        <div class="clear mb7_x2body_button">
+
+                            <a href="{泛站内链}"target="_blank">国内新闻</a> &nbsp;&nbsp; | &nbsp;&nbsp;
+                            {年月日}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+
+            </div>
+
+            <!--列表 详情页右侧-->
+            <!--内容页和列表页等 的右边列表-->
+            <div class="mboxr390 right">
+                <div class="list_right_ad">
+                    <script language="javascript" src="/_/static/ow53_yongzhou/static/js/1.014.js">
+                    </script>
+                </div>
+                <!-- 最新更新 -->
+                <div class="se_box_tit">
+                    <h2>最新更新</h2>
+                </div>
+                <div class="se_box_li2 left">
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}{关键词1}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{关键词1}{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                    <!---->
+                    <p>
+                        <a href="{泛站内链}"target="_blank">{标题}</a>
+                    </p>
+                    <!---->
+                </div> <!-- end 最新更新 -->
+                <!--清除样式隔离-->
+                <div class="clear h20"></div>
+                <!--清除样式隔离-->
+                <!-- 问政厅 -->
+                <div class="se_box_tit">
+                    <h2>零距离网络问政厅</h2>
+                </div>
+                <div class="se_imp_ol">
+                    <ol class="ybs_sub">
+
+                    </ol>
+                </div>
+
+                <script>
+                    var Base64 = {
+                        _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+                        encode: function (e) {
+                            var t = "";
+                            var n, r, i, s, o, u, a;
+                            var f = 0;
+                            e = Base64._utf8_encode(e);
+                            while (f < e.length) {
+                                n = e.charCodeAt(f++);
+                                r = e.charCodeAt(f++);
+                                i = e.charCodeAt(f++);
+                                s = n >> 2;
+                                o = (n & 3) << 4 | r >> 4;
+                                u = (r & 15) << 2 | i >> 6;
+                                a = i & 63;
+                                if (isNaN(r)) {
+                                    u = a = 64
+                                } else if (isNaN(i)) {
+                                    a = 64
+                                }
+                                t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr
+                                    .charAt(a)
+                            }
+                            return t
+                        },
+                        decode: function (e) {
+                            var t = "";
+                            var n, r, i;
+                            var s, o, u, a;
+                            var f = 0;
+                            e = e.replace(/[^A-Za-z0-9+/=]/g, "");
+                            while (f < e.length) {
+                                s = this._keyStr.indexOf(e.charAt(f++));
+                                o = this._keyStr.indexOf(e.charAt(f++));
+                                u = this._keyStr.indexOf(e.charAt(f++));
+                                a = this._keyStr.indexOf(e.charAt(f++));
+                                n = s << 2 | o >> 4;
+                                r = (o & 15) << 4 | u >> 2;
+                                i = (u & 3) << 6 | a;
+                                t = t + String.fromCharCode(n);
+                                if (u != 64) {
+                                    t = t + String.fromCharCode(r)
+                                }
+                                if (a != 64) {
+                                    t = t + String.fromCharCode(i)
+                                }
+                            }
+                            t = Base64._utf8_decode(t);
+                            return t
+                        },
+                        _utf8_encode: function (e) {
+                            e = e.replace(/rn/g, "n");
+                            var t = "";
+                            for (var n = 0; n < e.length; n++) {
+                                var r = e.charCodeAt(n);
+                                if (r < 128) {
+                                    t += String.fromCharCode(r)
+                                } else if (r > 127 && r < 2048) {
+                                    t += String.fromCharCode(r >> 6 | 192);
+                                    t += String.fromCharCode(r & 63 | 128)
+                                } else {
+                                    t += String.fromCharCode(r >> 12 | 224);
+                                    t += String.fromCharCode(r >> 6 & 63 | 128);
+                                    t += String.fromCharCode(r & 63 | 128)
+                                }
+                            }
+                            return t
+                        },
+                        _utf8_decode: function (e) {
+                            var t = "";
+                            var n = 0;
+                            var r = c1 = c2 = 0;
+                            while (n < e.length) {
+                                r = e.charCodeAt(n);
+                                if (r < 128) {
+                                    t += String.fromCharCode(r);
+                                    n++
+                                } else if (r > 191 && r < 224) {
+                                    c2 = e.charCodeAt(n + 1);
+                                    t += String.fromCharCode((r & 31) << 6 | c2 & 63);
+                                    n += 2
+                                } else {
+                                    c2 = e.charCodeAt(n + 1);
+                                    c3 = e.charCodeAt(n + 2);
+                                    t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+                                    n += 3
+                                }
+                            }
+                            return t
+                        }
+                    }
+
+                    var arr = [];
+                    $.ajax({
+                        url: "{当前url}",
+                        type: 'get', // 请求的类型（get post）
+                        data: {
+
+                        },
+                        dataType: "json", // 期望后端给你返回的数据类型
+                        timeout: 5000, // 如果5秒之后，数据还没有回来，则请求超时
+                        async: true, // 是否异步，默认为true（是异步）
+                        success: function (data) {
+                            arr.push(data);
+                            $.each(arr[0], function (index, item) {
+                                $.each(item, function (i, n) {
+                                    var title = n.PoliticsTitle;
+                                    var decodedTitle = Base64.decode(title);
+                                    decodedTitle = decodedTitle.substring(0, 15);
+                                    var time = n.CreateTime;
+                                    var decodedTime = Base64.decode(time);
+                                    decodedTime = decodedTime.substring(0, 10);
+                                    var danwei = n.ReplyDepartment;
+                                    var decodedDanwei = Base64.decode(danwei);
+                                    var txt = n.PoliticsContent;
+                                    var decodedTxt = Base64.decode(txt);
+                                    var status = n.Status;
+                                    var decodedStatus = Base64.decode(status);
+                                    var link = n.ID;
+                                    var decodedLink = Base64.decode(link);
+                                    var aLink = "http://main.hn0746.com/Share/PoliticsNesShare.aspx?id=" +
+                                        decodedLink + "&stID=" + 0;
+                                    /*if (decodedStatus == 15) {
+                                        decodedStatus = "[已交办]";
+                                    } else if (decodedStatus == 20) {
+                                        decodedStatus = "[已受理]";
+                                    } else if (decodedStatus == 30) {
+                                        decodedStatus = "[已答复]";
+                                    } else {
+                                        decodedStatus = "[已完成]";
+                                    }*/
+                                    if (decodedStatus >= 10 && decodedStatus < 15) {
+                                        decodedStatus = "[已交办]";
+                                    } else if (decodedStatus >= 15 && decodedStatus < 25) {
+                                        decodedStatus = "[已受理]";
+                                    } else {
+                                        decodedStatus = "[已答复]";
+                                    }
+
+                                    $(".ybs_sub").append(`
+                          <li>
+                           <h3><a target="_blank" href="${aLink}">
+                          <span>${decodedStatus}</span>${decodedTitle}</a>
+                          </h3>
+                         </li>
+                          `)
+                                })
+                            })
+                        }, // 成功的回调
+                        error: function (err) { }, // 失败回调
+                    })
+                </script> <!-- end 问政厅 -->
+                <!--清除样式隔离-->
+                <div class="clear h20"></div>
+                <!--清除样式隔离-->
+                <div class="list_right_ad">
+                    <script src="/_/static/ow53_yongzhou/static/js/1.016.js"></script>
+                </div>
+
+
+                <div class="se_box_tit">
+                    <h2>视频新闻</h2>
+                </div>
+                <div class="ywsbox ">
+                    <div class="ywysli">
+                        <ul>
+                            <!---->
+                            <li>
+                                <a href="{泛站内链}"target="_blank"
+                                    title="{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;"
+                                            src="{随机图片}">
+                                    </div>
+                                    <p>{标题}</p>
+                                </a>
+                            </li>
+                            <!---->
+                            <li>
+                                <a href="{泛站内链}"target="_blank"
+                                    title="{关键词1}{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;"
+                                            src="{随机图片}">
+                                    </div>
+                                    <p>{关键词1}{标题}</p>
+                                </a>
+                            </li>
+                            <!---->
+                            <li>
+                                <a href="{泛站内链}"target="_blank"
+                                    title="{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;"
+                                            src="{随机图片}">
+                                    </div>
+                                    <p>{标题}</p>
+                                </a>
+                            </li>
+                            <!---->
+                            <li>
+                                <a href="{泛站内链}"target="_blank"
+                                    title="{标题}">
+                                    <div class="jqthumb2">
+                                        <img style="width:160px; height: 115px;"
+                                            src="{随机图片}">
+                                    </div>
+                                    <p>{标题}</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!--清除样式隔离-->
+                <div class="clear h20"></div>
+                <!--清除样式隔离-->
+                <div class="list_right_ad">
+                    <div class="list_right_ad">
+                        <script src="/_/static/ow53_yongzhou/static/js/1.015.js"></script>
+                    </div>
+                </div>
+                <!--专题 beg-->
+                <div>
+                    <div class="se_box_tit">
+                        <h2>永网专题</h2>
+                    </div>
+                    <div class="se_box_li2 left">
+                        <p>
+                            <a href="{泛站内链}"target="_blank"> {标题}</a>
+                        </p>
+                        <p>
+                            <a href="{泛站内链}"target="_blank"> {标题}</a>
+                        </p>
+                        <p>
+                            <a href="{泛站内链}"target="_blank"> {标题}</a>
+                        </p>
+                        <p>
+                            <a href="{泛站内链}"target="_blank"> {关键词1}{标题}</a>
+                        </p>
+                        <p>
+                            <a href="{泛站内链}"target="_blank"> {标题}</a>
+                        </p>
+                        <p>
+                            <a href="{泛站内链}"target="_blank"> {标题}
+                    </div>
+                </div>
+                <!--专题 end-->
+            </div>
+        </div>
+    </div>
+    <input class="a_title" type="hidden" value="{描述}{关键词1}{辅助描述}">
+    <input class="a_cid" type="hidden" value="232302">
+    
+    <!--主体区域end-->
+
+    <script src="/_/static/ow53_yongzhou/static/js/spm.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e14626a2dca42cc4417f529df72306ab";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        /*var isMobile = isMobileUserAgent();
+        var test = window.location.href;
+        test = test.replace('www', 'h5');
+        if (isMobile) {
+            window.location.href = test;
+        }*/
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+        if (window.spm) {
+            // 初始化配置
+            spm.config({
+                siteId: "zm5121-001", // 此处填写该网站对应的网站标识（即SPM a段） 例如'zmXXXX-001'
+                additionalInfo: {
+                    targetID: 487985, // 此处填写稿件ID
+                    organization: "zm5121", // 此处填写机构ID
+                    // 上报进入事件
+                    category: 'event',
+                    action: 'comeIn'
+                }
+            });
+        }
+        window.onbeforeunload = function () {
+            // 上报离开事件
+            spm.push({
+                category: 'event',
+                action: 'leave'
+            });
+        };
+    </script>
+
+    <!--清除样式隔离-->
+    <div class="clear h20"></div>
+    <!--清除样式隔离-->
+    <script>
+
+        // 文稿内嵌入视频
+        $('.plus-material[data-id]').css("display", "block");
+
+        $('.plus-material[data-id]').html(
+            "<video class='live' controls  playsinline='true' webkit-playsinline='' playsinline='' x5-playsinline='true' x-webkit-airplay='allow' x-webkit-airplay='true' width='690' height='390'></video>"
+        );
+
+        //让第一个视频播放其他的不播放
+        $(".content video:first").attr("autoplay", "autoplay")
+
+
+        var videoArr = [], videoId, vodId;
+        var arr = [];
+        var imgarr = [];
+        for (var i in content_materials) {
+            var video_obj = content_materials[i].url;
+            var img_obj = content_materials[i].indexpic;
+            //arr.push(video_obj);
+            //imgarr.push(img_obj);
+            //var arrLen = arr.length-1;
+            //for (var j = 0; j < arr.length; j++) {
+            //    $(".plus-material").eq(j).find(".live").attr('src', arr[arrLen]);
+            //    $(".plus-material").eq(j).find(".live").attr('poster', imgarr[arrLen]);
+            //    arrLen--;
+            //}
+            videoArr = i.split('_');
+            videoId = videoArr[1];
+            $.each($('.plus-material[data-id]'), function (k, v) {
+                vodId = $(this).data("id");
+                if (videoId == vodId) {
+                    $(this).find("video").attr('src', video_obj);
+                    $(this).find("video").attr('poster', img_obj);
+                }
+            });
+
+        };
+
+    </script>
+    <div class="footer_new">
+<style type="text/css">
+.footer_new{text-align: center;width:100%;font: 12px/3 "SimSun";color: #4d4d4d;}.footer_new a{color: #333;font-size: 14px;}
+</style>
+<div class="clear"></div>
+<hr width="99%" color="#0F78B9" style="margin-top:10px; margin-bottom:10px;">
+<div class="footer_new">
+<p class="info"><a href="{泛站内链}">网站首页</a> | <a href="{泛站内链}">关于我们</a> | <a href="{泛站内链}">团队介绍</a> | <a href="{泛站内链}">联系我们</a> | <a href="{泛站内链}">版权声明</a> | <a href="{泛站内链}">广告招商</a></p>
+<p class="info">Copyright &copy; {年} {网站名称} {域名库} All Rights Reserved</p>
+
+
+</div>
+
+    <input type="hidden" class="click_id" value="232302">
+    <input type="hidden" class="click_content_fromid" value="233656">
+    <input type="hidden" class="click_bundle_id" value="article">
+    <input type="hidden" class="click_title" value="{自定义标题}">
+    <input type="hidden" class="click_content_url" value="">
+    <input type="hidden" class="click_column_id" value="119">
+    <input type="hidden" class="click_column_name" value="国内新闻">
+    <input type="hidden" class="click_publish_time" value="1678841614">
+
+    <script>
+        // 根据浏览器的信息生成一个字符串作为device_token
+        function bin2hex(str) {
+            var result = "";
+            for (i = 0; i < str.length; i++) {
+                result += int16_to_hex(str.charCodeAt(i));
+            }
+            return result;
+        }
+
+        function int16_to_hex(i) {
+            var result = i.toString(16);
+            var j = 0;
+            while (j + result.length < 6) {
+                result = "0" + result;
+                j++;
+            }
+            return result;
+        }
+
+        function cans() {
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            var txt = 'http://www.hoge.cn/';
+            ctx.textBaseline = "top";
+            ctx.font = "14px 'Arial'";
+            ctx.textBaseline = "hebei";
+            ctx.fillStyle = "#f60";
+            ctx.fillRect(125, 1, 62, 20);
+            ctx.fillStyle = "#069";
+            ctx.fillText(txt, 2, 15);
+            ctx.fillStyle = "rgba(102, 204, 0, 0.7)";
+            ctx.fillText(txt, 4, 17);
+            var b64 = canvas.toDataURL().replace("data:image/png;base64,", "");
+            var bin = atob(b64);
+            var crc = bin2hex(bin.slice(-16, -12));
+            crc = crc.toUpperCase();
+            return crc;
+        };
+        var device_token = cans();
+        // 获取详情信息
+        var content_id = $('.click_id').val();
+        var content_title = $('.click_title').val();
+        var content_fromid = $('.click_content_fromid').val();
+        var content_column_id = $('.click_column_id').val();
+        var data_column_name = $('.click_column_name').val();
+        var content_time = $('.click_publish_time').val();
+        var bundle_id = $('.click_bundle_id').val();
+        /** 
+        对接Websocket
+        123是客户授权ID，后面的secret不需要更改
+        分享页、H5的终端类型是h5，PC的终端类型是web
+        site_id为站点ID
+        **/
+        var custom_appid = '311';
+        var device = 'web';
+        var site_id = '';
+
+        function hoge_Websocket(op_type) {
+            if (content_id) {
+                var serv = 'wss://ldas.cloud.hoge.cn/produce/pcontent/' + device + '/' + custom_appid + '/' + device_token +
+                    '?secret=d624e9f635a3dc1a2bcb99d47d88c281';
+                var hg_Websocket = new WebSocket(serv);
+                hg_Websocket.onopen = function (evt) {
+                    text = '{';
+                    text = text + '"customer_id" : "' + custom_appid + '",';
+                    text = text + '"client_type" : "' + device + '",';
+                    text = text + '"device_token" : "' + device_token + '",';
+                    text = text + '"data_bundle_id" : "' + bundle_id + '",';
+                    text = text + '"site_id" : "' + site_id + '",';
+                    text = text + '"op_type" : "' + op_type + '",';
+                    text = text + '"create_time" : "' + content_time + '",';
+                    text = text + '"data_content_id" : "' + content_id + '",';
+                    text = text + '"data_title" : "' + content_title + '",';
+                    text = text + '"data_content_fromid" : "' + content_fromid + '",';
+                    text = text + '"data_column_id" : "' + content_column_id + '",';
+                    text = text + '"content_type" : "' + 'content' + '"';
+                    text = text + '}';
+                    hg_Websocket.send(text);
+                };
+                hg_Websocket.onclose = function (evt) { };
+                hg_Websocket.onmessage = function (evt) {
+                    var data = $.parseJSON(evt.data);
+                    var t;
+                    if (t = parseInt(data['k'])) {
+                        setTimeout(function () {
+                            hg_Websocket.send(text);
+                        }, t * 1000);
+                    };
+                };
+                hg_Websocket.onerror = function (evt, e) { };
+
+            };
+        };
+        // 点击量
+        hoge_Websocket('click');
+    </script>
+
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>

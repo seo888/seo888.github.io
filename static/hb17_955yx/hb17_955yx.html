@@ -1,0 +1,1126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{描述}{关键词1}{辅助描述}{随机版本}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{标题}{标题}{句子}《{关键词1}》{句子}" />
+    <meta name="applicable-device" content="mobile">
+        <link rel="canonical" href="/{随机字符}/{随机字符}.html">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/{随机字符}/{随机字符}.html" type="image/x-icon">
+   <link rel="stylesheet" href=" /static/hb17_955yx/static/css/style.css">
+    <script type="text/javascript">window.PC_PATH = '{域名库}';</script>
+    <script>
+        
+    </script>
+
+</head>
+
+<body>
+
+<div class="page page-detail" id="page">
+    <!-- header -->
+    <header class="page-header fn-clear">
+        
+        <nav class="nav fr">
+            <a class="nav-link " href="/{随机字符}/{随机字符}.html">首页</a>
+            <a class="nav-link on" id='service' href="/{随机字符}/{随机字符}.html">手游</a>
+            <a class="nav-link  " href="/{随机字符}/{随机字符}.html">资讯</a>
+            <a class="nav-search" id="searchTap"><i class="icon icon-search"></i></a>
+        </nav>
+        <!-- <div class="topbar flex">
+                        <nav>
+            <a class="nav-link " href="/{随机字符}/{随机字符}.html">首页</a>
+            <a class="nav-link on"  id='service' href="/{随机字符}/{随机字符}.html">手游</a>
+            <a class="nav-link  " href="/{随机字符}/{随机字符}.html">专题</a>
+            <a class="nav-link  " href="/{随机字符}/{随机字符}.html">攻略</a>
+             <button class="search-icon" type="submit"><i class="icon icon-search"></i></button>
+            </nav>
+        </div> -->
+    </header>
+
+
+    <div class="taptap-search" id="taptapSearch" :class="{'open': searchOpen}" @touchmove="touchmove">
+        <div class="search-bar flex">
+            <div class="back" @click="closeTap"><i class="icon icon-back"></i></div>
+            <div class="form-group flex flex-item">
+                <div class="icon icon-search2"></div>
+                <form class="flex-item" action="" @submit="onSubmit" onsubmit="return keyups()">
+                    <input class="search-input" name="q" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="搜索..." ref="searchInput" v-model="searchInput">
+                    <input type="hidden" name="pdtc" value="1">
+                    <input type="hidden" name="source" value="m">
+                    <input type="hidden" name="search_type" value="m_app_game">
+                </form>
+                <div class="clear" v-show="!!searchInput" @click="inputClear"><i class="icon icon-clear"></i></div>
+            </div>
+            <div class="cancel" @click="closeTap">取消</div>
+        </div>
+        <div class="search-box">
+            <div class="search-hotword">
+                <div class="list-hd">
+                    <h3 class="title">热门搜索</h3>
+                </div>
+                <div class="list-bd">
+                    <ul>
+                                                                                                                        <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">和平精英国际服</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">王者荣耀体验服</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">一起优诺手游</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">卡牌探险家</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">王牌班主任游戏</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">深夜酒馆游戏</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">凹凸世界手游</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">旅人战记</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">一梦江湖</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">幻书启世录公测版</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">山海镜花内测版</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">跑跑卡丁车官方竞速版</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">明日方舟</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">缪斯计划</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">星空之战手游</a>
+                        </li>
+                                                <li>
+                            <a href="/{随机字符}/{随机字符}.html" target="_blank">足球大师黄金一代</a>
+                        </li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function keyups()
+        {
+            var keywords=$("[name=q]").val();
+            var pdtc=$("[name=pdtc]").val();
+            var source=$("[name=source]").val();
+            var search_type=$("[name=search_type]").val();
+            if(search_type == null){
+                search_type = 'pc';
+            }
+            //alert(keywords);return false;
+            //var url = '//'+window.location.host;
+            var search_url="{当前url}";
+            //var url = search_url+"/sj_search/"+keywords+"/"+pdtc+"/"+source+"/"+search_type;
+            var url = search_url+"/sj_search/"+keywords+"/";
+            window.open(url);
+            return false;
+        }
+    </script>
+
+    <section class="page-content">
+              <ul class="url-here"><li><a href="/{随机字符}/{随机字符}.html">首页</a></li><li><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></li><li class="active">{随机关键词}</li></ul>
+        <!-- 软件信息 -->
+        <div class="soft-info">
+
+            <div class="bd">
+                <div class="divimg">
+                    <img class="pic" src="{随机图片}" alt="{随机关键词}">
+                </div>
+                <dl class="con">
+                    <dt><h1>{关键词1}</h1></dt>
+                    <dd class="flex flex-center">
+                        <div class="col">
+                            <p>版本：{随机版本}</p>
+                            <p>大小：{随机1数字}GB</p>
+                        </div>
+                        <div class="col">
+                            <p>类别：{随机关键词}</p>
+                            <p>时间：{年月日}</p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+
+			<div class="ft" id="download_url_show">
+                <script src=" /static/hb17_955yx/static/js/js.js"></script>
+            </div>
+
+        </div>
+        <!-- 高速下载按钮处理 -->
+         <script src=" /static/hb17_955yx/static/js/js1.js"></script>
+        <!-- 软件介绍 -->
+        <div class="section">
+            <div class="section-hd">
+                <h3 class="title">{新闻网标题}</h3>
+            </div>
+
+
+            <div class="soft-remark" id="softRemarkText">
+
+                <!-- 焦点图 -->
+                                <div class="soft-focus" id="softFocus">
+                    <div class="bd">
+                        <ul>
+                                                            <li><img src="{随机图片}" alt="{随机关键词}"></li>
+                                                            <li><img src="{随机图片}" alt="{随机关键词}"></li>
+                                                            <li><img src="{随机图片}" alt="{随机关键词}"></li>
+                                                            <li><img src="{随机图片}" alt="{随机关键词}"></li>
+                                                    </ul>
+                    </div>
+                    <div class="hd"><ul></ul></div>
+                    <!-- <a class="prev"><i class="arrow"></i></a>
+                    <a class="next"><i class="arrow"></i></a> -->
+                </div>
+
+                
+                <!-- 简介 -->
+                <div class="text">
+                    <div class="text-inner">
+                        {新闻网内容}
+
+
+                <p style="text-align: center;"><img src="{随机图片}"></p>
+                        {新闻网内容}
+
+                                             </div>
+                    <div class="text-toggle" id="textShow">展开全部<i class="arrow-down"></i></div>
+                    <div class="text-toggle text-toggle-hide" id="textHide">收起<i class="arrow-up"></i></div>
+                                    </div>
+            </div>
+        </div>
+        <script src="/{随机短字符}/{随机数字}.html"></script>
+        <!-- 精品推荐 -->
+        <div class="section">
+            <div class="section-hd">
+                <h3 class="title">精品推荐</h3>
+            </div>
+            <div class="soft-list">
+                <ul class="list" id="jptj">
+                                                                                                                        <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                        </a>
+                    </li>
+                                                            <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                        </a>
+                    </li>
+                                                            <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                        </a>
+                    </li>
+                                                            <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                        </a>
+                    </li>
+                                                            <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                        </a>
+                    </li>
+                                                                            </ul>
+            </div>
+        </div>
+
+        
+<!--       <div class="ad-box">-->
+
+
+<!--        </div>-->
+
+
+
+        <!-- 相关下载 -->
+                                        <div class="section" id="xgxz">
+            <div class="section-hd"><h3 class="title">相关下载</h3></div>
+            <div class="soft-list">
+                <ul class="list">
+                                                                                <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            <div class="tit">{随机关键词}</div>
+                            <div class="btn btn-link">查看</div>
+                        </a>
+                    </li>
+                                                        </ul></div>
+        </div>
+                <script src="{域名库}"></script>
+
+
+                                        <div class="section soft-version-list">
+            <div class="section-hd">
+                <h3 class="title">其他版本</h3>
+            </div>
+            <div class="section-bd">
+                <ul class="list">
+
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                                                            <li class="item flex flex-align-middle">
+
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                        <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查看</a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        
+
+        <!-- 相关文章 -->
+                <div class="section">
+            <div class="section-hd">
+                <h3 class="title">相关文章</h3>
+                <a class="more" href="/{随机字符}/{随机字符}.html">更多+</a>
+            </div>
+            <div class="strategy-list">
+                <ul class="list">
+                                                                                <li class="item flex">
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{标题}</a></div>
+                        <div class="date">10/17</div>
+                    </li>
+                                                                                                                        <li class="item flex">
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{标题}</a></div>
+                        <div class="date">10/14</div>
+                    </li>
+                                                                                                                        <li class="item flex">
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{标题}</a></div>
+                        <div class="date">10/11</div>
+                    </li>
+                                                                                                                        <li class="item flex">
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{标题}</a></div>
+                        <div class="date">10/11</div>
+                    </li>
+                                                                                                                        <li class="item flex">
+                        <div class="tit flex-item"><a href="/{随机字符}/{随机字符}.html">{标题}</a></div>
+                        <div class="date">09/26</div>
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+            </div>
+        </div>
+        
+
+                                        
+                <div class="section">
+            <div class="section-hd">
+                <h3 class="title">热门搜索</h3>
+            </div>
+            <div class="dcatetory hot_game">
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                                                <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>
+                            </div>
+
+        </div>
+                <script src="/{随机字符}/{随机字符}.html"></script>
+        <!-- 手游排行榜 -->
+        <div class="section mobile-games-list" id="mobileGamesList">
+            <div class="section-hd">
+                <h3 class="title">手游排行榜</h3>
+                <ul class="tab-cell">
+                    <li class="on">最新排行</li>
+                    <li>最热排行</li>
+                    <li>评分最高</li>
+                </ul>
+            </div>
+            <div class="tab-content on">
+                <div class="soft-list2">
+                    <div class="list">
+                                                <!-- 显示4条 -->
+                                                                                                                                                         
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                                                                                                         
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                        <a class="list-item flex " href="/{随机字符}/{随机字符}.html">
+                            <div class="col">
+                                <img class="pic lazy" src="{随机图片}" alt="{随机关键词}">
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit">{随机关键词}</div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}M</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="btn btn-download">查&nbsp;看</span>
+                            </div>
+                        </a>
+                                            </div>
+                </div>
+                <div class="section-ft">
+                    <a class="btn btn-more">查看更多</a>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div class="soft-list2">
+                    <ul class="list">
+                                                <!-- 显示4条 -->
+                                                                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                            </ul>
+                </div>
+                <div class="section-ft">
+                    <a class="btn btn-more">查看更多</a>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div class="soft-list2">
+                    <ul class="list">
+                                                <!-- 显示4条 -->
+                                                                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                                                                                                         
+                        <li class="list-item flex ">
+                            <div class="col">
+                                <a href="/{随机字符}/{随机字符}.html"><img class="pic lazy" src="{随机图片}" alt="{随机关键词}"></a>
+                            </div>
+                            <div class="con flex-item">
+                                <div class="tit"><a href="/{随机字符}/{随机字符}.html">{随机关键词}</a></div>
+                                <div class="star star4"></div>
+                                <div class="txt">
+                                    <span class="attr">{随机关键词}</span>
+                                    <span class="attr">大小:{随机3数字}MB</span>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-download" href="/{随机字符}/{随机字符}.html">查&nbsp;看</a>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="section-ft">
+                    <a class="btn btn-more">查看更多</a>
+                </div>
+            </div>
+        </div>
+
+<!--        <div class="ad-box">-->
+<!--            <script src="/api/show_adver/116/"></script>-->
+<!--        </div>-->
+
+
+    </section>
+    <footer class="page-footer">
+    <div class="copyright">
+        <p>Copyright&nbsp;&copy;&nbsp; {网站名称}</p>
+        <p>({域名库}).All Rights Reserved</p>
+                        <script type="text/javascript" src=" /static/hb17_955yx/static/js/record_nums.js"></script>
+        <script type="text/javascript" src=" /static/hb17_955yx/static/js/hezuo.js"></script>
+    </div>
+</footer>
+<script>
+    (function(){
+    var src = "/{随机字符}/{随机字符}.html";
+    document.write('<script src="' + src + '" id="sozz"><\/script>');
+    })();
+ </script>
+<script type="text/javascript">window.MURL = '{域名库}';</script>
+<script type="text/javascript" src=" /static/hb17_955yx/static/js/jquery.min.js"></script>
+<script type="text/javascript" src=" /static/hb17_955yx/static/js/tongji.js"></script>
+<script type="text/javascript" src=" /static/hb17_955yx/static/js/base.js" ></script>
+</div>
+<div class="totop" id="totop"><i class="icon icon-top"></i></div>
+
+
+<script type="text/javascript">
+    seajs.use('app/common', function(fn){
+        fn.init();
+        fn.softDetail();
+    });
+
+    // function count_down(id,action){
+    //     var times = parseInt(Math.random() * 10000);
+    //       $.get("/api.php?op=countdown&action="+action+"&id="+id+"&time="+times);
+    // }
+</script>
+<script type="text/javascript" src=" /static/hb17_955yx/static/js/download.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>
+</html>

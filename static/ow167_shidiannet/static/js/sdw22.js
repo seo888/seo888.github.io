@@ -1,0 +1,1 @@
+document.write("<div class=\"col-12 mbt\" id=\"rgg\"><img src=\"https://www.shidiannet.com/cdn/picture/350240.jpg\" alt=\"德尔森啤酒\" class=\"img-fluid\"> </div>")

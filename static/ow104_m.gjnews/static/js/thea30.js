@@ -1,0 +1,1 @@
+document.write("<a href='http://gjnews.cn/e/public/ClickAd?adid=30' target=_blank><img src='http://img.gjnews.cn/file/2022/12-01/97d9b088be81fb448f066c9f39a31440.jpg' border=0 width='360' height='219' alt=''></a>");

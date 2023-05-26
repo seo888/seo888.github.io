@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+<base target="_blank">
+<link rel="stylesheet" type="text/css" href="/static/hb365_sx/static/css/2022.css">
+<script type="text/javascript" src="/static/hb365_sx/static/js/jquery.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 9]>
+<div id="warning"></div>
+<![endif]-->
+<!-- pc -->
+<div class="webinfo w1280">
+	<div class="logo fl"><img src="/static/hb365_sx/static/picture/U368P8DT20221008220700.png" alt="{标题}"></div>
+	<div class="search fr">
+		<input type="text" value="请输入关键字搜索" class="search_input fl" onclick="this.value='',this.style.color='#000'">
+		<i class="submit"></i>
+	</div>
+	<script>
+		(function() {
+		function search() {
+		  var keyword = jQuery(".search > input").val();
+		  if (keyword) {
+			window.open("http://search.news.chinanews.com/search.do?dbtype=sx&q=" + encodeURIComponent(keyword));
+		  }
+		}
+		jQuery(".search > .submit").on("click", function(e) {
+		  e.preventDefault();
+		  search();
+		});
+		jQuery(".search > input").on("keydown", function(e) {
+		  if(e.keyCode === 13) {
+			search();
+		  }
+		})
+		})();
+		function showChild(index) {
+            $(".zxcp_add").show();
+            $(".zxcp").find("img").removeClass("arrowDown").addClass("arrowUp");
+            $("#navbar").css("height", "102px");
+        };
+		function hideChild(index) {
+            $(".zxcp_add").hide();
+            $(".zxcp").find("img").removeClass("arrowUp").addClass("arrowDown");
+            $("#navbar").css("height", "52px");
+        };
+	</script>	
+</div>
+<div class="nav w1280" id="navbar">
+	<ul class="">
+		<li><a href="/{随机字符}/{随机字符}.html">即时新闻</a></li>
+		<li><a href="/{随机字符}/{随机字符}.html">统战新语</a></li>
+		<li><a href="/{随机字符}/{随机字符}.html">太忻一体</a></li>
+		<li><a href="/{随机字符}/{随机字符}.html">文旅康养</a></li>
+		<li><a href="/{随机字符}/{随机字符}.html">乡村振兴</a></li>
+		<li class="zxcp" onmouseover="showChild()" onmouseout="hideChild()">中新出品<img src="/static/hb365_sx/static/picture/toparr.png" alt="" class="arr arrowDown">
+			<div class="zxcp_add">
+	<a href="/{随机字符}/{随机字符}.html">中新经纬</a><a href="/{随机字符}/{随机字符}.html">中国侨网</a><a href="/{随机字符}/{随机字符}.html">中国新闻周刊</a><a href="/{随机字符}/{随机字符}.html">国是直通车</a><a href="/{随机字符}/{随机字符}.html">中国新闻电子报</a><a href="/{随机字符}/{随机字符}.html">中国新闻图片网</a>
+			</div>
+		</li>
+		<li><a href="/{随机字符}/{随机字符}.html">视界</a></li>
+		<li><a href="/{随机字符}/{随机字符}.html">直播</a></li>
+		<li><a href="/{随机字符}/{随机字符}.html">图片</a></li>
+		<li><a href="/{随机字符}/{随机字符}.html">外媒</a></li>
+	</ul>
+</div>
+<div class="clear"></div>
+<script>
+	$(function(){
+	var arr = [$(".article_c_title"),$(".article_s_title")]
+    $.each(arr,function(){
+        if ($(this).text().length==0){
+          $(this).css("display","none");
+        }
+      });
+    });
+$(function(){
+	var arr = [$("#sp")]
+    $.each(arr,function(){
+        if ($(this).attr("src").length==0){
+          $(this).css("display","none");
+        }
+});
+    });
+</script>
+<div class="content_box w1280">
+	<div class="article_box fl">
+		<div class="article_zw">
+			<div class="article_c_title"></div>
+			<div class="article_m_title">{关键词1}{随机后缀}</div>
+			<div class="article_s_title"></div>
+			<div class="article_time fl">{今日时间}</div><div class="article_source fl">来源：{随机关键词2}</div>
+			<div class="w_line"></div>
+			<div class="article_content">
+				<div class="article_vedio"></div>
+
+				<p>{句子}{关键词1}{句子}</p>
+<p>{新闻网内容}</p>
+<p><img src="{随机图片}" alt="{随机关键词}"></p>
+			</div>
+			<div class="adEditor"><!--编辑姓名start--><div class="left_name fr"> <span>【编辑:{人物名称}】 </span></div><!--编辑姓名end--></div>
+		<div class="clear"></div>
+		</div>	
+		<div class="download_wrapper">
+           
+        </div>
+	</div>
+	<div class="con-right_box fl">
+		<div class="recommend_news">
+			<div class="recommend_news_t">推荐阅读</div>
+			<div class="recommend_news_pt">
+<div class="recommend_news_p fl"><a href="/{随机字符}/{随机字符}.html"><img src="{随机图片}"></a></div>
+<div class="recommend_news_text fl"><a href="/{随机字符}/{随机字符}.html">{标题}</a></div>
+</div><div class="recommend_news_pt">
+<div class="recommend_news_p fl"><a href="/{随机字符}/{随机字符}.html"><img src="{随机图片}"></a></div>
+<div class="recommend_news_text fl"><a href="/{随机字符}/{随机字符}.html">{标题}</a></div>
+</div><div class="recommend_news_pt">
+<div class="recommend_news_p fl"><a href="/{随机字符}/{随机字符}.html"><img src="{随机图片}"></a></div>
+<div class="recommend_news_text fl"><a href="/{随机字符}/{随机字符}.html">{标题}{关键词1}</a></div>
+</div>
+			<ul>
+				<li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li>
+			</ul>
+		</div>
+		<div class="recommend_news">
+			<div class="recommend_news_t">热点视频</div>
+			<div class="recommend_news_pt">
+				<div class="video_news_p1 fl"><a href="/{随机字符}/{随机字符}.html"><img src="{随机图片}" alt=""></a></div>
+				<div class="video_news_p2 fl"><a href="/{随机字符}/{随机字符}.html"><img src="{随机图片}" alt=""></a></div>
+			</div>
+		</div>
+		<div class="recommend_news">
+			<div class="recommend_news_t">即时新闻</div>
+			<ul>
+				<li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{关键词1}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li><li><span><a href="/{随机字符}/{随机字符}.html">{标题}</a></span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="footer w1280">
+	<div class="about fl">
+		<p><img src="/static/hb365_sx/static/picture/U368P8DT20220619110347.png" alt="{标题}"></p>
+		<p>新闻热线：{随机4数字}-{随机8数字}</p>
+		<p>主办单位：{网站名称}</p>
+		<p>地址：山西省太原市解放路{随机2数字}号</p>
+		<p>邮编：{随机6数字}</p>
+		<p>Copyright &copy; {年}</p>
+		<p>{域名库}. All Rights Reserved</p>
+	</div>
+	<div class="bn_num fl">
+		<p><a href="/{随机字符}/{随机字符}.html">{关键词1}许可证（{随机7数字})</a></p>
+		<p><a href="/{随机字符}/{随机字符}.html">京ICP证{随机6数字}号</a></p>
+		<p><a href="/{随机字符}/{随机字符}.html" style="display:inline-block;height:20px;line-height:20px;"><img src="/static/hb365_sx/static/picture/ghs.png" style="float:left;">京公网安备 {随机9数字}号</a></p>
+		<p><a href="/{随机字符}/{随机字符}.html">京ICP备{随机8数字}号-{随机数字}</a></p>
+		<p>违法和不良信息举报电话：{随机8数字}</p>
+		<p><a href="/{随机字符}/{随机字符}.html">举报受理和处置管理办法</a></p>
+	</div>
+	<div class="banq fl">
+	<p>版权及免责声明：<p>
+	<p>{关键词1}所刊载信息，不代表中新社和中新网观点。 刊用本网站稿件，务经书面授权。<p>
+	<p>未经授权禁止转载、摘编、复制及建立镜像，违者将依法追究法律责任。<p>
+	<p>凡本网注明来源：“中新网”或“中新网山西” 的稿件，版权均属于{关键词1}。<p>
+	<p>转载自其它媒体的稿件，目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。</p>
+	<p>如因供稿内容、版权和其它问题需要同本网联系，<p>
+
+	<p>如遇投资类文章，请网友谨慎甄别真伪，以免造成损失。<p>
+	</p></div>
+</div> 
+	<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Feb108de699cff54c6e0e05effbb844c6' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+<script src="/static/hb365_sx/static/js/jweixin-1.6.0.js"></script>
+<script src="/static/hb365_sx/static/js/wxshare.js"></script>
+
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div> 
+</body>
+</html>

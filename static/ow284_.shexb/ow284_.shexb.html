@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>{自定义标题}</title>
+	<meta name="keywords" content="{关键词1}" />
+	<meta name="description" content="{自定义描述}">
+	<link rel='stylesheet' href='/static/ow284_.shexb/static/css/body.css' media='all'>
+	<link rel='stylesheet' href='/static/ow284_.shexb/static/css/iconfont.css' media='all'>
+	<script src="/_/static/ow284_.shexb/static/js/jquery-1.8.0.min.js"></script>
+	<script src="/_/static/ow284_.shexb/static/js/all.js"></script>
+	<script type="text/javascript" src="/_/static/ow284_.shexb/static/js/common.js"></script>
+</head>
+
+<body>
+	<!--header-->
+	<div class="header">
+		<div class="top top2">
+			<div class="w1000 nav">
+				<ul class="navbar clearfix">
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>热点</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>国内</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>滚动新闻</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>市场信息</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>上海</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>社会</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>知识</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>案例</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>头条</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>专栏</a></li>
+					<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" class=''>排行榜</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="w1000   mt15 mb15  clearfix none" style="height:90px; background:#eee;">
+			AD
+		</div>
+		<div class="mynav w1000">
+			<div class="mylogo fl"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow284_.shexb/static/picture/logosmall.png"
+						alt="上海经济新闻网"></a></div>
+			<div class="myhere fl"><a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a>&nbsp;>&nbsp;<a
+					href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a> > 正文</div>
+			<div class="searchwrap  fr">
+				<form method="post" action="/e/search/index.php" target="_blank">
+					<input type="hidden" value="title,newstext" name="show">
+					<button type="submit" class="search-btn fr"><i class="iconfont pr2" title="搜索">&#xe60c;</i></button>
+					<input type="text" id="w" maxlength="30" autocomplete="off" value="" name="keyboard"
+						placeholder="请输入关键词" class="search-txt fr">
+
+
+				</form>
+			</div>
+			<div class=" clearfix"></div>
+		</div>
+	</div>
+	<!--#header-->
+	<!--content-->
+	<div class="w1000 content clearfix">
+		<div class="myleft fl">
+			<div class="mytitle mt15">
+				<h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+				<div class="arcinfo clearfix">
+					<div class="fl">
+						<span class="arctime">[{当前时间} ]</span>
+						<span class="arctime">来源：{关键词1}<span></span></span>
+						<span class="arctime">编辑：{人物名称}<span></span></span>
+						<span class="arctime">点击量：{随机数字}<span></span></span>
+
+					</div>
+					<div class="fr mytui">
+						<a href="#pingjia"><span><i class="iconfont pr2">&#xe623;</i>评论</span></a>
+						<span onclick="AddFavorite()"><i class="iconfont pr2">&#xe621;</i>点击收藏</span>
+					</div>
+				</div>
+			</div>
+			<div>
+				<script src="/_/static/ow284_.shexb/static/js/thea15.js"></script>
+			</div>
+			<div class="mycontent">
+				<p style="font-size: medium;">　　{新闻网内容}</p>
+				<!--正文结束 -->
+
+			</div>
+			<div></div>
+			<!--翻页-->
+			<div id="pages"></div>
+
+			<!--标签-->
+			<div class="mytags clearfix mt10">
+				<div class="fl"><b>查看更多:</b></div>
+				<div class="fr">
+					<!--分享-->
+					<div class="bdsharebuttonbox" data-tag="share_1">
+						<a href="javascript:void(0);" class="bds_weixin jiathis_button_weixin" data-cmd="weixin"
+							title="分享到微信"
+							style="background:none;background-color: #FF7700;border: 1px solid #CC5F00;color: #FFFFFF; text-align:center; padding:0 10px">分享到微信</a>
+						<a href="javascript:void(0);" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+						<a href="javascript:void(0);" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+						<a href="javascript:void(0);" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+						<a href="javascript:void(0);" class="bds_qq" data-cmd="qq" title="分享到QQ收藏"></a>
+						<a class="bds_count" data-cmd="count"></a>
+					</div>
+					<!---->
+					<!--/分享-->
+					<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com//static/ow284_.shexb/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+				</div>
+			</div>
+
+			<!--其它开始-->
+			<div class="myshow mt15 clearfix">
+				<div class="title-02 clearfix">
+					<h3 class="f24 red n">相关文章</h3>
+					<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="fr f12 mt15"><i
+							class="iconfont pr2">&#xe61f;</i>更多</a>
+				</div>
+				<div class='myxiangguan fr mt5'>
+
+					<ul class="list-04">
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i>
+							{年月日}</i></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}{标题}</a><i> {年月日}</i></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i>{年月日}</i></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i> {年月日}</i></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i>
+							{年月日}</i></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i> {年月日}</i>
+						</li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i> {年月日}</i></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i>
+							{年月日}</i></li>
+						<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a><i>
+							{年月日}</i></li>
+					</ul>
+				</div>
+				<div class='fl w300 mt10'>
+					<a href="/{随机字符}/{随机数字}_{随机数字}.html" target=_parent><img src='{随机图片}' border=0 width='300' height='250' alt=''></a>
+
+				</div>
+			</div>
+			
+
+
+
+		</div>
+
+		<div class="myright fr overflow-h">
+			<div class="bk-wrap mb10">
+				<div class="title-04 clearfix">
+					<h3 class="f18 red n pl10 dp-i-b fl">热点专题</h3>
+					<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="fr f12 pr10"><i
+							class="iconfont pr2">&#xe61f;</i>更多</a>
+				</div>
+				<div class="clearfix overflow-h  w300">
+					<ul class="bk-list2 clearfix pl10 pt10">
+
+					</ul>
+					<ul class=" clearfix pl2 ">
+
+					</ul>
+				</div>
+			</div>
+
+			<div class="mb10">
+				<a href="/{随机字符}/{随机数字}_{随机数字}.html" target=_parent><img src='{随机图片}' border=0 width='300' height='250' alt=''></a>
+			</div>
+
+			<div class="box fixed">
+				<div class="bk-wrap mb10">
+					<div class="title-04 clearfix">
+						<h3 class="f18 red n pl10 dp-i-b fl">为您推荐</h3>
+
+					</div>
+					<div class="clearfix overflow-h  w300">
+						<ul class="bk-list2 clearfix pl2 pt5">
+							<a href="/{随机字符}/{随机数字}_{随机数字}.html" target=_parent><img src='{随机图片}' border=0 width='300' height='250' alt=''></a>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+		<div class="clearfix"></div>
+
+	</div>
+	<!--#content-->
+	<div class="clear15"></div>
+	<!--尾部-->
+	<div class="footer">
+		<div class="footer-nav h28 tc">
+			<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">公司简介</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+				target="_blank">联系方法</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">客户服务</a>|<a
+				href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">隐私政策</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+				target="_blank">广告服务</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">人才招聘</a>|<a
+				href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">意见反馈</a>|<a href="/{随机字符}/{随机数字}_{随机数字}.html"
+				target="_blank">不良信息举报</a>
+		</div>
+		<div class="h24 tc">
+			{关键词1}是专业从事财经类内容的“互联网+”企业，以提供金融财经的大数据分析为导向，为8亿网民提供最具价值的财经服务。
+		</div>
+		<div class="h24 tc">
+			Copyright © {关键词1} {域名库} 版权所有 All Rights Reserved 
+		</div>
+		<div class="pt10 tc">
+
+			<script type="text/javascript">
+				$(document).ready(function (e) {
+					var t = $('.fixed').offset().top;
+					var fh = $('.fixed').height();
+					$(window).scroll(function (e) {
+						var s = $(document).scrollTop();
+						if (s > t - 10) {
+							$('.fixed').css('position', 'fixed').css('top', '-40px');
+						} else {
+							$('.fixed').css('position', '');
+						}
+					})
+				});
+			</script>
+
+		</div>
+	</div>
+	<script src="/_/static/ow284_.shexb/static/js/thea15.js"></script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+
+</html>

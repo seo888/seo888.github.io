@@ -1,0 +1,305 @@
+
+.errormessage {
+    color: #f00;
+    padding-left: 100px;
+    float: left;
+    margin-left: 35px;
+    padding-left: 35px; /* display: none; */
+}
+.userlogin {
+    background-color: #000;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+    zoom: 1;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+}
+.userlogincomment {
+    background: none repeat scroll 0 0 #fff;
+    clear: left;
+    overflow: hidden;
+    position: fixed;
+    z-index: 9999;
+    width: 880px;
+    left: 50%;
+    margin-left: -460px;
+    top: 18%;
+    padding: 0 20px;
+}
+.userlogincomment_userLoginDialog {
+    display: none;
+}
+.userlogin_userLoginDialog {
+    display: none;
+}
+.userlogincomment_userLoginDialog {
+    display: none;
+}
+.userlogin_userLoginDialog {
+    display: none;
+}
+.user-mainbox .form-control {
+    height: 22px;
+    line-height: 22px;
+    padding: 6px;
+    border: 1px solid #d9d9d9;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: 303px;
+}
+.user-mainbox .form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.loginDialog .user-mainbox {
+    padding-top: 10px;
+    margin: 0;
+}
+.user-mainbox .closecomment {
+    font-size: 25px;
+    float: right;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 100;
+    color: #999;
+}
+.loginBtn {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 0;
+    text-decoration: none;
+    background: #0068b7;
+    color: #fff;
+    font-family: "microsoft yahei";
+    width: 305px;
+    font-size: 15px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.loginBtn:hover {
+    background: #195daf;
+    color: #fff;
+}
+.user-mainbox {
+    width: 100%;
+    margin: 40px auto 0;
+    text-align: left;
+    overflow: hidden;
+    background: #fff;
+}
+.user-mainbox .top {
+    height: 56px;
+    line-height: 55px;
+    padding: 0 10px 0 10px;
+    border-bottom: 1px solid #e3e3e3;
+    margin-bottom: 3px;
+}
+.user-mainbox .top h3 {
+    height: 56px;
+    line-height: 55px;
+    font-size: 18px;
+}
+.login-main {
+    padding: 47px 35px 45px;
+    background: url(../image/login-split.png) 540px 40px no-repeat;
+    overflow: hidden;
+}
+.dropdown-menu {
+    *line-height: 0;
+}
+.dropdown-menu li {
+    *line-height: 1.8;
+}
+/* 验证码 */
+.codeinp {
+    position: relative;
+}
+.codeinp input[type="text"] {
+    width: 100px !important;
+    float: left;
+    margin-right: 10px;
+}
+/* 登录 ------------------------------- */
+.login-panel {
+    width: 540px;
+    float: left;
+}
+.login-tip {
+    overflow: hidden;
+    padding: 0 0 0 30px;
+    height: 260px;
+    font-size: 16px;
+    color: #999;
+    background: url(../image/login-bg.png) 43px 67px no-repeat;
+}
+.login-tip .registerlink a {
+    margin-top: 10px;
+    display: block;
+    color: #0068b7;
+}
+.login-panel dl {
+    margin-bottom: 25px;
+}
+.login-panel dt {
+    width: 80px;
+    line-height: 36px;
+    float: left;
+    text-align: right;
+    padding-right: 20px;
+    position: relative;
+}
+.login-panel .ft {
+    padding-left: 100px;
+}
+.field-checkboxlist {
+    display: inline;
+}
+.login-panel .pwd {
+    margin-bottom: 15px;
+}
+.login-panel .others {
+    color: #666;
+    margin-bottom: 10px;
+    clear: both;
+}
+.login-panel input {
+    width: 57%;
+}
+.login-panel .codeinp input {
+    width: 33%;
+}
+.login-main .required:after {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    content: "*";
+    color: #f00;
+    font-weight: bold;
+}
+/* 移动端样色 */
+.mobileCommentPage .userlogincomment {
+    width: 90%;
+    margin-left: -45%;
+    position: absolute;
+}
+.mobileCommentPage .user-mainbox .top {
+    height: 50px;
+    line-height: 50px;
+}
+.mobileCommentPage .login-main {
+    padding: 20px 0 15px 0;
+}
+.mobileCommentPage .login-panel {
+    float: none;
+    width: auto;
+}
+.mobileCommentPage .loginBtn {
+    width: 88%;
+}
+.mobileCommentPage .login-tip {
+    height: auto;
+    background: none;
+    padding: 0 0 0 100px;
+}
+.mobileCommentPage .login-tip h4 {
+    display: none;
+}
+.mobileCommentPage .login-panel dl {
+    margin-bottom: 10px;
+}
+.mobileCommentPage .login-panel .others {
+    margin-bottom: 0;
+}
+.userlogincomment .hd .on {
+    border-bottom: 3px solid #0068b7;
+}
+.userlogincomment .hd li {
+    float: left;
+    padding: 0px 12px 0px 12px;
+    position: relative;
+}
+.userlogincomment .hd .on a {
+    text-decoration: none;
+    color: #0068b7;
+    cursor: pointer;
+}
+.userlogincomment .hd a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.userlogincomment .field-validation-error {
+    display: block;
+    padding-left: 100px;
+    font-size: 12px;
+    padding-top: 5px;
+    color: red;
+}
+.userlogincomment .login-main .login-panel .disabled {
+    background: #5b97bf !important;
+    cursor: wait !important;
+}
+.userlogincomment .login-main .login-panel .disabled:hover {
+    background: #5b97bf !important;
+}
+.userlogincomment .phone-login-switch {
+    cursor: pointer;
+    margin-left: 100px;
+    margin-top: -20px;
+    display: none;
+    width: 100px;
+}
+/* 修复部分页面引用Bootstrap后导致错位 */
+.userlogincomment {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.userlogincomment * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.userlogincomment *:before,
+.userlogincomment *:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.userlogincomment h1,
+.userlogincomment h2,
+.userlogincomment h3,
+.userlogincomment h4,
+.userlogincomment h5,
+.userlogincomment h6 {
+    margin: 0px;
+    padding: 0px
+}
+.user-mainbox .input-group-addon {
+    display: inline-block;
+    height: 19px;
+}
+.login-main .input-group {
+    display: block;
+}
+.login-main .input-group-addon,
+.login-main .input-group-btn {
+    width: auto;
+}

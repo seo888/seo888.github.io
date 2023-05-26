@@ -1,0 +1,1 @@
+document.write("<iframe id=\"gd300250\" name=\"gd300250\" src=\"https://m.gaoshouyou.com/gsyhtml/gd300_250.html\" width=\"300\" height=\"250\" scrolling=\"no\" frameborder=\"0\"></iframe>")

@@ -1,0 +1,1 @@
+document.write("<a href=\"https://www.zyjjw.cn/fjxzc/\" target=_blank><img src=\"https://www.zyjjw.cn/skin/2022ad/ad202203302.jpg\" border=\"0\"></img></a>")

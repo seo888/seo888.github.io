@@ -1,0 +1,1 @@
+document.write("<a href='http://www.jjrbnet.com/e/public/ClickAd?adid=12' target=_blank><img src='http://www.jjrbnet.com/d/file/p/2022/11-03/05f754b9464453e5c02cb5ab4e8e2192.jpg' border=0 width='1200' height='80' alt=''></a>");

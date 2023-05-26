@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/_/static/hb250_nmgcb/static/css/style.css">
+    <script type="text/javascript" src="/_/static/hb250_nmgcb/static/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        //	    新闻列表滚动
+        function timer(opj) {
+            $(opj).find('ul').animate({
+                marginTop: "-45px"
+            }, 500, function () {
+                $(this).css({marginTop: "0px"}).find("li:first").appendTo(this);
+            })
+        }
+        $(function () {
+            var time = setInterval('timer(".apple1")', 3000);//新闻列表滚动
+            $('.apple1 ul').find('li').mousemove(function () {
+                clearInterval(time);
+            }).mouseout(function () {
+                time = setInterval('timer(".apple1")', 3000);
+            });
+        });
+    </script>
+</head>
+<body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?592b7f2dc91ed9bd71f4870fd4005d12";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--顶部-->
+<script type="text/javascript" src="/_/static/hb250_nmgcb/static/js/time.js"></script>
+<div class="top_bg">
+    <div class="cont">
+        <div class="topl">	   
+            {网站名称} | 24小时记者帮您热线电话：0471-967967 违法和不良信息电话：18047123456
+        </div>
+        <div class="topr">
+            <div class="fr">
+                <span id="webjx"></span>
+                <script>
+                    CalConv();
+                </script>
+                <script>
+                    setInterval("webjx.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<style>
+    .header-wind-red {
+        /* 新闻两边对联飘红 */
+        /* background-color: #FF3333; */
+    }
+    .header-white {
+        width: 1210px;
+        height: 100%;
+        background-color: white;
+    }
+</style>
+<div>
+    <div class="header-white">
+                <!--logo-->
+        <div class="cont">
+            <div class="logo fl">
+                <a href="/{随机字符}/{随机字符}.html"><img src="/_/static/hb250_nmgcb/static/picture/logo.png" alt="{随机关键词}" title="{标题}"></a>
+            </div>
+            <div class="fl search">
+                <div class="header_seach">
+                    <form action="/search/" method="post">
+                        <div class="fl input_control">
+                            <input id="myInput" type="text" name="keyword" placeholder="请输入您要搜索的内容">
+                        </div>
+                        <div class="fr input_control1">
+                            <input type="submit" value="搜索">
+                        </div>
+                        <div class="clear"></div>
+                    </form>
+                </div>
+                <div class="weather">
+                    <iframe id="fancybox-frame" name="fancybox-frame1591325120913" frameborder="0" scrolling="no" hspace="0" height="30" src="index-code_getcode_34_25_280.html"></iframe>
+                </div>
+            </div>
+            <div class="wx_r">
+              
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <!--导航-->
+        <div class="cont">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">要闻</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">专题</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">重磅</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">视频</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">小记者</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">城市<em><img src="/_/static/hb250_nmgcb/static/picture/cion_03.png"></em></a>
+                        <div class="nav_none" style="margin-left: -553.75px">
+                            <ul>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">呼和浩特</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">包头</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">鄂尔多斯</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">呼伦贝尔</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">兴安盟</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">通辽</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">赤峰</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">锡林郭勒</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">乌兰察布</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">巴彦淖尔</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">乌海</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">阿拉善</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">二连浩特</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">满洲里</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">旅游</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">平安建设</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">财经</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">资讯<em><img src="/_/static/hb250_nmgcb/static/picture/cion_03.png"></em></a>
+                        <div class="nav_none" style="margin-left:-922.55px ;">
+                            <ul>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">教育</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">房产</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">汽车</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">健康</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">亲子</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">时尚</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">美食</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">公益</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">情感</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">人物</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">观点</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">书画</a>
+                                </li>
+                                <li>
+                                    <a href="/{随机字符}/{随机字符}.html">保利剧院</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">娱乐</a>
+                    </li>
+                    <li>
+                        <a href="/{随机字符}/{随机字符}.html">体育</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div><!--位置-->
+<div class="cont mar">
+        <div class="ab-wz">您当前的位置： <a href="/{随机字符}/{随机字符}.html">{随机关键词}</a>>>文章>>{关键词1}</div>
+    </div>
+<div class="cont mar">
+    <style>
+	.new_zw {
+		overflow: hidden;
+	}
+
+	.new_zw .news_article {
+		position: relative;
+		overflow: hidden;
+		transition: height 0.24s;
+	}
+
+	.new_zw .news_article.xg:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		height: 4rem;
+		background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+		background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+		background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+	}
+
+	.poster-btn {
+		outline: none;
+		display: block;
+		width: 184px;
+		height: 37px;
+		line-height: 2;
+		margin: .1rem auto;
+		color: #666;
+		font-size: .28rem;
+		text-align: center;
+	}
+
+	.layui-layer-btn .layui-layer-btn0 {
+		width: 100px;
+		text-align: center;
+		background-color: #FFF;
+		color: #000;
+	}
+
+	.layui-layer-btn .layui-layer-btn1 {
+		width: 100px;
+		text-align: center;
+		background-color: #FFF;
+		color: #a71110;
+	}
+
+	/* 弹出层设置圆角需要对三层都设置 */
+	body .demo-class .layui-layer-content {
+		border-radius: 12px !important;
+	}
+
+	body .demo-class .layui-layer-content iframe {
+		border-radius: 12px !important;
+	}
+
+	body .layui-layer {
+		border-radius: 12px !important;
+	}
+
+	.confirm img{
+		border-radius: 12px !important;
+	}
+	
+	.layui-layer-btn a {
+		border: 0px;
+	}
+
+	.layui-layer-setwin .layui-layer-close2{
+		display: none;
+	}
+</style>
+<div class="new_zw">
+	<div class="news_head">
+		<h2>{关键词1}{随机后缀}{新闻网标题}</h2>
+		<span>时间：{年月日}</span>
+		<span>编辑：{人物名称}</span>
+		<span>来源：{人物名称}</span>
+		<span style="float:right;padding-top:5px;">
+			<div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1589939782036">
+				<a href="#" class="bds_more" data-cmd="more"></a>
+				<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+				<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+				<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+				<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+			</div>
+			<script>
+				window._bd_share_config = {
+					common: {
+						bdText: '',
+						bdDesc: '',
+						bdUrl: '',
+						bdPic: ''
+					},
+					share: [{
+						"bdSize": 28
+					}]
+				}
+				with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+			</script>
+		</span>
+	</div>
+	<div class="news_article xg" style="height: 20rem;">
+				<p>{关键词1}{句子}</p><img src="{随机图片}" title="{标题}" alt="{标题}"></section><p><br></p>		<div class="mz">
+			<h5 style="font-weight: bold;color: #105790">{句子}{关键词1}</h5>
+		</div>
+	</div>
+	<div class="poster-btn"><img src="/_/static/hb250_nmgcb/static/picture/btn_lookall.png" alt="" srcset=""></div>
+	<script src="/_/static/hb250_nmgcb/static/js/layer.js"></script>
+	<script>
+		$(function() {
+			$(".poster-btn").click(function() {
+				layer.confirm('是否前往速闻下载APP', {
+					type: 1,
+					title: "",
+					content: $('#ccr'),
+					btn: ['取消', '前往'], //按钮					
+					cancel: function() {
+						layer.closeAll(function() {
+							$(".news_article").removeClass("xg").css("height", "auto");
+							$(".poster-btn").hide();
+						});
+					}
+				}, function() {
+					layer.closeAll(function() {
+						$(".news_article").removeClass("xg").css("height", "auto");
+						$(".poster-btn").hide();
+					});
+				}, function() {
+					window.open('http://suwen.nmgcb.com.cn');
+					layer.closeAll(function() {
+						$(".news_article").removeClass("xg").css("height", "auto");
+						$(".poster-btn").hide();
+					});
+				});
+			});
+		})
+	</script>
+</div>
+<div id="ccr" style="display:none" class="confirm">
+	<img src="/_/static/hb250_nmgcb/static/picture/confirm.jpg" width="324" height="234">
+</div>
+<div class="clear"></div>
+<!--相关新闻-->
+<div class="link-s">
+	<ul>
+		<li>相关新闻</li>
+	</ul>
+</div>
+<div class="top_mar">
+	<div class="xgnews">
+		<div class="xg_l fl">
+			<ul>
+				<li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{关键词1}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li>			</ul>
+		</div>
+		<div class="xg_l fr">
+			<ul>
+				<li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{随机关键词}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li><li>
+    <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+        <img src="/_/static/hb250_nmgcb/static/picture/dian1.png">
+        <p>{标题}</p>
+        <span>{年月日}</span>
+    </a>
+    <div class="clear"></div>
+</li>			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>   
+    <div class="clear"></div>
+</div>
+
+<!--底部-->
+<!--底部-->
+<div class="foot">{网站名称}</div>
+<div id="gywm">
+    <div id="wzlogo"><img src="/_/static/hb250_nmgcb/static/picture/wzlogox.jpg" width="150" height="80" alt="{标题}" title="{标题}"></div>
+    <div id="wzwz">
+        <ul>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">关于我们</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">广告服务</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">法律事务</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">大事记</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">联系我们</a></li>
+            <li><a href="/{随机字符}/{随机字符}.html" target="_blank">版权声明</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="yqljlj">
+    <div id="yqljljwz">友情链接</div>
+    <ul>
+        <li><a href="/{随机字符}/{随机字符}.html" target="_blank">央视网</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">央广网</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">人民网</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">新华网</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">中国新闻网</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></li><li><a href="/{随机字符}/{随机字符}.html" target="_blank">新华网内蒙古频道</a></li>    </ul>
+</div>
+<div id="bqsm">
+    <ul>
+        <li>版权声明：{关键词1}版权所有，未经授权， 请勿转载或建立镜像，违者依法必究。<span>本站违法和不良信息举报电话：{随机4数字}-{随机7数字}</span> 邮箱：nmgcbxmt@163.com</li>
+        <li>{网站名称} Copyright © {年}  {域名库} All Rights Reserved. </li>
+        <li><span><a href="/{随机字符}/{随机字符}.html" target="_blank">蒙ICP备{随机8数字}号-1 </a></span>
+            <span><a href="/{随机字符}/{随机字符}.html">互联网新闻信息服务许可证：{随机9数字} </a></span>
+            本网常年法律顾问:内蒙古晨报社 电话：{随机4数字}-{随机7数字}
+            <span><a href="/{随机字符}/{随机字符}.html" target="_blank">删稿流程</a></span>
+        </li>
+    </ul>
+</div>
+<div id="bftp">
+    <ul>
+        <li style="margin-left: 190px"> <a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb250_nmgcb/static/picture/zghlwjb.jpg" width="150" height="60" alt=""></a></li>
+        <li> <a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb250_nmgcb/static/picture/jbrk.jpg" width="200" height="60" alt=""></a></li>
+        <li> <a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/_/static/hb250_nmgcb/static/picture/gawl.jpg" width="240" height="60" alt=""></a></li>
+        
+    </ul>
+</div>
+<div class="blank"></div>	<div style="display:none;">
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>
+</html>

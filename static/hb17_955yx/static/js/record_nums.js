@@ -1,0 +1,1 @@
+  document.write("<p><a href=\"https://beian.miit.gov.cn\" rel=\"nofollow\">备案号：闽ICP备2023001746号-1</a></p>")

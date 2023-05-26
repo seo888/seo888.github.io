@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://upload.xm.sxslnews.com/1/2021/0101/orig_16095063208689.ico" rel="shortcut icon"
+        type="image/x-icon">
+        <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}">
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/index_public_style.css">
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/index_style.css">
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/style_assembly.css">
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/swiper-3.4.2.min.css">
+    <script src="/static/ow103_sxslnews/static/js/jquery-1.7.1.min.js"></script>
+    <script src="/static/ow103_sxslnews/static/js/gdlb.js"></script>
+    <script src="/static/ow103_sxslnews/static/js/layer.js"></script>
+    <script src="/static/ow103_sxslnews/static/js/swiper-3.4.0.jquery.min.js"></script>
+    <script src="/static/ow103_sxslnews/static/js/index_public.js"></script>
+    <script src="/static/ow103_sxslnews/static/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/button.css">
+</head>
+
+<body>
+    <img src="/static/ow103_sxslnews/static/picture/1679611827376884.jpeg" style="display: none">
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/index_public_style.css">
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/index_style.css">
+    <style>
+        #nickname {
+            color: #333333;
+            font-size: 12px;
+            margin-left: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 115px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+    <!--登录注册弹层-->
+
+    <!-- 登陆弹层 -->
+    <div class="landing-flex land-box">
+        <div class="po landing-box">
+            <div>
+                <p class="landing-title bold">手机号登录</p>
+                <form method="post" id="login-form">
+                    <input type="hidden" name="csrf_key" value="SFRpeVV1NVNsV0Z5SWw0eVNMcVBkdz09">
+                    <input type="hidden" name="csrf_token" value="aXFBU0hwd2xWdUVBZEg2OG45M2t5Zz09">
+                    <div class="landing-input">
+                        <input type="text" placeholder="请输入手机号" name="phone" class="land-phone">
+                        <input type="password" placeholder="请输入密码" name="pwd" class="land-passWord">
+                    </div>
+                </form>
+                <a class="land-a login_btn">登录</a>
+                <div class="help-div fr">
+                    <a class="forget-pass">忘记密码</a>
+                    <a class="newUser switch-register">新用户注册</a>
+                </div>
+                <i class="land-close"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--注册弹层-->
+    <div class="landing-flex register-box">
+        <div class="po landing-box">
+            <div>
+                <p class="landing-title bold">手机号注册</p>
+                <form method="post" id="register-form">
+                    <input type="hidden" name="csrf_key" value="SFRpeVV1NVNsV0Z5SWw0eVNMcVBkdz09">
+                    <input type="hidden" name="csrf_token" value="aXFBU0hwd2xWdUVBZEg2OG45M2t5Zz09">
+                    <div class="landing-input">
+                        <input type="text" name="phone" placeholder="请输入手机号" class="land-phone register-input">
+                        <input type="text" name="nickname" placeholder="请输入昵称" class="land-phone register-input">
+
+                        <div class="clear graphical-div">
+                            <input type="text" name="image_code" placeholder="请输入图形验证码"
+                                class="land-phone register-input">
+                            <img id="seccode_login" src="/static/ow103_sxslnews/static/picture/image.png" class="fr">
+                        </div>
+                        <div class="clear graphical-div">
+                            <input type="text" name="code" placeholder="请输入手机验证码" class="land-phone register-input">
+                            <a class="fr" id="code">发送验证码</a>
+                        </div>
+                        <input type="password" name="pwd" placeholder="请输入密码" class="land-phone register-input">
+                        <input type="password" name="repwd" placeholder="请再次输入密码" class="land-phone register-input">
+                    </div>
+                </form>
+                <a class="land-a register_btn">注册</a>
+                <i class="land-close"></i>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="/static/ow103_sxslnews/static/css/adv.css">
+    <script src="/static/ow103_sxslnews/static/js/jquery.lazyload.js"></script>
+    <script src="/static/ow103_sxslnews/static/js/getAdv.js"></script>
+    <script>
+        $(function () {
+            $("img").lazyload({ effect: "fadeIn", threshold: 180 });
+        });
+    </script>
+    <script>
+        //获取验证码
+        var InterValObj; //timer变量，控制时间
+        var count = 60; //间隔函数，1秒执行
+        var curCount;//当前剩余秒数
+        var flg = true;
+        //设为首页
+
+        function SetHome(url) {
+
+            if (document.all) {
+
+                document.body.style.behavior = 'url(#default#homepage)';
+
+                document.body.setHomePage(url);
+
+            } else {
+
+                alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+
+            }
+
+        }
+
+        //加入收藏
+
+        function AddFavorite(sURL, sTitle) {
+
+            sURL = encodeURI(sURL);
+            try {
+
+                window.external.addFavorite(sURL, sTitle);
+
+            } catch (e) {
+
+                try {
+
+                    window.sidebar.addPanel(sTitle, sURL, "");
+
+                } catch (e) {
+
+                    alert("浏览器不支持此操作，请使用Ctrl+D进行添加.");
+
+                }
+
+            }
+
+        }
+        function showLogin() {
+            $(".land-box").show();
+        }
+        function showRegister() {
+            $(".register-box").show();
+        }
+
+        function checkIsLogin() {
+            var userid = "",
+                nickname = "";
+
+            if (userid) {
+                $(".land,.register").hide();
+                $("#nickname").text("您好，" + nickname);
+                $(".logout").show();
+                $("#nickname").show();
+            }
+        }
+        //timer处理函数
+        function SetRemainTime() {
+            if (curCount == 0) {
+                window.clearInterval(InterValObj);//停止计时器
+                $("#code").removeAttr("disabled");//启用按钮
+                flg = true;
+                $("#code").text("获取验证码");
+            } else {
+                curCount--;
+                flg = false;
+                $("#code").text(curCount + "s");
+            }
+        }
+        function code() {
+            $("#seccode_login").attr('src', "/web/code/image?" + Math.random() * 5);
+        }
+        $(function () {
+            $("#sl_gzh").attr("src", "https://img.xm.sxslnews.com/site/1/pc/shangluonews/images/example-img/code1.png");
+            $("#sl_phone").attr("src", "https://img.xm.sxslnews.com/site/1/pc/shangluonews/images/example-img/code2.png");
+
+            $("#seccode_login").click(function () {
+                code();
+            });
+
+
+            $("#code").click(function () {
+                if (flg) {
+                    var phone = $("#register-form input[name='phone']").val();
+                    var reg = /^1\d{10}$/;
+                    if (phone == "") {
+                        layer.msg("请输入手机号码", { time: 1000 });
+                        return false;
+                    }
+                    if (!reg.test(phone)) {
+                        layer.msg("请输入正确手机号", { time: 1000 });
+                        return false;
+                    }
+                    var image_code = $("input[name='image_code']").val();
+                    //图形验证码检查
+                    $.post("/pc/member/ajaxCode", { cod: image_code }, function (res) {
+                        if (res.error_code != 0) {
+                            code();
+                            layer.msg(res.error_msg, { time: 1000 });
+                        } else {
+                            //发送短信
+                            $.ajax({
+                                type: "POST", //用POST方式传输
+                                dataType: "json", //数据格式:JSON
+                                url: "/pc/member/ajaxSendSMS", //目标地址
+                                data: {
+                                    phone: phone
+                                },
+                                success: function (response) {
+                                    if (response.error_code == 0) {
+                                        //设置button效果，开始计时
+                                        curCount = count;
+                                        $("#code").attr("disabled", "true");
+                                        $("#code").text(curCount + "s");
+                                        InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+                                        layer.msg('短信发送成功', { time: 1000 });
+                                    } else {
+                                        layer.msg(response.error_msg);
+                                    }
+                                }
+                            });
+                        }
+                    }, 'json');
+                }
+            });
+
+            $(".login_btn").click(function () {
+                $.getJSON("/pc/member/userLogin" + "?" + $("#login-form").serialize() + "&jsoncallback=?", function (res) {
+                    if (res.error_code === 0) {
+                        window.location.reload();
+                    } else {
+                        layer.msg(res.error_msg);
+                    }
+                })
+            });
+
+            $(".register_btn").click(function () {
+                $.post("/pc/member/addMember", $("#register-form").serialize(), function (res) {
+                    if (res.error_code === 0) {
+                        window.location.reload()
+                    } else {
+                        layer.msg(res.error_msg);
+                    }
+                })
+            });
+            $(".logout").click(function () {
+                $.ajax({
+                    dataType: "jsonp",    //跨域json请求一定是jsonp
+                    jsonp: "jsoncallback",    //跨域请求的参数名，默认是callback
+                    url: "/pc/member/loginOut", //目标地址
+                    success: function (response) {
+                        if (response.error_code == 0) {
+                            window.location.reload();
+                        } else {
+                            layer.msg(response.error_msg);
+                        }
+                    }
+                });
+            });
+
+            /*登陆*/
+            $(".land").click(function () {
+                $(".land-box").show();
+            })
+            /*登陆注册弹层关闭*/
+            $(".land-close").click(function () {
+                $(".landing-flex").hide();
+            })
+            /*注册*/
+            $(".register").click(function () {
+                $(".register-box").show();
+            })
+
+            $(".switch-register").click(function () {
+                $(".land-box").hide();
+                $(".register-box").show();
+            });
+
+            checkIsLogin();
+
+            //    $(".search_content").blur(function () {
+            //        var keyword = $(this).val();
+            //        location.href = "/pc/index/search/"+keyword;
+            //    });
+
+            $(".search_content").bind('keypress', function (event) {
+                if (event.keyCode == 13) {
+                    var keyword = $(this).val();
+                    location.href = "/pc/index/search/" + keyword;
+                }
+            })
+            $(".search_button").click(function () {
+                var keyword = $(this).prev().val();
+                location.href = "/pc/index/search/" + keyword;
+            });
+            $('#search_submit').click(function () {
+                var keyword = $(".search_content").val();
+                location.href = "/pc/index/search/" + keyword;
+            });
+
+            /*返回顶部*/
+            $(".the-top").click(function () {
+                $(document).scrollTop(0);
+            });
+
+            /*右侧悬浮低版本兼容*/
+            var w = document.body.clientWidth;
+            if (w <= 1338) {
+                $(".flex-consultation").css("left", 1218);
+            }
+            $(window).resize(function () {
+                var w = document.body.clientWidth;
+                if (w <= 1338) {
+                    $(".flex-consultation").css("left", 1218);
+                }
+            });
+        });
+
+    </script><!--公用头部-->
+    <div class="header-div clear">
+        <div class="clear">
+            <div class="fl weather-div">
+                <span class="address-top fl"><a href="/{随机字符}/{随机数字}_{随机数字}.html" style="color: #009142"
+                        target="_blank">西部网</a> </span><span class="address-top fl"><a href="/{随机字符}/{随机数字}_{随机数字}.html"
+                        style="color: #009142" target="_blank">商洛数字报</a> </span>
+                <!--    <iframe id="fancybox-frame" name="fancybox-frame1538135484796" frameborder="0" scrolling="no" hspace="0"  src="//i.tianqi.com/index.php?c=code&a=getcode&id=34&h=25&w=280"></iframe> -->
+                <span class="weather-mar">今天是
+                    <script language="JavaScript" type="text/javascript">
+
+                        var enabled = 0; today = new Date();
+
+                        var day; var date;
+
+                        if (today.getDay() == 0) day = " 星期日"
+
+                        if (today.getDay() == 1) day = " 星期一"
+
+                        if (today.getDay() == 2) day = " 星期二"
+
+                        if (today.getDay() == 3) day = " 星期三"
+
+                        if (today.getDay() == 4) day = " 星期四"
+
+                        if (today.getDay() == 5) day = " 星期五"
+
+                        if (today.getDay() == 6) day = " 星期六"
+
+                        date = (today.getFullYear()) + "年" + (today.getMonth() + 1) + "月" + today.getDate() + "日" + day + "";
+
+                        document.write(date);</script>
+                </span>
+            </div>
+            <ul class="fr header-ul">
+                <li class="header-sty">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" onclick="SetHome(this,window.location)">设为首页</a>
+                </li>
+                <li class="header-sty">
+                    <a onclick="AddFavorite(window.location,document.title)" href="/{随机字符}/{随机数字}_{随机数字}.html">加为收藏</a>
+                </li>
+                <li class="header-sty">
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系我们</a>
+                </li>
+                <li class="register-s logout" style="display:none;">
+                    <a>退出</a>
+                </li>
+                <li>
+                    <span id="nickname"></span>
+                </li>
+            </ul>
+        </div>
+    </div><!-- end公用头部 -->
+    <div class="publicStyle">
+        <div class="width-sty-sm">
+            <!-- 首页顶部通栏广告1000*67 -->
+            <br>
+            <div class='adv_banner6'>
+                <script>
+                    advImage(6)
+                </script>
+            </div>
+            <a href="/{随机字符}/{随机数字}_{随机数字}.html" class="display-a mr-one"></a>
+            <!-- end首页顶部通栏广告 -->
+            <div class="clear network-div">
+                <a class="fl" href="/{随机字符}/{随机数字}_{随机数字}.html"> <img
+                        src="/static/ow103_sxslnews/static/picture/logo.png" class="network-logo fl"></a>
+                <div class="search-div fl"><input name="search" class="search_content" placeholder="请输入关键词搜索"
+                        type="text"><a href="/{随机字符}/{随机数字}_{随机数字}.html" id="search_submit">搜索</a></div>
+                <!--直通县区133-->
+                <div class="fl county-div" style="margin-left: 20px;">
+                    <span>直通县区：</span>
+                    <ul>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">商州</a></li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">洛南</a></li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">丹凤</a></li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">商南</a></li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">山阳</a></li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">镇安</a></li>
+                        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">柞水</a></li>
+                        <li>
+                            <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                                <font color="#FF0000">联播</font>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <a href="http://www.sxjubao.cn">
+                <div class="fl" style="margin-left: 10px;color:#fff;background-image: -webkit-linear-gradient(100deg, #2FAD66 60%, #9DE686 100%);text-align: center;width: 150px;height: 54px;line-height: 27px;border-radius: 5px;">
+                    <span>违法不良信息举报</span><br><span>违法不良信息举报</span>
+                </div>
+            </a>
+            <!--end直通县区 -->
+            </div>
+        </div>
+        <!--导航栏134-->
+        <div class="index-nav" style="width: 1020px;">
+            <div class="width-sty-sm clear">
+                <ul class="fl s-index-ul">
+                    <li class="s-index-li"><a href="/{随机字符}/{随机数字}_{随机数字}.html">网站首页</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">时政要闻</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">综合新闻</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">政务信息</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">图说商洛</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">视频播报</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">直播商洛</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">玩转商洛</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">综合信息</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">特别策划</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">高端访谈</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">秦岭儿女</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">商山文艺</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">丹江评论</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">生活百科</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">国内国际</a></li>
+                </ul>
+                <ul class="fr s-hot-ul">
+                    <li class="s-hot-li"><a href="/{随机字符}/{随机数字}_{随机数字}.html">热点排行</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">市长留言台</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">实时发布</a></li>
+                    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html">商洛发布号</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="width-sty-sm mr-two message-desk">
+            <div class="clear column-div mr-two">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">首页</a><span>＞</span><a
+                    href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="current-page">综合新闻</a>
+            </div>
+            <div class="clear mr-two column-div-list">
+                <div class="fl" style="width: 730px">
+                    <div class="article-title">
+                        <h1 class="bold">{关键词1}{随机后缀}{新闻网标题}</h1>
+                        <div class="column-list-po column-list-po1 clear" style="position: static;margin-top: 10px">
+                            <div class="fl"><span style="margin-left: 0">来源：{关键词1}</span></div>
+                            <div class="fl"><span>发布日期：{当前时间} </span></div>
+                            <div class="fl column-eye">
+                                <i></i><span>{随机数字}</span>
+                            </div>
+                            <div class="fl" style="float: right !important;">
+                                <a onclick="alertTips()" class="button button-glow button-rounded button-caution"
+                                    style="padding-left:10px;padding-right:10px;position:relative;bottom:8px;font-size:12px;line-height: 24px;height: 24px;">不再推送</a>
+                            </div>
+                            <div class="fl" style="float: right !important;">
+                                <a onclick="alertTips()" class="button button-glow button-rounded button-highlight"
+                                    style="  padding-left: 10px;padding-right: 10px;position: relative;bottom: 8px;font-size: 12px;line-height: 24px;height: 24px;">减少推送</a>
+                            </div>
+                            <script>
+                                function alertTips() {
+                                    alert('谢谢反馈！');
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <div class="article-cont">
+                        <!--文章头部-->
+                        <!--投票-->
+                        <!--报名-->
+                        <!--答题-->
+
+                        <!--音频-->
+                        <!--&lt;!&ndash;自定义按钮&ndash;&gt;-->
+                        <!---->
+                        <p>{新闻网内容}</p>
+
+                        <!--文章底部-->
+                        <!--投票-->
+                        <!--活动-->
+                        <!--答题-->
+
+                        <!--音频-->
+                        <!--&lt;!&ndash;自定义按钮&ndash;&gt;-->
+                        <!---->
+                        <!--分享-->
+                        <!--文章底部标注-->
+                        <div class="clear" style="margin-top: 0">
+                            <div class="fr source-div">
+                                <i></i><span>本文来源：{关键词1}</span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--一键分享-->
+
+                    <!--bshare分享-->
+                    <script type="text/javascript" src="/static/ow103_sxslnews/static/js/buttonLite.js"></script>
+                    <script type="text/javascript" src="/static/ow103_sxslnews/static/js/bshareC0.js"></script>
+                    <style>
+                        .blog-a a {
+                            background-image: url("/static/ow103_sxslnews/static/image/share_weibo.png") !important;
+                        }
+
+                        .blog-a a:hover {
+                            background-image: url("/static/ow103_sxslnews/static/image/share_weibo1.png") !important;
+                        }
+
+                        .weChat-a a {
+                            background-image: url("/static/ow103_sxslnews/static/image/share_wechart.png") !important;
+                        }
+
+                        .weChat-a a:hover {
+                            background-image: url("https://img.xm.sxslnews.com/site/1/pc/shangluonews/images/share_wechart1.png") !important;
+                        }
+
+                        .weChatFriend-a a {
+                            background-image: url("/static/ow103_sxslnews/static/image/share_wechart.png") !important;
+                        }
+
+                        .weChatFriend-a a:hover {
+                            background-image: url("/static/ow103_sxslnews/static/image/share_wechare1.png") !important;
+                        }
+
+                        .qq-a a {
+                            background-image: url("/static/ow103_sxslnews/static/image/share_qq.png") !important;
+                        }
+
+                        .qq-a a:hover {
+                            background-image: url("/static/ow103_sxslnews/static/image/share_qq1.png") !important;
+                        }
+
+                        .qq-kongjian a {
+                            background: url("/static/ow103_sxslnews/static/image/share_qqz.png") no-repeat !important;
+                        }
+
+                        .qq-kongjian a:hover {
+                            background: url("/static/ow103_sxslnews/static/image/share_qqz1.png") no-repeat !important;
+                        }
+
+                        .share-ul li a {
+                            margin-bottom: 10px;
+                            display: block;
+                            width: 60px;
+                            height: 60px;
+                        }
+
+                        .qq-a a,
+                        .qq-a a:hover,
+                        .qq-kongjian a,
+                        .qq-kongjian a:hover,
+                        .weChatFriend-a a,
+                        .weChatFriend-a a:hover,
+                        .weChat-a a,
+                        .weChat-a a:hover,
+                        .blog-a a,
+                        .blog-a a:hover {
+                            background-size: 100% 100% !important;
+                        }
+
+                        .bshare-custom .bshare-sinaminiblog,
+                        .bshare-custom .bshare-qzone {
+                            background: #fff;
+                        }
+
+                        /*.bshare-custom .bshare-sinaminiblog{*/
+                        /*background: none;*/
+                        /*}*/
+                        .bsTop {
+                            width: 100% !important;
+                        }
+                    </style>
+
+
+                    <div class="sharing bold ">一键分享</div>
+                    <div class="bshare-custom share-ul">
+                        <ul class="share-ul clear">
+                            <!--<li class="blog-a">-->
+                            <!--    <a title="分享到新浪微博" class="bshare-sinaminiblog webo-icon icon-share share-weibo"></a>-->
+                            <!--    <p>新浪微博</p>-->
+                            <!--</li>-->
+                            <li class="weChatFriend-a">
+                                <a title="分享到微信" class="bshare-weixin wechat-icon icon-share share-wechat"
+                                    href="javascript:void(0);"></a>
+                                <p>微信</p>
+                            </li>
+                            <li class="qq-a">
+                                <a title="分享到QQ空间" class="bshare-qzone icon-share share-kongjian"
+                                    href="javascript:void(0);"></a>
+                                <p>QQ空间</p>
+                            </li>
+                            <li class="qq-kongjian">
+                                <a title="分享到QQ好友" class="bshare-qqim qq-icon icon-share share-qq"
+                                    href="javascript:void(0);"></a>
+                                <p>QQ</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <script>
+                        bShare.addEntry({
+                            title: $(document.head).find('[name=title], [name=Title]').attr('content') || document.title,
+                            url: location.href,
+                            summary: "",
+                            pic: $('img:first').prop('src') || ''
+                        });
+                        $(function () {
+                            //有一个bug，打开页面，第一次点击任何分享按钮都会报错，第二次点击任何分享按钮都会成功
+                            $('.share-weibo').click();
+                        });
+                        //获取分享数
+                        $('.share-div a').each(function () {
+                            $(this).click(function () {
+                                var cid = "336146";
+                                var share_num = $('.share_num').text();
+                                console.log(cid, share_num);
+                                $.post("/wap/index/addShare", { cid: cid, share_num: share_num }, function (res) {
+
+                                });
+                            });
+                        });
+                    </script> <!--我要说两句-->
+                    <div style="margin-top: 20px">
+                        <h1 class="say-sentences bold">我要说两句</h1>
+                        <div class="say-sentences-div mr-two">
+                            <textarea id="commit-text"></textarea>
+                            <div class="say-sentences-box">
+                                <a class="fr sentences-sign write-send">发表评论</a>
+                            </div>
+
+
+                            <script>
+                                $('.login_comment').click(function () {
+                                    $.post("/pc/member/userLogin", $("#comment-login-form").serialize(), function (res) {
+                                        if (res.error_code === 0) {
+                                            window.location.reload()
+                                        } else {
+                                            layer.msg(res.error_msg);
+                                        }
+                                    })
+                                });
+
+                                //发布评论
+                                $('.write-send').click(function () {
+                                    var allow = parseInt("0");
+                                    if (allow === 0) {
+                                        showLogin();
+                                        return false;
+                                    }
+
+                                    var cid = "336146";
+                                    var content = $('#commit-text').val();
+                                    var create_uid = "188";
+                                    var pid = $('#commentpid').val();
+                                    $.post("/pc/comment/ajaxAdd", { cid: cid, content: content, create_uid: create_uid, pid: pid }, function (res) {
+                                        if (res.error_code == 0) {
+                                            window.location.reload();
+                                        } else {
+                                            layer.msg(res.error_msg, { time: 1000 });
+                                        }
+                                    });
+                                    return false;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <!--评论显示区-->
+
+                    <div class="artice-comment">
+                        <!--还没用评论-->
+                        <div class="no-comment">还没有评论，快来抢沙发吧！</div>
+                    </div>
+                    <script>
+                        window.page = 2;
+                        $(".load-more-comments").click(function () {
+                            var page = window.page;
+                            var temp = '';
+                            var cid = "336146";
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/pc/comment/getList",
+                                data: { cid: cid, page: page },
+                                dataType: "json",
+                                success: function (res) {
+                                    if (res.error_code == 0) {
+                                        if (res.sum > 0) {
+                                            $.each(res.data, function (k, v) {
+                                                temp += '<input type="hidden" class="commentid" value="' + v.id + '">';
+                                                temp += '<div class="clear">';
+                                                temp += '<img src="' + v.user.image + '" class="fl artice-comment-head">';
+                                                temp += '<div class="artice-comment-fr">';
+                                                temp += '<div class="artice-comment-name">';
+                                                temp += '<span class="bold">' + v.user.name + '</span>' + v.create_time;
+                                                temp += '</div>';
+                                                temp += '<p class="artice-comment-p">' + v.content + '</p>';
+
+                                                if (v.comment.length) {
+                                                    temp += '<div class="artice-comment-reply">';
+                                                    temp += '<div>';
+                                                    temp += '<span class="comment-reply-name bold">' + v.comment[0].user.name + '：</span>' + '<span class="comment-reply-cont">' + v.comment[0].content;
+                                                    temp += '</span></div>';
+                                                    temp += '<div class="comment-reply-zan"><span>';
+                                                    temp += '<div class="comment-reply-zan"><span>回复</span><span> ·</span>' + v.comment[0].create_time + '</div>';
+                                                    temp += '</div>';
+                                                } else {
+                                                    temp += '<div class="clear" style="margin-top: 15px">';
+                                                    temp += '<a class="reply-a fl" href="/{随机字符}/{随机数字}_{随机数字}.html" data-id="' + v.id + '" data-name="' + v.user.name + '" style="margin-left: 22px"><i></i>回复</a></div>';
+                                                    temp += '</div>';
+                                                }
+                                                temp += '</div></div>';
+                                            });
+                                            $('.comment-show').append(temp);
+
+                                            window.page++;
+                                        } else {
+                                            $(".load-more-comments").text('没有更多评论');
+                                            return false;
+                                        }
+                                    }
+                                }
+                            });
+                        });
+                        $(".comment-show").on('click', '.reply-a', function () {
+                            $('#commit-text').focus();
+                            var username = $(this).data('name');
+                            $('#commit-text').attr('placeholder', "@" + username + "：");
+                            var pid = $(this).data('id');
+                            $('#commentpid').val(pid);
+                        })
+                    </script> <!--相关阅读-->
+                    <div class="mr-four">
+                        <p class="list-rank bold">相关阅读</p>
+                        <ul class="column-list-li mr-two">
+                        </ul>
+                    </div>
+                </div>
+                <div class="fr" style="width: 235px">
+                    <div class='adv_banner21'>
+                        <script>advImage(21)</script>
+                    </div>
+                    <div class="mr-three list-rank-div">
+                        <p class="list-rank bold">排行榜</p>
+                        <div class="clear ranking-read">
+                            <div>点击</div>
+                            <div class="ranking-read-act">评论</div>
+                        </div>
+                        <div class="ranking-read-div">
+                            <div>
+                                <ul class="hotspots-ul mr-two">
+                                    <li class="clear">
+                                        <div>1</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>2</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>3</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>4</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>5</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>6</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>7</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>8</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>9</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>10</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="ranking-read-show">
+                                <ul class="hotspots-ul mr-two">
+                                    <li class="clear">
+                                        <div>1</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>2</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>3</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>4</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>5</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>6</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>7</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>8</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>9</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                    <li class="clear">
+                                        <div>10</div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{标题}</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class='adv_banner21'>
+                            <script>advImage(22)</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--公用footer-->
+
+
+    <!--公用底部-->
+    <div style="height: 200px;padding-top: 0">
+        <div class="footer-div-bor">
+            <div class="clear width-sty-sm">
+                <div class="mr-three host-footer">
+                    <p>主办单位：{网站名称}有限公司</p>
+                    <ul class="about-footer clear">
+                        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">关于我们</a></li>
+                        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">联系我们</a></li>
+                        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">加入我们</a></li>
+                        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">版权声明</a></li>
+                        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">自律管理承诺</a></li>
+                        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">手机访问</a></li>
+                        <li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html">留言反馈</a></li>
+                    </ul>
+                    <p class="host-footer-p">陕西互联网违法和不良信息举报中心举报电话：029-63907152</p>
+                    <p class="host-footer-p">互联网新闻信息服务许可证编号：61120180011</p>
+                    <p class="host-footer-p"><a href="/{随机字符}/{随机数字}_{随机数字}.html"
+                            style="color:#999999;">陕ICP备10203392号-1</a>
+                        <a style="color:#999999;" href="/{随机字符}/{随机数字}_{随机数字}.html">陕公网安备 61100202000036号</a>
+                    </p>
+                    <p class="host-footer-p">版权所有 Copyright ©{年} {网站名称} {域名库} All rights reserved</p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /*顶部悬浮点击样式*/
+        $(".header-ul li").click(function () {
+            $(this).addClass("header-li").siblings().removeClass("header-li");
+        })
+        $(".s-index-ul li").click(function () {
+            $(this).addClass("s-index-li").siblings().removeClass("s-index-li");
+        })
+        /*点赞样式*/
+        $(".fabulous-div").click(function () {
+            $(this).find("i").addClass("fabulous-i");
+            $(this).addClass("fabulous-sty");
+        })
+        wordlimit("column-div-tit", 75);
+
+        /*阅读排行榜悬浮*/
+        $(".ranking-read div").mouseover(function () {
+            $(this).addClass("ranking-read-act").siblings().removeClass("ranking-read-act");
+            var rankIndex = $(this).index();
+            $(".ranking-read-div>div:eq(" + rankIndex + ")").addClass("ranking-read-show").siblings().removeClass("ranking-read-show");
+        })
+    </script>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+    <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>

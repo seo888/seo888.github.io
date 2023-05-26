@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>江淮网-江苏淮安网_淮安新闻，江苏省淮安市地方信息综合门户网！</title>
+<meta name="keywords" content="江淮网,江苏淮安网,淮安,淮安新闻网,江苏淮安,名城淮安,淮安人,淮安门户,淮安新闻">
+<meta name="description" content="江淮网（www.jshuaian.cn）是立足淮安、辐射江苏的地方门户网站，作为江苏省淮安市重点综合门户网站，以倾力关注淮安地方经济社会发展和民生民情为鲜明特色！">
+<link href="static/css/reset.css" rel="stylesheet" type="text/css">
+<link href="static/css/default_blue.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="static/js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="static/js/jquery.sgallery.js"></script>
+<style>
+body{background:none;}
+</style>
+</head>
+<body onload="iframe_height()">
+<div id="bodyheight">
+<form action="http://www.jshuaian.cn/index.php?m=comment&c=index&a=post&commentid=content_15-250108-1" method="post" onsubmit="return on_submit()">
+<input type="hidden" name="title" value="%C7%EB%B2%E9%CA%D5%A3%A1%D3%D0%D2%BB%B7%DD%CD%C6%B6%AF%BF%AA%B7%C5%D0%CD%BE%AD%BC%C3%BE%AD%BC%C3%B8%DF%D6%CA%C1%BF%B7%A2%D5%B9%B5%C4%CA%B5%CA%A9%D2%E2%BC%FB">
+<input type="hidden" name="url" value="http%3A%2F%2Fwww.jshuaian.cn%2Fjingji%2F15%2F3%2F250108.html">
+      <div class="comment-form">
+      	<h5><strong>我来说两句</strong><span class="fn rt blue">已有<font color="#FF0000">0</font>条评论，<a href="javascript:;" target="_blank">点击全部查看</a></span></h5>
+        <div class="posn">我的态度：<input type="radio" name="direction" value="1"> <img src="static/picture/zheng.png"> <input type="radio" name="direction" value="2"> <img src="static/picture/fan.png"> <input type="radio" name="direction" value="3"> <img src="static/picture/zhong.png">
+</div>
+        <textarea rows="8" cols="80" name="content"></textarea><br>
+				
+		  <label>验证码：<input type="text" name="code" class="input-text" id="yzmText" onfocus="var offset = $(this).offset();$('#yzm').css({'left': +offset.left-8, 'top': +offset.top-$('#yzm').height()});$('#yzm').show();$('#yzmText').data('hide', 1)" onblur='$("#yzmText").data("hide", 0);setTimeout("hide_code()", 3000)'></label>
+		  <div id="yzm" class="yzm"><img id='checkcode' onclick='this.src=this.src+"&"+Math.random()' src='static/picture/api-checkcode_4_20_130_50.php'><br>点击图片更换</div>
+        <div class="bk10"></div>
+		        <div class="btn"><input type="submit" value="发表评论"></div>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:;" target="_top" class="blue">登录</a><span> | </span><a href="javascript:;" class="blue" target="_top">注册</a> <span style="color:red">需要登陆才可发布评论</span>      </div>  
+</form>   
+ <div class="bk10"></div>
+<script type="text/javascript">
+function support(id, commentid) {
+	$.getJSON('http://www.jshuaian.cn/index.php?m=comment&c=index&a=support&format=jsonp&commentid='+commentid+'&id='+id+'&callback=?', function(data){
+		if(data.status == 1) {
+			$('#support_'+id).html(parseInt($('#support_'+id).html())+1);
+		} else {
+			alert(data.msg);
+		}
+	});
+}
+
+function reply(id,commentid) {
+	var str = '<form action="http://www.jshuaian.cn/index.php?m=comment&c=index&a=post&commentid='+commentid+'&id='+id+'" method="post" onsubmit="return on_submit()"><textarea rows="10" style="width:100%" name="content"></textarea><label>验证码：<input type="text" name="code"  class="input-text" onfocus="var offset = $(this).offset();$(\'#yzm\').css({\'left\': +offset.left-8, \'top\': +offset.top-$(\'#yzm\').height()});$(\'#yzm\').show();$(\'#yzmText\').data(\'hide\', 1)" onblur=\'$("#yzmText").data("hide", 0);setTimeout("hide_code()", 3000)\' /></label>  <div class="btn"><input type="submit" value="发表评论" /></div>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.jshuaian.cn/index.php?m=member&c=index&a=login&forward=http%3A%2F%2Fwww.jshuaian.cn%2Fjingji%2F15%2F3%2F250108.html" class="blue" target="_top">登录</a> | <a href="http://www.jshuaian.cn/index.php?m=member&c=index&a=register" class="blue" target="_top">注册</a>  <span style="color:red">需要登陆才可发布评论</span></form>';
+	$('#reply_'+id).html(str).toggle();
+	iframe_height();
+}
+
+function hide_code() {
+	if ($('#yzmText').data('hide')==0) {
+		$('#yzm').hide();
+	}
+}
+function on_submit() {
+	iframe_height(200);
+	$('#bodyheight').hide();
+	$('#loading').show();
+	return true;        
+}
+function iframe_height(height) {
+	if (!height) {
+		var height = document.getElementById('bodyheight').scrollHeight;
+	}
+	$('#top_src').attr('src', "http://www.jshuaian.cn/js.html?"+height+'|'+0);
+}
+
+
+
+</script>
+</div>
+<iframe width='0' id='top_src' height='0' src=''></iframe>
+<div class="hidden text-c" id="loading">
+<img src="static/picture/loading.gif"> 正在提交中...
+</div>
+</body>
+</html>

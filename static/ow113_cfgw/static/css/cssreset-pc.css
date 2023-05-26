@@ -1,0 +1,159 @@
+
+
+/*----------------------------------------
+ 常用reset
+-----------------------------------------*/
+
+/**通配符选择器不能匹配伪类**/
+*, :after, :before {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body {
+	color: #333;
+	font: 16px/1.4 Helvetica, Arial, "Microsoft Yahei", "SimSun";
+}
+
+body,p,dl,dd {
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+/*	transition: all .3s ease-in;*/
+}
+
+a:hover {
+	color: #e9330b;
+}
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input { 
+	margin: 0; 
+	padding: 0;
+}
+img {
+    max-width: 100% !important;
+    border:0 none; /*去除 IE6-9 和 Firefox 3 中 a 内部 img 元素默认的边框*/
+    height: auto;
+    vertical-align: top; /*去除现代浏览器图片底部的空隙*/
+    -ms-interpolation-mode: bicubic; /*修复 IE7 图片缩放失真*/
+}
+
+input,
+button {
+	border: 1px solid #000;
+	background-color: #fff;
+}
+
+label,
+button,
+input[type=button],
+input[type=submit], {
+	cursor: pointer;
+}
+
+i,
+cite,
+em,
+var,
+address,
+dfn {
+	font-style: normal;
+}
+
+del,
+ins,
+u,
+s {
+	text-decoration: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+textarea {
+	overflow: auto; /*ie8下有滚动条*/
+	resize: vertical; /*让其只能垂直拖动，防止宽度改变破坏布局。*/
+}
+
+table {
+	border-spacing: 0; /* 设置相邻单元格的边框间的距离为0 */
+	border-collapse: collapse; /* 为表格设置合并边框模型 */
+}
+
+th {
+	text-align: left;
+	font-weight: normal;
+}
+
+caption {
+	text-align: left;
+}
+
+iframe {
+	border: 0; /*ie8中设置frameborder才有效*/
+}
+
+small {
+    font-size: 12px;
+}
+
+/*
+	
+*/
+
+/*
+	代码字体选择如下：
+	Windows 优先使用 Consolas
+	OS X 优先使用 Monaco
+*/
+code,
+kbd,
+pre,
+samp {
+    font-family: monaco, menlo, consolas, 'courier new', courier, monospace; 
+}
+
+
+
+/*----------------------------------------
+ h5新特性的设置
+-----------------------------------------*/
+
+
+
+/*placeholder设置颜色*/
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder {
+	color: #999;
+}
+
+/*Firefox下input button内文字不能垂直居中及安卓手机按钮文字不垂直居中*/
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}

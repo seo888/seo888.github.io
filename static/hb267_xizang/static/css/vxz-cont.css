@@ -1,0 +1,753 @@
+
+
+/*
+*   program: 西藏集约化
+*   author: wwm
+*   date: 2018-12-11
+*/
+
+
+/********************************
+ *2-1新闻中心
+ *2-4
+ *3-5
+ *5-1
+ *6
+ *********************************/
+.comwid{
+	width: 1200px;
+	margin:0 auto;
+}
+.vvx-main{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 36px 40px;
+}
+.vvx-compd{
+	box-sizing: border-box;
+	padding: 36px 40px;
+}
+.vvx-ncen-tb{
+	height: 290px;
+}
+.vvx-ncen-tb .vvx-ban-list, 
+.vvx-ncen-tb .vvx-ban-img{
+	height: 100%;
+	width: 500px;
+}
+.vvx-ncen-tb .vvx-tabs-box{
+	width: 590px;
+	height: 290px;
+	overflow: hidden;
+}
+.vvx-zt-roll{
+	margin:20px -40px;
+	background:#f0f9ff;
+	height: 100px;
+	width: 1200;
+	box-sizing: border-box;
+	padding:20px 40px 0;
+}
+.vvx-zt-roll .tab{
+	width: 90px;
+	margin-right: 10px;
+}
+.vvx-zt-roll .tab a{
+	display: block;
+	height: 30px;
+	width: 100%;
+	border-radius: 20px;
+	line-height: 30px;
+	color:#444;
+	font-size: 15px;
+	border:1px solid #dcdedf;
+	text-align: center;
+	box-sizing: border-box;
+}
+.vvx-zt-roll .tab a:first-child{
+	margin-bottom: 6px;
+}
+.vvx-zt-roll .tab a.cur{
+	background: #256dc3;
+	border-color: #256dc3;
+	color: #fff;
+	font-weight: bold;
+}
+.vvx-zt-list{
+	width: 990px;
+	height: 66px;
+	overflow: hidden;
+}
+.vvx-zt-group{
+	overflow: hidden;
+	width: 990px;
+	height: 66px;
+	overflow: hidden;
+	position: relative;
+}
+.vvx-zt-item{
+	position: absolute;
+	width: 990px;
+	height: 66px;
+	left: 0px;
+	top: 0px;
+}
+.vvx-zt-item a{
+	float: left;
+	height: 66px;
+	width: 240px;
+	overflow: hidden;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.vvx-zt-item a:first-child{
+	margin-left: 0;
+}
+.vvx-zt-roll .btn span{
+	display: block;
+	height: 16px;
+	width: 16px;
+	line-height: 16px;
+	text-align: center;
+	font-size: 14px;
+	color: #2064b3;
+	cursor: pointer;
+	border:1px solid #e2e9ee;
+	box-shadow: 0 2px 5px #e2e9ee;
+	border-radius: 50%;
+	margin-top: 14px;
+	background: #fff;
+}
+.vvx-zt-roll .btn span:first-child{
+	margin-top: 8px;
+}
+.vvx-zt-roll .btn span:hover{
+	color: #fff;
+	background:#2064b3;
+	border-color: #2064b3;
+}
+.vvx-ncen-dftab{
+	width: 500px;
+}
+.vvx-col2-tab{
+	height: 305px;
+	overflow: hidden;
+}
+.vvx-col2-tab .vvx-tabs-box{
+	width: 590px;
+}
+.vvx-pic-group{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.vvx-pic-list{
+	height: 300px;
+	width: 102%;
+}
+.vvx-pic-list p{
+	overflow: hidden;
+}
+.vvx-pic-list p a{
+	position: relative;
+	overflow: hidden;
+}
+.vvx-pic-list p a span{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	background: url(../image/vvx-op30-bg.png);
+	color: #fff;
+	font-size: 14px;
+	box-sizing: border-box;
+	padding:0 20px;
+	max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.vvx-pic-list p a img{
+	display: block;
+	height: 100%;
+	width: 100%;
+	transition: 1s;
+    -webkit-transition: 1s; /* Safari */
+    transform: scale(1);
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari and Chrome */
+}
+.vvx-pic-list p a img:hover{
+	transition: 1s;
+    -webkit-transition: 1s; /* Safari */
+    transform: scale(1.05);
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari and Chrome */
+}
+.vvx-pic-list .item1{
+	width: 222px;
+	margin-right: 1px;
+}
+.vvx-pic-list .item2{
+	width: 399px;
+}
+.vvx-pic-list .item3{
+	width: 248px;
+	margin-left: 1px;
+}
+.vvx-pic-list .item4{
+	width: 248px;
+	margin-left: 1px;
+}
+.vvx-pic-list .item1 a{
+	display: block;
+	height: 149.5px;
+}
+.vvx-pic-list .item1 a:first-child{
+	margin-bottom: 1px;
+}
+.vvx-pic-list .item2 a,
+.vvx-pic-list .item3 a{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.vvx-pic-list .item4 a{
+	display: block;
+	height: 50%;
+	width: 100%;
+}
+.vvx-pic-list .item4 a:first-child{
+	margin-bottom: 1px;
+}
+/*6认识西藏*/
+.vvx-kbimg-itmes{
+	height: 0px;
+	overflow: hidden;
+}
+.vvx-kbimg-itmes.active{
+	height: 320px;
+}
+.vvx-know-bimg{
+	width: 480px;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+}
+.vvx-know-bimg a{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+.vvx-know-bimg a img{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.vvx-know-det{
+	width: 625px;
+	height: 320px;
+	overflow: hidden;
+	position: relative;
+}
+.vvx-know-btn{
+	height: 70px;
+}
+.vvx-know-btn p{
+	width: 525px;
+	height: 70px;
+	overflow: hidden;
+}
+.vvx-know-btn p a{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: 120px;
+	text-align: center;
+	border-radius: 20px;
+	font-size: 15px;
+	color: #444;
+	background: #f0f9ff;
+	margin:0px 10px 10px 0;
+}
+.vvx-know-btn p a.cur{
+	background: #256dc3;
+	color: #fff;
+	font-weight: bold;
+}
+.all-city{
+	width: 100px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 5px;
+	background: #39ce86;
+}
+.all-city:hover{
+	color: #fff;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.vvx-know-art{
+	position: relative;
+	height: 240px;
+}
+
+.vvx-art-item{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+}
+.vvx-art-item .title{
+	display: block;
+	font-size: 22px;
+	color: #444;
+	font-weight: bold;
+	line-height: 36px;
+}
+.vvx-art-item .item{
+	font-size: 15px;
+	line-height: 35px;
+	color: #444;
+}
+.vvx-news-btn{
+	bottom: 0px;
+	top: auto;
+	right: 0px;
+}
+.vvx-know-title{
+	height: 30px;
+	background:url(../image/vvx-know-tit.png) no-repeat center center;
+	color: #256dc3;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+}
+.vvx-tourism-info{
+	height: 300px;
+}
+.vvx-tourism-dy{
+	width: 845px;
+}
+.vvx-tourism-ts{
+	width: 260px;
+	height:300px;
+	background: #f0f9ff;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding-top: 15px;
+}
+.vvx-tourism-ts .title{
+	display: block;
+	background: #256dc3;
+	height: 30px;
+	line-height: 30px;
+	width: 100px;
+	text-align: center;
+	color: #fff;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 0 auto;
+}
+.vvx-tourism-img{
+	width: 350px;
+	height: 240px;
+}
+.vvx-tourism-img img{
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+.vvx-tourism-list{
+	width: 475px;
+	height: 240px;
+	overflow: hidden;
+}
+.vvx-tourism-list .vvx-tabs-list{
+	margin-top: -5px;
+}
+.vvx-tel-list{
+
+}
+.vvx-tel-list li{
+
+}
+.vvx-tel-list li span{
+	float: left;
+	line-height: 32px;
+	color: #444;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+	width: 130px;
+}
+.vvx-tel-list li a{
+	float: left;
+	line-height: 32px;
+	color: #444;
+	font-size: 14px;
+}
+
+
+
+/*信息公开细缆*/
+.vw-inp-box .inptit{
+	font-size: 30px;
+	color: #256dc3;
+	text-align: center;
+	line-height: 44px;
+	font-weight: bold;
+	margin-top: 30px;
+}
+
+
+.vw-inp-sub{
+	width: 350px;
+	height: 22px;
+	font-size: 0px;
+	text-align: center;
+}
+.vw-inp-sub .name{
+	display: inline-block;
+	line-height: 22px;
+	font-size: 14px;
+	color: #666;
+}
+.vw-inp-sub .cls{
+	display: inline-block;
+}
+.vw-inp-sub .cls .color{
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	background: #ccc;
+	border-radius: 3px;
+	margin:0 3px;
+	border:1px solid #e5e5e5;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.vw-inp-sub .color.cur{
+	height: 18px;
+	width: 18px;
+}
+.vw-inp-sub .color.cr1{
+	background: #fff;
+}
+.vw-inp-sub .color.cr2{
+	background: #d5e3f3;
+}
+.vw-inp-sub .color.cr3{
+	background: #ccece2;
+}
+.vw-inp-sub .color.cr4{
+	background: #f0d7ef;
+}
+.vw-inp-sub .color.cr5{
+	background: #f5e6c2;
+}
+.vw-inp-sub .font{
+	display: inline-block;
+	background: url(../image/vx-inp-ficon01.png) no-repeat;
+	width: 22px;
+	height: 15px;
+	margin-left: 30px;
+	
+}
+.vw-inp-sub .fsize{
+	display: inline-block;
+	position: relative;
+}
+.vw-inp-sub .fsize .f-sel{
+	display: inline-block;
+	height: 22px;
+	width: 22px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-sizing: border-box;
+	border:1px solid #ddd;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	color: #666;
+	cursor: pointer;
+	margin:0 10px;
+	background: #fff;
+	position: relative;
+	z-index: 10;
+}
+.vw-inp-sub .fsize .line{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 100px;
+	height: 1px;
+	background: #ddd;
+}
+.vw-inp-sub .fsize .f-sel.cur{
+	background: #1d74cd;
+	border-color: #1d74cd;
+	color: #fff;
+}
+.vw-inp-tabls{
+	border-top: 1px solid #f0f0f0;
+}
+.vw-inp-tabls{
+	padding-top: 20px;
+}
+.vw-inp-tabls .table{
+	width: 840px;
+	margin:0 auto;
+	border:1px solid #77ace1;
+}
+.vw-inp-tabls .table tr{
+	border:1px solid #77ace1;
+	height: 32px;
+}
+.vw-inp-tabls .table tr td{
+	border:1px solid #77ace1;
+	height: 32px;
+	font-size: 14px;
+	background: #f8fcff;
+}
+.vw-inp-tabls .table tr td.th{
+	color: #1d74cd;
+	background: #dbe9f8;
+	width: 100px;
+	text-align: center;
+}
+.vw-inp-tabls .table tr td.td{
+	color: #333;
+	padding-left: 15px;
+	width: 310px;
+}
+.vw-art-list{
+	padding:0 40px;
+	margin-top: 30px;
+}
+.vw-art-list .item{
+	line-height: 36px;
+	color: #333;
+	font-size: 14px;
+	margin-bottom: 35px;
+}
+.vw-file-list{
+	padding:28px 40px;
+}
+.vw-file-list li span{
+	float: left;
+	font-size: 14px;
+	padding-left: 20px;
+	font-weight: bold;
+	color: #333;
+	background: url(http://www.xizang.gov.cn/images/vw-fj-icon01.png) left center no-repeat;
+	line-height: 36px;
+}
+.vw-file-list li a{
+	float: left;
+	font-size: 14px;
+	color: #1d74cd;
+	line-height: 36px;
+}
+.vw-inp-btms{
+	padding:0 40px;
+}
+.vw-thr-list {
+	margin-top: 24px;
+}
+.vw-thr-list a{
+	float: left;
+	border:1px solid #e7e7e7;
+	height: 30px;
+	width: 70px;
+	box-sizing: border-box;
+	line-height: 28px;
+	text-align: center;
+	font-size: 14px;
+	color: #666;
+	margin-right: 16px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+.vw-thr-list a:hover{
+	color: #226dba;
+	border-color: #226dba;
+}
+.vw-shape-list{
+	height: 38px;
+	line-height: 38px;
+	margin-top: 25px;
+}
+.vw-shape-list span{
+	float: left;
+	height: 38px;
+	line-height: 38px;
+	color: #666;
+	font-size: 14px;
+}
+.vw-shape-list a{
+	float: left;
+	height: 38px;
+	width: 38px;
+	border-radius: 50%;
+	margin:0 7px;
+}
+.vw-shape-list a img:hover{
+	animation: myfirst 1s;
+    -moz-animation: myfirst 1s;	/* Firefox */
+    -webkit-animation: myfirst 1s;	/* Safari 和 Chrome */
+    -o-animation: myfirst 1s;	/* Opera */
+}
+.vsw-hd-border{
+	border:1px solid #e7eaf1;
+	box-sizing: border-box;
+	padding: 20px;
+}
+.vsw-hd-lbder{
+	border:1px solid #deebfb;
+	box-sizing: border-box;
+}
+
+
+.vvx-time-author{
+	height: 22px;
+	line-height: 22px;
+	color: #666;
+	font-size: 14px;
+}
+.vvx-time-author a{
+	color: #888;
+	margin-right: 12px;
+}
+.vvx-sub-box{
+	margin-bottom: 10px;
+	margin-top: 20px;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.vvx-code-zxcon{
+	display: block;
+	height: 160px;
+	width: 132px;
+	margin:0 auto;
+}
+.vvx-code-zxcon span{
+	line-height: 28px;
+	height: 28px;
+	text-align: center;
+	font-size: 12px;
+	color: #a8a8a8;
+}
+.vvx-code-zxcon img{
+	display: block;
+	width: 132px;
+	height: 132px;
+}
+.vvx-zxcon-shape{
+	font-size: 0px;
+	text-align: right;
+	margin-top: 20px;
+}
+.vvx-zxcon-shape span{
+	display: inline-block;
+	font-size: 14px;
+	color: #828282;
+	line-height: 19px;
+	height: 19px;
+}
+.vvx-zxcon-shape a{
+	display: inline-block;
+	margin:0 2px;
+}
+.vvx-view-nbder.ns-overview{
+	border-top: none;
+}
+.vvx-mhd-pperiod{
+	width: 100%;
+	/*height: ;*/
+}
+.vvx-mhd-pperiod .title{
+	color: #256dc3;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 32px;
+
+}
+.vvx-mzhd-con .vvx-mhd-yjzh,
+.vvx-mzhd-con .vvx-mhd-zxft{
+	height: auto;
+}
+
+
+
+.hd-online-form .tit{
+	font-size: 14px;
+	color: #444;
+	font-weight: bold;
+	line-height: 20px;
+	padding-top:15px;
+	padding-left: 15px;
+}
+.hd-radio-list{
+	box-sizing: border-box;
+	padding:5px 15px 0;
+}
+.hd-radio-list li{
+	height:36px;
+}
+.hd-radio-list li input{
+	float: left;
+	display: none;
+}
+.hd-radio-list li label{
+	float: left;
+	font-size: 14px;
+	color: #444;
+	line-height: 36px;
+	background: url(../image/hd-form-icon.png) no-repeat 3px center;
+	box-sizing: border-box;
+	padding-left: 24px;
+}
+.hd-radio-list li input[type="radio"]:checked + .advice{
+	background: url(../image/hd-form-iconh.png) no-repeat 3px center;
+}
+.hd-online-form .form-submit{
+	display: block;
+	height:36px;
+	width: 80px;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	background: #1b87db;
+	font-size: 14px;
+	margin:10px 15px 0;
+	cursor: pointer;
+}
+
+
+/* 增加作废图标*/
+.vw-inp-tabls{
+	position: relative;
+}
+.vw-inp-tabls .zf{
+	position: absolute;
+    z-index: 9;
+    top: -10px;
+    right: 80px;
+    width: 200px;
+    display: none;
+}
+.vw-inp-tabls.cur .zf{
+	display: block;
+}

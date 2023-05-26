@@ -1,0 +1,1 @@
+document.write("<a href=\"http://p.qiao.baidu.com/cps/chat?siteId=16173182&userId=1704112&siteToken=38f0df94c55843411088649276be7258\" title=\"文明大行动\" target=\"_blank\"><img src=\"https://www.hnjjtq.com/ad/880-90.jpg\" alt=\"慢行\"  width=\"100%\" height=\"90\"></a> ")

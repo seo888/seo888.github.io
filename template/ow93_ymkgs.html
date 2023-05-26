@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{自定义标题}</title>
+	<meta name="keywords" content="{关键词1}" />
+	<meta name="description" content="{自定义描述}">
+	<meta name="Development" content="本网站由{网站名称}有限责任公司承建">
+    <link rel="stylesheet" href="/_/static/ow93_ymkgs/static/css/layui.css">
+    <link rel="stylesheet" href="/_/static/ow93_ymkgs/static/css/style.css">
+</head>
+<body>
+    <div class="layui-main">
+		<div class="headertop">
+			<div class="layui-container">
+				<div class="layui-row">
+					<div class="layui-col-md6">欢迎访问{网站名称}，今天是{年月日}——{当前时间}</div>
+					<div class="layui-col-md6 topright">
+						<span class="layui-breadcrumb" lay-separator="-">
+						  <a href="/{随机字符}/{随机数字}_{随机数字}.html">关于我们</a>
+						  <a href="/{随机字符}/{随机数字}_{随机数字}.html">联系我们</a>
+						  <a href="/{随机字符}/{随机数字}_{随机数字}.html">手机版</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+
+			<div class="layui-container">
+				<ul class="layui-nav" lay-filter="">
+													<li class="layui-nav-item"><a href="/{随机字符}/{随机数字}_{随机数字}.html">网站首页</a></li>
+										<li class="layui-nav-item "><a href="/{随机字符}/{随机数字}_{随机数字}.html">本会简介</a></li>
+										<li class="layui-nav-item "><a href="/{随机字符}/{随机数字}_{随机数字}.html">本会活动</a></li>
+										<li class="layui-nav-item  layui-this"><a href="/{随机字符}/{随机数字}_{随机数字}.html">央媒看甘肃</a></li>
+										<li class="layui-nav-item "><a href="/{随机字符}/{随机数字}_{随机数字}.html">视频播报</a></li>
+										<li class="layui-nav-item "><a href="/{随机字符}/{随机数字}_{随机数字}.html">记者佳作赏析</a></li>
+										<li class="layui-nav-item "><a href="/{随机字符}/{随机数字}_{随机数字}.html">甘肃风光</a></li>
+										<li class="layui-nav-item "><a href="/{随机字符}/{随机数字}_{随机数字}.html">H5</a></li>
+										<li class="layui-nav-item "><a href="/{随机字符}/{随机数字}_{随机数字}.html">投稿邮箱</a></li>
+													</ul>
+			</div>
+		</div>
+
+		<div class="pageContent">
+			<div class="layui-container">
+			<div class="crumbs"><i class="layui-icon">&#xe68e;</i> <a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a><span> &gt; </span><a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a> >  正文</div>
+			</div>
+			<div class="layui-container sohwContent">
+				<h1>{关键词1}{随机后缀}{新闻网标题}</h1>
+				<h2></h2>
+				<div class="news_info">					
+					发布时间：{当前时间}				</div>
+				<hr>
+				<div class="artContent">
+					<script type="text/javascript" src="/_/static/ow93_ymkgs/static/js/ckplayer.js" ></script>
+				
+																<p>　　{新闻网内容}</p>
+																<p>　　{新闻网内容}</p>
+								<div style="text-align:right;">来源：{关键词1}</div>
+				</div>
+				<hr>
+				<div class="artContent1">
+					<div class="social-share share-component" data-sites="wechat,weibo,qq,qzone,douban"></div>
+				</div>
+			</div>
+		</div>
+<script language="JavaScript" src="/_/static/ow93_ymkgs/static/js/jquery.min.js"></script>	
+<link rel="stylesheet" href="/_/static/ow93_ymkgs/static/css/share.min.css">
+<script language="JavaScript" src="/_/static/ow93_ymkgs/static/js/share.min.js"></script>	
+<script src="/_/static/ow93_ymkgs/static/js/layui.all.js"></script>
+<script src="/_/static/ow93_ymkgs/static/js/jweixin-1.0.0.js"></script>
+				<script type="text/javascript">
+				jQuery(function($){
+					$("div.mp4").each(function (i) {
+						$(this).html('<div style="text-align:center;"><div id="video_' + i + '" style="width:600px;height:400px;text-align:center;margin:20px auto;"></div></div>');
+						var player = new ckplayer({
+							container: '#video_' + i,
+							variable: 'player',
+							flashplayer: false,
+							video: $(this).attr('src'),
+							poster: $(this).attr('poster')
+						});
+						//$(this).remove();
+					});
+				});
+				$.ajax({
+					url: "http://api.ymkgs.cn/weixinApi/weixinapi.php",
+					data:{url:window.location.href},
+					type: "get",
+					dataType:'jsonp',
+					success: function(data) {
+						shareweixin(data);
+					}
+				});			
+				
+
+				function shareweixin(data) {
+
+					//var data = JSON.parse(data);
+					console.log(data);
+
+					window.wx.config({
+						debug: false,
+						appId: data.appId,
+						timestamp: data.timestamp,
+						nonceStr: data.nonceStr,
+						signature: data.signature,
+						jsApiList: ['checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage']
+					});
+
+					wxShare();
+				}
+
+				function wxShare() {
+					//检测api是否生效
+					wx.ready(function () {
+						wx.checkJsApi({
+							jsApiList: [
+								'getNetworkType',
+								'previewImage'
+							],
+							success: function (res) {
+								console.log(JSON.stringify(res));
+							}
+						});
+						//分享给好友
+						wx.onMenuShareAppMessage({
+							title: '{自定义标题}',
+							desc: '{自定义描述}',
+							link: 'http://www.ymkgs.cn/wapshow-10-19875-1.html',
+							imgUrl: 'http://www.ymkgs.cn/statics/images/sharelogo.png'
+						});
+
+						//分享到朋友圈
+						wx.onMenuShareTimeline({
+							title: '{自定义标题}',
+							desc: '{自定义描述}', 
+							link: 'http://www.ymkgs.cn/wapshow-10-19875-1.html',
+							imgUrl: 'http://www.ymkgs.cn/statics/images/sharelogo.png'
+						});
+
+					});
+				}
+				</script>
+<script language="JavaScript" src="http://www.ymkgs.cn/api.php?op=count&id=19875&modelid=1"></script>
+
+
+
+<script>
+	function hasUsableSWF(){
+	var swf;     
+	if(typeof window.ActiveXObject != "undefined"){
+			swf = new  ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+		}else{
+			swf = navigator.plugins['Shockwave Flash'];
+		}
+		return swf ? true : false;
+	};
+	if(!hasUsableSWF()){$("#FlashID").hide();}
+</script>
+<div class="footer">
+			<div class="layui-container">
+				<div class="layui-row link">
+				<div class="layui-col-xs11">
+				<p>
+												<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">本会简介</a> |  
+								<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">联系方式</a> |  
+								<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">版权声明</a> |  
+								<a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">投稿邮箱</a> |  
+												</p>
+				<p>版权所有:{关键词1} copyright &copy; {域名库}</p>                                     
+				<p>{关键词1}主办  <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">陇ICP备17004870号</a>  <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">甘公网安备 62010202001388号</a></p>
+				</div>
+			</div>
+		</div>
+    </div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+	<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+</html>

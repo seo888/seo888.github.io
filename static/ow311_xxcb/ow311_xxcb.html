@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="detail">
+
+<head>
+    <meta charset="utf-8">
+<title>{自定义标题}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+<meta property="og:type" content="website">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta property="og:title" content="{自定义标题}">
+<meta property="og:description" content="自定义描述">
+<script src="/_/static/ow311_xxcb/static/js/avalon.min.js"></script>
+<script src="/_/static/ow311_xxcb/static/js/jquery.min.js"></script>
+<script src="/_/static/ow311_xxcb/static/js/layer.js"></script>
+<script src="/_/static/ow311_xxcb/static/js/dora.front.js"></script>
+
+<link rel="stylesheet" href="/_/static/ow311_xxcb/static/css/layer.css">
+<link rel="stylesheet" href="/_/static/ow311_xxcb/static/css/font_2981772_jhrp6wtcg3s.css">
+<!--[if lt IE 9]>
+<script src="//static/ow311_xxcb/static/plugins/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//static/ow311_xxcb/static/plugins/respond.js/1.4.2/respond.min.js"></script>
+<script src="//static/ow311_xxcb/static/plugins/json3/3.3.2/json3.min.js"></script>
+<script src="//static/ow311_xxcb/static/plugins/promise/promise.js"></script>
+<![endif]-->
+
+
+    <!-- 引入组件库 -->
+    <link href="/_/static/ow311_xxcb/static/css/bootstrap.min.css" rel="stylesheet">
+<script src="/_/static/ow311_xxcb/static/js/bootstrap.min.js"></script>
+<link href="/_/static/ow311_xxcb/static/css/font-awesome.min.css" rel="stylesheet">
+
+
+            
+    
+            
+
+    <!-- 二次开发静态资源 -->
+    <script src="/_/static/ow311_xxcb/static/js/dora.front1.js"></script>
+<link href="/_/static/ow311_xxcb/static/css/white.css" rel="stylesheet">
+
+
+            
+    
+            
+
+    
+    <meta name="viewport" content="">
+    <input type="hidden" value="{&quot;sys_layer_confirm_title&quot;:&quot;提示&quot;,&quot;sys_layer_confirm_btn_yes&quot;:&quot;确定&quot;,&quot;sys_layer_confirm_btn_no&quot;:&quot;取消&quot;,&quot;sys_layer_confirm_logOut&quot;:&quot;您确认要退出吗？&quot;,&quot;sys_layer_confirm_delete&quot;:&quot;确认删除该条记录吗？&quot;,&quot;sys_layer_option_success&quot;:&quot;操作成功！&quot;,&quot;sys_layer_validate_username&quot;:&quot;请输入正确的用户名&quot;,&quot;sys_layer_validate_password&quot;:&quot;请输入正确的密码&quot;,&quot;sys_layer_validate_phoneNum&quot;:&quot;请输入正确的手机号&quot;,&quot;sys_layer_validate_email&quot;:&quot;请输入正确的邮箱&quot;,&quot;sys_layer_validate_keyword&quot;:&quot;请输入关键字&quot;,&quot;label_system_resend&quot;:&quot;重新发送&quot;,&quot;label_system_justdownload&quot;:&quot;立即下载&quot;}" id="sysKeys">
+</head>
+
+<body>
+    <!--头部模板-->
+<script>
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        document.write("<script src='/static/ow311_xxcb/static/themes/dorawhite/js/iscroll/iscroll.js'><" + '/' +
+            "script>");
+        $(function () {
+            new IScroll('#navWrapper', {
+                scrollX: true,
+                scrollY: false,
+                mouseWheel: true,
+                click: true
+            });
+        })
+    }
+</script>
+<input type="hidden" value="" id="userId">
+<input type="hidden" value="" id="logined">
+<input type="hidden" value="" id="tokenId">
+<header class="clearfix" id="header" ms-controller="headerCtr">
+    
+    
+    
+    <div class="container-fluid">
+        <div class="row header-top"></div>
+        <div class="row">
+            <div class="header-box">
+                <div class="row header-main" id="top-header">
+                    <!-- <div class="col-sm-2 col-md-6" style="padding: 5px 0 10px;"> -->
+                    <div class="col-sm-2 col-md-2 col-xs-2" id="navWrapper" style="float: left;">
+                        <div id="navScroller">
+                            <div class="site-name ">
+                                <a href="/{随机字符}/{随机数字}_{随机数字}.html" id="logo">
+                                    <img src="/_/static/ow311_xxcb/static/picture/白底xxcb.png" alt="" height="33px">
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-8 col-xs-8">
+                        <div class="header-menu-box" ms-controller="head-menu">
+                            <div class="row">
+                                <ul class="home-menu" ms-if="@loc == '/'">
+                                    <!-- <li class="home-menu-item" ms-for="($index, el) in @cmsNews" ms-on-click="@itemClick($el,el.title)"><a ms-attr="{href: el.href}" ms-text="el.title" ms-css="{color: el.href == @active ? 'red': ''}"></a></li> -->
+                                    <li class="home-menu-item" ms-for="($index, el) in @cmsNews" ms-on-click="@itemClick($el,el.egtitle)"><span ms-attr="{href: el.href}" ms-text="el.title" ms-css="{color: el.title == @active ? 'rgba(51, 51, 51, 1)': 'rgba(51, 51, 51, 1)', fontWeight: el.title == @active ? 'bold': ''}"></span></li>
+                                </ul>
+                                <ul class="home-menu" ms-if="@loc != '/'">
+                                    <li class="home-menu-item" ms-for="($index, el) in @cmsNews" data-test="首页" ms-on-click="@itemClick($el,el.egtitle)"><span ms-attr="{href: el.href}" ms-text="el.title" ms-css="{color: el.title == `首页`  ? 'rgba(51, 51, 51, 1)': 'rgba(51, 51, 51, 1)', fontWeight: el.title == `首页`  ? 'bold': ''}"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <div class="col-sm-2 col-md-2  col-xs-2" style="padding: 0;float: left;">
+                        <div id="navScroller">
+                            <div class="site-name">
+                                <a href="" id="logo" style="font-size: 16px;color: rgba(119, 119, 119, 1);">
+                                    <img src="/_/static/ow311_xxcb/static/picture/白底csp.png" alt="" width="92px" height="25px">
+                                    <img src="/_/static/ow311_xxcb/static/picture/白底phone.png" width="16px" height="16px" style="margin-left: 15px;">
+                                    下载APP
+                                </a>
+                                <div class="qr">
+                                </div>
+                            </div>
+                            <!-- <div class="site-name" style="font-size:18px;color:rgba(119, 119, 119, 1);">
+                                <img src="//static/ow311_xxcb/static/themes/dorawhite/images/phone.png" width="24px" height="24px"/>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ms-controller="head-menu" style="text-align: center;background-color: #ff9377;">
+            <div style="width: 1199px;margin: 0 auto;">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" ms-if="@active == '首页' && @loc == '/'">
+                   
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+    <div class="mainbody" id="detail">
+        <input type="hidden" value="" id="siteLang">
+        
+<div class="container-fluid detail">
+    <div class="row">
+        <div class="col-md-9 main-container" ms-controller="documentInfo">
+            <input type="hidden" value="2q8biSYgB6448b6b50c4e4753fb013178" id="contentId">
+            <div class="row articel-details">
+                <div class="col-md-12 left-frame">
+                    <div class="articel-main ">
+                        <article class="post">
+                            <div style="line-height:35px;font-size: 16px;color: rgba(119, 119, 119, 1);">新闻 > <span style="color: #333;">{关键词1}</span></div>
+                            <h2 alt="" class="post-title">
+                                {关键词1}{随机后缀}{新闻网标题} 
+                            </h2>
+                            <ul class="post-meta content-author">
+                           <li class="author-name">
+                            {人物名称}
+                                </li>
+                                <li>
+                                    <span class="dot">&nbsp;•&nbsp;</span>
+                                    <span>新闻</span>
+                                    
+                                    <span class="dot">&nbsp;•&nbsp;</span>
+                                    
+                                    
+                                    <a href="/{随机字符}/{随机数字}_{随机数字}.html"
+                                        target="_blank">{关键词1}</a>
+                                    
+                                </li> 
+                                 <li>
+                                    <span class="dot">&nbsp;•&nbsp;</span> {当前时间}
+                                </li>
+                                <li>
+                                    <span
+                                        class="dot">&nbsp;•&nbsp;</span>阅读量&nbsp;&nbsp;{随机数字}
+                                </li> 
+                            </ul>
+                            
+                            <div class="post-content">
+                                <p class="time" style="font-size:14px;color:#b4b4b5;text-indent: 0rem!important;">{当前时间}</p>
+                                <html><head></head><body><p class="p1">{新闻网内容}</p></body></html>
+                            </div>
+                            
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 right">
+            
+<div class="pannel-box hot-content-list">
+    <div class="content-list" ms-controller="head-menu">
+        <!-- 
+        <div class="pannel-title">热点新闻</div>
+        <ul class="ul-list">
+            <li ms-for="($index, el) in @hotNews">
+                <div class="num" ms-text="$index + 1"></div>
+                <div class="title">
+                    <a ms-attr="{href: el.url}" target="_blank" ms-text="el.title"></a>
+                </div>
+            </li>
+        </ul>
+         -->
+        <ul class="qr-list">
+            
+            
+            <li>
+                
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                        <img src="{随机图片}" alt="{标题}" width="100%">
+                    </a>
+                
+            </li>
+            
+            <li>
+                
+                   <img src="{随机图片}" alt="{标题}" width="100%">
+                
+            </li>
+            
+            <li>
+                
+                    <img src="{随机图片}" alt="{标题}" width="100%">
+                
+            </li>
+            
+            <li>
+                
+                   <img src="{随机图片}" alt="{标题}" width="100%">
+                
+            </li>
+            
+            <li>
+                
+                   <img src="{随机图片}" alt="{标题}" width="100%">
+                
+            </li>
+            
+            <li>
+                
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                           <img src="{随机图片}" alt="{标题}" width="100%">
+                    </a>
+                
+            </li>
+            
+            <li>
+                
+                    <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">
+                           <img src="{随机图片}" alt="{标题}" width="100%">
+                    </a>
+                
+            </li>
+            
+            <li>
+                <div style="width:260px;height:63px;background-color: #bfc2cb;cursor: pointer;
+                padding: 5px 15px;font-size: 16px; color: white;">
+                    <div class="text">违法和不良信息举报</div>
+                    <div class="number" style="font-size: 17px;margin-top: -5px;">0731-{随机8数字}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(function () {
+        getHotNews()
+    })
+</script>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <!--尾部模板-->
+<div class="back-to-top" id="gotop">
+    <i class="glyphicon glyphicon-chevron-up"></i>
+</div>
+<footer id="footer">
+    <div class="container">
+       
+        <div class="footer-about">
+            
+            <div class="footer-contact">
+                <p>ICP 备案号: 湘ICP 备 {随机8数字} 号 -2  | <img src="/_/static/ow311_xxcb/static/picture/pl.png" alt="版权公告" width="30px"> 湘公网安备 430103{随机8数字}号</p>
+                <p>湖南省互联网新闻信息服务许可证 431{随机8数字} | 网络出版服务许可证(署)网出证(湘)字第 010号 | 出版物经营许可证：湘新出发A字第0214号</p>
+                <p>增值电信业务经营许可证:湘 B2-{随机8数字} | 企业法人营业执照汪册号 4300000{随机8数字}</p>
+                <p class="pl">版权声明 {年} {域名库} ALL Riahts Reserved. | 版权所有{网站名称}</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>

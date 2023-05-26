@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!--[if IE 6 ]><html class="ie ie6" lang="zh-CN"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="zh-CN"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="zh-CN"><![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="zh-CN"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN"><!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{标题}">
+    <meta name="description" content="{自定义描述}" />
+    <meta property="og:image" content="https://img.enshi.cn/tpl/esxww/touchicon.png">
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/jquery.cookie-1.4.1.js"></script>
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/common.js"></script>
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/seccode.js"></script>
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/config.js"></script>
+    <!--[if IE 6 ]>
+			<script type="text/javascript" src="https://img.enshi.cn/statics/js/dd_belatedpng.min.js"></script>
+			<script type="text/javascript">DD_belatedPNG.fix('img, .png');</script>
+		<![endif]-->
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/reset.css">
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/list-icon.css">
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/common.css">
+    <link rel="shortcut icon" href="https://img.enshi.cn/tpl/esxww/favicon.ico">
+    <link rel="apple-touch-icon" href="https://img.enshi.cn/tpl/esxww/touchicon.png">
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/common1.js"></script>
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/content.css">
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/acticle-common.css">
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/content.js"></script>
+    <script type="text/javascript" src="/_/static/da64_enshi/static/js/article-common.js"></script>
+    <script type="text/javascript">
+        var contentid = '1122343';
+        var title = "\u6069\u65bd\u5dde\u96c6\u4e2d\u57f9\u8bad\u5dde\u76f4\u6d3e\u9a7b\u793e\u533a\u201c\u5c16\u5200\u73ed\u201d\u4eba\u5458";
+        var topicid = '';
+        var spaceid = '';
+        var modelid = '1';
+        var comment = false;
+        var thumb = '';
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/common1.css">
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/article.css">
+    <link rel="stylesheet" href="/_/static/da64_enshi/static/css/common2.css">
+</head>
+
+<body>
+
+    <div class="w100p channel">
+        <div class="w1250 ofh">
+            <ul id="channel" class="clear ofh">
+                <li id="channel_home"><a href="javascript:;" target="_blank">首页</a></li>
+                <li><a href="javascript:;" target="_blank">{关键词1}</a></li>
+                <li><a href="javascript:;" target="_blank">文化</a></li>
+                <li><a href="javascript:;" target="_blank">旅游</a></li>
+                <li><a href="javascript:;" target="_blank">{随机关键词}</a></li>
+                <li><a href="javascript:;" target="_blank">健康</a></li>
+                <li><a href="javascript:;" target="_blank">公益</a></li>
+                <li><a href="javascript:;" target="_blank">日报</a></li>
+                <li><a href="javascript:;" target="_blank">晚报</a></li>
+            </ul>
+            <style>
+                .w1000 #channel li {
+                    width: 110px;
+                    padding: 0;
+                    float: left;
+                }
+
+                .w1250 #channel li {
+                    width: 137px;
+                    padding: 0;
+                    float: left;
+                }
+
+                #navbar .w1250 #channel li {
+                    width: 97px;
+                    padding: 0;
+                    float: left;
+                }
+            </style>
+
+        </div>
+    </div>
+    <div id="head_logo" class="w100p">
+        <div class="w1250">
+            <div class="fl clear">
+                <a id="logo" class="fl png db" href="javascript:;" target="_blank"></a>
+                <span id="path" class="ofh">
+                    <a href="javascript:;" target="_blank">新闻</a>
+                    &gt;&gt;<a href="javascript:;" target="_blank">时政要闻</a>
+                </span>
+            </div>
+            <form id="search" class="fr png" action="http://app.enshi.cn/" method="GET" target="_blank">
+                <input type="hidden" name="app" value="search">
+                <input type="hidden" name="controller" value="index">
+                <input type="hidden" name="action" value="search">
+                <input type="hidden" name="type" value="all">
+                <input type="hidden" name="mode" value="full">
+                <input type="hidden" name="order" value="time">
+                <input type="hidden" name="catid" value="1">
+                <input type="text" name="wd" placeholder="请输入关键字" class="fl plr10 blr3">
+                <button type="submit" class="fl png brr3"></button>
+            </form>
+        </div>
+    </div>
+    <div class="none"></div>
+    <div id="web-main" class="w1250 mtb20 ofh">
+        <div class="ofh fl main-left">
+
+            <div id="article" class="mtb20 clear">
+
+                <h1 id="title">{关键词1}{随机后缀}{新闻网标题}</h1>
+                <div id="infos">
+                    <span id="info-date"><i>发布时间：</i>{今日时间}</span>
+                    <span id="info-source"><i>来源：</i>{网站名称}</span>
+                    <span id="info-author"><i>作者：</i>{人物名称}</span>
+                    <span id="info-editor"><i>编辑：</i>{人物名称}</span>
+                    <span id="info-pv"></span>
+                    <a href="javascript:;" class="png btn-font" id="btn-font-plus" title="加大字号"></a><a
+                        href="javascript:;" class="png btn-font" id="btn-font-reduce" title="减小字号"></a>
+                </div>
+
+                <div class="article-content mtb20 clear">
+                    <p>{新闻网内容}</p>
+                    <p>{新闻网内容}</p>
+                </div>
+
+                <div class="content-editor">责任编辑：{人物名称}</div>
+                <div class="content-tool clear mtb20">
+                    <div class="fl"></div>
+                    <div class="fr"></div>
+                </div>
+
+
+            </div><!--/article-->
+            <dl class="content-bar mt20" id="article_pv_tu">
+                <dt class="clear">
+                    <h3 class="fl">热图点击</h3>
+                </dt>
+                <dd class="ofh">
+                    <ul class="clear">
+                        <li class="ml0"><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                        <li><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                        <li><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                        <li><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                        <li class="ml0"><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                        <li><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                        <li><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                        <li><a href="javascript:;" target="_blank" class="db pr"><img
+                                    src="{随机图片}" width="210" height="140"
+                                    alt="{标题}">
+                                <div class="pa png">{标题}</div>
+                            </a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <script type="text/javascript">
+                $(function () {
+                    $("#article_pv_tu dd li").hover(function () {
+                        $(this).find("div").show().animate({ "opacity": 0.99 }, "fast");
+                    }, function () {
+                        $(this).find("div").hide().animate({ "opacity": 0 }, "fast");
+                    })
+                })
+            </script>
+        </div>
+        <div class="ofh fr main-right">
+            <dl class="sidebar clear">
+                <dt class="clear">
+                    <a href="javascript:;" target="_blank">热点推荐</a>
+                </dt>
+                <dd class="clear">
+                    <ul class="list-dot wsn">
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{关键词1}{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{关键词1}{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="none"></div>
+            <dl class="sidebar mtb20 clear">
+                <dt class="clear">
+                    <a href="javascript:;" target="_blank">微信关注</a>
+                </dt>
+                <dd class="clear">
+                    <ul class="list-dot wsn">
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{关键词1}{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                        <li><a href="{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <div class="none"></div>
+            <dl class="sidebar mt20 clear pr">
+                <dt class="clear">
+                    <a href="javascript:;" target="_blank">最新专题</a>
+                </dt>
+                <dd class="clear">
+                    <div class="picBox">
+                        <div class="hd ofh pa">
+                            <ul></ul>
+                        </div>
+                        <div class="bd">
+                            <ul class="phover">
+                                <li>
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="{随机图片}" width="264" height="142"
+                                            alt="{标题}">
+                                        <div class="png">{标题}</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="{随机图片}" width="264" height="142"
+                                            alt="{标题}">
+                                        <div class="png">{关键词1}{标题}</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="{随机图片}" width="264" height="142"
+                                            alt="{标题}">
+                                        <div class="png">{标题}</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="{随机图片}" width="264" height="142"
+                                            alt="{标题}">
+                                        <div class="png">{标题}</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="{随机图片}" width="264" height="142"
+                                            alt="{标题}">
+                                        <div class="png">{关键词1}{标题}</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <script type="text/javascript">
+                jQuery(".picBox").slide({
+                    titCell: ".hd ul",
+                    mainCell: ".bd ul",
+                    autoPage: true,
+                    effect: "left",
+                    autoPlay: true,
+                    delayTime: 500,
+                    interTime: 4000,
+                    vis: 1,
+                    scroll: 1
+                })
+            </script>
+            <div class="none"></div>
+            <dl class="sidebar mtb20 clear tab">
+                <dt class="clear hd">
+                    <h3 class="fl">阅读排行</h3>
+                    <ul class="fr">
+                        <li class="on">今日</li>
+                        <li>本周</li>
+                        <li>本月</li>
+                    </ul>
+                </dt>
+                <dd class="clear bd">
+                    <ul class="list-rank wsn">
+                        <li><i class="i1">1</i><a href="" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li><i class="i2">2</i><a href="javascript:;" target="_blank">{关键词1}{标题}</a></li>
+                        <li><i class="i3">3</i><a href="javascript:;" target="_blank">{标题}</a></li>
+                        <li><i>4</i><a href="javascript:;" target="_blank">{标题}</a></li>
+                        <li><i>5</i><a href="javascript:;" target="_blank">{标题}{关键词1}</a></li>
+                        <li><i>6</i><a href="javascript:;" target="_blank">{标题}</a></li>
+                        <li><i>7</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}…</a></li>
+                        <li><i>8</i><a href="javascript:;" target="_blank">{标题}</a></li>
+                    </ul>
+                    <ul class="list-rank wsn" style="display:none;">
+                        <li><i class="i1">1</i><a href="javascript:;" target="_blank">{标题}</a></li>
+                        <li><i class="i2">2</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li><i class="i3">3</i><a href="javascript:;" target="_blank">{关键词1}{标题}</a></li>
+                        <li><i>4</i><a href="javascript:;" title="{标题}" target="_blank">{标题}</a></li>
+                        <li><i>5</i><a href="javascript:;" title="{标题}" target="_blank">{标题}</a></li>
+                        <li><i>6</i><a href="javascript:;"
+                                title="{标题}"
+                                target="_blank">{关键词1}{标题}</a></li>
+                        <li><i>7</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li><i>8</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                    </ul>
+                    <ul class="list-rank wsn" style="display:none;">
+                        <li><i class="i1">1</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li><i class="i2">2</i><a href="javascript:;" target="_blank">{标题}</a></li>
+                        <li><i class="i3">3</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{关键词1}{标题}</a></li>
+                        <li><i>4</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li><i>5</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li><i>6</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                        <li><i>7</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{关键词1}{标题}</a></li>
+                        <li><i>8</i><a href="javascript:;" title="{标题}"
+                                target="_blank">{标题}</a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="none"></div>
+    <div id="foot" class="w100p mt20 ofh">
+        <div class="w100p ptb10 tac">
+            <a href="javascript:;" target="_blank">网站简介</a>　-　<a href="javascript:;" target="_blank">联系方式</a>　-　<a
+                href="javascript:;" target="_blank">{关键词1}</a>　-　<a href="javascript:;" target="_blank">{关键词1}</a>
+        </div>
+        <div class="w1250 ptb20 tac">
+            联系电话：0718-{随机8数字}<br>
+            <a href="javascript:;" target="_blank">鄂ICP备05015239号</a>　<a href="javascript:;"
+                target="_blank">鄂公网安备42280002001042号</a>　<a href="javascript:;" target="_blank">互联网新闻信息服务许可证</a><br>
+            &copy;2004-2023 <a href="javascript:;" target="_blank">{关键词1}</a>版权所有，未经书面授权禁止转载或镜像<br>
+            <a href="javascript:;" target="_blank">{关键词1}违法和不良信息举报受理与处置管理办法</a>　<a href="javascript:;"
+                target="_blank">在线举报</a>　<a href="javascript:;" target="_blank">意见和建议</a><br>
+            违法和不良信息举报电话（仅受理网站内容）：0718-{随机8数字}　举报邮箱：{随机8数字}@qq.com<br>
+            <div class="mt10">
+                
+            </div>
+        </div>
+    </div>
+
+    <!--
+<script>
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?cffddbcaa57003d9aa4234545c48eee9":"https://jspassport.ssl.qhimg.com/11.0.1.js?cffddbcaa57003d9aa4234545c48eee9";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+-->
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链 href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+
+</html>

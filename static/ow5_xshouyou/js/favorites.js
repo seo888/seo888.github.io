@@ -1,0 +1,2 @@
+function favorites(a,b){b=b||"笨手机游戏网 - 手机网游,手机游戏攻略,做手机网游最强攻略！",a=a||"http://"+window.location.host;try{window.external.addFavorite(a,b)}catch(c){try{window.sidebar.addPanel(b,a,"")}catch(c){alert("加入收藏失败，请使用Ctrl+D进行添加")}}
+return!1}

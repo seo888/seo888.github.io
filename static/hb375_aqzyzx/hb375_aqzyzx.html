@@ -1,0 +1,557 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta class="meta" style="display:none;" name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+ 
+<link href="/static/hb375_aqzyzx/static/css/index.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/static/hb375_aqzyzx/static/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/hb375_aqzyzx/static/css/layer.css">
+		<link rel="stylesheet" type="text/css" href="/static/hb375_aqzyzx/static/css/new_file.css">
+		<script src="/static/hb375_aqzyzx/static/js/rem.js" type="text/javascript" ></script>
+		<script src="/static/hb375_aqzyzx/static/js/jquery-1.10.1.min.js"></script>
+		<script src="/static/hb375_aqzyzx/static/js/swiper.min.js"></script>
+		<script src="/static/hb375_aqzyzx/static/js/layer.js" type="text/javascript" ></script>
+<link rel="stylesheet" id="pc" type="text/css" href="/static/hb375_aqzyzx/static/css/pc.css">
+</head>
+<body>
+
+<!--头部-->
+ <script type="text/javascript" language="javascript" src="/static/hb375_aqzyzx/static/js/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript">
+//下拉菜单
+var timeout         = 100;
+var timeout_h         = 200;
+var closetimer	    = 0;
+var ddmenuitem  = 0;
+function mopen(id){	
+	mcancelclosetime();
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	ddmenuitem = document.getElementById(id);
+	ddmenuitem.style.visibility = 'visible';
+
+}
+function mclose(){
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
+function mclosetime(){
+	closetimer = window.setTimeout(mclose, timeout);
+}
+function closetime(){
+	closetimer = window.setTimeout(mclose, timeout_h);
+}
+function mcancelclosetime(){
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+//设为首页
+function SetHome(url){
+	if (document.all) {
+		document.body.style.behavior='url(#default#homepage)';
+		   document.body.setHomePage(url);
+	}else{
+		alert("抱歉,您的浏览器不支持自动设置首页,请使用浏览器菜单手动设置!");
+	}
+}
+//加入收藏
+	function AddFavorite(sURL, sTitle) {
+		sURL = encodeURI(sURL); 
+	try{   
+		window.external.addFavorite(sURL, sTitle);   
+	}catch(e) {   
+		try{   
+			window.sidebar.addPanel(sTitle, sURL, "");   
+		}catch (e) {   
+			alert("抱歉,您的浏览器不支持自动加入收藏，请使用Ctrl+D进行添加,或使用浏览器菜单手动设置!");
+		}   
+	}
+}
+</script> 
+<!--手机端头部内容-->
+		<div class="top_link phone_show">
+			<a href="/{随机字符}/{随机字符}.html">枞阳在线电脑版</a>
+			<a href="/{随机字符}/{随机字符}.html">枞阳在线微信</a>
+		</div>
+		<div class="title phone_show">枞阳在线</div>
+		<div id="topNav" class="phone_show swiper-container swiper-container-horizontal swiper-container-free-mode">
+			<div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 300ms;">
+				<div class="swiper-slide swiper-slide-active">
+					<a href="/{随机字符}/{随机字符}.html">首页</a>
+				</div>
+				<div class="swiper-slide swiper-slide-next active">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">新闻</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">政务</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">纪检</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">外媒看枞阳</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">县直</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">乡镇</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">纪录小康工程</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">视频</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">人文</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">武术</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">文苑</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">娱乐</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">民生</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">社区</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">胡琴书</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">惜阴亭</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">射蛟台</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="/{随机字符}/{随机字符}.html" target="_blank">洗墨池</a>
+				</div>
+			</div>
+
+		</div>
+		<div id="plus" class="phone_show"></div>
+
+		<!--头部-->
+
+         <div class="phone_hiden" style="width:1150px; border-bottom:1px solid #dfdfdf;margin:0 auto;">
+            <div class="home">
+                <p class="fl cola">
+                    {网站名称} |
+                    <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                        {关键词1}
+                    </a>
+                    主办
+                </p>
+
+                 <!--广告位-->
+                <div style="float:right;">
+                    <p class="fl colc">
+                        <em>
+                            <img src="/static/hb375_aqzyzx/static/picture/home.gif" width="15" height="15">
+                        </em>
+                        <span style="CURSOR:pointer;margin-left:5px;" onclick="SetHome('http://www.aqzyzx.com/')" href="/{随机字符}/{随机字符}.html" target="_self" )="">
+                            设为首页
+                        </span>
+                    </p>
+                    <p class="fl cold">
+                        <a href='/{随机字符}/{随机字符}.html'>
+                            简体
+                        </a>
+<a href="/{随机字符}/{随机字符}.html">| 手机站</a>
+                     </p>
+                </div>
+            </div>
+        </div>
+        <!--Logo-->
+        <div class="search clearfix phone_hiden">
+            <div class="fl logo">
+                <img src="/static/hb375_aqzyzx/static/picture/zyzx.gif">
+            </div>
+            <div class="fl ad">
+                <div class="yd">
+                   
+<!--enorth cms{ top_mid_ad }enorth cms-->
+<a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="/static/hb375_aqzyzx/static/picture/cj4.jpg" width="460" height="60" border="0"></a>
+<!--enorth cms{ top_mid_ad }enorth cms-->
+
+
+                </div>
+                <!--广告位-->
+                <div class="tqrq">
+                    <!--日期和天气-->
+                    <p class="rq">
+                        <script src="/static/hb375_aqzyzx/static/js/date.js"></script>
+                        <script language="JavaScript" type="text/javascript">document.write(getDateString());</script>
+                    </p>
+                    <p class="tq">
+                     
+                    </p>
+                </div>
+            </div>
+            <div class="ss fl" style="margin-left:50px;">
+                 <!--本站搜索-->
+                <div class="ss_top">
+                    <form name="form" method="post" action="http://220.178.12.117:7001/m_fullsearch/full_search.jsp" target="_blank" style="display:inline">
+                        <input type="hidden" name="channel_id" value="51000000">
+                        <input type="text" name="keywords" id="keywords" class="text" value="本站搜索" onclick="this.value=''">
+                        <div class="submit">
+                            <input type="image" src="http://www.aqzyzx.com/images/search.jpg">
+                        </div>
+                    </form>
+                </div>
+               <div class="ss_bottom clearfix" style="margin-left:8px;">                  
+                    <a href="/{随机字符}/{随机字符}.html"><img src="/static/hb375_aqzyzx/static/picture/z1.gif" width="140" style="float:left;"></a> <a href="/{随机字符}/{随机字符}.html"><img src="/static/hb375_aqzyzx/static/picture/z2.gif" style="float:left;margin-left:6px;;" width="140"></a>
+                    
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <!--导航-->
+        <div class="phone_hiden" style="width:1200px;margin:0 auto; background:#1d71b7;">
+            <div class="nav wrapper">
+                <span>
+                    <img src="/static/hb375_aqzyzx/static/picture/home.jpg">
+                </span>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    首页
+                </a>
+
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    新闻
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    政务
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    纪检
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    外媒看枞阳
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    县直 
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    乡镇
+                </a>
+                  <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                   记录小康工程
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    视频
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    人文 
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    武术
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    文苑 
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    娱乐
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    民生 
+                 </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    胡琴书 
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    惜阴亭 
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    射蛟台 
+                </a>
+                <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                    洗墨池
+                </a>
+              </div>
+        </div>
+
+<!--文章-->
+<div class="child_pages-main clearfix">
+   <!--子页面主体左侧-->
+     <div class="fl">
+          <div class="position">
+    	     您当前的位置：
+<!--function position2(＞,01111) parse begin-->
+<a href="/{随机字符}/{随机字符}.html">{网站名称}</a>＞<a href="/{随机字符}/{随机字符}.html">{关键词1}</a>
+<!--function: position2(＞,01111) parse end  0ms cost! -->
+
+    	</div>
+    	
+    	<div class="article">
+          <p style="text-align:center;font-size:16px;font-weight:bold;">
+<!--function content5() parse begin-->
+
+<!--function: content5() parse end  0ms cost! -->
+</p>
+        	<h1 style="margin-top:10px;">{关键词1}{随机后缀}{新闻网标题}</h1>
+           <p style="margin:10px 0px;text-align:center;font-size:16px;"></p>
+            <div class="time clearfix">
+            	<span class="fl">时间：
+<!--function pub_date(yyyy年MM月dd日HH时mm分) parse begin-->
+{今日时间}
+<!--function: pub_date(yyyy年MM月dd日HH时mm分) parse end  0ms cost! -->
+</span>
+        
+            </div>
+            <!--内容-->
+            <div class="content_main" style="clear:both;">
+
+<p>{新闻网内容}</p>
+
+<!--function: content() parse end  0ms cost! -->
+
+                 <table style="margin-top:10px;" width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr> 
+                      <td width="57%" height="15"> 
+                        <div align="left"><strong style="font-size:14px">稿件来源：<font color="#CC3300"> 
+
+{随机关键词2}
+
+ </font></strong> </div>
+                      </td>
+                      <td width="8%" align="center"> 
+                        <div align="center"></div>
+                      </td>
+                      <td width="35%"> 
+                        <div align="center"><span style="font-size:14px"><strong>编辑：</strong> 
+                          
+<!--function init_editor() parse begin-->
+{人物名称}
+<!--function: init_editor() parse end  0ms cost! -->
+ </span></div>
+                      </td>
+                    </tr>
+                  </table>
+
+            </div>
+<style>.xgyd{
+margin-top:10px;
+margin-bottom:10px;
+}
+.xgyd td{
+height: 30px;}
+
+</style>
+            <div class="xgyd">
+                <table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" class="borderblue">
+                    <tr>
+                        <td width="4%" bgcolor="E7E7E7">
+                            <div align="center"></div>
+                        </td>
+                        <td bgcolor="#FFFFFF" width="15%" align="center"><b> <span class="b14none"><font color="#61A242">相关新闻</font></span></b></td>
+                        <td bgcolor="E7E7E7" width="81%" height="18">
+                            <div align="center" class="font10">
+                                <div align="left"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+<!--function link(down,1,10,<font class=b14>-</font>,yyyy-MM-dd
+                        HH:mm,class=b14,<font class=font10>) parse begin-->
+
+<!--function: link(down,1,10,<font class=b14>-</font>,yyyy-MM-dd
+                        HH:mm,class=b14,<font class=font10>) parse end  0ms cost! -->
+</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    	
+		
+	</div>
+    <!--子页面主体右侧-->
+    <div class="fr phone_hiden">
+    	<div class="box">
+	     <a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}"></a><p>
+          </p></div>
+        
+        <div class="box">
+<h3>热点新闻</h3>
+
+			<ul class="list">
+				
+<!--function guide_model_li(2017_rdxwdaodu,1,11) parse begin-->
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<li><a href="/{随机字符}/{随机字符}.html" target="_blank">{标题}</a></li>
+
+<!--function: guide_model_li(2017_rdxwdaodu,1,11) parse end  31ms cost! -->
+
+			</ul>
+        </div>
+        
+        <div class="box">
+        	<h3>精彩图片</h3>
+            <ul class="pic clearfix">
+            	<li>
+                	<a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}"></a>
+                    <p><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></p>
+                </li>
+
+<li>
+                	<a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}"></a>
+                    <p><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></p>
+                </li>
+
+<li>
+                	<a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}"></a>
+                    <p><a href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a></p>
+                </li>
+
+<li>
+                	<a href="/{随机字符}/{随机字符}.html" target="_blank"><img src="{随机图片}"></a>
+                    <p><a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词}</a></p>
+                </li>
+
+            </ul>
+        </div>
+        
+        
+    </div>
+
+</div>
+
+ <div class="child_pages-foot">
+	<p><a href="/{随机字符}/{随机字符}.html">返回首页</a> | <a href="/{随机字符}/{随机字符}.html">关于我们</a> | <a href="/{随机字符}/{随机字符}.html">律师声明</a> | <a href="/{随机字符}/{随机字符}.html">联系我们</a> | <a href="/{随机字符}/{随机字符}.html">广告服务</a>|<a href="/{随机字符}/{随机字符}.html" class="jiucuo">网站纠错</a></p>
+	<p>主管：中共枞阳县委宣传部 主办：{网站名称}</p>
+	<p>未经书面允许不得转载信息内容、建立镜像</p>
+	<p>Copyright @ {年}　{关键词1}　版权所有 技术支持：{随机关键词2}</p>
+	<p><a href="http://beian.miit.gov.cn/
+">皖ICP备{随机8数字}号</a> 互联网新闻信息服务许可证：{随机9数字}  皖网宣备{随机6数字}号 公安机关备案号{随机9数字}</p>
+</div><center><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='http://dcs.conac.cn/js/13/211/1511/60502454/CA132111511605024540003.js' type='text/javascript'%3E%3C/script%3E"));</script></center>
+<script src="/static/hb375_aqzyzx/static/js/layer1.js" type="text/javascript" ></script>
+<script type="text/javascript">
+  $('.jiucuo').click(function(){
+			var link = window.location.href;
+			layer.open({
+			  type: 2,
+			  title: '我要纠错', 
+			  content: ['http://api.yun.web.ahxmgk.com/jiucuo/index.html?site_id=5&link='+link+'', 'no'],
+			  area: ['1000px', '600px']
+			   //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: 
+			}); 
+		})
+</script>
+<script type="text/javascript">
+		if(/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
+		
+$("head").append("<link rel='stylesheet' type='text/css' href='/mobile/css/phone.css' />")
+		setTimeout(function(){		
+		    var mySwiper = new Swiper('#topNav', {
+				freeMode: true,
+				freeModeMomentumRatio: 0.5,
+				slidesPerView: 'auto',
+
+			})
+
+			swiperWidth = mySwiper.container[0].clientWidth
+			maxTranslate = mySwiper.maxTranslate();
+			maxWidth = -maxTranslate + swiperWidth / 2
+
+			$(".swiper-container").on('touchstart', function(e) {
+				//e.preventDefault()
+			})
+
+			mySwiper.on('tap', function(swiper, e) {
+
+				//e.preventDefault()
+
+				slide = swiper.slides[swiper.clickedIndex]
+				slideLeft = slide.offsetLeft
+				slideWidth = slide.clientWidth
+				slideCenter = slideLeft + slideWidth / 2
+				// 被点击slide的中心点
+
+				mySwiper.setWrapperTransition(300)
+
+				if(slideCenter < swiperWidth / 2) {
+
+					mySwiper.setWrapperTranslate(0)
+
+				} else if(slideCenter > maxWidth) {
+
+					mySwiper.setWrapperTranslate(maxTranslate)
+
+				} else {
+
+					nowTlanslate = slideCenter - swiperWidth / 2
+
+					mySwiper.setWrapperTranslate(-nowTlanslate)
+
+				}
+
+				$("#topNav  .active").removeClass('active')
+
+				$("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active')
+
+			})
+			//			var mySwiper2 = new Swiper('#banner', {
+			//				autoplay: 5000,
+			//				visibilityFullFit: true,
+			//				loop: true,
+			//				pagination: '.swiper-pagination',
+			//				paginationType: 'custom',
+			//				paginationCustomRender: function(swiper, current, total) {
+			//					return current + ' of ' + total;
+			//				}
+			//			});
+
+			var swiper = new Swiper('#banner', {
+				pagination: '.pagination',
+				paginationType: 'fraction',
+				autoplay: 2800,
+				loop: true,
+				autoplayDisableOnInteraction: false,
+			});
+},300)
+			$('#plus').on('click', function() {
+				layer.open({
+					className: 'pop', //这样你就可以在css里面控制该弹层的风格了
+					content: '<a href="">首页</a><a href="http://www.aqzyzx.com/zongyang/" target="_blank">新闻</a><a href="http://www.aqzyzx.com/zhengwu/" target="_blank">政务</a><a href="http://www.aqzyjjjc.gov.cn/" target="_blank">纪检</a><a href="http://www.aqzyzx.com/xianzhi/" target="_blank">县直</a><a href="http://www.aqzyzx.com/xiangzhen/" target="_blank">乡镇</a><a href="http://www.aqzyzx.com/wmkzy/" target="_blank">外媒看枞阳</a><a href="http://www.aqzyzx.com/video/" target="_blank">视频</a><a href="http://www.aqzyzx.com/renwen/" target="_blank">人文</a><a href="http://www.aqzyzx.com/system/2009/06/12/002129445.shtml" target="_blank">武术</a><a href="http://www.aqzyzx.com/wenyuan/" target="_blank">文苑</a><a href="http://www.aqzyzx.com/yule/" target="_blank">娱乐</a><a href="http://www.aqzyzx.com/msjy/" target="_blank">民生</a><a href="http://bbs.aqzyzx.com/forum.php" target="_blank">社区</a><a href="http://www.aqzyzx.com/system/2009/06/10/002129277.shtml" target="_blank">胡琴书</a><a href="http://www.aqzyzx.com/system/2009/06/10/002129279.shtml" target="_blank">惜阴亭</a><a href="http://www.aqzyzx.com/system/2009/06/12/002129448.shtml/" target="_blank">射蛟台</a><a href="http://www.aqzyzx.com/system/2009/06/10/002129280.shtml" target="_blank">洗墨池</a>				'
+				});
+			});
+		}
+	</script>
+</body>
+</html>
+
+<!--<page cms="enorth webpublisher"  version="5.0.0 /2011100803" server_name="AHNEWS10-33672C" parse_date="2023-04-28 15:52:32" cost="141" parse_result="0" input_mode="manual"></page>-->

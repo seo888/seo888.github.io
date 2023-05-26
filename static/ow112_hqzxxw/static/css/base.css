@@ -1,0 +1,119 @@
+/*清除样式*/
+/*字符集*/
+
+/* 非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+    overflow-y:scroll;
+
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+	font-family: "微软雅黑";font-weight: normal;
+}
+
+
+/* 清除浏览器（标签）自带样式 */
+html,body
+,table,caption,thead,tbody,tfoot,tr,th,td
+,div,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hr,form,fieldset,legend,address,blockquote,pre
+,span,a,img,em,strong,small,big,button,input,select,textarea,label,cite,code,dfn,sub,sup,del
+,iframe,object {
+    margin:0;
+    padding:0;font-family: "微软雅黑";font-weight: normal;
+}
+
+/* 清除列表自带的黑点 */
+ul {
+    list-style:none;
+}
+
+li {
+    list-style-type:none;
+}
+
+em {font-style: normal;}/* 去除自身斜体 */
+
+
+/* 标题标签的正常 */
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:normal;/* 字体的粗细： 中等*/
+}
+
+/* 表格属性 */
+table {
+    border-collapse:collapse;/* 边框合成一条 */
+    border-spacing:0;
+}
+
+caption,th {
+    text-align:left;
+}
+
+table,tr,th,td {
+    font-size:12px;
+}
+
+/* 去除浏览器自带的徐匡 */
+input{
+	outline:medium;
+	
+	}
+
+/*文字自动换行*/
+p {
+    word-wrap:break-word;
+}
+
+/* 去除图片边框 */
+img {
+    border:0 none;
+}
+
+/*a标签去除无本修饰没有下划线*/
+a {
+    
+    text-decoration:none;
+}
+
+/* 清除浮动 */
+.clearfix {
+    *zoom:1;
+}
+
+.clearfix:after {
+    display:block;
+    visibility:hidden;
+    overflow:hidden;
+    clear:both;
+    content:".";
+    height:0;
+}
+
+/* 文本框属性 */
+body {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font:12px/1.5 \5b8b\4f53,Arial,sans-serif;
+}
+
+
+/* 自定义公共样式 */
+
+
+/* 常用文本属性解决方法
+ * letter-spacing:1px；文本间距
+ * clear:both; 
+ * zoom:1;一般是拿来解决IE6的子元素浮动时候父元素不随着自动扩大的问题，功能相当于overflow:auto
+ * text-align:left;文本左对齐
+ *针对居中图片/Flash
+ *{width:4000px; background:#039; position:absolute;left:50%;top:0;margin-left:-2000px; text-align:center;}
+ * cursor:pointer 手型
+ 宽度:1180px;
+ <h3 大标题>30px/49px "Microsoft Yahei"
+ 字体"Microsoft Yahei","SimSun"  微软雅黑 ,微软宋体
+ letter-spacing 字的间距
+ 文字删除线 text-decoration:line-through;
+ 
+ */

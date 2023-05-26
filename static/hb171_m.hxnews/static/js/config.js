@@ -1,0 +1,1 @@
+var ZXZB_URL = "http://218.66.71.42",IMG_URL="http://img.hxnews.com/w/",UPLOAD_URL="http://upload.hxnews.com/",APP_URL="http://apps.hxnews.com/",WWW_URL="http://www.hxnews.com/",SPACE_URL="http://space.hxnews.com/",REMOTE_URL="http://qimg.hxnews.com/",COOKIE_PRE="hxnews_",COOKIE_DOMAIN=".hxnews.com",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";

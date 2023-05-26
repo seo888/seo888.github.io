@@ -1,0 +1,1 @@
+var IMG_URL="http://img.qx162.com/",UPLOAD_URL="http://upload.qx162.com/",APP_URL="http://app.qx162.com/",WWW_URL="http://www.qx162.com/",SPACE_URL="http://space.qx162.com/",COOKIE_PRE="ZTk4MT_",COOKIE_DOMAIN=".qx162.com",COOKIE_PATH="/",SINA_APPKEY="3972269122",QQ_SOURCEID="1000033";

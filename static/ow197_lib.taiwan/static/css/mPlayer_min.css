@@ -1,0 +1,144 @@
+
+/* CSS Document */
+/*video_part_begin*/
+.main .contentArea .video div,.main .contentArea .videoM div,.main .contentArea .audio div,.main .contentArea .video,.main .contentArea .videoM,.main .contentArea .audio {padding:0;color:#FFF;}
+.main .contentArea video[class=""] {display:none;}
+.main .contentArea .video {display:table;margin:0 auto 10px;font-size:16px;}
+.main .contentArea .video video.screen {display:block;max-width:100%;width:100%;height:auto;margin:0 auto;cursor:pointer;}
+.main .contentArea .video video.screen::after {position:absolute;left:0;top:0;content:"";display:block;width:100%;height:100%;background:#FFF;}
+.main .contentArea .video.playing video.screen::after {display:none;}
+.main .contentArea .video>div {position:relative;padding:5px 5px 0;background:#000;}
+.main .contentArea .video>div::after {position:absolute;left:0;top:0;content:"";display:block;width:100%;height:calc(100% - 46px);cursor:pointer;background:rgba(0,0,0,0.2) url("../image/videoPoster.png") center center no-repeat;z-index:2147483619;}
+.main .contentArea .video:hover>div::after {background-color:transparent;}
+.main .contentArea .video.playing>div::after {display:none;}
+.main .contentArea .video .ctrlPanel {width:100%;height:auto;color:#FFF;background:#000;}
+.main .contentArea .video .ctrlPanel>div {position:relative;display:inline-block;vertical-align:middle;font-size:0.16rem;line-height:1.5em;}
+.main .contentArea .video .ctrlPanel .playCtrl {width:40px;height:40px;cursor:pointer;background: url("../image/playBtnBg.png") center 125% no-repeat;background-size:60% auto;}
+.main .contentArea .video .ctrlPanel .playCtrl.playing {background-position:center -25%;}
+/*margin-left_begin*/
+/*margin-left_end*/
+.main .contentArea .video p,.main .contentArea .video div,.main .contentArea .videoM p,.main .contentArea .videoM div,.main .contentArea .audio p,.main .contentArea .audio div {margin-top:0;}
+.main .contentArea .video .ctrlPanel .volumeZone {position:relative;width:95px;height:40px;margin:0 0 0 25px;cursor:pointer;}
+.main .contentArea .video .ctrlPanel .volumeZone::after {position:absolute;left:0;top:50%;content:"";display:block;width:100%;height:6px;margin:-3px 0 0;border-radius:3px;background:#FFF;z-index:2147483619;}
+.main .contentArea .video .ctrlPanel .volumeZone .ctrlBar {position:absolute;top:50%;width:0px;height:6px;margin:-3px auto 0;border-radius:3px;cursor:pointer;background:#0d4a80;z-index:2147483620;}
+.main .contentArea .video .ctrlPanel .volumeZone .ctrlBar:after {position:absolute;right:-6px;bottom:-3px;content:"";width:10px;height:10px;border:1px solid #0d4a80;border-radius:50%;background:#FFF;}
+.main .contentArea .video .ctrlPanel .volumeZone .muteBtn {position:absolute;left: -20px;width: 20px;height: 100%;background:url("../image/volumeBg.png") left center no-repeat;background-size:20px auto;background-position:left -35%;}
+.main .contentArea .video .ctrlPanel .volumeZone .muteBtn.muted {background-position:left 134%;}
+.main .contentArea .video .ctrlPanel .progressBar {position:relative;display:block;width:100%;height:6px;border-radius:3px;font-size:0.16rem;text-align:left;cursor:pointer;background:#FFF;}
+.main .contentArea .video .ctrlPanel .progressBar .pgCtrlBar {position:relative;width:0px;height:100%;cursor:pointer;background:#0d4a80;}
+.main .contentArea .video .ctrlPanel .progressBar .pgCtrlBar:after {position:absolute;right:-6px;bottom:-3px;content:"";width:10px;height:10px;border:1px solid #0d4a80;border-radius:50%;background:#FFF;z-index:2147483620;}
+.main .contentArea .video .ctrlPanel .clarity {width:3em;height:1.5em;line-height:1.5em;font-size:0.16rem;text-align:center;}
+.main .contentArea .video .ctrlPanel .clarity>ul {display:none;background:#000;}
+.main .contentArea .video .ctrlPanel .clarity:hover>ul {position:relative;display:block;z-index:2147483620;}
+.main .contentArea .video .ctrlPanel .clarity>ul>li,.main .contentArea .video .ctrlPanel .clarity>div {cursor:pointer;}
+.main .contentArea .video .ctrlPanel .clarity>ul>li {margin:-3em auto 0;background:#000;}
+.main .contentArea .video .ctrlPanel .durationZone {width:135px;height:100%;line-height:100%;text-align:center;color:#FFF;}
+.main .contentArea .video .ctrlPanel .fSCtrl {font-size:0.16rem;line-height:1.5em;cursor:pointer;}
+/*mobile_begin*/
+.main .contentArea .videoM {display:table;margin:0 auto 10px;font-size:16px;}
+.main .contentArea .videoM video.screen {display:block;max-width:100%;width:100%;height:auto;margin:0 auto;cursor:pointer;}
+.main .contentArea .videoM video.screen::after {position:absolute;left:0;top:0;content:"";display:block;width:100%;height:100%;background:#FFF;}
+.main .contentArea .videoM.playing video.screen::after {display:none;}
+.main .contentArea .videoM>div {position:relative;padding:5px 5px 0;background:#000;}
+.main .contentArea .videoM>div::after {position:absolute;left:0;top:0;content:"";display:block;width:100%;height:calc(100% - 46px);cursor:pointer;background:rgba(0,0,0,0.2) url("../image/videoPoster.png") center center no-repeat;z-index:2147483619;}
+.main .contentArea .videoM:hover>div::after {background-color:transparent;}
+.main .contentArea .videoM.playing>div::after {display:none;}
+.main .contentArea .videoM .ctrlPanel {width:100%;height:auto;color:#FFF;background:#000;}
+.main .contentArea .videoM .ctrlPanel>div {position:relative;display:inline-block;vertical-align:middle;}
+.main .contentArea .videoM .ctrlPanel .playCtrl {width:40px;height:40px;cursor:pointer;background: url("../image/playBtnBg.png") center 125% no-repeat;background-size:60% auto;}
+.main .contentArea .videoM .ctrlPanel .playCtrl.playing {background-position:center -25%;}
+.main .contentArea .videoM .ctrlPanel .volumeZone {position:relative;width:95px;height:40px;margin:0 0 0 25px;cursor:pointer;}
+.main .contentArea .videoM .ctrlPanel .volumeZone::after {position:absolute;left:0;top:50%;content:"";display:block;width:100%;height:6px;margin:-3px 0 0;border-radius:3px;background:#FFF;z-index:2147483619;}
+.main .contentArea .videoM .ctrlPanel .volumeZone .ctrlBar {position:absolute;top:50%;width:0px;height:6px;margin:-3px auto 0;border-radius:3px;cursor:pointer;background:#0d4a80;z-index:2147483620;}
+.main .contentArea .videoM .ctrlPanel .volumeZone .ctrlBar:after {position:absolute;right:-6px;bottom:-3px;content:"";width:10px;height:10px;border:1px solid #0d4a80;border-radius:50%;background:#FFF;}
+.main .contentArea .videoM .ctrlPanel .volumeZone .muteBtn {position:absolute;left: -20px;width: 20px;height: 100%;background:url("../image/volumeBg.png") left center no-repeat;background-size:20px auto;background-position:left -35%;}
+.main .contentArea .videoM .ctrlPanel .volumeZone .muteBtn.muted {background-position:left 134%;}
+.main .contentArea .videoM .ctrlPanel .progressBar {position:relative;display:block;width:100%;height:6px;border-radius:3px;font-size:0.16rem;text-align:left;cursor:pointer;background:#FFF;}
+.main .contentArea .videoM .ctrlPanel .progressBar .pgCtrlBar {position:relative;width:0px;height:100%;cursor:pointer;background:#0d4a80;}
+.main .contentArea .videoM .ctrlPanel .progressBar .pgCtrlBar:after {position:absolute;right:-6px;bottom:-3px;content:"";width:10px;height:10px;border:1px solid #0d4a80;border-radius:50%;background:#FFF;z-index:2147483620;}
+.main .contentArea .videoM .ctrlPanel .clarity {width:3em;height:1.5em;line-height:1.5em;font-size:0.16rem;text-align:center;}
+.main .contentArea .videoM .ctrlPanel .clarity>ul {display:none;background:#000;}
+.main .contentArea .videoM .ctrlPanel .clarity:hover>ul {position:relative;display:block;z-index:2147483620;}
+.main .contentArea .videoM .ctrlPanel .clarity>ul>li,.main .contentArea .videoM .ctrlPanel .clarity>div {cursor:pointer;}
+.main .contentArea .videoM .ctrlPanel .clarity>ul>li {margin:-3em auto 0;background:#000;}
+.main .contentArea .videoM .ctrlPanel .durationZone {width:135px;height:100%;line-height:100%;text-align:center;color:#FFF;}
+.main .contentArea .videoM .ctrlPanel .fSCtrl {font-size:0.16rem;line-height:1.5em;cursor:pointer;}
+/*mobile_end*/
+/*video_part_end*/
+/*audio_part_begin*/
+div#main audio {display:block;width:100%;}
+div#main audio[class=""] {display:none;}
+.main .contentArea .audio {display:block;max-width:310px;margin:0 auto 10px;font-size:16px;}
+.main .contentArea .audio audio.screen {display:block;max-width:100%;width:100%;margin:0 auto;}
+.main .contentArea .audio>div {position:relative;padding:3px 5px;background:#000;}
+.main .contentArea .audio:hover>div::after {background-color:transparent;}
+.main .contentArea .audio.playing>div::after {display:none;}
+.main .contentArea .audio .ctrlPanel {width:100%;height:auto;color:#FFF;background:#000;}
+.main .contentArea .audio .ctrlPanel>div {position:relative;display:inline-block;vertical-align:middle;font-size:0.16rem;line-height:1.5em;}
+.main .contentArea .audio .ctrlPanel .playCtrl {width:40px;height:40px;cursor:pointer;background:url("../image/playBtnBg.png") center 125% no-repeat;background-size:60% auto;}
+.main .contentArea .audio .ctrlPanel .playCtrl.playing {background-position:center -25%;}
+/*margin-left_begin*/
+/*margin-left_end*/
+.main .contentArea .audio .ctrlPanel .volumeZone {position:relative;width:80px;height:40px;margin:0 0 0 25px;cursor:pointer;}
+.main .contentArea .audio .ctrlPanel .volumeZone::after {position:absolute;left:0;top:50%;content:"";display:block;width:100%;height:6px;margin:-3px 0 0;border-radius:3px;background:#FFF;z-index:2147483619;}
+.main .contentArea .audio .ctrlPanel .volumeZone .ctrlBar {position:absolute;top:50%;width:0px;height:6px;margin:-3px auto 0;border-radius:3px;cursor:pointer;background:#0d4a80;z-index:2147483620;}
+.main .contentArea .audio .ctrlPanel .volumeZone .ctrlBar:after {position:absolute;right:-6px;bottom:-3px;content:"";display:block;width:10px;height:10px;border:1px solid #0d4a80;border-radius:50%;background:#FFF;}
+.main .contentArea .audio .ctrlPanel .volumeZone .muteBtn {position:absolute;left:-20px;width:20px;height:100%;background:#000 url("../image/volumeBg.png") left center no-repeat;background-size:20px auto;background-position:left -35%;}
+.main .contentArea .audio .ctrlPanel .volumeZone .muteBtn.muted {background-position:left 134%;}
+.main .contentArea .audio .ctrlPanel .progressBar {position:relative;display:block;width:100%;height:6px;font-size:0.16rem;text-align:left;cursor:pointer;background:#CCC;}
+.main .contentArea .audio .ctrlPanel .progressBar .pgCtrlBar {position:relative;width:0px;height:100%;cursor:pointer;background:#0d4a80;}
+.main .contentArea .audio .ctrlPanel .progressBar .pgCtrlBar:after {position:absolute;right:-6px;bottom:-3px;content:"";width:10px;height:10px;border:1px solid #0d4a80;border-radius:50%;background:#FFF;z-index:2147483620;}
+.main .contentArea .audio .ctrlPanel .clarity {width:3em;height:1.5em;line-height:1.5em;font-size:0.16rem;text-align:center;}
+.main .contentArea .audio .ctrlPanel .clarity>ul {display:none;background:#000;}
+.main .contentArea .audio .ctrlPanel .clarity:hover>ul {position:relative;display:block;z-index:2147483620;}
+.main .contentArea .audio .ctrlPanel .clarity>ul>li,.main .contentArea .audio .ctrlPanel .clarity>div {cursor:pointer;}
+.main .contentArea .audio .ctrlPanel .clarity>ul>li {margin:-3em auto 0;background:#000;}
+.main .contentArea .audio .ctrlPanel .durationZone {width:135px;height:100%;line-height:100%;text-align:center;color:#FFF;}
+/*mobile_begin*/
+/*mobile_end*/
+/* //////////////////////////////////////////////////////////////// */ 
+@media screen and (max-width:1366px){
+div#main {max-width:100%;}
+.main .contentArea .audio>div::after,.main .contentArea .audioM>div::after {display:none;}
+.main .contentArea .audio audio.screen {display:block;}
+.main .contentArea .audio>div.mobile {background:none;}
+}
+@media screen and (max-width:1366px){
+.main .contentArea .audio .ctrlPanel {display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;}
+.main .contentArea .audio .ctrlPanel>div {order:2;}
+.main .contentArea .audio .ctrlPanel .progressBar {width:100%;order:1;}
+.main .contentArea .audio .ctrlPanel .clarity,.main .contentArea .audio .ctrlPanel .clarity>ul,.main .contentArea .audio .ctrlPanel .clarity:hover>ul {display:flex;justify-content:space-around;width:auto;margin:0 0 0 auto;}
+.main .contentArea .audio .ctrlPanel .clarity>ul>li {margin:0 0.5em;}
+.main .contentArea .audio .ctrlPanel .clarity>div {margin:0 0 1px;padding:0 2px;border:1px solid #FFF;}
+/*mobile_begin*/
+/*mobile_end*/
+}
+/*audio_part_end*/
+/* //////////////////////////////////////////////////////////////// */ 
+@media screen and (max-width:1366px){
+div#main {max-width:100%;}
+.main .contentArea .video>div.mobile::after,.main .contentArea .videoM>div.mobile::after {display:none;}
+.main .contentArea .video .ctrlPanel {display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;}
+.main .contentArea .video .ctrlPanel>div {order:2;}
+.main .contentArea .video .ctrlPanel .progressBar {width:100%;order:1;}
+.main .contentArea .video .ctrlPanel .clarity,.main .contentArea .video .ctrlPanel .clarity>ul,.main .contentArea .video .ctrlPanel .clarity:hover>ul {display:flex;justify-content:space-around;width:auto;margin:0 0 0 auto;}
+.main .contentArea .video .ctrlPanel .clarity>ul>li {margin:0 0.5em;}
+.main .contentArea .video .ctrlPanel .clarity>div {margin:0 0 1px;padding:0 2px;border:1px solid #FFF;}
+/*mobile_begin*/
+.main .contentArea .videoM .ctrlPanel {display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;}
+.main .contentArea .videoM .ctrlPanel>div {order:2;}
+.main .contentArea .videoM .ctrlPanel .progressBar {width:100%;order:1;}
+.main .contentArea .videoM .ctrlPanel .clarity,.main .contentArea .videoM .ctrlPanel .clarity>ul,.main .contentArea .videoM .ctrlPanel .clarity:hover>ul {display:flex;justify-content:space-around;width:auto;margin:0 0 0 auto;}
+.main .contentArea .videoM .ctrlPanel .clarity>ul>li {margin:0 0.5em;}
+.main .contentArea .videoM .ctrlPanel .clarity>div {margin:0 0 1px;padding:0 2px;border:1px solid #FFF;}
+/*mobile_end*/
+}
+@media screen and (max-width:750px){
+  .main .contentArea .video .ctrlPanel .clarity,.main .contentArea .video .ctrlPanel .fSCtrl,.main .contentArea .videoM .ctrlPanel .clarity,.main .contentArea .videoM .ctrlPanel .fSCtrl {font-size:16px;}
+}
+@media screen and (max-width:480px){
+.main .contentArea .video .ctrlPanel>div,.main .contentArea .video .ctrlPanel .clarity,.main .contentArea .audio .ctrlPanel>div,.main .contentArea .videoM .ctrlPanel .clarity,.main .contentArea .video .ctrlPanel .clarity>ul>li,.main .contentArea .video .ctrlPanel .clarity>div,.main .contentArea .videoM .ctrlPanel .clarity>ul>li,.main .contentArea .videoM .ctrlPanel .clarity>div {font-size:16px;}
+}
+@media screen and (max-width:406px){
+.main .contentArea .video>div::after,.main .contentArea .videoM>div::after {height:calc(100% - 70px);}
+}

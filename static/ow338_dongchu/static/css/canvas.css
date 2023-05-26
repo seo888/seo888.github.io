@@ -1,0 +1,198 @@
+.areaShareWrap {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 9;
+}
+.bj-fixed-area {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  z-index: 12;
+}
+
+.bj-fixed-area .previw-area {
+  width: 250px;
+  position: absolute;
+  left: 49%;
+  top: 48%;
+  margin-left: -120px;
+  margin-top: -200px;
+  transform-origin: center center;
+  z-index: 13;
+}
+.bj-fixed-area .previw-area .previw-img-area {
+  width: 250px;
+  z-index: 14;
+}
+
+.bj-fixed-area .previw-area .close-area {
+  width: 50px;
+  height: 50px;
+  background: url(../image/close.png) center center no-repeat;
+  background-size: 30px 30px;
+  position: absolute;
+  right: -9px;
+  top: -50px;
+  z-index: 15;
+}
+.show-text-area {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+.tab-share-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  display: flex;
+}
+.tab-share-btn {
+  height: 50px;
+  box-sizing: border-box;
+  padding-left: 60px;
+  padding-right: 25px;
+  line-height: 47px;
+  font-size: 24px;
+  color: #005dff;
+  border: 1px solid #005dff;
+  font-weight: 400;
+  background: url(../image/per-share.png) 26px center no-repeat;
+  background-size: 30px 30px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+.taplist-area {
+  width: 750px;
+  height: 1378px;
+  position: relative;
+  background-color: #FFF;
+}
+.taplist-area .thumb {
+  font-size: 64px;
+  text-shadow: rgba(0, 10, 112, 60);
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+}
+.taplist-area .thumb img{width:100%;height: 500px; margin-top: -10px}
+.taplist-area .bg{background: #FFF;}
+.taplist-area .contents {
+  padding: 30px;
+  text-indent:2em;
+  padding-top: 120px;
+  line-height: 55px;
+  font-size: 26px;
+  color: #222;
+  font-weight: 400;
+  position: absolute;
+}
+  .taplist-area .title {
+  padding: 30px;
+  top: 256px;
+  width:95%;
+  padding-top: 256px;
+  line-height: 50px;
+  font-size: 36px;
+  color: #222;
+  font-weight: 400;
+  position: absolute;
+}
+.taplist-area .ewm {
+  width: 600px;
+  bottom: 200px;
+  left: 30%;
+  position: absolute;
+}
+.taplist-area .cover-pic {
+  width: 300px;
+  height: 300px;
+  bottom: 100px;
+}
+  .taplist-area .taplist_footer .ewm_more{
+  bottom: 100px;
+  width:100%;
+  text-align:center;
+  line-height: 50px;
+  font-size: 30px;
+  color: #222;
+  font-weight: 400;
+  position: absolute;
+}
+.areaShareLoading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 12;
+  display: none;
+}
+.areaShareLoading .text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  transform: translate(0-50%);
+}
+.areaShareLoading .text span {
+  position: relative;
+}
+.areaShareLoading .text span::before {
+  content: '...';
+  font-size: 16px;
+  width: 50px;
+  right: -52px;
+  line-height: 18px;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  text-align: left;
+}
+.areaShareLoading .text span::after {
+  content: '.';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  top: -45px;
+  background: url(../image/area_share_loading.png);
+  background-size: 100% 100%;
+  animation: loading 0.6s linear infinite;
+  transform-origin: center center;
+}
+@media screen and (max-width:320px) {
+.bj-fixed-area .previw-area {
+  width: 200px;
+  position: absolute;
+  left: 58%;
+  top: 55%;
+  margin-left: -120px;
+  margin-top: -200px;
+  transform-origin: center center;
+  z-index: 13;
+}
+.bj-fixed-area .previw-area .previw-img-area {
+  width: 200px;
+  z-index: 14;
+}
+}

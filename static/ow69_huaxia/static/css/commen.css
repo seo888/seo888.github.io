@@ -1,0 +1,140 @@
+
+/* ====================
+     公共样式
+==================== */
+body{font-size:16px; font-family:"微软雅黑",Georgia, 'Times New Roman', Times, serif; line-height:150%; margin:0; padding:0; color:#000; }
+@font-face
+{
+font-family: myFirstFont;
+src: url('../font/tit.ttf'),
+     url('https://www.huaxia.com/images/images/tit.eot'); 
+}
+h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,input,img,p{
+margin:0; padding:0; /*list-style-type:none; */font-weight:normal;
+}
+
+img { border:none;}
+.fl { float:left;}
+.fr { float:right;}
+.more { font-size:12px; font-weight:normal;}
+.dis{display:block;}
+.inline{display:inline;}
+.none{display:none;}
+
+.clearfix:after{
+content:"."; display:block; height:0; clear:both;
+visibility:hidden;
+}
+*html .clearfix{
+ height:1%;
+}
+*+html .clearfix{
+ height:1%;
+}
+/*英文强制换行*/
+.word{word-break:break-all;}
+
+/*页面留白*/
+.blank{height:30px; line-height:30px; clear:both; visibility:hidden; overflow:hidden;}
+
+/*************************
+		布局
+*********************/
+.block{width:1300px; margin:0 auto;}
+.pics li .img{border-radius:3px; overflow:hidden;}
+.pics li:hover .img img{transform:scale(1.1,1.1);}
+.pics li .img img {width:100%; vertical-align:top; transition:1s;}
+.pics li .img{overflow:hidden; position:relative;}
+.video1 li .img img {width:100%; vertical-align:top; transition:1s;}
+.video2 li .img img {width:100%; vertical-align:top; transition:1s;}
+.video1 li:hover .img img{transform:scale(1.1,1.1);}
+.video2 li:hover .img img{transform:scale(1.1,1.1);}
+/* ====================
+     head
+==================== */
+
+.head {width:100%; position:relative; z-index:10000;}
+.head .box { padding:0; border:0; overflow:hidden;}
+.head .top {width:1300px; margin:0 auto; margin-top:2px;}
+.head .top a { font-size:14px; width:40px; text-align:center; display:block; float:right; background:#F2F2F2; margin-left:5PX;}
+
+
+
+/*横向栏目---------------------*/
+
+.menu {width:1300px; margin:0 auto; font-size:24px; padding-top:20px;}
+.mainNav{width:1300px; height:80px; line-height:80px; color:#293d72; border-bottom:1px solid #EBEBEB; position:relative;}
+.mainNav .logo {color:#FFF; font-size:24px; float:left; padding-top:10px;}
+.mainNav .logo img {vertical-align:top;}
+.mainNav ul { padding-top:5px;}
+.mainNav li {width:90px; float:left; display:block;}
+.mainNav li .line1 {width:1px; overflow:hidden; height:30px; position:absolute; z-index:10; right:0; top:28px; background:#ccc;}
+.mainNav a {width:100%; text-align:center; text-decoration:none; position:relative; display:block;}
+.mainNav a:link{color:#293d72;}
+
+
+.mainNav li:hover .line {width:20px; height:5px; position:absolute; z-index:10; left:35px; bottom:15px; background:#293d72; border-radius:45px;} 
+.mainNav .cur .line{width:20px; height:5px; position:absolute; z-index:10; left:35px; bottom:15px; background:#293d72; border-radius:45px;}
+
+.mainNav .Nav2 {width:1000px; height:50px; line-height:50px; font-size:16px; text-align:left; overflow:hidden; position:absolute; z-index:100000; top:78px; left:260px; padding-bottom:20px; cursor:pointer; display:none;}
+.mainNav .Nav2 a{width:90px; text-align:center; float:left; color:#2b4576;}
+.mainNav .Nav2 span {width:10px; text-align:center; float:left; color:#2b4576;}
+
+
+
+/*所在位置-ur-here-----------------------*/
+.Position {height:42px; line-height:40px; font-size:14px; border-bottom:2px solid #cadae9; position:relative; color:#606060;}
+.Position .catname {width:auto; display:block; padding:0 30px; height:44px; text-align:center; color:#293d72; font-size:24px; font-weight:bold; float:left; position:relative;}
+.Position .catname .line{width:100%; position:absolute; z-index:100; left:0; bottom:0; border-bottom:2px solid #293d72;}
+.Position .left {width:500px; float:left; padding-left:30px;}
+.Position .right {width:350px; text-align:right; padding-right:10PX; float:right;}
+.Position a:link,.Position a:visited {color:#606060;}
+.Position a:hover{ color:#1950a3; }
+.Position .cur { color:#0087E1;}
+
+/*************************
+		布局
+*********************/
+
+/*pagination*/
+.pagination {text-align:center; margin-top:50px; height:60px; overflow:hidden; padding:0;}
+.pagination li {display:inline-block; width:50px; overflow:hidden; height:60px; line-height:60px; border-bottom:0px solid #ddd; background:#FAFAFA; padding:0; margin:0;}
+.pagination li:hover{background:#F1F6FA;}
+.pagination li span {background:#F1F6FA; display:block; border-right:1px solid #E3E6F5;}
+.pagination .active {background:#F1F6FA;}
+
+.pagination li a {display:inline-block; width:50px; overflow:hidden; height:60px; line-height:60px; padding:0; margin:0; color:#333;}
+
+
+/* 列表分页 */
+#pages {text-align:center; margin-top:20px; margin-bottom:30px; font-size:14px;}
+#pages a { display:inline-block; height:30px; line-height:30px; background:#E3E5E7; border:0px solid #e3e3e3; text-align:center; color:#333; padding:0 12px;}
+#pages a.a1 {width:56px; padding:0;  cursor:pointer;}
+#pages a:hover { background:#D9E6F1; text-decoration:none }
+#pages span { display:inline-block; height:30px; line-height:30px; background:#D9E6F1; border:0px solid #4889F3; text-align:center;padding:0 12px; cursor:pointer;}
+
+
+
+
+
+
+
+
+.ttBox { text-align:center; border:1px solid #EEE; background:#F6F6F6; padding:10PX 0; position:relative;}
+.ttBox h1 { height:50px; line-height:50px; text-align:center; font-weight:bold;}
+.ttBox li { width:auto; display:inline-block; padding-left:10px; text-align:center; height:30px; line-height:30px; color:#000;}
+.ttBox h1 a {color:#000;}
+.ttBox span {width:74px; height:74px; position:absolute; z-index:10; left:0; top:0;}
+
+/*链接样式*/
+a:link,a:visited{ color:#000; text-decoration:none;}
+a:hover { color:#1950a3; text-decoration:none;}
+
+
+
+
+.link { background:#CCC; width:100%; height:35PX; line-height:35PX;}
+
+.foot {width:100%; min-width:1300px; text-align:center; overflow:hidden; line-height:30PX; padding:20PX 0; font-size:12px; color:#5C5C5C;}
+.foot .block { border-top:1px solid #DFDFDF; border-bottom:1px solid #DFDFDF; text-align:center; padding:20px 0; margin-bottom:10px;}
+.foot .txt {width:auto; margin-right:30px; display:inline-block; text-align:left; overflow:hidden; font-size:12px;}

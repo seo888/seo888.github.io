@@ -1,0 +1,545 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}" />
+<link rel="stylesheet" href="/_/static/hb228_cnmgnews/static/css/common.css">
+<link rel="stylesheet" href="/_/static/hb228_cnmgnews/static/css/article.css">
+<link rel="stylesheet" type="text/css" href="/_/static/hb228_cnmgnews/static/css/cmstop-common.css">
+<link rel="stylesheet" type="text/css" href="/_/static/hb228_cnmgnews/static/css/cmstop-comment-mode.css">
+
+<!--[if lt IE 9 ]>
+		<script type="text/javascript" src="/{随机字符}/{随机字符}/templates/default/js/helper/modernizr.js"></script>
+	<![endif]-->
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/config.js"></script>
+<!--<script src="/{随机字符}/{随机字符}/skin/js/common/jquery-1.11.3.min.js"></script>-->
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/jquery.js"></script>
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/cmstop-common.js"></script>
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/like.js"></script>
+<link rel="stylesheet" href="/{随机字符}/{随机字符}/js/like.css">
+<script type="text/javascript">
+		var contentid = '1520';// 文章ID
+		var title = "\u65b0\u57ce\u533a\u673a\u5173\u4e8b\u52a1\u670d\u52a1\u4e2d\u5fc3\u515a\u652f\u90e8\u5f00\u5c55 \u201c\u6e05\u660e\u8282\u2500\u796d\u82f1\u70c8 \u5f18\u626c\u7ea2\u8272\u6587\u5316\u201d \u4e3b\u9898\u515a\u65e5\u6d3b\u52a8";//文章标题
+		var topicid = '3899';// 评论主题
+		var context = '';//全文内容缓存
+		var content = '';//第一页内容缓存
+		var _IMG_URL = '/{随机字符}/{随机字符}/templates/default';
+	</script>
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/cmstop-imagezoom.js"></script>
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/fet.js"></script>
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/repos.js"></script>
+<script type="text/javascript">fet.setAlias({IMG_URL: "/{随机字符}/{随机字符}/"})</script>
+</head>
+<body>
+<!-- 头部 --> 
+<!--ie-->
+<!--[if lt IE 9]>
+<div class="blank_wrap">
+    <div class="blank_wrap_inner">
+        <p class="chromeframe">您使用的IE浏览器版本过低。<a href="http://windows.microsoft.com/">升级您的IE浏览器</a>，或使用<a href="http://www.google.com/chromeframe/?redirect=true">Google Chrome</a>、<a href="http://www.google.com/chromeframe/?redirect=true">Firefox</a>等高级浏览器，将会得到更好的体验！<span class="top_close"><a href="/{随机字符}/{随机字符}.html">x</a></span></p>
+    </div>
+</div>
+<div class="lowVersion "> </div>
+<style>
+    .lowVersion{position: fixed;top: 0;left: 0;bottom: 0;right: 0;background-color: #70718e;z-index: 10000;}
+    .lowVersion_tit{position: absolute;top: 0;left: 50%; width: 52%;}
+    .lowVersion_month{position: absolute;bottom:0;left: 50%; width: 52%;}
+</style>
+<![endif]-->
+
+<script type="text/javascript">
+        if ($(".blank_wrap").length > 0) {
+            var low_version1 = '<img class="lowVersion_tit" src="/{随机字符}/{随机字符}/skin/image/lowVersion_tit.jpg" >'
+            var low_version2 = '<img class="lowVersion_month" src="/{随机字符}/{随机字符}/skin/image/lowVersion_month.jpg" >'
+            $(".lowVersion").append(low_version1);
+            $(".lowVersion").append(low_version2);
+            if($(".lowVersion").length>0){
+                $(".lowVersion_tit").height($(".lowVersion_tit").width()/4.65);
+                $(".lowVersion_tit").css("margin-left",-$(".lowVersion_tit").width()/2);
+                $(".lowVersion_month").css("margin-left",-$(".lowVersion_month").width()/2);
+                $(".lowVersion_month").height($(".lowVersion_month").width()/1.38);
+            }
+        }
+</script>
+
+<header>
+  <div class="header-top">
+    <div class="logo-wrap"> <a href="/{随机字符}/{随机字符}.html" title="{标题}">
+      <div class="item-logo"><img src="/_/static/hb228_cnmgnews/static/picture/logo_i.png" alt=""> </div>
+      </a> </div>
+    <div class="items-type-wrap fl">
+      <ul class="item-menu-list">
+        <li class="index_flag"> <a href="/{随机字符}/{随机字符}.html">首页</a> </li>
+        <li><a href="/{随机字符}/{随机字符}.html" target="_blank">要闻 </a> </li>
+        <li><a href="/{随机字符}/{随机字符}.html" target="_blank">社会 </a> </li>
+        <li><a href="/{随机字符}/{随机字符}.html" target="_blank">呼和浩特 </a> </li>        
+        <li><a href="/{随机字符}/{随机字符}.html" target="_blank">呼伦贝尔 </a> </li>
+        <li class="move-menu move_menu_e arr_icon"> <a class="move_menu_e_a" href="/{随机字符}/{随机字符}.html">更多栏目</a>
+          <div class="move-menu-list">
+            <ul>
+                                                                                                  
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="包头">包头</a></li>
+                                                        
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="兴安盟">兴安盟</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="通辽">通辽</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="赤峰">赤峰</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="锡林郭勒">锡林郭勒</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="乌兰察布">乌兰察布</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="鄂尔多斯">鄂尔多斯</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="巴彦淖尔">巴彦淖尔</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="乌海">乌海</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="阿拉善">阿拉善</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="满洲里">满洲里</a></li>
+                                                        
+                          
+              <li><a href="/{随机字符}/{随机字符}.html" title="二连浩特">二连浩特</a></li>
+                          </ul>
+          </div>
+        </li>
+       
+      </ul>
+    </div>
+    <div class="items-action-wrap fr">
+      <ul class="item-action clearfix">
+        <li> <a href="javascript:void(0);" class="item-search js-headsearch" target="_top">搜索</a> </li>
+        <li> <a href="/{随机字符}/{随机字符}.html" class="item-about">联系</a> </li>
+        <li class="login" style="display:none" id="logout_status"><a href="" class="head-login">登录</a> </li>
+        <li class="move-menu client_info" id="login_status" style="display:none"> <a href="#" class="user-head">
+          <div style="background-image: url('static/image/avatar_anonymous.png')" class="head client_head_img"></div>
+          <div class="red_circle"></div>
+          </a>
+          <ul class="user-content">
+            <li class="message"> <a class="my_message"><em></em></a></li>
+            <li> <a class="head-member" href=""> <span class="fr">个人中心</span> </a> </li>
+            <li> <a class="head-logout" href="">退出登录</a> </li>
+          </ul>
+        </li>
+        <li class="submit_box"> <a href="" class="item-submitting">投稿</a> </li>
+        <li class="header_ewm" v-show="list.length"> <img class="header_ewm_top" src="/_/static/hb228_cnmgnews/static/picture/ewm_icon.png" width="50">
+          <div class="ewm_box"> <img class="special_arr" src="/_/static/hb228_cnmgnews/static/picture/item_wx.jpg" width="50">
+            <div class="clearfix ewm_bottom" v-for="item in list">
+              <div class="ewm_detail_img"> <img src="{随机图片}" width="50"> </div>
+              <div class="ewm_detail">
+                <h6>{关键词1}{随机后缀}</h6>
+                <p>{随机关键词}</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <script type="text/javascript">
+	$('#head_search .divicon').click(function(){
+		$('#head_search').submit();
+	});
+	$('#head_search').attr('action', APP_URL);
+</script> 
+      
+      <script type="text/javascript">
+	$(function(){
+		$('.item-submitting').attr('href', APP_URL + '?app=member&controller=index&action=login');
+		$('.head-login').attr('href', APP_URL + '?app=member&controller=index&action=login');
+		$('.head-register').attr('href', APP_URL + '?app=member&controller=index&action=register');
+		$('.head-member').attr('href', APP_URL + '?app=member&controller=panel&action=index');
+		$('.head-logout').attr('href', APP_URL + '?app=member&controller=index&action=logout');
+		if ($.cookie(COOKIE_PRE+'auth')) {
+			$('#login_status').show();
+			var username = $.cookie(COOKIE_PRE+'username');
+			if(!username) username = $.cookie(COOKIE_PRE+'rememberusername');
+			$('#login_status em').html(username);
+		} else {
+			$('#logout_status').show();
+		}
+	});
+</script> 
+    </div>
+  </div>
+</header>
+<div class="search-dialog">
+  <div class="search-box">
+    <div class="wrapW clearfix" style="padding-top:0;">
+      <div class="logo"></div>
+      <div class="search">
+        <div class="search_input">
+          <form id="head_search" name="head_search" action="http://app.cnmgnews.com/" method="GET">
+            <input type="hidden" name="app" value="search">
+            <input type="hidden" name="controller" value="index">
+            <input type="hidden" name="action" value="search">
+            <input type="hidden" id="type" name="type" value="all">
+            <input type="text" value="" class="text" id="head_wd" name="wd" placeholder="请输入关键字" x-webkit-speech="">
+            <input type="submit" class="btn-submit search-logo" value="">
+          </form>
+        </div>
+        <i class="close"></i> </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+		$(function(){
+			$("#head_wd").bind('focus', function(){
+				if($(this).val() == '请输入关键字')
+				$(this).val('');
+			});
+
+			$("#head_wd").bind('blur', function(){
+				if($(this).val() == '')
+				$(this).val('请输入关键字');
+			});
+		});
+	</script> 
+<script>
+    $(function(){
+        var local_href = window.location.href;
+        $(".item-menu-list li").each(function(index,el){
+            var that = $(el);
+            var my_href = that.find("a").attr("href");
+            if(local_href.indexOf(my_href)>0){
+                that.addClass("current").siblings("li").removeClass("current");
+            }
+        });
+        $(".item-action li").each(function(index,el){
+            var that = $(el);
+            var my_href = that.find("a").attr("href");
+            if(local_href.indexOf(my_href)>0){
+                that.addClass("current").siblings("li").removeClass("current");
+            }
+        });
+    })
+    function getAdvertCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+</script> 
+<!-- @end头部 -->
+<div class="article-wrap wrapW">
+  <div class="article-deatil-left"> 
+    <!--内容详情-->
+    <div class="article-body-wrap">
+      <div class="article-title-wrap">
+        <div class="article-title-and-type">
+          <h1 class="title">{关键词1}{随机后缀}{新闻网标题}</h1>
+        </div>
+                <div class="article-author">{人物名称}</div>
+                <div class="source classify_link"> 
+           
+          <a href="" target="_blank">{关键词1}宣传部</a> </div>
+        <div class="article-date"> <span>{今日时间}</span> </div>
+      </div>
+      <div class="article-content-wrap"> 
+                <div class="article-content">
+          <div class="mixin-article-v3 default">
+            <div class="text"> 
+               
+               
+               
+               
+              <!-- 文章内容 -->
+              <div class="article-content article-content-show fontSizeSmall"> <p>{关键词1}{句子}</p>
+<p style="text-align: center; text-indent: 0;"><img src="{随机图片}" border="0" alt="{随机关键词}"></p>
+<p>{句子}{关键词1}{句子}</p>
+<p style="text-align: center; text-indent: 0;"><img src="{随机图片}" border="0" alt="{随机关键词}"></p>
+<p>{句子}{关键词1}{句子}</p>
+<p style="text-align: center; text-indent: 0;"><img src="{随机图片}" border="0" alt="{随机关键词}"></p>
+<p>{关键词1}{句子}</p><a href="/{随机字符}/{随机字符}.html" class="author-head"> <span class="author-name">编辑/{人物名称}</span></a>  </div>
+              <!-- @end 文章内容 --> 
+               
+               
+               
+               </div>
+          </div>
+          <div class="note">{关键词1}{句子}</div>
+           
+          <!--文章详情底部显示分享和评论-->
+          <div class="detail-bar" id="detail-bar">
+            <div class="clearfix detail-share">
+              <div class="fl botton">
+                <div id="scinfo" class="scinfo">收藏<span>({随机数字})</span></div>
+                <div id="dyinfo" class="scinfo">点赞<span>({随机数字})</span></div>
+              </div>
+              <div class="fr">
+                <div class="share"><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script> 
+                </div>
+                <div class="QR-box fr">
+                  <div class="QR fl">
+                    <div class="QR-code"> 
+                      <!-- <img src="../image/pintu_weixin.png">--> 
+                    </div>
+                    <!--鼠标滑过小二维码显示大的-->
+                    <div class="QR-code-big"> <img src="/_/static/hb228_cnmgnews/static/picture/ewm.jpg"> <span>关注我们</span> </div>
+                  </div>
+                  <div class="go-top fr"></div>
+                </div>
+                <script>
+    $(function(){
+        //当点击跳转链接后，回到页面顶部位置
+        $(".go-top").click(function(){
+            //$('body,html').animate({scrollTop:0},1000);
+            if ($('html').scrollTop()) {
+                $('html').animate({ scrollTop: 0 }, 200);
+                return false;
+            }
+            $('body').animate({ scrollTop: 0 }, 200);
+            return false;
+        });
+    });
+</script> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-wrapper"> <!--  --> 
+<!-- 评论 -->
+<div class="article-comment" id="comment">
+  <div class="inner">
+    <div class="m-head title-head">           
+      <div class="title"><a href="/{随机字符}/{随机字符}.html" title="点击查看全部评论" class="f-r"> 已有<span id="changyan_count_unit" class="comments">0</span>人发表了评论 </a><a href="/{随机字符}/{随机字符}.html" title="" class="words">网友评论</a></div>
+    </div>
+    <div class="m-main"> 
+      <!-- 评论模块 -->
+      <div class="comment"> 
+        <!-- 注意： 这里只显示5条评论 	 -->
+        <div class="comment-list" id="commentWrapper"> </div>
+        <!-- 评论框 --> 
+        <div id="comment_form_1680696431" class="comment-form">
+  <div class="c-inner">
+    <form action="http://app.cnmgnews.com/?app=comment&controller=review&action=add" method="post">
+      <input type="hidden" name="topicid" value="">
+      <input type="hidden" name="followid" value="">
+      <div class="textarea-wrap">
+        <textarea name="content" class="textarea"></textarea>
+        <div class="login-warn">
+          <p class="info"> 您需要登录后才可以评论，<a href="/{随机字符}/{随机字符}.html" class="cloud-login" hidefocus="true">登录</a>| <a href="/{随机字符}/{随机字符}.html" hidefocus="true">注册</a> </p>
+        </div>
+      </div>
+      <div class="ov">
+        <div class="loginform-user-info"></div>
+        <input class="btn-post" type="submit" value="发表评论">
+      </div>
+    </form>
+  </div>
+</div>
+<script id="afterlogin_1680696431" type="text/template">
+	<div>
+		<div class="username-area">
+			<em></em>
+			<a class="quickLogout" href="/{随机字符}/{随机字符}.html">退出</a>
+		</div>
+		<span class="anonymous"></span>
+		<div class="share-area"></div>
+		<div class="seccode-area" style="visibility: hidden;"></div>
+	</div>
+</script> 
+<script id="beforelogin_1680696431" type="text/template">
+	<div>
+		<span class="info">
+			<a href="/{随机字符}/{随机字符}.html" class="cloud-login">登录</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="#http://app.cnmgnews.com/?app=member&controller=index&action=register">注册</a>
+		</span>
+		<div class="seccode-area" style="visibility: hidden;"></div>
+	</div>
+</script> 
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/comment.post.js"></script> 
+<script type="text/javascript">
+$(function() {
+	var rid = '1680696431',
+	form = $('#comment_form_'+rid).find('form');
+	commentPost = new CommentPost({
+		form: form,
+		isLogin: 1,
+		isCheck: 0,
+		isSeccode: 0,
+		topicid: topicid,
+		afterLoginTemplate: $('#afterlogin_'+rid).html(),
+		beforeLoginTemplate: $('#beforelogin_'+rid).html(),
+		userInfoPanel: form.find('.loginform-user-info'),
+		warningPanel: form.find('.login-warn'),
+		loginSelector: '.cloud-login',
+		logoutSelector: '.quickLogout'
+	});
+});
+</script> 
+        <!-- @end 评论框 --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- @end 评论 --> 
+<script type="text/javascript">
+				var commentTpl = '<div class="comment-item">\
+									<div class="comment-content">\
+										<p class="cont">{content}</p>\
+									</div>\
+							     </div>';
+				$(function(){
+					getCommemt(topicid,$('#commentWrapper'),function(json) {
+						$('.comments').html(json.total);
+						if(json.total >0 ) $('.view-comment').show();
+					});
+				});
+				//取评论函数
+				function getCommemt(topicid,wrapper,callback) {
+					if(!topicid) return ;
+					$.getJSON(APP_URL+'?app=comment&controller=review&action=page&pagesize=5&all=1&topicid='+topicid+'&jsoncallback=?', function(json){
+						if(typeof(json) == 'object') {
+							for (var i=0,item;item=json[i++];) {
+				                var html = commentTpl;
+								for (var key in item) {
+									html = html.replace(new RegExp('{'+key+'}',"gm"), item[key]);
+								}
+								wrapper.append(html);
+							}
+						}
+						// 非评论页不能进行评论操作
+						$('.operate').remove();
+						typeof callback == 'function' && callback(json);
+					});
+				}
+			</script> 
+<!--  --></div>
+    <div class="interested-article">
+      <div class="article-module-bt">
+        <h2>您可能感兴趣的{关键词1}</h2>
+      </div>
+      <div class="interested-article-list">
+        <ul class="article-data">
+                  </ul>
+      </div>
+    </div>
+  </div>
+  <div class="right-side-bar"> 
+  
+    <div class="right-item recent-hot-spots hots">
+  <div class="right-Bt"> <span class="fl fl_bt original_logo">热门排行</span> <a href="#" target="_blank" class="fr more">MORE+</a> </div>
+  <ul class="ranking_list flex_box midCenter" id="tab-hd">
+    <li data-id="day" class="current">日榜</li>
+    <li data-id="week">周榜</li>
+    <li data-id="month">{关键词1}</li>
+  </ul>
+  <div id="tab-bd">
+    <ul class="side-article-list" style="display:block">
+          </ul>
+    <ul class="side-article-list" style="display:none">
+          </ul>
+    <ul class="side-article-list" style="display:none">
+          </ul>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+    function tabs(tabTit,on,tabCon){
+	$(tabCon).each(function(){
+	  $(this).children().eq(0).show();
+	  });
+	$(tabTit).each(function(){
+	  $(this).children().eq(0).addClass(on);
+	  });
+     $(tabTit).children().hover(function(){
+        $(this).addClass(on).siblings().removeClass(on);
+         var index = $(tabTit).children().index(this);
+         $(tabCon).children().eq(index).show().siblings().hide();
+    });
+     }
+  tabs("#tab-hd","current","#tab-bd");
+   });
+</script> 
+  </div>
+</div>
+ 
+<footer>
+  <div class="footer-wrap clearfix">
+    <div class="footer-left-wrap">
+      <div class="footer-logo"></div>
+      <ul class="link-box">
+        <li class=""> <a href="/{随机字符}/{随机字符}.html">关于我们</a> <i></i> </li>
+        <li class=""> <a href="/{随机字符}/{随机字符}.html">加入我们</a> <i></i> </li>
+        <li class="border_n"> <a href="/{随机字符}/{随机字符}.html">稿件投递</a> </li>
+      </ul>
+      <div class="footer-mail">合作接洽：{随机3数字}-{随机7数字}</div>
+      <div class="footer-WeChat footer-mail">
+        <div class="wechat_icon">
+          <div class="wechat_big"></div>
+        </div>
+      </div>
+      <div class="footer-mail">邮箱：info@cnmgnews.com</div>
+    </div>
+    <div class="footer-right-wrap">
+      <div class="partner-box">
+        <div class="side-Bt">合作伙伴</div>
+        <div class="partner-item">
+          <div class="partner-list"><a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">北方plus</a>
+<a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">内蒙古综合新闻网</a>
+<a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">印象庆阳网</a>
+<a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">环评网</a>
+<a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">招文袋</a>
+<a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">{关键词1}</a>
+<a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">哈哈文学网</a>
+<a class="partner-item-list" href="/{随机字符}/{随机字符}.html" target="_blank">院校资讯网</a>
+
+
+
+
+
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="copy">Copyright&nbsp;&copy;&nbsp;{年} {网站名称} {域名库}   版权所有 All Rights Reserved <a href="/{随机字符}/{随机字符}.html">蒙ICP备{随机8数字}号-1</a></p>
+</footer>
+ 
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/ZeroClipboard.js"></script> 
+<script type="text/javascript" src="/_/static/hb228_cnmgnews/static/js/mood-show.js"></script> 
+<script>
+	$(function() {
+		$('.article-content a').each(function(i,a){
+			var $a = $(a);
+			if(!$a.attr('target')) 
+			{
+				$a.attr('target','_blank');
+			}
+		});
+		$('#zeroclipboard').attr('data-clipboard-text', location.href)
+	});
+	</script> 
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>
+</body>
+</html>

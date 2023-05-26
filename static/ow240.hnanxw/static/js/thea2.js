@@ -1,0 +1,1 @@
+document.write("<div style=\"width:298px;height:248px;line-height:248px;border:1px solid #ed4040;color:#ed4040;text-align:center;\"><img src=\"http://www.hnanxw.cn/d/file/2018-06-16/bef21b303080122123bb7c321c607bfc.jpg\" width=\"298\" height=\"248\"></div>")

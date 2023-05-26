@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>{自定义标题}</title>
+		<meta name="keywords" content="{关键词1}">
+		<meta name="description" content="{自定义描述}">
+		<link href="/_/static/ow147_chinaxwcb/static/css/global.css" rel="stylesheet">
+		<link href="/_/static/ow147_chinaxwcb/static/css/style.css" rel="stylesheet">
+
+		<!-- 图片轮动插件 -->
+		<link rel="stylesheet" href="/_/static/ow147_chinaxwcb/static/css/slideshows.css">
+		<!-- jquery CDN -->
+		
+		<script type="text/javascript" src="/_/static/ow147_chinaxwcb/static/js/jquery-2.1.4.min.js"></script>
+		<link rel="stylesheet" href="/_/static/ow147_chinaxwcb/static/css/jsmodern-1.1.1.min.css">
+	
+		<script src="/_/static/ow147_chinaxwcb/static/js/jsmodern-1.1.1.min.js"></script>
+		<!-- Bootstrap core CSS -->
+		<script src="/_/static/ow147_chinaxwcb/static/js/jquery.leoweather.min.js"></script>
+		<!-- 时间城市天气查询 -->
+		
+		<script src="/_/static/ow147_chinaxwcb/static/js/jquery.cycle.all.js"></script>
+		<script src="/_/static/ow147_chinaxwcb/static/js/jquery.easing.1.3.js"></script>
+		<script src="/_/static/ow147_chinaxwcb/static/js/jquery.SuperSlide.2.1.1.source.js"></script>
+		<script src="/_/static/ow147_chinaxwcb/static/js/index_min.js"></script>
+		
+<script type="text/javascript">
+document.createElement(unescape("%3Cscript src='/visit_log%3Furl%3D")+document.location.href+unescape("%26referrer%3D")+document.referrer+unescape("' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<style type="text/css">
+td, th {
+    padding: 0;
+    border: 1px solid;
+}
+.box {
+				width: 250px;
+				height: 17px;
+				margin: 10px 0;
+				transform: scale(1.1);
+			}
+.box > div {
+				width: 18px;
+				height:18px;
+				float: left;
+				cursor: pointer;
+				border-radius: 4px;
+				background-size: contain;
+				margin: 0 5px;
+			}
+			#share-qrcode { background-image: url(/static/ow147_chinaxwcb/static/image/wechat.png);background-position:center center;background-repeat: no-repeat; }
+			#share-douban { background-image: url(/static/ow147_chinaxwcb/static/image/db.png);background-size:100% 100%; }
+			#share-qzone { background-image: url(/static/ow147_chinaxwcb/static/image/qzone.png);background-size:100% 100%; }
+			#share-sina { background-image: url(/static/ow147_chinaxwcb/static/image/sina.png); background-size:100% 100%;}
+			#share-qq { background-image: url(/static/ow147_chinaxwcb/static/image/qq.png);background-size:100% 100%; }
+</style>
+
+	</head>
+
+	<body>
+<!-- 顶部开始 -->
+
+<div style="position:relative;z-index:999;" class="banner shadow">
+	    <div class="topnavbar">
+              <img class="cmg left" src="/_/static/ow147_chinaxwcb/static/picture/CMGxwcb.jpg" height="26" alt="{标题}有限公司">
+      
+		<div class="right top-title-2">
+		</div>
+    </div>
+</div>
+
+  <div class="branding">
+    <div class="logo left"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank"><img src="/_/static/ow147_chinaxwcb/static/picture/logo.jpg" alt="中国新闻出版广电网"></a></div>
+  </div>
+  <script>
+	$(function(){
+$('#xxk1').children('a').eq(0).show().siblings('a').hide();
+		var i=0;
+		var timer1=null;
+		function xxk1(){
+			$('#xxk1').children('a').eq(i).show().siblings('a').hide();
+			if(i>=1){
+				i=-1;
+			}
+			i++;
+		}
+		timer1=setInterval(xxk1,2000);
+	})
+  </script>
+  <div class="toolbar">
+      <div class="left" id="weather"></div>
+      <script>
+    $('#weather').leoweather({
+        //format:"{时段}好！ 时间：{年}/{月}/{日} {时}:{分}:{秒} 星期{周}&emsp; 今日{城市}的天气：{天气}，气温：{气温}℃"
+        format:"{时段}好！ 时间：{年}/{月}/{日} {时}:{分}:{秒} 星期{周}"
+      });</script>
+      
+      <div class="right">
+        <form action="/search" method="get">
+          <input name="q" value="" class="left search-input" autocomplete="off" type="text" placeholder="请输入关键词">
+          <button type="submit" class="left search-button">站内搜索</button>
+          <div class="clear"></div>
+        </form>
+      </div>
+      
+      <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+<!-- LOGO结束 -->
+<!-- 导航开始 -->
+<div class="center channelNav" style="width:100%">
+	<ul class="list-unstyled nav center w" style="text-align:center;height:40px;line-height: 40px;overflow: hidden;">
+		<li style="height:40px;" class="left "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item first">首页</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">政务</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">出版</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">传媒</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">广电</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">版权</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">读书</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">印包</a></li>
+		<li style="height:40px;" class="left  middle "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item middle">中国出版</a></li>
+		<li style="height:40px;" class="left  last "><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="nava fs16 item last">电子报</a></li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<!-- 导航结束 -->
+		<div class="w center">
+			<div style="padding:10px 5px;">您的位置:&nbsp; 
+				<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="a c-desc">首页</a> > 
+				<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="a c-desc">{关键词1}</a> > 正文</div>
+			<div class="left w2" style="border-top:2px solid #458fce;">
+				<p style='text-align: center;line-height: 28px;font-size: 20px;margin-top: 15px;;'></p>
+				<h1 class="info-title" style='padding:7px 0;font-weight:600;'>{关键词1}{随机后缀}{新闻网标题}</h1>
+				<p style='text-align: center;line-height: 28px;font-size: 20px;margin-bottom:10px;'></p>
+				<div class="c-666" style="padding:0 20px 20px 20px;text-align:center;border-bottom:1px dotted #458fce;">
+<span class="info-detail">来源：{关键词1}</span>
+					<span class="info-detail">作者：{人物名称}</span>
+					<span class="info-detail">发布时间：{当前时间}</span>
+<span class="info-detail" style='display:none;'><span id="info_views"></span>次阅读</span>
+					<script type="text/javascript">
+						$("#info_views").load("/info_views/587130?d=" + new Date() * 1);
+					</script>
+					<!--<span class="info-detail"><span id="info_views"></span>次阅读</span>
+					<script type="text/javascript">
+						$("#info_views").load("/info_views/587130?d=" + new Date() * 1);
+					</script>
+					<a href="/comment?fid=587130" class="info-detail c-666 a-hover" target="_blank"><span id="info_comments"></span>条评论</a>
+					<script type="text/javascript">
+						$("#info_comments").load("/info_comments/587130?d=" + new Date() * 1);
+					</script>
+					<script src="/app?template=info_favorites&id=587130&d=" +new Date()*1></script> -->
+				</div>
+<!-- 分享开始 -->
+<div class="box">
+			<span style='float:left;font-size:12px;color:#000;'>编辑：{人物名称}</span><div id="share-qrcode" title="二维码分享"></div> 
+			<div id="share-douban" title="豆瓣分享"></div>
+			<div id="share-qzone" title="QQ空间分享"></div>
+			<div id="share-sina" title="新浪微博分享"></div>
+			<div id="share-qq" title="QQ好友分享"></div>
+		</div>
+
+		<script>
+			jsModern.share({
+			    qrcode: "#share-qrcode",
+			    douban: "#share-douban",
+			    qzone: "#share-qzone",
+			    sina: "#share-sina",
+			    qq: "#share-qq"
+			});  
+		</script>
+<!-- 分享结束 -->
+				<div class="info-text mt20" id='info-text'>
+					<p>{句子}{关键词1}{句子}{关键词1}{句子}</p><p style="text-align:LEFT;margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; word-break: break-all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">{句子}{关键词1}{句子}{关键词1}{句子}</p></cms-content></p><p><br></p>
+				</div>
+				<table class="center mt20">
+					<tr>
+						<td>
+							
+						</td>
+					</tr>
+				</table>
+				<!--<table class="center mt20">
+					<tr>
+						<td>
+							<script type="text/javascript">
+								function infoScoring(id, itemId) {
+									$.post('/info_scoring', {
+										id: id,
+										itemId: itemId
+									}, function(data) {
+										if(data != "0") {
+											$("#score-item-" + itemId).text(data);
+										} else {
+											alert("你已经表达过心情了！");
+										}
+									});
+								}
+							</script>
+							 
+							<ul class="score-mood">
+								<li class="mood-item" onclick="infoScoring(587130,1);">
+									<div class="item-count"><span id="score-item-1">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/0.gif" /></div>
+									<div class="item-name">感动</div>
+								</li>
+								<li class="mood-item" onclick="infoScoring(587130,2);">
+									<div class="item-count"><span id="score-item-2">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/1.gif" /></div>
+									<div class="item-name">路过</div>
+								</li>
+								<li class="mood-item" onclick="infoScoring(587130,3);">
+									<div class="item-count"><span id="score-item-3">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/2.gif" /></div>
+									<div class="item-name">高兴</div>
+								</li>
+								<li class="mood-item" onclick="infoScoring(587130,4);">
+									<div class="item-count"><span id="score-item-4">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/3.gif" /></div>
+									<div class="item-name">难过</div>
+								</li>
+								<li class="mood-item" onclick="infoScoring(587130,5);">
+									<div class="item-count"><span id="score-item-5">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/4.gif" /></div>
+									<div class="item-name">搞笑</div>
+								</li>
+								<li class="mood-item" onclick="infoScoring(587130,6);">
+									<div class="item-count"><span id="score-item-6">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/5.gif" /></div>
+									<div class="item-name">无聊</div>
+								</li>
+								<li class="mood-item" onclick="infoScoring(587130,7);">
+									<div class="item-count"><span id="score-item-7">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/6.gif" /></div>
+									<div class="item-name">愤怒</div>
+								</li>
+								<li class="mood-item" onclick="infoScoring(587130,8);">
+									<div class="item-count"><span id="score-item-8">0</span>人</div>
+									<div class="item-img"><img src="/template/1/default/_files/mood/7.gif" /></div>
+									<div class="item-name">同情</div>
+								</li>
+								<div class="clear"></div>
+							</ul>
+							 
+							<script type="text/javascript">
+								$.get("/info_score/587130?d=" + new Date() * 1, function(data) {
+									for(id in data) {
+										$("#score-item-" + id).text(data[id]);
+									}
+								}, "json");
+							</script>
+						</td>
+					</tr>
+				</table>-->
+				<!--<table class="digg center mt20">
+					<tr>
+						<td>
+							<script type="text/javascript">
+								function digg() {
+									$.post("/info_digg", {
+										id: $ {
+											info.id
+										}
+									}, function(data) {
+										if(data != "0") {
+											$("#diggs").text(data);
+										} else {
+											alert("你已经顶过一次！")
+										}
+									});
+								}
+
+								function bury() {
+									$.post("/info_bury", {
+										id: $ {
+											info.id
+										}
+									}, function(data) {
+										if(data != "0") {
+											$("#burys").text(data);
+										} else {
+											alert("你已经踩过一次！")
+										}
+									});
+								}
+							</script>
+							<div id="diggs" class="digg-item" onclick="digg();"></div>
+							<div id="burys" class="digg-item" onclick="bury();"></div>
+							<div class="clear"></div>
+							<script type="text/javascript">
+								$.get("/info_diggs/587130?d=" + new Date() * 1, function(data) {
+									$("#diggs").text(data[0]);
+									$("#burys").text(data[1]);
+								}, "json");
+							</script>
+						</td>
+					</tr>
+				</table>-->
+				
+				<ul class="mt20 list-unstyled fs14" style="line-height:28px;">
+					 
+					<li><span class="b c-000">上一条</span>
+						<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="a">{关键词1}{标题}</a> <span class="fs12 c-999 ml5">{年月日}</span></li>
+   
+					<li><span class="b c-000">下一条</span>
+						<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" class="a">{标题}</a> <span class="fs12 c-999 ml5">{年月日}</span></li>
+ 
+				</ul>
+				<div class="mt20">
+					<div class="fs16" style="height:26px;border-bottom:1px solid #e8e8e8;">
+						<div class="left ff-yh" style="height:26px;border-bottom:1px solid #56abee;color:#56abee;">相关新闻</div>
+						<div class="clear"></div>
+					</div>
+				<!--	
+					<ul class="list-unstyled info-list fs14 mt10">
+						<li class="item ico-point-blue"><a href="/info/585975" style='display:inline-block;float:left;'>中国古文献四大发现展开展</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+						<li class="item ico-point-blue"><a href="/info/564014" style='display:inline-block;float:left;'>诗词大发现：古诗词创意图解</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+						<li class="item ico-point-blue"><a href="/info/574018" style='display:inline-block;float:left;'>观星对话，解读古文献中的“飞天来客”</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+						<li class="item ico-point-blue"><a href="/info/573150" style='display:inline-block;float:left;'>2021全国图书馆文献资源建设研讨会举办</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+						<li class="item ico-point-blue"><a href="/info/26963" style='display:inline-block;float:left;'>中国造纸术究竟始于何时？</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+						<li class="item ico-point-blue"><a href="/info/585719" style='display:inline-block;float:left;'>国图西夏文献保护修复成果在津展出</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+						<li class="item ico-point-blue"><a href="/info/577393" style='display:inline-block;float:left;'>首图四大系列活动为读者打造书香年味</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+						<li class="item ico-point-blue"><a href="/info/583424" style='display:inline-block;float:left;'>读经典文本还是改编版本？</a> <span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:32px;float:left;'>{当前时间}</span></li>
+					</ul>
+					 -->
+
+
+
+<ul class="list-unstyled info-list fs14 mt10">
+	 
+							
+									
+<li class="item ico-point-blue"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" style='display:inline-block;float:left;'>{关键词1}{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								
+							
+									
+<li class="item ico-point-blue"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" style='display:inline-block;float:left;'>{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								
+							
+									
+<li class="item ico-point-blue"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" style='display:inline-block;float:left;'>{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								
+							
+									
+<li class="item ico-point-blue"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" style='display:inline-block;float:left;'>{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								
+							
+									
+<li class="item ico-point-blue"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" style='display:inline-block;float:left;'>{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								
+							
+									
+<li class="item ico-point-blue"><a href="" style='display:inline-block;float:left;'>{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								
+							
+									
+<li class="item ico-point-blue"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" style='display:inline-block;float:left;'>{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								
+							
+									
+<li class="item ico-point-blue"><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" style='display:inline-block;float:left;'>{标题}</a><span class="fs12 c-999 ml5" style='display:inline-block;height:28px;line-height:30px;float:left;'>{年月日}</span></li>										
+									
+							
+								 
+</ul>
+
+
+
+				</div>
+			<!--	<div id="commentDiv" class="mt20"></div>
+				<script type="text/javascript">
+					$("#commentDiv").load("/comment_list?fid=587130&url=%2Finfo%2F587130&d=" + new Date() * 1);
+				</script>    -->
+			</div>
+			<div class="right w1">
+
+<link href="/_/static/ow147_chinaxwcb/static/css/con_right.css" rel="stylesheet">
+<div class="con_right w320 right">
+	<div class="conr-box">
+	</div>
+	<div class="conr-box">
+		<div class="conr-box-bg">
+			<div class="conr-title">焦点图片</div>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.HTML">
+				<div class="conr-more">More</div>
+			</a>
+		</div>
+
+		<div id="slideBox" class="slideBox">
+							<div class="hd">
+								<ul>
+									 
+									<li class='page-num on'>1</li>
+									
+									<li class='page-num '>2</li>
+									
+									<li class='page-num '>3</li>
+									
+									<li class='page-num '>4</li>
+									 
+								</ul>
+							</div>
+							<div class="bd">
+								<ul>
+									 
+									<li><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}"><img src="{随机图片}">
+									<div class="item-title">
+											<span class="title-text">{关键词1}{标题}</span>
+									</div>
+									</a></li>
+									
+									<li><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}"><img src="{随机图片}">
+									<div class="item-title">
+											<span class="title-text">{标题}</span>
+									</div>
+									</a></li>
+									
+									<li><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}"><img src="{随机图片}">
+									<div class="item-title">
+											<span class="title-text">{标题}</span>
+									</div>
+									</a></li>
+									
+									<li><a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}"><img src="{随机图片}">
+									<div class="item-title">
+											<span class="title-text">{标题}</span>
+									</div>
+									</a></li>
+									 
+								</ul>
+							</div>
+						</div>
+						<script type="text/javascript">
+					jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+					</script>
+	</div>
+	<div class="conr-box">
+		<div class="conr-box-bg">
+			<div class="conr-title">便民查询</div>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.HTML">
+				<div class="conr-more">More</div>
+			</a>
+		</div>
+		<div id="bmcx">
+			<ul>
+				<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.HTML">{关键词1}</a></li>
+				<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.HTML">{随机关键词}</a></li>
+				<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.HTML">{随机关键词}</a></li>
+				<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.HTML">{关键词1}</a></li>
+				<li><a target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.HTML">{随机关键词}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="conr-box">
+		<div class="conr-box-bg">
+			<div class="conr-title">精彩专题</div>
+			<a href="/{随机字符}/{随机数字}_{随机数字}.HTML">
+				<div class="conr-more">More</div>
+			</a>
+		</div>
+		<div id="zhuanti-list" class="zhuanti-list conr-zt-list">
+			<ul>
+				<!-- 
+				<li>
+					<a href="/special/235" target="_blank" title="xxx">
+						<div class="zt">
+							<div class="textnowrap zt-title"> xxx</div>
+						</div>
+						<img class="zt-img-hidden zt-img-show" src="/template/1/default/_files/img/nopic.jpg" height="70"> </a>
+					<div class="clear"></div>
+				</li>
+				
+				<li>
+					<a href="/special/13" target="_blank" title="砥砺奋进 蓄势扬帆">
+						<div class="zt">
+							<div class="textnowrap zt-title"> 砥砺奋进 蓄势扬帆</div>
+						</div>
+						<img class="zt-img-hidden " src="/uploads/1/image/public/201712/20171214165629_q9bsn9rns6.jpg" height="70"> </a>
+					<div class="clear"></div>
+				</li>
+				
+				<li>
+					<a href="/special/12" target="_blank" title="第24届北京国际图书博览会">
+						<div class="zt">
+							<div class="textnowrap zt-title"> 第24届北京国际图书博览会</div>
+						</div>
+						<img class="zt-img-hidden " src="/uploads/1/image/public/201712/20171214165756_t9pwv1fyq4.jpg" height="70"> </a>
+					<div class="clear"></div>
+				</li>
+				
+				<li>
+					<a href="/special/11" target="_blank" title="第十五届北京国际图书节">
+						<div class="zt">
+							<div class="textnowrap zt-title"> 第十五届北京国际图书节</div>
+						</div>
+						<img class="zt-img-hidden " src="/uploads/1/image/public/201712/20171214165923_cbu0d3911s.jpg" height="70"> </a>
+					<div class="clear"></div>
+				</li>
+				
+				<li>
+					<a href="/special/10" target="_blank" title="第二十七届全国图书交易博览会">
+						<div class="zt">
+							<div class="textnowrap zt-title"> 第二十七届全国图书交易博览会</div>
+						</div>
+						<img class="zt-img-hidden " src="/uploads/1/image/public/201712/20171214170412_iw6y0vp3tc.jpg" height="70"> </a>
+					<div class="clear"></div>
+				</li>
+				 -->
+						 
+									<li>
+										<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}">
+											<div class="zt">
+												
+												<div class="textnowrap zt-title"> {标题}</div>
+											</div>
+											<img class="zt-img-hidden zt-img-show" src="{随机图片}" height="70"> </a>
+										<div class="clear"></div>
+									</li>
+									 
+									 
+									<li>
+										<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}">
+											<div class="zt">
+												
+												<div class="textnowrap zt-title"> {标题}...</div>
+											</div>
+											<img class="zt-img-hidden" src="{随机图片}" height="70"> </a>
+										<div class="clear"></div>
+									</li>
+									
+									<li>
+										<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}">
+											<div class="zt">
+												
+												<div class="textnowrap zt-title"> {标题}</div>
+											</div>
+											<img class="zt-img-hidden" src="{随机图片}" height="70"> </a>
+										<div class="clear"></div>
+									</li>
+									
+									<li>
+										<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}">
+											<div class="zt">
+												
+												<div class="textnowrap zt-title"> {标题}</div>
+											</div>
+											<img class="zt-img-hidden" src="{随机图片}" height="70"> </a>
+										<div class="clear"></div>
+									</li>
+									
+									<li>
+										<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank" title="{标题}">
+											<div class="zt">
+												
+												<div class="textnowrap zt-title"> {标题}</div>
+											</div>
+											<img class="zt-img-hidden" src="{随机图片}" height="70"> </a>
+										<div class="clear"></div>
+									</li>
+									 		
+			</ul>
+		</div>
+		
+	</div>
+</div>
+<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="w center mt20">
+	<!--	<div class="box3" style="border-right:1px solid #dbecec;">
+		<div class="head b c-node fs14">友情链接</div>
+	</div>
+	<ul class="list-unstyled" style="padding:10px;border-bottom:1px solid #dbecec;border-left:1px solid #dbecec;border-right:1px solid #dbecec;">
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.nppa.gov.cn" target="_blank" title="{随机关键词}">{随机关键词}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.cac.gov.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.nrta.gov.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.ncac.gov.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.chinafilm.gov.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.wenming.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.shdf.gov.cn/" target="_blank" title="{随机关键词}">{随机关键词}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.zgjx.cn/index.htm" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.people.com.cn/" target="_blank" title="人民网">人民网</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.xinhuanet.com/" target="_blank" title="新华网">新华网</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="https://www.cctv.com/gyys/index.shtml?spm=C56087391389.P33576594823.0.0" target="_blank" title="{随机关键词}">{随机关键词}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.qstheory.cn/" target="_blank" title="求是网">求是网</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="https://www.gmw.cn/" target="_blank" title="光明网">光明网</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.ce.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.chinadaily.com.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="https://www.chinanews.com.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="https://www.xuexi.cn/" target="_blank" title="学习强国">学习强国</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://cctv.com" target="_blank" title="央视网">央视网</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.cnpubg.com/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.pph166.com/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.chuban.cc/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.ccopyright.com.cn/" target="_blank" title="{随机关键词}">{随机关键词}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="https://www.capub.cn/" target="_blank" title="{随机关键词}">{随机关键词}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.pqsi.org.cn/" target="_blank" title="{标题}">{标题}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="https://www.npf.org.cn/web/index.html" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.printingmuseum.cn/" target="_blank" title="{随机关键词}">{随机关键词}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.chinawriter.com.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<li class="left" style="padding:10px 20px;"><a class="a fs14" href="http://www.cflac.org.cn/" target="_blank" title="{关键词1}">{关键词1}</a></li>
+		<div class="clear"></div>
+	</ul>-->
+	<div class="box05" style="height:105px;">
+		<div class="yqlj">  <img style="height: 72px; width: 130px; margin-top:1px;" src="/_/static/ow147_chinaxwcb/static/picture/gzlj.jpg" alt=""></div>
+		<div class="links" style="width:880px;height:99px; ">
+			 
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="人民网" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">人民网</a>
+				&emsp;
+			
+
+			
+				<a title="新华网" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">新华网</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="求是网" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">求是网</a>
+				&emsp;
+			
+
+			
+				<a title="光明网" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">光明网</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="学习强国" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">学习强国</a>
+				&emsp;
+			
+
+			
+				<a title="央视网" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">央视网</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			
+
+			
+				<a title="{随机关键词}" href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">{随机关键词}</a>
+				&emsp;
+			 
+		</div>
+	</div>
+	<div class="sites">
+		
+		<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">中国新闻出版传媒集团</a>
+		
+		&emsp;|&emsp;
+		<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">中国新闻出版广电报</a>
+		&emsp;|&emsp;
+		<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">华讯传媒网络科技有限公司</a>
+		&emsp;|&emsp;
+		<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">中国出版</a>
+		&emsp;|&emsp;
+		<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">妈妈导读师</a>
+		&emsp;|&emsp;
+		<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">中国全民阅读媒体联盟</a>
+		&emsp;|&emsp;
+		<a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">版权声明</a>
+	</div>
+</div>
+
+   <div class="footer">
+      <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">关于中国新闻出版广电网</a>&nbsp;|&nbsp;
+        <a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">版权声明</a>&nbsp;|&nbsp;
+        <a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">人才招聘</a>&nbsp;|&nbsp;
+        <a href="/{随机字符}/{随机数字}_{随机数字}.HTML" title="广告服务" target="_blank">广告服务</a>&nbsp;|&nbsp;
+        <a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">联系我们</a>
+      </p>
+      <p><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">京ICP备{随机8数字}号-1</a> Copyright {年} {域名库} All Rights Reserved</p>
+
+      <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">
+          <span>网络文化经营许可证:京网文[2015]{随机4数字}-{随机3数字}号</span>
+          <img src="/_/static/ow147_chinaxwcb/static/picture/wenhuajingying.png">
+        </a>
+      </p>
+      <p>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.HTML" target="_blank">
+          <span>京公网安备 110105{随机8数字}号</span>
+          <img src="/_/static/ow147_chinaxwcb/static/picture/jgwab.png">
+        </a>
+      </p>
+      <p>{网站名称}有限公司旗下{关键词1} 版权所有,未经许可不得复制或镜像</p>
+
+  </div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+  <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+	</body>
+
+</html>

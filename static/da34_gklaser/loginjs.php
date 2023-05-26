@@ -1,0 +1,1 @@
+document.write("              <li><a href=\"/e/member/login/\" target=\"_blank\" title=\"登陆\"><i class=\"fa fa-user-circle\" aria-hidden=\"true\"></i>&nbsp;会员登陆</a></li>              <li><a href=\"/e/member/register/index.php?tobind=0&groupid=1&button=下一步\" target=\"_blank\" title=\"注册\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i>&nbsp;注册会员</a></li>		");

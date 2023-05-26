@@ -1,0 +1,131 @@
+
+
+/*
+    Css for PEL,    ver 1.0
+    CopyRight By Dongyi Network Technology CO.,Ltd Design Center
+
+    所有网站通用模块，可根据自身网站修改
+*/
+
+/* 通用信息列表 */
+.infoList { text-align: left; }
+.infoList li { height: 32px; line-height: 32px; overflow: hidden; font-size: 14px; padding-left: 12px; background: url(../image/dot-01.gif) 0px 14px no-repeat; }
+.infoList li .date { font-size: 12px; float: right; *display: inline; color: #999; }
+.infoList li .node { color: #f00; margin-right: 5px; }
+.infoListA { text-align: left; }
+.infoListA li { line-height: 24px; padding: 0px 0px 11px 18px; margin-bottom: 12px; border-bottom: 1px dashed #cccccc; overflow: hidden; background: url(../image/dot-04.gif) 2px 6px no-repeat; }
+.infoListA li.last { border-bottom: none; margin-bottom: 0px; }
+
+/* infoListB */
+.infoListB li { padding: 0 0 10px 12px; margin-bottom: 10px; border-bottom: 1px solid #ddd; line-height: 1.5; background: url(../image/dot-01.gif) 0px 9px no-repeat; position: relative; }
+.infoListB .date { color: #999; float: right; }
+.infoListB .last { border-bottom: 0 }
+
+/* 通用带图片的信息列表_普通式 */
+.picList li { text-align: center; }
+.picList li .pic img { width: 95px; height: 125px; padding: 4px; border: 1px solid #ddd; background: #fff; }
+.picList li .pic a:hover img { border-color: #aaa; }
+.picList li .title { padding-top: 5px; }
+
+/* 通用带图片的信息列表_普通式 - 横排浮动 */
+.picListFl { margin-right: -1%; overflow: hidden; zoom: 1; }
+.picListFl li { width: 15.66%; margin-right: 1%; text-align: center; float: left; *display: inline; overflow: hidden; }
+.picListFl li .pic { overflow: hidden }
+.picListFl li .pic img { width: 100%; height: auto; transition: 200ms; -o-transition: 200ms; -moz-transition: 200ms; transition: 200ms; }
+.picListFl li .title { font-size: 14px; padding-top: 8px; max-height: 56px; }
+.picListFl li:hover .pic img { transform: scale(1.05, 1.05); -moz-transform: scale(1.05, 1.05); -webkit-transform: scale(1.05, 1.05); -o-transform: scale(1.05, 1.05); }
+
+/* 内容带图片的信息列表_普通式 - 左图片右文字 */
+.txtPicList li { overflow: hidden; background: url(http://www.cdrbs.net/Content/cdrbs/Base/img/dotted.gif) repeat-x bottom; padding-bottom: 10px; margin-bottom: 10px; }
+.txtPicList li .pic { width: 96px; float: left; }
+.txtPicList li .pic img { width: 90px; height: 90px; padding: 2px; border: 1px solid #ddd; background: #fff; }
+.txtPicList li .pic a:hover img { border-color: #aaa; }
+.txtPicList li .con { width: 230px; float: left; padding-left: 8px; }
+.txtPicList li .title { height: 28px; line-height: 28px; font-size: 14px; color: #c30000; font-weight: bold; }
+.txtPicList li .title a { color: #c30000; }
+.txtPicList li .intro { color: #666; line-height: 20px; }
+.txtPicList li .intro .more { color: #c30000; font-size: 12px; }
+
+/* 内容带图片的信息列表_普通式 - 上图片下文字 */
+.txtPicListB li .pic img { width: 190px; height: 120; padding: 4px; border: 1px solid #ddd; background: #fff; }
+.txtPicListB li .pic a:hover img { border-color: #aaa; }
+.txtPicListB li .title { height: 28px; line-height: 28px; font-weight: bold; }
+.txtPicListB li .title a { color: #9b770a; }
+.txtPicListB li .intro { color: #666; }
+.txtPicListB li .intro .more { color: #f60; }
+
+/* 头条图文信息列表_普通式 */
+.topicList .t {padding-bottom: 13px;margin-bottom: 0px;border-bottom: 1px dashed #e8e8e8;}
+.topicList .t .title {font-size: 16px;text-align: center;height: 40px;line-height: 40px;overflow: hidden;}
+.topicList .t .tit {color: #e68c19;}
+.topicList .t .tit:hover { color: #c30000 }
+.topicList .t .intro {font-size: 12px;color: #a9a9a9;text-align: left;line-height: 20px;height: 44px;overflow: hidden;}
+.topicList .t .intro .more { color: #c30000; }
+.topicList .n { height: 32px; line-height: 32px; overflow: hidden; font-size: 14px; padding-left: 12px; background: url(../image/dot-01.gif) 0px 14px no-repeat; }
+.topicList .n .date { float: right; *display: inline; line-height: 30px; font-size: 12px; color: #999; }
+
+/* 有图片时追加的类 class="topicList topicHasPic"  */
+.topicHasPic .t { position: relative; overflow: hidden; zoom: 1; border-bottom: 1px dashed #ccc; }
+.topicHasPic .pic { width: 160px; margin-right: 20px; float: left; }
+.topicHasPic .pic img { width: 100%; /* height: 120px; */ }
+.topicHasPic .pic a:hover img { border-color: #aaa; }
+.topicHasPic .con { overflow: hidden; zoom: 1; }
+
+/* 焦点图切换-广告 */
+.slideBox { height: 100px; overflow: hidden; position: relative; }
+.slideBox .hd { position: absolute; z-index: 1; right: 5px; bottom: 5px; }
+.slideBox .hd ul { overflow: hidden; zoom: 1; float: left; }
+.slideBox .hd ul li { font-size: 12px; float: left; margin-right: 2px; width: 16px; height: 16px; line-height: 16px; text-align: center; background: #000; cursor: pointer; color: #fff; filter: alpha(opacity=60); opacity: 0.6; }
+.slideBox .hd ul li.on { background: #f00; filter: alpha(opacity=100); opacity: 1; }
+.slideBox .bd { position: relative; z-index: 0; }
+.slideBox .bd .con { display: none; }
+
+/* 焦点图切换-新闻内容 */
+.focusBox { margin-bottom: 15px; /* width: 100%; */ overflow: hidden; position: relative; }
+.focusBox .hd { position: absolute; z-index: 1; right: 4px; bottom: 14px; }
+.focusBox .hd ul { overflow: hidden; zoom: 1; float: left; }
+.focusBox .hd ul li {/* margin-right: 5px; *//* width: 9px; *//* height: 9px; *//* line-height: 9px; */text-align: center;background: #fff;cursor: pointer;color: #fff;}
+.focusBox .hd ul li.on { background: #FF4F01; color: #fff; }
+.focusBox .hd ul li span { display: none; }
+.focusBox .bd { position: relative; overflow: hidden; }
+.focusBox .bd li { position: relative; }
+.focusBox .bd .pic { position: relative; z-index: 0; line-height: 0; }
+.focusBox .bd .pic img { width: 100%; height: 248px; border: 0; }
+.focusBox .bd .con { position: absolute; width: 100%; z-index: 1; bottom: 0; height: 36px; line-height: 36px; text-align: left; }
+.focusBox .bd .con .title { position: absolute; width: 76%; bottom: 0; left: 0; z-index: 1; height: 100%; overflow: hidden; }
+.focusBox .bd .con .title a { color: #fff; padding-left: 10px; text-decoration: none; }
+.focusBox .bd .con .titleBg { position: absolute; width: 100%; z-index: 0; bottom: 0; left: 0; background: #000; filter: alpha(opacity=60); opacity: 0.6; height: 36px; }
+
+/* url_方块样式分页 */
+.page { font-size: 0; text-align: center; padding: 25px 0; clear: both; }
+.page a, .page span {font-size: 14px;float: left; *display: inline;zoom: 1;border: 1px solid #E1E1E1;padding: 0px 6px;margin: 0 3px 5px 0;line-height: 25px;height: 25px;}
+.page a:hover, .page span:hover { border: 1px solid #33aced; text-decoration: none; color: #33aced; }
+.page .current { background: #33aced; border: 1px solid #33aced; color: #fff !important; font-weight: bold; }
+.page select, .page input { margin: 0 4px; background: #fff; border: 0 solid #E1E1E1; vertical-align: middle; }
+.page input { text-align: center; padding: 0 4px; outline: none; }
+.page .disabled { pointer-events: none; filter: alpha(opacity=50); -moz-opacity: 0.5; opacity: 0.5; }
+
+/* 星形评分 */
+.stars { display: inline-block; *display: inline; zoom: 1; width: 72px; height: 11px; margin-right: 5px; overflow: hidden; background: url("http://www.cdrbs.net/Content/cdrbs/Base/img/starSplit.gif") -4px -34px no-repeat; }
+.stars i { display: inline-block; *display: inline; zoom: 1; height: 11px; background: url(http://www.cdrbs.net/Content/cdrbs/Base/img/starSplit.gif) -4px -14px no-repeat; }
+.starsMan { display: none; }
+
+/*-- 网站地图 --*/
+.siteMap { padding: 15px 10px; overflow: hidden; zoom: 1; }
+.siteMap .li1 { margin-bottom: 20px; }
+.siteMap .h1 { height: 40px; line-height: 40px; border: 1px dotted #ccc; background: #fff; background: #f6f6f6; }
+.siteMap .h1 .a1 { font: normal 16px/40px "Microsoft YaHei"; _font-weight: bold; color: #0068B7; padding-left: 15px; }
+.siteMap .ul1 { padding: 10px 20px; zoom: 1; }
+.siteMap .li2 { display: inline-block; *display: inline; zoom: 1; padding-right: 50px; vertical-align: top; padding-bottom: 5px; }
+.siteMap .a2 { color: #666; }
+.siteMap .ul2 { padding: 0 0 20px 0; }
+.siteMap .li3 { line-height: 18px; display: inline-block; *display: inline; zoom: 1; }
+.siteMap .a3 { color: #999; padding-right: 10px; margin-right: 10px; border-right: 1px solid #ddd; }
+.siteMap .last3 .a3 { border-right: 0; }
+.siteMap #liID41 .li2 { display: block; }
+
+/*-- 
+颜色代码
+#1E72B4 深蓝色标题
+#C4DEF8 淡蓝色边框
+--*/

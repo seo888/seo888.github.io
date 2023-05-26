@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="zh-CN"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+	<title>{自定义标题}</title>
+	<meta name="keywords" content="{关键词1}" />
+	<meta name="description" content="{自定义描述}">
+    <!-- 别忘记此处的meta标签，确保IE都是在标准模式下渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/cmstop.common.css">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/cmstop.basecolor.css">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/cmstop.article.css">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/cmstop.gallery.css">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/cmstop.singup.css">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/cmstop.dialog.css">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/cmstop.index.css">
+    <link rel="stylesheet" href="/_/static/ow136_hbgbdst/static/css/article_hang.css">
+    <!-- <link rel="stylesheet" href="https://res.cjyun.org/assets/templates/web/default/css/site.css"> -->
+    <script src="/_/static/ow136_hbgbdst/static/js/jquery-1.11.2.js"></script>
+    <script src="/_/static/ow136_hbgbdst/static/js/cmstop.gotop.js"></script>
+    <script src="/_/static/ow136_hbgbdst/static/js/cmstop.common.js"></script>
+    <script src="/_/static/ow136_hbgbdst/static/js/cmstop.dialog.js"></script>
+    <script src="/_/static/ow136_hbgbdst/static/js/cmstop.gallery.article.js"></script>
+    <script type="text/javascript" src="/_/static/ow136_hbgbdst/static/js/article_hang.js"></script>
+    <script>
+        $(function(){
+            $('.js-overlay').mouseenter(function() {
+                overlayPlay($(this));
+            }).mouseleave(function(){
+                var timeSpan = $('.time', $(this));
+                timeSpan.css({'background-color':timeSpan.attr('data-bgc')});
+                $(this).find('.overlay').fadeOut('fast');
+            });
+            
+            $("audio").attr("controls","controls");
+        });
+    </script>
+    <!-- IE8及IE8以下浏览器都支持HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="https://res.cjyun.org/t/site/10198/81c5a5e7bb18a717bfa28b0eeab49ec7/assets/js/html5/html5.js"></script>
+    <![endif]-->
+    <style>
+    .body {
+        background-color: #fcfcfc;
+    }
+    .m-crumb {
+        text-align: right;
+    }
+    .m-crumb a,.m-crumb em {
+        float: none;
+        display: inline-block;
+        font-size: 18px;
+        background-position: -10px -1048px;
+    }
+        .article-content {
+            background-color: #ffffff;
+            font-size: 24px;
+            line-height: 48px;
+            box-shadow: 0 0 10px #eeeeee;
+            padding: 60px;
+            margin-bottom:60px;
+        }
+        .article-content img {
+            max-width:80%;
+            margin:10px auto;
+        }
+        .article-content p {
+            margin:36px 0;
+        }
+        .article-content-title {
+            font-size: 38px;
+            color: #222222;
+            font-weight: bold;
+            line-height: 50px;
+            text-align: left;
+            padding: 0;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .article-infos {
+            line-height: 56px;
+            font-size: 14px;
+            color: #5b5b5b;
+            text-align: left;
+            border-bottom: 2px solid #dedede;
+        }
+        .article-describe {
+            display: none;
+        }
+.article-detail .article-detail-inner p {
+    text-indent: 0;
+    font-size: 18px;
+    line-height: 30px;
+    color: #222222;
+    margin: 25px 0;
+}
+</style>
+</head>
+<body class="body">
+    <!-- 顶部 -->
+    <style rel="stylesheet" type="text/css">
+html, body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, form, input { font-family: inherit; font-weight: normal; font-style: normal; font-size: 100%; margin: 0; padding: 0; border: 0; outline: 0; box-sizing: border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; }
+body {
+	font-family: "Microsoft Yahei";
+	font-size: 16px;
+	color: #333333;
+	background-color: #ffffff;
+}
+img {
+	display: block;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: #0079cc;
+}
+ul, ol, li {
+	list-style: none;
+}
+h2 {
+    position: relative;
+    top: -3px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	width: 180px;
+	line-height: 3rem;
+	color: #2a7ccf;
+	border-bottom: 3px solid #0079cc;
+	transition: width 4s ease 1s;
+}
+.divcenter {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	clear: both;
+}
+.divcenter:hover h2 {
+	width: 100%;
+}
+.divcenter a img:hover {
+	transition: all 0.1s ease-in-out;
+	transform: scale(1.1);
+	box-shadow: 0 0 4px #999999;
+	z-index: 99;
+}
+.divcenter a img.noscale:hover {
+	transform: scale(1);
+	box-shadow: none;
+}
+#logo {
+	background-color: #f8f8f8;
+	padding: 60px 0 30px;
+}
+#logo .root {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 402px;
+	height: 70px;
+}
+#logo .oa {
+	position: absolute;
+	bottom: 6px;
+	right: 10px;
+	line-height: 32px;
+	background-color: #0079cc;
+	color: #ffffff;
+	padding: 0 15px;
+	border-radius: 15px;
+}
+#logo input.wd {
+	position: absolute;
+	bottom: 4px;
+	right: 120px;
+	width: 280px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
+	border: 1px solid #b5b5b5;
+	border-radius: 4px;
+}
+#logo input.submit {
+	position: absolute;
+	bottom: 4px;
+	right: 120px;
+    width: 48px;
+    height: 40px;
+    padding: 0;
+	border-radius: 0 4px 4px 0;
+}
+#nav {
+    position: relative;
+    z-index: 900;
+	background: #0079cc url(static/image/87df58e8c3c02b1f3b7815e315b8ec1f.jpg) repeat-x center top;
+	height: 418px;
+}
+#nav .nav-main {
+	display: flex;
+}
+#nav .nav-main li {
+	float: left;
+	color: #ffffff;
+	font-size: 1.1875rem;
+	line-height: 70px;
+	padding: 0 1.5rem;
+	cursor: default;
+}
+#nav .nav-main li a {
+	color: #ffffff!important;
+}
+#nav .nav-children {
+	position: absolute;
+	top: 66px;
+	left: -999px;
+	width: 100px;
+	background-color: #ffffff;
+	padding: 6px 0;
+	border-radius: 6px;
+	box-shadow: 0 2px 8px #aaaaaa;
+}
+#nav .nav-children li {
+	padding: 6px 0;
+	background: url(static/image/49321b3d5a27a10d8448c51c2f8ea466.jpg) no-repeat center top;
+}
+#nav .nav-children li a {
+    display: block;
+	font-size: 1.125rem;
+	line-height: 40px;
+	text-align: center;
+    border-left: 4px solid #ffffff;
+}
+#nav .nav-children li a:hover {
+    border-left: 4px solid #0079cc;
+}
+#nav .nav-children li.nav-children-top {
+    position: relative;
+	background-image: none;
+}
+#nav .nav-children li.nav-children-top .nav-children-arrow {
+    position: absolute;
+    top: -24px;
+    left: 40px;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    overflow: hidden;
+}
+#news .divcenter {
+	display: flex;
+	justify-content: space-between;
+}
+#news ul {
+	display: inline-block;
+	width: 480px;
+	margin: 30px 0;
+}
+#news ul li {
+	line-height: 2.5rem;
+	height: 2.5rem;
+	overflow: hidden;
+}
+#news ul li.news-main {
+	height: 3rem;
+	border-bottom: 1px solid #dcdcdc;
+	margin-bottom: 10px;
+}
+#news ul li.news-main span {
+    float: right;
+    font-size: 1rem;
+    color: #838383;
+    line-height: 3rem;
+}
+#news ul li a {
+	font-size: 1.125rem;
+}
+#xxqg {
+	margin-bottom: 30px;
+}
+#gallery ol {
+	margin: 20px 0;
+}
+#gallery ol li {
+	display: inline-block;
+	width: 230px;
+	margin-right: 15px;
+}
+#gallery ol li img {
+	width: 100%;
+	height: 144px;
+}
+#gallery ol li h4 {
+	line-height: 1.3rem;
+	height: 2.6rem;
+	margin: 10px 0;
+}
+#programme ol {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+#programme ol li {
+	display: inline-block;
+	width: 180px;
+	height: 220px;
+	margin-right: 5px;
+}
+#programme ol li img {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 5px;
+}
+#programme ol li.programme-left {
+	width: 320px;
+}
+#programme ol li.programme-left img {
+	height: 205px;
+}
+#programme ol li.programme-right {
+	width: 270px;
+}
+#compere ol {
+	margin: 20px 0 40px;
+}
+#compere ol li {
+	display: inline-block;
+	width: 130px;
+	margin-right: 6px;
+	opacity: 0.9;
+}
+#compere ol li.active {
+	opacity: 1;
+	transition-duration: 0.4s;
+	transform: scale(1.3);
+	z-index: 99;
+}
+#compere ol li img {
+	width: 100%;
+	height: 208px;
+}
+#compere ol li.active img {
+	box-shadow: 0 0 6px #999999;
+}
+#compere ol li h4 {
+	font-weight: bold;
+	line-height: 1.3rem;
+	text-align: center;
+	margin: 10px 0 5px;
+}
+#compere ol li.active h4, #compere ol li.active h5 {
+	color: #0079cc;
+}
+#compere ol li h5 {
+	font-size: 0.9rem;
+	line-height: 1.1rem;
+	text-align: center;
+	margin: 5px 0 10px;
+}
+#channel .divcenter {
+	width: 940px;
+	border-top: 5px solid #dbd9d8;
+	margin: 40px auto;
+}
+#channel .channel-main {
+	display: flex;
+	justify-content: space-between;
+	height: 5rem;
+	margin-top: -5px;
+}
+#channel .channel-main li {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: bold;
+	width: 260px;
+	line-height: 3rem;
+	text-align: center;
+	letter-spacing: 6px;
+	border-top: 5px solid #dbd9d8;
+	cursor: default;
+}
+#channel .channel-main li.active {
+	border-top-color: #0079cc;
+	color: #0079cc;
+}
+#channel .channel-main img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#channel .channel-main li.active img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+#channel .channel-children {
+	display: flex;
+	flex-wrap: wrap;
+}
+#channel .channel-children li {
+	float: left;
+	display: list-item;
+	width: 154px;
+	line-height: 40px;
+	/*
+	list-style: circle outside;
+	*/
+	text-indent: -6px;
+}
+#channel .channel-children li a {
+	font-size: 1.125rem;
+}
+#channel .swiper-container .swiper-slide {
+	left: 20px;
+}
+#activity ol {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+#activity ol li {
+	display: inline-block;
+	width: 230px;
+	margin-right: 15px;
+}
+#activity ol li img {
+	width: 100%;
+	height: 138px;
+}
+#activity ol li h4 {
+	line-height: 1.3rem;
+	height: 2.6rem;
+	margin: 10px 0;
+}
+#copyright {
+	background-color: #0a73ca;
+	color: #ffffff;
+	padding: 40px;
+	border-top: 8px solid #0a73ca;
+	margin-top: 60px;
+}
+#copyright img {
+	float: left;
+	margin-left: 60px;
+}
+#copyright p {
+	font-size: 0.875rem;
+	line-height: 24px;
+	margin-left: 380px;
+}
+#copyright .beian img {
+	display: inline-block;
+	margin-left: 0;
+}
+#copyright .beian a, #copyright .beian a:hover {
+	color: #ffffff;
+}
+</style>
+<div id="logo">
+	<div class="divcenter">
+		<img src="/_/static/ow136_hbgbdst/static/picture/cfec0fed22905bfa6b001c736ff9c99a.png" width="402" height="70">
+		<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="root" target="_self"></a>
+		<a href="/{随机字符}/{随机数字}_{随机数字}.html" class="oa">OA(内网)</a>
+		<form action="/s"><input class="wd" name="wd" placeholder="请输入关键字"><input class="submit" type="image" src="http://img.cjyun.org/a/10198/201812/3196f68c4b3530cf90d55e21118849d8.png"></form>
+	</div>
+</div>
+
+
+<div id="nav">
+	<div class="divcenter">
+		<ul class="nav-main">
+			<li>台（集团）简介</li>
+			<li>新闻资讯</li>
+			<li>品牌建设</li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">精品力作</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">员工风采</a></li>
+			<li>人力资源</li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html">公共采购</a></li>
+		</ul>
+		<ul class="nav-children" style="left: 24px;width: 130px;">
+			<li class="nav-children-top"><div class="nav-children-arrow" style="left:55px;"></div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">台(集团)介绍</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">台(集团)领导</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">信息公开</a></li>
+		</ul>
+		<ul class="nav-children" style="left: 192px;">
+			<li class="nav-children-top"><div class="nav-children-arrow"></div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">今日要闻</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">广电动态</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">融合集萃</a></li>
+		</ul>
+		<ul class="nav-children" style="left: 316px;">
+			<li class="nav-children-top"><div class="nav-children-arrow"></div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">主持人</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">品牌栏目</a></li>
+			<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">热门活动</a></li>
+		</ul>
+		<ul class="nav-children"></ul>
+		<ul class="nav-children"></ul>
+		<ul class="nav-children" style="left: 688px;">
+			<li class="nav-children-top"><div class="nav-children-arrow"></div><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_self">人才招聘</a></li>
+		</ul>
+	</div>
+</div>
+
+    <div class="hr20"></div>
+    <!-- 面包屑 -->
+    <div class="column m-crumb">
+                <a href="/{随机字符}/{随机数字}_{随机数字}.html">首页</a>
+            </div>
+    
+        
+    <div class="column article-content js-returntop pos-r">
+        <h1 class="article-content-title">{关键词1}{随机后缀}{新闻网标题}</h1>
+        <div class="article-infos ov">
+            <span class="date">{当前时间}</span>
+            <span class="editor">　来源：{关键词1}</span>
+        </div>
+        <div class="hr30"></div>
+        <div class="hr30"></div>
+        <article class="article-detail">
+            <div class="article-detail-inner" style="min-height:360px;">
+                <p>{新闻网内容}</p>
+            </div>
+            
+            <div class="hr20"></div>
+
+            
+            <div class="hr20"></div>
+        </article>
+
+    </div>
+    <!-- 返回顶部 -->
+    <div class="scroll-btns">
+        <div class="btn top icon40x40">
+            <a href="" class="text">返回顶部</a>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <style>
+    #nav {
+        height: 63px;
+    }
+    #copyright .beian a:hover {
+	    color: #ffffff!important;
+    }
+</style>
+
+<div id="copyright">
+	<div class="divcenter">
+		<img src="/_/static/ow136_hbgbdst/static/picture/e8c989e1194dd037f6184e64bf1517f5.png">
+		<p class="beian"><a href="/{随机字符}/{随机数字}_{随机数字}.html">鄂ICP备{随机8数字}号-6</a>　　信息网络传播视听节目许可证：{随机8数字}</p>
+		<p>COPYRIGHT © {年} ALL RIGHT RESERVED　　{关键词1} 版权所有</p>
+		<p class="beian"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow136_hbgbdst/static/picture/51b5a31271a23f6692470d8cae81a7ac.png">鄂公网安备 420106{随机8数字}号</a></p>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="/_/static/ow136_hbgbdst/static/js/jquery-1.11.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#nav .nav-main").on("mouseenter", "li", function(){
+		$("#nav .nav-children").slideUp(200).eq($(this).index()).stop(true).slideDown(200);
+	});
+
+	$("#nav").on("mouseleave", function(){
+		$("#nav .nav-children").slideUp(200);
+	}).on("mouseleave", ".nav-children", function(){
+		$(this).stop(true).slideUp(200);
+	});
+
+	$("#nav .nav-children").slideUp(200);
+
+});
+
+</script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+</html>

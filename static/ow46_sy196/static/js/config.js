@@ -1,0 +1,1 @@
+var DTPath = "http://www.sy196.com/";var DTMob = "http://www.sy196.com/mobile/";var SKPath = "http://www.sy196.com/skin/default/";var MEPath = "http://www.sy196.com/member/";var DTEditor = "kindeditor";var CKDomain = "";var CKPath = "/";var CKPrex = "cfu_";

@@ -1,0 +1,1 @@
+document.write("<a href=\"tel:19989187231\"><img src=\"https://www.hnjjtq.com/ad/530-99-1.jpg\" alt=\"海南人才引进\" width=\"100%\" height=\"90\" ></a>")

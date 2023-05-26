@@ -1,0 +1,1 @@
+var DTPath = "http://www.cq-news.com/";var DTMob = "http://www.cq-news.com/mobile/";var SKPath = "http://www.cq-news.com/skin/default/";var MEPath = "http://www.cq-news.com/member/";var DTEditor = "kindeditor";var CKDomain = "";var CKPath = "/";var CKPrex = "cv6_";

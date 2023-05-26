@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{自定义标题}</title>
+    <meta name="keywords" content="{关键词1}" />
+    <meta name="description" content="{自定义描述}" />
+    <meta name="data-spm" content="jxweb-pc-yun-jxntv">
+<script>
+    var isPC = function (){
+        var userAgentInfo = navigator.userAgent.toLowerCase();
+        var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }
+        }
+        return flag;
+    }
+    var pcUlr = "//pc.yun.jxntv.cn";
+    var mobleUlr = "//m.yun.jxntv.cn";
+    if(isPC()&&window.location.href.indexOf(mobleUlr)!=-1){
+        window.location.href = pcUlr+GetUrlRelativePath()
+    }else if(!isPC()&&window.location.href.indexOf(pcUlr)!=-1){
+        window.location.href = mobleUlr+GetUrlRelativePath()
+    }
+    function GetUrlRelativePath(){
+        var url = document.location.toString();
+        var arrUrl = url.split("//");
+        var start = arrUrl[1].indexOf("/");
+        var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+        if(relUrl.indexOf("?") != -1){
+            relUrl = relUrl.split("?")[0];
+        }
+        return relUrl;
+    }
+</script>
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/iconfont.css">
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/site.css">
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/index.css">
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/red1.css">
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/style.css">
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/article_picture.css">
+    <link rel="stylesheet" href="/_/static/hb293_yun/static/css/article_hang.css">
+    <meta http-equiv="mobile-agent" content="format=html5; url={当前url}">
+    <script type="text/javascript" src="/_/static/hb293_yun/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/_/static/hb293_yun/static/js/article_hang.js"></script>
+    <!--[if IE]>
+    <script>
+        (function() {
+            if (!
+                    /*@cc_on!@*/
+                    0) return;
+            var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+            var i= e.length;
+            while (i--){
+                document.createElement(e[i])
+            }
+        })()
+    </script>
+    <![endif]-->
+</head>
+<body class="body-article">
+
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/sensitive.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/xcConfirm.js"></script>
+<link rel="stylesheet" type="text/css" href="/_/static/hb293_yun/static/css/xcConfirm.css">
+<script src="/_/static/hb293_yun/static/js/spm.js"></script>
+<header class="header">
+    <div class="column">
+        <h1 class="logo">
+            <a href="/{随机字符}/{随机字符}.html" title="{标题}" class="ie6_png32">
+                                <img src="/_/static/hb293_yun/static/picture/6e360ff789137d20276dc7da76d4abdd.png">
+                            </a>
+        </h1>
+        <nav>
+            <ul>
+        <li><a href="/{随机字符}/{随机字符}.html">首页</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">新闻</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">视频</a></li>
+        <li><a href="/{随机字符}/{随机字符}.html">地市新闻</a></li>
+        <li class="all">
+        <a href="/{随机字符}/{随机字符}.html"><span>全部</span><i class="arrow-down"></i></a>
+        <div class="menu-all-box">
+            <dl>
+                                <dt>
+                    <a href="/{随机字符}/{随机字符}.html">首页</a>
+                </dt>
+                                <dt>
+                    <a href="/{随机字符}/{随机字符}.html">新闻</a>
+                </dt>
+                                <dt>
+                    <a href="/{随机字符}/{随机字符}.html">视频</a>
+                </dt>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西卫视</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西二套</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西三套</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西四套</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西五套</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西六套</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西七套</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dd>
+                    <table class="menu-all-item">
+                        <tr>
+                            <th>
+                                <h4>
+                                    <a href="/{随机字符}/{随机字符}.html">江西八套</a>
+                                </h4>
+                            </th>
+                            <td>
+                                <ul>
+                                                                    </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </dd>
+                                <dt>
+                    <a href="/{随机字符}/{随机字符}.html">地市新闻</a>
+                </dt>
+                            </dl>
+        </div>
+    </li>
+    </ul>        </nav>
+        <span>
+            <div id="member-loading" class="login-loading">
+              <img width="20px" height="20px" src="/_/static/hb293_yun/static/picture/loading.gif">
+            </div>
+            <div id="member-login" class="login" style="display:none">
+                <a href="/{随机字符}/{随机字符}.html" class="login-btn">登录</a><br>
+
+<!-- 登录框 -->
+<div class="login-box" id="login-box">
+    <h3 class="title">
+        <span class="icon">
+            <img src="/_/static/hb293_yun/static/picture/042da72b93da950fac6e5551db65df54.png" alt="">
+        </span>
+        登录赣云账号
+        <button class="close" id="close-login-dialog">×</button>
+    </h3>
+
+    <!-- 主体内容 -->
+    <div class="hole-box">
+        <!-- 加载框 -->
+        <div class="login-loading" id="login-loading">
+            <img src="/_/static/hb293_yun/static/picture/loading.gif" class="login-loading-image">
+        </div>
+
+        <!-- 登录框 -->
+        <div class="login-box-ipt-area" id="login-box-ipt" style="display: none;">
+            <div class="form-area">
+                <div class="h20"></div>
+                <div class="form-row ipt-area">
+                    <label for="account" class="read-only">邮箱/手机号</label>
+                    <span class="icon icon-account"></span>
+                    <input type="text" class="ipt-txt account" id="account" autocomplete="off" placeholder="邮箱/手机号">
+                </div>
+                <div class="h20"></div>
+                <div class="form-row ipt-area">
+                    <label for="password" class="read-only">密码</label>
+                    <span class="icon icon-password"></span>
+                    <input type="password" class="ipt-txt password" id="password" autocomplete="off" placeholder="密码">
+                </div>
+                <div class="h20"></div>
+                <div class="form-row ipt-area" id="captcha-box">
+                    <label for="password" class="read-only">验证码</label>
+                    <span class="icon icon-password"></span>
+                    <input type="text" class="ipt-txt captcha" id="captcha" autocomplete="off" placeholder="验证码">
+                    <span class="captcha-result" id="captcha-result"></span>
+                    <img src="" class="captcha-image" id="captcha-image" alt="">
+                </div>
+                <div class="h20" id="captcha-box-hr"></div>
+                <div class="chk-area">
+                    <label class="remember-area elem-text">
+                        <input type="checkbox" id="remember" class="ipt-chk">
+                        下次自动登录
+                    </label>
+                    <a href="/{随机字符}/{随机字符}.html" class="elem-text">忘记密码？</a>
+                </div>
+                <div class="h20"></div>
+                <div class="btn-area">
+                    <p class="login-submit submit" id="submit">登录</p>
+                    <p class="login-submit loading" id="loading"><i class="fa fa-spinner fa-spin"></i></p>
+                </div>
+                <div class="h20"></div>
+                <div class="txt-area">
+                    <p class="elem-text regist">还没账号？<a href="/{随机字符}/{随机字符}.html">立即注册</a></p>
+                </div>
+            </div>
+            <!--无外网则隐藏-云设置可设置-->
+            <div class="social-login">
+                <span class="text-title">其它登录方式</span>
+                <div class="social-btns">
+                    <a href="/{随机字符}/{随机字符}.html" class="icon icon-qq">QQ登录</a>
+                    <a href="/{随机字符}/{随机字符}.html" class="icon icon-sina">新浪登录</a>
+                    <a href="/{随机字符}/{随机字符}.html" class="icon icon-wechat">微信登录</a>
+                </div>
+            </div>
+                    </div>
+
+        <!-- 快速登录 -->
+        <div class="login-box-quick-area" id="login-quick-box" style="display: none;">
+            <div class="avatar">
+                <img src="/_/static/hb293_yun/static/picture/default.png" id="quick-image" alt="">
+            </div>
+            <p class="user-account" id="quick-nickname"></p>
+            <p class="desc">点击头像快速登录</p>
+            <div class="switch-btn">
+                <a href="/{随机字符}/{随机字符}.html" id="switch-account">切换账号</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var isLogined = false,
+        oauthConfig = {
+            'mode' : 'public',
+            'appUrl' : 'https://app.yun.jxntv.cn', // APP站点的URL
+            'noticeUrl' : '//pc.yun.jxntv.cn/index/login/notice', // 登录成功后，通知本站点登录的URL
+            'siteid' : '10001'
+        },
+         key = "e9865ba12307c4df",  // 密码加密的公钥
+         iv = "e9865ba12307c4df"; // 密码加密的公钥偏移量
+</script>
+<script src="/_/static/hb293_yun/static/js/aes.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/ie-placeholder.min.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/dialog.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/dialog-modal.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/oauth.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/member.js"></script>
+            </div>
+            <div id="member-user" class="user" style="display:none">
+                <div class="thumb-area">
+        <img src="/_/static/hb293_yun/static/picture/default.png" alt="" class="user-thumb">
+        <i class="down-tag"></i>
+</div>
+<div class="toggle-menu logined">
+    <span class="rotate-tag"></span>
+    <ul class="user-options">
+        <li>
+            <a href="/{随机字符}/{随机字符}.html">
+                <i class="user-icon icon-user"></i>
+                <span>个人中心</span>
+            </a>
+        </li>
+        		<li>
+			<!-- 判断地址 -->
+            <a target="_blank" title="赣云入驻号" href="/{随机字符}/{随机字符}.html">
+                <i class="user-icon icon-ctmedia"></i>
+                <span>赣云入驻号</span>
+            </a>
+        </li>
+                <!-- /* */-->
+        <li>
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                <i class="user-icon icon-contribution"></i>
+                <span>我的投稿</span>
+            </a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机字符}.html" target="_blank">
+                <i class="user-icon icon-setting"></i>
+                <span>云账号设置</span>
+            </a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机字符}.html" id="logout-btn">
+                <i class="user-icon icon-logout"></i>
+                <span>退出登录</span>
+            </a>
+        </li>
+    </ul>
+</div>
+            </div>
+        </span>
+    </div>
+    <input type="hidden" name="alias" value="menu48" id="alias">
+</header>
+<div class="column article mar-t-25 pos-r ov_v">
+    <div class="left-cont">
+        <!-- 文章主体 -->
+        <article class="article-main">
+            <h1 class="article-title">{关键词1}{随机后缀}{新闻网标题} </h1>
+            <h3></h3>
+            <div class="article-infos">
+                                <time class="date">{今日时间}</time>
+                                <span class="source">
+                    <a href="/{随机字符}/{随机字符}.html" target="_blank">{随机关键词2}</a>
+                </span>
+                                <span class="editors" href="/{随机字符}/{随机字符}.html"></span>
+                <span class="comment-box"><a href="#comment"><em></em></a></span>
+                <a href="#SOHUCS" class="comment-count"><span id="sourceId::709720" class="cy_cmt_count">0</span></a>
+            </div>
+            <div class="article-content">
+                
+                <div id="content_size">
+                <p style="margin-top: 1em; margin-bottom: 1em; line-height: 1.33; font-size: 18px; text-indent: 2em; text-align: justify;">{关键词1}{句子}</p>
+<p style="text-align:center"><em style="text-indent: 0px;"></em></p>
+<p style="text-align: center;"><img src="{随机图片}" data-origin-src="{随机图片}" data-mce-attachid="5239729" data-mce-alias="7facfb2377c2e662670fa765c1d70ea3_1681642256285010702_w.jpg.jpg"></p>
+<p style="text-align:center"><em style="text-indent: 0px;"></em><br></p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 1.33; font-size: 18px; text-indent: 2em; text-align: center;"><em style="text-indent: 0px;"></em></p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 1.33; font-size: 18px; text-indent: 2em; text-align: justify;">{句子}{关键词1}</p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 1.33; font-size: 18px; text-indent: 2em; text-align: justify;">{句子}{关键词1}</p>
+<p style="margin-top: 1em; margin-bottom: 1em; line-height: 1.33; font-size: 18px; text-indent: 2em; text-align: justify;"> {关键词1}{句子}</p>
+                                </div>
+
+                            </div>
+            
+            <div class="article">
+                <!-- 文章投票挂件 -->
+                <!--投票-->
+<!--关联投票链接-->
+<!--关联专题链接-->
+<!--关联活动报名链接-->
+<!--关联视频链接-->
+            </div>
+        </article>
+
+        <!-- 文章附件 -->
+        
+        <!-- 分享 -->
+        <!--无外网则隐藏-云设置可设置-->
+<div class="sharebox" data-contentid="709720">
+    <div class="f-l ">
+        <a href="javascript:digg.set('709720', 'support');" class="digg" id="support"><i class="digg-icon"></i>点赞 0</a>
+                <a href="javascript:longWeibo('709720');" class="weibo">发长微博</a>
+            </div>
+    <div class="f-r baidu">
+        <div class="bdsharebuttonbox">
+            <a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a>
+            <a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a>
+            <a title="分享到QQ好友" href="#" class="bds_sqq" data-cmd="sqq"></a>
+            <a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a>
+            <a href="#" class="bds_more" data-cmd="more"></a></div>
+    
+    </div>
+</div>
+<div class="hr-10"></div>
+
+        <!-- 相关阅读 -->
+        <!--相关阅读-->
+<div class="relatedread panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">相关阅读</h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+                <li>
+            <a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{关键词1}</a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a>
+        </li>
+        <li>
+            <a href="/{随机字符}/{随机字符}.html" target="_blank" title="{标题}">{标题}</a>
+        </li>
+            </ul>
+  </div>
+</div>
+<script>
+    $(".relatedread.panel li a").each(function(){
+        var title= $(this).text();
+        if(title.length> 86){
+            $(this).text(title.substring(0,85)+"...");
+        }
+    })
+</script>
+
+        <!-- 评论 -->
+        <!--无外网则隐藏-云设置可设置-->
+<link rel="stylesheet" href="/_/static/hb293_yun/static/css/comment_system.css">
+<div class="comment_system">
+    <div class="form">
+        <div class="username hide" id="js-comment-username"></div>
+        <div class="user-img hide" id="js-comment-userimg">
+            <img src="/_/static/hb293_yun/static/picture/default.png">
+        </div>
+        <div class="user-login-btn" id="js-comment-login-btn">登录</div>
+        <div class="user-boder"></div>
+        <textarea placeholder="来说两句吧..." maxlength="200"></textarea>
+    </div>
+    <div class="form-btn">
+        <div class="submit-btn ">评论一下</div>
+        <div class="submit-loading hide"></div>
+    </div>
+    <div class="comment-title">
+        <span class="text">评论</span>
+        <span class="comment-number hide">
+            <span class="font-b num">0</span>人参与,<span class="font-b comment-num">0</span>条评论
+        </span>
+    </div>
+    <div class="empty-text hide">还没有评论，快来抢沙发吧！</div>
+    <div class="comment-list">
+        <div class="list-title hide">最热评论</div>
+        <div class="list-content" id="js-comment-list-hot">
+
+        </div>
+        <div class="list-title hide">最新评论</div>
+        <div class="list-content" id="js-comment-list-new">
+
+        </div>
+    </div>
+    <div class="load-more hide">
+        已有<em class="font-b num">0</em>人参与，点击查看更多精彩评论
+    </div>
+
+
+
+    <div class="remodal remodal-captcha" id="modal-captcha" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+        <h3 class="title">
+            请输入验证码
+            <button class="remodal-close remodal-close-message" id="remodal-close-captcha">×</button>
+        </h3>
+
+        <div class="captcha-content">
+            <span class="captcha-lock"></span>
+            <div class="captcha-image"><img class="captcha-image" id="captcha-image"></div>
+            <div class="captcha-icon" id="captcha-icon"></div>
+            <input type="text" class="captcha-txt" id="captcha-value" placeholder="验证码">
+        </div>
+
+        <div class="captcha-buttons">
+            <a href="javascript: void(0);" class="captcha-btn" id="captcha-confirm">确定</a>
+            <a href="javascript: void(0);" class="captcha-btn" id="captcha-cancel">取消</a>
+        </div>
+    </div>
+
+
+    <!-- 楼层单个模板-->
+    <script type="text/html" id="js-comment-list-floor-item-html">
+        <div class="floor">
+            <span class="comment-info">
+                <div class="username"></div>
+                <div class="time"></div>
+            </span>
+            <div class="text"></div>
+            <div class="btn-list clear-both">
+                <div class="flag">举报</div>
+                <div class="reply-btn">回复</div>
+                <div class="del-btn">删除</div>
+                <div class="ding"></div>
+            </div>
+        </div>
+    </script>
+    <!-- 列表单个模板-->
+    <script type="text/html" id="js-comment-list-item-html">
+        <div class="item">
+            <img class="user-img" src="">
+            <div class="comment-content">
+                <span class="comment-info">
+                    <span class="comment-user">
+                        <div class="username"></div>
+                        <div class="ipaddress"></div>
+                    </span>
+
+                    <div class="time"></div>
+                </span>
+                <div class="text"></div>
+                <div class="btn-list clear-both">
+                    <div class="flag">举报</div>
+                    <div class="reply-btn">回复</div>
+                    <div class="del-btn">删除</div>
+                    <div class="ding"></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!-- 评论表单模板-->
+    <script type="text/html" id="js-comment-form-html">
+        <div class="form-box">
+            <div class="form">
+                <textarea placeholder="来说两句吧..." maxlength="200"></textarea>
+            </div>
+            <div class="form-btn">
+                <div class="submit-btn">评论一下</div>
+                <div class="submit-loading hide"></div>
+            </div>
+        </div>
+
+    </script>
+
+</div>
+
+<script>
+    var comment = {
+        "contentid":"709720",
+        "assets":"https://res.yun.jxntv.cn/t/common/pc/1/assets/",
+        "resource":"https://res.yun.jxntv.cn",
+        "login":"1",//是否需要登录
+        "vf_code":"0",//是否需要验证码
+        "appid":"1"
+    };
+</script>
+<script src="/_/static/hb293_yun/static/js/comment_system.js"></script>
+
+    </div>
+    <!-- 右侧主体 -->
+    <aside class="right-cont">
+      
+<div>
+    <div>
+              
+        
+            </div>
+    <div>
+                <div>
+         
+        </div>
+                <div>
+                        <div>
+                <div>
+                </div>
+            </div>
+    
+                    </div>
+    </div>
+</div>
+<div class="clear"></div>
+<style>
+    .app-2code:before{
+        content: " ";
+        background: url("{当前url}") no-repeat;
+        background-size: 30px 30px;
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -13px;
+        margin-top: -13px;
+        border-radius: 3px;
+    }
+</style>
+
+<section class="rmwz hide-bad-img ov mar-t-20">
+    <div class="mod-title1">
+        <h2>推荐文章</h2>
+    </div>
+    <div class="ov">
+        <ul class="pic-list">
+                        <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+
+            <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{关键词1}</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+            <li>
+                <div class="pic-summary">
+                    <a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">
+                        <img width="80" height="60" class="img" src="{随机图片}" alt="{随机关键词}" title="{标题}"></a>
+                    <p class="summary"><a href="/{随机字符}/{随机字符}.html" title="{标题}" target="_blank">{标题}</a></p>
+                </div>
+            </li>
+                    </ul>
+    </div>
+</section>    </aside>
+</div>
+<div class="hr-10"></div>
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="column m-footer">
+        <span class="copyright">{关键词1} 版权所有 Copyright © {年} {域名库}. All Rights Reserved</span><span class="icp">赣ICP备{随机8数字}号</span>        <span class="powerby">授权信息</span></div>
+</footer>
+<!-- Cmstop pv 统计代码，勿删 -->
+<script src="/_/static/hb293_yun/static/js/wapreport.js"></script>
+
+<script src="/_/static/hb293_yun/static/js/spm.js"></script>
+
+
+<script id="longweibo-template" type="text/template">
+    <div class="lw-dialog">
+        <div class="lw-img-outter">
+            <div class="lw-img"><p><img class="loading" src="https://res.yun.jxntv.cn/assets/images/loading.gif"/></p></div>
+        </div>
+                <div class="lw-button-panel">
+            <a href="javascript:longWeiboSina('7项国际级赛事 今年江西将首批举办241项省级以上体育赛事活动','709720');" class="weibo"><div class="lw-sina-button f-fl f-csp"></div></a>
+            <a href="javascript:longWeiboTencent('7项国际级赛事 今年江西将首批举办241项省级以上体育赛事活动');" class="weibo"><div class="lw-tencent-button f-fr f-csp"></div></a>
+        </div>
+    </div>
+</script>
+
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/jquery.corner.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/qrcode.min.js"></script>
+<link rel="stylesheet" href="/_/static/hb293_yun/static/css/style1.css">
+<script src="/_/static/hb293_yun/static/js/dialog1.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/common.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/article.js"></script>
+<script src="/_/static/hb293_yun/static/js/jquery.jplayer.min.js"></script>
+<script src="/_/static/hb293_yun/static/js/myAudio.js"></script>
+<script type="text/javascript" src="/_/static/hb293_yun/static/js/article_picture.js"></script>
+<style>
+    .flagbox .adflag{width: 24px !important;}
+</style>
+<script>
+    $.get('https://app.yun.jxntv.cn/poster/content/article', {siteid: 10001}, function (res){
+        if(res.state == true) {
+            if(res.data.preg) {
+                var newhtml = $("#content_size").html().replace(/>{1}([ \f\r\t\n]*)<{1}/ig, '><');
+                let preg = eval(res.data.preg);
+                newhtml = newhtml.replace(preg, '');
+                $("#content_size").html(res.data.content + newhtml);
+            } else {
+                $("#content_size").prepend(res.data.content);
+            }
+        }
+    });
+</script>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a</div>	
+</body>
+</html>

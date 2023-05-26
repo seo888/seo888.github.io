@@ -1,0 +1,61 @@
+/*reset.css base on 960gs */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,dialog,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,html,i,iframe,img,ins,kbd,label,legend,li,main,mark,menu,meter,nav,object,ol,output,p,pre,progress,q,rp,rt,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,xmp,input,textarea{border:0;font-size:100%;margin:0;padding:0}html,body{}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}b,strong{font-weight:700}img{color:transparent;font-size:0;vertical-align:middle;-ms-interpolation-mode:bicubic}ol,ul{list-style:none}li{display:list-item}table{border-collapse:collapse;border-spacing:0}q{quotes:none}q:before,q:after{content:none}sub,sup,small{font-size:75%}sub,sup{line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}svg{overflow:hidden}
+
+.clear{clear:both; height:0px; font-size:0px; line-height:0px; overflow:hidden;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+* html .clearfix {height: 1%;}
+.clearfix {display:inline-block;}
+.clearfix {display:block;}
+
+
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:visited{}
+
+
+.mt10{margin-top:10px;} .mt15{margin-top:15px;} .mt20{margin-top:20px;}
+.hidden{display:none;} .show{display:block;} .access{position:absolute;left:-9999em;top:0;}
+.fl{float:left;} .fr{float:right;}
+.align-right{text-align:right;}
+.overflow{overflow:hidden;width:100%;}
+
+
+h1.heading{font-size:18px;line-height:36px;margin:20px 0 10px;}
+/*.text, .textarea{border:1px solid rgb(175, 175, 175);;box-shadow:inset 0 2px 2px rgba(213,213,213, 0.5);border-radius:3px;color:#333;background:#FFF;padding:5px 6px;height:18px;line-height:18px;outline:none;font-size:14px;}
+.error-field{border-color:red;}
+.text:focus, .textarea:focus{border-color:#51a7e8;box-shadow:inset 0 1px 2px rgba(0,0,0,0.075),0 0 5px rgba(81,167,232,0.5)}
+.textarea{height:60px;overflow-x:hidden;overflow-y:auto;}
+.submit{width:110px;height:30px;background:#6194d7;border:none;border-bottom: 3px solid #4e76ab;box-shadow:0 3px 0 #dde0e4;text-align:center;line-height:30px;color:#fff;font-size:14px;cursor:pointer;border-radius: 5px;margin:0 0 5px;}
+.submit:active{}
+.no-radius-shadow{border-radius:0;box-shadow:none;}*/
+
+
+/*dialog*/
+/**********************************dialog*******************/
+.ui-dialog-overlay{position:fixed;top:0;left:0;width:100%;height:100%;z-index:10009;background:#000;opacity:.5;filter:alpha(opacity=50);cursor:pointer;}
+.ui-dialog-box{position:fixed;z-index:10010;left:50%;top:50%;background:#555;padding:5px;border-radius:5px;width:460px;margin-left:-235px}
+.ui-dialog-panel{position:relative;background:#FEFEFE;width:100%;overflow:hidden;}
+.ui-dialog-title{background:#005EAC;line-height:40px;padding:0 10px;color:#FFF;font-size:16px;font-weight:700;height:40px;}
+.ui-dialog-main{font-size:14px;padding:20px 10px 30px;color:#004276;line-height:26px;}
+.ui-dialog-close{position:absolute;color:rgb(177, 177, 177);top:0;right:0;width:25px;height:30px;overflow:hidden;font-family: 'Microsoft Yahei', Arial, Helvetica, sans-serif;font-size: 26px;font-weight:700;}
+.ui-dialog-confirm{background:rgb(255, 255, 225);border-top:1px solid #DDD;height:30px;line-height:24px;padding:5px 10px 0;cursor:pointer;text-align:right;}
+.ui-dialog-confirm .ui-dialog-timer{float:left;font-size:12px;color:#999;padding:3px 0 0;}
+.ui-dialog-confirm .ui-btn{float:right;color:#004276;text-decoration:none;font-size:14px;}
+.ui-dialog-close:hover{text-decoration:none;color:rgb(214,214,214);}
+.ui-info{height:26px;line-height:24px;}
+
+
+/*info*/
+.info-message{position:fixed;border-radius:5px;width:300px;padding:5px 10px 3px;color:#FFF;font-size:12px;left:50%;margin-left:-160px;cursor:pointer;background:#34495e;}
+.info-message-success{background:green;border:1px solid darkgreen;}
+.info-message-warning{background:#f4d03f;border:1px solid #f1c40f}.info-message-error{background: #C00;}
+.info-message-top{top:100px;} .info-message-middle{top:48%;}.info-message-bottom{bottom:80px;}
+.info-message .icon{float:left;width:40px;height:34px;background:url(http://www.fjtv.net/t/1/14/images/appbar24.png?v=20201031151012) no-repeat;}
+.info-message-success .icon{}
+.info-message-warning .icon{background-position: 0 -84px}
+.info-message-error .icon{background-position: 0 -41px}
+.info-main{margin-left:50px;line-height:18px;padding:5px 0 0;}
+.nopadding .info-main{padding:0;}
+
+/*dialog info ie6*/
+.info-message, .ui-dialog-box, .ui-dialog-overlay, .toTop{_position:absolute;}

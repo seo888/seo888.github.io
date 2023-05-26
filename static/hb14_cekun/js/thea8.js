@@ -1,0 +1,1 @@
+document.write("<a href='/e/public/ClickAd?adid=8' target=_blank><img src='http://img.cekun.com/d/file/2023/02-19/be3a2734349a5fa475d4effd55229db4.jpg' border=0 width='178' height='80' alt=''></a>");

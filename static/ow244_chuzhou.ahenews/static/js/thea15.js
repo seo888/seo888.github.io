@@ -1,0 +1,1 @@
+document.write("<a href='javascript:;' target=_blank><img src='/d/file/2020-07-30/b1c05cccedef788a7f885066f2c40366.jpg' border=0 width='626' height='66' alt=''></a>");

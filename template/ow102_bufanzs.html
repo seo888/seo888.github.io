@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{自定义标题}</title>
+<meta name="keywords" content="{关键词1}" />
+<meta name="description" content="{自定义描述}">
+<link href="/_/static/ow102_bufanzs/static/css/tech_list.css" rel="stylesheet" type="text/css">
+<link href="/_/static/ow102_bufanzs/static/css/share.css" rel="stylesheet" type="text/css">
+<link href="/_/static/ow102_bufanzs/static/css/common.css" rel="stylesheet" type="text/css">
+<link href="/_/static/ow102_bufanzs/tatic/css/news_com.css" rel="stylesheet" type="text/css">
+<script src="/_/static/ow102_bufanzs/static/js/tab.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/jscript" src="/_/static/ow102_bufanzs/static/js/jquery-1.7.2.min.js"></script>
+<script language="javascript" type="text/jscript" src="/_/static/ow102_bufanzs/static/js/communal.js"></script>
+<script language="javascript">
+// doZoom
+function doZoom(size)
+{
+	var f14 =document.getElementById('font14');
+	var f16 =document.getElementById('font16');
+	var f12 =document.getElementById('font12');
+	document.getElementById('text').style.fontSize=size+'px';
+	var op=document.getElementById('text').getElementsByTagName("p");
+	if(size==14){
+		f14.className="cur";
+		f16.className="";
+	}else if(size==16){
+		f14.className="";
+		f16.className="cur";
+	}
+	for(var i=0;i<op.length;i++){
+		op[i].style.fontSize=size+'px';
+	}
+}
+
+//回到顶部
+$(function() {
+    var $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body")).click(function() {
+            $("html, body").animate({ scrollTop: 0 }, 1000);
+    }), $backToTopFun = function() {
+        var st = $(document).scrollTop(), winh = $(window).height();
+        (st > 0)? $backToTopEle.show(): $backToTopEle.hide();    
+        //IE6下的定位
+        if (!window.XMLHttpRequest) {
+            $backToTopEle.css("top", st + winh - 166);    
+        }
+    };
+    $(window).bind("scroll", $backToTopFun);
+    $(function() { $backToTopFun(); });
+})();
+</script>
+</head>
+
+<body>
+<script src="/_/static/ow102_bufanzs/static/js/checkwap.js" language="javascript"></script>
+<div id="con_top">
+  <div class="main-nav">
+    <ul class="nav" id="site-nav">
+    <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="网站首页">首页</a></li>
+    
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="美食">美食</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="娱乐">娱乐</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="体育">体育</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="财经">财经</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="教育">教育</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="汽车">汽车</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="三农">三农</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="区块链">区块链</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="电商">电商</a></li>
+     
+     <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="新闻">新闻</a></li>
+     
+     
+       
+  </ul></div>
+</div>
+<script src="/_/static/ow102_bufanzs/static/js/thea4.js"></script>
+<div class="clear"></div>
+<div class="conbarbg">
+  <div class="conbar">
+    <div class="fl">
+      <p class="conlogo fl"><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img src="/_/static/ow102_bufanzs/static/picture/news_logo.gif"></a></p>
+      <div class="connav fl">您当前的位置：<a href="/{随机字符}/{随机数字}_{随机数字}.html">主页</a> > <a href="/{随机字符}/{随机数字}_{随机数字}.html">{关键词1}</a> </div>
+    </div>
+    
+  </div>
+</div>
+<div class="clear"></div>
+<!--top end-->
+<div class="content_ny">
+  <div class="left_list fl">
+    <div class="artical">
+      <div class="ep-content" id="js-epContent" style="position: relative;">
+        <div class="ep-content-bg clearfix">
+          <div class="ep-content-main">
+            <h1 id="h1title" class="ep-h1">{关键词1}{随机后缀}{新闻网标题}</h1>
+            <div class="line"></div>
+            <div class="clearfix">
+              <div class="ep-info cDGray">
+                <div class="left fl">
+                  <div class="fl col6">{当前时间}　来源: <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank">{关键词1} </a>　作者: {人物名称}</div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="bd">
+      <div class="summary"></div>
+      <div id="text" class="text"> 
+<p>{新闻网内容}。</p>
+
+        <div><a href="/{随机字符}/{随机数字}_{随机数字}.html">{人物名称}</a>编辑</div>
+        <!-- publish_helper_end -->
+        <p align="center" class="page"></p>
+        <p class="editorSign"></p>
+       
+      </div>
+    </div>
+    <!--div class="reTopics">相关阅读<span></span></div>
+    <div>
+      <div class="blueline fl"></div>
+      <div class="btmline fl"></div>
+    </div>
+    <div class="clear"></div>
+    <div>
+      <div class="listText fl">
+        <ul>
+                  </ul>
+      </div>
+      <div class="listSearch fr">
+        <div class="stitle">资讯热搜</div>
+        <a href='/e/search/result/?searchid=16' target=_blank>南海</a> <a href='/e/search/result/?searchid=17' target=_blank>菲律宾</a> <a href='/e/search/result/?searchid=101' target=_blank>dir</a> <a href='/e/search/result/?searchid=50' target=_blank>李晋忠</a><br><a href='/e/search/result/?searchid=219' target=_blank>结婚</a> <a href='/e/search/result/?searchid=778' target=_blank>巴基斯坦</a> <a href='/e/search/result/?searchid=218' target=_blank>两会</a> <a href='/e/search/result/?searchid=265' target=_blank>云南</a><br><a href='/e/search/result/?searchid=18' target=_blank>快讯</a> <a href='/e/search/result/?searchid=221' target=_blank>婚姻</a> <a href='/e/search/result/?searchid=214' target=_blank>股票</a> <a href='/e/search/result/?searchid=597' target=_blank>纳米</a><br><a href='/e/search/result/?searchid=409' target=_blank>区块链</a> <a href='/e/search/result/?searchid=376' target=_blank>微商</a> <a href='/e/search/result/?searchid=20' target=_blank>仁爱礁</a> <br>
+      </div>
+    </div-->
+    <div class="clear"></div>
+
+
+    <div class="clear"></div>
+    <!--评论 end -->
+    <div class="reTopics">热门推荐</div>
+    <div>
+      <div class="blueline fl"></div>
+      <div class="btmline fl"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="hotpic"> 
+      <ul class="fl">
+        <li class="hotimgys"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img width="146" height="133" src="{随机图片}"></a></li>
+        <li>
+          <p><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{关键词1}{标题}">{关键词1}{标题}</a></p>
+        </li>
+</ul>
+<ul class="fl">
+        <li class="hotimgys"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img width="146" height="133" src="{随机图片}"></a></li>
+        <li>
+          <p><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></p>
+        </li>
+</ul>
+<ul class="fl">
+        <li class="hotimgys"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img width="146" height="133" src="{随机图片}"></a></li>
+        <li>
+          <p><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></p>
+        </li>
+</ul>
+<ul class="fl">
+        <li class="hotimgys"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img width="146" height="133" src="{随机图片}"></a></li>
+        <li>
+          <p><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></p>
+        </li>
+</ul>
+<ul class="fl">
+        <li class="hotimgys"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img width="146" height="133" src="{随机图片}"></a></li>
+        <li>
+          <p><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></p>
+        </li>
+</ul>
+<ul class="fl">
+        <li class="hotimgys"><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank"><img width="146" height="133" src="{随机图片}"></a></li>
+        <li>
+          <p><a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a></p>
+        </li>
+</ul>
+
+ </div>
+  </div>
+  <div class="right_list fl">
+    <div class="ads250">
+
+    <div class="rlnr-s">
+      <div class="rl-tit">最新文章</div>
+      <div class="rl-m">
+        <ul>
+          <li><span class="num1">1</span><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{关键词1}">{关键词1}</a></li>
+
+               </ul>
+      </div>
+    </div>
+    <div class="ad-right-bottom">
+      <div class="ads250"><script src="/_/static/ow102_bufanzs/static/js/thea4.js"></script></div>
+    </div>
+    <div class="rlnr-s pic_s">
+      <div class="rl-tit">资讯图片</div>
+      <div class="tpbd">
+        <div class="le-figure">
+          <div class="pic"> <a href="" target="_blank" class="le-playico2" title="{标题}"><img src="{随机图片}" width="142" height="88"></a> </div>
+        </div>
+        <a href="" target="_blank" title="{标题}">{标题}</a> </div>
+<div class="tpbd">
+        <div class="le-figure">
+          <div class="pic"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="le-playico2" title="{标题}"><img src="{随机图片}" width="142" height="88"></a> </div>
+        </div>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a> </div>
+<div class="tpbd">
+        <div class="le-figure">
+          <div class="pic"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="le-playico2" title="{标题}"><img src="{随机图片}" width="142" height="88"></a> </div>
+        </div>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a> </div>
+<div class="tpbd">
+        <div class="le-figure">
+          <div class="pic"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="le-playico2" title="{标题}"><img src="{随机图片}" width="142" height="88"></a> </div>
+        </div>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a> </div>
+<div class="tpbd">
+        <div class="le-figure">
+          <div class="pic"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="le-playico2" title="{标题}"><img src="{随机图片}" width="142" height="88"></a> </div>
+        </div>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a> </div>
+<div class="tpbd">
+        <div class="le-figure">
+          <div class="pic"> <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" class="le-playico2" title="{标题}"><img src="{随机图片}" width="142" height="88"></a> </div>
+        </div>
+        <a href="/{随机字符}/{随机数字}_{随机数字}.html" target="_blank" title="{标题}">{标题}</a> </div>
+
+          <div class="clear"></div>
+      <ul>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}{关键词1}">{标题}{关键词1}</a></li>
+
+              </ul>
+    </div>
+    <div class="Menubox">
+      <ul>
+        <li id="one1" onmouseover="setTab('one',1,6)" class="hover">资讯</li>
+      </ul>
+    </div>
+    <div class="Contentbox">
+      <div id="con_one_1" class="hover"> <ul>
+        <li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{关键词1}{标题}">{关键词1}{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+<li><a href="" title="{标题}">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+<li><a href="/{随机字符}/{随机数字}_{随机数字}.html" title="{标题}">{标题}</a></li>
+
+                </ul>
+      </div>
+
+ 
+    </div>
+    <!---->
+
+
+<!-- 多条广告如下脚本只需引入一次 -->
+
+ </div>
+ </div>
+  </div> 
+<!--main end-->
+<div class="clear"></div>
+
+<style type="text/css">
+  .nav-bottom{
+    background: #cccccc;
+  }
+</style>
+ <div align="center" style="border-top:1px solid #ebebeb; width:1004px; margin:0 auto; margin-bottom:10px; padding-top:10px;">
+    <table width="100%">
+      <tbody>
+        <tr>
+                 <td><a rel="nofollow" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"></a></td>
+          <td><a href="/{随机字符}/{随机数字}_{随机数字}.html"><img border="0" src="/_/static/ow102_bufanzs/static/picture/121213123123131213.jpg"></a></td>
+          <td><a rel="nofollow" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"> <img width="127" height="47" alt="网络110报警服务" src="/_/static/ow102_bufanzs/static/picture/3b2c106a905318b4cf5efe4dbd797919.gif"></a></td>
+          <td><a rel="nofollow" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"> <img width="127" height="47" alt="不良信息举报中心" src="/_/static/ow102_bufanzs/static/picture/cc70b273e6cd899ac8d5253defa1ee6f.gif"></a></td>
+          <td><a rel="nofollow" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"> <img width="127" height="47" alt="中国文明网传播文明" src="/_/static/ow102_bufanzs/static/picture/5d0d61a0965077ec9f2569e0f569f4a0.gif"></a></td>
+          <td><a rel="nofollow" title="可信评估" target="_blank" href="/{随机字符}/{随机数字}_{随机数字}.html"> <img width="127" height="47" border="0" src="/_/static/ow102_bufanzs/static/picture/pinggu.jpg"></a></td>
+      </tr></tbody>
+    </table>
+  </div>
+  <div class="nav-bottom">
+    <div class="footer"> <span class="text">Copyright © {年} {域名库}<br><a href="/{随机字符}/{随机数字}_{随机数字}.html">关于我们</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">广告服务</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">大记事</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">公司文化</a> | <a href="javascript:vido(0);">公司招聘</a> | <a href="/{随机字符}/{随机数字}_{随机数字}.html">联系我们</a> | <a href="javascript:vido(0);">备案号:</a> | 
+
+
+
+ </span></div>
+  </div>
+
+<!--
+<div class="side-btns-wrap">
+  <div class="hd"><span>选择版块</span></div>
+  <ul id="k">
+
+    <li id="k_headlines"><a href="/zhinen/">美食</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/shuma/">娱乐</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/yingjian/">体育</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/youxi/">财经</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/peijian/">教育</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/qiche/">汽车</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/jiadian/">三农</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/qukuailian/">区块链</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/dianshang/">电商</a><i></i></li>
+ 
+    <li id="k_headlines"><a href="/shouji/">新闻</a><i></i></li>
+    
+  
+
+  </ul>
+  <div class="ft" id="totop"><a  href="."> </a></div>
+</div>
+-->
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+<div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div>
+</body>
+</html>

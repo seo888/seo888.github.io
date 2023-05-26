@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh">
+
+<head>
+
+
+
+
+
+
+
+
+    <meta charset="utf-8">
+    <!--qq share-->
+    <meta itemprop="name" name="keywords" content="{关键词1}">
+
+
+    <meta itemprop="image" content="//res.yjrb.com.cn/public_resource/yjxww/web/public_resource/public/img/icon.ico">
+    <meta name="description" itemprop="description" content="{标题}{标题}{句子}《{关键词1}》{句子}">
+
+    <title class="tb_article_title">{描述}{关键词1}{辅助描述}{随机版本}</title>
+
+
+
+    <meta name="mobileurl" content="//m.yjrb.com.cn/marticles/yaowen/20230318/399939.html" id="mobile_url">
+
+    <script src="/static/ow62_news.yjrb/static/js/weixinLogin.js"></script>
+
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <link rel="icon" type="image/png"
+        href="https://res.yjrb.com.cn/public_resource/yjxww/web/public_resource/public/img/icon.ico">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="阳江新闻网">
+
+    <meta http-equiv="content-security-policy"
+        content="default-src 'self' 'unsafe-inline' 'unsafe-eval' sha256 sha384 sha512 *.yjrb.com.cn *.baidu.com *.bdstatic.com *.qq.com data: gap: blob:">
+    <link rel="apple-touch-icon-precomposed"
+        href="https://res.yjrb.com.cn/public_resource/yjxww/web/public_resource/public/img/icon.ico">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/icon.ico">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+<link rel="canonical" href="http://www.example.com/">
+-->
+    <!-- 公共head -->
+    <link rel="shortcut icon"
+        href="https://res.yjrb.com.cn/public_resource/yjxww/web/public_resource/public/img/icon.ico">
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/amazeui.min.css">
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/swiper.min.css">
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/style.css">
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/img.css">
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/base.css">
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/nep.min.css">
+    <!--[if (gte IE 9)|!(IE)]><!-->
+    <!--<![endif]-->
+    <!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="//res.yjrb.com.cn/public_resource/yjxww/web/public_resource/public/lib/amazeui/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+    <script src="/static/ow62_news.yjrb/static/js/jquery.cookie.js"></script>
+
+
+    <script type="text/javascript">
+        (function (exports) {
+            exports.config = {
+                close_comment: false,
+                close_user_collect: false,
+                clearConsole: true,
+                appManagerServer: "https://app.yjrb.com.cn/apps/am",
+                appManagerSocketServer: "https://app.yjrb.com.cn",
+                publicRoot: "/public_resource/public",
+
+
+                appSiteRootPath: "https://app.yjrb.com.cn/",
+
+
+
+                webSiteRootPath: "{自定义}",
+
+                res_server: "{自定义}",
+                res_server_comment: "https://res.yjrb.com.cn/comment/",
+                res_server_media: "https://res.yjrb.com.cn/media/",
+                res_server_public_resource: "https://res.yjrb.com.cn/public_resource/",
+                res_server_attachment: "https://res.yjrb.com.cn/r/",
+
+                public_root: "//res.yjrb.com.cn/public_resource/yjxww/web/public_resource/public",
+
+                video_res_server: "https://video.yjrb.com.cn/",
+                video_res_server_media: "https://video.yjrb.com.cn/media/",
+
+
+                sys_date: "2023-03-18"
+            };
+
+            exports.htmlUrl = {
+
+                search: "//www.yjrb.com.cn/1960/index.html"
+            };
+
+            exports.utils = (function () {
+
+                function gen_http_url(http_root) {
+                    if (http_root == undefined) {
+                        http_root = "";
+                    }
+                    var url = http_root;
+                    url = url.replace(/\\/g, "/");
+                    //去掉最后一个杠
+                    while (url.length > 0 && url[url.length - 1] == "/") {
+                        url = url.substring(0, url.length - 1);
+                    }
+                    var args = arguments;
+                    var paths = [];
+                    if (args.length > 1) {
+                        for (var i = 1; i < args.length; i++) {
+                            var path = args[i];
+                            if (path == undefined) {
+                                path = "";
+                            }
+                            path = path.replace(/\\/g, "/");
+                            //去掉前后的杠
+                            while (path.length > 0 && path[0] == "/") {
+                                path = path.substring(1, path.length);
+                            }
+                            //去掉最后一个杠
+                            while (path.length > 0 && path[path.length - 1] == "/") {
+                                path = path.substring(0, path.length - 1);
+                            }
+                            if (path.length > 0) {
+                                paths.push(path);
+                            }
+                        }
+                        if (paths.length > 0) {
+                            var pathstr = paths[0];
+                            for (var i = 1; i < paths.length; i++) {
+                                pathstr += "/" + paths[i];
+                            }
+                            if (pathstr.length > 0) {
+                                url += "/" + pathstr;
+                            }
+                        }
+                    }
+                    return url;
+                }
+
+                return {
+                    gen_http_url: gen_http_url
+                }
+            })();
+        })((function () {
+            if (typeof exports === 'undefined') {
+                if (typeof window.tycom === 'undefined') {
+                    window.tycom = {};
+                }
+                return window.tycom;
+            } else {
+                return exports;
+            }
+        })());
+    </script>
+
+    <script src="/static/ow62_news.yjrb/static/js/dayjs.min.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/head_base.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/api_tools.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/api.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/app_manager.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/userinfo.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/public_method.js"></script>
+
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/content.css">
+    <link rel="stylesheet" href="/static/ow62_news.yjrb/static/css/adapter.css">
+    <script type="text/javascript">
+        var _subject_name = "{网站名称}";
+        var _keyword = "";
+        // search
+        var $newJsonPath = "https://app.yjrb.com.cn/" + "comment/story" + idConvertPath('126323') + "126323" + "/new/index.json";
+        var renderNumPath = "https://app.yjrb.com.cn/articles/tj" + idConvertPath('126323') + "126323" + "/index.json";
+    </script>
+    <script>
+        var mobileUrl = null;
+
+
+
+        mobileUrl = "//m.yjrb.com.cn/marticles/yaowen/20230318/399939.html";
+
+    </script>
+    <script src="/static/ow62_news.yjrb/static/js/pc_jump_to_mobile.js"></script>
+    <script src="/static/ow62_news.yjrb/static/js/share.js"></script>
+</head>
+
+<body data-hr="/" data-subjectcode="yaowen" data-id="163378">
+    <!-- 头部开始 -->
+
+
+
+    <script>
+        var search_url = "/1960/index.html";
+    </script>
+
+    <div class="head-box am-hide-sm-only n-head">
+        <div class="head wrap">
+            <div class="logo">
+                <a href="{自定义}">
+                    <img src="/static/ow62_news.yjrb/static/picture/logo.png" alt="">
+                </a>
+                <div class="time">
+                    <p id="c_time"> {年月日} </p>
+                </div>
+            </div>
+            <div class="am-fr">
+                <div class="quick-link am-cf">
+                    <a href="{自定义}" target="_blank">
+                        掌上阳江
+                    </a>
+                    <a href="{自定义}" target="_blank" id="nav_wx">
+                        <div class="qr-list" style="display: none;" id="qr_list">
+                            <p>阳江日报</p>
+                            <p>阳江发布</p>
+                            <p>文明阳江</p>
+                        </div>
+                        微信公众号
+                    </a>
+                    <a href="{自定义}" target="_blank">网上投稿</a>
+                    <a href="{自定义}" target="_blank">官方微博</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-box">
+            <div class="wrap nav">
+                <div class="nav-list">
+                    <a href="{自定义}" target="_blank">阳江新闻</a>
+                    <a href="{自定义}" target="_blank">精品原创</a>
+                    <a href="{自定义}" target="_blank">直播阳江</a>
+                    <a href="{自定义}" target="_blank">江城</a>
+                    <a href="{自定义}" target="_blank">阳东</a>
+                    <a href="{自定义}" target="_blank">阳春</a>
+                    <a href="{自定义}" target="_blank">阳西</a>
+                    <a href="{自定义}" target="_blank">海陵岛</a>
+                    <a href="{自定义}" class="gxq">高新区</a>
+                    <a href="{自定义}" class="bhxq">滨海新区</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="head-box am-show-sm-only">
+        <div class="menu-hd am-cf">
+            <div class="box">
+                <div class="menu-nav-box">
+                    <div class="am-hide-lg-only mini-logo">
+                        <a href="{自定义}" target="_blank">
+                            <img src="/static/ow62_news.yjrb/static/picture/logo.png" alt="">
+                        </a>
+                    </div>
+                    <button class="am-hide-lg-only am-icon-bars mini-btn" id="open_nav"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mini-nav" id="mini_nav">
+        <div class="nav-w cl">
+            <h1><a href="{自定义}" target="_blank"><img src="/static/ow62_news.yjrb/static/picture/logo.png" alt=""></a></h1>
+            <div class="closebtn" id="close_nav">
+                <span class="line line1"></span>
+                <span class="line line3"></span>
+            </div>
+        </div>
+        <ul class="menu-nav">
+            <li><a href="{自定义}" target="_blank">阳江新闻</a></li>
+            <li><a href="{自定义}" target="_blank">精品原创</a></li>
+            <li><a href="{自定义}" target="_blank">直播阳江</a></li>
+            <li><a href="{自定义}" target="_blank">漠阳文化</a></li>
+            <li><a href="{自定义}" target="_blank">发现阳江</a></li>
+            <li><a href="{自定义}" target="_blank">政务专栏</a></li>
+            <li><a href="{自定义}" target="_blank">阳江镜头</a></li>
+            <li><a href="{自定义}" target="_blank">畅游天下</a></li>
+            <li><a href="{自定义}" target="_blank">娱乐</a></li>
+            <li><a href="{自定义}" target="_blank">体育</a></li>
+            <li><a href="{自定义}" target="_blank">财经</a></li>
+            <li><a href="{自定义}" target="_blank">江城</a></li>
+            <li><a href="{自定义}" target="_blank">楼市</a></li>
+            <li><a href="{自定义}" target="_blank">阳东</a></li>
+            <li><a href="{自定义}" target="_blank">健康</a></li>
+            <li><a href="{自定义}" target="_blank">阳春</a></li>
+            <li><a href="{自定义}" target="_blank">教育</a></li>
+            <li><a href="{自定义}" target="_blank">阳西</a></li>
+            <li><a href="{自定义}" target="_blank">商情</a></li>
+            <li><a href="{自定义}" target="_blank">海陵岛</a></li>
+            <li><a href="{自定义}" target="_blank">汽车</a></li>
+            <li><a href="{自定义}" target="_blank">高新区</a></li>
+            <li><a href="{自定义}" target="_blank">数字报</a></li>
+            <li><a href="{自定义}" target="_blank">滨海新区</a></li>
+            <li><a href="{自定义}" target="_blank">计生</a></li>
+            <li>
+                <div class="search">
+                    <div class="am-form-group">
+                        <input type="text" name="keywords" class="keywords" id='mb_search' placeholder="搜索">
+                        <button type="button" class="keywordsbtn am-icon-search" id="mb_searchbtn"></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!-- 头部结束 -->
+
+
+
+    <!-- 精品原创开始 -->
+
+
+
+
+
+    <div class="box page" data-id="163378">
+        <div class="wrap c-head am-fc">
+            <div class="c-path">
+                <ul class="tb_breadcrumb">
+                    <li data-name='home'><a href="{自定义}" target="_blank">{网站名称}</a></li>
+                    <li><a href="{自定义}" target="_blank">{关键词1}</a></li>
+                    <li><a href="{自定义}">正文</a></li>
+                </ul>
+            </div>
+            <div class="c-search am-fc">
+                <div class="search am-fc">
+                    <div class="search am-fr">
+                        <input type="text" class="text" id="search" placeholder="搜索">
+                        <span class="search-btn" id="search_btn"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-head wrap  am-hide-sm-only">
+            <h5>{新闻网标题}</h5>
+
+            <h3 class="sub-tit" title=" ">
+
+            </h3>
+
+            <div class="am-g">
+                <div class="news-edit am-u-sm-12 am-u-md-12 am-u-lg-12">
+                    <span class="time" data-time="{当前时间}">{当前时间}</span>
+                    <span class="source">来源：{网站名称}</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none;">
+            <p class="wx_description"> </p>
+        </div>
+
+
+
+        <div class="am-g main pc_content">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-8 newsbox">
+                <div class="news-hd am-show-sm-only">
+                    <h5>{新闻网标题}</h5>
+
+                    <h3 class="sub-tit" title=" ">
+
+                    </h3>
+
+                    <div class="mb-info">
+                        <div class="info-box">
+                            <span class="source">{网站名称}</span>
+                            <span id="p_time" data-time="{当前时间}" data-formattime="{年月日}"
+                                style="display: none;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <div class="share">
+                        <div class="share-btn bdsharebuttonbox">
+                            <ul>
+                                <li>
+                                    <a href="{自定义}" data-cmd="weixin">
+                                        <img src="/static/ow62_news.yjrb/static/picture/share_weixin.png" alt="" data-cmd="weixin">
+                                        &nbsp;&nbsp;微信
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{自定义}" data-cmd="tsina">
+                                        <img src="/static/ow62_news.yjrb/static/picture/share_weibo.png" alt="" data-cmd="tsina">
+                                        &nbsp;&nbsp;微博
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{自定义}" data-cmd="qzone">
+                                        <img src="/static/ow62_news.yjrb/static/picture/share_qzone.png" alt="" data-cmd="qzone">
+                                        &nbsp;&nbsp;Qzone
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- 分享 -->
+                            <script>window._bd_share_config = {
+                                    "common": {
+                                        "bdSnsKey": {},
+                                        "bdText": "",
+                                        "bdMini": "2",
+                                        "bdPic": "",
+                                        "bdStyle": "0",
+                                        "bdSize": "16"
+                                    }, "share": {}
+                                };
+                            </script>
+                        </div>
+                    </div>
+                    <div class="news-cut">
+                        <div id="c_content">
+                            <p>{句子}</p>
+                            <p>{句子}</p>
+                            <p>{句子}</p>
+                            <p>{句子}</p>
+                            <p>{句子}</p>
+                            <div class="show-more" id="show_more">
+                                <p>
+                                    <span>展开阅读全文</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reader" id="reader" style="display:none;">
+                            <p>阅读数：<span id="reader_num"></span></p>
+                        </div>
+                        <div class="news-foot">
+
+                            <div class="sec c-more" data-length="0" id="relation_sec" style="display: none">
+                                <div class="tit">
+                                    <h4>更多新闻</h4>
+                                </div>
+                                <div class="list" id="relation_list" data-keyword="" data-flagword="">
+
+                                </div>
+                            </div>
+                            <script type="template/text" id="template_relation">
+                            {& list.forEach(function(item,index){ &}
+                            <p>
+                                <a class="am-text-truncate" href="{&=item.htmlUrl&}" target="_blank" title="{&= item.title &}">{&=item.title&}</a>
+                            </p>
+                            {& }) &}
+                        </script>
+
+                            <div class="sec comment" id="c_comment">
+                                <div class="tit">
+                                    <h4>网友评论</h4>
+                                    <a href="#">更多>></a>
+                                </div>
+                                <div class="list" id="comment_list">
+                                    <script type="template/text" id="comment_temp">
+                                    <ul>
+                                        {& if(Array.isArray(items) && items.length>0){ &}
+                                        {& items.forEach(function(item){ &}
+                                        <li>
+                                            <div class="avater">
+                                                <img src="https://app.yjrb.com.cn/{&= item.creator.imgUrl &}" alt="" class="img" onerror="this.src='//res.yjrb.com.cn/public_resource/yjxww/web/public_resource/public/img/avater_default.png'">
+                                            </div>
+                                            <div class="r-box">
+                                                <div class="head">
+                                                    <span class="name">{&= item.creator.name &}</span>
+                                                    <span class="time">{&= item.createTime &}</span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>
+                                                        {&= item.content &}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        {& }) &}
+                                        {& } &}
+                                    </ul>
+                                </script>
+                                </div>
+                                <div class="speech">
+                                    <div class="input">
+                                        <textarea name="comment" id="txt_comment" cols="30" rows="10" class="i-text"
+                                            placeholder="发表评论"></textarea>
+                                    </div>
+                                    <div class="btns">
+                                        <button type="button" class="am-btn am-btn-primary login" id="wc_login">
+                                            登录
+                                        </button>
+                                        <div class="userinfo" id="userinfo" style='display:none;'>
+                                            <span class="am-text-truncate" id="user_name"></span>
+                                            <a href="{自定义}" id="logout">退出</a>
+                                        </div>
+
+                                        <button class="submit" id="submit_comment">发表</button>
+                                    </div>
+                                    <p class="tips" style="display:none;" id="tips">
+                                        <span class="am-text-sm am-text-danger"></span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- 为您推荐开始 -->
+
+
+
+                            <div class="sec recommend">
+                                <div class="tit">
+                                    <h4>为您推荐</h4>
+                                </div>
+                                <div class="list">
+                                    <div data-am-widget="tabs" class="am-tabs am-tabs-default tj-tabs">
+                                        <ul class="am-tabs-nav am-cf tj-menu">
+                                            <li class="am-active"><a href="{自定义}">旅游</a></li>
+                                            <li class=""><a href="{自定义}">娱乐</a></li>
+                                            <li class=""><a href="{自定义}">文化</a></li>
+                                            <li class=""><a href="{自定义}">楼市</a></li>
+                                            <li class=""><a href="{自定义}">健康</a></li>
+                                        </ul>
+                                        <div class="am-tabs-bd tj-bd">
+                                            <div data-tab-panel-0="" class="am-tab-panel  am-active">
+
+
+                                                <ul>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+
+
+                                            </div>
+                                            <div data-tab-panel-1="" class="am-tab-panel ">
+
+
+                                                <ul>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                            <div data-tab-panel-2="" class="am-tab-panel ">
+
+
+                                                <ul>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                            <div data-tab-panel-3="" class="am-tab-panel ">
+
+
+                                                <ul>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                            <div data-tab-panel-4="" class="am-tab-panel ">
+
+
+                                                <ul>
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="img">
+                                                                <img src="{随机图片}" alt="">
+                                                            </div>
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+
+
+
+                                                    <li>
+
+                                                        <a href="{自定义}" target="_blank">
+
+                                                            <div class="r-box">
+                                                                <h5 class="title" title="{标题}">{标题}</h5>
+                                                                <div class="desc am-cf">
+                                                                    <span class="time">{当前时间}</span>
+
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-4 news-list-side">
+                <!-- 右侧内容 -->
+                <div class="news-sidebar">
+                    <!-- 点击排行1 -->
+
+
+
+
+
+
+                    <div class="am-tabs pvbox" data-am-tabs="">
+                        <ul class="am-tabs-nav am-nav am-nav-tabs">
+                            <li class="am-active"><a href="#tdjph">点击排行</a></li>
+                            <li><a href="{自定义}">最新发布</a></li>
+                        </ul>
+                        <div class="am-tabs-bd">
+                            <div class="am-tab-panel am-fade am-active am-in" id="tdjph">
+                                <div class="news-cut-right news-cut-sort" id="sort-container">
+
+                                </div>
+                                <script type="text/javascript">
+                                    var ph_url = "{当前url}";
+                                    $("#sort-container").load(ph_url);
+                                </script>
+                            </div>
+
+
+
+
+                            <div class="am-tab-panel am-fade" id="tzxfb">
+                                <div class="content">
+                                    <ul>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+
+
+
+                                        <li class="am-text-truncate">
+                                            <a href="{自定义}" target="_blank" title="{标题}">
+                                                {标题}
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="sec jctj">
+                        <div class="tit">
+                            <h4>精彩推荐</h4>
+                        </div>
+                        <div class="list">
+                            <ul class="am-avg-md-2 am-avg-sm-2">
+
+
+
+
+                                <li>
+                                    <a href="{自定义}" target="_blank">
+
+                                        <img src="{随机图片}" alt="{标题}" title="{标题}">
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li>
+                                    <a href="{自定义}" target="_blank">
+
+                                        <img src="{随机图片}" alt="{标题}" title="{标题}">
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+
+
+                                <li>
+                                    <a href="{自定义}" target="_blank">
+
+                                        <img src="{随机图片}" alt="{标题}" title="{标题}">
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+
+
+
+                                <li>
+                                    <a href="{自定义}" target="_blank">
+
+                                        <img src="{随机图片}" alt="{标题}" title="{标题}">
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="sec gzh">
+                        <div class="tit">
+                            <h4>公众号热文</h4>
+                        </div>
+                        <div class="list">
+                            <ul>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+
+
+
+                                <li class="am-text-truncate">
+                                    <a class="am-text-truncate" href="{自定义}" target="_blank"
+                                        title="{标题}">
+                                        {标题}
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="sec sp">
+                        <div class="tit">
+                            <h4>视频推荐</h4>
+                        </div>
+                        <div class="list">
+                            <ul>
+
+
+
+
+
+                                <li>
+
+                                    <a href="{自定义}" target="_blank" title="{标题}">
+
+
+                                        <img src="{随机图片}" alt="{标题}"
+                                            class="img" title="{标题}">
+                                        <img src="/static/ow62_news.yjrb/static/picture/play.png" alt="" class="tag">
+
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+
+
+
+
+                                <li>
+
+                                    <a href="{自定义}" target="_blank" title="{标题}">
+
+
+                                        <img src="{随机图片}" alt="{标题}"
+                                            class="img" title="{标题}">
+                                        <img src="/static/ow62_news.yjrb/static/picture/play.png" alt="" class="tag">
+
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+
+
+
+
+                                <li>
+
+                                    <a href="{自定义}" target="_blank" title="{标题}">
+
+
+                                        <img src="{随机图片}" alt="{标题}"
+                                            class="img" title="{标题}">
+                                        <img src="/static/ow62_news.yjrb/static/picture/play.png" alt="" class="tag">
+
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+
+
+
+
+                                <li>
+
+                                    <a href="{自定义}" target="_blank" title="{标题}">
+
+
+                                        <img src="{随机图片}" alt="{标题}"
+                                            class="img" title="{标题}">
+                                        <img src="/static/ow62_news.yjrb/static/picture/play.png" alt="" class="tag">
+
+                                        <p title="{标题}">
+                                            {标题}
+                                        </p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="sec zttg">
+                        <div class="tit">
+                            <h4>专题推广</h4>
+                        </div>
+                        <div class="list">
+
+
+
+
+
+                            <a href="{自定义}" target="_blank" data-list="outerlink">
+                                <img src="{随机图片}" alt="" title="{随机关键词}">
+                            </a>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-alert" tabindex="-1" id="attention-alert">
+        <div class="arrow">
+            <i></i>
+        </div>
+        <div class="know-text">点击右上角打开分享到朋友圈或者分享给朋友</div>
+        <div class="know-btn">知道了</div>
+    </div>
+    <div class="am-modal am-modal-alert" tabindex="-1" id="my-login">
+        <div class="am-modal-dialog">
+            <div class="wc-login">
+                <img src="static/picture/wc_qr.jpg" alt="">
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn">取消</span>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+
+
+    <div id="Backtop">
+        <button class="go-top">
+            <i class="am-icon-chevron-up"></i>
+        </button>
+    </div>
+    <div class="m-footer" style="padding-top: 20px;">
+        <div id="foot">
+            <div class="blxxjb">
+                <a href="{自定义}">
+                    <img src="/static/ow62_news.yjrb/static/picture/blxxjbzx.jpg" alt="不良信息举报中心" width="122" height="52">
+                </a>
+            </div>
+            <p>
+                <a target="_blank" href="{自定义}">网站简介</a> |
+                <a target="_blank" href="{自定义}">广告服务</a> |
+                <a target="_blank" href="{自定义}">服务条款</a> |
+                <a target="_blank" href="{自定义}">意见反馈</a>|
+                <a target="_blank" href="{自定义}">客户端下载</a>
+            </p>
+            <p>Copyright ©{年} </span> {域名库} {网站名称}版权所有 注意：未经书面许可，禁止一切形式的转载或引用。</p>
+            
+            <div class="blxxjb2">
+                <a href="{自定义}">
+                    <img src="/static/ow62_news.yjrb/static/picture/blxxjbzx2.jpg" alt="涉未成年人专用投诉举报" width="122" height="52">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!---->
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/cropbox.min.js"></script>
+    <script src="/static/ow62_news.yjrb/static/js/amazeui.min.js"></script>
+    <script src="/static/ow62_news.yjrb/static/js/swiper.min.js"></script>
+    <script src="/static/ow62_news.yjrb/static/js/nep.min.js"></script>
+    <script src="/static/ow62_news.yjrb/static/js/lodash.min.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/ejs.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/native.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/url.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/async.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/person_center.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/style.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/page.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/base.js"></script>
+
+
+
+    <script type="text/javascript">
+        $.fn.serializeObject = function () {
+            var obj = {};
+            var count = 0;
+            $.each(this.serializeArray(), function (i, o) {
+                var n = o.name, v = o.value;
+                count++;
+                obj[n] = obj[n] === undefined ? v
+                    : $.isArray(obj[n]) ? obj[n].concat(v)
+                        : [obj[n], v];
+            });
+            return obj;//JSON.stringify(obj);
+        };
+
+    </script>
+
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+
+
+    <!--spm_dot-->
+
+
+
+
+
+
+    <script src="/static/ow62_news.yjrb/static/js/style.js"></script>
+    <script type="text/javascript" src="/static/ow62_news.yjrb/static/js/jweixin-1.2.0.js"></script>
+    <script src="/static/ow62_news.yjrb/static/js/wx_share.js"></script>
+    <script src="/static/ow62_news.yjrb/static/js/wx_shareContent.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var contentId = $(".box.page").attr("data-id");
+            if ($('#video').length > 0) {
+                var myPlayer = neplayer('video');
+            }
+            if (contentId) {
+                behavior(contentId);
+            }
+        })
+    </script>
+   <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+   <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+   <div style="display:none;" title="友情链接"><a href="{轮链}">{网站名称}</a></div>
+   <div style="display:none;" title="网站地图"><a href="http://{当前域名}/sitemap.xml">网站地图</a></div> 
+</body>
+
+</html>
